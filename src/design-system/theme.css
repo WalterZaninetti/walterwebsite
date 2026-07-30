@@ -1,0 +1,499 @@
+/* ==========================================================================
+   Sage & Loam — design tokens
+   Extracted from the Claude Design doc "Walter - Homepage" (palette 1c),
+   options 2a (light 1440), 2b (dark 1440) and 2c (mobile 390).
+   Reference markup: ./Walter - Homepage.reference.html
+   ========================================================================== */
+
+/* Dark mode is class-driven (<html class="dark">) so the header toggle can
+   override the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* --------------------------------------------------------------------------
+   1. Raw palette + type scale — the literal values from the design doc.
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Type families */
+  --font-sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-editorial: "Libre Baskerville", Georgia, serif;
+
+  /* Sage — the core green-grey ramp */
+  --color-sage-50: #f7f8f2;
+  --color-sage-100: #eef0e6;
+  --color-sage-200: #cfdac6;
+  --color-sage-300: #a8c2a8;
+  --color-sage-400: #9dbc9f;
+  --color-sage-500: #7d9b7d;
+  --color-sage-600: #5c6f5f;
+  --color-sage-700: #48594c;
+  --color-sage-800: #26402f;
+  --color-sage-900: #26332a;
+
+  /* Night — the dark greens the page sits on */
+  --color-night-700: #1d2a1f;
+  --color-night-800: #1a2a1e;
+  --color-night-900: #141a15;
+  --color-night-950: #0f1410;
+
+  /* Loam — the rust accent */
+  --color-loam-400: #c97d48;
+  --color-loam-500: #b8703f;
+  --color-loam-50: #fff6ee;
+  --color-loam-950: #1a1208;
+
+  /* Ocean — the Magic Tools card's own world */
+  --color-ocean-300: #a8cbe4;
+  --color-ocean-400: #9dc2dd;
+  --color-ocean-600: #25455f;
+  --color-ocean-700: #1e3a52;
+  --color-ocean-900: #152a3c;
+  --color-ocean-50: #e9f3fa;
+
+  /* Live — the "listening now" signal green */
+  --color-live-400: #8fd9a8;
+  --color-live-500: #4ade8a;
+
+  /* Type scale, faithful to the doc (px, paired line-heights) */
+  --text-hero: 96px;
+  --text-hero--line-height: 0.98;
+  --text-hero--letter-spacing: -0.02em;
+  --text-hero-sm: 52px;
+  --text-hero-sm--line-height: 1;
+  --text-hero-sm--letter-spacing: -0.02em;
+  --text-display: 38px;
+  --text-display--line-height: 1.02;
+  --text-display-sm: 30px;
+  --text-display-sm--line-height: 1.02;
+  --text-section: 34px;
+  --text-section--line-height: 1;
+  --text-section-sm: 26px;
+  --text-section-sm--line-height: 1.1;
+  --text-title: 30px;
+  --text-title--line-height: 1.05;
+  --text-title-sm: 26px;
+  --text-title-sm--line-height: 1.08;
+  --text-lead: 18.5px;
+  --text-lead--line-height: 1.7;
+  --text-body: 16px;
+  --text-body--line-height: 1.75;
+  --text-body-sm: 15px;
+  --text-body-sm--line-height: 1.75;
+  --text-copy: 14.5px;
+  --text-copy--line-height: 1.7;
+  --text-note: 14px;
+  --text-note--line-height: 1.65;
+  --text-note-sm: 13.5px;
+  --text-note-sm--line-height: 1.6;
+  --text-meta: 12px;
+  --text-meta--line-height: 1.4;
+  --text-micro: 11px;
+  --text-micro--line-height: 1.5;
+  --text-label: 10px;
+  --text-label--line-height: 1;
+  --text-label--letter-spacing: 0.18em;
+  --text-label-wide: 10.5px;
+  --text-label-wide--line-height: 1;
+  --text-label-wide--letter-spacing: 0.14em;
+  --text-nav: 11px;
+  --text-nav--line-height: 1;
+  --text-nav--letter-spacing: 0.13em;
+
+  /* Radii — the doc uses a deliberately mixed set */
+  --radius-frame: 4px;
+  --radius-tile: 5px;
+  --radius-chip: 6px;
+  --radius-field: 8px;
+  --radius-thumb: 10px;
+  --radius-card-sm: 14px;
+  --radius-card: 16px;
+  --radius-pill: 100px;
+
+  /* Section rhythm */
+  --spacing-gutter: 52px;
+  --spacing-gutter-sm: 20px;
+
+  /* Card lift transition */
+  --ease-lift: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Semantic layer — light values, overridden wholesale in .dark below.
+      Components only ever reference these, never the raw ramp.
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+
+  /* Page surfaces */
+  --canvas: #eef0e6;
+  --canvas-band: #cfdac6; /* the project shelf strip */
+  --surface: #f7f8f2; /* raised card on canvas */
+  --panel: #26402f; /* hero side panel */
+  --panel-alt: #26402f; /* "propose a tool" card */
+  --panel-deep: #1d2a1f; /* music section */
+  --panel-inset: #141a15; /* cards inside the music section */
+
+  /* Text on light surfaces */
+  --ink: #26332a;
+  --ink-strong: #26402f;
+  --ink-body: #48594c;
+  --ink-soft: #54654f;
+  --ink-muted: #5c6f5f;
+  --ink-faint: #8a9a8c;
+  --ink-note: #5c7560; /* the shelf's "each card keeps its own look" note */
+
+  /* Text on the dark panels (hero, music, propose). The doc uses a fine-
+     grained ladder of sage-greys here; each rung is its own pair because the
+     dark theme doesn't shift them uniformly. */
+  --on-panel: #f7f8f2;
+  --on-panel-strong: #eef0e6;
+  --on-panel-body: #cfdac6;
+  --on-panel-prose: #bccfbe;
+  --on-panel-muted: #a9bcaa;
+  --on-panel-soft: #8fa891;
+  --on-panel-label: #a8c2a8;
+  --on-panel-accent: #a8c2a8;
+  --on-panel-quiet: #7d9b7d;
+  --on-panel-dim: #6d806e;
+  --on-panel-dimmer: #5c6f5f;
+  --on-panel-track: #dfe7de;
+
+  /* Accent. Two creams sit on the rust in the doc — #f7f8f2 on the hero CTA,
+     the warmer #fff6ee on the coffee/Seasonable buttons — so both are tokens. */
+  --accent: #b8703f;
+  --accent-fg: #f7f8f2;
+  --accent-fg-warm: #fff6ee;
+  --accent-hover: #26402f;
+  --accent-hover-fg: #f7f8f2;
+  /* "Send the idea" resolves its hover to sage rather than deep green. */
+  --accent-hover-alt: #cfdac6;
+  --accent-hover-alt-fg: #26402f;
+
+  /* Sage as a solid fill (Bandcamp button, active chip, hover swaps) */
+  --sage: #7d9b7d;
+  --sage-solid: #cfdac6;
+  --sage-solid-fg: #26402f;
+
+  /* Hairlines */
+  --line: rgb(38 64 47 / 0.12);
+  --line-soft: rgb(38 64 47 / 0.1);
+  --line-strong: rgb(38 64 47 / 0.2);
+  --line-card: rgb(38 64 47 / 0.14);
+  --line-on-panel: rgb(207 218 198 / 0.3); /* pill outlines */
+  --line-on-panel-strong: rgb(207 218 198 / 0.28); /* form fields */
+  --line-inset: rgb(207 218 198 / 0.16); /* cards inset in a dark panel */
+  --line-on-panel-soft: rgb(207 218 198 / 0.14); /* dividers inside those */
+  --line-inset-soft: rgb(207 218 198 / 0.12); /* the recently-played rows */
+
+  /* Translucent fills used on the dark panels */
+  --fill-on-panel: rgb(207 218 198 / 0.1);
+  --fill-field: rgb(247 248 242 / 0.06);
+  --fill-field-focus: rgb(247 248 242 / 0.12);
+
+  /* Header (sticky, blurred) */
+  --header-bg: rgb(238 240 230 / 0.9);
+  --header-line: rgb(38 64 47 / 0.1);
+  --header-ink: #26402f;
+  --header-nav: #5c6f5f;
+  --toggle-hover-bg: #26402f;
+  --toggle-hover-fg: #eef0e6;
+
+  /* Hatched placeholder texture (photos not dropped in yet) */
+  --hatch: rgb(207 218 198 / 0.14);
+  --hatch-line: rgb(207 218 198 / 0.28);
+
+  /* Per-project card worlds */
+  --project-magic: #1e3a52;
+  --project-magic-fg: #e9f3fa;
+  --project-magic-body: rgb(233 243 250 / 0.82);
+  --project-magic-accent: #9dc2dd;
+  --project-magic-thumb: #152a3c;
+  --project-magic-border: transparent;
+  --project-magic-shadow: 0 14px 30px rgb(30 58 82 / 0.34);
+
+  --project-dj: #26332a;
+  --project-dj-fg: #eef0e6;
+  --project-dj-accent: #8fb894;
+  --project-dj-body: #bccfbe;
+  --project-dj-badge: #26332a; /* the chip sitting on the Camelot wheel */
+  --project-dj-border: transparent;
+  --project-dj-shadow: 0 14px 30px rgb(38 51 42 / 0.35);
+
+  --project-food: #b8703f;
+  --project-food-fg: #fff6ee;
+  --project-food-accent: rgb(255 246 238 / 0.75);
+  --project-food-body: rgb(255 246 238 / 0.88);
+  --project-food-meta: rgb(255 246 238 / 0.8);
+  --project-food-hatch: rgb(255 246 238 / 0.2);
+  --project-food-thumb-fg: #fff6ee;
+  --project-food-shadow: 0 14px 30px rgb(184 112 63 / 0.35);
+
+  /* Hero glow — dark only */
+  --hero-glow: none;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --canvas: #141a15;
+  --canvas-band: #0f1410;
+  --surface: #1d2a1f;
+  --panel: #1d2a1f;
+  --panel-alt: #0f1410;
+  --panel-deep: #1a2a1e;
+  --panel-inset: #0f1410;
+
+  --ink: #dfe7de;
+  --ink-strong: #eef0e6;
+  --ink-body: #a9bcaa;
+  --ink-soft: #a9bcaa;
+  --ink-muted: #93a894;
+  --ink-faint: #6d806e;
+  --ink-note: #6d806e;
+
+  --on-panel: #eef0e6;
+  --on-panel-strong: #eef0e6;
+  --on-panel-body: #cfdac6;
+  --on-panel-prose: #a9bcaa;
+  --on-panel-muted: #a9bcaa;
+  --on-panel-soft: #8a9d8b;
+  --on-panel-label: #7d9b7d;
+  --on-panel-accent: #9dbc9f;
+  --on-panel-quiet: #6d806e;
+  --on-panel-dim: #6d806e;
+  --on-panel-dimmer: #5c6f5f;
+  --on-panel-track: #dfe7de;
+
+  --accent: #c97d48;
+  --accent-fg: #141a15;
+  --accent-fg-warm: #141a15;
+  --accent-hover: #eef0e6;
+  --accent-hover-fg: #141a15;
+  --accent-hover-alt: #eef0e6;
+  --accent-hover-alt-fg: #141a15;
+
+  --sage: #9dbc9f;
+  --sage-solid: #9dbc9f;
+  --sage-solid-fg: #141a15;
+
+  --line: rgb(207 218 198 / 0.12);
+  --line-soft: rgb(207 218 198 / 0.1);
+  --line-strong: rgb(207 218 198 / 0.24);
+  --line-card: rgb(207 218 198 / 0.16);
+  --line-on-panel: rgb(207 218 198 / 0.22);
+  --line-on-panel-strong: rgb(207 218 198 / 0.24);
+  --line-inset: rgb(207 218 198 / 0.14);
+  --line-on-panel-soft: rgb(207 218 198 / 0.12);
+  --line-inset-soft: rgb(207 218 198 / 0.1);
+
+  --fill-on-panel: rgb(207 218 198 / 0.08);
+  --fill-field: rgb(238 240 230 / 0.05);
+  --fill-field-focus: rgb(238 240 230 / 0.1);
+
+  --header-bg: rgb(20 26 21 / 0.9);
+  --header-line: rgb(207 218 198 / 0.14);
+  --header-ink: #eef0e6;
+  --header-nav: #93a894;
+  --toggle-hover-bg: #cfdac6;
+  --toggle-hover-fg: #1d2a1f;
+
+  --hatch: rgb(207 218 198 / 0.1);
+  --hatch-line: rgb(207 218 198 / 0.2);
+
+  --project-magic: #25455f;
+  --project-magic-accent: #a8cbe4;
+  --project-magic-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+
+  --project-dj: #1a2a1e;
+  --project-dj-accent: #9dbc9f;
+  --project-dj-body: #a9bcaa;
+  --project-dj-badge: #141a15;
+  --project-dj-border: rgb(157 188 159 / 0.28);
+  --project-dj-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+
+  --project-food: #c97d48;
+  --project-food-fg: #1a1208;
+  --project-food-thumb-fg: #3d2a13;
+  --project-food-accent: rgb(26 18 8 / 0.65);
+  --project-food-body: rgb(26 18 8 / 0.8);
+  --project-food-meta: rgb(26 18 8 / 0.7);
+  --project-food-hatch: rgb(26 18 8 / 0.18);
+  --project-food-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+
+  --hero-glow: radial-gradient(
+    90% 70% at 88% 10%,
+    rgb(125 155 125 / 0.16),
+    transparent 65%
+  );
+}
+
+/* --------------------------------------------------------------------------
+   3. Expose the semantic layer as Tailwind utilities.
+      `inline` keeps the var() reference intact, so `bg-canvas` follows the
+      active theme instead of being frozen at build time.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-canvas-band: var(--canvas-band);
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-panel-alt: var(--panel-alt);
+  --color-panel-deep: var(--panel-deep);
+  --color-panel-inset: var(--panel-inset);
+
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-ink-body: var(--ink-body);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-note: var(--ink-note);
+
+  --color-on-panel: var(--on-panel);
+  --color-on-panel-strong: var(--on-panel-strong);
+  --color-on-panel-body: var(--on-panel-body);
+  --color-on-panel-prose: var(--on-panel-prose);
+  --color-on-panel-muted: var(--on-panel-muted);
+  --color-on-panel-soft: var(--on-panel-soft);
+  --color-on-panel-label: var(--on-panel-label);
+  --color-on-panel-accent: var(--on-panel-accent);
+  --color-on-panel-quiet: var(--on-panel-quiet);
+  --color-on-panel-dim: var(--on-panel-dim);
+  --color-on-panel-dimmer: var(--on-panel-dimmer);
+  --color-on-panel-track: var(--on-panel-track);
+
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-fg-warm: var(--accent-fg-warm);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-hover-fg: var(--accent-hover-fg);
+  --color-accent-hover-alt: var(--accent-hover-alt);
+  --color-accent-hover-alt-fg: var(--accent-hover-alt-fg);
+
+  --color-sage: var(--sage);
+  --color-sage-solid: var(--sage-solid);
+  --color-sage-solid-fg: var(--sage-solid-fg);
+
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-line-strong: var(--line-strong);
+  --color-line-card: var(--line-card);
+  --color-line-on-panel: var(--line-on-panel);
+  --color-line-on-panel-soft: var(--line-on-panel-soft);
+  --color-line-on-panel-strong: var(--line-on-panel-strong);
+  --color-line-inset: var(--line-inset);
+  --color-line-inset-soft: var(--line-inset-soft);
+
+  --color-hatch-line: var(--hatch-line);
+
+  --color-fill-on-panel: var(--fill-on-panel);
+  --color-fill-field: var(--fill-field);
+  --color-fill-field-focus: var(--fill-field-focus);
+
+  --color-header-bg: var(--header-bg);
+  --color-header-line: var(--header-line);
+  --color-header-ink: var(--header-ink);
+  --color-header-nav: var(--header-nav);
+  --color-toggle-hover-bg: var(--toggle-hover-bg);
+  --color-toggle-hover-fg: var(--toggle-hover-fg);
+
+  --color-project-magic: var(--project-magic);
+  --color-project-magic-fg: var(--project-magic-fg);
+  --color-project-magic-body: var(--project-magic-body);
+  --color-project-magic-accent: var(--project-magic-accent);
+  --color-project-magic-thumb: var(--project-magic-thumb);
+  --color-project-magic-border: var(--project-magic-border);
+
+  --color-project-dj: var(--project-dj);
+  --color-project-dj-fg: var(--project-dj-fg);
+  --color-project-dj-accent: var(--project-dj-accent);
+  --color-project-dj-body: var(--project-dj-body);
+  --color-project-dj-badge: var(--project-dj-badge);
+  --color-project-dj-border: var(--project-dj-border);
+
+  --color-project-food: var(--project-food);
+  --color-project-food-fg: var(--project-food-fg);
+  --color-project-food-accent: var(--project-food-accent);
+  --color-project-food-body: var(--project-food-body);
+  --color-project-food-meta: var(--project-food-meta);
+  --color-project-food-thumb-fg: var(--project-food-thumb-fg);
+
+  --shadow-lift-magic: var(--project-magic-shadow);
+  --shadow-lift-dj: var(--project-dj-shadow);
+  --shadow-lift-food: var(--project-food-shadow);
+  --shadow-card: 0 2px 12px rgb(0 0 0 / 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   4. Base + the few textures the design uses that aren't single values.
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Form placeholders only ever appear on the dark "propose a tool" panel. */
+  ::placeholder {
+    color: var(--on-panel-quiet);
+  }
+}
+
+@utility hatch {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--hatch) 0 9px,
+    transparent 9px 18px
+  );
+  border: 1px solid var(--hatch-line);
+}
+
+@utility hatch-tight {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--hatch) 0 8px,
+    transparent 8px 16px
+  );
+  border: 1px solid var(--hatch-line);
+}
+
+/* The portrait frame leans the other way, at 115deg. */
+@utility hatch-portrait {
+  background: repeating-linear-gradient(
+    115deg,
+    var(--hatch) 0 9px,
+    transparent 9px 18px
+  );
+  border: 1px solid var(--hatch-line);
+}
+
+/* Seasonable's card carries its own cream hatch on the rust ground. */
+@utility hatch-food {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--project-food-hatch) 0 9px,
+    transparent 9px 18px
+  );
+}
+
+/* The DJ tool's Camelot wheel. */
+@utility camelot {
+  background: conic-gradient(
+    from 0deg,
+    var(--color-sage-500),
+    var(--color-sage-200),
+    var(--accent),
+    var(--color-sage-500)
+  );
+}
+
+@utility hero-glow {
+  background-image: var(--hero-glow);
+}

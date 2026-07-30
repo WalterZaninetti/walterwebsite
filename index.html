@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Walter — software developer in Italy. Small tools, made carefully: a mana-base calculator for Magic players, a Rekordbox dashboard for DJs, and a seasonal produce guide."
+    />
+    <meta name="theme-color" content="#eef0e6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141a15" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!--
+      Fonts come straight from the design doc: Instrument Serif (display),
+      Space Grotesk (UI/body), IBM Plex Mono (labels and metadata) and Libre
+      Baskerville (the editorial italics on the Magic Tools card). Only the
+      weights the page actually renders are requested.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Walter — small tools, made carefully</title>
+
+    <!--
+      Resolve the theme before first paint so a dark-mode visitor never sees a
+      flash of the light palette. Kept inline and tiny on purpose; the same
+      storage key is read back by src/lib/theme.tsx.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('walter-theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {
+          /* private mode — fall through to light */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4 config lives in CSS, not tailwind.config.js. The whole design
+  system — palette, type scale, radii and the light/dark semantic layer — is
+  defined in design-system/theme.css, extracted from the Claude Design doc.
+  Add tokens there rather than hard-coding values in components.
+*/
+@import "./design-system/theme.css";
