@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { magic } from '../../content/magic';
-import { TranslateError, toChips, translate, type TranslateResult } from '../../lib/translateApi';
+import {
+  TRANSLATE_BASE_URL,
+  TranslateError,
+  toChips,
+  translate,
+  type TranslateResult,
+} from '../../lib/translateApi';
 import { SectionHead } from './DrawOdds';
 
-const copy = magic.search;
+type LegendGroup = { title: string; items: string[] };
 
 /**
  * The design translated on every keystroke with a local regex parser. This
@@ -17,7 +24,11 @@ const copy = magic.search;
  * returning thousands of wrong cards.
  */
 export function PlainEnglishSearch() {
-  const [text, setText] = useState<string>(copy.placeholder);
+  const { t } = useTranslation();
+  const examples = t('magic.search.examples', { returnObjects: true }) as string[];
+  const legend = t('magic.search.legend', { returnObjects: true }) as LegendGroup[];
+
+  const [text, setText] = useState<string>(() => t('magic.search.placeholder'));
   const [result, setResult] = useState<TranslateResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -42,7 +53,15 @@ export function PlainEnglishSearch() {
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') return;
       setResult(null);
-      setError(err instanceof TranslateError ? err.message : 'Something went wrong.');
+      setError(
+        err instanceof TranslateError
+          ? t(`magic.search.error${
+              { offline: 'Offline', rate_limited: 'RateLimited', bad_request: 'BadRequest', server: 'Server' }[
+                err.kind
+              ]
+            }`, { url: TRANSLATE_BASE_URL })
+          : t('magic.search.errorUnknown'),
+      );
     } finally {
       if (inFlight.current === controller) setBusy(false);
     }
@@ -62,14 +81,14 @@ export function PlainEnglishSearch() {
       id="search"
       className="scroll-mt-[70px] bg-magic-forest px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
     >
-      <SectionHead index={copy.index} heading={copy.heading} blurb={copy.blurb} dark />
+      <SectionHead index="02" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
 
       <div className="grid items-start gap-[22px] lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-4">
           {/* -------- input -------- */}
           <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
             <p className="mb-3 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
-              {copy.prompt}
+              {t('magic.search.prompt')}
             </p>
             <textarea
               value={text}
@@ -78,14 +97,14 @@ export function PlainEnglishSearch() {
                 if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') void submit();
               }}
               rows={3}
-              placeholder={copy.placeholder}
+              placeholder={t('magic.search.placeholder')}
               className="box-border w-full resize-y rounded-[10px] border border-magic-cream/28 bg-magic-cream/6 px-[18px] py-4 font-magic-body text-[17px]/[1.6] text-white outline-none focus:border-magic-green-light focus:bg-magic-cream/10"
             />
             <div className="mt-3.5 flex flex-wrap items-center gap-2">
               <span className="font-mono text-[11px]/[28px] text-magic-cream-faint">
-                {copy.tryLabel}
+                {t('magic.search.tryLabel')}
               </span>
-              {magic.examples.map((example) => (
+              {examples.map((example) => (
                 <button
                   key={example}
                   type="button"
@@ -101,7 +120,7 @@ export function PlainEnglishSearch() {
                 disabled={busy || !text.trim()}
                 className="ml-auto h-[30px] cursor-pointer rounded-pill bg-magic-green-light px-4 font-magic-body text-[13px] font-medium text-magic-abyss transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {busy ? copy.submitBusyLabel : copy.submitLabel}
+                {busy ? t('magic.search.submitBusy') : t('magic.search.submit')}
               </button>
             </div>
           </div>
@@ -110,11 +129,11 @@ export function PlainEnglishSearch() {
           <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
             <div className="mb-3.5 flex items-center justify-between gap-3">
               <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
-                {copy.queryLabel}
+                {t('magic.search.queryLabel')}
               </p>
               <span className="font-mono text-[10.5px] text-magic-cream-faint">
                 {result
-                  ? `${chips.length} filter${chips.length === 1 ? '' : 's'} · ${result.detectedLanguage}`
+                  ? `${t('magic.search.filterCount', { count: chips.length })} · ${result.detectedLanguage}`
                   : ''}
               </span>
             </div>
@@ -125,7 +144,7 @@ export function PlainEnglishSearch() {
                 error ? 'text-magic-coral' : busy ? 'text-magic-cream-faint' : 'text-magic-green-light'
               }`}
             >
-              {error ?? (busy ? copy.submitBusyLabel : (result?.query ?? copy.emptyQuery))}
+              {error ?? (busy ? t('magic.search.submitBusy') : (result?.query ?? t('magic.search.emptyQuery')))}
             </div>
 
             {chips.length > 0 && (
@@ -145,13 +164,13 @@ export function PlainEnglishSearch() {
             {/* The service reports what it had to infer, what it couldn't express,
                 and — when repair failed — that the query itself is suspect. */}
             {result && result.warnings.length > 0 && (
-              <Advisory tone="warn" title="Couldn’t be verified" items={result.warnings} />
+              <Advisory tone="warn" title={t('magic.search.warningsTitle')} items={result.warnings} />
             )}
             {result && result.unsupported.length > 0 && (
-              <Advisory tone="muted" title="Not expressible in Scryfall" items={result.unsupported} />
+              <Advisory tone="muted" title={t('magic.search.unsupportedTitle')} items={result.unsupported} />
             )}
             {result && result.assumptions.length > 0 && (
-              <Advisory tone="muted" title="Assumed" items={result.assumptions} />
+              <Advisory tone="muted" title={t('magic.search.assumptionsTitle')} items={result.assumptions} />
             )}
 
             <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-magic-cream/18 pt-[18px]">
@@ -165,7 +184,7 @@ export function PlainEnglishSearch() {
                   result ? '' : 'pointer-events-none opacity-50'
                 }`}
               >
-                {copy.searchLabel}
+                {t('magic.search.search')}
               </a>
               <button
                 type="button"
@@ -177,10 +196,10 @@ export function PlainEnglishSearch() {
                 }}
                 className="cursor-pointer rounded-pill border border-magic-cream/30 bg-transparent px-5 py-3 font-mono text-[12.5px] font-medium text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {copied ? copy.copiedLabel : copy.copyLabel}
+                {copied ? t('magic.search.copied') : t('magic.search.copy')}
               </button>
               <span className="ml-auto font-mono text-[11px] text-magic-cream-faint">
-                {result ? '' : copy.idleNote}
+                {result ? '' : t('magic.search.idleNote')}
               </span>
             </div>
           </div>
@@ -189,20 +208,20 @@ export function PlainEnglishSearch() {
         {/* -------- legend -------- */}
         <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
           <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
-            {copy.legendTitle}
+            {t('magic.search.legendTitle')}
           </p>
           <p className="mb-[18px] font-magic-body text-[12.5px]/[1.6] text-magic-steel">
-            {copy.legendNote}
+            {t('magic.search.legendNote')}
           </p>
           <div className="flex flex-col gap-4">
-            {magic.legend.map((group) => (
+            {legend.map((group, groupIndex) => (
               <div key={group.title} className="border-t border-magic-cream/16 pt-3.5">
                 <div className="mb-[9px] flex items-baseline justify-between gap-2.5">
                   <span className="font-magic-body text-[12.5px] font-medium text-magic-cream">
                     {group.title}
                   </span>
                   <span className="font-mono text-[11px] text-magic-green-light">
-                    {group.syntax}
+                    {magic.legendSyntax[groupIndex]}
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-[7px]">

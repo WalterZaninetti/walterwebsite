@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { magic } from '../../content/magic';
+import { footerLegal } from '../../content/site';
 import { navigate } from '../../lib/route';
+import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { DrawOdds } from './DrawOdds';
 import { ManaPips } from './ManaPips';
@@ -26,6 +29,8 @@ export function MagicToolsPage() {
 }
 
 function Header() {
+  const { t } = useTranslation();
+
   return (
     <div className="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-magic-rule bg-magic-header px-5 py-3.5 backdrop-blur-[8px] md:px-10">
       <a
@@ -39,24 +44,28 @@ function Header() {
           accentClassName="stroke-magic-green"
         />
         <span className="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-magic-ink-muted">
-          {magic.crumb.site} <span className="text-magic-slash">/</span> {magic.crumb.page}
+          Walter <span className="text-magic-slash">/</span> {t('magic.crumbPage')}
         </span>
       </a>
       <div className="flex items-center gap-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.13em] text-magic-ink-muted md:gap-[22px]">
         {magic.nav.map((item) => (
           <a
-            key={item.label}
+            key={item.key}
             href={item.href}
             className="hidden text-inherit no-underline transition-colors hover:text-magic-green-deep sm:inline"
           >
-            {item.label}
+            {t(`magic.${item.key}`)}
           </a>
         ))}
+        <LanguageSwitch
+          activeClassName="text-magic-green-deep"
+          idleClassName="text-magic-ink-muted hover:text-magic-green-deep"
+        />
         <a
           href={magic.repoHref}
           className="rounded-pill border border-[#cfc3a1] px-3.5 py-2 text-magic-green-deep no-underline transition-colors hover:border-magic-green-deep hover:bg-magic-green-deep hover:text-magic-paper"
         >
-          {magic.repoLabel}
+          {t('magic.repo')}
         </a>
       </div>
     </div>
@@ -64,6 +73,12 @@ function Header() {
 }
 
 function Hero() {
+  const { t } = useTranslation();
+  const jumps = [
+    { index: '01', href: '#odds', title: t('magic.hero.jump1Title'), note: t('magic.hero.jump1Note') },
+    { index: '02', href: '#search', title: t('magic.hero.jump2Title'), note: t('magic.hero.jump2Note') },
+  ];
+
   return (
     <div
       id="top"
@@ -75,14 +90,14 @@ function Hero() {
             <ManaPips />
           </div>
           <h1 className="mb-[18px] font-magic-display text-[40px]/[1.04] font-semibold tracking-[0.005em] text-balance md:text-[60px]">
-            {magic.hero.title}
+            {t('magic.hero.title')}
           </h1>
           <p className="max-w-[32em] font-magic-body text-[17.5px]/[1.7] text-magic-cream-dim text-pretty">
-            {magic.hero.blurb}
+            {t('magic.hero.blurb')}
           </p>
         </div>
         <div className="flex flex-col gap-3.5 border-magic-cream/25 lg:border-l lg:pl-6">
-          {magic.hero.jump.map((item, i) => (
+          {jumps.map((item, i) => (
             <a
               key={item.index}
               href={item.href}
@@ -106,7 +121,8 @@ function Hero() {
 }
 
 function Footer() {
-  const { footer } = magic;
+  const { t } = useTranslation();
+
   return (
     <div className="border-t border-magic-cream/18 bg-magic-ink px-5 pt-7 pb-8 text-magic-cream-dim md:px-10">
       <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:flex-wrap md:gap-10">
@@ -117,24 +133,26 @@ function Footer() {
             accentClassName="stroke-magic-green-light"
           />
           <span aria-hidden="true" className="h-[26px] w-px bg-magic-cream/25" />
-          <span className="font-mono text-[12px] text-magic-cream-faint">{footer.meta}</span>
+          <span className="font-mono text-[12px] text-magic-cream-faint">
+            {t('magic.footer.meta')}
+          </span>
         </div>
         <p className="font-magic-display text-[13px]/[1.2] font-medium tracking-[0.02em] text-magic-cream">
-          {footer.credit}
-          <span className="text-magic-green-light">{footer.creditAccent}</span>
+          {t('home.footer.credit')}
+          <span className="text-magic-green-light">{t('home.footer.creditAccent')}</span>
         </p>
         <div className="flex items-center gap-5 font-mono text-[11.5px] text-magic-cream-faint">
-          {footer.legal.map((item) => (
+          {footerLegal.map((item) => (
             <a
-              key={item.label}
+              key={item.key}
               href={item.href}
               onClick={navigate}
               className="text-inherit no-underline transition-colors hover:text-magic-cream"
             >
-              {item.label}
+              {t(`home.footer.${item.key}`)}
             </a>
           ))}
-          <span>{footer.copyright}</span>
+          <span>{t('home.footer.copyright')}</span>
         </div>
       </div>
     </div>

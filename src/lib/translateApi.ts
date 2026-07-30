@@ -32,17 +32,24 @@ export type TranslateResult = {
 
 export type TranslateErrorKind = 'rate_limited' | 'offline' | 'bad_request' | 'server';
 
+/**
+ * Carries a `kind` rather than a display string: the UI is bilingual, so the
+ * wording is chosen at render time from the active locale.
+ */
 export class TranslateError extends Error {
   // Declared rather than a constructor parameter property: the tsconfig sets
   // erasableSyntaxOnly, which rules out the shorthand.
   readonly kind: TranslateErrorKind;
 
-  constructor(message: string, kind: TranslateErrorKind) {
-    super(message);
+  constructor(kind: TranslateErrorKind) {
+    super(kind);
     this.name = 'TranslateError';
     this.kind = kind;
   }
 }
+
+/** Exposed so the offline message can name the URL it failed to reach. */
+export const TRANSLATE_BASE_URL = BASE_URL;
 
 export async function translate(
   text: string,
@@ -58,20 +65,17 @@ export async function translate(
     });
   } catch (error) {
     if (error instanceof DOMException && error.name === 'AbortError') throw error;
-    throw new TranslateError(
-      `Can’t reach the translator at ${BASE_URL}. Is it running?`,
-      'offline',
-    );
+    throw new TranslateError('offline');
   }
 
   if (response.status === 429) {
-    throw new TranslateError('Hourly request limit reached. Try again later.', 'rate_limited');
+    throw new TranslateError('rate_limited');
   }
   if (response.status === 400) {
-    throw new TranslateError('That request wasn’t something the translator could read.', 'bad_request');
+    throw new TranslateError('bad_request');
   }
   if (!response.ok) {
-    throw new TranslateError('The translator hit an error. Try again in a moment.', 'server');
+    throw new TranslateError('server');
   }
 
   return (await response.json()) as TranslateResult;

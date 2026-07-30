@@ -1,0 +1,348 @@
+{
+  "common": {
+    "themeToDark": "Scuro",
+    "themeToLight": "Chiaro",
+    "switchToDark": "Passa al tema scuro",
+    "switchToLight": "Passa al tema chiaro",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "language": "Lingua",
+    "languageEnglish": "Inglese",
+    "languageItalian": "Italiano"
+  },
+
+  "nav": {
+    "projects": "Progetti",
+    "about": "Chi sono",
+    "twitch": "Twitch"
+  },
+
+  "socials": {
+    "github": "GitHub",
+    "twitch": "Twitch",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "Walter · Italia",
+      "eyebrowSuffix": " · classe 1996",
+      "headline": "Strumenti piccoli,",
+      "headlineAccent": "fatti con cura.",
+      "portraitCaption": "ritratto o foto della scrivania — mettine una",
+      "portraitCaptionShort": "ritratto",
+      "bio1": "Sono uno sviluppatore software. Rendo open source quasi tutto quello che faccio — non per ideologia, è semplicemente meglio quando la gente può leggere il codice e sistemarlo.",
+      "bio2": "Lontano dall'editor gioco a Magic: the Gathering, e mi sto lentamente convincendo a farlo in streaming.",
+      "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, streamer occasionale. Per ora tre strumenti — per chi gioca a Magic, per i DJ e per chi vuole mangiare di stagione.",
+      "lead": "Per ora sono tre — uno per chi gioca a Magic, uno per i DJ e uno per chi preferisce mangiare quello che è davvero di stagione. Ognuno ha il suo aspetto, perché ognuno è per persone diverse.",
+      "primaryCta": "Guarda i progetti ↓",
+      "secondaryCta": "oppure leggi cosa sto facendo adesso",
+      "stat1": "03 progetti",
+      "stat2": "tutto open source",
+      "statAccent": "presto in streaming",
+      "socialsLabel": "Dove trovarmi"
+    },
+
+    "projects": {
+      "heading": "Cose che ho fatto",
+      "note": "Ogni card mantiene l'aspetto del suo progetto",
+      "openLabel": "Apri →",
+      "magic": {
+        "eyebrow": "01 · per chi gioca a magic",
+        "eyebrowShort": "01 · magic",
+        "title": "Magic Tools",
+        "description": "Un calcolatore geometrico per costruire basi di mana che reggono davvero, e un convertitore che trasforma il linguaggio naturale in filtri Scryfall.",
+        "descriptionShort": "Geometria della base di mana e linguaggio naturale → filtri Scryfall.",
+        "meta": "MIT · web",
+        "thumbCaption": "diagramma pentagono del mana",
+        "thumbCaptionShort": "pentagono del mana"
+      },
+      "dj": {
+        "eyebrow": "02 · per i dj",
+        "eyebrowShort": "02 · dj",
+        "title": "DJ Tool",
+        "description": "Una dashboard sopra la tua collezione Rekordbox — distribuzione dei BPM, generi, tonalità e mix armonico sulla ruota Camelot.",
+        "descriptionShort": "Dashboard Rekordbox: BPM, generi, tonalità, ruota Camelot.",
+        "meta": "WIP · v0.3",
+        "thumbCaption": "ruota camelot",
+        "thumbCaptionShort": "ruota camelot"
+      },
+      "food": {
+        "eyebrow": "03 · per tutti",
+        "eyebrowShort": "03 · tutti",
+        "title": "Seasonable",
+        "description": "Dille una stagione e un posto, e ti dice quali frutta e verdura sono davvero di stagione lì.",
+        "descriptionShort": "Stagione + posto → cosa è di stagione lì.",
+        "meta": "MIT · online",
+        "thumbCaption": "natura morta con verdure",
+        "thumbCaptionShort": "foto di verdure"
+      }
+    },
+
+    "music": {
+      "heading": "Musica,",
+      "headingAccent": "presa sul serio",
+      "intro": "La musica è la cosa che conosco meglio a parte il codice. Scavo, leggo le note di copertina, mi importa di quale pressing sia — e faccio il DJ, che è soprattutto una scusa per continuare a scavare. Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle.",
+      "introShort": "La musica è la cosa che conosco meglio a parte il codice. Scavo, leggo le note di copertina, faccio il DJ. Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle.",
+      "album": {
+        "label": "Album del mese",
+        "issue": "Luglio 2026 · scelta n. 19",
+        "issueShort": "Lug 2026 · n. 19",
+        "sleeveCaption": "copertina",
+        "note": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza — continuo a rubare quell'idea, male, nei miei mix.",
+        "noteShort": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza.",
+        "tags": ["ambient techno", "cuffie", "124 bpm"],
+        "readLink": "Leggi la nota completa →",
+        "readLinkShort": "Leggi la nota →",
+        "archiveLink": "Tutte le 19 scelte ↗"
+      },
+      "previous": {
+        "label": "Scelte precedenti",
+        "months": ["Giu", "Mag", "Apr", "Mar"],
+        "remaining": "+15",
+        "remainingShort": "+16"
+      },
+      "links": {
+        "primary": "Collezione Bandcamp ↗",
+        "secondary": "Spotify ↗"
+      },
+      "nowPlaying": {
+        "label": "In ascolto ora",
+        "source": "via Spotify",
+        "sourceShort": "Spotify",
+        "artCaption": "copertina",
+        "recentLabel": "Ascoltati di recente",
+        "historyLink": "Apri la cronologia completa ↗"
+      }
+    },
+
+    "coffee": {
+      "label": "Se qualcosa qui ti è servito",
+      "heading": "Offrimi un caffè",
+      "body": "Tutto quello che faccio è gratis e aperto. Se uno strumento ti ha risparmiato un pomeriggio, un caffè è un bel modo per dirlo — e finanzia davvero il prossimo.",
+      "bodyShort": "Tutto quello che faccio è gratis e aperto. Se uno strumento ti ha risparmiato un pomeriggio, un caffè finanzia il prossimo.",
+      "primary": "Offrimi un caffè — 3 €",
+      "tier1": "10 € · un giro",
+      "tier1Short": "10 €",
+      "tier2": "Sponsor mensile",
+      "tier2Short": "Sponsor",
+      "fineprint": "Non serve un account · funziona anche GitHub Sponsors"
+    },
+
+    "propose": {
+      "label": "Hai un'idea?",
+      "note": "Leggo tutto · rispondo entro una settimana",
+      "heading": "Proponi uno strumento",
+      "body": "Le tre cose migliori in questa pagina sono nate da una scocciatura di qualcun altro. Dimmi cosa continui a fare a mano.",
+      "bodyShort": "Dimmi cosa continui a fare a mano. Leggo tutto.",
+      "nameLabel": "Il tuo nome",
+      "namePlaceholder": "Giulia",
+      "emailLabel": "Email",
+      "emailPlaceholder": "tu@qualcosa.it",
+      "topicLabel": "Di cosa si tratta",
+      "topicMagic": "Magic",
+      "topicMusic": "Musica / DJ",
+      "topicFood": "Cibo",
+      "topicOther": "Altro",
+      "topicOtherShort": "Altro",
+      "ideaLabel": "L'idea",
+      "ideaPlaceholder": "Continuo ad aprire tre schede per capire…",
+      "submit": "Manda l'idea",
+      "aside": "Oppure scrivi a say@walter.dev",
+      "mailFrom": "Da",
+      "mailAbout": "Argomento",
+      "mailSubject": "Idea per uno strumento"
+    },
+
+    "now": {
+      "label": "Adesso",
+      "body": "Sto riscrivendo il motore di geometria per le basi di mana e sistemando un calendario di streaming che riesca davvero a rispettare. Se vuoi costruire qualcosa insieme, la mia inbox è aperta.",
+      "bodyShort": "Sto riscrivendo il motore di geometria per le basi di mana e costruendo un calendario di streaming che riesca a rispettare."
+    },
+
+    "footer": {
+      "credit": "Fatto da Walter e Claudio con ",
+      "creditAccent": "amore",
+      "cookiePolicy": "Cookie policy",
+      "privacy": "Privacy",
+      "copyright": "© 2026"
+    }
+  },
+
+  "magic": {
+    "crumbPage": "Magic Tools",
+    "navOdds": "Probabilità",
+    "navSearch": "Ricerca a parole tue",
+    "repo": "GitHub ↗",
+
+    "hero": {
+      "title": "Magic Tools",
+      "blurb": "Due cose che continuavo a fare a mano: capire se la mia base di mana funziona davvero, e tradurre quello che intendo in sintassi Scryfall. Sono entrambe qui, entrambe open source.",
+      "jump1Title": "Probabilità di pescata",
+      "jump1Note": "Ipergeometrica, con la curva disegnata",
+      "jump2Title": "Ricerca a parole tue",
+      "jump2Note": "Scrivi una frase, ottieni la sintassi Scryfall"
+    },
+
+    "odds": {
+      "heading": "Probabilità di pescata",
+      "blurb": "Ipergeometrica: ogni pescata riduce il grimorio, quindi le probabilità si spostano di conseguenza. Imposta il mazzo e leggi tutta la distribuzione, non un numero solo.",
+      "deckLabel": "Carte nel mazzo",
+      "copiesLabel": "Copie che vuoi pescare",
+      "copiesHint": "es. 24 terre, o 4 copie di una carta",
+      "drawsLabel": "Carte pescate",
+      "preset7": "Mano iniziale · 7",
+      "preset8": "Turno 2 · 8",
+      "preset9": "Turno 3 · 9",
+      "preset11": "Turno 5 · 11",
+      "atLeastLabel": "Successi necessari (almeno)",
+      "oneFewer": "Uno in meno",
+      "oneMore": "Uno in più",
+      "gaugeCaption": "almeno {{count}}",
+      "exactly": "Esattamente {{count}}",
+      "fewerThan": "Meno di {{count}}",
+      "expected": "Attesi",
+      "distributionLabel": "Distribuzione — probabilità di pescarne esattamente n",
+      "legendHit": "conta come successo",
+      "legendShort": "insufficiente",
+      "cumulativeLabel": "Cumulativa — almeno n",
+      "sentence": "Pescando {{draws}} carte su {{deck}}, ne becchi almeno {{atLeast}} {{thing}} nel {{percent}} dei casi.",
+      "thingLands": "terre",
+      "thingCopies": "copie",
+      "thingOfThem": "di quelle"
+    },
+
+    "search": {
+      "heading": "Ricerca a parole tue",
+      "blurb": "Dì in una frase cosa stai cercando. Costruisce la query Scryfall e ti manda dritto alla ricerca.",
+      "prompt": "Cosa stai cercando?",
+      "placeholder": "istantanei blu sotto 3 mana che pescano una carta, legali in modern",
+      "tryLabel": "prova:",
+      "queryLabel": "Query Scryfall",
+      "submit": "Traduci",
+      "submitBusy": "Traduco…",
+      "search": "Cerca su Scryfall ↗",
+      "copy": "Copia query",
+      "copied": "Copiata",
+      "emptyQuery": "—",
+      "idleNote": "Scrivi una frase e premi Traduci.",
+      "filterCount_one": "{{count}} filtro",
+      "filterCount_other": "{{count}} filtri",
+      "legendTitle": "Cosa capisce",
+      "legendNote": "Clicca un esempio per metterlo nel riquadro.",
+      "warningsTitle": "Non verificata",
+      "unsupportedTitle": "Non esprimibile in Scryfall",
+      "assumptionsTitle": "Assunzioni",
+      "errorOffline": "Non riesco a raggiungere il traduttore su {{url}}. È in esecuzione?",
+      "errorRateLimited": "Limite orario di richieste raggiunto. Riprova più tardi.",
+      "errorBadRequest": "Il traduttore non è riuscito a leggere questa richiesta.",
+      "errorServer": "Il traduttore ha avuto un errore. Riprova tra poco.",
+      "errorUnknown": "Qualcosa è andato storto.",
+      "examples": [
+        "istantanei blu sotto 3 mana che pescano una carta, legali in modern",
+        "creature verdi con travolgere e forza 4 o più",
+        "creatura leggendaria rakdos da comandante",
+        "shockland sotto i 10 dollari",
+        "cheap red creatures with haste"
+      ],
+      "legend": [
+        {
+          "title": "Colori e identità",
+          "items": ["creature blu e bianche", "istantanei azorius", "identità di colore rakdos", "artefatti incolori"]
+        },
+        {
+          "title": "Tipi e sottotipi",
+          "items": ["goblin leggendario", "aura incantesimo", "planeswalker"]
+        },
+        {
+          "title": "Valore di mana, forza, costituzione",
+          "items": ["creature da 2 mana o meno", "forza almeno 5", "costituzione sotto 2"]
+        },
+        {
+          "title": "Testo e abilità",
+          "items": ["creature con volare e legame vitale", "dice \"sacrifica una creatura\"", "carte che pescano una carta"]
+        },
+        {
+          "title": "Legalità nei formati",
+          "items": ["legali in pauper", "bandite in modern", "commander"]
+        },
+        {
+          "title": "Rarità e prezzo",
+          "items": ["rare mitiche sotto i 5 dollari", "comuni sotto un dollaro"]
+        },
+        {
+          "title": "Cicli di terre e scorciatoie",
+          "items": ["fetchland", "shockland sotto i 10 dollari", "reserved list", "carte bifronte"]
+        },
+        {
+          "title": "Artista e ordinamento",
+          "items": ["terre di Rebecca Guay", "draghi dal più recente"]
+        },
+        {
+          "title": "Altre lingue",
+          "items": ["cheap red creatures", "billige rote Kreaturen", "créatures rouges pas chères"]
+        }
+      ]
+    },
+
+    "footer": {
+      "meta": "MIT · open source · dati delle carte da Scryfall"
+    }
+  },
+
+  "legal": {
+    "title": "Cookie e privacy",
+    "updated": "Ultimo aggiornamento 30 luglio 2026",
+    "intro": "In breve: questo sito non usa cookie, non fa analytics e non manda a nessuno informazioni su di te. Non c'è nessun banner da chiudere perché non c'è niente da consentire.",
+    "backLabel": "← Torna al sito",
+    "sections": [
+      {
+        "heading": "Cookie",
+        "body": [
+          "Nessuno. Questo sito non installa cookie — né per analytics, né per pubblicità, né per altro."
+        ]
+      },
+      {
+        "heading": "Cosa viene salvato sul tuo dispositivo",
+        "body": [
+          "Due cose, e solo se le chiedi tu. Quando usi l'interruttore chiaro/scuro in alto, la tua scelta viene salvata nella memoria locale del browser sotto la chiave walter-theme. Quando cambi lingua, quella scelta viene salvata sotto walter-lang. Se non tocchi nessuno dei due comandi, non viene scritto niente.",
+          "Questi valori non escono mai dal tuo browser. Ognuno contiene una sola parola — light o dark, en o it. Puoi cancellarli quando vuoi svuotando i dati del sito per questo dominio, e il sito tornerà semplicemente a seguire l'aspetto del tuo sistema operativo e la lingua del tuo browser.",
+          "Secondo la Direttiva ePrivacy (articolo 5(3)) un'archiviazione di questo tipo non richiede consenso: viene impostata solo in risposta a un'azione esplicita, contiene una preferenza di visualizzazione e non qualcosa che ti identifichi, e non viene usata per tracciarti. Per questo non c'è nessun banner sui cookie."
+        ]
+      },
+      {
+        "heading": "Terze parti",
+        "body": [
+          "Nessuna viene contattata al caricamento della pagina. I font sono serviti da questo dominio e non da una CDN, proprio perché leggere la pagina non riveli il tuo indirizzo IP a nessun altro. Non ci sono video incorporati, mappe, widget di commenti, script social o pixel di tracciamento.",
+          "La pagina contiene normali link a GitHub, Twitch, Instagram, LinkedIn, Bandcamp e Spotify. A quei servizi non viene mandato niente a meno che tu non clicchi e ci vada, e a quel punto valgono le loro informative."
+        ]
+      },
+      {
+        "heading": "La ricerca di Magic Tools",
+        "body": [
+          "La ricerca a parole tue nella pagina Magic Tools manda la frase che scrivi — e nient'altro — a un servizio di traduzione gestito per questo sito, che la trasforma in sintassi Scryfall. Viene mandata solo quando premi Traduci, mai mentre scrivi. La frase non viene conservata a tuo nome né usata per costruire un profilo.",
+          "Seguire il link che ne risulta ti porta su scryfall.com, che è un servizio separato con la propria informativa privacy."
+        ]
+      },
+      {
+        "heading": "Il modulo \"proponi uno strumento\"",
+        "body": [
+          "Quel modulo non ha un backend. Niente di quello che scrivi viene trasmesso o salvato su un server — quando lo invii, il browser apre una bozza nel tuo client di posta con i dati già compilati. Niente parte finché non premi invia tu, e se chiudi la bozza finisce lì."
+        ]
+      },
+      {
+        "heading": "Log del server",
+        "body": [
+          "Questo sito è servito da Firebase Hosting, un servizio Google, che conserva i normali log di un server web — indirizzo IP, data e ora, file richiesto, user agent. Sono generati dall'atto stesso di servirti una pagina, servono solo a consegnare il sito e a tenerlo in piedi, e non vengono incrociati con altro né usati per costruire un profilo."
+        ]
+      },
+      {
+        "heading": "I tuoi diritti",
+        "body": [
+          "Dato che qui non vengono raccolti o conservati dati personali oltre ai log del server descritti sopra, di norma non c'è niente a cui accedere, da correggere o da cancellare. Se vuoi chiedere di quei log, o di qualsiasi altra cosa in questa pagina, scrivi a say@walter.dev."
+        ]
+      }
+    ]
+  }
+}

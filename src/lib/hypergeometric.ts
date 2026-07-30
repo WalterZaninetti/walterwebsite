@@ -65,12 +65,26 @@ export function pmf({ deck, copies, draws }: DeckInput): number[] {
  * Percentage with the precision the number deserves: near-certainties don't
  * want to read "100.0%" when they aren't, and sub-1% values need a decimal to
  * say anything at all.
+ *
+ * Formatted through Intl so the decimal separator follows the locale — Italian
+ * writes 58,8% where English writes 58.8%.
  */
-export function formatPercent(p: number): string {
+export function formatPercent(p: number, locale = 'en'): string {
   const v = p * 100;
-  if (v >= 99.95) return '100%';
-  if (v >= 10) return `${v.toFixed(1)}%`;
-  return `${v.toFixed(v < 1 ? 2 : 1)}%`;
+  const digits = v >= 99.95 ? 0 : v >= 10 ? 1 : v < 1 ? 2 : 1;
+  return new Intl.NumberFormat(locale, {
+    style: 'percent',
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }).format(v >= 99.95 ? 1 : p);
+}
+
+/** Plain decimal, locale-aware — used for the expected-hits figure. */
+export function formatNumber(value: number, locale = 'en', digits = 2): string {
+  return new Intl.NumberFormat(locale, {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }).format(value);
 }
 
 export type Odds = {
@@ -103,11 +117,13 @@ export function computeOdds(raw: DeckInput): Odds {
   };
 }
 
-/** Plain-language restatement of the headline figure. */
-export function describeOdds(odds: Odds): string {
-  const { deck, draws, copies, atLeast } = odds.input;
-  const thing = copies >= 18 ? 'lands' : copies <= 4 ? 'copies' : 'of them';
-  return `Drawing ${draws} cards from ${deck}, you hit at least ${atLeast} ${thing} ${formatPercent(
-    odds.atLeastP,
-  )} of the time.`;
+/**
+ * Which noun the plain-language restatement should use. Returned as a key so
+ * the sentence can be assembled by the caller in the active language rather
+ * than baked in English here.
+ */
+export function thingKey(copies: number): 'thingLands' | 'thingCopies' | 'thingOfThem' {
+  if (copies >= 18) return 'thingLands';
+  if (copies <= 4) return 'thingCopies';
+  return 'thingOfThem';
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Small hand-rolled router — still not enough pages to justify a dependency.
@@ -20,13 +21,8 @@ function resolve(pathname: string): Route {
   return ROUTES[pathname.replace(/\/$/, '') || '/'] ?? 'home';
 }
 
-const TITLES: Record<Route, string> = {
-  home: 'Walter — small tools, made carefully',
-  legal: 'Cookies & privacy — Walter',
-  magic: 'Magic Tools — Walter',
-};
-
 export function useRoute(): Route {
+  const { t, i18n } = useTranslation();
   const [route, setRoute] = useState(() => resolve(window.location.pathname));
 
   useEffect(() => {
@@ -36,10 +32,15 @@ export function useRoute(): Route {
   }, []);
 
   // Client-side navigation doesn't reload the document, so the title is ours
-  // to keep in step.
+  // to keep in step — and it has to follow the language too.
   useEffect(() => {
-    document.title = TITLES[route];
-  }, [route]);
+    const titles: Record<Route, string> = {
+      home: `Walter — ${t('home.hero.headline')} ${t('home.hero.headlineAccent')}`,
+      legal: `${t('legal.title')} — Walter`,
+      magic: `${t('magic.hero.title')} — Walter`,
+    };
+    document.title = titles[route];
+  }, [route, t, i18n.resolvedLanguage]);
 
   return route;
 }

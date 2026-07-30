@@ -1,4 +1,5 @@
-import { hero } from '../content/site';
+import { useTranslation } from 'react-i18next';
+import { site } from '../content/site';
 import { AccentButton, PanelPill } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
 import { Frame } from './ui/Frame';
@@ -14,6 +15,8 @@ import { Frame } from './ui/Frame';
  * <h1> in the markup instead of one per breakpoint.
  */
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="top"
@@ -21,42 +24,46 @@ export function Hero() {
     >
       <div className="bg-panel px-5 pt-7 pb-5 dark:lg:border-r dark:lg:border-line-soft lg:col-start-1 lg:row-start-1 lg:px-10 lg:pt-11 lg:pb-0">
         <Eyebrow className="text-on-panel-label">
-          {hero.eyebrow}
-          <span className="hidden lg:inline">{hero.eyebrowSuffix}</span>
+          {t('home.hero.eyebrow')}
+          <span className="hidden lg:inline">{t('home.hero.eyebrowSuffix')}</span>
         </Eyebrow>
       </div>
 
       <div className="hero-glow relative flex flex-col justify-center px-5 pb-[18px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:bg-canvas lg:px-14 lg:pb-0">
         <h1 className="text-hero-sm font-display text-on-panel-strong lg:mb-6 lg:text-hero lg:text-balance lg:text-ink-strong">
-          {hero.headline}
+          {t('home.hero.headline')}
           <br />
-          <span className="italic text-on-panel-label lg:text-sage">{hero.headlineAccent}</span>
+          <span className="italic text-on-panel-label lg:text-sage">
+            {t('home.hero.headlineAccent')}
+          </span>
         </h1>
 
         <p className="mb-[34px] hidden max-w-[24em] text-lead text-ink-body text-pretty lg:block">
-          {hero.lead}
+          {t('home.hero.lead')}
         </p>
 
         <div className="hidden items-center gap-4 lg:flex">
           <AccentButton href="#projects" fg="paper" className="px-6 py-[13px] text-[13.5px]">
-            {hero.primaryCta}
+            {t('home.hero.primaryCta')}
           </AccentButton>
           <a
             href="#now"
             className="border-b border-line-strong pb-0.5 font-mono text-[13px] font-medium text-ink-muted no-underline transition-colors duration-150 hover:border-accent hover:text-accent"
           >
-            {hero.secondaryCta}
+            {t('home.hero.secondaryCta')}
           </a>
         </div>
 
         <div className="absolute bottom-10 left-14 hidden items-baseline gap-[14px] font-mono text-micro text-ink-faint lg:flex">
-          {hero.stats.map((stat) => (
-            <span key={stat} className="flex items-baseline gap-[14px]">
-              {stat}
-              <span aria-hidden="true">·</span>
-            </span>
-          ))}
-          <span className="text-accent">{hero.statAccent}</span>
+          <span className="flex items-baseline gap-[14px]">
+            {t('home.hero.stat1')}
+            <span aria-hidden="true">·</span>
+          </span>
+          <span className="flex items-baseline gap-[14px]">
+            {t('home.hero.stat2')}
+            <span aria-hidden="true">·</span>
+          </span>
+          <span className="text-accent">{t('home.hero.statAccent')}</span>
         </div>
       </div>
 
@@ -69,34 +76,36 @@ export function Hero() {
             align="end"
             className="mb-[22px] h-[170px] rounded-frame p-3 text-label text-on-panel-label lg:mb-[30px] lg:h-[280px] lg:p-3.5"
           >
-            <span className="lg:hidden">{hero.portraitCaptionShort}</span>
-            <span className="hidden lg:inline">{hero.portraitCaption}</span>
+            <span className="lg:hidden">{t('home.hero.portraitCaptionShort')}</span>
+            <span className="hidden lg:inline">{t('home.hero.portraitCaption')}</span>
           </Frame>
 
           {/* max-w holds the measure if the panel ever gets wider than the
               doc's 620px — long lines were the other half of the wide-screen
               problem. */}
           <p className="mb-6 max-w-[34em] text-body-sm text-on-panel-body text-pretty lg:hidden">
-            {hero.bioShort}
+            {t('home.hero.bioShort')}
           </p>
           <p className="mb-[18px] hidden max-w-[34em] text-body-sm text-on-panel-body text-pretty lg:block">
-            {hero.bio[0]}
+            {t('home.hero.bio1')}
           </p>
           <p className="hidden max-w-[34em] text-body-sm text-on-panel-soft text-pretty lg:block">
-            {hero.bio[1]}
+            {t('home.hero.bio2')}
           </p>
         </div>
 
         <div>
-          <Eyebrow className="mb-3 hidden text-sage-500 lg:block">{hero.socialsLabel}</Eyebrow>
+          <Eyebrow className="mb-3 hidden text-sage-500 lg:block">
+            {t('home.hero.socialsLabel')}
+          </Eyebrow>
           <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-wrap">
-            {hero.socials.map((social) => (
+            {site.socials.map((social) => (
               <PanelPill
-                key={social.label}
+                key={social.id}
                 href={social.href}
                 className="grid h-[46px] place-items-center text-[12.5px] lg:h-auto lg:px-[15px] lg:py-[9px] lg:text-meta"
               >
-                {social.label} ↗
+                {t(`socials.${social.id}`)} ↗
               </PanelPill>
             ))}
           </div>

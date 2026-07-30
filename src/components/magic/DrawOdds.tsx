@@ -1,17 +1,19 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { magic } from '../../content/magic';
 import {
   clampInput,
   computeOdds,
-  describeOdds,
+  formatNumber,
   formatPercent,
+  thingKey,
   type DeckInput,
 } from '../../lib/hypergeometric';
 
-const copy = magic.odds;
-
 /** Runs entirely in the browser — it's a closed-form calculation, not a lookup. */
 export function DrawOdds() {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage ?? 'en';
   const [raw, setRaw] = useState<DeckInput>({ deck: 60, copies: 24, draws: 7, atLeast: 3 });
 
   const odds = useMemo(() => computeOdds(raw), [raw]);
@@ -34,12 +36,12 @@ export function DrawOdds() {
 
   return (
     <section id="odds" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
-      <SectionHead index={copy.index} heading={copy.heading} blurb={copy.blurb} />
+      <SectionHead index="01" heading={t('magic.odds.heading')} blurb={t('magic.odds.blurb')} />
 
       <div className="grid items-start gap-[22px] lg:grid-cols-[340px_1fr]">
         {/* ---------------- controls ---------------- */}
         <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
-          <Field label={copy.deckLabel} value={String(deck)}>
+          <Field label={t('magic.odds.deckLabel')} value={String(deck)}>
             <input
               type="number"
               min={1}
@@ -49,7 +51,7 @@ export function DrawOdds() {
               className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none focus:border-magic-green focus:bg-white [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
             <div className="flex gap-[7px]">
-              {copy.deckPresets.map((value) => (
+              {magic.deckPresets.map((value) => (
                 <Preset key={value} onClick={() => set({ deck: value })} className="flex-1">
                   {value}
                 </Preset>
@@ -57,7 +59,7 @@ export function DrawOdds() {
             </div>
           </Field>
 
-          <Field label={copy.copiesLabel} value={String(copies)}>
+          <Field label={t('magic.odds.copiesLabel')} value={String(copies)}>
             <input
               type="range"
               min={1}
@@ -67,11 +69,11 @@ export function DrawOdds() {
               className="w-full accent-magic-green"
             />
             <p className="m-0 font-mono text-[11.5px]/[1.5] text-magic-ink-faint">
-              {copy.copiesHint}
+              {t('magic.odds.copiesHint')}
             </p>
           </Field>
 
-          <Field label={copy.drawsLabel} value={String(draws)}>
+          <Field label={t('magic.odds.drawsLabel')} value={String(draws)}>
             <input
               type="range"
               min={1}
@@ -81,24 +83,24 @@ export function DrawOdds() {
               className="w-full accent-magic-green"
             />
             <div className="flex flex-wrap gap-[7px]">
-              {copy.drawPresets.map((preset) => (
-                <Preset key={preset.label} onClick={() => set({ draws: preset.value })}>
-                  {preset.label}
+              {magic.drawPresets.map((preset) => (
+                <Preset key={preset.key} onClick={() => set({ draws: preset.value })}>
+                  {t(`magic.odds.${preset.key}`)}
                 </Preset>
               ))}
             </div>
           </Field>
 
           <div className="flex flex-col gap-[9px] border-t border-magic-rule-soft pt-[18px]">
-            <Label>{copy.atLeastLabel}</Label>
+            <Label>{t('magic.odds.atLeastLabel')}</Label>
             <div className="flex items-center gap-2.5">
-              <Stepper onClick={() => set({ atLeast: atLeast - 1 })} label="One fewer">
+              <Stepper onClick={() => set({ atLeast: atLeast - 1 })} label={t('magic.odds.oneFewer')}>
                 −
               </Stepper>
               <span className="flex-1 text-center font-mono text-[26px]/none font-medium text-magic-ink">
                 {atLeast}
               </span>
-              <Stepper onClick={() => set({ atLeast: atLeast + 1 })} label="One more">
+              <Stepper onClick={() => set({ atLeast: atLeast + 1 })} label={t('magic.odds.oneMore')}>
                 +
               </Stepper>
             </div>
@@ -108,29 +110,38 @@ export function DrawOdds() {
         {/* ---------------- results ---------------- */}
         <div className="flex flex-col gap-[22px]">
           <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-ink p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
-            <Gauge percent={odds.atLeastP} atLeast={atLeast} />
+            <Gauge value={formatPercent(odds.atLeastP, locale)} percent={odds.atLeastP} caption={t('magic.odds.gaugeCaption', { count: atLeast })} />
             <div>
               <p className="mb-[18px] font-magic-body text-[24px]/[1.4] italic text-pretty">
-                {describeOdds(odds)}
+                {t('magic.odds.sentence', {
+                  draws,
+                  deck,
+                  atLeast,
+                  thing: t(`magic.odds.${thingKey(copies)}`),
+                  percent: formatPercent(odds.atLeastP, locale),
+                })}
               </p>
               <div className="grid gap-3.5 sm:grid-cols-3">
-                <Stat label={`Exactly ${atLeast}`} value={formatPercent(odds.exactlyP)} />
                 <Stat
-                  label={`Fewer than ${atLeast}`}
-                  value={formatPercent(odds.fewerP)}
+                  label={t('magic.odds.exactly', { count: atLeast })}
+                  value={formatPercent(odds.exactlyP, locale)}
+                />
+                <Stat
+                  label={t('magic.odds.fewerThan', { count: atLeast })}
+                  value={formatPercent(odds.fewerP, locale)}
                   className="text-magic-coral"
                 />
-                <Stat label="Expected hits" value={odds.expected.toFixed(2)} />
+                <Stat label={t('magic.odds.expected')} value={formatNumber(odds.expected, locale)} />
               </div>
             </div>
           </div>
 
           <div className="rounded-[14px] border border-magic-rule bg-magic-card p-6">
             <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-              <Label>{copy.distributionLabel}</Label>
+              <Label>{t('magic.odds.distributionLabel')}</Label>
               <div className="flex gap-4 font-mono text-[10.5px] text-magic-ink-faint">
-                <LegendKey className="bg-magic-green">{copy.legendHit}</LegendKey>
-                <LegendKey className="bg-magic-bar-short">{copy.legendShort}</LegendKey>
+                <LegendKey className="bg-magic-green">{t('magic.odds.legendHit')}</LegendKey>
+                <LegendKey className="bg-magic-bar-short">{t('magic.odds.legendShort')}</LegendKey>
               </div>
             </div>
             <div className="flex h-[190px] items-end gap-[5px]">
@@ -142,7 +153,7 @@ export function DrawOdds() {
                     className="flex h-full flex-1 flex-col items-center justify-end gap-[7px]"
                   >
                     <span className="font-mono text-[10px] font-medium text-magic-ink-muted">
-                      {p >= 0.005 ? `${Math.round(p * 100)}%` : ''}
+                      {p >= 0.005 ? formatPercent(p, locale) : ''}
                     </span>
                     <div
                       className={`min-h-[2px] w-full rounded-t-[4px] transition-[height] duration-[250ms] ${
@@ -168,7 +179,7 @@ export function DrawOdds() {
           </div>
 
           <div className="rounded-[14px] border border-magic-rule bg-magic-card p-6">
-            <Label className="mb-4 block">{copy.cumulativeLabel}</Label>
+            <Label className="mb-4 block">{t('magic.odds.cumulativeLabel')}</Label>
             <div className="flex flex-col">
               {cumulative.map(({ k, p }) => {
                 const current = k === atLeast;
@@ -197,7 +208,7 @@ export function DrawOdds() {
                         current ? 'text-magic-ink' : 'text-magic-ink-muted'
                       }`}
                     >
-                      {formatPercent(p)}
+                      {formatPercent(p, locale)}
                     </span>
                   </div>
                 );
@@ -327,7 +338,7 @@ function Stepper({
   );
 }
 
-function Gauge({ percent, atLeast }: { percent: number; atLeast: number }) {
+function Gauge({ value, percent, caption }: { value: string; percent: number; caption: string }) {
   return (
     <div
       className="grid size-[168px] place-items-center rounded-full justify-self-center"
@@ -340,10 +351,10 @@ function Gauge({ percent, atLeast }: { percent: number; atLeast: number }) {
       <div className="grid size-[130px] place-items-center rounded-full bg-magic-ink text-center">
         <div>
           <p className="font-mono text-[38px]/none font-medium tracking-[-0.03em] text-white">
-            {formatPercent(percent)}
+            {value}
           </p>
           <p className="mt-1.5 font-mono text-[9.5px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
-            at least {atLeast}
+            {caption}
           </p>
         </div>
       </div>

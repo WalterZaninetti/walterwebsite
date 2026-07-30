@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
 import { AlbumOfTheMonth } from './AlbumOfTheMonth';
 import { NowPlaying } from './NowPlaying';
@@ -21,6 +22,8 @@ import { cx } from '../ui/cx';
  * accessibility tree, and it carries no headings or links.
  */
 export function MusicSection() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="music"
@@ -28,14 +31,15 @@ export function MusicSection() {
     >
       <div className="mb-2 lg:mb-[26px] lg:flex lg:items-center lg:justify-between lg:gap-10">
         <h2 className="text-section-sm font-display lg:text-section">
-          {music.heading} <span className="italic text-on-panel-accent">{music.headingAccent}</span>
+          {t('home.music.heading')}{' '}
+          <span className="italic text-on-panel-accent">{t('home.music.headingAccent')}</span>
         </h2>
         <MusicLinks className="hidden lg:flex lg:gap-2.5" />
       </div>
 
       <p className="mb-4 max-w-[34em] text-copy text-on-panel-body text-pretty lg:mb-7 lg:max-w-[52em] lg:text-body">
-        <span className="lg:hidden">{music.introShort}</span>
-        <span className="hidden lg:inline">{music.intro}</span>
+        <span className="lg:hidden">{t('home.music.introShort')}</span>
+        <span className="hidden lg:inline">{t('home.music.intro')}</span>
       </p>
 
       <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-[22px]">
@@ -57,10 +61,12 @@ export function MusicSection() {
 
 /** Bandcamp / Spotify. Inline pills in the desktop header, stacked on mobile. */
 function MusicLinks({ className, stacked = false }: { className?: string; stacked?: boolean }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <PanelPill
-        href="https://bandcamp.com"
+        href={music.links.primary}
         className={cx(
           'border-transparent bg-sage-solid font-sans text-sage-solid-fg hover:bg-accent hover:text-accent-fg-warm',
           stacked
@@ -68,10 +74,10 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
             : 'px-[18px] py-[11px] text-[12.5px]',
         )}
       >
-        {music.links.primary}
+        {t('home.music.links.primary')}
       </PanelPill>
       <PanelPill
-        href="https://spotify.com"
+        href={music.links.secondary}
         className={cx(
           'hover:border-sage-solid hover:bg-fill-on-panel hover:text-on-panel-body',
           stacked
@@ -79,7 +85,7 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
             : 'px-[18px] py-[11px] text-meta',
         )}
       >
-        {music.links.secondary}
+        {t('home.music.links.secondary')}
       </PanelPill>
     </div>
   );
@@ -90,12 +96,13 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
  * columns; mobile drops March and re-counts to +16, per the doc.
  */
 function PreviousPicks({ className }: { className?: string }) {
-  const { label, months, remaining, remainingShort } = music.previous;
+  const { t } = useTranslation();
+  const months = t('home.music.previous.months', { returnObjects: true }) as string[];
 
   return (
     <div className={cx('flex flex-col gap-2.5', className)}>
       <Eyebrow className="tracking-[0.16em] text-on-panel-quiet lg:tracking-[0.18em]">
-        {label}
+        {t('home.music.previous.label')}
       </Eyebrow>
       <div className="grid grid-cols-4 gap-2 lg:grid-cols-5 lg:gap-2.5">
         {months.map((month, index) => (
@@ -112,8 +119,8 @@ function PreviousPicks({ className }: { className?: string }) {
           </Frame>
         ))}
         <div className="grid aspect-square place-items-center rounded-chip border border-dashed border-hatch-line font-mono text-[11px] font-medium text-on-panel-accent lg:rounded-tile lg:text-label-wide/none">
-          <span className="lg:hidden">{remainingShort}</span>
-          <span className="hidden lg:inline">{remaining}</span>
+          <span className="lg:hidden">{t('home.music.previous.remainingShort')}</span>
+          <span className="hidden lg:inline">{t('home.music.previous.remaining')}</span>
         </div>
       </div>
     </div>

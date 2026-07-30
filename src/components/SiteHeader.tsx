@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { site } from '../content/site';
 import { useTheme } from '../lib/theme-context';
+import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
 import { cx } from './ui/cx';
 
@@ -11,6 +13,7 @@ import { cx } from './ui/cx';
  * ≡ button inert.
  */
 export function SiteHeader() {
+  const { t } = useTranslation();
   const { theme, toggle } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const nextTheme = theme === 'dark' ? 'light' : 'dark';
@@ -20,36 +23,46 @@ export function SiteHeader() {
       <div className="flex items-center justify-between px-5 py-4 md:px-13 md:py-[18px]">
         <a
           href="#top"
-          aria-label={site.name}
+          aria-label="Walter"
           className="flex items-center gap-[9px] text-header-ink no-underline md:gap-[11px]"
         >
           <Monogram size={38} className="md:size-[42px]" />
         </a>
 
-        {/* Desktop: inline nav + labelled theme switch */}
+        {/* Desktop: inline nav + language + labelled theme switch */}
         <nav className="hidden items-center gap-[26px] font-mono text-nav font-medium uppercase text-header-nav md:flex">
           {site.nav.map((item) => (
             <a
-              key={item.label}
+              key={item.key}
               href={item.href}
               className="no-underline transition-colors duration-150 hover:text-header-ink"
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </a>
           ))}
-          <ThemeSwitch onClick={toggle} next={nextTheme} />
+          <LanguageSwitch
+            className="font-mono text-nav font-medium"
+            activeClassName="text-header-ink"
+            idleClassName="text-header-nav hover:text-header-ink"
+          />
+          <ThemeSwitch onClick={toggle} next={nextTheme} label={t(`common.themeTo${nextTheme === 'dark' ? 'Dark' : 'Light'}`)} />
         </nav>
 
         {/* Mobile: two 44px targets */}
-        <div className="flex gap-2 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitch
+            className="font-mono text-nav font-medium"
+            activeClassName="text-header-ink"
+            idleClassName="text-header-nav"
+          />
           <IconButton
             onClick={toggle}
-            label={`Switch to ${nextTheme} theme`}
+            label={t(nextTheme === 'dark' ? 'common.switchToDark' : 'common.switchToLight')}
             glyph={theme === 'dark' ? '☀' : '☾'}
           />
           <IconButton
             onClick={() => setMenuOpen((open) => !open)}
-            label={menuOpen ? 'Close menu' : 'Open menu'}
+            label={t(menuOpen ? 'common.closeMenu' : 'common.openMenu')}
             glyph={menuOpen ? '×' : '≡'}
             expanded={menuOpen}
           />
@@ -60,12 +73,12 @@ export function SiteHeader() {
         <nav className="flex flex-col border-t border-header-line px-5 pb-4 md:hidden">
           {site.nav.map((item) => (
             <a
-              key={item.label}
+              key={item.key}
               href={item.href}
               onClick={() => setMenuOpen(false)}
               className="border-b border-line py-4 font-mono text-nav font-medium uppercase text-header-nav no-underline last:border-b-0"
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </a>
           ))}
         </nav>
@@ -74,7 +87,15 @@ export function SiteHeader() {
   );
 }
 
-function ThemeSwitch({ onClick, next }: { onClick: () => void; next: 'light' | 'dark' }) {
+function ThemeSwitch({
+  onClick,
+  next,
+  label,
+}: {
+  onClick: () => void;
+  next: 'light' | 'dark';
+  label: string;
+}) {
   return (
     <button
       type="button"
@@ -86,7 +107,7 @@ function ThemeSwitch({ onClick, next }: { onClick: () => void; next: 'light' | '
       )}
     >
       <span aria-hidden="true">{next === 'dark' ? '☾' : '☀'}</span>
-      {next === 'dark' ? 'Dark' : 'Light'}
+      {label}
     </button>
   );
 }

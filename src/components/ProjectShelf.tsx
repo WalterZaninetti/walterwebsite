@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import type { Project, ProjectId } from '../content/site';
-import { projects, projectsSection } from '../content/site';
+import { projects } from '../content/site';
 import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
 import { cx } from './ui/cx';
@@ -45,6 +46,8 @@ const titleFace: Record<Project['titleFace'], string> = {
 };
 
 export function ProjectShelf() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="projects"
@@ -52,10 +55,10 @@ export function ProjectShelf() {
     >
       <div className="mb-[18px] flex items-baseline justify-between lg:mb-[26px]">
         <h2 className="text-section-sm font-display text-ink-strong lg:text-section">
-          {projectsSection.heading}
+          {t('home.projects.heading')}
         </h2>
         <span className="hidden font-mono text-label-wide font-medium uppercase text-ink-note lg:inline">
-          {projectsSection.note}
+          {t('home.projects.note')}
         </span>
       </div>
 
@@ -69,7 +72,9 @@ export function ProjectShelf() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
   const theme = cardTheme[project.id];
+  const key = `home.projects.${project.id}` as const;
 
   return (
     <a
@@ -90,26 +95,26 @@ function ProjectCard({ project }: { project: Project }) {
       >
         {project.id === 'dj' ? (
           <span className="rounded-pill bg-project-dj-badge px-2.5 py-[5px] font-mono text-label/none text-project-dj-fg">
-            {project.thumbCaption}
+            {t(`${key}.thumbCaption`)}
           </span>
         ) : (
           <span className="font-mono text-label/none">
-            <span className="lg:hidden">{project.thumbCaptionShort}</span>
-            <span className="hidden lg:inline">{project.thumbCaption}</span>
+            <span className="lg:hidden">{t(`${key}.thumbCaptionShort`)}</span>
+            <span className="hidden lg:inline">{t(`${key}.thumbCaption`)}</span>
           </span>
         )}
       </div>
 
       <Eyebrow className={cx('mb-2 tracking-[0.16em] lg:mb-2.5 lg:tracking-[0.18em]', theme.eyebrow)}>
-        <span className="lg:hidden">{project.eyebrowShort}</span>
-        <span className="hidden lg:inline">{project.eyebrow}</span>
+        <span className="lg:hidden">{t(`${key}.eyebrowShort`)}</span>
+        <span className="hidden lg:inline">{t(`${key}.eyebrow`)}</span>
       </Eyebrow>
 
-      <h3 className={cx('mb-2 lg:mb-3', titleFace[project.titleFace])}>{project.title}</h3>
+      <h3 className={cx('mb-2 lg:mb-3', titleFace[project.titleFace])}>{t(`${key}.title`)}</h3>
 
       <p className={cx('text-note-sm text-pretty lg:mb-5 lg:text-note', theme.body)}>
-        <span className="lg:hidden">{project.descriptionShort}</span>
-        <span className="hidden lg:inline">{project.description}</span>
+        <span className="lg:hidden">{t(`${key}.descriptionShort`)}</span>
+        <span className="hidden lg:inline">{t(`${key}.description`)}</span>
       </p>
 
       <div
@@ -118,8 +123,8 @@ function ProjectCard({ project }: { project: Project }) {
           theme.meta,
         )}
       >
-        <span>{project.meta}</span>
-        <span>Open →</span>
+        <span>{t(`${key}.meta`)}</span>
+        <span>{t('home.projects.openLabel')}</span>
       </div>
     </a>
   );

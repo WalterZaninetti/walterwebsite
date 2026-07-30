@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
@@ -10,6 +11,8 @@ const np = music.nowPlaying;
  * to change shape.
  */
 export function NowPlaying() {
+  const { t } = useTranslation();
+
   return (
     <article className="flex flex-col rounded-card-sm border border-line-inset bg-panel-inset p-5 lg:rounded-card lg:p-6">
       <div className="mb-4 flex items-center justify-between lg:mb-5">
@@ -21,11 +24,11 @@ export function NowPlaying() {
             aria-hidden="true"
             className="size-[7px] rounded-full bg-live-500 shadow-[0_0_0_4px_rgb(74_222_138/0.18)]"
           />
-          {np.label}
+          {t('home.music.nowPlaying.label')}
         </Eyebrow>
         <span className="font-mono text-label-wide/none tracking-normal text-on-panel-dim">
-          <span className="lg:hidden">{np.sourceShort}</span>
-          <span className="hidden lg:inline">{np.source}</span>
+          <span className="lg:hidden">{t('home.music.nowPlaying.sourceShort')}</span>
+          <span className="hidden lg:inline">{t('home.music.nowPlaying.source')}</span>
         </span>
       </div>
 
@@ -34,7 +37,7 @@ export function NowPlaying() {
           texture="tight"
           className="size-[76px] shrink-0 rounded-field text-[9px] lg:size-[104px]"
         >
-          {np.artCaption}
+          {t('home.music.nowPlaying.artCaption')}
         </Frame>
         <div className="min-w-0">
           <p className="mb-1 text-[16px]/[1.25] font-medium text-on-panel-strong lg:mb-[5px] lg:text-[19px]/[1.25]">
@@ -77,7 +80,9 @@ export function NowPlaying() {
 
       {/* The recently-played list is desktop-only in the doc's mobile column. */}
       <div className="hidden lg:flex lg:flex-col">
-        <Eyebrow className="mb-3 text-on-panel-quiet">{np.recentLabel}</Eyebrow>
+        <Eyebrow className="mb-3 text-on-panel-quiet">
+          {t('home.music.nowPlaying.recentLabel')}
+        </Eyebrow>
         <div className="-mt-0.5 flex flex-col">
           {np.recent.map((track) => (
             <div
@@ -99,7 +104,7 @@ export function NowPlaying() {
           href="#listening"
           className="mt-auto pt-4 font-mono text-meta font-medium text-live-400 no-underline transition-colors duration-150 hover:text-on-panel-strong"
         >
-          {np.historyLink}
+          {t('home.music.nowPlaying.historyLink')}
         </a>
       </div>
     </article>

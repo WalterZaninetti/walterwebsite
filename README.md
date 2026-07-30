@@ -83,32 +83,58 @@ kept so a re-import can be diffed against it — that's how the second homepage 
 There's no equivalent stored for Magic Tools yet; re-fetch it through the design MCP and diff by
 hand, or drop a copy alongside the homepage one to get the same workflow.
 
+## Languages
+
+English and Italian, via `react-i18next`. All copy lives in `src/locales/{en,it}.json`; the modules
+under `src/content/` keep only what isn't prose — ids, hrefs, layout choices, numeric data, and
+proper nouns (record and track names) that read the same either way.
+
+- **Detection**: stored choice first, then the browser. `load: 'languageOnly'` means an `it-IT`
+  visitor gets Italian rather than falling through to English.
+- **Persistence**: `localStorage['walter-lang']`. Deliberately *not* a cookie — the notice's
+  "no cookies" claim is load-bearing, and i18next would happily have used one by default.
+- **`<html lang>`** is updated on every change, and document titles are translated too.
+- **Numbers go through `Intl`**, so the draw-odds figures read `58,8%` in Italian and `58.8%` in
+  English. `formatPercent`/`formatNumber` take the active locale.
+- **The Magic Tools examples are localised, not translated** — the backend accepts Italian, so the
+  Italian locale offers Italian sentences to type. Scryfall operator syntax (`c: · id:`) stays in
+  `content/magic.ts`: it's code, not prose.
+
+Adding a language means a third JSON file and one entry in `LANGUAGES` in `src/lib/i18n.ts`.
+
+Two known gaps: the `<meta name="description">` in `index.html` is English-only, since a static SPA
+has no server to vary it per request; and the language choice isn't reflected in the URL, so a
+shared link always opens in the recipient's own language.
+
 ## Privacy posture
 
-The site sets **no cookies**, runs no analytics, and makes **no third-party requests** — verified
-by checking `performance.getEntriesByType('resource')` for off-origin hosts. The only thing written
-to a visitor's device is `localStorage['walter-theme']`, and only once they click the theme switch.
+The site sets **no cookies**, runs no analytics, and makes **no third-party requests** on load —
+verified by checking `performance.getEntriesByType('resource')` for off-origin hosts. The only
+things written to a visitor's device are `localStorage['walter-theme']` and
+`localStorage['walter-lang']`, each only once they use the corresponding control.
 
 That is what makes the notice at `/cookie-policy` accurate and why there is **no consent banner**:
 storage set by explicit user action, holding a display preference and not used for tracking, is
 outside the consent requirement in Article 5(3) of the ePrivacy Directive.
 
-This is load-bearing. Adding analytics, an embed (YouTube, Maps, comments), a hosted font, or a
-form that actually POSTs somewhere all break it, and `src/content/legal.ts` would need updating —
-possibly along with adding the banner. That file carries the same warning at the top.
+This is load-bearing. Adding analytics, an embed (YouTube, Maps, comments), a hosted font, a form
+that actually POSTs somewhere, or any new stored key all break it, and the `legal` section of
+**both** locale files would need updating — possibly along with adding the banner. Adding the
+language preference is exactly this case: `walter-lang` meant rewriting that section in en and it.
 
 ## Structure
 
 ```
 src/
-  content/site.ts        all copy, in one place (incl. the doc's tighter mobile variants)
-  design-system/         theme.css + the reference canvas HTML
-  lib/theme.tsx          light/dark provider
+  locales/               en.json + it.json — all copy for all three pages
+  content/               structure and data only: ids, hrefs, numbers, proper nouns
+  design-system/         theme.css, fonts.css + the reference canvas HTML
   lib/
     route.ts             two-and-a-bit pages of hand-rolled routing
     theme.tsx            light/dark provider (homepage + legal only)
     hypergeometric.ts    draw-odds maths
     translateApi.ts      client for the scryfall-filters service
+    i18n.ts              i18next setup, detection and persistence
   components/
     ui/                  Eyebrow, Frame, Pill/Chip/AccentButton, Monogram, icons
     music/               MusicSection, AlbumOfTheMonth, NowPlaying
