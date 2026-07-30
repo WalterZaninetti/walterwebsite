@@ -73,13 +73,16 @@ export function Hero() {
             <span className="hidden lg:inline">{hero.portraitCaption}</span>
           </Frame>
 
-          <p className="mb-6 text-body-sm text-on-panel-body text-pretty lg:hidden">
+          {/* max-w holds the measure if the panel ever gets wider than the
+              doc's 620px — long lines were the other half of the wide-screen
+              problem. */}
+          <p className="mb-6 max-w-[34em] text-body-sm text-on-panel-body text-pretty lg:hidden">
             {hero.bioShort}
           </p>
-          <p className="mb-[18px] hidden text-body-sm text-on-panel-body text-pretty lg:block">
+          <p className="mb-[18px] hidden max-w-[34em] text-body-sm text-on-panel-body text-pretty lg:block">
             {hero.bio[0]}
           </p>
-          <p className="hidden text-body-sm text-on-panel-soft text-pretty lg:block">
+          <p className="hidden max-w-[34em] text-body-sm text-on-panel-soft text-pretty lg:block">
             {hero.bio[1]}
           </p>
         </div>

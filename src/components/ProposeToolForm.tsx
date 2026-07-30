@@ -76,8 +76,11 @@ export function ProposeToolForm() {
         </Field>
       </div>
 
-      <fieldset className="mt-[14px] flex flex-col gap-[9px] lg:mt-0 lg:mb-[14px]">
-        <legend className="mb-[9px] font-mono text-label font-medium uppercase tracking-[0.16em] text-on-panel-accent lg:mb-0">
+      {/* A <legend> is rendered out-of-flow in the fieldset's border box, so it
+          is not a flex item and gap never applies to it — the spacing below the
+          label has to be its own margin. */}
+      <fieldset className="mt-[14px] lg:mt-0 lg:mb-[14px]">
+        <legend className="mb-[9px] font-mono text-label font-medium uppercase tracking-[0.16em] text-on-panel-accent">
           {propose.fields.topic.label}
         </legend>
         <div className="flex flex-wrap gap-2">
