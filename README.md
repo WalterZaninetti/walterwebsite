@@ -93,12 +93,12 @@ npm run dev              # :8080, ALLOWED_ORIGINS already lists :5173
 ```
 
 Set `VITE_TRANSLATE_API_URL` here to point at a deployed instance (see `.env.example`); it
-defaults to `http://localhost:8080`. The API key stays server-side — the browser only ever talks
-to the service, never to a model provider.
+defaults to `http://localhost:8080`, and add that origin to the service's `ALLOWED_ORIGINS`. No
+credential is sent from the browser — see the auth note above.
 
 The design shipped a local regex parser that translated on every keystroke. That's replaced by the
 service, which is a model call validated against Scryfall before it returns — slower, metered, and
-rate-limited to 60/hour per IP. So the UI translates on **explicit submit** (button or ⌘/Ctrl+Enter)
+rate-limited (15/hour per IP by default). So the UI translates on **explicit submit** (button or ⌘/Ctrl+Enter)
 rather than as you type. In exchange it reads Italian, German, French and Spanish, and it catches
 queries Scryfall would silently ignore while returning thousands of wrong cards.
 
