@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { magic } from '../../content/magic';
 import { footerLegal } from '../../content/site';
 import { navigate } from '../../lib/route';
+import { cx } from '../ui/cx';
 import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { DrawOdds } from './DrawOdds';
@@ -93,37 +94,52 @@ function Hero() {
       id="top"
       className="relative overflow-hidden bg-magic-ink px-5 pt-12 pb-11 text-magic-cream md:px-10 md:pt-16 md:pb-14"
     >
-      <div className="relative grid items-end gap-10 lg:grid-cols-[1.25fr_.75fr] lg:gap-[60px]">
-        <div>
-          <div className="mb-6">
-            <ManaPips />
-          </div>
-          <h1 className="mb-[18px] font-magic-display text-[40px]/[1.04] font-semibold tracking-[0.005em] text-balance md:text-[60px]">
-            {t('magic.hero.title')}
-          </h1>
-          <p className="max-w-[32em] font-magic-body text-[17.5px]/[1.7] text-magic-cream-dim text-pretty">
-            {t('magic.hero.blurb')}
-          </p>
+      <div className="relative">
+        <div className="mb-6">
+          <ManaPips />
         </div>
-        <div className="flex flex-col gap-3.5 border-magic-cream/25 lg:border-l lg:pl-6">
-          {jumps.map((item, i) => (
+        <h1 className="mb-[18px] font-magic-display text-[40px]/[1.04] font-semibold tracking-[0.005em] text-balance md:text-[60px]">
+          {t('magic.hero.title')}
+        </h1>
+        <p className="max-w-[32em] font-magic-body text-[17.5px]/[1.7] text-magic-cream-dim text-pretty">
+          {t('magic.hero.blurb')}
+        </p>
+
+        {/*
+          The doc drew two tools in a narrow column beside the headline. At five
+          that column was taller than the headline it sat next to, so the index
+          runs across underneath instead — one cell per tool, dividers between
+          them, collapsing to two columns and then one as the row runs out of
+          width.
+        */}
+        <nav
+          aria-label={t('magic.hero.toolsLabel')}
+          className="mt-9 grid gap-x-0 gap-y-6 border-t border-magic-cream/25 pt-7 sm:grid-cols-2 lg:grid-cols-5 md:mt-11"
+        >
+          {jumps.map((item) => (
             <a
               key={item.index}
               href={item.href}
-              className={`text-magic-cream no-underline transition-colors hover:text-magic-green-light ${
-                i > 0 ? 'border-t border-magic-cream/20 pt-3.5' : ''
-              }`}
+              // Dividers belong to whichever cells start a column, and that
+              // changes with the breakpoint — so they key off nth-child, not the
+              // array index. At two columns the odd items start a row; at five,
+              // only the first does.
+              className={cx(
+                'text-magic-cream no-underline transition-colors hover:text-magic-green-light',
+                'sm:[&:nth-child(even)]:border-l sm:[&:nth-child(even)]:border-magic-cream/20 sm:[&:nth-child(even)]:pl-5',
+                'lg:[&:nth-child(n+2)]:border-l lg:[&:nth-child(n+2)]:border-magic-cream/20 lg:[&:nth-child(n+2)]:pl-6',
+              )}
             >
-              <p className="mb-1 font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-magic-green-light">
+              <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-magic-green-light">
                 {item.index}
               </p>
-              <p className="font-magic-body text-[22px]/[1.15] italic">{item.title}</p>
-              <p className="mt-1 font-magic-body text-[12.5px]/[1.6] text-magic-cream-dimmer">
+              <p className="font-magic-body text-[20px]/[1.15] italic text-balance">{item.title}</p>
+              <p className="mt-1.5 font-magic-body text-[12.5px]/[1.55] text-magic-cream-dimmer text-pretty">
                 {item.note}
               </p>
             </a>
           ))}
-        </div>
+        </nav>
       </div>
     </div>
   );

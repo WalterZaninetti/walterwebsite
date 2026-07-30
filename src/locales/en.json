@@ -183,7 +183,8 @@
       "jump2Note": "Type a sentence, get Scryfall syntax",
       "jump3Note": "Sources needed, mulligans included",
       "jump4Note": "Several requirements at once",
-      "jump5Note": "When a one-of turns up"
+      "jump5Note": "When a one-of turns up",
+      "toolsLabel": "The tools on this page"
     },
     "odds": {
       "heading": "Draw odds",

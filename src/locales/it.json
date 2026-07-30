@@ -183,7 +183,8 @@
       "jump2Note": "Scrivi una frase, ottieni la sintassi Scryfall",
       "jump3Note": "Quante fonti servono, mulligan compresi",
       "jump4Note": "Più requisiti insieme",
-      "jump5Note": "Quando esce una carta singola"
+      "jump5Note": "Quando esce una carta singola",
+      "toolsLabel": "Gli strumenti in questa pagina"
     },
     "odds": {
       "heading": "Probabilità di pescata",
