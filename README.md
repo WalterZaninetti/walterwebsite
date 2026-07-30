@@ -37,6 +37,20 @@ Theme selection: `src/lib/theme.tsx` toggles `.dark` on `<html>` and persists to
 so dark-mode visitors get no flash. With nothing stored, the OS preference wins and keeps winning
 until the visitor uses the header switch.
 
+## Privacy posture
+
+The site sets **no cookies**, runs no analytics, and makes **no third-party requests** — verified
+by checking `performance.getEntriesByType('resource')` for off-origin hosts. The only thing written
+to a visitor's device is `localStorage['walter-theme']`, and only once they click the theme switch.
+
+That is what makes the notice at `/cookie-policy` accurate and why there is **no consent banner**:
+storage set by explicit user action, holding a display preference and not used for tracking, is
+outside the consent requirement in Article 5(3) of the ePrivacy Directive.
+
+This is load-bearing. Adding analytics, an embed (YouTube, Maps, comments), a hosted font, or a
+form that actually POSTs somewhere all break it, and `src/content/legal.ts` would need updating —
+possibly along with adding the banner. That file carries the same warning at the top.
+
 ## Structure
 
 ```
@@ -78,10 +92,16 @@ mobile order and no markup is duplicated per breakpoint.
   images that were `import`ed and got a content hash) is cached for a year as `immutable`.
   Unhashed files served straight from `public/` get a short, revalidated cache instead, since
   their filename never changes when their content does.
-- **Fonts** — Instrument Serif, Space Grotesk, IBM Plex Mono and Libre Baskerville come from Google
-  Fonts with `display=swap` and preconnect hints, requesting only the weights the page renders.
-  Self-hosting them as `woff2` under `src/assets/fonts` would drop the third-party DNS/TLS round
-  trip and is the next win if font loading shows up in field data.
+- **Fonts are self-hosted** — Instrument Serif, Space Grotesk, IBM Plex Mono and Libre Baskerville
+  live in `src/assets/fonts` (Latin subset, OFL, see `OFL.txt`) and are declared in
+  `src/design-system/fonts.css` with `font-display: swap`. This is a privacy decision before it is
+  a performance one: loading them from a font CDN would disclose every visitor's IP to a third
+  party, which is what the cookie notice exists to be able to deny. It also drops a DNS + TLS round
+  trip. Space Grotesk and Libre Baskerville are variable fonts, so several weights resolve to one
+  byte-identical file that Vite deduplicates — 12 `@font-face` rules, 8 files, ~152 kB.
+  They are deliberately **not** preloaded from `index.html`: Vite hashes and relocates assets
+  referenced from CSS, so a hardcoded path there would 404 in the build. Move the files to
+  `public/fonts` first if you want real preload hints.
 
 ## Commands
 
@@ -106,8 +126,10 @@ routing), and sets the cache headers described above.
 
 ## Extending
 
-- **Multi-page / routing**: the header and hero already link to `#projects`, `#about`, `#twitch`
-  and `#now`. Add `react-router` and `lazy()` each route when those become real pages.
+- **Multi-page / routing**: `src/lib/route.ts` is ~30 lines of hand-rolled routing serving the one
+  real second page (`/cookie-policy` and `/privacy`, both the same notice) off the SPA rewrite
+  `firebase.json` already has. Two pages don't justify a router; swap in `react-router` when
+  `#projects`, `#about`, `#twitch` and `#now` become real pages.
 - **The propose-a-tool form** has no backend: `handleSubmit` composes the fields into a `mailto:`
   draft to the address the card already offers as a fallback. Point it at an endpoint when there
   is one; the fields don't need to change.

@@ -1,13 +1,25 @@
 import { Hero } from './components/Hero';
+import { LegalPage } from './components/LegalPage';
 import { NowFooter } from './components/NowFooter';
 import { ProjectShelf } from './components/ProjectShelf';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { SupportSection } from './components/SupportSection';
 import { MusicSection } from './components/music/MusicSection';
+import { useIsLegalPath } from './lib/route';
 import { ThemeProvider } from './lib/theme';
 
 export default function App() {
+  const isLegal = useIsLegalPath();
+
+  if (isLegal) {
+    return (
+      <ThemeProvider>
+        <LegalPage />
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       {/*

@@ -224,9 +224,10 @@ export const propose = {
 export const footerBar = {
   credit: 'Made by Walter and Claudio with ',
   creditAccent: 'love',
+  /* Both land on the same notice — see content/legal.ts for why. */
   legal: [
-    { label: 'Cookie policy', href: '#cookie-policy' },
-    { label: 'Privacy', href: '#privacy' },
+    { label: 'Cookie policy', href: '/cookie-policy' },
+    { label: 'Privacy', href: '/privacy' },
   ],
   copyright: '© 2026',
 } as const;

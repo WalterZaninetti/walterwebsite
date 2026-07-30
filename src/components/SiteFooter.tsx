@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { footerBar, hero } from '../content/site';
+import { navigate } from '../lib/route';
 import { Monogram } from './ui/Monogram';
 import { GitHubIcon, InstagramIcon, LinkedInIcon, TwitchIcon } from './ui/icons';
 
@@ -51,6 +52,7 @@ export function SiteFooter() {
             <a
               key={item.label}
               href={item.href}
+              onClick={navigate}
               className="no-underline transition-colors duration-150 hover:text-on-panel-body"
             >
               {item.label}

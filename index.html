@@ -14,15 +14,20 @@
     <!--
       Fonts come straight from the design doc: Instrument Serif (display),
       Space Grotesk (UI/body), IBM Plex Mono (labels and metadata) and Libre
-      Baskerville (the editorial italics on the Magic Tools card). Only the
-      weights the page actually renders are requested.
+      Baskerville (the editorial italics on the Magic Tools card).
+
+      They are self-hosted (src/assets/fonts, declared in
+      src/design-system/fonts.css) rather than pulled from a font CDN, so
+      rendering the page never discloses a visitor's IP to a third party. That
+      is what lets the cookie notice say this site contacts nobody.
+
+      They are deliberately not preloaded from here: Vite content-hashes and
+      relocates assets referenced from CSS, so any path hardcoded in this file
+      would 404 in the build. The @font-face rules are discovered when the
+      (render-blocking) stylesheet parses, and font-display: swap keeps text
+      visible meanwhile. To add real preloads, move the woff2 files to
+      public/fonts so their URLs become stable.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
 
     <title>Walter — small tools, made carefully</title>
 

@@ -6,4 +6,5 @@
   defined in design-system/theme.css, extracted from the Claude Design doc.
   Add tokens there rather than hard-coding values in components.
 */
+@import "./design-system/fonts.css";
 @import "./design-system/theme.css";
