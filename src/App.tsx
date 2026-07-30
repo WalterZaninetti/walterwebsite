@@ -1,6 +1,7 @@
 import { Hero } from './components/Hero';
 import { NowFooter } from './components/NowFooter';
 import { ProjectShelf } from './components/ProjectShelf';
+import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { SupportSection } from './components/SupportSection';
 import { MusicSection } from './components/music/MusicSection';
@@ -25,6 +26,7 @@ export default function App() {
           <MusicSection />
           <SupportSection />
           <NowFooter />
+          <SiteFooter />
         </main>
       </div>
     </ThemeProvider>

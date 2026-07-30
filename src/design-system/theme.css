@@ -55,6 +55,10 @@
   --color-live-400: #8fd9a8;
   --color-live-500: #4ade8a;
 
+  /* Teal — the monogram's second stroke, the one non-sage brand colour */
+  --color-teal-600: #2f7d72;
+  --color-teal-400: #6fb8ac;
+
   /* Type scale, faithful to the doc (px, paired line-heights) */
   --text-hero: 96px;
   --text-hero--line-height: 0.98;
@@ -198,6 +202,15 @@
   --header-nav: #5c6f5f;
   --toggle-hover-bg: #26402f;
   --toggle-hover-fg: #eef0e6;
+  /* The monogram's accent stroke follows the surface it sits on, not the
+     theme: deep teal on the light header, pale teal on any dark panel. */
+  --monogram-accent: #2f7d72;
+
+  /* Footer bar */
+  --footer-bar: #26402f;
+  --footer-ink: #cfdac6;
+  --footer-meta: #8fa891;
+  --footer-divider: rgb(207 218 198 / 0.25);
 
   /* Hatched placeholder texture (photos not dropped in yet) */
   --hatch: rgb(207 218 198 / 0.14);
@@ -297,6 +310,12 @@
   --header-nav: #93a894;
   --toggle-hover-bg: #cfdac6;
   --toggle-hover-fg: #1d2a1f;
+  --monogram-accent: #6fb8ac;
+
+  --footer-bar: #0f1410;
+  --footer-ink: #a9bcaa;
+  --footer-meta: #6d806e;
+  --footer-divider: rgb(207 218 198 / 0.2);
 
   --hatch: rgb(207 218 198 / 0.1);
   --hatch-line: rgb(207 218 198 / 0.2);
@@ -397,6 +416,12 @@
   --color-header-nav: var(--header-nav);
   --color-toggle-hover-bg: var(--toggle-hover-bg);
   --color-toggle-hover-fg: var(--toggle-hover-fg);
+  --color-monogram-accent: var(--monogram-accent);
+
+  --color-footer-bar: var(--footer-bar);
+  --color-footer-ink: var(--footer-ink);
+  --color-footer-meta: var(--footer-meta);
+  --color-footer-divider: var(--footer-divider);
 
   --color-project-magic: var(--project-magic);
   --color-project-magic-fg: var(--project-magic-fg);

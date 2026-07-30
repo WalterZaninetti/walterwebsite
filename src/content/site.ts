@@ -36,11 +36,12 @@ export const hero = {
   stats: ['03 projects', 'all open source'],
   statAccent: 'streaming soon',
   socialsLabel: 'Find me',
+  /** `id` keys the glyph used by the footer bar — see components/ui/icons.tsx. */
   socials: [
-    { label: 'GitHub', href: 'https://github.com' },
-    { label: 'Twitch', href: 'https://twitch.tv' },
-    { label: 'Instagram', href: 'https://instagram.com' },
-    { label: 'LinkedIn', href: 'https://linkedin.com' },
+    { id: 'github', label: 'GitHub', href: 'https://github.com' },
+    { id: 'twitch', label: 'Twitch', href: 'https://twitch.tv' },
+    { id: 'instagram', label: 'Instagram', href: 'https://instagram.com' },
+    { id: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com' },
   ],
 } as const;
 
@@ -115,7 +116,6 @@ export const projects: readonly Project[] = [
 export const music = {
   heading: 'Music,',
   headingAccent: 'taken seriously',
-  note: 'One album a month · listening always',
   intro:
     'Music is the thing I know most about that isn’t code. I dig, I read liner notes, I care about which pressing it is — and I DJ, which is mostly an excuse to keep digging. Every month I pick one record and write down why it got under my skin.',
   introShort:
@@ -219,6 +219,16 @@ export const propose = {
   ],
   submit: 'Send the idea',
   aside: 'Or just email say@walter.dev',
+} as const;
+
+export const footerBar = {
+  credit: 'Made by Walter and Claudio with ',
+  creditAccent: 'love',
+  legal: [
+    { label: 'Cookie policy', href: '#cookie-policy' },
+    { label: 'Privacy', href: '#privacy' },
+  ],
+  copyright: '© 2026',
 } as const;
 
 export const now = {

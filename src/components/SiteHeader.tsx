@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { site } from '../content/site';
 import { useTheme } from '../lib/theme-context';
+import { Monogram } from './ui/Monogram';
 import { cx } from './ui/cx';
 
 /**
@@ -19,9 +20,10 @@ export function SiteHeader() {
       <div className="flex items-center justify-between px-5 py-4 md:px-13 md:py-[18px]">
         <a
           href="#top"
-          className="font-display text-[20px] leading-none text-header-ink no-underline md:text-[22px]"
+          aria-label={site.name}
+          className="flex items-center gap-[9px] text-header-ink no-underline md:gap-[11px]"
         >
-          {site.name}
+          <Monogram size={38} className="md:size-[42px]" />
         </a>
 
         {/* Desktop: inline nav + labelled theme switch */}

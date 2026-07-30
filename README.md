@@ -45,9 +45,10 @@ src/
   design-system/         theme.css + the reference canvas HTML
   lib/theme.tsx          light/dark provider
   components/
-    ui/                  Eyebrow, Frame, Pill/Chip/AccentButton primitives
+    ui/                  Eyebrow, Frame, Pill/Chip/AccentButton, Monogram, icons
     music/               MusicSection, AlbumOfTheMonth, NowPlaying
-    SiteHeader, Hero, ProjectShelf, SupportSection, ProposeToolForm, NowFooter
+    SiteHeader, Hero, ProjectShelf, SupportSection, ProposeToolForm,
+    NowFooter (the "Now" note), SiteFooter (the closing bar)
 ```
 
 Sections whose mobile reading order interleaves the desktop columns (the hero, the music grid) are

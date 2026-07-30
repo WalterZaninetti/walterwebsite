@@ -1,14 +1,33 @@
+import type { ReactNode } from 'react';
 import { music } from '../../content/site';
 import { Chip } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
+import { cx } from '../ui/cx';
 
 const album = music.album;
 
-/** The monthly pick. Sleeve sits beside the note on desktop, above it on mobile. */
-export function AlbumOfTheMonth() {
+/**
+ * The monthly pick. Sleeve sits beside the note on desktop, above it on mobile.
+ *
+ * `footer` is the slot the desktop layout drops the previous-picks archive
+ * into — the doc moved it inside this card, where it pushes to the bottom so
+ * the card fills its grid row.
+ */
+export function AlbumOfTheMonth({
+  className,
+  footer,
+}: {
+  className?: string;
+  footer?: ReactNode;
+}) {
   return (
-    <article className="rounded-card-sm border border-line-inset bg-panel-inset p-5 lg:rounded-card lg:p-[22px]">
+    <article
+      className={cx(
+        'flex flex-col rounded-card-sm border border-line-inset bg-panel-inset p-5 lg:rounded-card lg:p-6',
+        className,
+      )}
+    >
       <div className="mb-[14px] flex items-baseline justify-between lg:mb-4">
         <Eyebrow className="tracking-[0.16em] text-accent lg:tracking-[0.18em]">
           {album.label}
@@ -66,6 +85,8 @@ export function AlbumOfTheMonth() {
           {album.archiveLink}
         </a>
       </div>
+
+      {footer}
     </article>
   );
 }

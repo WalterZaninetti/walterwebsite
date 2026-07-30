@@ -4,14 +4,21 @@ import { NowPlaying } from './NowPlaying';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
+import { cx } from '../ui/cx';
 
 /**
  * "Music, taken seriously".
  *
- * Mobile stacks intro → pick → now-playing → archive → links, while desktop
- * pulls the now-playing card out into a full-height right column. Rather than
- * duplicate markup, the children are laid out flat and placed explicitly on the
- * desktop grid — DOM order is the mobile order.
+ * Desktop and mobile diverge more than a reflow here, and the doc keeps its
+ * mobile column as it was: on desktop the Bandcamp/Spotify pair sits up in the
+ * section header and the previous-picks archive lives inside the album card,
+ * while mobile keeps both at the bottom of the section in DOM order.
+ *
+ * The links are rendered once and moved by breakpoint; the archive is the one
+ * block rendered twice, because desktop nests it inside the album card and no
+ * amount of ordering can move an element across that boundary. Both copies are
+ * `display:none` at the other breakpoint, so only one is ever in the
+ * accessibility tree, and it carries no headings or links.
  */
 export function MusicSection() {
   return (
@@ -19,48 +26,62 @@ export function MusicSection() {
       id="music"
       className="bg-panel-deep px-5 pt-7 pb-8 text-on-panel-strong dark:border-t dark:border-line-soft lg:px-13 lg:pt-14 lg:pb-15"
     >
-      <div className="mb-2 lg:mb-[30px] lg:flex lg:items-baseline lg:justify-between">
+      <div className="mb-2 lg:mb-[26px] lg:flex lg:items-center lg:justify-between lg:gap-10">
         <h2 className="text-section-sm font-display lg:text-section">
-          {music.heading}{' '}
-          <span className="italic text-on-panel-accent">{music.headingAccent}</span>
+          {music.heading} <span className="italic text-on-panel-accent">{music.headingAccent}</span>
         </h2>
-        <span className="hidden font-mono text-label-wide font-medium uppercase text-on-panel-quiet lg:inline">
-          {music.note}
-        </span>
+        <MusicLinks className="hidden lg:flex lg:gap-2.5" />
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:grid-rows-[auto_auto_auto_1fr] lg:gap-[34px]">
-        <p className="max-w-[34em] text-copy text-on-panel-body text-pretty lg:col-start-1 lg:row-start-1 lg:text-body">
-          <span className="lg:hidden">{music.introShort}</span>
-          <span className="hidden lg:inline">{music.intro}</span>
-        </p>
+      <p className="mb-4 max-w-[34em] text-copy text-on-panel-body text-pretty lg:mb-7 lg:max-w-[52em] lg:text-body">
+        <span className="lg:hidden">{music.introShort}</span>
+        <span className="hidden lg:inline">{music.intro}</span>
+      </p>
 
-        <div className="lg:col-start-1 lg:row-start-2">
-          <AlbumOfTheMonth />
-        </div>
+      <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-[22px]">
+        <AlbumOfTheMonth
+          className="lg:col-start-1 lg:row-start-1"
+          footer={<PreviousPicks className="mt-auto hidden pt-[22px] lg:flex" />}
+        />
 
-        <div className="lg:col-start-2 lg:row-span-4 lg:row-start-1">
+        <div className="lg:col-start-2 lg:row-start-1">
           <NowPlaying />
         </div>
 
-        <PreviousPicks />
-
-        <div className="flex flex-col gap-2 lg:col-start-1 lg:row-start-4 lg:mt-auto lg:flex-row lg:flex-wrap lg:gap-2.5">
-          <PanelPill
-            href="https://bandcamp.com"
-            className="grid h-12 place-items-center border-transparent bg-sage-solid font-sans text-[13px] text-sage-solid-fg hover:bg-accent hover:text-accent-fg-warm lg:h-auto lg:px-5 lg:py-3"
-          >
-            {music.links.primary}
-          </PanelPill>
-          <PanelPill
-            href="https://spotify.com"
-            className="grid h-[46px] place-items-center text-[12.5px] hover:border-sage-solid hover:bg-fill-on-panel hover:text-on-panel-body lg:h-auto lg:px-5 lg:py-3"
-          >
-            {music.links.secondary}
-          </PanelPill>
-        </div>
+        <PreviousPicks className="lg:hidden" />
+        <MusicLinks className="flex flex-col gap-2 lg:hidden" stacked />
       </div>
     </section>
+  );
+}
+
+/** Bandcamp / Spotify. Inline pills in the desktop header, stacked on mobile. */
+function MusicLinks({ className, stacked = false }: { className?: string; stacked?: boolean }) {
+  return (
+    <div className={className}>
+      <PanelPill
+        href="https://bandcamp.com"
+        className={cx(
+          'border-transparent bg-sage-solid font-sans text-sage-solid-fg hover:bg-accent hover:text-accent-fg-warm',
+          stacked
+            ? 'grid h-12 place-items-center text-[13px]'
+            : 'px-[18px] py-[11px] text-[12.5px]',
+        )}
+      >
+        {music.links.primary}
+      </PanelPill>
+      <PanelPill
+        href="https://spotify.com"
+        className={cx(
+          'hover:border-sage-solid hover:bg-fill-on-panel hover:text-on-panel-body',
+          stacked
+            ? 'grid h-[46px] place-items-center text-[12.5px]'
+            : 'px-[18px] py-[11px] text-meta',
+        )}
+      >
+        {music.links.secondary}
+      </PanelPill>
+    </div>
   );
 }
 
@@ -68,11 +89,11 @@ export function MusicSection() {
  * The sleeve archive. Desktop shows four months plus a +15 tile in five
  * columns; mobile drops March and re-counts to +16, per the doc.
  */
-function PreviousPicks() {
+function PreviousPicks({ className }: { className?: string }) {
   const { label, months, remaining, remainingShort } = music.previous;
 
   return (
-    <div className="flex flex-col gap-2.5 lg:col-start-1 lg:row-start-3">
+    <div className={cx('flex flex-col gap-2.5', className)}>
       <Eyebrow className="tracking-[0.16em] text-on-panel-quiet lg:tracking-[0.18em]">
         {label}
       </Eyebrow>
