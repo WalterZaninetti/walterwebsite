@@ -44,7 +44,7 @@ claims each project keeps its own look. It opts out of the site's theme provider
 design draws one look, with no dark variant, so its palette is a flat block of `magic-*` tokens
 rather than a light/dark semantic pair.
 
-Three tools:
+Five tools:
 
 - **Draw odds** — hypergeometric, entirely client-side (`src/lib/hypergeometric.ts`). Ported from
   the design doc's own script, including its use of log-factorials: the binomial coefficients here
@@ -53,6 +53,14 @@ Three tools:
 - **Mana sources** — how many sources of a colour the deck needs to cast a cost on curve. This is
   the metric the homepage actually promises ("a geometric calculator for building mana bases");
   section 01 only answers a generic drawing question. Also client-side.
+- **Opening hands** — the joint question, via the multivariate hypergeometric: two lands *and* a
+  two-drop in the same seven. Multiplying the separate odds overstates it, because the categories
+  compete for the same slots — with 24 lands and 8 two-drops the product says 56.0% and the truth is
+  53.7%. The UI shows both, since the gap is the whole point. Categories must be disjoint; overlap
+  is caught and reported rather than silently double-booked.
+- **Finding a card** — the turn axis rather than the count axis: when does a one-of turn up? A
+  singleton in a 99-card deck is in 7.1% of openers and 16.2% by turn 10, which tends to change how
+  people think about tutors.
 - **Plain-English search** — backed by the
   [`natural-language-to-scryfall-filters`](../natural-language-to-scryfall-filters) service.
 

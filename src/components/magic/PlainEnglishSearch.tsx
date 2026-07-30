@@ -81,7 +81,7 @@ export function PlainEnglishSearch() {
       id="search"
       className="scroll-mt-[70px] bg-magic-forest px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
     >
-      <SectionHead index="03" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
+      <SectionHead index="05" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
 
       <div className="grid items-start gap-[22px] lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-4">

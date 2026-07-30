@@ -181,7 +181,9 @@
       "jump1Note": "Hypergeometric, with the curve drawn out",
       "jump2Title": "Plain-English search",
       "jump2Note": "Type a sentence, get Scryfall syntax",
-      "jump3Note": "Sources needed, mulligans included"
+      "jump3Note": "Sources needed, mulligans included",
+      "jump4Note": "Several requirements at once",
+      "jump5Note": "When a one-of turns up"
     },
     "odds": {
       "heading": "Draw odds",
@@ -230,6 +232,44 @@
       "deltaWithout": "Never mulliganing for colour? You'd want {{sources}}.",
       "curveLabel": "What each source count buys you",
       "caveat": "This counts colour and nothing else: it keeps a seven-lander happily and never asks whether the hand can function. Published tables land a little lower because they model hand quality too. Read it as “will my colours show up”, not “is this hand keepable”."
+    },
+    "hands": {
+      "heading": "Opening hands",
+      "blurb": "Keeps are joint decisions: two lands and a two-drop, not each on its own. Multiplying separate odds overstates it, because both are competing for the same seven cards.",
+      "deckLabel": "Cards in deck",
+      "drawsLabel": "Cards seen",
+      "categoriesLabel": "What the hand needs",
+      "colKind": "Kind",
+      "colInDeck": "In deck",
+      "colWant": "Want",
+      "rowsHint": "Set “want” to 0 to ignore a row. Kinds must not overlap — a card counts once.",
+      "defaultLands": "Lands",
+      "defaultTwoDrops": "Two-drops",
+      "defaultRemoval": "Removal",
+      "item": "{{count}}+ {{kind}}",
+      "and": " and ",
+      "sentence": "{{draws}} cards give you {{list}} this often.",
+      "correlation": "Multiplying the odds separately would say {{product}} — too high, because they compete for the same slots.",
+      "marginalsLabel": "Each on its own, then together",
+      "allTogether": "All at once",
+      "empty": "Set at least one “want” above to see the odds.",
+      "overcommitted": "Those kinds add up to {{claimed}} cards in a {{deck}}-card deck. They have to be separate groups, so trim them.",
+      "caveat": "Categories are treated as disjoint: a card is a land or a two-drop, never both. If your two-drops include lands, count them once and pick the group that matters for the decision."
+    },
+    "finding": {
+      "heading": "Finding a card",
+      "blurb": "The other axis: not how many you'll have drawn, but when it turns up. This is the singleton question — a tutor, a combo piece, a Commander one-of.",
+      "deckLabel": "Cards in deck",
+      "copiesLabel": "Copies in deck",
+      "copiesHint": "1 for a singleton or a tutor target",
+      "playLabel": "You're",
+      "milestonesLabel": "You'll have seen it…",
+      "byTurn": "by turn {{turn}}",
+      "never": "not within 12 turns",
+      "sentence": "{{percent}} of your opening hands from {{deck}} cards already contain it.",
+      "tenTurns": "By turn 10 that's {{percent}}.",
+      "tableLabel": "Chance you've seen it by the start of each turn",
+      "columnsHint": "Turn · cards seen · chance"
     },
     "search": {
       "heading": "Plain-English search",
@@ -343,7 +383,9 @@
     "footer": {
       "meta": "MIT · open source · card data from Scryfall"
     },
-    "navMana": "Mana sources"
+    "navMana": "Mana sources",
+    "navHands": "Opening hands",
+    "navFinding": "Finding a card"
   },
   "legal": {
     "title": "Cookies & privacy",

@@ -128,7 +128,7 @@ function pExactly(deck: number, successes: number, draws: number, k: number): nu
 }
 
 /** P(at least `need` successes) drawing `draws` from `deck`. */
-function pAtLeastFrom(deck: number, successes: number, draws: number, need: number): number {
+export function pAtLeastFrom(deck: number, successes: number, draws: number, need: number): number {
   if (need <= 0) return 1;
   if (draws <= 0 || successes < need) return 0;
   let total = 0;
@@ -139,6 +139,71 @@ function pAtLeastFrom(deck: number, successes: number, draws: number, need: numb
 }
 
 export const OPENING_HAND = 7;
+
+/* ========================================================================== *
+ * Several categories at once — "two lands AND a two-drop"
+ * ========================================================================== */
+
+export type Category = {
+  /** How many cards of this kind are in the deck. */
+  size: number;
+  /** How many of them you want to see. 0 disables the row. */
+  atLeast: number;
+};
+
+/**
+ * Joint probability of meeting every category's minimum in the same hand:
+ * the multivariate hypergeometric.
+ *
+ * This is the question a keep decision actually asks. Doing it one category at
+ * a time and multiplying is wrong — the categories compete for the same slots,
+ * so they are negatively correlated and the true joint probability is lower
+ * than the product of the marginals. Two lands is likely; a two-drop is likely;
+ * both in the same seven, less so than either alone suggests.
+ *
+ * Categories must be disjoint — a card counted as a land can't also be counted
+ * as a two-drop, or the maths double-books the same slot. Everything not in a
+ * category falls into the remainder.
+ *
+ * Summed exactly rather than simulated: with a handful of categories and a
+ * hand-sized draw, the enumeration is a few thousand terms at worst.
+ */
+export function pJointAtLeast(deck: number, draws: number, categories: Category[]): number {
+  const active = categories.filter((c) => c.atLeast > 0 && c.size > 0);
+  if (active.length === 0) return 1;
+
+  const claimed = active.reduce((sum, c) => sum + c.size, 0);
+  const other = deck - claimed;
+  // Categories that between them exceed the deck can't be disjoint.
+  if (other < 0) return Number.NaN;
+  if (active.reduce((sum, c) => sum + c.atLeast, 0) > draws) return 0;
+
+  const lnDenominator = lnChoose(deck, draws);
+  let total = 0;
+
+  const walk = (index: number, used: number, lnAcc: number): void => {
+    if (index === active.length) {
+      const rest = draws - used;
+      if (rest < 0 || rest > other) return;
+      const ln = lnAcc + lnChoose(other, rest) - lnDenominator;
+      if (ln > -Infinity) total += Math.exp(ln);
+      return;
+    }
+    const category = active[index];
+    const ceiling = Math.min(category.size, draws - used);
+    for (let x = category.atLeast; x <= ceiling; x += 1) {
+      walk(index + 1, used + x, lnAcc + lnChoose(category.size, x));
+    }
+  };
+
+  walk(0, 0, 0);
+  return total;
+}
+
+/** Cards seen by the start of a turn, counting the opening hand. */
+export function cardsSeenByTurn(turn: number, onPlay: boolean): number {
+  return OPENING_HAND + Math.max(0, turn - 1) + (onPlay ? 0 : 1);
+}
 
 /**
  * Mulligans are capped at one. Shipping a second hand purely because it lacks a

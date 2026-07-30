@@ -9,6 +9,8 @@ export const magic = {
   nav: [
     { key: 'navOdds', href: '#odds' },
     { key: 'navMana', href: '#mana' },
+    { key: 'navHands', href: '#hands' },
+    { key: 'navFinding', href: '#finding' },
     { key: 'navSearch', href: '#search' },
   ],
   deckPresets: [60, 40, 99, 100],

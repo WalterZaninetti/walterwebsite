@@ -181,7 +181,9 @@
       "jump1Note": "Ipergeometrica, con la curva disegnata",
       "jump2Title": "Ricerca a parole tue",
       "jump2Note": "Scrivi una frase, ottieni la sintassi Scryfall",
-      "jump3Note": "Quante fonti servono, mulligan compresi"
+      "jump3Note": "Quante fonti servono, mulligan compresi",
+      "jump4Note": "Più requisiti insieme",
+      "jump5Note": "Quando esce una carta singola"
     },
     "odds": {
       "heading": "Probabilità di pescata",
@@ -230,6 +232,44 @@
       "deltaWithout": "Non fai mai mulligan per il colore? Allora te ne servono {{sources}}.",
       "curveLabel": "Cosa ti dà ogni numero di fonti",
       "caveat": "Qui si conta solo il colore: una mano di sette terre va benissimo e non ci si chiede mai se la mano funzioni. Le tabelle pubblicate danno numeri un po' più bassi perché modellano anche la qualità della mano. Leggilo come «i miei colori arriveranno?», non «questa mano è tenibile?»."
+    },
+    "hands": {
+      "heading": "Mani iniziali",
+      "blurb": "Tenere una mano è una decisione congiunta: due terre e una da due, non ognuna per conto suo. Moltiplicare le probabilità separate gonfia il risultato, perché entrambe si contendono le stesse sette carte.",
+      "deckLabel": "Carte nel mazzo",
+      "drawsLabel": "Carte viste",
+      "categoriesLabel": "Cosa deve avere la mano",
+      "colKind": "Tipo",
+      "colInDeck": "Nel mazzo",
+      "colWant": "Ne vuoi",
+      "rowsHint": "Metti “ne vuoi” a 0 per ignorare una riga. I tipi non devono sovrapporsi — una carta si conta una volta sola.",
+      "defaultLands": "Terre",
+      "defaultTwoDrops": "Carte da due",
+      "defaultRemoval": "Rimozioni",
+      "item": "{{count}}+ {{kind}}",
+      "and": " e ",
+      "sentence": "Con {{draws}} carte ottieni {{list}} con questa frequenza.",
+      "correlation": "Moltiplicando le probabilità separate verrebbe {{product}} — troppo, perché si contendono gli stessi posti.",
+      "marginalsLabel": "Ognuna da sola, poi tutte insieme",
+      "allTogether": "Tutte insieme",
+      "empty": "Imposta almeno un “ne vuoi” qui a fianco per vedere le probabilità.",
+      "overcommitted": "Questi tipi fanno {{claimed}} carte in un mazzo da {{deck}}. Devono essere gruppi separati, quindi riducili.",
+      "caveat": "I tipi sono considerati separati: una carta o è una terra o è una carta da due, mai entrambe. Se fra le tue carte da due ci sono terre, contale una volta sola e scegli il gruppo che conta per la decisione."
+    },
+    "finding": {
+      "heading": "Trovare una carta",
+      "blurb": "L'altro asse: non quante ne avrai pescate, ma quando salta fuori. È la domanda dei mazzi singleton — un tutor, un pezzo di combo, una carta singola in Commander.",
+      "deckLabel": "Carte nel mazzo",
+      "copiesLabel": "Copie nel mazzo",
+      "copiesHint": "1 per un singleton o il bersaglio di un tutor",
+      "playLabel": "Sei",
+      "milestonesLabel": "L'avrai vista…",
+      "byTurn": "entro il turno {{turn}}",
+      "never": "non entro 12 turni",
+      "sentence": "Il {{percent}} delle tue mani iniziali da {{deck}} carte la contiene già.",
+      "tenTurns": "Al turno 10 si arriva al {{percent}}.",
+      "tableLabel": "Probabilità di averla vista all'inizio di ogni turno",
+      "columnsHint": "Turno · carte viste · probabilità"
     },
     "search": {
       "heading": "Ricerca a parole tue",
@@ -343,7 +383,9 @@
     "footer": {
       "meta": "MIT · open source · dati delle carte da Scryfall"
     },
-    "navMana": "Fonti di mana"
+    "navMana": "Fonti di mana",
+    "navHands": "Mani iniziali",
+    "navFinding": "Trovare una carta"
   },
   "legal": {
     "title": "Cookie e privacy",
