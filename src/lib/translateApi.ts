@@ -56,16 +56,25 @@ export class TranslateError extends Error {
 /** Exposed so the offline message can name the URL it failed to reach. */
 export const TRANSLATE_BASE_URL = BASE_URL;
 
+/** A previous turn, posted back so the service can refine rather than restart. */
+export type TranslatePrevious = { text: string; query: string };
+
+/**
+ * Refinement is stateless: the service keeps nothing between calls, so the
+ * caller holds the last {text, query} and posts it back. That's why the chain
+ * lives in component state here and not on the server.
+ */
 export async function translate(
   text: string,
-  signal?: AbortSignal,
+  options: { previous?: TranslatePrevious; signal?: AbortSignal } = {},
 ): Promise<TranslateResult> {
+  const { previous, signal } = options;
   let response: Response;
   try {
     response = await fetch(`${BASE_URL}/translate`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify(previous ? { text, previous } : { text }),
       signal,
     });
   } catch (error) {

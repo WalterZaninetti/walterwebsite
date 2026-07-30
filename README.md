@@ -115,6 +115,16 @@ dropped — a non-empty `warnings` means repair failed and the query should be t
 Chips are derived by splitting the returned query and labelling each fragment against the service's
 own operator registry and aliases, so a chip never claims something the backend didn't mean.
 
+**Refinement** uses the service's `previous: {text, query}`: "now only under $5" narrows the last
+query instead of starting over. It is stateless server-side, so the chain of turns lives in
+component state and is posted back each time.
+
+It gets its own input rather than reusing the main box. The service refines whenever it's handed a
+`previous` and cannot tell which you meant — "red creatures" typed after a search for instants is a
+new question, not a narrowing — so guessing would silently fold an unrelated search into the old
+query. The turns are shown as a breadcrumb because a refined query no longer corresponds to
+anything in the input box; each earlier step rolls back to it.
+
 ### Keeping up with the design docs
 
 `src/design-system/Walter - Homepage.reference.html` is the last-imported copy of the homepage doc,

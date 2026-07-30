@@ -378,6 +378,17 @@
             "créatures rouges pas chères"
           ]
         }
+      ],
+      "refineLabel": "Affina la ricerca",
+      "refinePlaceholder": "ora solo sotto i 5 dollari",
+      "refineSubmit": "Affina",
+      "startOver": "Torna alla prima ricerca",
+      "revertTo": "Torna a questo passaggio",
+      "refineExamples": [
+        "solo sotto i 5 dollari",
+        "legali in commander",
+        "senza ristampe",
+        "prima le più economiche"
       ]
     },
     "footer": {

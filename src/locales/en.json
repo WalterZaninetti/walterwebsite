@@ -378,6 +378,17 @@
             "créatures rouges pas chères"
           ]
         }
+      ],
+      "refineLabel": "Refine this",
+      "refinePlaceholder": "now only under $5",
+      "refineSubmit": "Refine",
+      "startOver": "Back to the first search",
+      "revertTo": "Roll back to this step",
+      "refineExamples": [
+        "only under $5",
+        "legal in commander",
+        "no reprints",
+        "cheapest first"
       ]
     },
     "footer": {

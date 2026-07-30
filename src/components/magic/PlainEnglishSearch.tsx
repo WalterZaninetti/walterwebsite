@@ -12,6 +12,17 @@ import { SectionHead } from './controls';
 
 type LegendGroup = { title: string; items: string[] };
 
+/** One exchange: what was asked, and what came back. */
+type Turn = { text: string; result: TranslateResult };
+
+const ERROR_KEY: Record<string, string> = {
+  offline: 'errorOffline',
+  rate_limited: 'errorRateLimited',
+  bad_request: 'errorBadRequest',
+  unauthorized: 'errorUnauthorized',
+  server: 'errorServer',
+};
+
 /**
  * The design translated on every keystroke with a local regex parser. This
  * calls the natural-language-to-scryfall-filters service instead — a model
@@ -19,17 +30,22 @@ type LegendGroup = { title: string; items: string[] };
  * slower, costs money and is rate-limited. So it runs on an explicit submit
  * (button, or ⌘/Ctrl+Enter) rather than as you type.
  *
- * What that buys: Italian, German, French and Spanish work too, and a query
- * that Scryfall would silently ignore is caught server-side instead of
- * returning thousands of wrong cards.
+ * Refinement gets its own box on purpose. The service will treat a turn as a
+ * follow-up whenever it's handed a `previous`, but it can't know which you
+ * meant — "red creatures" typed after a search for instants is a new question,
+ * not a narrowing. Guessing would silently fold an unrelated search into the
+ * old query, so the two actions stay distinct and the chain is shown rather
+ * than implied.
  */
 export function PlainEnglishSearch() {
   const { t } = useTranslation();
   const examples = t('magic.search.examples', { returnObjects: true }) as string[];
   const legend = t('magic.search.legend', { returnObjects: true }) as LegendGroup[];
+  const refineExamples = t('magic.search.refineExamples', { returnObjects: true }) as string[];
 
   const [text, setText] = useState<string>(() => t('magic.search.placeholder'));
-  const [result, setResult] = useState<TranslateResult | null>(null);
+  const [refineText, setRefineText] = useState('');
+  const [turns, setTurns] = useState<Turn[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -37,9 +53,13 @@ export function PlainEnglishSearch() {
 
   useEffect(() => () => inFlight.current?.abort(), []);
 
-  async function submit(value: string = text) {
+  const current = turns.at(-1) ?? null;
+  const result = current?.result ?? null;
+
+  async function run(value: string, { refine }: { refine: boolean }) {
     const trimmed = value.trim();
     if (!trimmed || busy) return;
+    if (refine && !current) return;
 
     inFlight.current?.abort();
     const controller = new AbortController();
@@ -49,17 +69,23 @@ export function PlainEnglishSearch() {
     setError(null);
     setCopied(false);
     try {
-      setResult(await translate(trimmed, controller.signal));
+      const next = await translate(trimmed, {
+        signal: controller.signal,
+        previous:
+          refine && current ? { text: current.text, query: current.result.query } : undefined,
+      });
+      setTurns((prev) =>
+        refine ? [...prev, { text: trimmed, result: next }] : [{ text: trimmed, result: next }],
+      );
+      if (refine) setRefineText('');
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') return;
-      setResult(null);
+      // A failed refinement leaves the chain intact — you haven't lost the
+      // query you already had.
+      if (!refine) setTurns([]);
       setError(
         err instanceof TranslateError
-          ? t(`magic.search.error${
-              { offline: 'Offline', rate_limited: 'RateLimited', bad_request: 'BadRequest', unauthorized: 'Unauthorized', server: 'Server' }[
-                err.kind
-              ]
-            }`, { url: TRANSLATE_BASE_URL })
+          ? t(`magic.search.${ERROR_KEY[err.kind]}`, { url: TRANSLATE_BASE_URL })
           : t('magic.search.errorUnknown'),
       );
     } finally {
@@ -69,9 +95,9 @@ export function PlainEnglishSearch() {
 
   function applyExample(value: string) {
     setText(value);
-    setResult(null);
+    setTurns([]);
     setError(null);
-    void submit(value);
+    void run(value, { refine: false });
   }
 
   const chips = result ? toChips(result.query) : [];
@@ -81,7 +107,12 @@ export function PlainEnglishSearch() {
       id="search"
       className="scroll-mt-[70px] bg-magic-forest px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
     >
-      <SectionHead index="05" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
+      <SectionHead
+        index="05"
+        heading={t('magic.search.heading')}
+        blurb={t('magic.search.blurb')}
+        dark
+      />
 
       <div className="grid items-start gap-[22px] lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-4">
@@ -94,7 +125,7 @@ export function PlainEnglishSearch() {
               value={text}
               onChange={(e) => setText(e.target.value)}
               onKeyDown={(e) => {
-                if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') void submit();
+                if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') void run(text, { refine: false });
               }}
               rows={3}
               placeholder={t('magic.search.placeholder')}
@@ -116,7 +147,7 @@ export function PlainEnglishSearch() {
               ))}
               <button
                 type="button"
-                onClick={() => void submit()}
+                onClick={() => void run(text, { refine: false })}
                 disabled={busy || !text.trim()}
                 className="ml-auto h-[30px] cursor-pointer rounded-pill bg-magic-green-light px-4 font-magic-body text-[13px] font-medium text-magic-abyss transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
               >
@@ -138,13 +169,24 @@ export function PlainEnglishSearch() {
               </span>
             </div>
 
+            {turns.length > 1 && (
+              <Chain turns={turns} onRevert={(i) => setTurns(turns.slice(0, i + 1))} />
+            )}
+
             <div
               aria-live="polite"
               className={`min-h-[26px] rounded-[10px] border border-magic-green-light/30 bg-magic-abyss px-[18px] py-4 font-mono text-[15.5px]/[1.7] break-words ${
-                error ? 'text-magic-coral' : busy ? 'text-magic-cream-faint' : 'text-magic-green-light'
+                error
+                  ? 'text-magic-coral'
+                  : busy
+                    ? 'text-magic-cream-faint'
+                    : 'text-magic-green-light'
               }`}
             >
-              {error ?? (busy ? t('magic.search.submitBusy') : (result?.query ?? t('magic.search.emptyQuery')))}
+              {error ??
+                (busy
+                  ? t('magic.search.submitBusy')
+                  : (result?.query ?? t('magic.search.emptyQuery')))}
             </div>
 
             {chips.length > 0 && (
@@ -167,10 +209,18 @@ export function PlainEnglishSearch() {
               <Advisory tone="warn" title={t('magic.search.warningsTitle')} items={result.warnings} />
             )}
             {result && result.unsupported.length > 0 && (
-              <Advisory tone="muted" title={t('magic.search.unsupportedTitle')} items={result.unsupported} />
+              <Advisory
+                tone="muted"
+                title={t('magic.search.unsupportedTitle')}
+                items={result.unsupported}
+              />
             )}
             {result && result.assumptions.length > 0 && (
-              <Advisory tone="muted" title={t('magic.search.assumptionsTitle')} items={result.assumptions} />
+              <Advisory
+                tone="muted"
+                title={t('magic.search.assumptionsTitle')}
+                items={result.assumptions}
+              />
             )}
 
             <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-magic-cream/18 pt-[18px]">
@@ -202,6 +252,61 @@ export function PlainEnglishSearch() {
                 {result ? '' : t('magic.search.idleNote')}
               </span>
             </div>
+
+            {/* -------- refine -------- */}
+            {result && (
+              <div className="mt-5 border-t border-magic-cream/18 pt-[18px]">
+                <div className="mb-3 flex items-baseline justify-between gap-3">
+                  <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
+                    {t('magic.search.refineLabel')}
+                  </p>
+                  {turns.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => setTurns(turns.slice(0, 1))}
+                      className="cursor-pointer bg-transparent font-mono text-[10.5px] text-magic-cream-faint underline-offset-2 transition-colors hover:text-magic-cream hover:underline"
+                    >
+                      {t('magic.search.startOver')}
+                    </button>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <input
+                    type="text"
+                    value={refineText}
+                    onChange={(e) => setRefineText(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') void run(refineText, { refine: true });
+                    }}
+                    placeholder={t('magic.search.refinePlaceholder')}
+                    className="box-border h-[38px] min-w-0 flex-1 rounded-pill border border-magic-cream/28 bg-magic-cream/6 px-4 font-magic-body text-[14px] text-white outline-none focus:border-magic-green-light focus:bg-magic-cream/10"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => void run(refineText, { refine: true })}
+                    disabled={busy || !refineText.trim()}
+                    className="h-[38px] cursor-pointer rounded-pill border border-magic-green-light bg-transparent px-5 font-magic-body text-[13px] font-medium text-magic-green-light transition-colors hover:bg-magic-green-light hover:text-magic-abyss disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {busy ? t('magic.search.submitBusy') : t('magic.search.refineSubmit')}
+                  </button>
+                </div>
+                <div className="mt-2.5 flex flex-wrap gap-2">
+                  {refineExamples.map((example) => (
+                    <button
+                      key={example}
+                      type="button"
+                      onClick={() => {
+                        setRefineText(example);
+                        void run(example, { refine: true });
+                      }}
+                      className="h-[26px] cursor-pointer rounded-pill border border-magic-cream/22 bg-transparent px-2.5 font-mono text-[11px] text-magic-cream-faint transition-colors hover:border-magic-green-light hover:text-magic-cream"
+                    >
+                      {example}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -242,6 +347,46 @@ export function PlainEnglishSearch() {
         </div>
       </div>
     </section>
+  );
+}
+
+/**
+ * The turns so far, shown rather than implied: once a query has been refined it
+ * no longer corresponds to anything in the input box, and without a trail the
+ * result would drift from the question with nothing on screen to explain it.
+ * Each earlier step rolls back to it.
+ */
+function Chain({ turns, onRevert }: { turns: Turn[]; onRevert: (index: number) => void }) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="mb-3 flex flex-wrap items-center gap-1.5">
+      {turns.map((turn, index) => {
+        const isLast = index === turns.length - 1;
+        return (
+          <span key={index} className="flex items-center gap-1.5">
+            {index > 0 && (
+              <span aria-hidden="true" className="font-mono text-[11px] text-magic-cream-faint">
+                ›
+              </span>
+            )}
+            <button
+              type="button"
+              disabled={isLast}
+              onClick={() => onRevert(index)}
+              title={isLast ? undefined : t('magic.search.revertTo')}
+              className={`max-w-[22ch] truncate rounded-pill border px-2.5 py-1 font-magic-body text-[11.5px] transition-colors ${
+                isLast
+                  ? 'cursor-default border-magic-green-light/40 text-magic-cream'
+                  : 'cursor-pointer border-magic-cream/20 text-magic-cream-faint hover:border-magic-green-light hover:text-magic-cream'
+              }`}
+            >
+              {turn.text}
+            </button>
+          </span>
+        );
+      })}
+    </div>
   );
 }
 
