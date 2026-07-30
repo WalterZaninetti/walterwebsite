@@ -9,6 +9,7 @@ import {
   thingKey,
   type DeckInput,
 } from '../../lib/hypergeometric';
+import { Field, Label, Preset, SectionHead } from './controls';
 
 /** Runs entirely in the browser — it's a closed-form calculation, not a lookup. */
 export function DrawOdds() {
@@ -223,99 +224,9 @@ export function DrawOdds() {
 
 /* ---------------------------------------------------------------- pieces */
 
-export function SectionHead({
-  index,
-  heading,
-  blurb,
-  dark = false,
-}: {
-  index: string;
-  heading: string;
-  blurb: string;
-  dark?: boolean;
-}) {
-  return (
-    <div
-      className={`mb-7 flex flex-col items-baseline justify-between gap-4 border-b pb-4 md:flex-row md:gap-[30px] ${
-        dark ? 'border-magic-cream/25' : 'border-magic-rule'
-      }`}
-    >
-      <div className="flex items-baseline gap-3.5">
-        <span
-          className={`font-mono text-[11px] font-medium tracking-[0.18em] ${
-            dark ? 'text-magic-green-light' : 'text-magic-green'
-          }`}
-        >
-          {index}
-        </span>
-        <h2
-          className={`font-magic-display text-[26px]/[1.1] font-semibold tracking-[0.01em] md:text-[30px] ${
-            dark ? 'text-magic-cream' : 'text-magic-ink'
-          }`}
-        >
-          {heading}
-        </h2>
-      </div>
-      <p
-        className={`max-w-[30em] font-magic-body text-[13.5px]/[1.65] text-pretty ${
-          dark ? 'text-magic-cream-dim' : 'text-magic-ink-muted'
-        }`}
-      >
-        {blurb}
-      </p>
-    </div>
-  );
-}
 
-function Label({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return (
-    <span
-      className={`font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-ink-muted ${className}`}
-    >
-      {children}
-    </span>
-  );
-}
 
-function Field({
-  label,
-  value,
-  children,
-}: {
-  label: string;
-  value: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="flex flex-col gap-[9px]">
-      <div className="flex items-baseline justify-between">
-        <Label>{label}</Label>
-        <span className="font-mono text-[11px] font-medium text-magic-green">{value}</span>
-      </div>
-      {children}
-    </div>
-  );
-}
 
-function Preset({
-  onClick,
-  className = '',
-  children,
-}: {
-  onClick: () => void;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`h-8 cursor-pointer rounded-pill border border-magic-field bg-white px-3 font-mono text-[11px] font-medium text-magic-ink-muted transition-colors hover:border-magic-green hover:text-magic-green-deep ${className}`}
-    >
-      {children}
-    </button>
-  );
-}
 
 function Stepper({
   onClick,

@@ -44,14 +44,45 @@ claims each project keeps its own look. It opts out of the site's theme provider
 design draws one look, with no dark variant, so its palette is a flat block of `magic-*` tokens
 rather than a light/dark semantic pair.
 
-Two tools:
+Three tools:
 
 - **Draw odds** — hypergeometric, entirely client-side (`src/lib/hypergeometric.ts`). Ported from
   the design doc's own script, including its use of log-factorials: the binomial coefficients here
   reach ~1e29 and overflow a double long before the probability does, so it sums logs and
   exponentiates once at the end.
+- **Mana sources** — how many sources of a colour the deck needs to cast a cost on curve. This is
+  the metric the homepage actually promises ("a geometric calculator for building mana bases");
+  section 01 only answers a generic drawing question. Also client-side.
 - **Plain-English search** — backed by the
   [`natural-language-to-scryfall-filters`](../natural-language-to-scryfall-filters) service.
+
+### What the mana model assumes
+
+Stated in full in `pCastOnCurve`, and worth knowing before trusting a number:
+
+- London mulligan, so each attempt is an independent fresh seven; at depth *m* you keep 7 − m.
+- Source-maximising keeps: non-sources are bottomed first.
+- **You ship only a hand holding none of the colour, at most once.** This is the load-bearing
+  choice. A first cut shipped any hand short of the required pips, which claimed six sources cast a
+  one-pip spell on turn one 90% of the time — true only if you mulligan to five for one pip and
+  count the lost cards as free. `MAX_MULLIGANS` is 1 for the same reason.
+- Bottomed cards are out of reach, so draws come from the 53 you haven't seen.
+
+It counts colour and nothing else, so it happily keeps a seven-lander. Published tables (Karsten's)
+land a little lower because they model hand quality as well. The UI carries this caveat too — a
+number like this is only as good as the policy behind it.
+
+### Auth: why no key ships
+
+`/translate` sits behind auth that accepts **either** a valid `x-api-key` **or** an allowed
+`Origin`. The browser uses the Origin path and carries no credential, because a public web app
+cannot hold a secret — putting the key in the bundle would publish it, and publish a credential
+that also authorises non-browser callers until rotated.
+
+Origin is forgeable, so this is a gate against casual misuse, not an authentication boundary. The
+per-IP hourly rate limit is what actually protects the Anthropic spend. Real attestation means
+Firebase App Check or Turnstile, which load third-party script into the page — a trade this site
+refuses on privacy grounds, and one to make deliberately rather than by drift.
 
 ### Wiring the translate service
 

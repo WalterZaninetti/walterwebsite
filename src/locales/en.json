@@ -10,20 +10,17 @@
     "languageEnglish": "English",
     "languageItalian": "Italian"
   },
-
   "nav": {
     "projects": "Projects",
     "about": "About",
     "twitch": "Twitch"
   },
-
   "socials": {
     "github": "GitHub",
     "twitch": "Twitch",
     "instagram": "Instagram",
     "linkedin": "LinkedIn"
   },
-
   "home": {
     "hero": {
       "eyebrow": "Walter · Italy",
@@ -43,7 +40,6 @@
       "statAccent": "streaming soon",
       "socialsLabel": "Find me"
     },
-
     "projects": {
       "heading": "Things I made",
       "note": "Each card keeps its project's own look",
@@ -79,7 +75,6 @@
         "thumbCaptionShort": "produce photo"
       }
     },
-
     "music": {
       "heading": "Music,",
       "headingAccent": "taken seriously",
@@ -92,14 +87,23 @@
         "sleeveCaption": "album sleeve",
         "note": "Ninety minutes that never raise their voice. It taught me that tension can come entirely from patience — I keep stealing that idea, badly, in my own mixes.",
         "noteShort": "Ninety minutes that never raise their voice. It taught me that tension can come entirely from patience.",
-        "tags": ["ambient techno", "headphones", "124 bpm"],
+        "tags": [
+          "ambient techno",
+          "headphones",
+          "124 bpm"
+        ],
         "readLink": "Read the full note →",
         "readLinkShort": "Read the note →",
         "archiveLink": "All 19 picks ↗"
       },
       "previous": {
         "label": "Previous picks",
-        "months": ["Jun", "May", "Apr", "Mar"],
+        "months": [
+          "Jun",
+          "May",
+          "Apr",
+          "Mar"
+        ],
         "remaining": "+15",
         "remainingShort": "+16"
       },
@@ -116,7 +120,6 @@
         "historyLink": "Open full listening history ↗"
       }
     },
-
     "coffee": {
       "label": "If something here helped",
       "heading": "Buy me a coffee",
@@ -129,7 +132,6 @@
       "tier2Short": "Sponsor",
       "fineprint": "No account needed · GitHub Sponsors also works"
     },
-
     "propose": {
       "label": "Got an idea?",
       "note": "I read everything · reply within a week",
@@ -154,13 +156,11 @@
       "mailAbout": "About",
       "mailSubject": "Tool idea"
     },
-
     "now": {
       "label": "Now",
       "body": "Rewriting the mana-base geometry engine, and setting up a stream schedule I can actually keep. If you want to build something together, my inbox is open.",
       "bodyShort": "Rewriting the mana-base geometry engine, and building a stream schedule I can keep."
     },
-
     "footer": {
       "credit": "Made by Walter and Claudio with ",
       "creditAccent": "love",
@@ -169,22 +169,20 @@
       "copyright": "© 2026"
     }
   },
-
   "magic": {
     "crumbPage": "Magic Tools",
     "navOdds": "Draw odds",
     "navSearch": "Plain-English search",
     "repo": "GitHub ↗",
-
     "hero": {
       "title": "Magic Tools",
       "blurb": "Two things I kept doing by hand: working out whether my mana base actually delivers, and translating what I mean into Scryfall syntax. Both are here, both are open source.",
       "jump1Title": "Draw odds",
       "jump1Note": "Hypergeometric, with the curve drawn out",
       "jump2Title": "Plain-English search",
-      "jump2Note": "Type a sentence, get Scryfall syntax"
+      "jump2Note": "Type a sentence, get Scryfall syntax",
+      "jump3Note": "Sources needed, mulligans included"
     },
-
     "odds": {
       "heading": "Draw odds",
       "blurb": "Hypergeometric: every draw shrinks the library, so the odds move with it. Set your deck up and read the whole distribution, not just one number.",
@@ -212,7 +210,27 @@
       "thingCopies": "copies",
       "thingOfThem": "of them"
     },
-
+    "mana": {
+      "heading": "Mana sources",
+      "blurb": "The other half of a mana base: not how many lands, but how many of them make the right colour. Pick a cost and the turn you want it, and this is what the deck needs to carry.",
+      "deckLabel": "Cards in deck",
+      "pipsLabel": "Coloured pips in the cost",
+      "pipsHint": "Only pips of this colour — 1CC is two, generic doesn't count",
+      "turnLabel": "Cast it on turn",
+      "playLabel": "You're",
+      "onPlay": "On the play",
+      "onDraw": "On the draw",
+      "targetLabel": "How often you want it",
+      "mulliganLabel": "Ship a hand with none of this colour",
+      "mulliganHint": "One mulligan, and only on a blank — the policy people actually follow",
+      "sourcesUnit": "sources",
+      "sentence": "{{sources}} sources casts {{cost}} on turn {{turn}} {{percent}} of the time.",
+      "impossible": "No number of sources reaches that for {{cost}} on turn {{turn}} — you can't hold more pips than cards drawn.",
+      "deltaWith": "Willing to ship a colourless hand? {{sources}} would do.",
+      "deltaWithout": "Never mulliganing for colour? You'd want {{sources}}.",
+      "curveLabel": "What each source count buys you",
+      "caveat": "This counts colour and nothing else: it keeps a seven-lander happily and never asks whether the hand can function. Published tables land a little lower because they model hand quality too. Read it as “will my colours show up”, not “is this hand keepable”."
+    },
     "search": {
       "heading": "Plain-English search",
       "blurb": "Say what you're after in a sentence. It builds the Scryfall query and hands the search straight to Scryfall.",
@@ -237,6 +255,7 @@
       "errorOffline": "Can't reach the translator at {{url}}. Is it running?",
       "errorRateLimited": "Hourly request limit reached. Try again later.",
       "errorBadRequest": "That request wasn't something the translator could read.",
+      "errorUnauthorized": "This site isn't authorised to use the translator. Check the service's ALLOWED_ORIGINS.",
       "errorServer": "The translator hit an error. Try again in a moment.",
       "errorUnknown": "Something went wrong.",
       "examples": [
@@ -249,48 +268,83 @@
       "legend": [
         {
           "title": "Colors & identity",
-          "items": ["blue white creatures", "azorius instants", "color identity rakdos", "colorless artifacts"]
+          "items": [
+            "blue white creatures",
+            "azorius instants",
+            "color identity rakdos",
+            "colorless artifacts"
+          ]
         },
         {
           "title": "Types & subtypes",
-          "items": ["legendary goblin", "enchantment aura", "planeswalker"]
+          "items": [
+            "legendary goblin",
+            "enchantment aura",
+            "planeswalker"
+          ]
         },
         {
           "title": "Mana value, power, toughness",
-          "items": ["creatures 2 mana or less", "power at least 5", "toughness under 2"]
+          "items": [
+            "creatures 2 mana or less",
+            "power at least 5",
+            "toughness under 2"
+          ]
         },
         {
           "title": "Rules text & keywords",
-          "items": ["creatures with flying and lifelink", "says \"sacrifice a creature\"", "cards that draw a card"]
+          "items": [
+            "creatures with flying and lifelink",
+            "says \"sacrifice a creature\"",
+            "cards that draw a card"
+          ]
         },
         {
           "title": "Format legality",
-          "items": ["legal in pauper", "banned in modern", "commander"]
+          "items": [
+            "legal in pauper",
+            "banned in modern",
+            "commander"
+          ]
         },
         {
           "title": "Rarity & price",
-          "items": ["mythic rare under $5", "commons cheaper than 1 dollar"]
+          "items": [
+            "mythic rare under $5",
+            "commons cheaper than 1 dollar"
+          ]
         },
         {
           "title": "Land cycles & shortcuts",
-          "items": ["fetchlands", "shocklands under $10", "reserved list", "double-faced cards"]
+          "items": [
+            "fetchlands",
+            "shocklands under $10",
+            "reserved list",
+            "double-faced cards"
+          ]
         },
         {
           "title": "Artist & sorting",
-          "items": ["lands by Rebecca Guay", "dragons newest first"]
+          "items": [
+            "lands by Rebecca Guay",
+            "dragons newest first"
+          ]
         },
         {
           "title": "Other languages",
-          "items": ["creature rosse economiche", "billige rote Kreaturen", "créatures rouges pas chères"]
+          "items": [
+            "creature rosse economiche",
+            "billige rote Kreaturen",
+            "créatures rouges pas chères"
+          ]
         }
       ]
     },
-
     "footer": {
       "meta": "MIT · open source · card data from Scryfall"
-    }
+    },
+    "navMana": "Mana sources"
   },
-
   "legal": {
     "title": "Cookies & privacy",
     "updated": "Last updated 30 July 2026",

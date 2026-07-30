@@ -10,20 +10,17 @@
     "languageEnglish": "Inglese",
     "languageItalian": "Italiano"
   },
-
   "nav": {
     "projects": "Progetti",
     "about": "Chi sono",
     "twitch": "Twitch"
   },
-
   "socials": {
     "github": "GitHub",
     "twitch": "Twitch",
     "instagram": "Instagram",
     "linkedin": "LinkedIn"
   },
-
   "home": {
     "hero": {
       "eyebrow": "Walter · Italia",
@@ -43,7 +40,6 @@
       "statAccent": "presto in streaming",
       "socialsLabel": "Dove trovarmi"
     },
-
     "projects": {
       "heading": "Cose che ho fatto",
       "note": "Ogni card mantiene l'aspetto del suo progetto",
@@ -79,7 +75,6 @@
         "thumbCaptionShort": "foto di verdure"
       }
     },
-
     "music": {
       "heading": "Musica,",
       "headingAccent": "presa sul serio",
@@ -92,14 +87,23 @@
         "sleeveCaption": "copertina",
         "note": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza — continuo a rubare quell'idea, male, nei miei mix.",
         "noteShort": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza.",
-        "tags": ["ambient techno", "cuffie", "124 bpm"],
+        "tags": [
+          "ambient techno",
+          "cuffie",
+          "124 bpm"
+        ],
         "readLink": "Leggi la nota completa →",
         "readLinkShort": "Leggi la nota →",
         "archiveLink": "Tutte le 19 scelte ↗"
       },
       "previous": {
         "label": "Scelte precedenti",
-        "months": ["Giu", "Mag", "Apr", "Mar"],
+        "months": [
+          "Giu",
+          "Mag",
+          "Apr",
+          "Mar"
+        ],
         "remaining": "+15",
         "remainingShort": "+16"
       },
@@ -116,7 +120,6 @@
         "historyLink": "Apri la cronologia completa ↗"
       }
     },
-
     "coffee": {
       "label": "Se qualcosa qui ti è servito",
       "heading": "Offrimi un caffè",
@@ -129,7 +132,6 @@
       "tier2Short": "Sponsor",
       "fineprint": "Non serve un account · funziona anche GitHub Sponsors"
     },
-
     "propose": {
       "label": "Hai un'idea?",
       "note": "Leggo tutto · rispondo entro una settimana",
@@ -154,13 +156,11 @@
       "mailAbout": "Argomento",
       "mailSubject": "Idea per uno strumento"
     },
-
     "now": {
       "label": "Adesso",
       "body": "Sto riscrivendo il motore di geometria per le basi di mana e sistemando un calendario di streaming che riesca davvero a rispettare. Se vuoi costruire qualcosa insieme, la mia inbox è aperta.",
       "bodyShort": "Sto riscrivendo il motore di geometria per le basi di mana e costruendo un calendario di streaming che riesca a rispettare."
     },
-
     "footer": {
       "credit": "Fatto da Walter e Claudio con ",
       "creditAccent": "amore",
@@ -169,22 +169,20 @@
       "copyright": "© 2026"
     }
   },
-
   "magic": {
     "crumbPage": "Magic Tools",
     "navOdds": "Probabilità",
     "navSearch": "Ricerca a parole tue",
     "repo": "GitHub ↗",
-
     "hero": {
       "title": "Magic Tools",
       "blurb": "Due cose che continuavo a fare a mano: capire se la mia base di mana funziona davvero, e tradurre quello che intendo in sintassi Scryfall. Sono entrambe qui, entrambe open source.",
       "jump1Title": "Probabilità di pescata",
       "jump1Note": "Ipergeometrica, con la curva disegnata",
       "jump2Title": "Ricerca a parole tue",
-      "jump2Note": "Scrivi una frase, ottieni la sintassi Scryfall"
+      "jump2Note": "Scrivi una frase, ottieni la sintassi Scryfall",
+      "jump3Note": "Quante fonti servono, mulligan compresi"
     },
-
     "odds": {
       "heading": "Probabilità di pescata",
       "blurb": "Ipergeometrica: ogni pescata riduce il grimorio, quindi le probabilità si spostano di conseguenza. Imposta il mazzo e leggi tutta la distribuzione, non un numero solo.",
@@ -212,7 +210,27 @@
       "thingCopies": "copie",
       "thingOfThem": "di quelle"
     },
-
+    "mana": {
+      "heading": "Fonti di mana",
+      "blurb": "L'altra metà di una base di mana: non quante terre, ma quante fanno il colore giusto. Scegli un costo e il turno in cui lo vuoi lanciare, e questo è quello che il mazzo deve portarsi dietro.",
+      "deckLabel": "Carte nel mazzo",
+      "pipsLabel": "Simboli colorati nel costo",
+      "pipsHint": "Solo i simboli di questo colore — 1CC sono due, il generico non conta",
+      "turnLabel": "Lancialo al turno",
+      "playLabel": "Sei",
+      "onPlay": "In gioco per primo",
+      "onDraw": "In gioco per secondo",
+      "targetLabel": "Quanto spesso lo vuoi",
+      "mulliganLabel": "Rimanda una mano senza questo colore",
+      "mulliganHint": "Un solo mulligan, e solo su una mano vuota — la politica che si segue davvero",
+      "sourcesUnit": "fonti",
+      "sentence": "Con {{sources}} fonti lanci {{cost}} al turno {{turn}} nel {{percent}} dei casi.",
+      "impossible": "Nessun numero di fonti ci arriva per {{cost}} al turno {{turn}} — non puoi avere più simboli che carte pescate.",
+      "deltaWith": "Disposto a rimandare una mano senza colore? Ne basterebbero {{sources}}.",
+      "deltaWithout": "Non fai mai mulligan per il colore? Allora te ne servono {{sources}}.",
+      "curveLabel": "Cosa ti dà ogni numero di fonti",
+      "caveat": "Qui si conta solo il colore: una mano di sette terre va benissimo e non ci si chiede mai se la mano funzioni. Le tabelle pubblicate danno numeri un po' più bassi perché modellano anche la qualità della mano. Leggilo come «i miei colori arriveranno?», non «questa mano è tenibile?»."
+    },
     "search": {
       "heading": "Ricerca a parole tue",
       "blurb": "Dì in una frase cosa stai cercando. Costruisce la query Scryfall e ti manda dritto alla ricerca.",
@@ -237,6 +255,7 @@
       "errorOffline": "Non riesco a raggiungere il traduttore su {{url}}. È in esecuzione?",
       "errorRateLimited": "Limite orario di richieste raggiunto. Riprova più tardi.",
       "errorBadRequest": "Il traduttore non è riuscito a leggere questa richiesta.",
+      "errorUnauthorized": "Questo sito non è autorizzato a usare il traduttore. Controlla ALLOWED_ORIGINS del servizio.",
       "errorServer": "Il traduttore ha avuto un errore. Riprova tra poco.",
       "errorUnknown": "Qualcosa è andato storto.",
       "examples": [
@@ -249,48 +268,83 @@
       "legend": [
         {
           "title": "Colori e identità",
-          "items": ["creature blu e bianche", "istantanei azorius", "identità di colore rakdos", "artefatti incolori"]
+          "items": [
+            "creature blu e bianche",
+            "istantanei azorius",
+            "identità di colore rakdos",
+            "artefatti incolori"
+          ]
         },
         {
           "title": "Tipi e sottotipi",
-          "items": ["goblin leggendario", "aura incantesimo", "planeswalker"]
+          "items": [
+            "goblin leggendario",
+            "aura incantesimo",
+            "planeswalker"
+          ]
         },
         {
           "title": "Valore di mana, forza, costituzione",
-          "items": ["creature da 2 mana o meno", "forza almeno 5", "costituzione sotto 2"]
+          "items": [
+            "creature da 2 mana o meno",
+            "forza almeno 5",
+            "costituzione sotto 2"
+          ]
         },
         {
           "title": "Testo e abilità",
-          "items": ["creature con volare e legame vitale", "dice \"sacrifica una creatura\"", "carte che pescano una carta"]
+          "items": [
+            "creature con volare e legame vitale",
+            "dice \"sacrifica una creatura\"",
+            "carte che pescano una carta"
+          ]
         },
         {
           "title": "Legalità nei formati",
-          "items": ["legali in pauper", "bandite in modern", "commander"]
+          "items": [
+            "legali in pauper",
+            "bandite in modern",
+            "commander"
+          ]
         },
         {
           "title": "Rarità e prezzo",
-          "items": ["rare mitiche sotto i 5 dollari", "comuni sotto un dollaro"]
+          "items": [
+            "rare mitiche sotto i 5 dollari",
+            "comuni sotto un dollaro"
+          ]
         },
         {
           "title": "Cicli di terre e scorciatoie",
-          "items": ["fetchland", "shockland sotto i 10 dollari", "reserved list", "carte bifronte"]
+          "items": [
+            "fetchland",
+            "shockland sotto i 10 dollari",
+            "reserved list",
+            "carte bifronte"
+          ]
         },
         {
           "title": "Artista e ordinamento",
-          "items": ["terre di Rebecca Guay", "draghi dal più recente"]
+          "items": [
+            "terre di Rebecca Guay",
+            "draghi dal più recente"
+          ]
         },
         {
           "title": "Altre lingue",
-          "items": ["cheap red creatures", "billige rote Kreaturen", "créatures rouges pas chères"]
+          "items": [
+            "cheap red creatures",
+            "billige rote Kreaturen",
+            "créatures rouges pas chères"
+          ]
         }
       ]
     },
-
     "footer": {
       "meta": "MIT · open source · dati delle carte da Scryfall"
-    }
+    },
+    "navMana": "Fonti di mana"
   },
-
   "legal": {
     "title": "Cookie e privacy",
     "updated": "Ultimo aggiornamento 30 luglio 2026",

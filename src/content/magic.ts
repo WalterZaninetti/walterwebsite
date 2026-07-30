@@ -8,6 +8,7 @@ export const magic = {
   repoHref: 'https://github.com',
   nav: [
     { key: 'navOdds', href: '#odds' },
+    { key: 'navMana', href: '#mana' },
     { key: 'navSearch', href: '#search' },
   ],
   deckPresets: [60, 40, 99, 100],

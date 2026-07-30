@@ -8,7 +8,7 @@ import {
   translate,
   type TranslateResult,
 } from '../../lib/translateApi';
-import { SectionHead } from './DrawOdds';
+import { SectionHead } from './controls';
 
 type LegendGroup = { title: string; items: string[] };
 
@@ -56,7 +56,7 @@ export function PlainEnglishSearch() {
       setError(
         err instanceof TranslateError
           ? t(`magic.search.error${
-              { offline: 'Offline', rate_limited: 'RateLimited', bad_request: 'BadRequest', server: 'Server' }[
+              { offline: 'Offline', rate_limited: 'RateLimited', bad_request: 'BadRequest', unauthorized: 'Unauthorized', server: 'Server' }[
                 err.kind
               ]
             }`, { url: TRANSLATE_BASE_URL })
@@ -81,7 +81,7 @@ export function PlainEnglishSearch() {
       id="search"
       className="scroll-mt-[70px] bg-magic-forest px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
     >
-      <SectionHead index="02" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
+      <SectionHead index="03" heading={t('magic.search.heading')} blurb={t('magic.search.blurb')} dark />
 
       <div className="grid items-start gap-[22px] lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-4">

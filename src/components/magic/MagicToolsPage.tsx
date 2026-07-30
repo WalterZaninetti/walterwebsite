@@ -6,6 +6,7 @@ import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { DrawOdds } from './DrawOdds';
 import { ManaPips } from './ManaPips';
+import { ManaSources } from './ManaSources';
 import { PlainEnglishSearch } from './PlainEnglishSearch';
 
 /**
@@ -21,6 +22,7 @@ export function MagicToolsPage() {
         <Header />
         <Hero />
         <DrawOdds />
+        <ManaSources />
         <PlainEnglishSearch />
         <Footer />
       </div>
@@ -76,7 +78,8 @@ function Hero() {
   const { t } = useTranslation();
   const jumps = [
     { index: '01', href: '#odds', title: t('magic.hero.jump1Title'), note: t('magic.hero.jump1Note') },
-    { index: '02', href: '#search', title: t('magic.hero.jump2Title'), note: t('magic.hero.jump2Note') },
+    { index: '02', href: '#mana', title: t('magic.mana.heading'), note: t('magic.hero.jump3Note') },
+    { index: '03', href: '#search', title: t('magic.hero.jump2Title'), note: t('magic.hero.jump2Note') },
   ];
 
   return (

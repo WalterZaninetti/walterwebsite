@@ -30,7 +30,12 @@ export type TranslateResult = {
   warnings: string[];
 };
 
-export type TranslateErrorKind = 'rate_limited' | 'offline' | 'bad_request' | 'server';
+export type TranslateErrorKind =
+  | 'rate_limited'
+  | 'offline'
+  | 'bad_request'
+  | 'unauthorized'
+  | 'server';
 
 /**
  * Carries a `kind` rather than a display string: the UI is bilingual, so the
@@ -68,6 +73,11 @@ export async function translate(
     throw new TranslateError('offline');
   }
 
+  // The service authorises browsers by Origin, so a 401 here means this origin
+  // isn't in its ALLOWED_ORIGINS — a deployment mismatch, not a user error.
+  if (response.status === 401) {
+    throw new TranslateError('unauthorized');
+  }
   if (response.status === 429) {
     throw new TranslateError('rate_limited');
   }
