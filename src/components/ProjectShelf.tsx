@@ -1,5 +1,6 @@
 import type { Project, ProjectId } from '../content/site';
 import { projects, projectsSection } from '../content/site';
+import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
 import { cx } from './ui/cx';
 
@@ -73,6 +74,8 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <a
       href={project.href}
+      // Magic Tools is a real page now; the other two are still placeholders.
+      onClick={project.href.startsWith('/') ? navigate : undefined}
       className={cx(
         'flex flex-col rounded-card-sm p-5 no-underline lg:min-h-[420px] lg:rounded-card lg:p-[26px]',
         'transition-[transform,box-shadow] duration-[180ms] ease-lift lg:hover:-translate-y-1.5',

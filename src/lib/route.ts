@@ -2,24 +2,46 @@ import { useEffect, useState } from 'react';
 import type { MouseEvent } from 'react';
 
 /**
- * Two-page routing, hand-rolled because two pages do not justify a router.
+ * Small hand-rolled router — still not enough pages to justify a dependency.
  *
  * firebase.json already rewrites every path to index.html, and Vite's dev
- * server does the same, so /cookie-policy and /privacy both boot the app and
- * this decides what to render.
+ * server does the same, so any of these paths boots the app and this decides
+ * what to render.
  */
-export const LEGAL_PATHS = ['/cookie-policy', '/privacy'];
+export type Route = 'home' | 'legal' | 'magic';
 
-export function useIsLegalPath(): boolean {
-  const [path, setPath] = useState(() => window.location.pathname);
+const ROUTES: Record<string, Route> = {
+  '/cookie-policy': 'legal',
+  '/privacy': 'legal',
+  '/magic-tools': 'magic',
+};
+
+function resolve(pathname: string): Route {
+  return ROUTES[pathname.replace(/\/$/, '') || '/'] ?? 'home';
+}
+
+const TITLES: Record<Route, string> = {
+  home: 'Walter — small tools, made carefully',
+  legal: 'Cookies & privacy — Walter',
+  magic: 'Magic Tools — Walter',
+};
+
+export function useRoute(): Route {
+  const [route, setRoute] = useState(() => resolve(window.location.pathname));
 
   useEffect(() => {
-    const onPop = () => setPath(window.location.pathname);
+    const onPop = () => setRoute(resolve(window.location.pathname));
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
-  return LEGAL_PATHS.includes(path.replace(/\/$/, ''));
+  // Client-side navigation doesn't reload the document, so the title is ours
+  // to keep in step.
+  useEffect(() => {
+    document.title = TITLES[route];
+  }, [route]);
+
+  return route;
 }
 
 /**

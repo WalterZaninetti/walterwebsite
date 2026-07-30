@@ -59,6 +59,65 @@
   --color-teal-600: #2f7d72;
   --color-teal-400: #6fb8ac;
 
+  /* ------------------------------------------------------------------
+     Magic Tools page — its own world, per the homepage's "each card keeps
+     its project's own look". Parchment and ink rather than sage and loam,
+     and no dark variant: the doc draws one look only, so these are flat
+     values rather than a semantic light/dark pair.
+     ------------------------------------------------------------------ */
+  --font-magic-display: 'Cinzel', Georgia, serif;
+  --font-magic-body: 'Spectral', Georgia, serif;
+
+  --color-magic-parchment: #efe7cd;
+  --color-magic-paper: #fdfaec;
+  --color-magic-card: #ffffff;
+  --color-magic-header: rgb(244 247 251 / 0.92);
+
+  --color-magic-rule: #ddd2b0;
+  --color-magic-rule-soft: #eae3ca;
+  --color-magic-rule-faint: #f4eed8;
+  --color-magic-field: #ded3b3;
+
+  --color-magic-ink: #150b00;
+  --color-magic-ink-muted: #6b5f4a;
+  --color-magic-ink-faint: #9a8d75;
+  --color-magic-ink-fainter: #a89b83;
+  --color-magic-slash: #b8ab92;
+  --color-magic-link: #1f5896;
+
+  --color-magic-green: #00733e;
+  --color-magic-green-deep: #0a5c35;
+  --color-magic-green-darker: #00552d;
+  --color-magic-green-mid: #6fbd8f;
+  --color-magic-green-light: #9bd3ae;
+  --color-magic-green-pale: #e2f3e3;
+  --color-magic-forest: #0a2f1e;
+  --color-magic-abyss: #071a10;
+
+  --color-magic-cream: #fffbd5;
+  --color-magic-cream-dim: #cbc2bf;
+  --color-magic-cream-dimmer: #b3a89f;
+  --color-magic-cream-faint: #8f8479;
+  --color-magic-steel: #7d97b6;
+
+  --color-magic-bar-short: #e6dcc0;
+  --color-magic-coral: #f9aa8f;
+  --color-magic-gold: #f2e3a8;
+
+  /* The five mana pips in the hero */
+  --color-mana-plains: #fffbd5;
+  --color-mana-plains-ink: #9a7b1f;
+  --color-mana-plains-fill: #fff3c0;
+  --color-mana-island: #0e68ab;
+  --color-mana-island-ink: #08324f;
+  --color-mana-island-pale: #aae0fa;
+  --color-mana-swamp: #150b00;
+  --color-mana-swamp-ink: #cbc2bf;
+  --color-mana-mountain: #d3202a;
+  --color-mana-mountain-ink: #fff1e0;
+  --color-mana-forest: #00733e;
+  --color-mana-forest-ink: #e2f3e3;
+
   /* Type scale, faithful to the doc (px, paired line-heights) */
   --text-hero: 96px;
   --text-hero--line-height: 0.98;

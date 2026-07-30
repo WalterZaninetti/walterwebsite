@@ -71,7 +71,7 @@ export const projectsSection = {
 export const projects: readonly Project[] = [
   {
     id: 'magic',
-    href: '#magic-tools',
+    href: '/magic-tools',
     eyebrow: '01 · for magic players',
     eyebrowShort: '01 · magic',
     title: 'Magic Tools',

@@ -37,6 +37,52 @@ Theme selection: `src/lib/theme.tsx` toggles `.dark` on `<html>` and persists to
 so dark-mode visitors get no flash. With nothing stored, the OS preference wins and keeps winning
 until the visitor uses the header switch.
 
+## /magic-tools
+
+A second page in its own visual world — parchment, Cinzel, MTG green — because the homepage
+claims each project keeps its own look. It opts out of the site's theme provider entirely: the
+design draws one look, with no dark variant, so its palette is a flat block of `magic-*` tokens
+rather than a light/dark semantic pair.
+
+Two tools:
+
+- **Draw odds** — hypergeometric, entirely client-side (`src/lib/hypergeometric.ts`). Ported from
+  the design doc's own script, including its use of log-factorials: the binomial coefficients here
+  reach ~1e29 and overflow a double long before the probability does, so it sums logs and
+  exponentiates once at the end.
+- **Plain-English search** — backed by the
+  [`natural-language-to-scryfall-filters`](../natural-language-to-scryfall-filters) service.
+
+### Wiring the translate service
+
+```sh
+# in natural-language-to-scryfall-filters
+cp .env.example .env     # ANTHROPIC_API_KEY + GCP credentials
+npm run dev              # :8080, ALLOWED_ORIGINS already lists :5173
+```
+
+Set `VITE_TRANSLATE_API_URL` here to point at a deployed instance (see `.env.example`); it
+defaults to `http://localhost:8080`. The API key stays server-side — the browser only ever talks
+to the service, never to a model provider.
+
+The design shipped a local regex parser that translated on every keystroke. That's replaced by the
+service, which is a model call validated against Scryfall before it returns — slower, metered, and
+rate-limited to 60/hour per IP. So the UI translates on **explicit submit** (button or ⌘/Ctrl+Enter)
+rather than as you type. In exchange it reads Italian, German, French and Spanish, and it catches
+queries Scryfall would silently ignore while returning thousands of wrong cards.
+
+The service's `assumptions`, `unsupported` and `warnings` are surfaced under the query rather than
+dropped — a non-empty `warnings` means repair failed and the query should be treated as suspect.
+Chips are derived by splitting the returned query and labelling each fragment against the service's
+own operator registry and aliases, so a chip never claims something the backend didn't mean.
+
+### Keeping up with the design docs
+
+`src/design-system/Walter - Homepage.reference.html` is the last-imported copy of the homepage doc,
+kept so a re-import can be diffed against it — that's how the second homepage revision was spotted.
+There's no equivalent stored for Magic Tools yet; re-fetch it through the design MCP and diff by
+hand, or drop a copy alongside the homepage one to get the same workflow.
+
 ## Privacy posture
 
 The site sets **no cookies**, runs no analytics, and makes **no third-party requests** — verified
@@ -58,11 +104,17 @@ src/
   content/site.ts        all copy, in one place (incl. the doc's tighter mobile variants)
   design-system/         theme.css + the reference canvas HTML
   lib/theme.tsx          light/dark provider
+  lib/
+    route.ts             two-and-a-bit pages of hand-rolled routing
+    theme.tsx            light/dark provider (homepage + legal only)
+    hypergeometric.ts    draw-odds maths
+    translateApi.ts      client for the scryfall-filters service
   components/
     ui/                  Eyebrow, Frame, Pill/Chip/AccentButton, Monogram, icons
     music/               MusicSection, AlbumOfTheMonth, NowPlaying
+    magic/               MagicToolsPage, DrawOdds, PlainEnglishSearch, ManaPips
     SiteHeader, Hero, ProjectShelf, SupportSection, ProposeToolForm,
-    NowFooter (the "Now" note), SiteFooter (the closing bar)
+    NowFooter (the "Now" note), SiteFooter (the closing bar), LegalPage
 ```
 
 Sections whose mobile reading order interleaves the desktop columns (the hero, the music grid) are

@@ -5,14 +5,19 @@ import { ProjectShelf } from './components/ProjectShelf';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { SupportSection } from './components/SupportSection';
+import { MagicToolsPage } from './components/magic/MagicToolsPage';
 import { MusicSection } from './components/music/MusicSection';
-import { useIsLegalPath } from './lib/route';
+import { useRoute } from './lib/route';
 import { ThemeProvider } from './lib/theme';
 
 export default function App() {
-  const isLegal = useIsLegalPath();
+  const route = useRoute();
 
-  if (isLegal) {
+  // Magic Tools brings its own palette and has no dark variant, so it sits
+  // outside the site's theme provider rather than fighting it.
+  if (route === 'magic') return <MagicToolsPage />;
+
+  if (route === 'legal') {
     return (
       <ThemeProvider>
         <LegalPage />
