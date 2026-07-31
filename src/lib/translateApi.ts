@@ -6,16 +6,18 @@
  * `warnings` array as failure rather than a hint — because Scryfall answers
  * 200 with thousands of wrong cards for a query it silently ignored.
  *
- * The API key lives on the server, so the browser talks to it directly and
- * never holds a secret. In development that is localhost:8080, whose
- * ALLOWED_ORIGINS already lists the Vite dev origin; in production point
- * VITE_TRANSLATE_API_URL at the deployed instance.
+ * Called same-origin at /api: Firebase Hosting rewrites /api/** to the Cloud
+ * Run service in production, and the Vite dev server proxies the same path to
+ * localhost:8080. So there is no CORS, no API base URL per environment, and no
+ * credential in the bundle — a public page cannot hold a secret, so it doesn't
+ * try to. What bounds abuse is the service's per-IP hourly limit and its daily
+ * model-call ceiling.
+ *
+ * VITE_TRANSLATE_API_URL remains an escape hatch for pointing a local build at
+ * a deployed instance; leave it unset for the same-origin path.
  */
 
-const BASE_URL = (import.meta.env.VITE_TRANSLATE_API_URL ?? 'http://localhost:8080').replace(
-  /\/$/,
-  '',
-);
+const BASE_URL = (import.meta.env.VITE_TRANSLATE_API_URL ?? '/api').replace(/\/$/, '');
 
 export type TranslateResult = {
   query: string;
@@ -82,8 +84,9 @@ export async function translate(
     throw new TranslateError('offline');
   }
 
-  // The service authorises browsers by Origin, so a 401 here means this origin
-  // isn't in its ALLOWED_ORIGINS — a deployment mismatch, not a user error.
+  // Not expected on the same-origin path — kept as a defensive branch so a
+  // service that is locked down later surfaces as a deployment mismatch rather
+  // than a generic failure.
   if (response.status === 401) {
     throw new TranslateError('unauthorized');
   }

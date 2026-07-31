@@ -38,6 +38,19 @@ export default defineConfig({
       : []),
   ],
 
+  // Mirrors the production Firebase Hosting rewrite so /magic-tools talks to the translate
+  // service same-origin in development too — no CORS, and no API base URL to configure per
+  // environment. The path is forwarded unchanged because Hosting does not strip the prefix
+  // either, so the service sees the same URL in both places.
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: false,
+      },
+    },
+  },
+
   build: {
     target: 'es2022',
     cssCodeSplit: true,

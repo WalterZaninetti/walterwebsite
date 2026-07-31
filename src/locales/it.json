@@ -294,9 +294,9 @@
       "unsupportedTitle": "Non esprimibile in Scryfall",
       "assumptionsTitle": "Assunzioni",
       "errorOffline": "Non riesco a raggiungere il traduttore su {{url}}. È in esecuzione?",
-      "errorRateLimited": "Limite orario di richieste raggiunto. Riprova più tardi.",
+      "errorRateLimited": "Limite di richieste raggiunto. Riprova più tardi.",
       "errorBadRequest": "Il traduttore non è riuscito a leggere questa richiesta.",
-      "errorUnauthorized": "Questo sito non è autorizzato a usare il traduttore. Controlla ALLOWED_ORIGINS del servizio.",
+      "errorUnauthorized": "Il traduttore ha rifiutato la richiesta: è un problema di configurazione, non un errore tuo.",
       "errorServer": "Il traduttore ha avuto un errore. Riprova tra poco.",
       "errorUnknown": "Qualcosa è andato storto.",
       "examples": [

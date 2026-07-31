@@ -82,27 +82,44 @@ number like this is only as good as the policy behind it.
 
 ### Auth: why no key ships
 
-`/translate` sits behind auth that accepts **either** a valid `x-api-key` **or** an allowed
-`Origin`. The browser uses the Origin path and carries no credential, because a public web app
-cannot hold a secret — putting the key in the bundle would publish it, and publish a credential
-that also authorises non-browser callers until rotated.
+`POST /translate` is public, and the site says so rather than pretending otherwise. A public web
+app cannot hold a secret — putting the key in the bundle would publish it, and publish a credential
+that also authorises non-browser callers until rotated — so the browser sends none.
 
-Origin is forgeable, so this is a gate against casual misuse, not an authentication boundary. The
-per-IP hourly rate limit is what actually protects the Anthropic spend. Real attestation means
-Firebase App Check or Turnstile, which load third-party script into the page — a trade this site
-refuses on privacy grounds, and one to make deliberately rather than by drift.
+An earlier version authorised browsers by `Origin` instead. That only looked like a gate: `Origin`
+is set by the caller and forged in one curl flag. Dropping it is an honest restatement of what was
+already true, not a loosening.
+
+What bounds abuse is a per-IP hourly limit plus a **daily model-call ceiling**, and the ceiling is
+the one that caps the Anthropic bill: rotating IPs is cheap, so the per-IP limit only shapes
+ordinary traffic. A valid `x-api-key` still marks a server-to-server caller (the eval suite,
+scripts) and skips the per-IP limit — a convenience tier, not an access control, since the daily
+ceiling applies to it too.
+
+Real attestation means Firebase App Check or Turnstile, which load third-party script into the
+page — a trade this site refuses on privacy grounds, and one to make deliberately if abuse ever
+shows up rather than by drift.
 
 ### Wiring the translate service
+
+The browser calls the service **same-origin at `/api`**, so there is no CORS and no API base URL to
+configure per environment: Firebase Hosting rewrites `/api/**` to Cloud Run in production, the Vite
+dev server proxies the same path to `localhost:8080`, and the service strips the `/api` prefix so
+one set of routes serves both.
 
 ```sh
 # in natural-language-to-scryfall-filters
 cp .env.example .env     # ANTHROPIC_API_KEY + GCP credentials
-npm run dev              # :8080, ALLOWED_ORIGINS already lists :5173
+npm run dev              # :8080 — the Vite proxy in vite.config.ts points here
 ```
 
-Set `VITE_TRANSLATE_API_URL` here to point at a deployed instance (see `.env.example`); it
-defaults to `http://localhost:8080`, and add that origin to the service's `ALLOWED_ORIGINS`. No
-credential is sent from the browser — see the auth note above.
+`VITE_TRANSLATE_API_URL` overrides the `/api` default, but it is an escape hatch for curl or a
+non-browser client: the service sends no CORS headers, so a browser blocks the cross-origin call it
+produces. To exercise a deployed backend from the site, change the Vite proxy target and stay
+same-origin.
+
+The production rewrite targets the Cloud Run service `scryfall-translate` in `europe-west1`
+(`firebase.json`), which must allow unauthenticated invocations for Hosting to reach it.
 
 The design shipped a local regex parser that translated on every keystroke. That's replaced by the
 service, which is a model call validated against Scryfall before it returns — slower, metered, and

@@ -294,9 +294,9 @@
       "unsupportedTitle": "Not expressible in Scryfall",
       "assumptionsTitle": "Assumed",
       "errorOffline": "Can't reach the translator at {{url}}. Is it running?",
-      "errorRateLimited": "Hourly request limit reached. Try again later.",
+      "errorRateLimited": "Request limit reached. Try again later.",
       "errorBadRequest": "That request wasn't something the translator could read.",
-      "errorUnauthorized": "This site isn't authorised to use the translator. Check the service's ALLOWED_ORIGINS.",
+      "errorUnauthorized": "The translator turned this request away — a deployment problem, not something you did.",
       "errorServer": "The translator hit an error. Try again in a moment.",
       "errorUnknown": "Something went wrong.",
       "examples": [
