@@ -5,6 +5,7 @@ import { navigate } from '../../lib/route';
 import { cx } from '../ui/cx';
 import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
+import { SkipLink } from '../ui/SkipLink';
 import { DrawOdds } from './DrawOdds';
 import { ManaPips } from './ManaPips';
 import { ManaSources } from './ManaSources';
@@ -22,13 +23,17 @@ export function MagicToolsPage() {
   return (
     <div className="min-h-screen bg-magic-parchment font-magic-body text-magic-ink">
       <div className="mx-auto max-w-[1240px] bg-magic-paper shadow-[0_0_0_1px_var(--color-magic-rule)]">
+        <SkipLink className="bg-magic-ink text-magic-paper" />
         <Header />
-        <Hero />
-        <DrawOdds />
-        <ManaSources />
-        <OpeningHands />
-        <FindingACard />
-        <PlainEnglishSearch />
+        {/* The page had no main landmark at all, so assistive tech had nothing to skip to. */}
+        <main id="main">
+          <Hero />
+          <DrawOdds />
+          <ManaSources />
+          <OpeningHands />
+          <FindingACard />
+          <PlainEnglishSearch />
+        </main>
         <Footer />
       </div>
     </div>

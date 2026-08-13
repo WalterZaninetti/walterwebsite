@@ -9,7 +9,36 @@
     />
     <meta name="theme-color" content="#eef0e6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#141a15" media="(prefers-color-scheme: dark)" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Safari and older Android ignore the SVG icon; both fall back to these. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!--
+      Social preview. These are read by scrapers, which run no JavaScript, so they describe the
+      site as it is served — always in English, even though the page itself switches to Italian
+      client-side. There is one URL per route and no /it prefix, so there is nothing per-language
+      to declare here; a translated preview would need server-rendered pages.
+
+      og:image must be absolute — a relative path is silently dropped by most scrapers.
+    -->
+    <link rel="canonical" href="https://walterzaninetti.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Walter Zaninetti" />
+    <meta property="og:url" content="https://walterzaninetti.com/" />
+    <meta property="og:title" content="Walter — small tools, made carefully" />
+    <meta
+      property="og:description"
+      content="Software developer in Italy. Small tools, made carefully: a mana-base calculator for Magic players, a Rekordbox dashboard for DJs, and a seasonal produce guide."
+    />
+    <meta property="og:image" content="https://walterzaninetti.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Walter Zaninetti — small tools, made carefully" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!--
       Fonts come straight from the design doc: Instrument Serif (display),

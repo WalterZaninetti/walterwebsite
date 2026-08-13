@@ -9,16 +9,25 @@ import { useTranslation } from 'react-i18next';
  * server does the same, so any of these paths boots the app and this decides
  * what to render.
  */
-export type Route = 'home' | 'legal' | 'magic';
+export type Route = 'home' | 'legal' | 'magic' | 'notfound';
 
 const ROUTES: Record<string, Route> = {
+  '/': 'home',
   '/cookie-policy': 'legal',
   '/privacy': 'legal',
   '/magic-tools': 'magic',
 };
 
+/**
+ * An unknown path renders the 404 view rather than falling back to the homepage.
+ *
+ * Static hosting cannot answer with a 404 status — Hosting's catch-all rewrite has already
+ * returned 200 and index.html by the time this runs — but silently serving the homepage at every
+ * wrong URL is worse than a soft 404: a crawler sees unlimited distinct URLs with identical
+ * content. The noindex tag in NotFound is what actually keeps them out of the index.
+ */
 function resolve(pathname: string): Route {
-  return ROUTES[pathname.replace(/\/$/, '') || '/'] ?? 'home';
+  return ROUTES[pathname.replace(/\/$/, '') || '/'] ?? 'notfound';
 }
 
 export function useRoute(): Route {
@@ -38,6 +47,7 @@ export function useRoute(): Route {
       home: `Walter — ${t('home.hero.headline')} ${t('home.hero.headlineAccent')}`,
       legal: `${t('legal.title')} — Walter`,
       magic: `${t('magic.hero.title')} — Walter`,
+      notfound: `${t('notFound.title')} — Walter`,
     };
     document.title = titles[route];
   }, [route, t, i18n.resolvedLanguage]);

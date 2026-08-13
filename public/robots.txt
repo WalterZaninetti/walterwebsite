@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# The translate service is reached through this origin at /api. It is a POST endpoint with a
+# metered model call behind it, so there is nothing here for a crawler to index and a real cost
+# to it trying.
+Disallow: /api/
+
+Sitemap: https://walterzaninetti.com/sitemap.xml

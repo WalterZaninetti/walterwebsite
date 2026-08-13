@@ -1,4 +1,18 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="#0a0a0a" />
-  <path d="M9 22V10h4.5a4 4 0 0 1 0 8H11v4H9Zm2-6h2.5a2 2 0 0 0 0-4H11v4Z" fill="white" />
+<svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    The WZ mark from src/components/ui/Monogram.tsx, reduced for favicon sizes.
+
+    Two changes from the component, both for legibility at 16px: the ring becomes a filled disc,
+    since a 7-unit stroke renders as a smudge at that size and the solid shape is what gives the
+    letters contrast against a browser tab; and the strokes go from 13.5 to 16 so the W and Z
+    survive the downsample. Colours are the site's ink and paper, plus the monogram accent teal
+    lightened for contrast against the dark disc.
+  -->
+  <circle cx="100" cy="100" r="100" fill="#26332a" />
+  <g fill="none" stroke="#f7f8f2" stroke-width="16" stroke-linecap="square" transform="translate(51 56)">
+    <path d="M2 20 L18 68 L34 34 L50 68 L66 20" />
+    <path d="M50 68 L96 68" />
+    <path d="M66 20 L96 20" stroke="#7fb8ae" />
+    <path d="M96 20 L52 68" stroke="#7fb8ae" />
+  </g>
 </svg>

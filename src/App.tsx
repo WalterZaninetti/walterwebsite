@@ -5,6 +5,8 @@ import { ProjectShelf } from './components/ProjectShelf';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { SupportSection } from './components/SupportSection';
+import { NotFoundPage } from './components/NotFoundPage';
+import { SkipLink } from './components/ui/SkipLink';
 import { MagicToolsPage } from './components/magic/MagicToolsPage';
 import { MusicSection } from './components/music/MusicSection';
 import { useRoute } from './lib/route';
@@ -25,6 +27,14 @@ export default function App() {
     );
   }
 
+  if (route === 'notfound') {
+    return (
+      <ThemeProvider>
+        <NotFoundPage />
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       {/*
@@ -36,8 +46,9 @@ export default function App() {
         the full screen.
       */}
       <div className="mx-auto w-full max-w-[1440px]">
+        <SkipLink />
         <SiteHeader />
-        <main>
+        <main id="main">
           <Hero />
           <ProjectShelf />
           <MusicSection />

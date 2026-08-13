@@ -30,3 +30,6 @@ firebase-debug.*.log
 .env
 .env.*
 !.env.example
+
+# Page pipeline working directory
+.pipeline/

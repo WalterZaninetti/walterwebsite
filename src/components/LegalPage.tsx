@@ -3,6 +3,7 @@ import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
 import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
+import { SkipLink } from './ui/SkipLink';
 
 type Section = { heading: string; body: string[] };
 
@@ -17,6 +18,7 @@ export function LegalPage() {
 
   return (
     <div className="mx-auto w-full max-w-[1440px]">
+      <SkipLink />
       <header className="border-b border-header-line bg-header-bg">
         <div className="flex items-center justify-between px-5 py-4 md:px-13 md:py-[18px]">
           <a
@@ -43,7 +45,7 @@ export function LegalPage() {
         </div>
       </header>
 
-      <main className="px-5 pt-10 pb-16 md:px-13 md:pt-14 md:pb-20">
+      <main id="main" className="px-5 pt-10 pb-16 md:px-13 md:pt-14 md:pb-20">
         <div className="max-w-[42em]">
           <Eyebrow className="mb-3 text-accent">{t('legal.updated')}</Eyebrow>
           <h1 className="mb-6 text-hero-sm font-display text-ink-strong md:mb-8 md:text-display">

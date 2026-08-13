@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Every route the hand-rolled router in src/lib/route.ts resolves, and nothing else: the
+  catch-all rewrite means any other path also returns 200, so listing only the real ones is
+  what keeps a crawler from treating typos as pages.
+
+  Both languages live at the same URL — the switch is client-side and stored in localStorage,
+  with no /it prefix — so there are no hreflang alternates to declare.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://walterzaninetti.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://walterzaninetti.com/magic-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://walterzaninetti.com/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://walterzaninetti.com/cookie-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

@@ -8,7 +8,8 @@
     "closeMenu": "Close menu",
     "language": "Language",
     "languageEnglish": "English",
-    "languageItalian": "Italian"
+    "languageItalian": "Italian",
+    "skipToContent": "Skip to content"
   },
   "nav": {
     "projects": "Projects",
@@ -452,5 +453,15 @@
         ]
       }
     ]
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page doesn't exist",
+    "body": "The address you followed doesn't match anything here. It may have been a typo, or something that used to live at this URL and no longer does.",
+    "backLabel": "Home",
+    "linksLabel": "Where to go instead",
+    "linkHome": "Homepage",
+    "linkMagic": "Magic Tools",
+    "linkLegal": "Cookies & privacy"
   }
 }

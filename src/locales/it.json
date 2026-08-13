@@ -8,7 +8,8 @@
     "closeMenu": "Chiudi il menu",
     "language": "Lingua",
     "languageEnglish": "Inglese",
-    "languageItalian": "Italiano"
+    "languageItalian": "Italiano",
+    "skipToContent": "Vai al contenuto"
   },
   "nav": {
     "projects": "Progetti",
@@ -452,5 +453,15 @@
         ]
       }
     ]
+  },
+  "notFound": {
+    "eyebrow": "Errore 404",
+    "title": "Questa pagina non esiste",
+    "body": "L'indirizzo che hai seguito non corrisponde a niente di presente qui. Può essere un refuso, o qualcosa che stava a questo URL e ora non c'è più.",
+    "backLabel": "Home",
+    "linksLabel": "Dove andare invece",
+    "linkHome": "Homepage",
+    "linkMagic": "Strumenti Magic",
+    "linkLegal": "Cookie e privacy"
   }
 }
