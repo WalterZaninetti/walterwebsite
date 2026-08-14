@@ -13,15 +13,28 @@ const socialIcons: Record<string, ComponentType> = {
 };
 
 /**
- * The closing bar: monogram, social glyphs, credit line and legal links.
- * Desktop spreads the three groups across the row; mobile stacks and centres
- * them with 44px touch targets.
+ * The closing bar: the email, then monogram, social glyphs, credit line and
+ * legal links. Desktop spreads the three groups across the row; mobile stacks
+ * and centres them with 44px touch targets.
+ *
+ * The email used to headline its own section at 30px on the canvas. It is a
+ * secondary ask, so it sits here now — still the largest thing on the bar, but
+ * on the bar. Rust on this surface is `accent-on-panel`, never `accent`.
  */
 export function SiteFooter() {
   const { t } = useTranslation();
 
   return (
     <div className="bg-footer-bar px-5 pt-[26px] pb-[30px] text-footer-ink dark:border-t dark:border-line-on-panel-soft lg:px-13 lg:pt-8 lg:pb-[34px]">
+      <div className="mb-[26px] flex justify-center border-b border-footer-divider pb-[22px] lg:mb-7 lg:justify-start lg:pb-6">
+        <a
+          href={`mailto:${site.email}`}
+          className="border-b border-accent-on-panel pb-[3px] font-display text-[22px]/none text-on-panel-strong no-underline transition-colors duration-150 hover:text-accent-on-panel lg:text-[26px]/none"
+        >
+          {site.email}
+        </a>
+      </div>
+
       <div className="flex flex-col items-center gap-[18px] lg:flex-row lg:flex-wrap lg:justify-between lg:gap-10">
         <div className="flex flex-col items-center gap-[18px] lg:flex-row lg:gap-4">
           {/* On this deep-green bar the accent is always the pale teal, in

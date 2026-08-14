@@ -42,7 +42,10 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="mt-3 mb-5 max-w-[24em] text-body-sm text-on-panel-body text-pretty md:text-lead lg:mt-0 lg:mb-[34px] lg:text-ink-body">
+        {/* The long deck runs to ~197 characters, so the measure opens to 30em
+            (≈60 characters) from md up rather than letting it stack four lines.
+            The short variant is 140 and keeps the tighter 24em. */}
+        <p className="mt-3 mb-5 max-w-[24em] text-body-sm text-on-panel-body text-pretty md:max-w-[30em] md:text-lead lg:mt-0 lg:mb-[34px] lg:text-ink-body">
           <span className="md:hidden">{t('home.hero.deckShort')}</span>
           <span className="hidden md:inline">{t('home.hero.deck')}</span>
         </p>
@@ -55,12 +58,6 @@ export function Hero() {
           >
             {t('home.hero.primaryCta')}
           </AccentButton>
-          <a
-            href="#now"
-            className="hidden border-b border-line-strong pb-0.5 font-mono text-[13px] font-medium text-ink-muted no-underline transition-colors duration-150 hover:border-accent hover:text-accent lg:inline"
-          >
-            {t('home.hero.secondaryCta')}
-          </a>
         </div>
 
         <div className="absolute bottom-10 left-14 hidden items-baseline gap-[14px] font-mono text-micro text-ink-faint lg:flex">
@@ -112,12 +109,16 @@ export function Hero() {
           <Eyebrow className="mb-3 hidden text-on-panel-quiet lg:block">
             {t('home.hero.socialsLabel')}
           </Eyebrow>
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:flex lg:flex-wrap">
+          {/* Content-width chips, not full-bleed grid cells: these four all
+              leave the site, and as stretched cells they read as calls to
+              action competing with the one the hero actually has. min-h-11
+              keeps the 44px touch target the grid was giving for free. */}
+          <div className="flex flex-wrap gap-2">
             {site.socials.map((social) => (
               <PanelPill
                 key={social.id}
                 href={social.href}
-                className="grid h-[46px] place-items-center text-[12.5px] lg:h-auto lg:px-[15px] lg:py-[9px] lg:text-meta"
+                className="inline-flex min-h-11 items-center px-3.5 text-[12.5px] lg:min-h-0 lg:px-[15px] lg:py-[9px] lg:text-meta"
               >
                 {t(`socials.${social.id}`)} ↗
               </PanelPill>

@@ -11,7 +11,6 @@ export const site = {
   nav: [
     { key: 'projects', href: '#projects' },
     { key: 'music', href: '#music' },
-    { key: 'now', href: '#now' },
   ],
   socials: [
     { id: 'github', href: 'https://github.com' },

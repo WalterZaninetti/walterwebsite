@@ -13,8 +13,7 @@
   },
   "nav": {
     "projects": "Progetti",
-    "music": "Musica",
-    "now": "Adesso"
+    "music": "Musica"
   },
   "socials": {
     "github": "GitHub",
@@ -32,19 +31,17 @@
       "portraitCaptionShort": "ritratto",
       "bio1": "Sono uno sviluppatore software. Rendo open source quasi tutto quello che faccio — non per ideologia, è semplicemente meglio quando la gente può leggere il codice e sistemarlo.",
       "bio2": "Lontano dall'editor gioco a Magic: the Gathering, e mi sto lentamente convincendo a farlo in streaming.",
-      "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, streamer occasionale.",
-      "deck": "Per ora tre: geometria delle basi di mana per chi gioca a Magic, mix armonico per i DJ e cosa è davvero di stagione dove vivi. Gratis e open source.",
-      "deckShort": "Per ora tre: basi di mana, mix armonico e cosa è di stagione vicino a te. Gratis e open source.",
+      "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, mi sto ancora convincendo a farlo in streaming.",
+      "deck": "Costruisco lo strumento quando mi stanco di farlo a mano. Per ora: geometria delle basi di mana per Magic, mix armonico per i DJ e cosa è davvero di stagione dove vivi. Tutto gratis, tutto open source.",
+      "deckShort": "Costruisco lo strumento quando mi stanco di farlo a mano. Per ora: basi di mana, mix armonico, cosa è di stagione vicino a te. Gratis e open source.",
       "primaryCta": "Guarda i progetti ↓",
-      "secondaryCta": "oppure leggi cosa sto facendo adesso",
       "stat1": "03 progetti",
       "stat2": "tutto open source",
-      "statAccent": "presto in streaming",
+      "statAccent": "due online, uno in corso",
       "socialsLabel": "Dove trovarmi"
     },
     "projects": {
       "heading": "Cose che ho fatto",
-      "note": "Ogni card mantiene l'aspetto del suo progetto",
       "openLabel": "Apri →",
       "magic": {
         "eyebrow": "01 · per chi gioca a magic",
@@ -80,8 +77,8 @@
     "music": {
       "heading": "Musica,",
       "headingAccent": "presa sul serio",
-      "intro": "La musica è la cosa che conosco meglio a parte il codice. Scavo, leggo le note di copertina, mi importa di quale pressing sia — e faccio il DJ, che è soprattutto una scusa per continuare a scavare. Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle.",
-      "introShort": "La musica è la cosa che conosco meglio a parte il codice. Scavo, leggo le note di copertina, faccio il DJ. Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle.",
+      "intro": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Diciannove finora. È la cosa che conosco meglio a parte il codice — ed è il motivo per cui esiste il DJ Tool.",
+      "introShort": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Diciannove finora — ed è il motivo per cui esiste il DJ Tool.",
       "album": {
         "label": "Album del mese",
         "issue": "Luglio 2026 · scelta n. 19",
@@ -149,11 +146,6 @@
       "mailFrom": "Da",
       "mailAbout": "Argomento",
       "mailSubject": "Idea per uno strumento"
-    },
-    "now": {
-      "label": "Adesso",
-      "body": "Sto riscrivendo il motore di geometria per le basi di mana e sistemando un calendario di streaming che riesca davvero a rispettare. Se vuoi costruire qualcosa insieme, la mia inbox è aperta.",
-      "bodyShort": "Sto riscrivendo il motore di geometria per le basi di mana e costruendo un calendario di streaming che riesca a rispettare."
     },
     "footer": {
       "credit": "Fatto da Walter e Claudio con ",

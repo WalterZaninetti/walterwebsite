@@ -54,13 +54,10 @@ export function ProjectShelf() {
       id="projects"
       className="bg-canvas-band px-5 pt-[26px] pb-[30px] dark:border-t dark:border-line-soft lg:px-13 lg:pt-13 lg:pb-15"
     >
-      <div className="mb-[18px] flex items-baseline justify-between lg:mb-[26px]">
+      <div className="mb-[18px] lg:mb-[26px]">
         <h2 className="text-section-sm font-display text-ink-strong lg:text-section">
           {t('home.projects.heading')}
         </h2>
-        <span className="hidden font-mono text-label-wide font-medium uppercase text-ink-note lg:inline">
-          {t('home.projects.note')}
-        </span>
       </div>
 
       <div className="grid gap-3.5 lg:grid-cols-3 lg:gap-[22px]">

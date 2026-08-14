@@ -13,8 +13,7 @@
   },
   "nav": {
     "projects": "Projects",
-    "music": "Music",
-    "now": "Now"
+    "music": "Music"
   },
   "socials": {
     "github": "GitHub",
@@ -32,19 +31,17 @@
       "portraitCaptionShort": "portrait photo",
       "bio1": "I'm a software developer. I open-source almost everything I make — not out of ideology, it's just better when people can read the thing and fix it.",
       "bio2": "Away from the editor I play Magic: the Gathering, and I'm slowly talking myself into streaming it.",
-      "bioShort": "Software developer, open source by habit. Magic player, occasional streamer.",
-      "deck": "Three so far — mana-base geometry for Magic players, harmonic mixing for DJs, and what's actually in season where you live. Free, and open source.",
-      "deckShort": "Three so far — mana-base geometry, harmonic mixing, and what's in season near you. Free, and open source.",
+      "bioShort": "Software developer, open source by habit. Magic player, still talking myself into streaming it.",
+      "deck": "I build the tool when I get tired of doing the thing by hand. So far: mana-base geometry for Magic, harmonic mixing for DJs, and what's actually in season where you live. All free, all open source.",
+      "deckShort": "I build the tool when I get tired of doing it by hand. So far: mana bases, harmonic mixing, what's in season near you. Free and open source.",
       "primaryCta": "See the projects ↓",
-      "secondaryCta": "or read what I'm doing now",
       "stat1": "03 projects",
       "stat2": "all open source",
-      "statAccent": "streaming soon",
+      "statAccent": "two live, one in progress",
       "socialsLabel": "Find me"
     },
     "projects": {
       "heading": "Things I made",
-      "note": "Each card keeps its project's own look",
       "openLabel": "Open →",
       "magic": {
         "eyebrow": "01 · for magic players",
@@ -80,8 +77,8 @@
     "music": {
       "heading": "Music,",
       "headingAccent": "taken seriously",
-      "intro": "Music is the thing I know most about that isn't code. I dig, I read liner notes, I care about which pressing it is — and I DJ, which is mostly an excuse to keep digging. Every month I pick one record and write down why it got under my skin.",
-      "introShort": "Music is the thing I know most about that isn't code. I dig, I read liner notes, I DJ. Every month I pick one record and write down why it got under my skin.",
+      "intro": "Every month I pick one record and write down why it got under my skin. Nineteen so far. It's the thing I know most about that isn't code — and the reason the DJ tool exists.",
+      "introShort": "Every month I pick one record and write down why it got under my skin. Nineteen so far — and the reason the DJ tool exists.",
       "album": {
         "label": "Album of the month",
         "issue": "July 2026 · pick no. 19",
@@ -149,11 +146,6 @@
       "mailFrom": "From",
       "mailAbout": "About",
       "mailSubject": "Tool idea"
-    },
-    "now": {
-      "label": "Now",
-      "body": "Rewriting the mana-base geometry engine, and setting up a stream schedule I can actually keep. If you want to build something together, my inbox is open.",
-      "bodyShort": "Rewriting the mana-base geometry engine, and building a stream schedule I can keep."
     },
     "footer": {
       "credit": "Made by Walter and Claudio with ",
