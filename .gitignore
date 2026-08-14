@@ -33,3 +33,6 @@ firebase-debug.*.log
 
 # Page pipeline working directory
 .pipeline/
+
+# Claude Code project config
+.claude/
