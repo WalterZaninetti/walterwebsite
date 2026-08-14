@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
 import { Chip } from '../ui/Pill';
@@ -6,20 +5,8 @@ import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
 import { cx } from '../ui/cx';
 
-/**
- * The monthly pick. Sleeve sits beside the note on desktop, above it on mobile.
- *
- * `footer` is the slot the desktop layout drops the previous-picks archive
- * into — the doc moved it inside this card, where it pushes to the bottom so
- * the card fills its grid row.
- */
-export function AlbumOfTheMonth({
-  className,
-  footer,
-}: {
-  className?: string;
-  footer?: ReactNode;
-}) {
+/** The monthly pick. Sleeve sits beside the note on desktop, above it on mobile. */
+export function AlbumOfTheMonth({ className }: { className?: string }) {
   const { t } = useTranslation();
   const tags = t('home.music.album.tags', { returnObjects: true }) as string[];
 
@@ -31,12 +18,12 @@ export function AlbumOfTheMonth({
       )}
     >
       <div className="mb-[14px] flex items-baseline justify-between lg:mb-4">
-        <Eyebrow className="tracking-[0.16em] text-accent lg:tracking-[0.18em]">
+        <Eyebrow className="tracking-[0.16em] text-accent-on-panel lg:tracking-[0.18em]">
           {t('home.music.album.label')}
         </Eyebrow>
         <p className="font-mono text-[10px] text-on-panel-dim lg:text-label-wide/none lg:tracking-normal">
-          <span className="lg:hidden">{t('home.music.album.issueShort')}</span>
-          <span className="hidden lg:inline">{t('home.music.album.issue')}</span>
+          <span className="md:hidden">{t('home.music.album.issueShort')}</span>
+          <span className="hidden md:inline">{t('home.music.album.issue')}</span>
         </p>
       </div>
 
@@ -53,8 +40,8 @@ export function AlbumOfTheMonth({
             {music.album.credit}
           </p>
           <p className="mb-4 text-note/[1.7] text-on-panel-prose text-pretty">
-            <span className="lg:hidden">{t('home.music.album.noteShort')}</span>
-            <span className="hidden lg:inline">{t('home.music.album.note')}</span>
+            <span className="md:hidden">{t('home.music.album.noteShort')}</span>
+            <span className="hidden md:inline">{t('home.music.album.note')}</span>
           </p>
           <div className="flex flex-wrap gap-[7px]">
             {tags.map((tag) => (
@@ -73,10 +60,10 @@ export function AlbumOfTheMonth({
       <div className="mt-[14px] flex items-center justify-between gap-3 border-t border-line-on-panel-soft pt-[14px] lg:mt-[18px] lg:gap-4 lg:pt-4">
         <a
           href="#album-note"
-          className="font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent"
+          className="font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent-on-panel"
         >
-          <span className="lg:hidden">{t('home.music.album.readLinkShort')}</span>
-          <span className="hidden lg:inline">{t('home.music.album.readLink')}</span>
+          <span className="md:hidden">{t('home.music.album.readLinkShort')}</span>
+          <span className="hidden md:inline">{t('home.music.album.readLink')}</span>
         </a>
         <a
           href="#picks"
@@ -85,8 +72,6 @@ export function AlbumOfTheMonth({
           {t('home.music.album.archiveLink')}
         </a>
       </div>
-
-      {footer}
     </article>
   );
 }

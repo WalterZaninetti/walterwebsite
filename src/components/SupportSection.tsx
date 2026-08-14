@@ -3,15 +3,20 @@ import { ProposeToolForm } from './ProposeToolForm';
 import { AccentButton, SurfacePill } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
 
-/** The two asks, side by side on desktop: support the work, or suggest work. */
+/**
+ * The two asks. They are not equal: proposing a tool is what feeds the work,
+ * so it leads and takes the wider column, and the coffee card follows as its
+ * companion. They also no longer stretch to match — making a short card the
+ * height of a tall one is what put 314px of nothing under the coffee copy.
+ */
 export function SupportSection() {
   return (
     <section
       id="support"
-      className="grid gap-3.5 bg-canvas px-5 pt-[26px] lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch lg:gap-[34px] lg:px-13 lg:pt-13 lg:pb-14"
+      className="grid gap-3.5 bg-canvas px-5 pt-[26px] lg:grid-cols-[1.18fr_0.82fr] lg:items-start lg:gap-[34px] lg:px-13 lg:pt-13 lg:pb-14"
     >
-      <CoffeeCard />
       <ProposeToolForm />
+      <CoffeeCard />
     </section>
   );
 }
@@ -29,11 +34,11 @@ function CoffeeCard() {
         <span className="italic text-sage">.</span>
       </h2>
       <p className="mb-[18px] text-note/[1.7] text-ink-soft text-pretty lg:mb-[22px] lg:text-copy">
-        <span className="lg:hidden">{t('home.coffee.bodyShort')}</span>
-        <span className="hidden lg:inline">{t('home.coffee.body')}</span>
+        <span className="md:hidden">{t('home.coffee.bodyShort')}</span>
+        <span className="hidden md:inline">{t('home.coffee.body')}</span>
       </p>
 
-      <div className="flex flex-col gap-2.5 lg:mt-auto">
+      <div className="flex flex-col gap-2.5">
         <AccentButton
           href="#coffee"
           className="flex h-12 items-center justify-center gap-2 text-[13.5px]"
@@ -43,8 +48,8 @@ function CoffeeCard() {
         <div className="grid grid-cols-2 gap-2.5">
           {(['tier1', 'tier2'] as const).map((tier) => (
             <SurfacePill key={tier} href="#coffee" className="h-11">
-              <span className="lg:hidden">{t(`home.coffee.${tier}Short`)}</span>
-              <span className="hidden lg:inline">{t(`home.coffee.${tier}`)}</span>
+              <span className="md:hidden">{t(`home.coffee.${tier}Short`)}</span>
+              <span className="hidden md:inline">{t(`home.coffee.${tier}`)}</span>
             </SurfacePill>
           ))}
         </div>

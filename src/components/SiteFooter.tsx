@@ -47,7 +47,7 @@ export function SiteFooter() {
 
         <p className="text-center font-display text-[15px]/none text-on-panel-strong">
           {t('home.footer.credit')}
-          <span className="text-accent">{t('home.footer.creditAccent')}</span>
+          <span className="text-accent-on-panel">{t('home.footer.creditAccent')}</span>
         </p>
 
         <div className="flex items-center gap-[18px] font-mono text-[11.5px] text-footer-meta lg:gap-5">

@@ -203,28 +203,43 @@
   --ink-body: #48594c;
   --ink-soft: #54654f;
   --ink-muted: #5c6f5f;
-  --ink-faint: #8a9a8c;
-  --ink-note: #5c7560; /* the shelf's "each card keeps its own look" note */
+  --ink-faint: #606f62;
+  --ink-note: #4a624e; /* the shelf's "each card keeps its own look" note */
 
   /* Text on the dark panels (hero, music, propose). The doc uses a fine-
      grained ladder of sage-greys here; each rung is its own pair because the
-     dark theme doesn't shift them uniformly. */
+     dark theme doesn't shift them uniformly.
+
+     The bottom rungs are floored at 4.5:1 against --panel rather than at the
+     doc's values: the ladder was drawn by eye and the quietest three steps
+     landed between 2.6 and 4.4. Lifting them costs a few percent of lightness
+     and keeps the ladder's shape. */
   --on-panel: #f7f8f2;
   --on-panel-strong: #eef0e6;
   --on-panel-body: #cfdac6;
   --on-panel-prose: #bccfbe;
   --on-panel-muted: #a9bcaa;
-  --on-panel-soft: #8fa891;
+  --on-panel-soft: #93ac95;
   --on-panel-label: #a8c2a8;
   --on-panel-accent: #a8c2a8;
-  --on-panel-quiet: #7d9b7d;
-  --on-panel-dim: #6d806e;
-  --on-panel-dimmer: #5c6f5f;
+  --on-panel-quiet: #8fad8f;
+  --on-panel-dim: #809481;
   --on-panel-track: #dfe7de;
 
   /* Accent. Two creams sit on the rust in the doc — #f7f8f2 on the hero CTA,
-     the warmer #fff6ee on the coffee/Seasonable buttons — so both are tokens. */
-  --accent: #b8703f;
+     the warmer #fff6ee on the coffee/Seasonable buttons — so both are tokens.
+
+     Deeper than the doc's #b8703f, which cleared neither of its two jobs: as a
+     CTA ground under cream it measured 3.62:1, and as eyebrow text on canvas
+     3.36:1. Both wanted the same direction, so one shift fixes both. */
+  --accent: #a15b29;
+  /* The rust has a third job the doc never separated out: accent text sitting
+     on a dark panel — the album eyebrow, the footer's "love". Deepening
+     --accent for light surfaces drags that the wrong way, and it was already
+     failing at 2.92:1 before it moved. On-panel rust is its own rung, lifted
+     rather than deepened, floored against --footer-bar as the lightest of the
+     dark surfaces it lands on. */
+  --accent-on-panel: #df9463;
   --accent-fg: #f7f8f2;
   --accent-fg-warm: #fff6ee;
   --accent-hover: #26402f;
@@ -233,8 +248,12 @@
   --accent-hover-alt: #cfdac6;
   --accent-hover-alt-fg: #26402f;
 
-  /* Sage as a solid fill (Bandcamp button, active chip, hover swaps) */
-  --sage: #7d9b7d;
+  /* Sage as a solid fill (Bandcamp button, active chip, hover swaps).
+
+     --sage is display-only: both its uses (the H1's italic half, the period
+     after "Buy me a coffee") are ≥38px, so the 3:1 large-text floor applies and
+     it sits at 3.50:1. Anything smaller must use --ink-* instead. */
+  --sage: #698669;
   --sage-solid: #cfdac6;
   --sage-solid-fg: #26402f;
 
@@ -268,7 +287,7 @@
   /* Footer bar */
   --footer-bar: #26402f;
   --footer-ink: #cfdac6;
-  --footer-meta: #8fa891;
+  --footer-meta: #93ac95;
   --footer-divider: rgb(207 218 198 / 0.25);
 
   /* Hatched placeholder texture (photos not dropped in yet) */
@@ -292,14 +311,19 @@
   --project-dj-border: transparent;
   --project-dj-shadow: 0 14px 30px rgb(38 51 42 / 0.35);
 
-  --project-food: #b8703f;
+  /* Deeper than the doc's #b8703f. This card carries its hierarchy in opacity
+     (100/88/80/75) the way the other two carry theirs in hue, and on a mid
+     orange the minimum alpha for 4.5:1 is 0.94 — the four rungs collapse into
+     one. On brick the ladder spans 7.22 → 4.86 and reads as a ladder again. */
+  --project-food: #7d4425;
   --project-food-fg: #fff6ee;
   --project-food-accent: rgb(255 246 238 / 0.75);
   --project-food-body: rgb(255 246 238 / 0.88);
   --project-food-meta: rgb(255 246 238 / 0.8);
   --project-food-hatch: rgb(255 246 238 / 0.2);
   --project-food-thumb-fg: #fff6ee;
-  --project-food-shadow: 0 14px 30px rgb(184 112 63 / 0.35);
+  --project-food-border: transparent;
+  --project-food-shadow: 0 14px 30px rgb(125 68 37 / 0.35);
 
   /* Hero glow — dark only */
   --hero-glow: none;
@@ -321,8 +345,8 @@
   --ink-body: #a9bcaa;
   --ink-soft: #a9bcaa;
   --ink-muted: #93a894;
-  --ink-faint: #6d806e;
-  --ink-note: #6d806e;
+  --ink-faint: #809481;
+  --ink-note: #708371;
 
   --on-panel: #eef0e6;
   --on-panel-strong: #eef0e6;
@@ -332,12 +356,12 @@
   --on-panel-soft: #8a9d8b;
   --on-panel-label: #7d9b7d;
   --on-panel-accent: #9dbc9f;
-  --on-panel-quiet: #6d806e;
-  --on-panel-dim: #6d806e;
-  --on-panel-dimmer: #5c6f5f;
+  --on-panel-quiet: #809481;
+  --on-panel-dim: #7e927f;
   --on-panel-track: #dfe7de;
 
   --accent: #c97d48;
+  --accent-on-panel: #c97d48;
   --accent-fg: #141a15;
   --accent-fg-warm: #141a15;
   --accent-hover: #eef0e6;
@@ -373,7 +397,7 @@
 
   --footer-bar: #0f1410;
   --footer-ink: #a9bcaa;
-  --footer-meta: #6d806e;
+  --footer-meta: #708371;
   --footer-divider: rgb(207 218 198 / 0.2);
 
   --hatch: rgb(207 218 198 / 0.1);
@@ -390,13 +414,20 @@
   --project-dj-border: rgb(157 188 159 / 0.28);
   --project-dj-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
 
-  --project-food: #c97d48;
-  --project-food-fg: #1a1208;
-  --project-food-thumb-fg: #3d2a13;
-  --project-food-accent: rgb(26 18 8 / 0.65);
-  --project-food-body: rgb(26 18 8 / 0.8);
-  --project-food-meta: rgb(26 18 8 / 0.7);
-  --project-food-hatch: rgb(26 18 8 / 0.18);
+  /* Food no longer inverts. It was the only card that flipped to a light
+     ground with dark ink, and that inversion is what broke it: on #c97d48 the
+     opacity ladder needed alpha ≥0.83 to clear AA. Keeping it a dark ground
+     puts it in step with its two siblings, so hue alone tells the cards apart.
+     Like the DJ card, it needs a border here — the brick sits 2.29:1 from the
+     dark canvas, which is not enough edge on its own. */
+  --project-food: #7d4425;
+  --project-food-fg: #fff6ee;
+  --project-food-thumb-fg: #fff6ee;
+  --project-food-accent: rgb(255 246 238 / 0.75);
+  --project-food-body: rgb(255 246 238 / 0.88);
+  --project-food-meta: rgb(255 246 238 / 0.8);
+  --project-food-hatch: rgb(255 246 238 / 0.18);
+  --project-food-border: rgb(255 246 238 / 0.2);
   --project-food-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
 
   --hero-glow: radial-gradient(
@@ -438,10 +469,10 @@
   --color-on-panel-accent: var(--on-panel-accent);
   --color-on-panel-quiet: var(--on-panel-quiet);
   --color-on-panel-dim: var(--on-panel-dim);
-  --color-on-panel-dimmer: var(--on-panel-dimmer);
   --color-on-panel-track: var(--on-panel-track);
 
   --color-accent: var(--accent);
+  --color-accent-on-panel: var(--accent-on-panel);
   --color-accent-fg: var(--accent-fg);
   --color-accent-fg-warm: var(--accent-fg-warm);
   --color-accent-hover: var(--accent-hover);
@@ -502,6 +533,7 @@
   --color-project-food-body: var(--project-food-body);
   --color-project-food-meta: var(--project-food-meta);
   --color-project-food-thumb-fg: var(--project-food-thumb-fg);
+  --color-project-food-border: var(--project-food-border);
 
   --shadow-lift-magic: var(--project-magic-shadow);
   --shadow-lift-dj: var(--project-dj-shadow);
@@ -515,6 +547,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* The header is sticky, so an anchor jump lands its target underneath it —
+       including the skip link's own #main. Clears the 79px bar plus a margin. */
+    scroll-padding-top: 96px;
   }
 
   body {

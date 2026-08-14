@@ -13,8 +13,8 @@
   },
   "nav": {
     "projects": "Progetti",
-    "about": "Chi sono",
-    "twitch": "Twitch"
+    "music": "Musica",
+    "now": "Adesso"
   },
   "socials": {
     "github": "GitHub",
@@ -32,8 +32,9 @@
       "portraitCaptionShort": "ritratto",
       "bio1": "Sono uno sviluppatore software. Rendo open source quasi tutto quello che faccio — non per ideologia, è semplicemente meglio quando la gente può leggere il codice e sistemarlo.",
       "bio2": "Lontano dall'editor gioco a Magic: the Gathering, e mi sto lentamente convincendo a farlo in streaming.",
-      "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, streamer occasionale. Per ora tre strumenti — per chi gioca a Magic, per i DJ e per chi vuole mangiare di stagione.",
-      "lead": "Per ora sono tre — uno per chi gioca a Magic, uno per i DJ e uno per chi preferisce mangiare quello che è davvero di stagione. Ognuno ha il suo aspetto, perché ognuno è per persone diverse.",
+      "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, streamer occasionale.",
+      "deck": "Per ora tre: geometria delle basi di mana per chi gioca a Magic, mix armonico per i DJ e cosa è davvero di stagione dove vivi. Gratis e open source.",
+      "deckShort": "Per ora tre: basi di mana, mix armonico e cosa è di stagione vicino a te. Gratis e open source.",
       "primaryCta": "Guarda i progetti ↓",
       "secondaryCta": "oppure leggi cosa sto facendo adesso",
       "stat1": "03 progetti",
@@ -69,8 +70,8 @@
         "eyebrow": "03 · per tutti",
         "eyebrowShort": "03 · tutti",
         "title": "Seasonable",
-        "description": "Dille una stagione e un posto, e ti dice quali frutta e verdura sono davvero di stagione lì.",
-        "descriptionShort": "Stagione + posto → cosa è di stagione lì.",
+        "description": "Scegli un posto e un mese: ti dice quali frutta e verdura sono davvero di stagione lì. Non quelle arrivate in aereo.",
+        "descriptionShort": "Posto + mese → cosa è davvero di stagione lì.",
         "meta": "MIT · online",
         "thumbCaption": "natura morta con verdure",
         "thumbCaptionShort": "foto di verdure"
@@ -111,21 +112,13 @@
       "links": {
         "primary": "Collezione Bandcamp ↗",
         "secondary": "Spotify ↗"
-      },
-      "nowPlaying": {
-        "label": "In ascolto ora",
-        "source": "via Spotify",
-        "sourceShort": "Spotify",
-        "artCaption": "copertina",
-        "recentLabel": "Ascoltati di recente",
-        "historyLink": "Apri la cronologia completa ↗"
       }
     },
     "coffee": {
       "label": "Se qualcosa qui ti è servito",
       "heading": "Offrimi un caffè",
-      "body": "Tutto quello che faccio è gratis e aperto. Se uno strumento ti ha risparmiato un pomeriggio, un caffè è un bel modo per dirlo — e finanzia davvero il prossimo.",
-      "bodyShort": "Tutto quello che faccio è gratis e aperto. Se uno strumento ti ha risparmiato un pomeriggio, un caffè finanzia il prossimo.",
+      "body": "Qui è tutto gratis. Se uno strumento ti ha risparmiato un pomeriggio, un caffè lo dice — e finanzia il prossimo.",
+      "bodyShort": "Qui è tutto gratis. Un caffè finanzia il prossimo.",
       "primary": "Offrimi un caffè — 3 €",
       "tier1": "10 € · un giro",
       "tier1Short": "10 €",

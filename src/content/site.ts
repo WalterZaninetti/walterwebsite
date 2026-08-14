@@ -10,8 +10,8 @@ export const site = {
   email: 'say@walter.dev',
   nav: [
     { key: 'projects', href: '#projects' },
-    { key: 'about', href: '#about' },
-    { key: 'twitch', href: '#twitch' },
+    { key: 'music', href: '#music' },
+    { key: 'now', href: '#now' },
   ],
   socials: [
     { id: 'github', href: 'https://github.com' },
@@ -41,34 +41,6 @@ export const music = {
   album: {
     title: 'Voices From The Lake',
     credit: 'Donato Dozzy & Neel · Prologue, 2012',
-  },
-  nowPlaying: {
-    track: 'Midnight Frequencies',
-    artist: 'Kerri Chandler',
-    release: 'Computer Games · 2022',
-    elapsed: '2:14',
-    duration: '5:48',
-    progress: 38,
-    /** [height %, opacity] per bar, straight from the doc's waveform. */
-    waveform: [
-      [40, 0.85],
-      [76, 0.85],
-      [28, 0.5],
-      [92, 0.85],
-      [54, 0.7],
-      [34, 0.5],
-      [68, 0.8],
-      [46, 0.6],
-      [82, 0.85],
-      [30, 0.5],
-      [60, 0.75],
-      [38, 0.55],
-    ] as ReadonlyArray<readonly [number, number]>,
-    recent: [
-      { title: 'Nocturne', artist: 'DJ Koze', ago: '12m' },
-      { title: 'Sunbeam Dub', artist: 'Move D', ago: '31m' },
-      { title: 'Tempelhof', artist: 'Barnt', ago: '1h' },
-    ],
   },
   links: {
     primary: 'https://bandcamp.com',

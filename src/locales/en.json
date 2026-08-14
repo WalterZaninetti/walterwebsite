@@ -13,8 +13,8 @@
   },
   "nav": {
     "projects": "Projects",
-    "about": "About",
-    "twitch": "Twitch"
+    "music": "Music",
+    "now": "Now"
   },
   "socials": {
     "github": "GitHub",
@@ -32,8 +32,9 @@
       "portraitCaptionShort": "portrait photo",
       "bio1": "I'm a software developer. I open-source almost everything I make — not out of ideology, it's just better when people can read the thing and fix it.",
       "bio2": "Away from the editor I play Magic: the Gathering, and I'm slowly talking myself into streaming it.",
-      "bioShort": "Software developer, open source by habit. Magic player, occasional streamer. Three tools so far — for Magic players, DJs, and people who want to eat in season.",
-      "lead": "Three of them so far — one for Magic players, one for DJs, and one for anyone who'd rather eat what's actually in season. Each one gets its own look, because each one is for different people.",
+      "bioShort": "Software developer, open source by habit. Magic player, occasional streamer.",
+      "deck": "Three so far — mana-base geometry for Magic players, harmonic mixing for DJs, and what's actually in season where you live. Free, and open source.",
+      "deckShort": "Three so far — mana-base geometry, harmonic mixing, and what's in season near you. Free, and open source.",
       "primaryCta": "See the projects ↓",
       "secondaryCta": "or read what I'm doing now",
       "stat1": "03 projects",
@@ -69,8 +70,8 @@
         "eyebrow": "03 · for everyone",
         "eyebrowShort": "03 · everyone",
         "title": "Seasonable",
-        "description": "Tell it a season and a place, and it tells you which fruit and vegetables are genuinely in season there.",
-        "descriptionShort": "Season + place → what's in season there.",
+        "description": "Pick a place and a month; it names the fruit and vegetables genuinely in season there. Not the ones flown in.",
+        "descriptionShort": "Place + month → what's really in season there.",
         "meta": "MIT · live",
         "thumbCaption": "produce still life",
         "thumbCaptionShort": "produce photo"
@@ -111,21 +112,13 @@
       "links": {
         "primary": "Bandcamp collection ↗",
         "secondary": "Spotify ↗"
-      },
-      "nowPlaying": {
-        "label": "Listening now",
-        "source": "via Spotify",
-        "sourceShort": "Spotify",
-        "artCaption": "art",
-        "recentLabel": "Recently played",
-        "historyLink": "Open full listening history ↗"
       }
     },
     "coffee": {
       "label": "If something here helped",
       "heading": "Buy me a coffee",
-      "body": "Everything I make is free and open. If a tool saved you an afternoon, a coffee is a lovely way to say so — and it genuinely funds the next one.",
-      "bodyShort": "Everything I make is free and open. If a tool saved you an afternoon, a coffee funds the next one.",
+      "body": "Everything here is free. If a tool saved you an afternoon, a coffee says so — and funds the next one.",
+      "bodyShort": "Everything here is free. A coffee funds the next one.",
       "primary": "Buy me a coffee — €3",
       "tier1": "€10 · a round",
       "tier1Short": "€10",

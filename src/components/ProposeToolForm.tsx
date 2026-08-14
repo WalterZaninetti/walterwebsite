@@ -6,10 +6,14 @@ import { Chip } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
 import { cx } from './ui/cx';
 
+// These are the only controls on the page that drop the browser's own outline,
+// so they have to put back something at least as loud: the border swap alone
+// was a 1px hairline, and the ring is what a keyboard visitor actually catches.
 const fieldClasses = cx(
   'w-full rounded-field border border-line-on-panel-strong bg-fill-field px-3.5 text-note text-on-panel',
   'outline-none transition-colors duration-150',
   'focus:border-sage-solid focus:bg-fill-field-focus',
+  'focus-visible:ring-2 focus-visible:ring-sage-solid focus-visible:ring-offset-2 focus-visible:ring-offset-panel-alt',
 );
 
 /** Topic ids are stable; their labels are translated. */
@@ -67,8 +71,8 @@ export function ProposeToolForm() {
         <span className="italic text-on-panel-accent"> →</span>
       </h2>
       <p className="mb-5 max-w-[34em] text-note/[1.7] text-on-panel-muted text-pretty lg:mb-6 lg:text-copy">
-        <span className="lg:hidden">{t('home.propose.bodyShort')}</span>
-        <span className="hidden lg:inline">{t('home.propose.body')}</span>
+        <span className="md:hidden">{t('home.propose.bodyShort')}</span>
+        <span className="hidden md:inline">{t('home.propose.body')}</span>
       </p>
 
       <div className="flex flex-col gap-[14px] lg:mb-[14px] lg:grid lg:grid-cols-2">
@@ -110,8 +114,8 @@ export function ProposeToolForm() {
             >
               {option === 'Other' ? (
                 <>
-                  <span className="lg:hidden">{t('home.propose.topicOtherShort')}</span>
-                  <span className="hidden lg:inline">{t('home.propose.topicOther')}</span>
+                  <span className="md:hidden">{t('home.propose.topicOtherShort')}</span>
+                  <span className="hidden md:inline">{t('home.propose.topicOther')}</span>
                 </>
               ) : (
                 t(`home.propose.${TOPIC_KEYS[option]}`)

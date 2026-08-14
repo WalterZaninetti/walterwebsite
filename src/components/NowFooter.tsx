@@ -14,8 +14,8 @@ export function NowFooter() {
       <div>
         <Eyebrow className="mb-2 text-accent lg:mb-2.5">{t('home.now.label')}</Eyebrow>
         <p className="mb-[18px] max-w-[34em] text-body-sm/[1.7] text-ink-body text-pretty lg:mb-0 lg:text-body/[1.7]">
-          <span className="lg:hidden">{t('home.now.bodyShort')}</span>
-          <span className="hidden lg:inline">{t('home.now.body')}</span>
+          <span className="md:hidden">{t('home.now.bodyShort')}</span>
+          <span className="hidden md:inline">{t('home.now.body')}</span>
         </p>
       </div>
 

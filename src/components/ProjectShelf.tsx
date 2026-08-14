@@ -31,7 +31,8 @@ const cardTheme: Record<
     meta: 'text-project-dj-accent',
   },
   food: {
-    surface: 'bg-project-food text-project-food-fg hover:shadow-lift-food',
+    surface:
+      'bg-project-food text-project-food-fg border border-project-food-border hover:shadow-lift-food',
     thumb: 'hatch-food text-project-food-thumb-fg',
     eyebrow: 'text-project-food-accent',
     body: 'text-project-food-body',
@@ -99,22 +100,22 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         ) : (
           <span className="font-mono text-label/none">
-            <span className="lg:hidden">{t(`${key}.thumbCaptionShort`)}</span>
-            <span className="hidden lg:inline">{t(`${key}.thumbCaption`)}</span>
+            <span className="md:hidden">{t(`${key}.thumbCaptionShort`)}</span>
+            <span className="hidden md:inline">{t(`${key}.thumbCaption`)}</span>
           </span>
         )}
       </div>
 
       <Eyebrow className={cx('mb-2 tracking-[0.16em] lg:mb-2.5 lg:tracking-[0.18em]', theme.eyebrow)}>
-        <span className="lg:hidden">{t(`${key}.eyebrowShort`)}</span>
-        <span className="hidden lg:inline">{t(`${key}.eyebrow`)}</span>
+        <span className="md:hidden">{t(`${key}.eyebrowShort`)}</span>
+        <span className="hidden md:inline">{t(`${key}.eyebrow`)}</span>
       </Eyebrow>
 
       <h3 className={cx('mb-2 lg:mb-3', titleFace[project.titleFace])}>{t(`${key}.title`)}</h3>
 
       <p className={cx('text-note-sm text-pretty lg:mb-5 lg:text-note', theme.body)}>
-        <span className="lg:hidden">{t(`${key}.descriptionShort`)}</span>
-        <span className="hidden lg:inline">{t(`${key}.description`)}</span>
+        <span className="md:hidden">{t(`${key}.descriptionShort`)}</span>
+        <span className="hidden md:inline">{t(`${key}.description`)}</span>
       </p>
 
       <div

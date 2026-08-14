@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
 import { AlbumOfTheMonth } from './AlbumOfTheMonth';
-import { NowPlaying } from './NowPlaying';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
@@ -12,14 +11,14 @@ import { cx } from '../ui/cx';
  *
  * Desktop and mobile diverge more than a reflow here, and the doc keeps its
  * mobile column as it was: on desktop the Bandcamp/Spotify pair sits up in the
- * section header and the previous-picks archive lives inside the album card,
- * while mobile keeps both at the bottom of the section in DOM order.
+ * section header, while mobile keeps it at the bottom in DOM order. The links
+ * are rendered once and moved by breakpoint.
  *
- * The links are rendered once and moved by breakpoint; the archive is the one
- * block rendered twice, because desktop nests it inside the album card and no
- * amount of ordering can move an element across that boundary. Both copies are
- * `display:none` at the other breakpoint, so only one is ever in the
- * accessibility tree, and it carries no headings or links.
+ * The archive used to be nested inside the album card for desktop and rendered
+ * a second time, loose, for mobile — no amount of ordering can move an element
+ * across that boundary, so both copies existed with one `display:none`. It now
+ * has the column the "listening now" panel used to occupy, which is both the
+ * billing nineteen months of picks deserve and one fewer copy to keep in step.
  */
 export function MusicSection() {
   const { t } = useTranslation();
@@ -38,21 +37,13 @@ export function MusicSection() {
       </div>
 
       <p className="mb-4 max-w-[34em] text-copy text-on-panel-body text-pretty lg:mb-7 lg:max-w-[52em] lg:text-body">
-        <span className="lg:hidden">{t('home.music.introShort')}</span>
-        <span className="hidden lg:inline">{t('home.music.intro')}</span>
+        <span className="md:hidden">{t('home.music.introShort')}</span>
+        <span className="hidden md:inline">{t('home.music.intro')}</span>
       </p>
 
-      <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-[22px]">
-        <AlbumOfTheMonth
-          className="lg:col-start-1 lg:row-start-1"
-          footer={<PreviousPicks className="mt-auto hidden pt-[22px] lg:flex" />}
-        />
-
-        <div className="lg:col-start-2 lg:row-start-1">
-          <NowPlaying />
-        </div>
-
-        <PreviousPicks className="lg:hidden" />
+      <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr] lg:items-start lg:gap-[22px]">
+        <AlbumOfTheMonth />
+        <PreviousPicks />
         <MusicLinks className="flex flex-col gap-2 lg:hidden" stacked />
       </div>
     </section>
@@ -92,8 +83,9 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
 }
 
 /**
- * The sleeve archive. Desktop shows four months plus a +15 tile in five
- * columns; mobile drops March and re-counts to +16, per the doc.
+ * The sleeve archive. Mobile drops March and re-counts to +16, per the doc; the
+ * desktop rail shows all four plus the +15 tile, three across, so the dashed
+ * terminator closes the second row.
  */
 function PreviousPicks({ className }: { className?: string }) {
   const { t } = useTranslation();
@@ -104,7 +96,7 @@ function PreviousPicks({ className }: { className?: string }) {
       <Eyebrow className="tracking-[0.16em] text-on-panel-quiet lg:tracking-[0.18em]">
         {t('home.music.previous.label')}
       </Eyebrow>
-      <div className="grid grid-cols-4 gap-2 lg:grid-cols-5 lg:gap-2.5">
+      <div className="grid grid-cols-4 gap-2 lg:grid-cols-3 lg:gap-2.5">
         {months.map((month, index) => (
           <Frame
             key={month}
