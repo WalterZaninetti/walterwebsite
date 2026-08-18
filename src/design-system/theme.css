@@ -1,8 +1,21 @@
 /* ==========================================================================
-   Sage & Loam — design tokens
-   Extracted from the Claude Design doc "Walter - Homepage" (palette 1c),
-   options 2a (light 1440), 2b (dark 1440) and 2c (mobile 390).
-   Reference markup: ./Walter - Homepage.reference.html
+   Repaint: Cream, Clover & Ocean.
+
+   The four layers hold: @theme raw -> :root semantic -> .dark wholesale ->
+   @theme inline re-export. Components reference only the semantic layer, so
+   this file is the whole repaint: outside /magic-tools not one className
+   changes colour, and every radius in the site is a token too (all arbitrary
+   rounded-[..] values live inside src/components/magic/).
+
+   The move: the ground goes cream and the green goes saturated. Those two
+   were one desaturated sage ramp doing both jobs, which is what made the
+   site read austere. See .pipeline/repaint/direction.md §1.
+
+   The --color-magic-* and --color-mana-* families are DELIBERATELY ABSENT
+   from the new ramps below. They hold byte-identical in both schemes.
+   --magic-cream #fffbd5 and the new --canvas #fffbe8 measure 1.01:1 apart:
+   the site moved toward that page, so there is nothing to repaint. See
+   direction.md §1.7.
    ========================================================================== */
 
 /* Dark mode is class-driven (<html class="dark">) so the header toggle can
@@ -13,112 +26,94 @@
    1. Raw palette + type scale — the literal values from the design doc.
    -------------------------------------------------------------------------- */
 @theme {
-  /* Type families */
-  --font-sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  /* Type families. Nunito replaces Space Grotesk: a substitution, not an
+     addition — six families stay six, and this is the only line that
+     changes to make the whole site rounder. Self-hosted (font-src 'self'),
+     OFL, latin subset, variable 400-700 in one file. See direction.md §2. */
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
   --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --font-editorial: "Libre Baskerville", Georgia, serif;
 
-  /* Sage — the core green-grey ramp */
-  --color-sage-50: #f7f8f2;
-  --color-sage-100: #eef0e6;
-  --color-sage-200: #cfdac6;
-  --color-sage-300: #a8c2a8;
-  --color-sage-400: #9dbc9f;
-  --color-sage-500: #7d9b7d;
-  --color-sage-600: #5c6f5f;
-  --color-sage-700: #48594c;
-  --color-sage-800: #26402f;
-  --color-sage-900: #26332a;
+  /* Cream — the sheet. --color-cream-100 is #fffce8 from the old site,
+     nudged one hex step so the ink ladder rounds cleanly. */
+  --color-cream-50: #fffdf4;
+  --color-cream-100: #fffbe8;
+  --color-cream-200: #fbf2d3;
+  --color-cream-300: #f0e7c8;
+  --color-cream-400: #ddd6b8;
+  --color-cream-500: #cfc9ab;
+  --color-cream-600: #bdb79a;
+  --color-cream-700: #b2ad8f;
+  --color-cream-800: #999478;
 
-  /* Night — the dark greens the page sits on */
-  --color-night-700: #1d2a1f;
-  --color-night-800: #1a2a1e;
-  --color-night-900: #141a15;
-  --color-night-950: #0f1410;
+  /* Clover — the green, replacing the sage ramp. Same slot in the system,
+     roughly twice the chroma. -500 is the tile: solved from the old site's
+     #388659 with hue held, chroma 0.104 -> 0.125, lightness 0.559 -> 0.545,
+     which is what takes it from 4.31:1 (fail) to 4.52:1 on the cream. */
+  --color-clover-100: #cfead8;
+  --color-clover-200: #a9d8bd;
+  --color-clover-300: #7fcfa0;
+  --color-clover-400: #4fb37b;
+  --color-clover-500: #23844c;
+  --color-clover-600: #1a6b3e;
+  --color-clover-700: #0d3d22;
+  --color-clover-800: #092e1b;
+  --color-clover-900: #061f13;
 
-  /* Loam — the rust accent */
-  --color-loam-400: #c97d48;
-  --color-loam-500: #b8703f;
+  /* Night — the dark scheme's grounds. Warmed off pure green-black so the
+     cream ink sits on it without a colour cast. */
+  --color-night-700: #182018;
+  --color-night-800: #123020;
+  --color-night-900: #101510;
+  --color-night-950: #0a0e0a;
+
+  /* Loam — the rust. --accent #a15b29 is carried forward unchanged: it
+     already measures 5.00:1 on the new cream. */
+  --color-loam-300: #f0b184;
+  --color-loam-400: #eda972;
+  --color-loam-500: #e08a4e;
+  --color-loam-600: #a15b29;
+  --color-loam-700: #87441f;
   --color-loam-50: #fff6ee;
   --color-loam-950: #1a1208;
 
-  /* Ocean — the Magic Tools card's own world */
-  --color-ocean-300: #a8cbe4;
-  --color-ocean-400: #9dc2dd;
-  --color-ocean-600: #25455f;
-  --color-ocean-700: #1e3a52;
-  --color-ocean-900: #152a3c;
-  --color-ocean-50: #e9f3fa;
+  /* Ocean — the blue, brightened from #1e3a52 toward the old site's #0e4781.
+     It is the Magic Tools world and the monogram's second stroke. */
+  --color-ocean-200: #cfe6f8;
+  --color-ocean-300: #a8d3f2;
+  --color-ocean-400: #9fcdf0;
+  --color-ocean-500: #7ab8e6;
+  --color-ocean-600: #15568f;
+  --color-ocean-700: #0f4a80;
+  --color-ocean-800: #0e3c67;
+  --color-ocean-900: #0a3560;
+  --color-ocean-50: #eaf4ff;
 
-  /* Live — the "listening now" signal green */
-  --color-live-400: #8fd9a8;
-  --color-live-500: #4ade8a;
-
-  /* Teal — the monogram's second stroke, the one non-sage brand colour */
-  --color-teal-600: #2f7d72;
-  --color-teal-400: #6fb8ac;
+  /* DELETED: --color-live-400/-500 (the retired now-playing signal, commit
+     687a3a9, referenced nowhere) and --color-teal-400/-600 (the monogram's
+     old accent, now ocean). The one component reference, SiteFooter's
+     stroke-teal-400, moves to stroke-monogram-accent-on-panel. */
 
   /* ------------------------------------------------------------------
      Magic Tools page — its own world, per the homepage's "each card keeps
-     its project's own look". Parchment and ink rather than sage and loam,
-     and no dark variant: the doc draws one look only, so these are flat
-     values rather than a semantic light/dark pair.
-     ------------------------------------------------------------------ */
+     its project's own look". Parchment and ink rather than cream and
+     clover. The colour ramp itself lives in the semantic layer below
+     (:root / .dark), same four-layer shape as the rest of the site. Only
+     the two type families stay here as raw values — they don't flip with
+     the scheme. Untouched by the repaint (direction.md §1.7). */
   --font-magic-display: 'Cinzel', Georgia, serif;
   --font-magic-body: 'Spectral', Georgia, serif;
 
-  --color-magic-parchment: #efe7cd;
-  --color-magic-paper: #fdfaec;
-  --color-magic-card: #ffffff;
-  --color-magic-header: rgb(244 247 251 / 0.92);
+  /* The slab: --color-magic-ink was doing two opposite jobs — an inked block
+     carrying the cream ladder (11 backgrounds) and the ink itself (17 text
+     uses). A token cannot be both once the scheme flips, so the ground role
+     splits out. Identical to --color-magic-ink in light, so the light output
+     does not move. */
+  --color-magic-slab: #150b00;
 
-  --color-magic-rule: #ddd2b0;
-  --color-magic-rule-soft: #eae3ca;
-  --color-magic-rule-faint: #f4eed8;
-  --color-magic-field: #ded3b3;
-
-  --color-magic-ink: #150b00;
-  --color-magic-ink-muted: #6b5f4a;
-  --color-magic-ink-faint: #9a8d75;
-  --color-magic-ink-fainter: #a89b83;
-  --color-magic-slash: #b8ab92;
-  --color-magic-link: #1f5896;
-
-  --color-magic-green: #00733e;
-  --color-magic-green-deep: #0a5c35;
-  --color-magic-green-darker: #00552d;
-  --color-magic-green-mid: #6fbd8f;
-  --color-magic-green-light: #9bd3ae;
-  --color-magic-green-pale: #e2f3e3;
-  --color-magic-forest: #0a2f1e;
-  --color-magic-abyss: #071a10;
-
-  --color-magic-cream: #fffbd5;
-  --color-magic-cream-dim: #cbc2bf;
-  --color-magic-cream-dimmer: #b3a89f;
-  --color-magic-cream-faint: #8f8479;
-  --color-magic-steel: #7d97b6;
-
-  --color-magic-bar-short: #e6dcc0;
-  --color-magic-coral: #f9aa8f;
-  --color-magic-gold: #f2e3a8;
-
-  /* The five mana pips in the hero */
-  --color-mana-plains: #fffbd5;
-  --color-mana-plains-ink: #9a7b1f;
-  --color-mana-plains-fill: #fff3c0;
-  --color-mana-island: #0e68ab;
-  --color-mana-island-ink: #08324f;
-  --color-mana-island-pale: #aae0fa;
-  --color-mana-swamp: #150b00;
-  --color-mana-swamp-ink: #cbc2bf;
-  --color-mana-mountain: #d3202a;
-  --color-mana-mountain-ink: #fff1e0;
-  --color-mana-forest: #00733e;
-  --color-mana-forest-ink: #e2f3e3;
-
-  /* Type scale, faithful to the doc (px, paired line-heights) */
+  /* Type scale, faithful to the doc (px, paired line-heights). Unchanged by
+     the repaint — roundness is radii, not rhythm (direction.md §4). */
   --text-hero: 96px;
   --text-hero--line-height: 0.98;
   --text-hero--letter-spacing: -0.02em;
@@ -163,22 +158,22 @@
   --text-nav--line-height: 1;
   --text-nav--letter-spacing: 0.13em;
 
-  /* Radii — the doc uses a deliberately mixed set */
-  --radius-frame: 4px;
-  --radius-tile: 5px;
-  --radius-chip: 6px;
-  --radius-field: 8px;
-  --radius-thumb: 10px;
-  --radius-card-sm: 14px;
-  --radius-card: 16px;
-  --radius-pill: 100px;
+  /* Radii — rounder, anchored on the old site's measured 6 / 8 / 12 / 16 set
+     plus pills. Every one of these is a token in components outside
+     /magic-tools, so this is the entire roundness change. --radius-tile now
+     earns its name: it is the icon tile's radius as well. */
+  --radius-frame: 12px;   /* was 4  */
+  --radius-tile: 16px;    /* was 5  */
+  --radius-chip: 10px;    /* was 6  */
+  --radius-field: 12px;   /* was 8  */
+  --radius-thumb: 16px;   /* was 10 */
+  --radius-card-sm: 20px; /* was 14 */
+  --radius-card: 24px;    /* was 16 */
+  --radius-pill: 100px;   /* holds */
 
-  /* Section rhythm */
-  --spacing-gutter: 52px;
-  --spacing-gutter-sm: 20px;
-
-  /* Card lift transition */
-  --ease-lift: cubic-bezier(0.4, 0, 0.2, 1);
+  --spacing-gutter: 52px;     /* holds */
+  --spacing-gutter-sm: 20px;  /* holds */
+  --ease-lift: cubic-bezier(0.4, 0, 0.2, 1); /* holds */
 }
 
 /* --------------------------------------------------------------------------
@@ -188,259 +183,487 @@
 :root {
   color-scheme: light;
 
-  /* Page surfaces */
-  --canvas: #eef0e6;
-  --canvas-band: #cfdac6; /* the project shelf strip */
-  --surface: #f7f8f2; /* raised card on canvas */
-  --panel: #26402f; /* hero side panel */
-  --panel-alt: #26402f; /* "propose a tool" card */
-  --panel-deep: #1d2a1f; /* music section */
-  --panel-inset: #141a15; /* cards inside the music section */
+  /* The sheet. This is the repaint: #eef0e6 -> #fffbe8. --surface goes white
+     because on a near-white cream ground "raised" can only mean whiter; the
+     0.6% luminance step is carried by --line-card, exactly as the old
+     #f7f8f2-on-#eef0e6 step was. */
+  --canvas: #fffbe8;
+  --canvas-band: #fbf2d3;
+  --surface: #ffffff;
 
-  /* Text on light surfaces */
-  --ink: #26332a;
-  --ink-strong: #26402f;
-  --ink-body: #48594c;
-  --ink-soft: #54654f;
-  --ink-muted: #5c6f5f;
-  --ink-faint: #606f62;
-  --ink-note: #4a624e; /* the shelf's "each card keeps its own look" note */
+  /* The panels. Deepened, not brightened: a saturated mid-green ground eats
+     the on-panel ladder (at #14532f the bottom three rungs read 4.07 / 3.25 /
+     2.91). At #0d3d22 the same ladder reads 6.09 / 5.31 / 4.84. The page buys
+     its brightness in the ground; the panels pay for it in depth. */
+  --panel: #0d3d22;
+  --panel-alt: #0d3d22;
+  --panel-deep: #092e1b;
+  --panel-inset: #061f13;
 
-  /* Text on the dark panels (hero, music, propose). The doc uses a fine-
-     grained ladder of sage-greys here; each rung is its own pair because the
-     dark theme doesn't shift them uniformly.
+  /* Ink. Warm green-black rather than the old sage grey, floored against
+     --canvas-band #fbf2d3, the darker of the two light grounds. */
+  --ink: #1b2b20;        /* 13.26:1 on band */
+  --ink-strong: #122418; /* 14.52:1 */
+  --ink-body: #35493c;   /*  8.64:1 */
+  --ink-soft: #3d5344;   /*  7.44:1 */
+  --ink-muted: #4a6151;  /*  6.01:1 */
+  --ink-faint: #4f6656;  /*  5.57:1 */
+  --ink-note: #3f5a48;   /*  6.77:1 */
 
-     The bottom rungs are floored at 4.5:1 against --panel rather than at the
-     doc's values: the ladder was drawn by eye and the quietest three steps
-     landed between 2.6 and 4.4. Lifting them costs a few percent of lightness
-     and keeps the ladder's shape. */
-  --on-panel: #f7f8f2;
-  --on-panel-strong: #eef0e6;
-  --on-panel-body: #cfdac6;
-  --on-panel-prose: #bccfbe;
-  --on-panel-muted: #a9bcaa;
-  --on-panel-soft: #93ac95;
-  --on-panel-label: #a8c2a8;
-  --on-panel-accent: #a8c2a8;
-  --on-panel-quiet: #8fad8f;
-  --on-panel-dim: #809481;
-  --on-panel-track: #dfe7de;
+  /* The on-panel ladder turns cream. This is the other half of the
+     brightening and it costs nothing: the same warm cream that is the page
+     in light becomes the type on every dark panel. /magic-tools has done
+     exactly this since it was built.
 
-  /* Accent. Two creams sit on the rust in the doc — #f7f8f2 on the hero CTA,
-     the warmer #fff6ee on the coffee/Seasonable buttons — so both are tokens.
+     --on-panel-dim is floored against --panel-inset, not --panel: it renders
+     only in AlbumOfTheMonth, inside an inset card, and the old value
+     #809481 measured 3.48:1 on --panel — a live AA failure the text-pair
+     scan never saw because that pairing never renders.
+     CONSTRAINT: no text-on-panel-dim on bg-panel.
 
-     Deeper than the doc's #b8703f, which cleared neither of its two jobs: as a
-     CTA ground under cream it measured 3.62:1, and as eyebrow text on canvas
-     3.36:1. Both wanted the same direction, so one shift fixes both. */
+     --on-panel-quiet is the ::placeholder colour and sits inside
+     --fill-field, which lightens its own ground 6%. Floored against the
+     composite (4.53:1), not against the bare panel (5.31:1). */
+  --on-panel: #fffdf4;         /* 12.07:1 on panel */
+  --on-panel-strong: #fffbe8;  /* 11.84:1 */
+  --on-panel-body: #f0e7c8;    /*  9.94:1 */
+  --on-panel-prose: #ddd6b8;   /*  8.42:1 */
+  --on-panel-muted: #cfc9ab;   /*  7.38:1 */
+  --on-panel-soft: #bdb79a;    /*  6.09:1 */
+  --on-panel-label: #a9d8bd;   /*  7.76:1 — the label rung takes the green */
+  --on-panel-accent: #a9d8bd;  /*  7.76:1 */
+  --on-panel-quiet: #b2ad8f;   /*  4.53:1 composited in a field */
+  --on-panel-dim: #999478;     /*  5.66:1 on --panel-inset */
+  --on-panel-track: #f0e7c8;
+
+  /* Accent. Unchanged value, re-measured on the new grounds: 5.00 canvas /
+     4.64 band / 5.19 surface, and 5.10 the other way under --accent-fg.
+     The rust stays because it is the site's third hue and because a green
+     CTA on a green-chromed page stops being a CTA. */
   --accent: #a15b29;
-  /* The rust has a third job the doc never separated out: accent text sitting
-     on a dark panel — the album eyebrow, the footer's "love". Deepening
-     --accent for light surfaces drags that the wrong way, and it was already
-     failing at 2.92:1 before it moved. On-panel rust is its own rung, lifted
-     rather than deepened, floored against --footer-bar as the lightest of the
-     dark surfaces it lands on. */
-  --accent-on-panel: #df9463;
-  --accent-fg: #f7f8f2;
-  --accent-fg-warm: #fff6ee;
-  --accent-hover: #26402f;
-  --accent-hover-fg: #f7f8f2;
-  /* "Send the idea" resolves its hover to sage rather than deep green. */
-  --accent-hover-alt: #cfdac6;
-  --accent-hover-alt-fg: #26402f;
+  --accent-on-panel: #eda972;  /* 6.16:1 on --panel and --footer-bar */
+  --accent-fg: #fffdf4;        /* 5.10:1 */
+  --accent-fg-warm: #fff6ee;   /* 4.86:1 */
+  --accent-hover: #0d3d22;
+  --accent-hover-fg: #fffdf4;  /* 12.07:1 */
+  --accent-hover-alt: #cfead8;
+  --accent-hover-alt-fg: #0d3d22; /* 9.61:1 */
 
-  /* Sage as a solid fill (Bandcamp button, active chip, hover swaps).
+  /* Clover as a solid fill. --sage is display-only (>=38px, 3:1 floor) and
+     was the site's measured minimum at 3.50:1. It now reads 4.85:1, which
+     lifts the light floor off its lowest rung. */
+  --sage: #2f7d4e;             /* 4.85:1 on canvas — was 3.50:1 */
+  --sage-solid: #cfead8;
+  --sage-solid-fg: #0d3d22;    /* 9.61:1 */
 
-     --sage is display-only: both its uses (the H1's italic half, the period
-     after "Buy me a coffee") are ≥38px, so the 3:1 large-text floor applies and
-     it sits at 3.50:1. Anything smaller must use --ink-* instead. */
-  --sage: #698669;
-  --sage-solid: #cfdac6;
-  --sage-solid-fg: #26402f;
+  /* The icon tile — the run's one new colour role. Two tokens plus an edge.
+     The ring is the canvas cream: invisible on the page, 8.75 / 14.33 / 7.03
+     against the three world cards it is punched over. See direction.md §1.4
+     for why one colour cannot do both jobs. */
+  --tile: #23844c;             /* 4.52 canvas · 4.19 band · 3.16 panel-deep */
+  --tile-fg: #fffbe8;          /* 4.52:1 on the tile */
+  --tile-ring: #fffbe8;
 
-  /* Hairlines */
-  --line: rgb(38 64 47 / 0.12);
-  --line-soft: rgb(38 64 47 / 0.1);
-  --line-strong: rgb(38 64 47 / 0.2);
-  --line-card: rgb(38 64 47 / 0.14);
-  --line-on-panel: rgb(207 218 198 / 0.3); /* pill outlines */
-  --line-on-panel-strong: rgb(207 218 198 / 0.28); /* form fields */
-  --line-inset: rgb(207 218 198 / 0.16); /* cards inset in a dark panel */
-  --line-on-panel-soft: rgb(207 218 198 / 0.14); /* dividers inside those */
-  --line-inset-soft: rgb(207 218 198 / 0.12); /* the recently-played rows */
+  /* Hairlines. Same alphas, ink hue instead of sage. Decorative by
+     intent: 1.32 / 1.38 / 1.57 against their grounds. */
+  --line: rgb(18 36 24 / 0.14);
+  --line-soft: rgb(18 36 24 / 0.1);
+  --line-strong: rgb(18 36 24 / 0.22);
+  --line-card: rgb(18 36 24 / 0.16);
+  --line-on-panel: rgb(255 251 232 / 0.3);
+  --line-on-panel-strong: rgb(255 251 232 / 0.28);
+  --line-inset: rgb(255 251 232 / 0.16);
+  --line-on-panel-soft: rgb(255 251 232 / 0.14);
+  --line-inset-soft: rgb(255 251 232 / 0.12);
 
-  /* Translucent fills used on the dark panels */
-  --fill-on-panel: rgb(207 218 198 / 0.1);
-  --fill-field: rgb(247 248 242 / 0.06);
-  --fill-field-focus: rgb(247 248 242 / 0.12);
+  --fill-on-panel: rgb(255 251 232 / 0.1);
+  --fill-field: rgb(255 253 244 / 0.06);
+  --fill-field-focus: rgb(255 253 244 / 0.12);
 
-  /* Header (sticky, blurred) */
-  --header-bg: rgb(238 240 230 / 0.9);
-  --header-line: rgb(38 64 47 / 0.1);
-  --header-ink: #26402f;
-  --header-nav: #5c6f5f;
-  --toggle-hover-bg: #26402f;
-  --toggle-hover-fg: #eef0e6;
-  /* The monogram's accent stroke follows the surface it sits on, not the
-     theme: deep teal on the light header, pale teal on any dark panel. */
-  --monogram-accent: #2f7d72;
+  --header-bg: rgb(255 251 232 / 0.9);
+  --header-line: rgb(18 36 24 / 0.1);
+  --header-ink: #122418;
+  --header-nav: #4a6151;       /* 6.48:1 */
+  --toggle-hover-bg: #0d3d22;
+  --toggle-hover-fg: #fffbe8;  /* 11.84:1 */
+  /* The monogram's second stroke follows the surface, not the theme, and it
+     moves from teal to the palette's blue so the mark carries a brand
+     colour rather than a seventh one. */
+  --monogram-accent: #14649b;             /* 6.08:1 on the cream header */
+  --monogram-accent-on-panel: #7ab8e6;    /* 5.75:1 on --footer-bar */
 
-  /* Footer bar */
-  --footer-bar: #26402f;
-  --footer-ink: #cfdac6;
-  --footer-meta: #93ac95;
-  --footer-divider: rgb(207 218 198 / 0.25);
+  --footer-bar: #0d3d22;
+  --footer-ink: #f0e7c8;       /* 9.94:1 */
+  --footer-meta: #bdb79a;      /* 6.09:1 */
+  --footer-divider: rgb(255 251 232 / 0.25);
 
-  /* Hatched placeholder texture (photos not dropped in yet) */
-  --hatch: rgb(207 218 198 / 0.14);
-  --hatch-line: rgb(207 218 198 / 0.28);
+  --hatch: rgb(255 251 232 / 0.14);
+  --hatch-line: rgb(255 251 232 / 0.28);
 
-  /* Per-project card worlds */
-  --project-magic: #1e3a52;
-  --project-magic-fg: #e9f3fa;
-  --project-magic-body: rgb(233 243 250 / 0.82);
-  --project-magic-accent: #9dc2dd;
-  --project-magic-thumb: #152a3c;
-  --project-magic-border: transparent;
-  --project-magic-shadow: 0 14px 30px rgb(30 58 82 / 0.34);
+  /* Per-project worlds. All three stay dark grounds in both schemes — that
+     is what makes the band of direction.md §5 a poster rather than a second
+     website, and a cream canvas makes it more true, not less. */
+  --project-magic: #0f4a80;
+  --project-magic-fg: #eaf4ff;                    /* 8.17:1 */
+  --project-magic-body: rgb(234 244 255 / 0.84);  /* 6.30:1 */
+  --project-magic-accent: #9fcdf0;                /* 5.39:1 */
+  --project-magic-thumb: #0a3560;
+  --project-magic-border: transparent;            /* 8.11:1 against the band */
+  --project-magic-seam: #0f4a80;
+  --project-magic-shadow: 0 16px 34px rgb(15 74 128 / 0.28);
 
-  --project-dj: #26332a;
-  --project-dj-fg: #eef0e6;
-  --project-dj-accent: #8fb894;
-  --project-dj-body: #bccfbe;
-  --project-dj-badge: #26332a; /* the chip sitting on the Camelot wheel */
+  --project-dj: #0e2d1c;
+  --project-dj-fg: #eaf5ec;      /* 13.31:1 */
+  --project-dj-accent: #7fcfa0;  /*  8.03:1 */
+  --project-dj-body: #c6dfcd;    /* 10.52:1 */
+  --project-dj-badge: #0a2416;   /* 14.70:1 under -fg */
   --project-dj-border: transparent;
-  --project-dj-shadow: 0 14px 30px rgb(38 51 42 / 0.35);
+  --project-dj-seam: #0e2d1c;
+  --project-dj-shadow: 0 16px 34px rgb(14 45 28 / 0.3);
 
-  /* Deeper than the doc's #b8703f. This card carries its hierarchy in opacity
-     (100/88/80/75) the way the other two carry theirs in hue, and on a mid
-     orange the minimum alpha for 4.5:1 is 0.94 — the four rungs collapse into
-     one. On brick the ladder spans 7.22 → 4.86 and reads as a ladder again. */
-  --project-food: #7d4425;
-  --project-food-fg: #fff6ee;
-  --project-food-accent: rgb(255 246 238 / 0.75);
-  --project-food-body: rgb(255 246 238 / 0.88);
-  --project-food-meta: rgb(255 246 238 / 0.8);
+  /* Brightened exactly one step. The card carries its hierarchy in opacity
+     where the other two carry theirs in hue (theme.css:273-277), and that
+     ladder is the constraint: at #8f4820 the .75 rung drops to 4.34:1 and
+     breaks. At #87441f the three alphas read 5.73 / 5.01 / 4.64 unchanged. */
+  --project-food: #87441f;
+  --project-food-fg: #fff6ee;                    /* 6.84:1 */
+  --project-food-accent: rgb(255 246 238 / 0.75);/* 4.64:1 */
+  --project-food-body: rgb(255 246 238 / 0.88);  /* 5.73:1 */
+  --project-food-meta: rgb(255 246 238 / 0.8);   /* 5.01:1 */
   --project-food-hatch: rgb(255 246 238 / 0.2);
   --project-food-thumb-fg: #fff6ee;
   --project-food-border: transparent;
-  --project-food-shadow: 0 14px 30px rgb(125 68 37 / 0.35);
+  --project-food-seam: #87441f;
+  --project-food-shadow: 0 16px 34px rgb(135 68 31 / 0.3);
 
-  /* Hero glow — dark only */
   --hero-glow: none;
+
+  /* ==========================================================================
+     Magic Tools joins the theme system.
+
+     Layer 2 gains a semantic pair for every magic token, light values first —
+     byte-identical to today except where a contrast fix moved one
+     deliberately. Layer 3 (.dark, below) gets the dark counterparts. Layer 4
+     (@theme inline) re-exposes everything under the SAME utility names, so
+     bg-magic-parchment keeps working and starts tracking the .dark class.
+
+     The world does not invert. Half of this page is already dark — the hero
+     slab, the search forest, the abyss output — and that half already
+     measures clean, so dark mode holds it and re-maps the light half down to
+     meet it. 23 of 44 tokens hold in both schemes; each one that holds only
+     ever touches a surface that does not flip.
+
+     Untouched by the repaint: --magic-cream #fffbd5 and the new --canvas
+     #fffbe8 measure 1.01:1 apart, and #00733e is the same hue family as the
+     new --tile. See direction.md §1.7. ========================================================================== */
+
+  /* Grounds, outside in: the desk, the sheet, the raised card, the inked
+     slab. The header keeps the doc's cool #f4f7fb rather than being warmed to
+     match the world — that is a look change nobody asked for, and moving the
+     slash is the cheaper fix. */
+  --magic-parchment: #efe7cd;
+  --magic-paper: #fdfaec;
+  --magic-card: #ffffff;
+  --magic-header: rgb(244 247 251 / 0.92);
+  --magic-slab: #150b00;
+  /* Following --project-food: a surface that holds its ground across schemes
+     needs an edge when the scheme moves under it. Transparent here, real in
+     dark, where the slab sits 1.09:1 from the sheet. */
+  --magic-slab-edge: transparent;
+
+  /* Hairlines and the field boundary. --magic-rule is decorative at 1.51:1
+     against the card and stays that way. --magic-field is not decorative: it
+     is the border of all five inputs and measured 1.43:1 against the field's
+     own fill, under SC 1.4.11's 3:1. The audit measured text pairs only, so
+     this is a fifth failure found at stage 4 and fixed here. 1.43 -> 3.19. */
+  --magic-rule: #ddd2b0;
+  --magic-rule-soft: #eae3ca;
+  --magic-rule-faint: #f4eed8;
+  --magic-field: #978c6f;
+
+  /* The ink ladder. Two of the four measured AA failures live here, and
+     fixing them costs a rung: there is no room for four steps between 4.5:1
+     and --magic-ink-muted's 5.97:1, so -faint and -fainter resolve to one
+     value in light. Both class names keep working, and the two separate
+     again in dark, where the ladder has room from 14.5:1 down to 4.5:1. */
+  --magic-ink: #150b00;         /* 18.58:1 on paper */
+  --magic-ink-muted: #6b5f4a;   /*  5.97:1 on paper */
+  --magic-ink-faint: #7d705a;   /*  4.63:1 on paper — was #9a8d75, 3.11:1 */
+  --magic-ink-fainter: #7d705a; /*  4.63:1 on paper — was #a89b83, 2.73:1 */
+  /* The breadcrumb slash, floored against the header composited over the
+     slab (#e2e4e7), not the #f5f7fa the audit sampled — the header is
+     translucent and the hero scrolls under it. 5.49:1 over the card. */
+  --magic-slash: #6f634c;       /*  4.62:1 worst case — was #b8ab92, 2.11:1 */
+  --magic-link: #1f5896;        /*  6.93:1 on paper */
+
+  /* MTG green. In light the deeper rungs carry more emphasis; in dark that
+     inverts, because on a dark ground more emphasis means lighter. -mid,
+     -light, -forest and -abyss are already dark-ground values and hold. */
+  --magic-green: #00733e;
+  --magic-green-deep: #0a5c35;
+  --magic-green-darker: #00552d;
+  --magic-green-mid: #6fbd8f;
+  --magic-green-light: #9bd3ae;
+  --magic-green-pale: #e2f3e3;
+  --magic-forest: #0a2f1e;
+  --magic-abyss: #071a10;
+
+  /* The cream ladder is the on-slab text ladder and it holds in both
+     schemes, because the slab holds. It is also already measured clean:
+     18.53 / 11.12 / 8.35 / 5.32 against the slab today. */
+  --magic-cream: #fffbd5;
+  --magic-cream-dim: #cbc2bf;
+  --magic-cream-dimmer: #b3a89f;
+  --magic-cream-faint: #8f8479;
+  --magic-steel: #7d97b6;
+
+  --magic-bar-short: #e6dcc0;
+  --magic-coral: #f9aa8f;
+  --magic-gold: #f2e3a8;
+
+  /* The five pips. Magic's five colours are semantically fixed, and they
+     render in exactly one place — the hero, on the slab, which does not
+     flip. So they hold, and the two that need an edge already carry one in
+     the component (Plains border-white/30, Swamp border-white/20 — Swamp is
+     the same value as the ground it sits on). */
+  --mana-plains: #fffbd5;
+  --mana-plains-ink: #9a7b1f;
+  --mana-plains-fill: #fff3c0;
+  --mana-island: #0e68ab;
+  --mana-island-ink: #08324f;
+  --mana-island-pale: #aae0fa;
+  --mana-swamp: #150b00;
+  --mana-swamp-ink: #cbc2bf;
+  --mana-mountain: #d3202a;
+  --mana-mountain-ink: #fff1e0;
+  --mana-forest: #00733e;
+  --mana-forest-ink: #e2f3e3;
 }
 
+/* --------------------------------------------------------------------------
+   3. .dark, the authored counterparts.
+   -------------------------------------------------------------------------- */
 .dark {
   color-scheme: dark;
 
-  --canvas: #141a15;
-  --canvas-band: #0f1410;
-  --surface: #1d2a1f;
-  --panel: #1d2a1f;
-  --panel-alt: #0f1410;
-  --panel-deep: #1a2a1e;
-  --panel-inset: #0f1410;
+  --canvas: #101510;
+  --canvas-band: #0a0e0a;
+  --surface: #182018;
+  --panel: #123020;
+  --panel-alt: #0a0e0a;
+  --panel-deep: #0e2618;
+  --panel-inset: #0a0e0a;
 
-  --ink: #dfe7de;
-  --ink-strong: #eef0e6;
-  --ink-body: #a9bcaa;
-  --ink-soft: #a9bcaa;
-  --ink-muted: #93a894;
-  --ink-faint: #809481;
-  --ink-note: #708371;
+  /* The dark scheme's brightening is here: the ink stops being sage grey and
+     becomes the same warm cream that is the page in light. One colour, two
+     jobs, opposite schemes — which is the clearest thing this palette does. */
+  --ink: #ece3c8;        /* 14.42:1 on canvas */
+  --ink-strong: #fffbe8; /* 17.78:1 */
+  --ink-body: #c9c2a6;   /* 10.34:1 */
+  --ink-soft: #c9c2a6;   /* 10.34:1 */
+  --ink-muted: #b0aa90;  /*  7.92:1 */
+  --ink-faint: #9d9880;  /*  6.37:1 · 5.75 on --surface */
+  --ink-note: #8f8a74;   /*  5.33:1 · 4.81 on --surface */
 
-  --on-panel: #eef0e6;
-  --on-panel-strong: #eef0e6;
-  --on-panel-body: #cfdac6;
-  --on-panel-prose: #a9bcaa;
-  --on-panel-muted: #a9bcaa;
-  --on-panel-soft: #8a9d8b;
-  --on-panel-label: #7d9b7d;
-  --on-panel-accent: #9dbc9f;
-  --on-panel-quiet: #809481;
-  --on-panel-dim: #7e927f;
-  --on-panel-track: #dfe7de;
+  --on-panel: #fffbe8;         /* 13.76:1 on --panel */
+  --on-panel-strong: #fffbe8;
+  --on-panel-body: #ece3c8;    /* 11.15:1 */
+  --on-panel-prose: #c9c2a6;   /*  8.00:1 */
+  --on-panel-muted: #c9c2a6;   /*  8.00:1 */
+  --on-panel-soft: #a9a48b;    /*  5.70:1 */
+  --on-panel-label: #7fcfa0;   /*  7.71:1 */
+  --on-panel-accent: #8fd8ac;  /*  8.57:1 */
+  --on-panel-quiet: #a5a08a;   /*  5.44:1 · 4.72 composited in a field */
+  --on-panel-dim: #9d9880;     /*  4.93:1 on --panel · 6.70 on --panel-inset */
+  --on-panel-track: #ece3c8;
 
-  --accent: #c97d48;
-  --accent-on-panel: #c97d48;
-  --accent-fg: #141a15;
-  --accent-fg-warm: #141a15;
-  --accent-hover: #eef0e6;
-  --accent-hover-fg: #141a15;
-  --accent-hover-alt: #eef0e6;
-  --accent-hover-alt-fg: #141a15;
+  --accent: #e08a4e;           /* 6.96 canvas · 6.29 surface · 5.39 panel */
+  --accent-on-panel: #e08a4e;
+  --accent-fg: #101510;        /* 6.96:1 */
+  --accent-fg-warm: #101510;
+  --accent-hover: #fffbe8;
+  --accent-hover-fg: #101510;  /* 17.78:1 */
+  --accent-hover-alt: #fffbe8;
+  --accent-hover-alt-fg: #101510;
 
-  --sage: #9dbc9f;
-  --sage-solid: #9dbc9f;
-  --sage-solid-fg: #141a15;
+  --sage: #7fcfa0;             /* 9.97:1 on canvas */
+  --sage-solid: #7fcfa0;
+  --sage-solid-fg: #08281a;    /* 8.53:1 */
 
-  --line: rgb(207 218 198 / 0.12);
-  --line-soft: rgb(207 218 198 / 0.1);
-  --line-strong: rgb(207 218 198 / 0.24);
-  --line-card: rgb(207 218 198 / 0.16);
-  --line-on-panel: rgb(207 218 198 / 0.22);
-  --line-on-panel-strong: rgb(207 218 198 / 0.24);
-  --line-inset: rgb(207 218 198 / 0.14);
-  --line-on-panel-soft: rgb(207 218 198 / 0.12);
-  --line-inset-soft: rgb(207 218 198 / 0.1);
+  /* The tile inverts, and loses its ring doing it. In dark both grounds it
+     straddles push the same way (canvas Y 0.008, cards Y ~0.089), so one
+     value clears 3:1 against all of them and the edge is unnecessary. This
+     is --magic-slab-edge's argument with the sign flipped. */
+  --tile: #7fcfa0;             /* 9.97 canvas · 4.11 magic · 8.85 dj · 3.94 food */
+  --tile-fg: #0b3620;          /* 7.25:1 on the tile */
+  --tile-ring: transparent;
 
-  --fill-on-panel: rgb(207 218 198 / 0.08);
-  --fill-field: rgb(238 240 230 / 0.05);
-  --fill-field-focus: rgb(238 240 230 / 0.1);
+  --line: rgb(255 251 232 / 0.14);
+  --line-soft: rgb(255 251 232 / 0.1);
+  --line-strong: rgb(255 251 232 / 0.24);
+  --line-card: rgb(255 251 232 / 0.16);
+  --line-on-panel: rgb(255 251 232 / 0.22);
+  --line-on-panel-strong: rgb(255 251 232 / 0.24);
+  --line-inset: rgb(255 251 232 / 0.14);
+  --line-on-panel-soft: rgb(255 251 232 / 0.12);
+  --line-inset-soft: rgb(255 251 232 / 0.1);
 
-  --header-bg: rgb(20 26 21 / 0.9);
-  --header-line: rgb(207 218 198 / 0.14);
-  --header-ink: #eef0e6;
-  --header-nav: #93a894;
-  --toggle-hover-bg: #cfdac6;
-  --toggle-hover-fg: #1d2a1f;
-  --monogram-accent: #6fb8ac;
+  --fill-on-panel: rgb(255 251 232 / 0.08);
+  --fill-field: rgb(255 251 232 / 0.05);
+  --fill-field-focus: rgb(255 251 232 / 0.1);
 
-  --footer-bar: #0f1410;
-  --footer-ink: #a9bcaa;
-  --footer-meta: #708371;
-  --footer-divider: rgb(207 218 198 / 0.2);
+  --header-bg: rgb(16 21 16 / 0.9);
+  --header-line: rgb(255 251 232 / 0.14);
+  --header-ink: #fffbe8;
+  --header-nav: #b0aa90;       /* 7.92:1 */
+  --toggle-hover-bg: #ece3c8;
+  --toggle-hover-fg: #123020;
+  --monogram-accent: #7ab8e6;             /* 8.64:1 on canvas */
+  --monogram-accent-on-panel: #7ab8e6;    /* 9.10:1 on the dark footer */
 
-  --hatch: rgb(207 218 198 / 0.1);
-  --hatch-line: rgb(207 218 198 / 0.2);
+  --footer-bar: #0a0e0a;
+  --footer-ink: #c9c2a6;       /* 10.88:1 */
+  --footer-meta: #8f8a74;      /*  5.61:1 */
+  --footer-divider: rgb(255 251 232 / 0.2);
 
-  --project-magic: #25455f;
-  --project-magic-accent: #a8cbe4;
-  --project-magic-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+  --hatch: rgb(255 251 232 / 0.1);
+  --hatch-line: rgb(255 251 232 / 0.2);
 
-  --project-dj: #1a2a1e;
-  --project-dj-accent: #9dbc9f;
-  --project-dj-body: #a9bcaa;
-  --project-dj-badge: #141a15;
-  --project-dj-border: rgb(157 188 159 / 0.28);
-  --project-dj-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+  /* Worlds. Every card needs a real edge here — the dark canvas sits 1.13 to
+     2.53:1 from the three grounds, so hue cannot do it. --project-dj-border
+     was 0.28 and composited to 2.13:1 against the dark canvas, a live
+     sub-3:1 component boundary the text-pair scan could not see; it goes to
+     0.45. --project-magic-border was transparent in both schemes and gains
+     one, because 2.43:1 is not an edge. */
+  --project-magic: #15568f;
+  --project-magic-fg: #eaf4ff;                    /* 6.84:1 */
+  --project-magic-body: rgb(234 244 255 / 0.84);  /* 5.37:1 */
+  --project-magic-accent: #a8d3f2;                /* 4.81:1 */
+  --project-magic-thumb: #0e3c67;
+  --project-magic-border: rgb(168 211 242 / 0.28);/* 3.98:1 vs canvas */
+  --project-magic-seam: #a8d3f2;                  /* 11.67:1 vs canvas */
+  --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
 
-  /* Food no longer inverts. It was the only card that flipped to a light
-     ground with dark ink, and that inversion is what broke it: on #c97d48 the
-     opacity ladder needed alpha ≥0.83 to clear AA. Keeping it a dark ground
-     puts it in step with its two siblings, so hue alone tells the cards apart.
-     Like the DJ card, it needs a border here — the brick sits 2.29:1 from the
-     dark canvas, which is not enough edge on its own. */
-  --project-food: #7d4425;
+  --project-dj: #0c2417;
+  --project-dj-fg: #eaf5ec;      /* 14.66:1 */
+  --project-dj-accent: #8fd8ac;  /*  9.83:1 */
+  --project-dj-body: #c6dfcd;    /* 11.59:1 */
+  --project-dj-badge: #08180f;
+  --project-dj-border: rgb(143 216 172 / 0.45); /* 3.48:1 vs canvas — was 2.13 */
+  --project-dj-seam: #8fd8ac;                   /* 11.07:1 vs canvas */
+  --project-dj-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
+
+  /* Food still does not invert (theme.css:473-479). The reason survives the
+     repaint intact: it is the only card that ever flipped to a light ground,
+     and its opacity ladder needed alpha >=0.83 to clear AA when it did. Held
+     here byte-identical to light — 6.84 / 5.73 / 5.01 / 4.64 in both
+     schemes, the one world where the numbers are literally the same twice. */
+  --project-food: #87441f;
   --project-food-fg: #fff6ee;
   --project-food-thumb-fg: #fff6ee;
   --project-food-accent: rgb(255 246 238 / 0.75);
   --project-food-body: rgb(255 246 238 / 0.88);
   --project-food-meta: rgb(255 246 238 / 0.8);
   --project-food-hatch: rgb(255 246 238 / 0.18);
-  --project-food-border: rgb(255 246 238 / 0.2);
-  --project-food-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+  --project-food-border: rgb(255 246 238 / 0.22);/* 4.16:1 vs canvas */
+  --project-food-seam: #e6b493;                  /* 9.95 vs canvas · 3.93 vs band */
+  --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,
-    rgb(125 155 125 / 0.16),
+    rgb(79 179 123 / 0.16),
     transparent 65%
   );
+
+  /* Magic Tools, dark. The sheet inks over and the type is left in the
+     paper. Raised still means lighter, the way the site's own .dark already
+     reads it (canvas #101510 -> surface #182018), so desk < sheet < card.
+     The slab goes the other way and gets deeper than all three: an inked
+     block on a dark sheet reads as denser ink, not as a lighter panel, and
+     that keeps the light scheme's one true relationship — the slab is the
+     darkest thing on the page. */
+  --magic-parchment: #0e0a06;
+  --magic-paper: #191209;
+  --magic-card: #241a0f;
+  --magic-header: rgb(27 20 9 / 0.92);
+  --magic-slab: #0a0603;
+  /* The edge --project-food's comment prescribes. The slab sits 1.09:1 from
+     the sheet here; hue alone is not enough. The same token edges the forest
+     section and the abyss output, which hold their values and face the same
+     1.27:1 problem. */
+  --magic-slab-edge: rgb(255 251 213 / 0.14);
+
+  /* Hairlines re-mapped to their light ratios rather than to a rule:
+     rule 1.51 -> 1.50, soft 1.29 -> 1.31, faint 1.16 -> 1.17, all against
+     the card. --magic-rule-faint is also the progress-bar track, and it is
+     as quiet here as it is in light — the bar on top does the work. */
+  --magic-rule: #483722;
+  --magic-rule-soft: #3d2e1c;
+  --magic-rule-faint: #332718;
+  --magic-field: #7b664a;       /*  3.12:1 card · 3.39:1 paper · 3.34:1 header */
+
+  /* The ladder separates again. 14.46 / 9.40 / 6.51 / 4.61 against the card
+     — four real rungs, which light could not hold. */
+  --magic-ink: #f4ecd2;         /* 14.46:1 on card */
+  --magic-ink-muted: #cdbfa1;   /*  9.40:1 on card */
+  --magic-ink-faint: #ad9e85;   /*  6.51:1 on card */
+  --magic-ink-fainter: #91836c; /*  4.61:1 on card */
+  --magic-slash: #91836c;       /*  4.93:1 on the dark header */
+  /* The link cannot stay #1f5896 on an inked sheet. It lifts into the
+     site's own ocean ramp rather than to a generic blue — --color-ocean-300
+     is #a8d3f2 and this is its neighbour, which ties the link to
+     --project-magic, the world this page belongs to. */
+  --magic-link: #8ec2e8;        /*  8.97:1 on card */
+
+  /* Emphasis inverts: on a dark ground "deeper" has to mean lighter, so the
+     three light-ground greens step up and swap direction. -mid and -light
+     hold: they are already the values this page uses on its dark blocks. */
+  --magic-green: #4fae7f;       /*  6.26:1 on card */
+  --magic-green-deep: #7cc79e;  /*  8.56:1 on card */
+  --magic-green-darker: #9bd8b4;/* 10.47:1 on card */
+  --magic-green-mid: #6fbd8f;
+  --magic-green-light: #9bd3ae;
+  --magic-green-pale: #12301f;  /* a tint fill becomes a tinted dark fill */
+  --magic-forest: #0a2f1e;
+  --magic-abyss: #071a10;
+
+  /* Every value below holds. Each one only ever touches the slab, the
+     forest or the abyss — surfaces that do not flip — so a dark counterpart
+     would be a change with nothing behind it. */
+  --magic-cream: #fffbd5;
+  --magic-cream-dim: #cbc2bf;
+  --magic-cream-dimmer: #b3a89f;
+  --magic-cream-faint: #8f8479;
+  --magic-steel: #7d97b6;
+
+  --magic-bar-short: #4a3d29;   /*  3.86:1 against the green bar beside it */
+  --magic-coral: #f9aa8f;
+  --magic-gold: #f2e3a8;
+
+  --mana-plains: #fffbd5;
+  --mana-plains-ink: #9a7b1f;
+  --mana-plains-fill: #fff3c0;
+  --mana-island: #0e68ab;
+  --mana-island-ink: #08324f;
+  --mana-island-pale: #aae0fa;
+  --mana-swamp: #150b00;
+  --mana-swamp-ink: #cbc2bf;
+  --mana-mountain: #d3202a;
+  --mana-mountain-ink: #fff1e0;
+  --mana-forest: #00733e;
+  --mana-forest-ink: #e2f3e3;
 }
 
 /* --------------------------------------------------------------------------
-   3. Expose the semantic layer as Tailwind utilities.
+   4. Expose the semantic layer as Tailwind utilities.
       `inline` keeps the var() reference intact, so `bg-canvas` follows the
       active theme instead of being frozen at build time.
+
+      Unchanged from before the repaint except the four new colour roles
+      (--color-tile / -fg / -ring, --color-monogram-accent-on-panel, the
+      three --color-project-*-seam) and --shadow-card's warmer value — every
+      existing mapping keeps its name, which is why the repaint touches no
+      className outside the edits named in build.md.
    -------------------------------------------------------------------------- */
 @theme inline {
   --color-canvas: var(--canvas);
@@ -484,6 +707,10 @@
   --color-sage-solid: var(--sage-solid);
   --color-sage-solid-fg: var(--sage-solid-fg);
 
+  --color-tile: var(--tile);
+  --color-tile-fg: var(--tile-fg);
+  --color-tile-ring: var(--tile-ring);
+
   --color-line: var(--line);
   --color-line-soft: var(--line-soft);
   --color-line-strong: var(--line-strong);
@@ -507,6 +734,7 @@
   --color-toggle-hover-bg: var(--toggle-hover-bg);
   --color-toggle-hover-fg: var(--toggle-hover-fg);
   --color-monogram-accent: var(--monogram-accent);
+  --color-monogram-accent-on-panel: var(--monogram-accent-on-panel);
 
   --color-footer-bar: var(--footer-bar);
   --color-footer-ink: var(--footer-ink);
@@ -519,6 +747,7 @@
   --color-project-magic-accent: var(--project-magic-accent);
   --color-project-magic-thumb: var(--project-magic-thumb);
   --color-project-magic-border: var(--project-magic-border);
+  --color-project-magic-seam: var(--project-magic-seam);
 
   --color-project-dj: var(--project-dj);
   --color-project-dj-fg: var(--project-dj-fg);
@@ -526,6 +755,7 @@
   --color-project-dj-body: var(--project-dj-body);
   --color-project-dj-badge: var(--project-dj-badge);
   --color-project-dj-border: var(--project-dj-border);
+  --color-project-dj-seam: var(--project-dj-seam);
 
   --color-project-food: var(--project-food);
   --color-project-food-fg: var(--project-food-fg);
@@ -534,15 +764,70 @@
   --color-project-food-meta: var(--project-food-meta);
   --color-project-food-thumb-fg: var(--project-food-thumb-fg);
   --color-project-food-border: var(--project-food-border);
+  --color-project-food-seam: var(--project-food-seam);
 
   --shadow-lift-magic: var(--project-magic-shadow);
   --shadow-lift-dj: var(--project-dj-shadow);
   --shadow-lift-food: var(--project-food-shadow);
-  --shadow-card: 0 2px 12px rgb(0 0 0 / 0.08);
+  /* Warm shadow: a neutral-black shadow on a cream ground reads as grey dirt. */
+  --shadow-card: 0 2px 14px rgb(70 45 15 / 0.08);
+
+  /* Magic Tools — same utility names as before the semantic split, so
+     bg-magic-parchment etc. keep working and start tracking .dark. */
+  --color-magic-parchment: var(--magic-parchment);
+  --color-magic-paper: var(--magic-paper);
+  --color-magic-card: var(--magic-card);
+  --color-magic-header: var(--magic-header);
+  --color-magic-slab: var(--magic-slab);
+  --color-magic-slab-edge: var(--magic-slab-edge);
+
+  --color-magic-rule: var(--magic-rule);
+  --color-magic-rule-soft: var(--magic-rule-soft);
+  --color-magic-rule-faint: var(--magic-rule-faint);
+  --color-magic-field: var(--magic-field);
+
+  --color-magic-ink: var(--magic-ink);
+  --color-magic-ink-muted: var(--magic-ink-muted);
+  --color-magic-ink-faint: var(--magic-ink-faint);
+  --color-magic-ink-fainter: var(--magic-ink-fainter);
+  --color-magic-slash: var(--magic-slash);
+  --color-magic-link: var(--magic-link);
+
+  --color-magic-green: var(--magic-green);
+  --color-magic-green-deep: var(--magic-green-deep);
+  --color-magic-green-darker: var(--magic-green-darker);
+  --color-magic-green-mid: var(--magic-green-mid);
+  --color-magic-green-light: var(--magic-green-light);
+  --color-magic-green-pale: var(--magic-green-pale);
+  --color-magic-forest: var(--magic-forest);
+  --color-magic-abyss: var(--magic-abyss);
+
+  --color-magic-cream: var(--magic-cream);
+  --color-magic-cream-dim: var(--magic-cream-dim);
+  --color-magic-cream-dimmer: var(--magic-cream-dimmer);
+  --color-magic-cream-faint: var(--magic-cream-faint);
+  --color-magic-steel: var(--magic-steel);
+
+  --color-magic-bar-short: var(--magic-bar-short);
+  --color-magic-coral: var(--magic-coral);
+  --color-magic-gold: var(--magic-gold);
+
+  --color-mana-plains: var(--mana-plains);
+  --color-mana-plains-ink: var(--mana-plains-ink);
+  --color-mana-plains-fill: var(--mana-plains-fill);
+  --color-mana-island: var(--mana-island);
+  --color-mana-island-ink: var(--mana-island-ink);
+  --color-mana-island-pale: var(--mana-island-pale);
+  --color-mana-swamp: var(--mana-swamp);
+  --color-mana-swamp-ink: var(--mana-swamp-ink);
+  --color-mana-mountain: var(--mana-mountain);
+  --color-mana-mountain-ink: var(--mana-mountain-ink);
+  --color-mana-forest: var(--mana-forest);
+  --color-mana-forest-ink: var(--mana-forest-ink);
 }
 
 /* --------------------------------------------------------------------------
-   4. Base + the few textures the design uses that aren't single values.
+   5. Base + the few textures the design uses that aren't single values.
    -------------------------------------------------------------------------- */
 @layer base {
   html {
@@ -602,17 +887,41 @@
   );
 }
 
-/* The DJ tool's Camelot wheel. */
+/* The DJ tool's Camelot wheel — same three stops, same conic sweep, now in
+   clover and rust, following the ramp rename. Must read against
+   --project-dj #0e2d1c. */
 @utility camelot {
   background: conic-gradient(
     from 0deg,
-    var(--color-sage-500),
-    var(--color-sage-200),
+    var(--color-clover-400),
+    var(--color-clover-200),
     var(--accent),
-    var(--color-sage-500)
+    var(--color-clover-400)
   );
 }
 
 @utility hero-glow {
   background-image: var(--hero-glow);
+}
+
+/* The lazy /magic-tools chunk's Suspense fallback. Under ~300ms it shows
+   nothing — a flashed spinner reads as breakage on a same-origin chunk that
+   is usually well under that. Reduced motion keeps the delay and only drops
+   the fade itself. */
+@keyframes magic-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility magic-loading-fade {
+  opacity: 0;
+  animation: magic-fade-in 160ms ease-out 300ms forwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 1ms;
+  }
 }

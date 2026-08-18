@@ -49,7 +49,7 @@ export function FindingACard() {
         blurb={t('magic.finding.blurb')}
       />
 
-      <div className="grid items-start gap-[22px] lg:grid-cols-[340px_1fr]">
+      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
         {/* ---------------- controls ---------------- */}
         <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
           <Field label={t('magic.finding.deckLabel')} value={String(deck)}>
@@ -115,7 +115,7 @@ export function FindingACard() {
 
         {/* ---------------- result ---------------- */}
         <div className="flex flex-col gap-[22px]">
-          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-ink p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
+          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-slab p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
             <p className="justify-self-center font-mono text-[56px]/none font-medium tracking-[-0.03em] text-white">
               {formatPercent(opener.p, locale)}
             </p>

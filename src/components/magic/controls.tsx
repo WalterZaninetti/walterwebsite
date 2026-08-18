@@ -104,9 +104,10 @@ export function Preset({
       aria-pressed={active}
       className={cx(
         'h-8 cursor-pointer rounded-pill border px-3 font-mono text-[11px] font-medium transition-colors',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card',
         active
           ? 'border-magic-green bg-magic-green text-magic-paper'
-          : 'border-magic-field bg-white text-magic-ink-muted hover:border-magic-green hover:text-magic-green-deep',
+          : 'border-magic-field bg-magic-card text-magic-ink-muted hover:border-magic-green hover:text-magic-green-deep',
         className,
       )}
     >

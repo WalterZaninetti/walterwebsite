@@ -19,6 +19,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://walterzaninetti.com/dj-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://walterzaninetti.com/seasonable</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://walterzaninetti.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

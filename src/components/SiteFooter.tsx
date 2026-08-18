@@ -37,9 +37,9 @@ export function SiteFooter() {
 
       <div className="flex flex-col items-center gap-[18px] lg:flex-row lg:flex-wrap lg:justify-between lg:gap-10">
         <div className="flex flex-col items-center gap-[18px] lg:flex-row lg:gap-4">
-          {/* On this deep-green bar the accent is always the pale teal, in
-              both themes — hence the override rather than the token. */}
-          <Monogram size={36} accentClassName="stroke-teal-400" className="lg:size-[34px]" />
+          {/* On this deep-green bar the accent is always the pale ocean blue,
+              in both themes — hence the override rather than the token. */}
+          <Monogram size={36} accentClassName="stroke-monogram-accent-on-panel" className="lg:size-[34px]" />
           <span aria-hidden="true" className="hidden h-[26px] w-px bg-footer-divider lg:block" />
           <div className="flex gap-2.5">
             {site.socials.map((social) => {

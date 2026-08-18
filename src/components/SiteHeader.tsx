@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { site } from '../content/site';
 import { useTheme } from '../lib/theme-context';
 import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
+import { MoonIcon, SunIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
 /**
@@ -58,7 +60,7 @@ export function SiteHeader() {
           <IconButton
             onClick={toggle}
             label={t(nextTheme === 'dark' ? 'common.switchToDark' : 'common.switchToLight')}
-            glyph={theme === 'dark' ? '☀' : '☾'}
+            glyph={theme === 'dark' ? <SunIcon /> : <MoonIcon />}
           />
           <IconButton
             onClick={() => setMenuOpen((open) => !open)}
@@ -87,7 +89,12 @@ export function SiteHeader() {
   );
 }
 
-function ThemeSwitch({
+/**
+ * Exported so `ProjectPage` (the two new project pages' shared shell) can
+ * reuse it verbatim in its own header rather than growing a second,
+ * drift-prone copy of the same pill.
+ */
+export function ThemeSwitch({
   onClick,
   next,
   label,
@@ -106,13 +113,14 @@ function ThemeSwitch({
         'hover:border-toggle-hover-bg hover:bg-toggle-hover-bg hover:text-toggle-hover-fg',
       )}
     >
-      <span aria-hidden="true">{next === 'dark' ? '☾' : '☀'}</span>
+      {next === 'dark' ? <MoonIcon /> : <SunIcon />}
       {label}
     </button>
   );
 }
 
-function IconButton({
+/** Exported for the same reason as `ThemeSwitch` above. */
+export function IconButton({
   onClick,
   label,
   glyph,
@@ -120,7 +128,7 @@ function IconButton({
 }: {
   onClick: () => void;
   label: string;
-  glyph: string;
+  glyph: ReactNode;
   expanded?: boolean;
 }) {
   return (

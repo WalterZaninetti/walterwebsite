@@ -1,8 +1,12 @@
+import type { ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Project, ProjectId } from '../content/site';
 import { projects } from '../content/site';
 import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
+import { LazyImage } from './LazyImage';
+import { Tile } from './ui/Tile';
+import { CardsIcon, DiscIcon, LeafIcon, ShelfIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
 /**
@@ -13,7 +17,14 @@ import { cx } from './ui/cx';
  */
 const cardTheme: Record<
   ProjectId,
-  { surface: string; thumb: string; eyebrow: string; body: string; meta: string }
+  {
+    surface: string;
+    thumb: string;
+    eyebrow: string;
+    body: string;
+    meta: string;
+    tile: ComponentType<{ className?: string }>;
+  }
 > = {
   magic: {
     surface: 'bg-project-magic text-project-magic-fg hover:shadow-lift-magic',
@@ -21,6 +32,7 @@ const cardTheme: Record<
     eyebrow: 'text-project-magic-accent',
     body: 'text-project-magic-body',
     meta: 'text-project-magic-accent',
+    tile: CardsIcon,
   },
   dj: {
     surface:
@@ -29,6 +41,7 @@ const cardTheme: Record<
     eyebrow: 'text-project-dj-accent',
     body: 'text-project-dj-body',
     meta: 'text-project-dj-accent',
+    tile: DiscIcon,
   },
   food: {
     surface:
@@ -37,6 +50,7 @@ const cardTheme: Record<
     eyebrow: 'text-project-food-accent',
     body: 'text-project-food-body',
     meta: 'text-project-food-meta',
+    tile: LeafIcon,
   },
 };
 
@@ -54,13 +68,21 @@ export function ProjectShelf() {
       id="projects"
       className="bg-canvas-band px-5 pt-[26px] pb-[30px] dark:border-t dark:border-line-soft lg:px-13 lg:pt-13 lg:pb-15"
     >
-      <div className="mb-[18px] lg:mb-[26px]">
+      {/*
+        The tile sits on each card's outer top edge (gate C) and overhangs
+        24px below `lg` / 28px at `lg` — half its own size. This margin
+        absorbs the first row's overhang (there is nothing above the grid to
+        collide with but this heading), and the grid below carries a
+        matching gap-y for every row after it.
+      */}
+      <div className="mb-[42px] flex items-center gap-2.5 lg:mb-[54px]">
+        <ShelfIcon className="text-ink-strong" />
         <h2 className="text-section-sm font-display text-ink-strong lg:text-section">
           {t('home.projects.heading')}
         </h2>
       </div>
 
-      <div className="grid gap-3.5 lg:grid-cols-3 lg:gap-[22px]">
+      <div className="grid gap-x-3.5 gap-y-8 lg:grid-cols-3 lg:gap-[22px]">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -70,28 +92,44 @@ export function ProjectShelf() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const theme = cardTheme[project.id];
   const key = `home.projects.${project.id}` as const;
 
   return (
     <a
       href={project.href}
-      // Magic Tools is a real page now; the other two are still placeholders.
       onClick={project.href.startsWith('/') ? navigate : undefined}
       className={cx(
-        'flex flex-col rounded-card-sm p-5 no-underline lg:min-h-[420px] lg:rounded-card lg:p-[26px]',
+        'relative flex flex-col rounded-card-sm p-5 no-underline lg:min-h-[420px] lg:rounded-card lg:p-[26px]',
         'transition-[transform,box-shadow] duration-[180ms] ease-lift lg:hover:-translate-y-1.5',
         theme.surface,
       )}
     >
+      {/*
+        Gate C: the outer top edge, not the thumb's bottom edge. A sibling of
+        the card's own box (this `<a>`), not a child of the thumb below —
+        the thumb keeps `overflow-hidden` and would cut the tile in half.
+        One transform lives on the card (`lg:hover:-translate-y-1.5` above),
+        so the tile rides it rather than detaching on hover.
+      */}
+      <Tile icon={theme.tile} className="absolute -top-6 left-5 lg:-top-7 lg:left-[26px]" />
       <div
         className={cx(
-          'mb-4 grid h-[110px] place-items-center rounded-field lg:mb-[22px] lg:h-[150px] lg:rounded-thumb',
+          'mb-4 grid h-[110px] place-items-center overflow-hidden rounded-field lg:mb-[22px] lg:h-[150px] lg:rounded-thumb',
           theme.thumb,
         )}
       >
-        {project.id === 'dj' ? (
+        {project.id === 'magic' ? (
+          <LazyImage
+            // The shot has the tool's own words baked in, so it ships per language.
+            src={`/images/magic-draw-odds-${i18n.resolvedLanguage === 'it' ? 'it' : 'en'}.png`}
+            width={960}
+            height={266}
+            alt={t(`${key}.thumbAlt`)}
+            className="h-full w-full object-cover object-left"
+          />
+        ) : project.id === 'dj' ? (
           <span className="rounded-pill bg-project-dj-badge px-2.5 py-[5px] font-mono text-label/none text-project-dj-fg">
             {t(`${key}.thumbCaption`)}
           </span>

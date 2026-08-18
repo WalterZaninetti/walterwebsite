@@ -12,6 +12,8 @@ party.
                       https://github.com/IBM/plex
   Libre Baskerville   Copyright 2012 Impallari Type
                       https://github.com/impallari/Libre-Baskerville
+  Nunito              Copyright 2014-2023 The Nunito Project Authors
+                      https://github.com/googlefonts/nunito
 
 Full licence text: https://openfontlicense.org/open-font-license-official-text/
 

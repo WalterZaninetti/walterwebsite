@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ProposeToolForm } from './ProposeToolForm';
 import { AccentButton, SurfacePill } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
+import { CupIcon } from './ui/icons';
 
 /**
  * The two asks. They are not equal: proposing a tool is what feeds the work,
@@ -25,8 +26,12 @@ function CoffeeCard() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col rounded-card-sm border border-line-card bg-surface p-[22px] lg:rounded-card lg:p-7">
-      <Eyebrow className="mb-2.5 tracking-[0.16em] text-accent lg:mb-3 lg:tracking-[0.18em]">
+    <div
+      id="coffee"
+      className="flex flex-col rounded-card-sm border border-line-card bg-surface p-[22px] lg:rounded-card lg:p-7"
+    >
+      <Eyebrow className="mb-2.5 flex items-center gap-2 tracking-[0.16em] text-accent lg:mb-3 lg:tracking-[0.18em]">
+        <CupIcon />
         {t('home.coffee.label')}
       </Eyebrow>
       <h2 className="mb-2.5 text-display-sm font-display text-ink-strong lg:mb-3 lg:text-display">

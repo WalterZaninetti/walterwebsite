@@ -65,24 +65,16 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: 'Libre Baskerville';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/libre-baskerville-400.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Space Grotesk 700 and Libre Baskerville 400/700 (upright) were removed
+   here in the repaint: font-bold appears 0 times across the component tree, and every
+   font-editorial use is italic, so those three faces were declared but never
+   fetched. Saves nothing on the wire (a browser never requested them) — it
+   is repo cleanup, not a performance win. See direction.md §2.1.
 
-@font-face {
-  font-family: 'Libre Baskerville';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../assets/fonts/libre-baskerville-700.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
+   Space Grotesk 400/500/600 stay declared even though --font-sans no longer
+   points at this family (direction.md §10, §2.4): they are the zero-cost
+   half of the named rollback — "give the DJ Tool's titleFace: 'sans' back
+   to Space Grotesk 600" — if Nunito reads generic. Also currently unfetched. */
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
@@ -110,12 +102,19 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Nunito replaces Space Grotesk as --font-sans (direction.md §2). One
+   variable file, latin subset, weights 400-700 in a single @font-face —
+   this covers font-medium (500) and font-semibold (600) alongside the body
+   weight. Self-hosted (font-src 'self'), OFL 1.1, unicode-range copied
+   verbatim from the rest of this file. Built file measured 39,128 bytes,
+   under the ~60 KB fallback threshold, so the two-static fallback was not
+   needed. */
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'Nunito';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('../assets/fonts/space-grotesk-700.woff2') format('woff2');
+  src: url('../assets/fonts/nunito-variable.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 

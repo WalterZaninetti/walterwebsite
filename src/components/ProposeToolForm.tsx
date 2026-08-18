@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { proposeTopics, site, type ProposeTopic } from '../content/site';
 import { Chip } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
+import { NoteIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
 // These are the only controls on the page that drop the browser's own outline,
@@ -58,7 +59,8 @@ export function ProposeToolForm() {
       className="rounded-card-sm bg-panel-alt p-[22px] text-on-panel dark:border dark:border-line-inset lg:rounded-card lg:px-8 lg:py-[30px]"
     >
       <div className="mb-2.5 flex items-baseline justify-between lg:mb-1.5">
-        <Eyebrow className="tracking-[0.16em] text-on-panel-accent lg:tracking-[0.18em]">
+        <Eyebrow className="flex items-center gap-2 tracking-[0.16em] text-on-panel-accent lg:tracking-[0.18em]">
+          <NoteIcon />
           {t('home.propose.label')}
         </Eyebrow>
         <p className="hidden font-mono text-micro/none text-on-panel-quiet lg:block">

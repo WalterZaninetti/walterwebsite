@@ -9,13 +9,15 @@ import { useTranslation } from 'react-i18next';
  * server does the same, so any of these paths boots the app and this decides
  * what to render.
  */
-export type Route = 'home' | 'legal' | 'magic' | 'notfound';
+export type Route = 'home' | 'legal' | 'magic' | 'dj-tools' | 'seasonable' | 'notfound';
 
 const ROUTES: Record<string, Route> = {
   '/': 'home',
   '/cookie-policy': 'legal',
   '/privacy': 'legal',
   '/magic-tools': 'magic',
+  '/dj-tools': 'dj-tools',
+  '/seasonable': 'seasonable',
 };
 
 /**
@@ -43,14 +45,34 @@ export function useRoute(): Route {
   // Client-side navigation doesn't reload the document, so the title is ours
   // to keep in step — and it has to follow the language too.
   useEffect(() => {
+    // copy.md's `projects.dj.metaTitle` / `projects.seasonable.metaTitle` are whole title
+    // strings (already end in " — Walter"), unlike the other four rows, which build theirs here.
     const titles: Record<Route, string> = {
       home: `Walter — ${t('home.hero.headline')} ${t('home.hero.headlineAccent')}`,
       legal: `${t('legal.title')} — Walter`,
       magic: `${t('magic.hero.title')} — Walter`,
+      'dj-tools': t('projects.dj.metaTitle'),
+      seasonable: t('projects.seasonable.metaTitle'),
       notfound: `${t('notFound.title')} — Walter`,
     };
     document.title = titles[route];
   }, [route, t, i18n.resolvedLanguage]);
+
+  // `ProjectPage`'s foot-of-page "back to the projects" link is a cross-route
+  // fragment link (`/#projects`) reached by a full navigation, not `navigate`
+  // below — deliberately, so the browser's own back/forward and anchor
+  // handling apply. But this is a client-rendered app: on a fresh document
+  // load the browser tries to scroll to `#projects` before React has mounted
+  // it, finds nothing, and gives up silently. This re-attempts the scroll
+  // once the route settles on `home`, by which point the element exists.
+  useEffect(() => {
+    if (route !== 'home' || !window.location.hash) return;
+    const id = window.location.hash.slice(1);
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [route]);
 
   return route;
 }

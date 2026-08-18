@@ -50,7 +50,7 @@ export function OpeningHands() {
     <section id="hands" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
       <SectionHead index="03" heading={t('magic.hands.heading')} blurb={t('magic.hands.blurb')} />
 
-      <div className="grid items-start gap-[22px] lg:grid-cols-[340px_1fr]">
+      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
         {/* ---------------- controls ---------------- */}
         <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
           <Field label={t('magic.hands.deckLabel')} value={String(deck)}>
@@ -102,7 +102,7 @@ export function OpeningHands() {
                   value={row.label}
                   onChange={(e) => patch(index, { label: e.target.value })}
                   aria-label={t('magic.hands.colKind')}
-                  className="h-9 min-w-0 rounded-[8px] border border-magic-field bg-magic-paper px-2.5 font-magic-body text-[13px] text-magic-ink outline-none focus:border-magic-green focus:bg-white"
+                  className="h-9 min-w-0 rounded-[8px] border border-magic-field bg-magic-paper px-2.5 font-magic-body text-[13px] text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
                 />
                 <NumberCell
                   value={row.size}
@@ -128,7 +128,7 @@ export function OpeningHands() {
 
         {/* ---------------- result ---------------- */}
         <div className="flex flex-col gap-[22px]">
-          <div className="rounded-[14px] bg-magic-ink p-[26px] text-magic-cream">
+          <div className="rounded-[14px] bg-magic-slab p-[26px] text-magic-cream">
             {overcommitted ? (
               <p className="font-magic-body text-[20px]/[1.4] italic text-magic-coral text-pretty">
                 {t('magic.hands.overcommitted', { claimed, deck })}
@@ -237,7 +237,7 @@ function NumberCell({
       onChange={(e) =>
         onChange(Math.max(min, Math.min(max, Math.round(Number(e.target.value)) || 0)))
       }
-      className="h-9 w-full rounded-[8px] border border-magic-field bg-magic-paper text-center font-mono text-[13px] font-medium text-magic-ink outline-none focus:border-magic-green focus:bg-white [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+      className="h-9 w-full rounded-[8px] border border-magic-field bg-magic-paper text-center font-mono text-[13px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
     />
   );
 }

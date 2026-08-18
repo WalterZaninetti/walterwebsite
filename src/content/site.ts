@@ -7,32 +7,45 @@
  */
 
 export const site = {
-  email: 'say@walter.dev',
+  email: 'lordLiniDev@proton.me',
   nav: [
     { key: 'projects', href: '#projects' },
     { key: 'music', href: '#music' },
   ],
   socials: [
-    { id: 'github', href: 'https://github.com' },
-    { id: 'twitch', href: 'https://twitch.tv' },
-    { id: 'instagram', href: 'https://instagram.com' },
-    { id: 'linkedin', href: 'https://linkedin.com' },
+    { id: 'github', href: 'https://github.com/WalterZaninetti' },
+    { id: 'twitch', href: 'https://www.twitch.tv/lord_lini' },
+    { id: 'instagram', href: 'https://www.instagram.com/lord_lini' },
+    { id: 'linkedin', href: 'https://it.linkedin.com/in/walter-zaninetti-99808a83' },
   ],
 } as const;
 
 export type ProjectId = 'magic' | 'dj' | 'food';
+
+/**
+ * The `--project-*` token family a project's world draws from. Split out
+ * from `id` on purpose: `id` also keys `home.projects.*` (unchanged,
+ * per copy.md) and, for `food`, the new cross-page `projects.seasonable.*`
+ * locale namespace does not match it. `world` is what a component reaches
+ * for when it needs the token family, so the id/namespace naming question
+ * never has to touch it. Today `world` and `id` hold the same three values;
+ * that is a coincidence of there being three projects and three worlds, not
+ * a guarantee.
+ */
+export type ProjectWorld = 'magic' | 'dj' | 'food';
 
 export type Project = {
   id: ProjectId;
   href: string;
   /** Which family the title is set in — the point of the poster shelf. */
   titleFace: 'editorial' | 'sans' | 'display';
+  world: ProjectWorld;
 };
 
 export const projects: readonly Project[] = [
-  { id: 'magic', href: '/magic-tools', titleFace: 'editorial' },
-  { id: 'dj', href: '#dj-tool', titleFace: 'sans' },
-  { id: 'food', href: '#seasonable', titleFace: 'display' },
+  { id: 'magic', href: '/magic-tools', titleFace: 'editorial', world: 'magic' },
+  { id: 'dj', href: '/dj-tools', titleFace: 'sans', world: 'dj' },
+  { id: 'food', href: '/seasonable', titleFace: 'display', world: 'food' },
 ];
 
 /** Record and track names — proper nouns, identical in both languages. */
@@ -42,8 +55,9 @@ export const music = {
     credit: 'Donato Dozzy & Neel · Prologue, 2012',
   },
   links: {
-    primary: 'https://bandcamp.com',
-    secondary: 'https://spotify.com',
+    /** No Spotify link was supplied (brief.md, "Still open" #1) — Bandcamp
+     * stands alone rather than shipping a bare `https://spotify.com`. */
+    primary: 'https://bandcamp.com/lord_lini',
   },
 } as const;
 

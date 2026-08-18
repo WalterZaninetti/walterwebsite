@@ -9,7 +9,12 @@
     "language": "Lingua",
     "languageEnglish": "Inglese",
     "languageItalian": "Italiano",
-    "skipToContent": "Vai al contenuto"
+    "skipToContent": "Vai al contenuto",
+    "loadingMagic": "Carico Magic Tools…",
+    "chunkErrorTitle": "Magic Tools non si è caricato",
+    "chunkErrorBody": "La pagina carica una sua parte di codice, e quella parte non è arrivata — di solito è la connessione che cade a metà. Ricaricare la recupera, e il resto del sito funziona.",
+    "chunkErrorBodyShort": "Il codice della pagina non è arrivato tutto, di solito è la connessione. Ricaricare risolve — il resto del sito funziona.",
+    "chunkErrorAction": "Ricarica la pagina"
   },
   "nav": {
     "projects": "Progetti",
@@ -32,12 +37,12 @@
       "bio1": "Sono uno sviluppatore software. Rendo open source quasi tutto quello che faccio — non per ideologia, è semplicemente meglio quando la gente può leggere il codice e sistemarlo.",
       "bio2": "Lontano dall'editor gioco a Magic: the Gathering, e mi sto lentamente convincendo a farlo in streaming.",
       "bioShort": "Sviluppatore software, open source per abitudine. Giocatore di Magic, mi sto ancora convincendo a farlo in streaming.",
-      "deck": "Costruisco lo strumento quando mi stanco di farlo a mano. Per ora: geometria delle basi di mana per Magic, mix armonico per i DJ e cosa è davvero di stagione dove vivi. Tutto gratis, tutto open source.",
-      "deckShort": "Costruisco lo strumento quando mi stanco di farlo a mano. Per ora: basi di mana, mix armonico, cosa è di stagione vicino a te. Gratis e open source.",
+      "deck": "Costruisco lo strumento quando mi stanco di farlo a mano. La lista finora: geometria delle basi di mana per Magic, mix armonico per i DJ e cosa è davvero di stagione dove vivi. Quello che esiste è gratis e open source.",
+      "deckShort": "Costruisco lo strumento quando mi stanco di farlo a mano. La lista finora: basi di mana, mix armonico, cosa è di stagione vicino a te. Quello che c'è è gratis e open source.",
       "primaryCta": "Guarda i progetti ↓",
-      "stat1": "03 progetti",
+      "stat1": "01 strumento",
       "stat2": "tutto open source",
-      "statAccent": "due online, uno in corso",
+      "statAccent": "altri due ancora a mano",
       "socialsLabel": "Dove trovarmi"
     },
     "projects": {
@@ -51,7 +56,8 @@
         "descriptionShort": "Geometria della base di mana e linguaggio naturale → filtri Scryfall.",
         "meta": "MIT · web",
         "thumbCaption": "diagramma pentagono del mana",
-        "thumbCaptionShort": "pentagono del mana"
+        "thumbCaptionShort": "pentagono del mana",
+        "thumbAlt": "Schermata del calcolatore delle probabilità di pescata di Magic Tools: un indicatore percentuale con le sue tre statistiche di risultato."
       },
       "dj": {
         "eyebrow": "02 · per i dj",
@@ -59,7 +65,7 @@
         "title": "DJ Tool",
         "description": "Una dashboard sopra la tua collezione Rekordbox — distribuzione dei BPM, generi, tonalità e mix armonico sulla ruota Camelot.",
         "descriptionShort": "Dashboard Rekordbox: BPM, generi, tonalità, ruota Camelot.",
-        "meta": "WIP · v0.3",
+        "meta": "ancora da scrivere",
         "thumbCaption": "ruota camelot",
         "thumbCaptionShort": "ruota camelot"
       },
@@ -69,7 +75,7 @@
         "title": "Seasonable",
         "description": "Scegli un posto e un mese: ti dice quali frutta e verdura sono davvero di stagione lì. Non quelle arrivate in aereo.",
         "descriptionShort": "Posto + mese → cosa è davvero di stagione lì.",
-        "meta": "MIT · online",
+        "meta": "ancora da scrivere",
         "thumbCaption": "natura morta con verdure",
         "thumbCaptionShort": "foto di verdure"
       }
@@ -107,8 +113,7 @@
         "remainingShort": "+16"
       },
       "links": {
-        "primary": "Collezione Bandcamp ↗",
-        "secondary": "Spotify ↗"
+        "primary": "Collezione Bandcamp ↗"
       }
     },
     "coffee": {
@@ -142,7 +147,7 @@
       "ideaLabel": "L'idea",
       "ideaPlaceholder": "Continuo ad aprire tre schede per capire…",
       "submit": "Manda l'idea",
-      "aside": "Oppure scrivi a say@walter.dev",
+      "aside": "Oppure scrivi a lordLiniDev@proton.me",
       "mailFrom": "Da",
       "mailAbout": "Argomento",
       "mailSubject": "Idea per uno strumento"
@@ -434,7 +439,7 @@
       {
         "heading": "I tuoi diritti",
         "body": [
-          "Dato che qui non vengono raccolti o conservati dati personali oltre ai log del server descritti sopra, di norma non c'è niente a cui accedere, da correggere o da cancellare. Se vuoi chiedere di quei log, o di qualsiasi altra cosa in questa pagina, scrivi a say@walter.dev."
+          "Dato che qui non vengono raccolti o conservati dati personali oltre ai log del server descritti sopra, di norma non c'è niente a cui accedere, da correggere o da cancellare. Se vuoi chiedere di quei log, o di qualsiasi altra cosa in questa pagina, scrivi a lordLiniDev@proton.me."
         ]
       }
     ]
@@ -448,5 +453,57 @@
     "linkHome": "Homepage",
     "linkMagic": "Strumenti Magic",
     "linkLegal": "Cookie e privacy"
+  },
+  "projects": {
+    "backLabel": "← Torna ai progetti",
+    "dj": {
+      "title": "DJ Tool",
+      "deck": "Una dashboard per la collezione Rekordbox che hai già. Non è ancora scritta: questa pagina è una descrizione, non un download.",
+      "deckShort": "Una dashboard per la tua collezione Rekordbox. Non è ancora scritta: una descrizione, non un download.",
+      "s1": {
+        "heading": "La collezione che non vedi",
+        "body": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. Le altre le trovi scorrendo. Il mix armonico lo fai a mente, o leggendo la tonalità due battute prima che ti serva — e va bene, finché il disco dopo deve essere quello giusto al primo colpo. Rekordbox ti ordina le colonne come vuoi; la forma di quello che hai dentro non te la dice.",
+        "bodyShort": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. La tonalità la tieni a mente, due battute prima che ti serva. Rekordbox ordina le colonne; la forma di quello che hai dentro non te la dice."
+      },
+      "s2": {
+        "heading": "Cosa ti farebbe vedere",
+        "body": "Una finestra in sola lettura sul file di collezione che Rekordbox tiene già. La distribuzione dei BPM come istogramma: il mucchio a 122 e il buco a 128 li vedi, non li sospetti. I generi contati. Di solito è lì che scopri che quello che suoni e quello che possiedi hanno preso strade diverse. E ogni tonalità sulla ruota Camelot, con i vicini accesi: i due numeri adiacenti e il modo relativo, i passaggi che faresti davvero in una transizione.",
+        "bodyShort": "Una finestra in sola lettura sul file che Rekordbox tiene già. La distribuzione dei BPM come istogramma: il mucchio a 122, il buco a 128. I generi contati. Ogni tonalità sulla ruota Camelot con i vicini accesi: i due numeri adiacenti e il modo relativo.",
+        "caveat": "Il difetto, detto subito: Rekordbox non spiega come è fatto il suo database. Quindi leggerebbe il file XML che esporti a mano, quello che devi ricordarti di fare. E non ci scriverebbe niente dentro. È la parte più fragile: il formato può cambiare da un giorno all'altro, e dovrei rimetterla a posto ogni volta.",
+        "caveatShort": "Il difetto, detto subito: Rekordbox non spiega come è fatto il suo database. Leggerebbe il file XML che esporti a mano, senza scriverci niente dentro. È la parte più fragile."
+      },
+      "s3": {
+        "heading": "A che punto è davvero",
+        "body": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da scaricare, e nessuna data che mi fiderei a darti. Sarebbe un'applicazione desktop e non una pagina web, perché il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà a questo indirizzo.",
+        "bodyShort": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da scaricare, nessuna data che mi fiderei a darti. Sarebbe un'app desktop: il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà qui."
+      },
+      "metaTitle": "DJ Tool — una dashboard per Rekordbox — Walter",
+      "metaDescription": "Una dashboard per la collezione Rekordbox che hai già: BPM, generi, tonalità, ruota Camelot. Non è ancora scritta: una descrizione, non un download."
+    },
+    "seasonable": {
+      "title": "Seasonable",
+      "deck": "Gli dici dove sei e in che mese siamo, e ti dice quali frutta e verdura sono davvero di stagione lì. Non è ancora scritto: questa pagina è una descrizione, non un link.",
+      "deckShort": "Un posto e un mese, e sai cosa è davvero di stagione lì. Non è ancora scritto: una descrizione, non un link.",
+      "s1": {
+        "heading": "Le fragole a gennaio",
+        "body": "Compri la cosa perché c'è. Fragole a gennaio, pomodori a marzo: sotto le luci del negozio sembrano giuste, poi non sanno di niente e finisci per cucinarle dentro qualcos'altro per non sentirlo. Capire cosa è davvero di stagione non è difficile. È che la risposta cambia col mese e con il posto in cui sei, e il calendario che hai in testa è quello di dove sei cresciuto.",
+        "bodyShort": "Compri la cosa perché c'è. Fragole a gennaio, pomodori a marzo: sotto le luci sembrano giuste, poi non sanno di niente. La risposta cambia col mese e col posto in cui sei, e il calendario che hai in testa è quello di dove sei cresciuto."
+      },
+      "s2": {
+        "heading": "Cosa farebbe",
+        "body": "Due campi, un posto e un mese, e una lista corta in risposta: cosa si raccoglie adesso vicino a te, cosa è di conserva e cosa è sul banco solo perché è arrivato in aereo. Niente account, niente da installare.",
+        "bodyShort": "Due campi, un posto e un mese, e una lista corta: cosa si raccoglie adesso vicino a te, cosa è di conserva, cosa è lì solo perché è arrivato in aereo.",
+        "caveat": "La parte difficile è la parola davvero. Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte nello stesso momento. Serra e pieno campo sono due risposte diverse alla stessa domanda, e un anno caldo sposta tutto di due settimane. Una versione onesta deve dire da dove viene ogni data. È lì quasi tutto il lavoro, ed è quasi tutto il motivo per cui non l'ho ancora scritto.",
+        "caveatShort": "La parte difficile è la parola davvero. Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte insieme, e un anno caldo sposta tutto di due settimane. Dire da dove viene ogni data è quasi tutto il lavoro."
+      },
+      "s3": {
+        "heading": "A che punto è davvero",
+        "body": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da aprire, e nessuna data che mi fiderei a darti. Sarebbe una pagina web piccola, gratis, con il codice lì da leggere — come tutto il resto qui. Quando ci sarà qualcosa da usare, sarà a questo indirizzo.",
+        "bodyShort": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da aprire, nessuna data che mi fiderei a darti. Sarebbe una pagina web piccola e gratis, con il codice leggibile. Quando ci sarà qualcosa da usare, sarà qui."
+      },
+      "metaTitle": "Seasonable — cosa è davvero di stagione — Walter",
+      "metaDescription": "Un posto e un mese, e sai quali frutta e verdura sono davvero di stagione lì. Non è ancora scritto: questa pagina lo descrive e dice perché è difficile.",
+      "figureCaption": "fragole"
+    }
   }
 }

@@ -39,7 +39,7 @@ export function DrawOdds() {
     <section id="odds" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
       <SectionHead index="01" heading={t('magic.odds.heading')} blurb={t('magic.odds.blurb')} />
 
-      <div className="grid items-start gap-[22px] lg:grid-cols-[340px_1fr]">
+      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
         {/* ---------------- controls ---------------- */}
         <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
           <Field label={t('magic.odds.deckLabel')} value={String(deck)}>
@@ -49,7 +49,7 @@ export function DrawOdds() {
               max={1000}
               value={deck}
               onChange={(e) => set({ deck: Number(e.target.value) || 1 })}
-              className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none focus:border-magic-green focus:bg-white [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
             <div className="flex gap-[7px]">
               {magic.deckPresets.map((value) => (
@@ -110,7 +110,7 @@ export function DrawOdds() {
 
         {/* ---------------- results ---------------- */}
         <div className="flex flex-col gap-[22px]">
-          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-ink p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
+          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-slab p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
             <Gauge value={formatPercent(odds.atLeastP, locale)} percent={odds.atLeastP} caption={t('magic.odds.gaugeCaption', { count: atLeast })} />
             <div>
               <p className="mb-[18px] font-magic-body text-[24px]/[1.4] italic text-pretty">
@@ -242,7 +242,7 @@ function Stepper({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="size-10 cursor-pointer rounded-[9px] border border-magic-field bg-white font-mono text-[17px] font-medium text-magic-green-deep transition-colors hover:border-magic-green"
+      className="size-10 cursor-pointer rounded-[9px] border border-magic-field bg-magic-card font-mono text-[17px] font-medium text-magic-green-deep transition-colors hover:border-magic-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
     >
       {children}
     </button>
@@ -259,7 +259,7 @@ function Gauge({ value, percent, caption }: { value: string; percent: number; ca
         )}deg, rgb(255 251 213 / 0.14) 0)`,
       }}
     >
-      <div className="grid size-[130px] place-items-center rounded-full bg-magic-ink text-center">
+      <div className="grid size-[130px] place-items-center rounded-full bg-magic-slab text-center">
         <div>
           <p className="font-mono text-[38px]/none font-medium tracking-[-0.03em] text-white">
             {value}

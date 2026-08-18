@@ -62,7 +62,7 @@ export function ManaSources() {
     <section id="mana" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
       <SectionHead index="02" heading={t('magic.mana.heading')} blurb={t('magic.mana.blurb')} />
 
-      <div className="grid items-start gap-[22px] lg:grid-cols-[340px_1fr]">
+      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
         {/* ---------------- controls ---------------- */}
         <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
           <Field label={t('magic.mana.deckLabel')} value={String(s.deck)}>
@@ -151,7 +151,7 @@ export function ManaSources() {
 
         {/* ---------------- result ---------------- */}
         <div className="flex flex-col gap-[22px]">
-          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-ink p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
+          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-slab p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
             <div className="justify-self-center text-center">
               <p className="font-mono text-[64px]/none font-medium tracking-[-0.03em] text-white">
                 {answer ? answer.sources : '—'}

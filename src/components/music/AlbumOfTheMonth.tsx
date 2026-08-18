@@ -39,7 +39,7 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
           <p className="mb-3 font-mono text-[12.5px] text-on-panel-accent lg:mb-[14px] lg:text-[13.5px]">
             {music.album.credit}
           </p>
-          <p className="mb-4 text-note/[1.7] text-on-panel-prose text-pretty">
+          <p id="album-note" className="mb-4 text-note/[1.7] text-on-panel-prose text-pretty">
             <span className="md:hidden">{t('home.music.album.noteShort')}</span>
             <span className="hidden md:inline">{t('home.music.album.note')}</span>
           </p>

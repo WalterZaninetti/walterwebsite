@@ -5,7 +5,12 @@
  */
 
 export const magic = {
-  repoHref: 'https://github.com',
+  repoHref: 'https://github.com/WalterZaninetti/walterwebsite',
+  /** The translate service backing the plain-English search — its own repo,
+   * separate from the calculators above. Linked from the footer credit line,
+   * which is the page's one mention of where the card data (and the
+   * Scryfall-probe argument behind the search) comes from. */
+  translateRepoHref: 'https://github.com/WalterZaninetti/natural-language-to-scryfall-filters',
   nav: [
     { key: 'navOdds', href: '#odds' },
     { key: 'navMana', href: '#mana' },

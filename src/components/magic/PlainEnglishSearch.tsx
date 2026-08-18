@@ -117,7 +117,7 @@ export function PlainEnglishSearch() {
       <div className="grid items-start gap-[22px] lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-4">
           {/* -------- input -------- */}
-          <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
+          <div className="rounded-[14px] border border-magic-cream/22 bg-magic-slab p-[22px]">
             <p className="mb-3 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
               {t('magic.search.prompt')}
             </p>
@@ -129,7 +129,7 @@ export function PlainEnglishSearch() {
               }}
               rows={3}
               placeholder={t('magic.search.placeholder')}
-              className="box-border w-full resize-y rounded-[10px] border border-magic-cream/28 bg-magic-cream/6 px-[18px] py-4 font-magic-body text-[17px]/[1.6] text-white outline-none focus:border-magic-green-light focus:bg-magic-cream/10"
+              className="box-border w-full resize-y rounded-[10px] border border-magic-cream/28 bg-magic-cream/6 px-[18px] py-4 font-magic-body text-[17px]/[1.6] text-white outline-none transition-colors focus:border-magic-green-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
             />
             <div className="mt-3.5 flex flex-wrap items-center gap-2">
               <span className="font-mono text-[11px]/[28px] text-magic-cream-faint">
@@ -140,7 +140,7 @@ export function PlainEnglishSearch() {
                   key={example}
                   type="button"
                   onClick={() => applyExample(example)}
-                  className="h-[30px] cursor-pointer rounded-pill border border-magic-cream/28 bg-transparent px-3 font-mono text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white"
+                  className="h-[30px] cursor-pointer rounded-pill border border-magic-cream/28 bg-transparent px-3 font-mono text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                 >
                   {example.length > 34 ? `${example.slice(0, 32)}…` : example}
                 </button>
@@ -157,7 +157,7 @@ export function PlainEnglishSearch() {
           </div>
 
           {/* -------- result -------- */}
-          <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
+          <div className="rounded-[14px] border border-magic-cream/22 bg-magic-slab p-[22px]">
             <div className="mb-3.5 flex items-center justify-between gap-3">
               <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
                 {t('magic.search.queryLabel')}
@@ -279,7 +279,7 @@ export function PlainEnglishSearch() {
                       if (e.key === 'Enter') void run(refineText, { refine: true });
                     }}
                     placeholder={t('magic.search.refinePlaceholder')}
-                    className="box-border h-[38px] min-w-0 flex-1 rounded-pill border border-magic-cream/28 bg-magic-cream/6 px-4 font-magic-body text-[14px] text-white outline-none focus:border-magic-green-light focus:bg-magic-cream/10"
+                    className="box-border h-[38px] min-w-0 flex-1 rounded-pill border border-magic-cream/28 bg-magic-cream/6 px-4 font-magic-body text-[14px] text-white outline-none transition-colors focus:border-magic-green-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                   />
                   <button
                     type="button"
@@ -299,7 +299,7 @@ export function PlainEnglishSearch() {
                         setRefineText(example);
                         void run(example, { refine: true });
                       }}
-                      className="h-[26px] cursor-pointer rounded-pill border border-magic-cream/22 bg-transparent px-2.5 font-mono text-[11px] text-magic-cream-faint transition-colors hover:border-magic-green-light hover:text-magic-cream"
+                      className="h-[26px] cursor-pointer rounded-pill border border-magic-cream/22 bg-transparent px-2.5 font-mono text-[11px] text-magic-cream-faint transition-colors hover:border-magic-green-light hover:text-magic-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                     >
                       {example}
                     </button>
@@ -311,14 +311,14 @@ export function PlainEnglishSearch() {
         </div>
 
         {/* -------- legend -------- */}
-        <div className="rounded-[14px] border border-magic-cream/22 bg-magic-ink p-[22px]">
+        <div className="rounded-[14px] border border-magic-cream/22 bg-magic-slab p-[22px]">
           <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
             {t('magic.search.legendTitle')}
           </p>
           <p className="mb-[18px] font-magic-body text-[12.5px]/[1.6] text-magic-steel">
             {t('magic.search.legendNote')}
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-x-5">
             {legend.map((group, groupIndex) => (
               <div key={group.title} className="border-t border-magic-cream/16 pt-3.5">
                 <div className="mb-[9px] flex items-baseline justify-between gap-2.5">
@@ -335,7 +335,7 @@ export function PlainEnglishSearch() {
                       key={item}
                       type="button"
                       onClick={() => applyExample(item)}
-                      className="cursor-pointer rounded-lg border border-magic-cream/24 bg-transparent px-[11px] py-1.5 text-left font-magic-body text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white"
+                      className="cursor-pointer rounded-lg border border-magic-cream/24 bg-transparent px-[11px] py-1.5 text-left font-magic-body text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                     >
                       {item}
                     </button>

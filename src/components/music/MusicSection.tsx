@@ -4,6 +4,7 @@ import { AlbumOfTheMonth } from './AlbumOfTheMonth';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
+import { WaveIcon } from '../ui/icons';
 import { cx } from '../ui/cx';
 
 /**
@@ -50,7 +51,12 @@ export function MusicSection() {
   );
 }
 
-/** Bandcamp / Spotify. Inline pills in the desktop header, stacked on mobile. */
+/**
+ * Bandcamp. Used to be a Bandcamp/Spotify pair; no Spotify link was ever
+ * supplied (brief.md, "Still open" #1), and shipping the bare
+ * `https://spotify.com` domain was rejected in favour of Bandcamp standing
+ * alone. Kept as its own component in case a second link returns.
+ */
 function MusicLinks({ className, stacked = false }: { className?: string; stacked?: boolean }) {
   const { t } = useTranslation();
 
@@ -67,17 +73,6 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
       >
         {t('home.music.links.primary')}
       </PanelPill>
-      <PanelPill
-        href={music.links.secondary}
-        className={cx(
-          'hover:border-sage-solid hover:bg-fill-on-panel hover:text-on-panel-body',
-          stacked
-            ? 'grid h-[46px] place-items-center text-[12.5px]'
-            : 'px-[18px] py-[11px] text-meta',
-        )}
-      >
-        {t('home.music.links.secondary')}
-      </PanelPill>
     </div>
   );
 }
@@ -92,8 +87,9 @@ function PreviousPicks({ className }: { className?: string }) {
   const months = t('home.music.previous.months', { returnObjects: true }) as string[];
 
   return (
-    <div className={cx('flex flex-col gap-2.5', className)}>
-      <Eyebrow className="tracking-[0.16em] text-on-panel-quiet lg:tracking-[0.18em]">
+    <div id="picks" className={cx('flex flex-col gap-2.5', className)}>
+      <Eyebrow className="flex items-center gap-2 tracking-[0.16em] text-on-panel-quiet lg:tracking-[0.18em]">
+        <WaveIcon />
         {t('home.music.previous.label')}
       </Eyebrow>
       <div className="grid grid-cols-4 gap-2 lg:grid-cols-3 lg:gap-2.5">

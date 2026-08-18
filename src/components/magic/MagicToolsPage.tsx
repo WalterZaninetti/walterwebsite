@@ -6,6 +6,8 @@ import { cx } from '../ui/cx';
 import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { SkipLink } from '../ui/SkipLink';
+import { Tile } from '../ui/Tile';
+import { CardsIcon } from '../ui/icons';
 import { DrawOdds } from './DrawOdds';
 import { ManaPips } from './ManaPips';
 import { ManaSources } from './ManaSources';
@@ -23,7 +25,7 @@ export function MagicToolsPage() {
   return (
     <div className="min-h-screen bg-magic-parchment font-magic-body text-magic-ink">
       <div className="mx-auto max-w-[1240px] bg-magic-paper shadow-[0_0_0_1px_var(--color-magic-rule)]">
-        <SkipLink className="bg-magic-ink text-magic-paper" />
+        <SkipLink className="bg-magic-slab text-magic-cream" />
         <Header />
         {/* The page had no main landmark at all, so assistive tech had nothing to skip to. */}
         <main id="main">
@@ -48,14 +50,14 @@ function Header() {
       <a
         href="/"
         onClick={navigate}
-        className="flex items-center gap-3.5 text-magic-ink no-underline"
+        className="flex min-w-0 items-center gap-3.5 text-magic-ink no-underline"
       >
         <Monogram
           size={40}
-          className="text-magic-green-deep"
+          className="shrink-0 text-magic-green-deep"
           accentClassName="stroke-magic-green"
         />
-        <span className="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-magic-ink-muted">
+        <span className="min-w-0 truncate font-mono text-label-wide uppercase tracking-[0.14em] text-magic-ink-muted">
           Walter <span className="text-magic-slash">/</span> {t('magic.crumbPage')}
         </span>
       </a>
@@ -64,7 +66,7 @@ function Header() {
           <a
             key={item.key}
             href={item.href}
-            className="hidden text-inherit no-underline transition-colors hover:text-magic-green-deep sm:inline"
+            className="hidden whitespace-nowrap text-inherit no-underline transition-colors hover:text-magic-green-deep lg:inline"
           >
             {t(`magic.${item.key}`)}
           </a>
@@ -75,7 +77,7 @@ function Header() {
         />
         <a
           href={magic.repoHref}
-          className="rounded-pill border border-[#cfc3a1] px-3.5 py-2 text-magic-green-deep no-underline transition-colors hover:border-magic-green-deep hover:bg-magic-green-deep hover:text-magic-paper"
+          className="shrink-0 rounded-pill border border-magic-field px-3.5 py-2 text-magic-green-deep no-underline transition-colors hover:border-magic-green-deep hover:bg-magic-green-deep hover:text-magic-paper"
         >
           {t('magic.repo')}
         </a>
@@ -95,11 +97,12 @@ function Hero() {
   ];
 
   return (
-    <div
-      id="top"
-      className="relative overflow-hidden bg-magic-ink px-5 pt-12 pb-11 text-magic-cream md:px-10 md:pt-16 md:pb-14"
-    >
-      <div className="relative">
+    // The tile straddles this box's bottom edge (direction.md §3.2), so the
+    // overflow-hidden slab and the tile can't share a box: the slab keeps
+    // its own clip for whatever it draws internally, and the tile sits on
+    // this outer, unclipped wrapper as a sibling instead.
+    <div id="top" className="relative">
+      <div className="relative overflow-hidden bg-magic-slab px-5 pt-12 pb-11 text-magic-cream md:px-10 md:pt-16 md:pb-14">
         <div className="mb-6">
           <ManaPips />
         </div>
@@ -119,7 +122,7 @@ function Hero() {
         */}
         <nav
           aria-label={t('magic.hero.toolsLabel')}
-          className="mt-9 grid gap-x-0 gap-y-6 border-t border-magic-cream/25 pt-7 sm:grid-cols-2 lg:grid-cols-5 md:mt-11"
+          className="mt-9 grid gap-x-0 gap-y-6 border-t border-magic-cream/25 pt-7 sm:grid-cols-2 md:mt-11 md:grid-cols-3 lg:grid-cols-5"
         >
           {jumps.map((item) => (
             <a
@@ -127,11 +130,13 @@ function Hero() {
               href={item.href}
               // Dividers belong to whichever cells start a column, and that
               // changes with the breakpoint — so they key off nth-child, not the
-              // array index. At two columns the odd items start a row; at five,
-              // only the first does.
+              // array index. At two columns the odd items start a row; at
+              // three (768), every third; at five, only the first.
               className={cx(
                 'text-magic-cream no-underline transition-colors hover:text-magic-green-light',
                 'sm:[&:nth-child(even)]:border-l sm:[&:nth-child(even)]:border-magic-cream/20 sm:[&:nth-child(even)]:pl-5',
+                'md:[&:not(:nth-child(3n+1))]:border-l md:[&:not(:nth-child(3n+1))]:border-magic-cream/20',
+                'md:[&:not(:nth-child(3n+1))]:pl-5',
                 'lg:[&:nth-child(n+2)]:border-l lg:[&:nth-child(n+2)]:border-magic-cream/20 lg:[&:nth-child(n+2)]:pl-6',
               )}
             >
@@ -146,6 +151,16 @@ function Hero() {
           ))}
         </nav>
       </div>
+      {/*
+        The one addition to this page (direction.md §3.2, §12 assumption 4):
+        drawn in --magic-green on --magic-cream, no ring — the page has no
+        dark scheme, so §1.4's light/dark ring logic doesn't apply to it.
+      */}
+      <Tile
+        icon={CardsIcon}
+        tone="bg-magic-green text-magic-cream"
+        className="absolute -bottom-6 left-5 md:left-10 lg:-bottom-7"
+      />
     </div>
   );
 }
@@ -154,7 +169,7 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <div className="border-t border-magic-cream/18 bg-magic-ink px-5 pt-7 pb-8 text-magic-cream-dim md:px-10">
+    <div className="border-t border-magic-cream/18 bg-magic-slab px-5 pt-7 pb-8 text-magic-cream-dim md:px-10">
       <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:flex-wrap md:gap-10">
         <div className="flex items-center gap-4">
           <Monogram
@@ -163,9 +178,14 @@ function Footer() {
             accentClassName="stroke-magic-green-light"
           />
           <span aria-hidden="true" className="h-[26px] w-px bg-magic-cream/25" />
-          <span className="font-mono text-[12px] text-magic-cream-faint">
+          <a
+            href={magic.translateRepoHref}
+            target="_blank"
+            rel="noopener"
+            className="font-mono text-[12px] text-magic-cream-faint no-underline transition-colors hover:text-magic-cream"
+          >
             {t('magic.footer.meta')}
-          </span>
+          </a>
         </div>
         <p className="font-magic-display text-[13px]/[1.2] font-medium tracking-[0.02em] text-magic-cream">
           {t('home.footer.credit')}
