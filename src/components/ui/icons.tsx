@@ -173,3 +173,29 @@ export function MoonIcon({ className }: GlyphProps = {}) {
     </svg>
   );
 }
+
+/**
+ * The two music source marks. Unlike everything above these are brand marks, not line icons
+ * drawn to the house grammar — they are filled, and their geometry is not ours to restyle.
+ *
+ * Spotify's design guidelines require the logo to appear wherever its metadata does, and permit
+ * the green mark only on black or white. The source cards sit on `--panel-inset`, which is
+ * neither, so this draws in currentColor and the card gives it a monochrome rung of the on-panel
+ * ladder. Do not recolour it green here.
+ */
+export function SpotifyMark({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} fill="currentColor">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 0 1-.277-1.215c3.809-.87 7.077-.496 9.712 1.115a.623.623 0 0 1 .207.857Zm1.224-2.723a.78.78 0 0 1-1.072.257c-2.688-1.652-6.786-2.131-9.965-1.166a.78.78 0 1 1-.452-1.492c3.632-1.102 8.147-.568 11.232 1.329a.78.78 0 0 1 .257 1.072Zm.105-2.835c-3.223-1.914-8.54-2.09-11.618-1.156a.935.935 0 1 1-.542-1.79c3.532-1.072 9.404-.865 13.115 1.338a.935.935 0 0 1-.955 1.608Z" />
+    </svg>
+  );
+}
+
+/** Bandcamp's mark: a single slanted quadrilateral. */
+export function BandcampMark({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} fill="currentColor">
+      <path d="M2.4 17.4 8.9 6.6h12.7l-6.5 10.8H2.4Z" />
+    </svg>
+  );
+}

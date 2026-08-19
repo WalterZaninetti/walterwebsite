@@ -101,6 +101,20 @@
         "readLinkShort": "Leggi la nota →",
         "archiveLink": "Tutte le 19 scelte ↗"
       },
+      "sources": {
+        "spotify": {
+          "label": "In loop",
+          "caption": "Le ultime cinque cose che ho ascoltato davvero, direttamente da Spotify.",
+          "link": "Apri Spotify ↗",
+          "empty": "Niente da mostrare — il feed si riempirà al prossimo deploy."
+        },
+        "bandcamp": {
+          "label": "Appena comprati",
+          "caption": "Gli ultimi cinque dischi entrati in collezione. Bandcamp conta gli acquisti, non gli ascolti: questi li ho pagati.",
+          "link": "Apri Bandcamp ↗",
+          "empty": "Niente da mostrare — il feed si riempirà al prossimo deploy."
+        }
+      },
       "previous": {
         "label": "Scelte precedenti",
         "months": [

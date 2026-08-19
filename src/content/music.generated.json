@@ -1,0 +1,58 @@
+{
+  "spotify": {
+    "items": [],
+    "fetchedAt": null,
+    "profileUrl": null
+  },
+  "bandcamp": {
+    "items": [
+      {
+        "id": "a580698176",
+        "title": "R&B Goes Disco Vol. 3",
+        "artist": "Woody Braun",
+        "url": "https://woodybraun.bandcamp.com/album/r-b-goes-disco-vol-3",
+        "at": "2026-05-03T11:22:25.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-0.webp"
+      },
+      {
+        "id": "a4151127571",
+        "title": "Edits Do Brasil",
+        "artist": "Elado",
+        "url": "https://scruscru.bandcamp.com/album/edits-do-brasil",
+        "at": "2026-05-03T11:22:13.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-1.webp"
+      },
+      {
+        "id": "a1861347001",
+        "title": "DG085",
+        "artist": "DiscoGram",
+        "url": "https://discogram.bandcamp.com/album/dg085",
+        "at": "2026-05-03T11:22:02.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-2.webp"
+      },
+      {
+        "id": "a3377974513",
+        "title": "CHAPTER TWENTY-NINE EDITS [TBE029] - Free Download!",
+        "artist": "Supertaste",
+        "url": "https://thebasementdiscos.bandcamp.com/album/chapter-twenty-nine-edits-tbe029-free-download",
+        "at": "2026-05-03T11:21:49.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-3.webp"
+      },
+      {
+        "id": "t2500846802",
+        "title": "Hooked",
+        "artist": "Reece Johnson",
+        "url": "https://lisztomaniarec.bandcamp.com/track/hooked",
+        "at": "2026-03-04T21:15:17.000Z",
+        "kind": "track",
+        "art": "/images/music/bandcamp-4.webp"
+      }
+    ],
+    "profileUrl": null,
+    "fetchedAt": "2026-08-19T09:01:18.509Z"
+  }
+}

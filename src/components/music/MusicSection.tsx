@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
 import { AlbumOfTheMonth } from './AlbumOfTheMonth';
+import { SourceCard } from './SourceCard';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
@@ -45,8 +46,17 @@ export function MusicSection() {
       <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr] lg:items-start lg:gap-[22px]">
         <AlbumOfTheMonth />
         <PreviousPicks />
-        <MusicLinks className="flex flex-col gap-2 lg:hidden" stacked />
       </div>
+
+      {/* The two feeds. Equal columns, because neither source outranks the other — and two
+          separate cards rather than one merged list, which is both the honest reading (Spotify
+          reports plays, Bandcamp reports purchases) and the one Spotify's guidelines allow. */}
+      <div className="mt-4 grid gap-4 lg:mt-[22px] lg:grid-cols-2 lg:gap-[22px]">
+        <SourceCard source="spotify" />
+        <SourceCard source="bandcamp" />
+      </div>
+
+      <MusicLinks className="mt-4 flex flex-col gap-2 lg:hidden" stacked />
     </section>
   );
 }
@@ -56,6 +66,9 @@ export function MusicSection() {
  * supplied (brief.md, "Still open" #1), and shipping the bare
  * `https://spotify.com` domain was rejected in favour of Bandcamp standing
  * alone. Kept as its own component in case a second link returns.
+ *
+ * It survives the source cards because it points somewhere they don't: the
+ * whole collection, not the five most recent additions.
  */
 function MusicLinks({ className, stacked = false }: { className?: string; stacked?: boolean }) {
   const { t } = useTranslation();

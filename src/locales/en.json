@@ -101,6 +101,20 @@
         "readLinkShort": "Read the note →",
         "archiveLink": "All 19 picks ↗"
       },
+      "sources": {
+        "spotify": {
+          "label": "On repeat",
+          "caption": "The last five things I actually played, straight from Spotify.",
+          "link": "Open Spotify ↗",
+          "empty": "Nothing to show — the feed will fill on the next deploy."
+        },
+        "bandcamp": {
+          "label": "Just bought",
+          "caption": "The last five records into the collection. Bandcamp counts purchases, not plays — these are the ones I paid for.",
+          "link": "Open Bandcamp ↗",
+          "empty": "Nothing to show — the feed will fill on the next deploy."
+        }
+      },
       "previous": {
         "label": "Previous picks",
         "months": [

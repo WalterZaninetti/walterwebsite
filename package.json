@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "fetch:music": "node scripts/fetch-music.mjs",
+    "build": "npm run fetch:music && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "analyze": "ANALYZE=true vite build",
