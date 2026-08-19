@@ -62,9 +62,9 @@
       "dj": {
         "eyebrow": "02 · for djs",
         "eyebrowShort": "02 · djs",
-        "title": "DJ Tool",
-        "description": "A dashboard sitting on top of your Rekordbox collection — BPM spread, genres, keys, and harmonic mixing on the Camelot wheel.",
-        "descriptionShort": "Rekordbox dashboard: BPM, genre, key, Camelot wheel.",
+        "title": "Crate",
+        "description": "A desktop app for the Rekordbox library you already have — stacked filters, Camelot moves, duplicates and dead paths, and a playlist back out.",
+        "descriptionShort": "Rekordbox, filtered: stacked filters, keys, duplicates, a playlist back out.",
         "meta": "not built yet",
         "thumbCaption": "camelot wheel",
         "thumbCaptionShort": "camelot wheel"
@@ -386,6 +386,63 @@
     "navHands": "Opening hands",
     "navFinding": "Finding a card"
   },
+  "dj": {
+    "title": "Crate",
+    "eyebrow": "02 · for djs",
+    "eyebrowShort": "02 · djs",
+    "deck": "A desktop app for the Rekordbox library you already have: stack filters, find what's broken, see the shape of it, hand a playlist back. It isn't built yet — this page is a description, not a download.",
+    "deckShort": "A desktop app for the Rekordbox library you already have. It isn't built yet — a description, not a download.",
+    "problem": {
+      "heading": "The collection you can't see",
+      "body": "A few thousand tracks in Rekordbox, and you know maybe two hundred of them by feel. The rest you find by scrolling. The harmonic mixing you do in your head, or off the key tag two bars before you need it — fine, until the next record has to be right the first time. Rekordbox will sort any column you ask it to; it won't tell you the shape of what you own.",
+      "bodyShort": "A few thousand tracks in Rekordbox, and you know maybe two hundred by feel. The key you hold in your head, two bars before you need it. Rekordbox will sort any column you ask it to; it won't tell you the shape of what you own."
+    },
+    "mechanism": {
+      "heading": "Rekordbox already knows",
+      "body": "Every one of those things is already in the collection file: the BPM, the key, the rating, the date you added it, the cue points, the colour tags, every playlist you've ever made. Rekordbox will sort one column at a time. What it won't do is let you ask it anything — six conditions at once, or what the whole pile looks like. So this doesn't analyse your audio and it doesn't guess at your taste. It reads a file you already have and answers the questions you were already asking.",
+      "bodyShort": "All of it is already in the collection file — BPM, key, rating, cue points, every playlist you've made. Rekordbox sorts one column at a time; it won't let you ask it six things at once. So this doesn't analyse audio or guess at your taste. It reads a file you already have."
+    },
+    "does": {
+      "heading": "Six things it would do",
+      "read": {
+        "title": "Reads your export. Writes nothing back.",
+        "body": "You point it at the XML export Rekordbox already makes. It reads everything in there — every field, every playlist, every cue — and it opens the file for reading only. Re-export later and it shows you what was added, changed or removed since last time. Rekordbox stays the thing that's true.",
+        "caveat": "The honest wart: Rekordbox doesn't document its own database, which is why this reads the export and not the real thing — and the export is the one you have to remember to make. A format that can change without notice is the part most likely to break, and the part I'd keep having to fix."
+      },
+      "filters": {
+        "title": "Filters that stack",
+        "body": "Rekordbox sorts one column. This intersects as many as you like: 122–126 BPM, in 8A, four stars and up, house, added this year, never played, has cue points. Save the combination and it keeps filling itself as the collection grows. That last one — never played — is how you find the records you bought and forgot."
+      },
+      "harmonic": {
+        "title": "Camelot, and what pitch buys you",
+        "body": "Pick a track and the wheel lights the moves: the two adjacent numbers and the relative mode. Push the pitch and it lights more — what becomes compatible at ±3%, and again at ±6%. Camelot, Open Key or musical notation, whichever you read."
+      },
+      "health": {
+        "title": "The unglamorous list",
+        "body": "Duplicates across different files. Paths that point at nothing. Tracks with no BPM, no key, no genre, no artwork. Files that were never analysed. Genre tags spelled four ways. Bitrates you'd rather not hear on a big system. Tracks with no cue points, and tracks in no playlist at all. Ordered by how much each one costs you in a booth, not by how many there are."
+      },
+      "overview": {
+        "title": "The shape of what you own",
+        "body": "The BPM spread as a histogram, so the pile at 122 and the hole at 128 are things you see rather than suspect. Genres by count — usually where you find out that what you play and what you own parted company a while ago. Keys, labels, decades, how the collection grew, what you actually rate. The answer to \"what have I got\"."
+      },
+      "handoff": {
+        "title": "Then it hands it back",
+        "body": "Build a shortlist out of any filter and export it as a Rekordbox playlist, so it lands back in Rekordbox, on the USB, in the booth. That's where this stops. It hands you the pool; the set is yours. Nothing here decides what comes next, and nothing here is going to."
+      }
+    },
+    "status": {
+      "heading": "Where it actually is",
+      "body": "Right now it's a name and a list of what it would do. No repository, nothing to download, and no date I'd trust enough to give you. It'll be a desktop application rather than a web page, because the collection file lives on your machine and I'd rather it stayed there. When there's something to open, it will be at this address.",
+      "bodyShort": "Right now it's a name and a list of what it would do. No repository, nothing to download, no date I'd trust enough to give you. It'll be a desktop app: the collection file lives on your machine and I'd rather it stayed there."
+    },
+    "figures": {
+      "wheel": "8A, and the three moves out of it",
+      "bpm": "the pile at 122, the hole at 128",
+      "stack": "six conditions, one result"
+    },
+    "metaTitle": "Crate — a Rekordbox library tool — Walter",
+    "metaDescription": "Reads your Rekordbox export and writes nothing back: stacked filters, Camelot moves, dead paths and duplicates, a playlist back out. Not built yet."
+  },
   "legal": {
     "title": "Cookies & privacy",
     "updated": "Last updated 30 July 2026",
@@ -452,30 +509,6 @@
   },
   "projects": {
     "backLabel": "← Back to the projects",
-    "dj": {
-      "title": "DJ Tool",
-      "deck": "A dashboard for the Rekordbox collection you already have. It isn't built yet — this page is a description, not a download.",
-      "deckShort": "A dashboard for your Rekordbox collection. Not built yet — a description, not a download.",
-      "s1": {
-        "heading": "The collection you can't see",
-        "body": "A few thousand tracks in Rekordbox, and you know maybe two hundred of them by feel. The rest you find by scrolling. The harmonic mixing you do in your head, or off the key tag two bars before you need it — fine, until the next record has to be right the first time. Rekordbox will sort any column you ask it to; it won't tell you the shape of what you own.",
-        "bodyShort": "A few thousand tracks in Rekordbox, and you know maybe two hundred by feel. The key you hold in your head, two bars before you need it. Rekordbox will sort any column you ask it to; it won't tell you the shape of what you own."
-      },
-      "s2": {
-        "heading": "What it would show you",
-        "body": "One read-only window onto the collection file Rekordbox already keeps. The BPM spread as a histogram, so the pile at 122 and the hole at 128 are things you see rather than suspect. Genres by count, usually where you find out that what you play and what you own parted company a while ago. Every key on the Camelot wheel with its neighbours lit: the two adjacent numbers and the relative mode, the moves you'd make at a transition.",
-        "bodyShort": "One read-only window onto the file Rekordbox already keeps. The BPM spread as a histogram: the pile at 122, the hole at 128. Genres by count. Every key on the Camelot wheel with its neighbours lit: the two adjacent numbers and the relative mode.",
-        "caveat": "The honest wart: Rekordbox doesn't document its own database, so this would read the XML export — the one you have to remember to make — and write nothing back to it. A file whose format can change without notice is the part most likely to break, and the part I'd keep having to fix.",
-        "caveatShort": "The honest wart: Rekordbox doesn't document its own database, so this would read the XML export you have to remember to make, and write nothing back. That's the part most likely to break."
-      },
-      "s3": {
-        "heading": "Where it actually is",
-        "body": "Right now it's a name and a page of notes. No repository, nothing to download, and no date I'd trust enough to give you. It would be a desktop application rather than a web page, because the collection file lives on your machine and I'd rather it stayed there. When there is something to open, it will be at this address.",
-        "bodyShort": "Right now it's a name and a page of notes. No repository, nothing to download, no date I'd trust enough to give you. It would be a desktop app: the collection file lives on your machine and I'd rather it stayed there. When there's something to open, it will be here."
-      },
-      "metaTitle": "DJ Tool — a Rekordbox dashboard — Walter",
-      "metaDescription": "A dashboard for the Rekordbox collection you already have: BPM spread, genres, keys, the Camelot wheel. Not built yet — a description, not a download."
-    },
     "seasonable": {
       "title": "Seasonable",
       "deck": "Tell it where you are and what month it is, and it names the fruit and vegetables genuinely in season there. It isn't built yet — this page is a description, not a link.",

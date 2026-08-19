@@ -45,13 +45,15 @@ export function useRoute(): Route {
   // Client-side navigation doesn't reload the document, so the title is ours
   // to keep in step — and it has to follow the language too.
   useEffect(() => {
-    // copy.md's `projects.dj.metaTitle` / `projects.seasonable.metaTitle` are whole title
-    // strings (already end in " — Walter"), unlike the other four rows, which build theirs here.
+    // copy.md's `dj.metaTitle` / `projects.seasonable.metaTitle` are whole title strings
+    // (already end in " — Walter"), unlike the other four rows, which build theirs here.
+    // `/dj-tools` keeps its path while the tool it describes is named Crate: the route is
+    // final-tier and already indexed, and the URL is not the name.
     const titles: Record<Route, string> = {
       home: `Walter — ${t('home.hero.headline')} ${t('home.hero.headlineAccent')}`,
       legal: `${t('legal.title')} — Walter`,
       magic: `${t('magic.hero.title')} — Walter`,
-      'dj-tools': t('projects.dj.metaTitle'),
+      'dj-tools': t('dj.metaTitle'),
       seasonable: t('projects.seasonable.metaTitle'),
       notfound: `${t('notFound.title')} — Walter`,
     };

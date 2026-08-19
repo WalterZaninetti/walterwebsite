@@ -1,15 +1,18 @@
 /**
- * Structure for the two "not built yet" rundown pages — `/dj-tools` and
- * `/seasonable`. Per architecture.md Decision 2, they are instances of one
- * type: same three-section skeleton by strategic decision (site.md,
- * "symmetry is deliberate"), so one module keyed by project id is the
- * honest model, not two near-identical files.
+ * Structure for the "not built yet" rundown page — `/seasonable`.
+ *
+ * It had two members. `/dj-tools` left when the tool it describes stopped
+ * being an idea with a name and became a bounded capability set: it renders
+ * `src/components/dj/DjToolsPage.tsx` now, and its prose moved to the
+ * top-level `dj.*` locale namespace. The record shape stays rather than
+ * collapsing into two constants — `/seasonable` is unchanged by that move and
+ * rewriting it would have been a diff nobody asked for.
  *
  * All prose lives in src/locales/{en,it}.json under `projects.<namespace>.*`
  * — see the naming note below for why `namespace` is its own field.
  */
 
-export type ProjectPageId = 'dj' | 'food';
+export type ProjectPageId = 'food';
 
 /**
  * copy.md's unresolved #5: `site.ts` keeps the project id `food` (renaming
@@ -19,13 +22,12 @@ export type ProjectPageId = 'dj' | 'food';
  * carries the one place the two names meet, named here so it isn't
  * discovered in the diff.
  */
-export const projectLocaleNamespace: Record<ProjectPageId, 'dj' | 'seasonable'> = {
-  dj: 'dj',
+export const projectLocaleNamespace: Record<ProjectPageId, 'seasonable'> = {
   food: 'seasonable',
 };
 
 /** Which CSS figure (direction.md §5.2) stands in for the tool that doesn't exist yet. */
-export type ProjectFigure = 'camelot' | 'months';
+export type ProjectFigure = 'months';
 
 export type ProjectPageContent = {
   id: ProjectPageId;
@@ -33,6 +35,5 @@ export type ProjectPageContent = {
 };
 
 export const projectPages: Record<ProjectPageId, ProjectPageContent> = {
-  dj: { id: 'dj', figure: 'camelot' },
   food: { id: 'food', figure: 'months' },
 };

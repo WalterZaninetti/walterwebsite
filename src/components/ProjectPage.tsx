@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
 import type { ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Project } from '../content/site';
 import { projects } from '../content/site';
 import { projectLocaleNamespace, projectPages } from '../content/projectPages';
 import type { ProjectPageId } from '../content/projectPages';
+import { useMetaDescription } from '../lib/meta';
 import { navigate } from '../lib/route';
 import { useTheme } from '../lib/theme-context';
 import { Eyebrow } from './ui/Eyebrow';
@@ -12,31 +12,33 @@ import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
 import { SkipLink } from './ui/SkipLink';
 import { Tile } from './ui/Tile';
-import { DiscIcon, LeafIcon, MoonIcon, SunIcon } from './ui/icons';
+import { LeafIcon, MoonIcon, SunIcon } from './ui/icons';
 import { IconButton, ThemeSwitch } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
 import { cx } from './ui/cx';
 
 /**
- * The shared shell for `/dj-tools` and `/seasonable` — direction.md §3: "the
- * world is a band, not a ground." The site's own canvas, header, footer and
- * reading column stay put; each project gets exactly one full-bleed block in
- * its own world (the shelf card, grown), a 3px solid rule as the seam
- * between world and site, and then three plain-canvas sections. Below the
- * seam nothing here reads `--project-*` again — the section numerals are
- * `--accent` rust, not the world, which is the single decision that keeps
- * three pages reading as one site (§3.3).
+ * The shell for `/seasonable` — direction.md §3: "the world is a band, not a
+ * ground." The site's own canvas, header, footer and reading column stay put;
+ * the project gets exactly one full-bleed block in its own world (the shelf
+ * card, grown), a 3px solid rule as the seam between world and site, and then
+ * three plain-canvas sections. Below the seam nothing here reads `--project-*`
+ * again — the section numerals are `--accent` rust, not the world, which is
+ * the single decision that keeps the project pages reading as one site (§3.3).
  *
- * `/magic-tools` satisfies this shell's chrome *contract* (breadcrumb header,
- * one full-bleed world block, a footer credit line) without adopting this
- * component — it is a fourth, larger kind of page by gate A's own ruling
- * (§3.6), so it keeps `MagicToolsPage.tsx`.
+ * `/magic-tools` and `/dj-tools` satisfy this shell's chrome *contract*
+ * (breadcrumb header, one full-bleed world block, a footer credit line)
+ * without adopting this component — each is a larger kind of page, by gate A's
+ * ruling for the first (§3.6) and by the Crate run's for the second. This
+ * stayed generic rather than collapsing into a `SeasonablePage` on purpose:
+ * `Record<ProjectPageId, …>` with one member costs nothing to read, and
+ * rewriting a page nobody asked about is not what that run was for.
  */
 
 const SECTION_KEYS = ['s1', 's2', 's3'] as const;
 type SectionKey = (typeof SECTION_KEYS)[number];
 
-/** Both pages carry the honest-hard-part caveat in section 2, and only there — copy.md assumption 2. */
+/** The caveat lands in section 2 and only there — copy.md assumption 2. */
 const SECTION_HAS_CAVEAT: Record<SectionKey, boolean> = { s1: false, s2: true, s3: false };
 
 /** One step up from the shelf card's own map (`ProjectShelf.tsx`) — same three faces, the site's ceiling of six. */
@@ -64,14 +66,6 @@ const worldTheme: Record<
     tile: ComponentType<{ className?: string }>;
   }
 > = {
-  dj: {
-    band: 'bg-project-dj text-project-dj-fg border-t border-project-dj-border',
-    seam: 'bg-project-dj-seam',
-    eyebrow: 'text-project-dj-accent',
-    title: 'text-project-dj-fg',
-    deck: 'text-project-dj-body',
-    tile: DiscIcon,
-  },
   food: {
     band: 'bg-project-food text-project-food-fg border-t border-project-food-border',
     seam: 'bg-project-food-seam',
@@ -107,27 +101,6 @@ export function ProjectPage({ projectId }: { projectId: ProjectPageId }) {
       </main>
     </div>
   );
-}
-
-/**
- * Sets the client-side `<meta name="description">` while this page is
- * mounted and restores whatever `index.html` shipped on unmount. copy.md's
- * "Unresolved #3" flags that this cannot reach social scrapers (no JS) —
- * true, and accepted, per the same note: the strings are written and
- * measured, and Google's renderer (which does run JS) still benefits.
- * Follows `NotFoundPage.tsx`'s precedent of a direct, cleaned-up
- * `document.head` edit rather than inventing a second mechanism.
- */
-function useMetaDescription(description: string) {
-  useEffect(() => {
-    const meta = document.querySelector('meta[name="description"]');
-    if (!meta) return;
-    const original = meta.getAttribute('content');
-    meta.setAttribute('content', description);
-    return () => {
-      if (original !== null) meta.setAttribute('content', original);
-    };
-  }, [description]);
 }
 
 /**
@@ -198,7 +171,7 @@ function Band({
 }: {
   project: Project;
   projectId: ProjectPageId;
-  ns: 'dj' | 'seasonable';
+  ns: 'seasonable';
 }) {
   const { t } = useTranslation();
   const theme = worldTheme[projectId];
@@ -228,7 +201,7 @@ function Band({
             </p>
           </div>
           <div className="mt-8 md:mt-0">
-            {figure === 'camelot' ? <CamelotFigure /> : <MonthStrip />}
+            {figure === 'months' && <MonthStrip />}
           </div>
         </div>
       </div>
@@ -257,7 +230,7 @@ function Band({
  * (direction.md §7) — a boxed status panel would turn an admission into a
  * badge, which is the thing this run removes from the homepage.
  */
-function Sections({ ns }: { ns: 'dj' | 'seasonable' }) {
+function Sections({ ns }: { ns: 'seasonable' }) {
   const { t } = useTranslation();
 
   return (
@@ -306,50 +279,6 @@ function BackLink() {
     >
       {t('projects.backLabel')}
     </a>
-  );
-}
-
-/**
- * `/dj-tools`'s figure — direction.md §5.2. The existing `camelot` utility
- * (`theme.css:606`) is the ring's fill; twelve `1A…12A` mono labels sit
- * around it, three lit — `8A` and its two numeric neighbours, the adjacency
- * rule `copy.md` states explicitly ("8A ↔ 7A, 9A, 8B"). The wheel this
- * figure draws carries only the `…A` ring, so `8B` (the relative-mode
- * neighbour) has nowhere to render without a second ring the direction's own
- * 280px/no-new-@utility constraints don't allow for — the fact still reaches
- * the reader because `s2.body` states it in full, and this figure is
- * `aria-hidden`. See build.md for the full reasoning.
- */
-const CAMELOT_LABELS = Array.from({ length: 12 }, (_, i) => `${i + 1}A`);
-const CAMELOT_LIT = new Set(['7A', '8A', '9A']);
-
-function CamelotFigure() {
-  const radius = 88;
-  return (
-    <div
-      aria-hidden="true"
-      className="camelot relative mx-auto grid size-[210px] place-items-center rounded-full"
-    >
-      <div className="size-[112px] rounded-full bg-project-dj" />
-      {CAMELOT_LABELS.map((label, index) => {
-        const angle = (index / CAMELOT_LABELS.length) * 2 * Math.PI - Math.PI / 2;
-        const x = Math.round(Math.cos(angle) * radius);
-        const y = Math.round(Math.sin(angle) * radius);
-        const lit = CAMELOT_LIT.has(label);
-        return (
-          <span
-            key={label}
-            style={{ transform: `translate(${x}px, ${y}px)` }}
-            className={cx(
-              'absolute font-mono text-label',
-              lit ? 'font-semibold text-project-dj-fg' : 'text-project-dj-body',
-            )}
-          >
-            {label}
-          </span>
-        );
-      })}
-    </div>
   );
 }
 

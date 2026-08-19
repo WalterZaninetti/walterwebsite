@@ -62,9 +62,9 @@
       "dj": {
         "eyebrow": "02 · per i dj",
         "eyebrowShort": "02 · dj",
-        "title": "DJ Tool",
-        "description": "Una dashboard sopra la tua collezione Rekordbox — distribuzione dei BPM, generi, tonalità e mix armonico sulla ruota Camelot.",
-        "descriptionShort": "Dashboard Rekordbox: BPM, generi, tonalità, ruota Camelot.",
+        "title": "Crate",
+        "description": "Un'app desktop per la libreria Rekordbox che hai già — filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più, e una playlist che torna indietro.",
+        "descriptionShort": "Rekordbox, filtrato: filtri che si sommano, tonalità, doppioni, una playlist indietro.",
         "meta": "ancora da scrivere",
         "thumbCaption": "ruota camelot",
         "thumbCaptionShort": "ruota camelot"
@@ -386,6 +386,63 @@
     "navHands": "Mani iniziali",
     "navFinding": "Trovare una carta"
   },
+  "dj": {
+    "title": "Crate",
+    "eyebrow": "02 · per i dj",
+    "eyebrowShort": "02 · dj",
+    "deck": "Un'app desktop per la libreria Rekordbox che hai già: filtri che si sommano, tonalità, doppioni, e una playlist che torna indietro. Non è ancora scritta: questa pagina è una descrizione, non un download.",
+    "deckShort": "Un'app desktop per la libreria Rekordbox che hai già. Non è ancora scritta: una descrizione, non un download.",
+    "problem": {
+      "heading": "La collezione che non vedi",
+      "body": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. Le altre le trovi scorrendo. Il mix armonico lo fai a mente, o leggendo la tonalità due battute prima che ti serva — e va bene, finché il disco dopo deve essere quello giusto al primo colpo. Rekordbox ti ordina le colonne come vuoi; la forma di quello che hai dentro non te la dice.",
+      "bodyShort": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. La tonalità la tieni a mente, due battute prima che ti serva. Rekordbox ordina le colonne; la forma di quello che hai dentro non te la dice."
+    },
+    "mechanism": {
+      "heading": "Rekordbox lo sa già",
+      "body": "È tutto già dentro il file di collezione: i BPM, la tonalità, il rating, quando l'hai aggiunta, i cue, i colori, ogni playlist che hai mai fatto. Rekordbox ti ordina una colonna alla volta. Quello che non fa è lasciarti chiedere qualcosa: sei condizioni insieme, o che forma ha il mucchio. Quindi qui non si analizza l'audio e non si indovina il tuo gusto. Si legge un file che hai già e si risponde alle domande che ti stavi già facendo.",
+      "bodyShort": "È tutto già dentro il file di collezione: BPM, tonalità, rating, cue, ogni playlist che hai fatto. Rekordbox ordina una colonna alla volta; non ti lascia chiedere sei cose insieme. Qui non si analizza l'audio e non si indovina il gusto: si legge un file che hai già."
+    },
+    "does": {
+      "heading": "Sei cose che farebbe",
+      "read": {
+        "title": "Legge l'export. Non ci scrive niente.",
+        "body": "Gli dai il file XML che Rekordbox esporta già. Legge tutto quello che c'è dentro — ogni campo, ogni playlist, ogni cue — e apre il file in sola lettura. Rifai l'export più avanti e ti mostra cosa è stato aggiunto, cambiato o tolto rispetto a prima. Rekordbox resta la cosa vera.",
+        "caveat": "Il difetto, detto subito: Rekordbox non spiega come è fatto il suo database, ed è per questo che qui si legge l'export e non l'originale — e l'export è quello che devi ricordarti di fare. Un formato che può cambiare da un giorno all'altro è la parte più fragile, e quella che dovrei rimettere a posto ogni volta."
+      },
+      "filters": {
+        "title": "Filtri che si sommano",
+        "body": "Rekordbox ordina una colonna. Qui le incroci quante ne vuoi: 122–126 BPM, in 8A, da quattro stelle in su, house, aggiunte quest'anno, mai suonate, con i cue dentro. Salvi la combinazione e continua a riempirsi da sola mentre la collezione cresce. Quel «mai suonate» è come ritrovi i dischi che hai comprato e dimenticato."
+      },
+      "harmonic": {
+        "title": "Camelot, e cosa ti compra il pitch",
+        "body": "Scegli una traccia e la ruota accende le mosse: i due numeri adiacenti e il modo relativo. Alzi il pitch e se ne accendono altre — cosa diventa compatibile a ±3%, e ancora a ±6%. Camelot, Open Key o notazione musicale, come preferisci leggerla."
+      },
+      "health": {
+        "title": "La lista noiosa",
+        "body": "Doppioni su file diversi. Percorsi che non puntano più a niente. Tracce senza BPM, senza tonalità, senza genere, senza copertina. File mai analizzati. Generi scritti in quattro modi. Bitrate che su un impianto grosso preferiresti non sentire. Tracce senza un cue, e tracce che non stanno in nessuna playlist. In ordine di quanto ti costano in console, non di quante sono."
+      },
+      "overview": {
+        "title": "Che forma ha quello che hai",
+        "body": "La distribuzione dei BPM come istogramma: il mucchio a 122 e il buco a 128 li vedi, non li sospetti. I generi contati — di solito è lì che scopri che quello che suoni e quello che possiedi hanno preso strade diverse. Tonalità, etichette, decenni, come è cresciuta la collezione, cosa voti davvero. La risposta a «cosa ho, di preciso»."
+      },
+      "handoff": {
+        "title": "E poi te la ridà",
+        "body": "Costruisci una shortlist da un filtro qualsiasi e la esporti come playlist Rekordbox, così torna dentro Rekordbox, sulla USB, in console. È lì che si ferma. Ti passa il mucchio; il set lo fai tu. Qui dentro niente decide cosa viene dopo, e niente ha intenzione di farlo."
+      }
+    },
+    "status": {
+      "heading": "A che punto è davvero",
+      "body": "Per ora è un nome e un elenco di cose che farebbe. Nessun repository, niente da scaricare, e nessuna data che mi fiderei a darti. Sarà un'applicazione desktop e non una pagina web, perché il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà a questo indirizzo.",
+      "bodyShort": "Per ora è un nome e un elenco di cose che farebbe. Nessun repository, niente da scaricare, nessuna data che mi fiderei a darti. Sarà un'app desktop: il file della collezione sta sul tuo computer e preferisco che ci resti."
+    },
+    "figures": {
+      "wheel": "8A, e le tre mosse che ne escono",
+      "bpm": "il mucchio a 122, il buco a 128",
+      "stack": "sei condizioni, un risultato"
+    },
+    "metaTitle": "Crate — uno strumento per la libreria Rekordbox — Walter",
+    "metaDescription": "Legge l'export di Rekordbox senza scriverci niente: filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più. Non è ancora scritta."
+  },
   "legal": {
     "title": "Cookie e privacy",
     "updated": "Ultimo aggiornamento 30 luglio 2026",
@@ -452,30 +509,6 @@
   },
   "projects": {
     "backLabel": "← Torna ai progetti",
-    "dj": {
-      "title": "DJ Tool",
-      "deck": "Una dashboard per la collezione Rekordbox che hai già. Non è ancora scritta: questa pagina è una descrizione, non un download.",
-      "deckShort": "Una dashboard per la tua collezione Rekordbox. Non è ancora scritta: una descrizione, non un download.",
-      "s1": {
-        "heading": "La collezione che non vedi",
-        "body": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. Le altre le trovi scorrendo. Il mix armonico lo fai a mente, o leggendo la tonalità due battute prima che ti serva — e va bene, finché il disco dopo deve essere quello giusto al primo colpo. Rekordbox ti ordina le colonne come vuoi; la forma di quello che hai dentro non te la dice.",
-        "bodyShort": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. La tonalità la tieni a mente, due battute prima che ti serva. Rekordbox ordina le colonne; la forma di quello che hai dentro non te la dice."
-      },
-      "s2": {
-        "heading": "Cosa ti farebbe vedere",
-        "body": "Una finestra in sola lettura sul file di collezione che Rekordbox tiene già. La distribuzione dei BPM come istogramma: il mucchio a 122 e il buco a 128 li vedi, non li sospetti. I generi contati. Di solito è lì che scopri che quello che suoni e quello che possiedi hanno preso strade diverse. E ogni tonalità sulla ruota Camelot, con i vicini accesi: i due numeri adiacenti e il modo relativo, i passaggi che faresti davvero in una transizione.",
-        "bodyShort": "Una finestra in sola lettura sul file che Rekordbox tiene già. La distribuzione dei BPM come istogramma: il mucchio a 122, il buco a 128. I generi contati. Ogni tonalità sulla ruota Camelot con i vicini accesi: i due numeri adiacenti e il modo relativo.",
-        "caveat": "Il difetto, detto subito: Rekordbox non spiega come è fatto il suo database. Quindi leggerebbe il file XML che esporti a mano, quello che devi ricordarti di fare. E non ci scriverebbe niente dentro. È la parte più fragile: il formato può cambiare da un giorno all'altro, e dovrei rimetterla a posto ogni volta.",
-        "caveatShort": "Il difetto, detto subito: Rekordbox non spiega come è fatto il suo database. Leggerebbe il file XML che esporti a mano, senza scriverci niente dentro. È la parte più fragile."
-      },
-      "s3": {
-        "heading": "A che punto è davvero",
-        "body": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da scaricare, e nessuna data che mi fiderei a darti. Sarebbe un'applicazione desktop e non una pagina web, perché il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà a questo indirizzo.",
-        "bodyShort": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da scaricare, nessuna data che mi fiderei a darti. Sarebbe un'app desktop: il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà qui."
-      },
-      "metaTitle": "DJ Tool — una dashboard per Rekordbox — Walter",
-      "metaDescription": "Una dashboard per la collezione Rekordbox che hai già: BPM, generi, tonalità, ruota Camelot. Non è ancora scritta: una descrizione, non un download."
-    },
     "seasonable": {
       "title": "Seasonable",
       "deck": "Gli dici dove sei e in che mese siamo, e ti dice quali frutta e verdura sono davvero di stagione lì. Non è ancora scritto: questa pagina è una descrizione, non un link.",

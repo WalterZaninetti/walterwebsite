@@ -12,6 +12,7 @@ import { NotFoundPage } from './components/NotFoundPage';
 import { AccentButton } from './components/ui/Pill';
 import { SkipLink } from './components/ui/SkipLink';
 import { MusicSection } from './components/music/MusicSection';
+import { DjToolsPage } from './components/dj/DjToolsPage';
 import { useRoute } from './lib/route';
 import { ThemeProvider } from './lib/theme';
 
@@ -33,7 +34,7 @@ export default function App() {
       )}
 
       {route === 'legal' && <LegalPage />}
-      {route === 'dj-tools' && <ProjectPage projectId="dj" />}
+      {route === 'dj-tools' && <DjToolsPage />}
       {route === 'seasonable' && <ProjectPage projectId="food" />}
       {route === 'notfound' && <NotFoundPage />}
 

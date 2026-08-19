@@ -303,23 +303,50 @@
   /* Per-project worlds. All three stay dark grounds in both schemes — that
      is what makes the band of direction.md §5 a poster rather than a second
      website, and a cream canvas makes it more true, not less. */
-  --project-magic: #0f4a80;
-  --project-magic-fg: #eaf4ff;                    /* 8.17:1 */
-  --project-magic-body: rgb(234 244 255 / 0.84);  /* 6.30:1 */
-  --project-magic-accent: #9fcdf0;                /* 5.39:1 */
-  --project-magic-thumb: #0a3560;
-  --project-magic-border: transparent;            /* 8.11:1 against the band */
-  --project-magic-seam: #0f4a80;
-  --project-magic-shadow: 0 16px 34px rgb(15 74 128 / 0.28);
+  /* Crimson, not ocean. Blue moved to the DJ world (below) when that page got
+     its own identity, and two blue cards side by side on the shelf read as one
+     project. Red is also the colour this project's subject actually has.
+     Only ProjectShelf.tsx reads these five tokens — /magic-tools paints from
+     its own --magic-* parchment world and is untouched. */
+  --project-magic: #7d1f28;
+  --project-magic-fg: #ffeaea;      /* 8.68:1 */
+  --project-magic-body: #f7d5d5;    /* 7.35:1 */
+  --project-magic-accent: #f2b8ae;  /* 5.83:1 */
+  --project-magic-thumb: #5c141b;   /* 7.79:1 under -accent */
+  --project-magic-border: transparent;
+  --project-magic-seam: #7d1f28;
+  --project-magic-shadow: 0 16px 34px rgb(125 31 40 / 0.28);
 
-  --project-dj: #0e2d1c;
-  --project-dj-fg: #eaf5ec;      /* 13.31:1 */
-  --project-dj-accent: #7fcfa0;  /*  8.03:1 */
-  --project-dj-body: #c6dfcd;    /* 10.52:1 */
-  --project-dj-badge: #0a2416;   /* 14.70:1 under -fg */
+  /* Crate's world: deep indigo with an amber rung, replacing the clover green
+     it shared with the site's own panels. The page needed an identity of its
+     own, and amber on navy is a mixing desk rather than a nightclub — the
+     electronic reading the brief asked for, without the dark-and-neon default.
+     Read by ProjectShelf.tsx and by DjToolsPage.tsx, which are the same object
+     at two sizes. */
+  --project-dj: #101a33;
+  --project-dj-fg: #eaf0ff;      /* 15.12:1 */
+  --project-dj-accent: #f0b184;  /*  9.30:1 */
+  --project-dj-body: #c3cfe6;    /* 11.00:1 */
+  --project-dj-badge: #0a1224;   /* 16.36:1 under -fg */
   --project-dj-border: transparent;
-  --project-dj-seam: #0e2d1c;
-  --project-dj-shadow: 0 16px 34px rgb(14 45 28 / 0.3);
+  --project-dj-seam: #101a33;
+  --project-dj-shadow: 0 16px 34px rgb(16 26 51 / 0.3);
+  /* Crate's data marks. Unlike the six rungs above, these are authored against
+     --canvas, not against the band — the same way --project-dj-seam is in dark.
+     Ocean, so the page's electric accent is the site's existing blue rather
+     than a seventh hue; the warm counter-accent it plays against is --accent,
+     which is already loam-600. They paint bars, ticks and segments, so the
+     target is 3:1 (WCAG 1.4.11), and no figure encodes meaning by colour
+     alone — the histogram's meaning is bar height. -quiet was solved with
+     solve-oklch holding hue and chroma, so it is this blue dimmed rather than
+     a second colour standing near it. */
+  --project-dj-mark: #15568f;       /* 7.33:1 vs canvas */
+  --project-dj-mark-quiet: #5b98c4; /* 3.00:1 vs canvas */
+  /* The hero wave's unlit rung — the only mark authored against the band
+     rather than the canvas, because the wave is the one figure inside the
+     world. One value serves both schemes: the two grounds are close enough
+     that a second rung would be a token nobody could tell apart. */
+  --project-dj-wave: #4a6fa5;       /* 3.37:1 on the light band, 3.57:1 on the dark */
 
   /* Brightened exactly one step. The card carries its hierarchy in opacity
      where the other two carry theirs in hue (theme.css:273-277), and that
@@ -535,23 +562,26 @@
      sub-3:1 component boundary the text-pair scan could not see; it goes to
      0.45. --project-magic-border was transparent in both schemes and gains
      one, because 2.43:1 is not an edge. */
-  --project-magic: #15568f;
-  --project-magic-fg: #eaf4ff;                    /* 6.84:1 */
-  --project-magic-body: rgb(234 244 255 / 0.84);  /* 5.37:1 */
-  --project-magic-accent: #a8d3f2;                /* 4.81:1 */
-  --project-magic-thumb: #0e3c67;
-  --project-magic-border: rgb(168 211 242 / 0.28);/* 3.98:1 vs canvas */
-  --project-magic-seam: #a8d3f2;                  /* 11.67:1 vs canvas */
+  --project-magic: #8a2531;
+  --project-magic-fg: #ffeaea;                    /* 7.62:1 */
+  --project-magic-body: #f7d5d5;                  /* 6.46:1 */
+  --project-magic-accent: #f2b8ae;                /* 5.12:1 */
+  --project-magic-thumb: #5c141b;                 /* 7.79:1 under -accent */
+  --project-magic-border: rgb(242 184 174 / 0.5); /* 3.52:1 vs canvas, composited */
+  --project-magic-seam: #f2b8ae;                  /* 10.77:1 vs canvas */
   --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
 
-  --project-dj: #0c2417;
-  --project-dj-fg: #eaf5ec;      /* 14.66:1 */
-  --project-dj-accent: #8fd8ac;  /*  9.83:1 */
-  --project-dj-body: #c6dfcd;    /* 11.59:1 */
-  --project-dj-badge: #08180f;
-  --project-dj-border: rgb(143 216 172 / 0.45); /* 3.48:1 vs canvas — was 2.13 */
-  --project-dj-seam: #8fd8ac;                   /* 11.07:1 vs canvas */
+  --project-dj: #0c1526;
+  --project-dj-fg: #eaf0ff;      /* 15.99:1 */
+  --project-dj-accent: #f0b184;  /*  9.84:1 */
+  --project-dj-body: #c3cfe6;    /* 11.63:1 */
+  --project-dj-badge: #070d18;
+  --project-dj-border: rgb(240 177 132 / 0.52); /* 3.56:1 vs canvas, composited */
+  --project-dj-seam: #f0b184;                   /*  9.96:1 vs canvas */
   --project-dj-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
+  --project-dj-mark: #7ab8e6;       /* 8.64:1 vs canvas */
+  --project-dj-mark-quiet: #2f6a97; /* 3.19:1 vs canvas */
+  --project-dj-wave: #4a6fa5;       /* 3.57:1 on the dark band */
 
   /* Food still does not invert (theme.css:473-479). The reason survives the
      repaint intact: it is the only card that ever flipped to a light ground,
@@ -756,6 +786,9 @@
   --color-project-dj-badge: var(--project-dj-badge);
   --color-project-dj-border: var(--project-dj-border);
   --color-project-dj-seam: var(--project-dj-seam);
+  --color-project-dj-mark: var(--project-dj-mark);
+  --color-project-dj-mark-quiet: var(--project-dj-mark-quiet);
+  --color-project-dj-wave: var(--project-dj-wave);
 
   --color-project-food: var(--project-food);
   --color-project-food-fg: var(--project-food-fg);
@@ -887,16 +920,16 @@
   );
 }
 
-/* The DJ tool's Camelot wheel — same three stops, same conic sweep, now in
-   clover and rust, following the ramp rename. Must read against
-   --project-dj #0e2d1c. */
+/* Crate's Camelot wheel. Followed the world off clover-and-rust when the DJ
+   project went indigo: the sweep is now the page's own two marks, blue into
+   amber. Must read against --project-dj #101a33 / #0c1526. */
 @utility camelot {
   background: conic-gradient(
     from 0deg,
-    var(--color-clover-400),
-    var(--color-clover-200),
-    var(--accent),
-    var(--color-clover-400)
+    var(--project-dj-mark),
+    var(--color-ocean-300),
+    var(--project-dj-accent),
+    var(--project-dj-mark)
   );
 }
 
