@@ -41,7 +41,7 @@ export function SourceCard({ source, className }: { source: MusicSourceId; class
         </Eyebrow>
         {/* Attribution, not decoration: Spotify requires its mark wherever its metadata shows.
             Monochrome — the green is only licensed on black or white. */}
-        <Mark className="size-[15px] shrink-0 text-on-panel-dim" />
+        <Mark className="size-[18px] shrink-0 text-on-panel-dim" />
       </div>
 
       <p className="mb-4 text-note-sm text-on-panel-prose text-pretty lg:mb-[18px]">

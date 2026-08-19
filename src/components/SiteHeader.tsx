@@ -5,7 +5,7 @@ import { site } from '../content/site';
 import { useTheme } from '../lib/theme-context';
 import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
-import { MoonIcon, SunIcon } from './ui/icons';
+import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
 /**
@@ -65,7 +65,7 @@ export function SiteHeader() {
           <IconButton
             onClick={() => setMenuOpen((open) => !open)}
             label={t(menuOpen ? 'common.closeMenu' : 'common.openMenu')}
-            glyph={menuOpen ? '×' : '≡'}
+            glyph={menuOpen ? <CloseIcon /> : <MenuIcon />}
             expanded={menuOpen}
           />
         </div>

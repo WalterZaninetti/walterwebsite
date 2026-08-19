@@ -40,7 +40,7 @@ export function Tile({
       aria-hidden="true"
       className={cx('grid size-12 shrink-0 place-items-center rounded-tile lg:size-14', tone, className)}
     >
-      <Icon className="size-[22px] lg:size-[26px]" />
+      <Icon className="size-[26px] lg:size-[30px]" />
     </span>
   );
 }
