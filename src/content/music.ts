@@ -31,13 +31,17 @@ export type MusicFeed = {
   fetchedAt: string | null;
 };
 
+/** One track: position, name, and length in seconds (null if Spotify omitted the duration). */
+export type MusicTrack = { n: number; title: string; sec: number | null };
+
 /**
  * The monthly pick, assembled at build time from src/content/album-of-the-month.json (the id, the
- * pick number and the month) plus what Spotify knows about the record.
+ * pick number and the month) plus everything Spotify knows about the record.
  *
- * There is no `note` here on purpose. Spotify exposes no description, review or editorial text
- * for an album under any endpoint, so the reason a record was picked is written by hand and
- * lives in the locale files like the rest of the prose.
+ * All of it is factual and fetched. There is no note or blurb, and there is no field for one:
+ * Spotify exposes no description, review or editorial text for an album under any endpoint, so
+ * rather than hand-write prose the card shows what the API actually has — including the
+ * tracklist.
  */
 export type MusicAlbum = {
   id: string;
@@ -49,6 +53,8 @@ export type MusicAlbum = {
   url: string | null;
   trackCount: number | null;
   runtimeMin: number | null;
+  /** Capped at Spotify's 50-per-page; only a box set would ever reach it. */
+  tracks: MusicTrack[];
   /** The primary artist's genres — album genres come back empty for almost every record. */
   tags: string[];
   /** Which pick in the series, and the month it ran. `month` is 'YYYY-MM'. */

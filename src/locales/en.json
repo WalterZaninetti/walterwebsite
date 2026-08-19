@@ -91,7 +91,6 @@
         "sleeveCaption": "album sleeve",
         "extent_one": "{{count}} track · {{minutes}} min",
         "extent_other": "{{count}} tracks · {{minutes}} min",
-        "notes": {},
         "listenLink": "Listen on Spotify ↗",
         "archiveLink": "All {{count}} picks ↗"
       },

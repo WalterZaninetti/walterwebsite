@@ -91,7 +91,6 @@
         "sleeveCaption": "copertina",
         "extent_one": "{{count}} brano · {{minutes}} min",
         "extent_other": "{{count}} brani · {{minutes}} min",
-        "notes": {},
         "listenLink": "Ascolta su Spotify ↗",
         "archiveLink": "Tutte le {{count}} scelte ↗"
       },

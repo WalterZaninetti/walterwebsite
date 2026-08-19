@@ -178,9 +178,17 @@ async function fetchAlbum(headers) {
     }
   }
 
-  /* `tracks` is paginated at 50. Every album that fits the card fits one page, and the runtime is
-     a rounded minute figure — not worth a second request for the rare box set. */
-  const runtimeMs = (album.tracks?.items ?? []).reduce((sum, t) => sum + (t.duration_ms ?? 0), 0);
+  /* `tracks` is paginated at 50. Every album that fits the card fits one page, so the rare box
+     set simply lists its first fifty rather than costing a second request. */
+  const trackItems = album.tracks?.items ?? [];
+  const runtimeMs = trackItems.reduce((sum, t) => sum + (t.duration_ms ?? 0), 0);
+
+  const tracks = trackItems.map((track, index) => ({
+    /* Fall back to position: track_number is per-disc, so a two-disc release restarts at 1. */
+    n: track.track_number ?? index + 1,
+    title: track.name,
+    sec: track.duration_ms ? Math.round(track.duration_ms / 1000) : null,
+  }));
 
   const sleeve = [...(album.images ?? [])].sort((a, b) => b.width - a.width)[0];
 
@@ -197,6 +205,7 @@ async function fetchAlbum(headers) {
     url: album.external_urls?.spotify ?? null,
     trackCount: album.total_tracks ?? null,
     runtimeMin: runtimeMs ? Math.round(runtimeMs / 60000) : null,
+    tracks,
     tags: genres.slice(0, 3),
     pick: input.pick ?? null,
     month: input.month ?? null,

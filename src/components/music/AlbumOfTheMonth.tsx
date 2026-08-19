@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { albumOfTheMonth } from '../../content/music';
+import { albumOfTheMonth, type MusicTrack } from '../../content/music';
 import { LazyImage } from '../LazyImage';
 import { Chip } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
@@ -7,13 +7,14 @@ import { Frame } from '../ui/Frame';
 import { cx } from '../ui/cx';
 
 /**
- * The monthly pick. Sleeve sits beside the note on desktop, above it on mobile.
+ * The monthly pick. Sleeve sits beside the metadata on desktop, above it on mobile, with the
+ * tracklist underneath.
  *
- * Everything factual — sleeve, title, artist, label, year, length, genres — is snapshotted from
- * Spotify at build time; change the record by editing content/album-of-the-month.json and
- * rebuilding. The note is not, and cannot be: Spotify exposes no description or editorial text
- * for an album on any endpoint, so the reason a record was picked stays hand-written in the
- * locale files, keyed by pick number so an old note never lands under a new record.
+ * Every word of it is fetched: sleeve, title, artist, label, year, length, genres and tracks are
+ * snapshotted from Spotify at build time. Change the record by editing
+ * content/album-of-the-month.json and rebuilding — there is no prose to write and none to keep
+ * in step across two locale files, which is the point. The API has no description field for an
+ * album, so rather than hand-write one the card shows the tracklist in that space.
  */
 export function AlbumOfTheMonth({ className }: { className?: string }) {
   const { t, i18n } = useTranslation();
@@ -33,11 +34,6 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
   const credit = [album.artist, [album.label, album.year].filter(Boolean).join(', ')]
     .filter(Boolean)
     .join(' · ');
-
-  /* The note is keyed by pick number: a new record with no note yet shows nothing rather than
-     the previous month's reasoning attached to the wrong album. */
-  const noteKey = `home.music.album.notes.${album.pick}`;
-  const note = i18n.exists(noteKey) ? t(noteKey) : null;
 
   return (
     <article
@@ -89,11 +85,6 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
               })}
             </p>
           )}
-          {note && (
-            <p id="album-note" className="mb-4 text-note/[1.7] text-on-panel-prose text-pretty">
-              {note}
-            </p>
-          )}
           {album.tags.length > 0 && (
             <div className="flex flex-wrap gap-[7px]">
               {album.tags.map((tag) => (
@@ -109,6 +100,18 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
           )}
         </div>
       </div>
+
+      {album.tracks.length > 0 && (
+        /* Two columns on desktop so a tracklist reads as one block rather than a long ladder.
+           CSS columns rather than a grid: they balance the halves and fill top-to-bottom then
+           across — the order a sleeve prints them in — without needing a row count computed from
+           the track total, which changes with every record. */
+        <ol className="mb-[11px] border-t border-line-on-panel-soft pt-[14px] lg:columns-2 lg:gap-x-10 lg:pt-4">
+          {album.tracks.map((track) => (
+            <TrackRow key={`${track.n}-${track.title}`} track={track} />
+          ))}
+        </ol>
+      )}
 
       <div className="mt-auto flex items-center justify-between gap-3 border-t border-line-on-panel-soft pt-[14px] lg:gap-4 lg:pt-4">
         {album.url && (
@@ -131,5 +134,30 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
         </a>
       </div>
     </article>
+  );
+}
+
+/** `7:53`. Seconds are zero-padded; minutes are not, the way a sleeve prints them. */
+function duration(sec: number) {
+  return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+}
+
+function TrackRow({ track }: { track: MusicTrack }) {
+  return (
+    <li className="flex min-w-0 items-baseline gap-2.5 break-inside-avoid pb-[7px]">
+      <span className="w-4 shrink-0 text-right font-mono text-[11px] text-on-panel-dim tabular-nums">
+        {track.n}
+      </span>
+      {/* Track names are shown as Spotify returns them — never reworded. Truncating is the one
+          change its guidelines allow when space runs out, and the full name stays in the title. */}
+      <span className="min-w-0 flex-1 truncate text-note-sm text-on-panel-body" title={track.title}>
+        {track.title}
+      </span>
+      {track.sec !== null && (
+        <span className="shrink-0 font-mono text-[11px] text-on-panel-dim tabular-nums">
+          {duration(track.sec)}
+        </span>
+      )}
+    </li>
   );
 }
