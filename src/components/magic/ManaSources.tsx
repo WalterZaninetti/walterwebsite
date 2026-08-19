@@ -172,7 +172,7 @@ export function ManaSources() {
                   : t('magic.mana.impossible', { cost: pipLabel, turn: s.turn })}
               </p>
               {answer && counterpart && counterpart.sources !== answer.sources && (
-                <p className="font-mono text-[11.5px]/[1.6] text-magic-green-light">
+                <p className="font-mono text-[11.5px]/[1.6] text-magic-ember-light">
                   {t(
                     s.mulligans > 0 ? 'magic.mana.deltaWithout' : 'magic.mana.deltaWith',
                     { sources: counterpart.sources },
@@ -202,7 +202,7 @@ export function ManaSources() {
                     <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                       <span
                         className={`absolute inset-y-0 left-0 rounded-pill ${
-                          p >= target ? 'bg-magic-green-deep' : 'bg-magic-green-mid'
+                          p >= target ? 'bg-magic-ember-deep' : 'bg-magic-ember-mid'
                         }`}
                         style={{ width: `${Math.round(p * 100)}%` }}
                       />

@@ -102,7 +102,7 @@ export function OpeningHands() {
                   value={row.label}
                   onChange={(e) => patch(index, { label: e.target.value })}
                   aria-label={t('magic.hands.colKind')}
-                  className="h-9 min-w-0 rounded-[8px] border border-magic-field bg-magic-paper px-2.5 font-magic-body text-[13px] text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
+                  className="h-9 min-w-0 rounded-[8px] border border-magic-field bg-magic-paper px-2.5 font-magic-body text-[13px] text-magic-ink outline-none transition-colors focus:border-magic-ember focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
                 />
                 <NumberCell
                   value={row.size}
@@ -152,7 +152,7 @@ export function OpeningHands() {
                     })}
                   </p>
                   {marginals.length > 1 && (
-                    <p className="font-mono text-[11.5px]/[1.6] text-magic-green-light">
+                    <p className="font-mono text-[11.5px]/[1.6] text-magic-ember-light">
                       {t('magic.hands.correlation', {
                         product: formatPercent(product, locale),
                       })}
@@ -177,7 +177,7 @@ export function OpeningHands() {
                     </span>
                     <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                       <span
-                        className="absolute inset-y-0 left-0 rounded-pill bg-magic-green-mid"
+                        className="absolute inset-y-0 left-0 rounded-pill bg-magic-ember-mid"
                         style={{ width: `${Math.round(m.p * 100)}%` }}
                       />
                     </span>
@@ -192,7 +192,7 @@ export function OpeningHands() {
                   </span>
                   <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                     <span
-                      className="absolute inset-y-0 left-0 rounded-pill bg-magic-green-deep"
+                      className="absolute inset-y-0 left-0 rounded-pill bg-magic-ember-deep"
                       style={{ width: `${Math.round(joint * 100)}%` }}
                     />
                   </span>
@@ -237,7 +237,7 @@ function NumberCell({
       onChange={(e) =>
         onChange(Math.max(min, Math.min(max, Math.round(Number(e.target.value)) || 0)))
       }
-      className="h-9 w-full rounded-[8px] border border-magic-field bg-magic-paper text-center font-mono text-[13px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+      className="h-9 w-full rounded-[8px] border border-magic-field bg-magic-paper text-center font-mono text-[13px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-ember focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
     />
   );
 }

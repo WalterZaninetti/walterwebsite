@@ -58,7 +58,7 @@ export function ManaPips() {
           <path d="M12 2.8c2.9 2.3 5.4 5.6 5.4 8.9 0 3.3-2.4 5.7-5.4 5.7s-5.4-2.4-5.4-5.7c0-3.3 2.5-6.6 5.4-8.9Z" />
           <path
             d="M11.3 21.4V12l-2.1-2.2 2.1 1.1V8.4l1.4-1.1v14.1z"
-            fill="var(--color-magic-green-darker)"
+            fill="var(--color-mana-forest-trunk)"
           />
         </svg>
       </Pip>

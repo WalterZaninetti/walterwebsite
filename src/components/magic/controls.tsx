@@ -25,7 +25,7 @@ export function SectionHead({
         <span
           className={cx(
             'font-mono text-[11px] font-medium tracking-[0.18em]',
-            dark ? 'text-magic-green-light' : 'text-magic-green',
+            dark ? 'text-magic-ember-light' : 'text-magic-ember',
           )}
         >
           {index}
@@ -78,7 +78,7 @@ export function Field({
       <div className="flex items-baseline justify-between gap-3">
         <Label>{label}</Label>
         {value !== undefined && (
-          <span className="font-mono text-[11px] font-medium text-magic-green">{value}</span>
+          <span className="font-mono text-[11px] font-medium text-magic-ember">{value}</span>
         )}
       </div>
       {children}
@@ -104,10 +104,10 @@ export function Preset({
       aria-pressed={active}
       className={cx(
         'h-8 cursor-pointer rounded-pill border px-3 font-mono text-[11px] font-medium transition-colors',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card',
         active
-          ? 'border-magic-green bg-magic-green text-magic-paper'
-          : 'border-magic-field bg-magic-card text-magic-ink-muted hover:border-magic-green hover:text-magic-green-deep',
+          ? 'border-magic-ember bg-magic-ember text-magic-paper'
+          : 'border-magic-field bg-magic-card text-magic-ink-muted hover:border-magic-ember hover:text-magic-ember-deep',
         className,
       )}
     >
@@ -134,7 +134,7 @@ export function CheckRow({
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="mt-0.5 size-4 shrink-0 accent-magic-green"
+        className="mt-0.5 size-4 shrink-0 accent-magic-ember"
       />
       <span>
         <span className="block font-magic-body text-[13px]/[1.4] text-magic-ink">{label}</span>

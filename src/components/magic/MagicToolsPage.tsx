@@ -16,9 +16,10 @@ import { FindingACard } from './FindingACard';
 import { PlainEnglishSearch } from './PlainEnglishSearch';
 
 /**
- * Magic Tools — its own visual world (parchment, Cinzel, MTG green) rather
- * than the site's Sage & Loam theme, which is the point the homepage makes
- * about each project keeping its own look. No dark variant: the doc draws
+ * Magic Tools — its own visual world (parchment, Cinzel, and the ember ramp
+ * that starts at this project's own red on the homepage shelf) rather than
+ * the site's Sage & Loam theme, which is the point the homepage makes about
+ * each project keeping its own look. No dark variant: the doc draws
  * one look, so this page opts out of the site's theme switch entirely.
  */
 export function MagicToolsPage() {
@@ -54,8 +55,8 @@ function Header() {
       >
         <Monogram
           size={40}
-          className="shrink-0 text-magic-green-deep"
-          accentClassName="stroke-magic-green"
+          className="shrink-0 text-magic-ember-deep"
+          accentClassName="stroke-magic-ember"
         />
         <span className="min-w-0 truncate font-mono text-label-wide uppercase tracking-[0.14em] text-magic-ink-muted">
           Walter <span className="text-magic-slash">/</span> {t('magic.crumbPage')}
@@ -66,18 +67,18 @@ function Header() {
           <a
             key={item.key}
             href={item.href}
-            className="hidden whitespace-nowrap text-inherit no-underline transition-colors hover:text-magic-green-deep lg:inline"
+            className="hidden whitespace-nowrap text-inherit no-underline transition-colors hover:text-magic-ember-deep lg:inline"
           >
             {t(`magic.${item.key}`)}
           </a>
         ))}
         <LanguageSwitch
-          activeClassName="text-magic-green-deep"
-          idleClassName="text-magic-ink-muted hover:text-magic-green-deep"
+          activeClassName="text-magic-ember-deep"
+          idleClassName="text-magic-ink-muted hover:text-magic-ember-deep"
         />
         <a
           href={magic.repoHref}
-          className="shrink-0 rounded-pill border border-magic-field px-3.5 py-2 text-magic-green-deep no-underline transition-colors hover:border-magic-green-deep hover:bg-magic-green-deep hover:text-magic-paper"
+          className="shrink-0 rounded-pill border border-magic-field px-3.5 py-2 text-magic-ember-deep no-underline transition-colors hover:border-magic-ember-deep hover:bg-magic-ember-deep hover:text-magic-paper"
         >
           {t('magic.repo')}
         </a>
@@ -133,14 +134,14 @@ function Hero() {
               // array index. At two columns the odd items start a row; at
               // three (768), every third; at five, only the first.
               className={cx(
-                'text-magic-cream no-underline transition-colors hover:text-magic-green-light',
+                'text-magic-cream no-underline transition-colors hover:text-magic-ember-light',
                 'sm:[&:nth-child(even)]:border-l sm:[&:nth-child(even)]:border-magic-cream/20 sm:[&:nth-child(even)]:pl-5',
                 'md:[&:not(:nth-child(3n+1))]:border-l md:[&:not(:nth-child(3n+1))]:border-magic-cream/20',
                 'md:[&:not(:nth-child(3n+1))]:pl-5',
                 'lg:[&:nth-child(n+2)]:border-l lg:[&:nth-child(n+2)]:border-magic-cream/20 lg:[&:nth-child(n+2)]:pl-6',
               )}
             >
-              <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-magic-green-light">
+              <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-magic-ember-light">
                 {item.index}
               </p>
               <p className="font-magic-body text-[20px]/[1.15] italic text-balance">{item.title}</p>
@@ -153,12 +154,14 @@ function Hero() {
       </div>
       {/*
         The one addition to this page (direction.md §3.2, §12 assumption 4):
-        drawn in --magic-green on --magic-cream, no ring — the page has no
-        dark scheme, so §1.4's light/dark ring logic doesn't apply to it.
+        drawn in --magic-tile on --magic-tile-fg, no ring. The pair exists
+        rather than reusing the ramp because the ramp lifts in dark and cream
+        on a light salmon is 1.5:1; §1.4's ring logic still doesn't apply,
+        since nothing on this page needs an edge against its own slab.
       */}
       <Tile
         icon={CardsIcon}
-        tone="bg-magic-green text-magic-cream"
+        tone="bg-magic-tile text-magic-tile-fg"
         className="absolute -bottom-6 left-5 md:left-10 lg:-bottom-7"
       />
     </div>
@@ -175,7 +178,7 @@ function Footer() {
           <Monogram
             size={34}
             className="text-magic-cream"
-            accentClassName="stroke-magic-green-light"
+            accentClassName="stroke-magic-ember-light"
           />
           <span aria-hidden="true" className="h-[26px] w-px bg-magic-cream/25" />
           <a
@@ -189,7 +192,7 @@ function Footer() {
         </div>
         <p className="font-magic-display text-[13px]/[1.2] font-medium tracking-[0.02em] text-magic-cream">
           {t('home.footer.credit')}
-          <span className="text-magic-green-light">{t('home.footer.creditAccent')}</span>
+          <span className="text-magic-ember-light">{t('home.footer.creditAccent')}</span>
         </p>
         <div className="flex items-center gap-5 font-mono text-[11.5px] text-magic-cream-faint">
           {footerLegal.map((item) => (

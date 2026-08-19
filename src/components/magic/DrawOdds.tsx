@@ -49,7 +49,7 @@ export function DrawOdds() {
               max={1000}
               value={deck}
               onChange={(e) => set({ deck: Number(e.target.value) || 1 })}
-              className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-green focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-ember focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
             <div className="flex gap-[7px]">
               {magic.deckPresets.map((value) => (
@@ -67,7 +67,7 @@ export function DrawOdds() {
               max={deck}
               value={copies}
               onChange={(e) => set({ copies: Number(e.target.value) })}
-              className="w-full accent-magic-green"
+              className="w-full accent-magic-ember"
             />
             <p className="m-0 font-mono text-[11.5px]/[1.5] text-magic-ink-faint">
               {t('magic.odds.copiesHint')}
@@ -81,7 +81,7 @@ export function DrawOdds() {
               max={drawMax}
               value={draws}
               onChange={(e) => set({ draws: Number(e.target.value) })}
-              className="w-full accent-magic-green"
+              className="w-full accent-magic-ember"
             />
             <div className="flex flex-wrap gap-[7px]">
               {magic.drawPresets.map((preset) => (
@@ -141,7 +141,7 @@ export function DrawOdds() {
             <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
               <Label>{t('magic.odds.distributionLabel')}</Label>
               <div className="flex gap-4 font-mono text-[10.5px] text-magic-ink-faint">
-                <LegendKey className="bg-magic-green">{t('magic.odds.legendHit')}</LegendKey>
+                <LegendKey className="bg-magic-ember">{t('magic.odds.legendHit')}</LegendKey>
                 <LegendKey className="bg-magic-bar-short">{t('magic.odds.legendShort')}</LegendKey>
               </div>
             </div>
@@ -160,15 +160,15 @@ export function DrawOdds() {
                       className={`min-h-[2px] w-full rounded-t-[4px] transition-[height] duration-[250ms] ${
                         hit
                           ? i === atLeast
-                            ? 'bg-magic-green-deep'
-                            : 'bg-magic-green'
+                            ? 'bg-magic-ember-deep'
+                            : 'bg-magic-ember'
                           : 'bg-magic-bar-short'
                       }`}
                       style={{ height: `${Math.max(1.5, (p / peak) * 100)}%` }}
                     />
                     <span
                       className={`font-mono text-[11px] font-medium ${
-                        hit ? 'text-magic-green-deep' : 'text-magic-ink-fainter'
+                        hit ? 'text-magic-ember-deep' : 'text-magic-ink-fainter'
                       }`}
                     >
                       {i}
@@ -199,7 +199,7 @@ export function DrawOdds() {
                     <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                       <span
                         className={`absolute inset-y-0 left-0 rounded-pill ${
-                          current ? 'bg-magic-green-deep' : 'bg-magic-green-mid'
+                          current ? 'bg-magic-ember-deep' : 'bg-magic-ember-mid'
                         }`}
                         style={{ width: `${Math.round(p * 100)}%` }}
                       />
@@ -242,7 +242,7 @@ function Stepper({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="size-10 cursor-pointer rounded-[9px] border border-magic-field bg-magic-card font-mono text-[17px] font-medium text-magic-green-deep transition-colors hover:border-magic-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
+      className="size-10 cursor-pointer rounded-[9px] border border-magic-field bg-magic-card font-mono text-[17px] font-medium text-magic-ember-deep transition-colors hover:border-magic-ember focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
     >
       {children}
     </button>
@@ -254,7 +254,7 @@ function Gauge({ value, percent, caption }: { value: string; percent: number; ca
     <div
       className="grid size-[168px] place-items-center rounded-full justify-self-center"
       style={{
-        background: `conic-gradient(var(--color-magic-green-light) ${Math.round(
+        background: `conic-gradient(var(--color-magic-ember-light) ${Math.round(
           percent * 360,
         )}deg, rgb(255 251 213 / 0.14) 0)`,
       }}

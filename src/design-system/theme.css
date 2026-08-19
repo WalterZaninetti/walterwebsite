@@ -375,14 +375,13 @@
      bg-magic-parchment keeps working and starts tracking the .dark class.
 
      The world does not invert. Half of this page is already dark — the hero
-     slab, the search forest, the abyss output — and that half already
+     slab, the search cinder, the abyss output — and that half already
      measures clean, so dark mode holds it and re-maps the light half down to
-     meet it. 23 of 44 tokens hold in both schemes; each one that holds only
-     ever touches a surface that does not flip.
+     meet it. Each token that holds in both schemes only ever touches a
+     surface that does not flip.
 
-     Untouched by the repaint: --magic-cream #fffbd5 and the new --canvas
-     #fffbe8 measure 1.01:1 apart, and #00733e is the same hue family as the
-     new --tile. See direction.md §1.7. ========================================================================== */
+     Untouched by the repaint: --magic-cream #fffbd5 and --canvas #fffbe8
+     measure 1.01:1 apart. See direction.md §1.7. ========================================================================== */
 
   /* Grounds, outside in: the desk, the sheet, the raised card, the inked
      slab. The header keeps the doc's cool #f4f7fb rather than being warmed to
@@ -423,17 +422,41 @@
   --magic-slash: #6f634c;       /*  4.62:1 worst case — was #b8ab92, 2.11:1 */
   --magic-link: #1f5896;        /*  6.93:1 on paper */
 
-  /* MTG green. In light the deeper rungs carry more emphasis; in dark that
-     inverts, because on a dark ground more emphasis means lighter. -mid,
-     -light, -forest and -abyss are already dark-ground values and hold. */
-  --magic-green: #00733e;
-  --magic-green-deep: #0a5c35;
-  --magic-green-darker: #00552d;
-  --magic-green-mid: #6fbd8f;
-  --magic-green-light: #9bd3ae;
-  --magic-green-pale: #e2f3e3;
-  --magic-forest: #0a2f1e;
-  --magic-abyss: #071a10;
+  /* The ember ramp — the world's own red, brought in from the shelf. The page
+     used to paint itself MTG green while its card on the homepage was
+     crimson, so the door and the room behind it disagreed. --magic-ember is
+     --project-magic #7d1f28 exactly, and -deep is that card's thumb well
+     #5c141b; the rest is the same red walked toward orange and then to gold,
+     which is the one warm ramp that stays legible on a cream sheet and on an
+     inked one. The five mana pips keep their own colours below — those are
+     Magic's, not the palette's.
+
+     In light the deeper rungs carry more emphasis; in dark that inverts,
+     because on a dark ground more emphasis means lighter. -mid is a fill and
+     never text: 4.22:1 on the card is under AA and over SC 1.4.11's 3:1,
+     which is the floor that applies to a bar. -light is the accent on every
+     dark block and holds across schemes — 10.57:1 on the cinder, 11.58:1 on
+     the abyss and on the slab. */
+  --magic-ember: #7d1f28;        /* 10.01:1 on card · 9.56 on paper */
+  --magic-ember-deep: #5c141b;   /* 13.37:1 on card */
+  --magic-ember-darker: #45090f; /* 16.17:1 on card */
+  --magic-ember-mid: #c2600f;    /* orange, fills only — 4.22:1 */
+  --magic-ember-light: #f2c14e;  /* gold, dark blocks only */
+  --magic-ember-pale: #fbe6de;
+  /* The hero tile, which is the one place the ramp is a ground with a glyph
+     on it. It cannot just be --magic-ember + --magic-cream: in dark the ramp
+     lifts to a light salmon and cream on salmon collapses to 1.5:1. So the
+     tile takes a pair, the way the site's own --tile / --tile-fg does, and
+     inverts with the scheme instead of following the ramp. */
+  --magic-tile: #7d1f28;
+  --magic-tile-fg: #fffbd5;      /* 9.54:1 */
+  /* The search section's ground and the output well sunk into it — what
+     --magic-forest and --magic-abyss were. Same two depths, oxblood instead
+     of pine, and they still hold across both schemes. The 1.10:1 between
+     them is not an edge and never was: the well carries a real border
+     (border-magic-ember-light/30) for exactly that reason. */
+  --magic-cinder: #2c0f12;
+  --magic-abyss: #1b0709;
 
   /* The cream ladder is the on-slab text ladder and it holds in both
      schemes, because the slab holds. It is also already measured clean:
@@ -442,7 +465,10 @@
   --magic-cream-dim: #cbc2bf;
   --magic-cream-dimmer: #b3a89f;
   --magic-cream-faint: #8f8479;
-  --magic-steel: #7d97b6;
+  /* Was --magic-steel #7d97b6, the one cool note left on the page. A blue-grey
+     caption on an oxblood ground now reads as a mistake rather than as a
+     quiet; this is the same rung in warm. 8.21:1 on the cinder. */
+  --magic-sand: #c7ac8e;
 
   --magic-bar-short: #e6dcc0;
   --magic-coral: #f9aa8f;
@@ -465,6 +491,10 @@
   --mana-mountain-ink: #fff1e0;
   --mana-forest: #00733e;
   --mana-forest-ink: #e2f3e3;
+  /* The trunk inside the Forest pip. It borrowed --magic-green-darker while
+     the ramp happened to be green; the ramp is red now and the pip is not,
+     so it holds its own value. */
+  --mana-forest-trunk: #00552d;
 }
 
 /* --------------------------------------------------------------------------
@@ -618,7 +648,7 @@
   --magic-header: rgb(27 20 9 / 0.92);
   --magic-slab: #0a0603;
   /* The edge --project-food's comment prescribes. The slab sits 1.09:1 from
-     the sheet here; hue alone is not enough. The same token edges the forest
+     the sheet here; hue alone is not enough. The same token edges the cinder
      section and the abyss output, which hold their values and face the same
      1.27:1 problem. */
   --magic-slab-edge: rgb(255 251 213 / 0.14);
@@ -646,27 +676,31 @@
   --magic-link: #8ec2e8;        /*  8.97:1 on card */
 
   /* Emphasis inverts: on a dark ground "deeper" has to mean lighter, so the
-     three light-ground greens step up and swap direction. -mid and -light
-     hold: they are already the values this page uses on its dark blocks. */
-  --magic-green: #4fae7f;       /*  6.26:1 on card */
-  --magic-green-deep: #7cc79e;  /*  8.56:1 on card */
-  --magic-green-darker: #9bd8b4;/* 10.47:1 on card */
-  --magic-green-mid: #6fbd8f;
-  --magic-green-light: #9bd3ae;
-  --magic-green-pale: #12301f;  /* a tint fill becomes a tinted dark fill */
-  --magic-forest: #0a2f1e;
-  --magic-abyss: #071a10;
+     three light-ground reds step up and swap direction. -mid stays a fill and
+     stays orange, deepened until it clears 3:1 on the inked card (3.24:1) and
+     separates from -deep beside it (2.61:1, where light gets 3.17). -light is
+     the gold and holds: it is already a dark-block value. */
+  --magic-ember: #ef7a63;       /*  6.21:1 on card */
+  --magic-ember-deep: #f6a189;  /*  8.44:1 on card */
+  --magic-ember-darker: #fbc3ac;/* 10.98:1 on card */
+  --magic-ember-mid: #a8551d;   /*  3.24:1 on card, fills only */
+  --magic-ember-light: #f2c14e;
+  --magic-ember-pale: #3a1512;  /* a tint fill becomes a tinted dark fill */
+  --magic-tile: #ef7a63;        /* the fill lifts and the glyph inks over */
+  --magic-tile-fg: #241a0f;     /*  6.21:1 */
+  --magic-cinder: #2c0f12;
+  --magic-abyss: #1b0709;
 
   /* Every value below holds. Each one only ever touches the slab, the
-     forest or the abyss — surfaces that do not flip — so a dark counterpart
+     cinder or the abyss — surfaces that do not flip — so a dark counterpart
      would be a change with nothing behind it. */
   --magic-cream: #fffbd5;
   --magic-cream-dim: #cbc2bf;
   --magic-cream-dimmer: #b3a89f;
   --magic-cream-faint: #8f8479;
-  --magic-steel: #7d97b6;
+  --magic-sand: #c7ac8e;
 
-  --magic-bar-short: #4a3d29;   /*  3.86:1 against the green bar beside it */
+  --magic-bar-short: #4a3d29;   /*  3.83:1 against the ember bar beside it */
   --magic-coral: #f9aa8f;
   --magic-gold: #f2e3a8;
 
@@ -682,6 +716,7 @@
   --mana-mountain-ink: #fff1e0;
   --mana-forest: #00733e;
   --mana-forest-ink: #e2f3e3;
+  --mana-forest-trunk: #00552d;
 }
 
 /* --------------------------------------------------------------------------
@@ -826,20 +861,22 @@
   --color-magic-slash: var(--magic-slash);
   --color-magic-link: var(--magic-link);
 
-  --color-magic-green: var(--magic-green);
-  --color-magic-green-deep: var(--magic-green-deep);
-  --color-magic-green-darker: var(--magic-green-darker);
-  --color-magic-green-mid: var(--magic-green-mid);
-  --color-magic-green-light: var(--magic-green-light);
-  --color-magic-green-pale: var(--magic-green-pale);
-  --color-magic-forest: var(--magic-forest);
+  --color-magic-ember: var(--magic-ember);
+  --color-magic-ember-deep: var(--magic-ember-deep);
+  --color-magic-ember-darker: var(--magic-ember-darker);
+  --color-magic-ember-mid: var(--magic-ember-mid);
+  --color-magic-ember-light: var(--magic-ember-light);
+  --color-magic-ember-pale: var(--magic-ember-pale);
+  --color-magic-tile: var(--magic-tile);
+  --color-magic-tile-fg: var(--magic-tile-fg);
+  --color-magic-cinder: var(--magic-cinder);
   --color-magic-abyss: var(--magic-abyss);
 
   --color-magic-cream: var(--magic-cream);
   --color-magic-cream-dim: var(--magic-cream-dim);
   --color-magic-cream-dimmer: var(--magic-cream-dimmer);
   --color-magic-cream-faint: var(--magic-cream-faint);
-  --color-magic-steel: var(--magic-steel);
+  --color-magic-sand: var(--magic-sand);
 
   --color-magic-bar-short: var(--magic-bar-short);
   --color-magic-coral: var(--magic-coral);
@@ -857,6 +894,7 @@
   --color-mana-mountain-ink: var(--mana-mountain-ink);
   --color-mana-forest: var(--mana-forest);
   --color-mana-forest-ink: var(--mana-forest-ink);
+  --color-mana-forest-trunk: var(--mana-forest-trunk);
 }
 
 /* --------------------------------------------------------------------------

@@ -105,7 +105,7 @@ export function PlainEnglishSearch() {
   return (
     <section
       id="search"
-      className="scroll-mt-[70px] bg-magic-forest px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
+      className="scroll-mt-[70px] bg-magic-cinder px-5 pt-10 pb-12 text-magic-cream md:px-10 md:pt-13 md:pb-15"
     >
       <SectionHead
         index="05"
@@ -129,7 +129,7 @@ export function PlainEnglishSearch() {
               }}
               rows={3}
               placeholder={t('magic.search.placeholder')}
-              className="box-border w-full resize-y rounded-[10px] border border-magic-cream/28 bg-magic-cream/6 px-[18px] py-4 font-magic-body text-[17px]/[1.6] text-white outline-none transition-colors focus:border-magic-green-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
+              className="box-border w-full resize-y rounded-[10px] border border-magic-cream/28 bg-magic-cream/6 px-[18px] py-4 font-magic-body text-[17px]/[1.6] text-white outline-none transition-colors focus:border-magic-ember-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-ember-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
             />
             <div className="mt-3.5 flex flex-wrap items-center gap-2">
               <span className="font-mono text-[11px]/[28px] text-magic-cream-faint">
@@ -140,7 +140,7 @@ export function PlainEnglishSearch() {
                   key={example}
                   type="button"
                   onClick={() => applyExample(example)}
-                  className="h-[30px] cursor-pointer rounded-pill border border-magic-cream/28 bg-transparent px-3 font-mono text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
+                  className="h-[30px] cursor-pointer rounded-pill border border-magic-cream/28 bg-transparent px-3 font-mono text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-ember-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                 >
                   {example.length > 34 ? `${example.slice(0, 32)}…` : example}
                 </button>
@@ -149,7 +149,7 @@ export function PlainEnglishSearch() {
                 type="button"
                 onClick={() => void run(text, { refine: false })}
                 disabled={busy || !text.trim()}
-                className="ml-auto h-[30px] cursor-pointer rounded-pill bg-magic-green-light px-4 font-magic-body text-[13px] font-medium text-magic-abyss transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
+                className="ml-auto h-[30px] cursor-pointer rounded-pill bg-magic-ember-light px-4 font-magic-body text-[13px] font-medium text-magic-abyss transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {busy ? t('magic.search.submitBusy') : t('magic.search.submit')}
               </button>
@@ -175,12 +175,12 @@ export function PlainEnglishSearch() {
 
             <div
               aria-live="polite"
-              className={`min-h-[26px] rounded-[10px] border border-magic-green-light/30 bg-magic-abyss px-[18px] py-4 font-mono text-[15.5px]/[1.7] break-words ${
+              className={`min-h-[26px] rounded-[10px] border border-magic-ember-light/30 bg-magic-abyss px-[18px] py-4 font-mono text-[15.5px]/[1.7] break-words ${
                 error
                   ? 'text-magic-coral'
                   : busy
                     ? 'text-magic-cream-faint'
-                    : 'text-magic-green-light'
+                    : 'text-magic-ember-light'
               }`}
             >
               {error ??
@@ -194,7 +194,7 @@ export function PlainEnglishSearch() {
                 {chips.map((chip, i) => (
                   <span
                     key={`${chip.fragment}-${i}`}
-                    className="flex items-center gap-2 rounded-pill bg-magic-green-light/16 px-3 py-[7px] font-mono text-[11.5px] font-medium text-magic-green-light"
+                    className="flex items-center gap-2 rounded-pill bg-magic-ember-light/16 px-3 py-[7px] font-mono text-[11.5px] font-medium text-magic-ember-light"
                   >
                     {chip.fragment}
                     <span className="font-magic-body text-[11px] opacity-70">{chip.label}</span>
@@ -230,7 +230,7 @@ export function PlainEnglishSearch() {
                 rel="noopener"
                 aria-disabled={!result}
                 onClick={(e) => !result && e.preventDefault()}
-                className={`rounded-pill bg-magic-green-light px-6 py-[13px] font-magic-body text-[13.5px] font-medium text-magic-abyss no-underline transition-colors hover:bg-white ${
+                className={`rounded-pill bg-magic-ember-light px-6 py-[13px] font-magic-body text-[13.5px] font-medium text-magic-abyss no-underline transition-colors hover:bg-white ${
                   result ? '' : 'pointer-events-none opacity-50'
                 }`}
               >
@@ -244,7 +244,7 @@ export function PlainEnglishSearch() {
                   void navigator.clipboard?.writeText(result.query);
                   setCopied(true);
                 }}
-                className="cursor-pointer rounded-pill border border-magic-cream/30 bg-transparent px-5 py-3 font-mono text-[12.5px] font-medium text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                className="cursor-pointer rounded-pill border border-magic-cream/30 bg-transparent px-5 py-3 font-mono text-[12.5px] font-medium text-magic-cream-dim transition-colors hover:border-magic-ember-light hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {copied ? t('magic.search.copied') : t('magic.search.copy')}
               </button>
@@ -279,13 +279,13 @@ export function PlainEnglishSearch() {
                       if (e.key === 'Enter') void run(refineText, { refine: true });
                     }}
                     placeholder={t('magic.search.refinePlaceholder')}
-                    className="box-border h-[38px] min-w-0 flex-1 rounded-pill border border-magic-cream/28 bg-magic-cream/6 px-4 font-magic-body text-[14px] text-white outline-none transition-colors focus:border-magic-green-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
+                    className="box-border h-[38px] min-w-0 flex-1 rounded-pill border border-magic-cream/28 bg-magic-cream/6 px-4 font-magic-body text-[14px] text-white outline-none transition-colors focus:border-magic-ember-light focus:bg-magic-cream/10 focus-visible:ring-2 focus-visible:ring-magic-ember-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                   />
                   <button
                     type="button"
                     onClick={() => void run(refineText, { refine: true })}
                     disabled={busy || !refineText.trim()}
-                    className="h-[38px] cursor-pointer rounded-pill border border-magic-green-light bg-transparent px-5 font-magic-body text-[13px] font-medium text-magic-green-light transition-colors hover:bg-magic-green-light hover:text-magic-abyss disabled:cursor-not-allowed disabled:opacity-50"
+                    className="h-[38px] cursor-pointer rounded-pill border border-magic-ember-light bg-transparent px-5 font-magic-body text-[13px] font-medium text-magic-ember-light transition-colors hover:bg-magic-ember-light hover:text-magic-abyss disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {busy ? t('magic.search.submitBusy') : t('magic.search.refineSubmit')}
                   </button>
@@ -299,7 +299,7 @@ export function PlainEnglishSearch() {
                         setRefineText(example);
                         void run(example, { refine: true });
                       }}
-                      className="h-[26px] cursor-pointer rounded-pill border border-magic-cream/22 bg-transparent px-2.5 font-mono text-[11px] text-magic-cream-faint transition-colors hover:border-magic-green-light hover:text-magic-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
+                      className="h-[26px] cursor-pointer rounded-pill border border-magic-cream/22 bg-transparent px-2.5 font-mono text-[11px] text-magic-cream-faint transition-colors hover:border-magic-ember-light hover:text-magic-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                     >
                       {example}
                     </button>
@@ -315,7 +315,7 @@ export function PlainEnglishSearch() {
           <p className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
             {t('magic.search.legendTitle')}
           </p>
-          <p className="mb-[18px] font-magic-body text-[12.5px]/[1.6] text-magic-steel">
+          <p className="mb-[18px] font-magic-body text-[12.5px]/[1.6] text-magic-sand">
             {t('magic.search.legendNote')}
           </p>
           <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-x-5">
@@ -325,7 +325,7 @@ export function PlainEnglishSearch() {
                   <span className="font-magic-body text-[12.5px] font-medium text-magic-cream">
                     {group.title}
                   </span>
-                  <span className="font-mono text-[11px] text-magic-green-light">
+                  <span className="font-mono text-[11px] text-magic-ember-light">
                     {magic.legendSyntax[groupIndex]}
                   </span>
                 </div>
@@ -335,7 +335,7 @@ export function PlainEnglishSearch() {
                       key={item}
                       type="button"
                       onClick={() => applyExample(item)}
-                      className="cursor-pointer rounded-lg border border-magic-cream/24 bg-transparent px-[11px] py-1.5 text-left font-magic-body text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-green-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-green-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
+                      className="cursor-pointer rounded-lg border border-magic-cream/24 bg-transparent px-[11px] py-1.5 text-left font-magic-body text-[11.5px] text-magic-cream-dim transition-colors hover:border-magic-ember-light hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember-light focus-visible:ring-offset-2 focus-visible:ring-offset-magic-slab"
                     >
                       {item}
                     </button>
@@ -377,8 +377,8 @@ function Chain({ turns, onRevert }: { turns: Turn[]; onRevert: (index: number) =
               title={isLast ? undefined : t('magic.search.revertTo')}
               className={`max-w-[22ch] truncate rounded-pill border px-2.5 py-1 font-magic-body text-[11.5px] transition-colors ${
                 isLast
-                  ? 'cursor-default border-magic-green-light/40 text-magic-cream'
-                  : 'cursor-pointer border-magic-cream/20 text-magic-cream-faint hover:border-magic-green-light hover:text-magic-cream'
+                  ? 'cursor-default border-magic-ember-light/40 text-magic-cream'
+                  : 'cursor-pointer border-magic-cream/20 text-magic-cream-faint hover:border-magic-ember-light hover:text-magic-cream'
               }`}
             >
               {turn.text}

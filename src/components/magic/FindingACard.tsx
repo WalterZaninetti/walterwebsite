@@ -126,7 +126,7 @@ export function FindingACard() {
                   deck,
                 })}
               </p>
-              <p className="font-mono text-[11.5px]/[1.6] text-magic-green-light">
+              <p className="font-mono text-[11.5px]/[1.6] text-magic-ember-light">
                 {t('magic.finding.tenTurns', {
                   percent: formatPercent(rows[9].p, locale),
                 })}
@@ -155,7 +155,7 @@ export function FindingACard() {
                     <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                       <span
                         className={`absolute inset-y-0 left-0 rounded-pill ${
-                          p >= 0.9 ? 'bg-magic-green-deep' : 'bg-magic-green-mid'
+                          p >= 0.9 ? 'bg-magic-ember-deep' : 'bg-magic-ember-mid'
                         }`}
                         style={{ width: `${Math.round(p * 100)}%` }}
                       />
