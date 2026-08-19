@@ -87,19 +87,13 @@
       "introShort": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Diciannove finora — ed è il motivo per cui esiste il DJ Tool.",
       "album": {
         "label": "Album del mese",
-        "issue": "Luglio 2026 · scelta n. 19",
-        "issueShort": "Lug 2026 · n. 19",
+        "issue": "{{month}} · scelta n. {{pick}}",
         "sleeveCaption": "copertina",
-        "note": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza — continuo a rubare quell'idea, male, nei miei mix.",
-        "noteShort": "Novanta minuti che non alzano mai la voce. Mi ha insegnato che la tensione può nascere tutta dalla pazienza.",
-        "tags": [
-          "ambient techno",
-          "cuffie",
-          "124 bpm"
-        ],
-        "readLink": "Leggi la nota completa →",
-        "readLinkShort": "Leggi la nota →",
-        "archiveLink": "Tutte le 19 scelte ↗"
+        "extent_one": "{{count}} brano · {{minutes}} min",
+        "extent_other": "{{count}} brani · {{minutes}} min",
+        "notes": {},
+        "listenLink": "Ascolta su Spotify ↗",
+        "archiveLink": "Tutte le {{count}} scelte ↗"
       },
       "sources": {
         "spotify": {

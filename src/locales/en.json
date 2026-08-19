@@ -87,19 +87,13 @@
       "introShort": "Every month I pick one record and write down why it got under my skin. Nineteen so far — and the reason the DJ tool exists.",
       "album": {
         "label": "Album of the month",
-        "issue": "July 2026 · pick no. 19",
-        "issueShort": "Jul 2026 · no. 19",
+        "issue": "{{month}} · pick no. {{pick}}",
         "sleeveCaption": "album sleeve",
-        "note": "Ninety minutes that never raise their voice. It taught me that tension can come entirely from patience — I keep stealing that idea, badly, in my own mixes.",
-        "noteShort": "Ninety minutes that never raise their voice. It taught me that tension can come entirely from patience.",
-        "tags": [
-          "ambient techno",
-          "headphones",
-          "124 bpm"
-        ],
-        "readLink": "Read the full note →",
-        "readLinkShort": "Read the note →",
-        "archiveLink": "All 19 picks ↗"
+        "extent_one": "{{count}} track · {{minutes}} min",
+        "extent_other": "{{count}} tracks · {{minutes}} min",
+        "notes": {},
+        "listenLink": "Listen on Spotify ↗",
+        "archiveLink": "All {{count}} picks ↗"
       },
       "sources": {
         "spotify": {

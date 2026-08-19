@@ -48,12 +48,13 @@ export const projects: readonly Project[] = [
   { id: 'food', href: '/seasonable', titleFace: 'display', world: 'food' },
 ];
 
-/** Record and track names — proper nouns, identical in both languages. */
+/**
+ * Record and track names — proper nouns, identical in both languages.
+ *
+ * The album of the month used to be hardcoded here. It is now snapshotted from Spotify at build
+ * time into music.generated.json; the record itself is chosen in album-of-the-month.json.
+ */
 export const music = {
-  album: {
-    title: 'Voices From The Lake',
-    credit: 'Donato Dozzy & Neel · Prologue, 2012',
-  },
   links: {
     /** No Spotify link was supplied (brief.md, "Still open" #1) — Bandcamp
      * stands alone rather than shipping a bare `https://spotify.com`. */

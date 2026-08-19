@@ -31,12 +31,42 @@ export type MusicFeed = {
   fetchedAt: string | null;
 };
 
+/**
+ * The monthly pick, assembled at build time from src/content/album-of-the-month.json (the id, the
+ * pick number and the month) plus what Spotify knows about the record.
+ *
+ * There is no `note` here on purpose. Spotify exposes no description, review or editorial text
+ * for an album under any endpoint, so the reason a record was picked is written by hand and
+ * lives in the locale files like the rest of the prose.
+ */
+export type MusicAlbum = {
+  id: string;
+  title: string;
+  artist: string;
+  /** Slated for removal from the API; the credit line drops it when it goes. */
+  label: string | null;
+  year: string | null;
+  url: string | null;
+  trackCount: number | null;
+  runtimeMin: number | null;
+  /** The primary artist's genres — album genres come back empty for almost every record. */
+  tags: string[];
+  /** Which pick in the series, and the month it ran. `month` is 'YYYY-MM'. */
+  pick: number | null;
+  month: string | null;
+  art: string | null;
+  fetchedAt: string | null;
+};
+
 export type MusicSourceId = 'spotify' | 'bandcamp';
 
 /* Cast, not annotation: TypeScript widens the generated JSON's `kind` to `string` and infers
    `never[]` for a source that has never answered, neither of which a structural check accepts.
    The script is the schema's only writer, so the shape is guaranteed upstream. */
-export const musicFeeds = snapshot as Record<MusicSourceId, MusicFeed>;
+export const musicFeeds = snapshot as unknown as Record<MusicSourceId, MusicFeed>;
+
+/** Null only before the first successful fetch — the card renders nothing rather than a shell. */
+export const albumOfTheMonth = (snapshot.album ?? null) as MusicAlbum | null;
 
 /**
  * Where each card's footer link points — the whole profile, not the five rows above it.

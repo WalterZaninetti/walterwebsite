@@ -25,6 +25,13 @@
  * survived the February 2026 endpoint cull; `preview_url` and `popularity` did not, so there is
  * no audio preview to show.
  *
+ * ALBUM OF THE MONTH
+ * Spotify has no description, review or editorial text on an album — not under any scope, not on
+ * any endpoint. So the pick's note stays hand-written in the locale files; what comes from the
+ * API is the sleeve, the title, the artist, the label, the year, the length and the genres.
+ * `label` and `popularity` are both listed as removed in the February 2026 changelog yet still
+ * answer, so everything here is read defensively and degrades to null.
+ *
  * BANDCAMP
  * There is no official API for a fan collection — bandcamp.com/developer is sales reporting for
  * labels, and the old /api/band/3/ endpoints need a dev key Bandcamp stopped issuing years ago.
@@ -38,6 +45,8 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const SNAPSHOT = new URL('../src/content/music.generated.json', import.meta.url);
+/** Hand-edited: the one file to change when the monthly pick changes. */
+const ALBUM_INPUT = new URL('../src/content/album-of-the-month.json', import.meta.url);
 const ART_DIR = new URL('../public/images/music/', import.meta.url);
 
 /** Rows per card. */
@@ -47,6 +56,8 @@ const COUNT = 5;
  * every pixel ratio up to ~2.9x and there is no srcset to thread through `LazyImage`.
  */
 const ART_PX = 128;
+/** The sleeve is its own size: 158px on desktop, near-full-width on a phone. 640 covers 2x. */
+const SLEEVE_PX = 640;
 const TIMEOUT_MS = 10_000;
 
 if (existsSync(new URL('../.env', import.meta.url))) {
@@ -84,7 +95,8 @@ async function spotifyToken(id, secret, refresh) {
   return token.access_token;
 }
 
-async function fetchSpotify() {
+/** One token for both Spotify readers. Null when the credentials are absent. */
+async function spotifyHeaders() {
   const id = process.env.SPOTIFY_CLIENT_ID;
   const secret = process.env.SPOTIFY_CLIENT_SECRET;
   const refresh = process.env.SPOTIFY_REFRESH_TOKEN;
@@ -93,9 +105,10 @@ async function fetchSpotify() {
     note('spotify', 'no credentials in .env — keeping the committed snapshot');
     return null;
   }
+  return { Authorization: `Bearer ${await spotifyToken(id, secret, refresh)}` };
+}
 
-  const accessToken = await spotifyToken(id, secret, refresh);
-  const headers = { Authorization: `Bearer ${accessToken}` };
+async function fetchSpotify(headers) {
 
   /* limit=20, not 5: the endpoint returns one entry per play, so a track on repeat would
      otherwise fill the whole card. Dedupe by track id and keep the first (most recent) five. */
@@ -134,6 +147,61 @@ async function fetchSpotify() {
 
   if (items.length === 0) throw new Error('no tracks in the response');
   return { items, profileUrl: profile.external_urls?.spotify ?? null };
+}
+
+/**
+ * The monthly pick. Shares the Spotify token with the feed above, so it takes one rather than
+ * minting a second.
+ */
+async function fetchAlbum(headers) {
+  let input;
+  try {
+    input = JSON.parse(readFileSync(ALBUM_INPUT, 'utf8'));
+  } catch {
+    note('album', 'no album-of-the-month.json — keeping the committed snapshot');
+    return null;
+  }
+  if (!input.spotifyId) return null;
+
+  const album = await fetchJson(`https://api.spotify.com/v1/albums/${input.spotifyId}`, { headers });
+
+  /* Album `genres` is present in the response but empty for essentially every record, so the
+     tags come from the primary artist instead — the only place Spotify actually populates them. */
+  let genres = album.genres?.length ? album.genres : [];
+  const artistId = album.artists?.[0]?.id;
+  if (!genres.length && artistId) {
+    try {
+      const artist = await fetchJson(`https://api.spotify.com/v1/artists/${artistId}`, { headers });
+      genres = artist.genres ?? [];
+    } catch {
+      /* Tags are a nice-to-have; a missing artist lookup must not lose the album. */
+    }
+  }
+
+  /* `tracks` is paginated at 50. Every album that fits the card fits one page, and the runtime is
+     a rounded minute figure — not worth a second request for the rare box set. */
+  const runtimeMs = (album.tracks?.items ?? []).reduce((sum, t) => sum + (t.duration_ms ?? 0), 0);
+
+  const sleeve = [...(album.images ?? [])].sort((a, b) => b.width - a.width)[0];
+
+  return {
+    id: album.id,
+    title: album.name,
+    artist: (album.artists ?? []).map((a) => a.name).join(', '),
+    /* Slated for removal in the February 2026 changelog but still answering — null-safe so the
+       credit line simply drops it the day it goes. */
+    label: album.label ?? null,
+    /* release_date is '1978' | '1978-04' | '1978-04-21' depending on precision; the card only
+       ever shows the year. */
+    year: album.release_date ? album.release_date.slice(0, 4) : null,
+    url: album.external_urls?.spotify ?? null,
+    trackCount: album.total_tracks ?? null,
+    runtimeMin: runtimeMs ? Math.round(runtimeMs / 60000) : null,
+    tags: genres.slice(0, 3),
+    pick: input.pick ?? null,
+    month: input.month ?? null,
+    artSource: sleeve?.url ?? null,
+  };
 }
 
 /* --------------------------------------------------------------- Bandcamp */
@@ -216,6 +284,20 @@ async function writeArtwork(source, items) {
   return written.map(({ artSource: _artSource, ...item }) => item);
 }
 
+/** The sleeve: one image, its own size, same no-crop rule. */
+async function writeSleeve(url, name, size) {
+  const response = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+  const buffer = await sharp(Buffer.from(await response.arrayBuffer()))
+    .resize(size, size, { fit: 'cover' })
+    .webp({ quality: 80 })
+    .toBuffer();
+
+  writeFileSync(new URL(name, ART_DIR), buffer);
+  return `/images/music/${name}`;
+}
+
 /* ------------------------------------------------------------------- Main */
 
 function readSnapshot() {
@@ -223,7 +305,60 @@ function readSnapshot() {
     return JSON.parse(readFileSync(SNAPSHOT, 'utf8'));
   } catch {
     const blank = { items: [], profileUrl: null, fetchedAt: null };
-    return { spotify: { ...blank }, bandcamp: { ...blank } };
+    return { spotify: { ...blank }, bandcamp: { ...blank }, album: null };
+  }
+}
+
+/**
+ * Names the two failures that actually happen, because neither is guessable from the status code
+ * alone: a dead Spotify credential comes back as a 400 invalid_grant / invalid_client from the
+ * token endpoint rather than the 401 you would expect, and a quota exhaustion is a 429 that says
+ * nothing about which of the shared per-account buckets ran out.
+ */
+function diagnose(source, error) {
+  if (/invalid_grant|invalid_client/.test(error.body ?? '') || error.status === 401) {
+    warn(
+      source,
+      'the credentials were rejected. Either the refresh token is revoked (re-run ' +
+        '`node scripts/spotify-auth.mjs`), the client id/secret in .env are wrong, or the ' +
+        'account has lost Spotify Premium — Development Mode apps stop working without it.',
+    );
+  } else if (error.status === 429) {
+    warn(source, 'rate limited or out of quota. Try again in a few minutes.');
+  } else {
+    warn(source, error.message);
+  }
+}
+
+/**
+ * The monthly pick, which is one object rather than a list and so does not fit `collect`. Same
+ * contract: any failure falls back to the committed snapshot and never throws.
+ */
+async function collectAlbum(headers, previous) {
+  if (!headers) return previous;
+
+  try {
+    const album = await fetchAlbum(headers);
+    if (!album) return previous;
+
+    const { artSource, ...rest } = album;
+    let art = previous?.art ?? null;
+
+    if (artSource) {
+      try {
+        /* Same filename every month. The cache header on /images/** is an hour with
+           must-revalidate, so a changed sleeve is picked up without a cache-busting name. */
+        art = await writeSleeve(artSource, 'album.webp', SLEEVE_PX);
+      } catch (error) {
+        warn('album', `sleeve download failed (${error.message}) — keeping the previous one`);
+      }
+    }
+
+    return { ...rest, art, fetchedAt: new Date().toISOString() };
+  } catch (error) {
+    diagnose('album', error);
+    warn('album', 'keeping the committed snapshot');
+    return previous;
   }
 }
 
@@ -244,21 +379,7 @@ async function collect(source, fetcher, previous) {
       fetchedAt: new Date().toISOString(),
     };
   } catch (error) {
-    /* A dead Spotify credential is a 400 invalid_grant / invalid_client from the token
-       endpoint, not the 401 you would expect — worth naming explicitly, because the fix is a
-       different one in each case and neither is guessable from "HTTP 400". */
-    if (/invalid_grant|invalid_client/.test(error.body ?? '') || error.status === 401) {
-      warn(
-        source,
-        'the credentials were rejected. Either the refresh token is revoked (re-run ' +
-          '`node scripts/spotify-auth.mjs`), the client id/secret in .env are wrong, or the ' +
-          'account has lost Spotify Premium — Development Mode apps stop working without it.',
-      );
-    } else if (error.status === 429) {
-      warn(source, 'rate limited or out of quota. Try again in a few minutes.');
-    } else {
-      warn(source, error.message);
-    }
+    diagnose(source, error);
     warn(source, `keeping the committed snapshot (${previous.items.length} rows)`);
     return previous;
   }
@@ -268,17 +389,29 @@ const previous = readSnapshot();
 
 mkdirSync(ART_DIR, { recursive: true });
 
-const [spotify, bandcamp] = await Promise.all([
-  collect('spotify', fetchSpotify, previous.spotify),
+/* Minted once, up front: the feed and the monthly pick are two reads against the same account,
+   and a failure here is the same failure for both — reported once rather than twice. */
+let headers = null;
+try {
+  headers = await spotifyHeaders();
+} catch (error) {
+  diagnose('spotify', error);
+}
+
+const [spotify, bandcamp, album] = await Promise.all([
+  collect('spotify', () => (headers ? fetchSpotify(headers) : null), previous.spotify),
   collect('bandcamp', fetchBandcamp, previous.bandcamp),
+  collectAlbum(headers, previous.album),
 ]);
 
-const snapshot = { spotify, bandcamp };
+const snapshot = { spotify, bandcamp, album };
 
 /* Drop art from runs that no longer reference it. Done after both sources resolve so a fallback
    never deletes the very files it is falling back on. */
 const live = new Set(
-  [...spotify.items, ...bandcamp.items].map((item) => item.art?.split('/').pop()).filter(Boolean),
+  [...spotify.items, ...bandcamp.items, ...(album ? [album] : [])]
+    .map((item) => item.art?.split('/').pop())
+    .filter(Boolean),
 );
 for (const file of readdirSync(ART_DIR)) {
   if (file.endsWith('.webp') && !live.has(file)) rmSync(new URL(file, ART_DIR));
@@ -286,4 +419,8 @@ for (const file of readdirSync(ART_DIR)) {
 
 writeFileSync(SNAPSHOT, `${JSON.stringify(snapshot, null, 2)}\n`);
 
-note('', `wrote ${spotify.items.length} Spotify + ${bandcamp.items.length} Bandcamp rows`);
+note(
+  '',
+  `wrote ${spotify.items.length} Spotify + ${bandcamp.items.length} Bandcamp rows` +
+    `${album ? `, album of the month "${album.title}"` : ', no album of the month'}`,
+);
