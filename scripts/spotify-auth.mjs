@@ -18,11 +18,12 @@
  *
  *   3. node scripts/spotify-auth.mjs
  *
- *      Open the printed URL, approve, and the script prints the refresh token. Paste it into
- *      .env as SPOTIFY_REFRESH_TOKEN. Refresh tokens are long-lived; the short-lived access
- *      token is derived from it on every build.
+ *      It opens the consent screen for you. Approve, and the script prints the refresh token —
+ *      paste it into .env as SPOTIFY_REFRESH_TOKEN. Refresh tokens are long-lived; the
+ *      short-lived access token is derived from it on every build.
  */
 import { createServer } from 'node:http';
+import { execFile } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -61,7 +62,13 @@ const authorizeUrl = `https://accounts.spotify.com/authorize?${new URLSearchPara
 
 const server = createServer(async (request, response) => {
   const url = new URL(request.url, `http://127.0.0.1:${PORT}`);
-  if (url.pathname !== '/callback') {
+
+  /* Only the real redirect carries a code or an error. Everything else that hits this port —
+     /favicon.ico, a browser preconnect, a stray reload — is ignored rather than treated as the
+     callback, which would otherwise close the server before the redirect ever landed. */
+  const code = url.searchParams.get('code');
+  const failure = url.searchParams.get('error');
+  if (url.pathname !== '/callback' || (!code && !failure)) {
     response.writeHead(404).end();
     return;
   }
@@ -71,17 +78,27 @@ const server = createServer(async (request, response) => {
     server.close();
   };
 
-  if (url.searchParams.get('error')) {
-    console.error(`\nspotify-auth: authorization declined (${url.searchParams.get('error')})`);
+  if (failure) {
+    console.error(`\nspotify-auth: authorization declined (${failure})`);
     finish('Declined. You can close this tab.');
     process.exitCode = 1;
     return;
   }
 
-  if (url.searchParams.get('state') !== state) {
-    console.error('\nspotify-auth: state mismatch — ignoring this callback.');
-    finish('State mismatch. You can close this tab.');
-    process.exitCode = 1;
+  /* A mismatch means this callback is not the one this run started — most often an authorize URL
+     that lost its tail when it was copied out of the terminal, since `state` is the last
+     parameter. Keep listening rather than exiting, so approving again fixes it without
+     restarting the script. */
+  const returned = url.searchParams.get('state');
+  if (returned !== state) {
+    console.error(
+      `\nspotify-auth: state mismatch — ignoring this callback.\n` +
+        `  expected: ${state}\n` +
+        `  received: ${returned ?? '(none)'}\n` +
+        `  The authorize URL was probably truncated. Still listening — approve again.`,
+    );
+    response.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    response.end('State mismatch — go back to the terminal and open the URL again.');
     return;
   }
 
@@ -94,7 +111,7 @@ const server = createServer(async (request, response) => {
     },
     body: new URLSearchParams({
       grant_type: 'authorization_code',
-      code: url.searchParams.get('code'),
+      code,
       redirect_uri: REDIRECT_URI,
     }),
   });
@@ -113,5 +130,13 @@ const server = createServer(async (request, response) => {
 });
 
 server.listen(PORT, '127.0.0.1', () => {
-  console.log(`\nOpen this URL, then approve:\n\n${authorizeUrl}\n`);
+  /* Opened for you rather than printed to be copied: the URL is long enough to wrap in a
+     terminal, and a copy that stops at the wrap loses `state` off the end — which arrives here
+     as a mismatch with no hint as to why. The printed copy stays as the fallback. */
+  const opener = { darwin: 'open', win32: 'start' }[process.platform] ?? 'xdg-open';
+  execFile(opener, [authorizeUrl], (error) => {
+    if (error) console.log('\nCould not open a browser automatically — use the URL below.');
+  });
+
+  console.log(`\nApprove in the browser. If nothing opened, paste this URL whole:\n\n${authorizeUrl}\n`);
 });
