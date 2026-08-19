@@ -62,9 +62,6 @@ export const music = {
   },
 } as const;
 
-export const proposeTopics = ['Magic', 'Music', 'Food', 'Other'] as const;
-export type ProposeTopic = (typeof proposeTopics)[number];
-
 export const footerLegal = [
   { key: 'cookiePolicy', href: '/cookie-policy' },
   { key: 'privacy', href: '/privacy' },

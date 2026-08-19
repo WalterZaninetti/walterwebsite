@@ -2,12 +2,28 @@
   "spotify": {
     "items": [
       {
+        "id": "5byzjMoXFXYJkDzyAvTjOW",
+        "title": "Dicevano",
+        "artist": "1 44 9 8, DJ Lil Cut, BBoy Enea, More Groove",
+        "url": "https://open.spotify.com/track/5byzjMoXFXYJkDzyAvTjOW",
+        "at": "2026-08-19T13:54:24.161Z",
+        "art": "/images/music/spotify-0.webp"
+      },
+      {
+        "id": "0jWgAnTrNZmOGmqgvHhZEm",
+        "title": "What's Up?",
+        "artist": "4 Non Blondes",
+        "url": "https://open.spotify.com/track/0jWgAnTrNZmOGmqgvHhZEm",
+        "at": "2026-08-19T13:47:38.584Z",
+        "art": "/images/music/spotify-1.webp"
+      },
+      {
         "id": "1cK74IBdBXzuYHUrza85TO",
         "title": "Slow Train",
         "artist": "Thomass Jackson",
         "url": "https://open.spotify.com/track/1cK74IBdBXzuYHUrza85TO",
         "at": "2026-08-19T09:50:53.251Z",
-        "art": "/images/music/spotify-0.webp"
+        "art": "/images/music/spotify-2.webp"
       },
       {
         "id": "0gdmDP6xy3ZV7JNoHWAN9k",
@@ -15,15 +31,7 @@
         "artist": "The Jam",
         "url": "https://open.spotify.com/track/0gdmDP6xy3ZV7JNoHWAN9k",
         "at": "2026-08-19T09:43:35.846Z",
-        "art": "/images/music/spotify-1.webp"
-      },
-      {
-        "id": "5byzjMoXFXYJkDzyAvTjOW",
-        "title": "Dicevano",
-        "artist": "1 44 9 8, DJ Lil Cut, BBoy Enea, More Groove",
-        "url": "https://open.spotify.com/track/5byzjMoXFXYJkDzyAvTjOW",
-        "at": "2026-08-19T09:40:42.896Z",
-        "art": "/images/music/spotify-2.webp"
+        "art": "/images/music/spotify-3.webp"
       },
       {
         "id": "6PypGyiu0Y2lCDBN1XZEnP",
@@ -31,19 +39,11 @@
         "artist": "R.E.M.",
         "url": "https://open.spotify.com/track/6PypGyiu0Y2lCDBN1XZEnP",
         "at": "2026-08-17T20:29:30.537Z",
-        "art": "/images/music/spotify-3.webp"
-      },
-      {
-        "id": "0y0DIqOA7kU31A6yFvgqCW",
-        "title": "Dance, I Got No Rhythm",
-        "artist": "SE62",
-        "url": "https://open.spotify.com/track/0y0DIqOA7kU31A6yFvgqCW",
-        "at": "2026-08-17T20:27:44.161Z",
         "art": "/images/music/spotify-4.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-08-19T09:56:16.735Z"
+    "fetchedAt": "2026-08-19T14:20:10.408Z"
   },
   "bandcamp": {
     "items": [
@@ -94,7 +94,7 @@
       }
     ],
     "profileUrl": null,
-    "fetchedAt": "2026-08-19T09:56:16.698Z"
+    "fetchedAt": "2026-08-19T14:20:10.442Z"
   },
   "album": {
     "id": "0zXeZw0oFC2Db99RqlfHur",
@@ -152,9 +152,29 @@
       "city pop",
       "jazz funk"
     ],
-    "pick": 20,
+    "pick": 3,
     "month": "2026-08",
     "art": "/images/music/album.webp",
-    "fetchedAt": "2026-08-19T09:56:16.361Z"
+    "previous": [
+      {
+        "id": "7fK9JzCaIIIWehaWd7IoUE",
+        "title": "Melanchólia",
+        "artist": "Matia Bazar",
+        "url": "https://open.spotify.com/album/7fK9JzCaIIIWehaWd7IoUE",
+        "pick": 2,
+        "month": "2026-07",
+        "art": "/images/music/album-prev-0.webp"
+      },
+      {
+        "id": "2ZytN2cY4Zjrr9ukb2rqTP",
+        "title": "Off the Wall",
+        "artist": "Michael Jackson",
+        "url": "https://open.spotify.com/album/2ZytN2cY4Zjrr9ukb2rqTP",
+        "pick": 1,
+        "month": "2026-06",
+        "art": "/images/music/album-prev-1.webp"
+      }
+    ],
+    "fetchedAt": "2026-08-19T14:20:10.639Z"
   }
 }

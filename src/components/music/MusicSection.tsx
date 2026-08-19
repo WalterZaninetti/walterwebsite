@@ -1,7 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { music } from '../../content/site';
+import { previousPicks, type MusicPreviousPick } from '../../content/music';
+import { formatPickMonth } from '../../lib/relativeTime';
 import { AlbumOfTheMonth } from './AlbumOfTheMonth';
 import { SourceCard } from './SourceCard';
+import { LazyImage } from '../LazyImage';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
@@ -91,13 +94,21 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
 }
 
 /**
- * The sleeve archive. Mobile drops March and re-counts to +16, per the doc; the
- * desktop rail shows all four plus the +15 tile, three across, so the dashed
- * terminator closes the second row.
+ * The sleeve archive: the picks before this month's, newest first.
+ *
+ * These were four placeholder frames and a dashed "+15" tile standing in for an archive that did
+ * not exist. They are real records now, fetched from Spotify by the same build step that fills
+ * the monthly card, so the rail cannot claim a back catalogue the site does not have — the count
+ * is whatever `album-of-the-month.json` lists under `previous`, and nothing renders if that is
+ * empty.
+ *
+ * Two across in both schemes. The rail owns the narrow column of the section grid, so a tile is
+ * roughly half of it: big enough to read a sleeve, which is the whole job.
  */
 function PreviousPicks({ className }: { className?: string }) {
   const { t } = useTranslation();
-  const months = t('home.music.previous.months', { returnObjects: true }) as string[];
+
+  if (previousPicks.length === 0) return null;
 
   return (
     <div id="picks" className={cx('flex flex-col gap-2.5', className)}>
@@ -105,25 +116,70 @@ function PreviousPicks({ className }: { className?: string }) {
         <WaveIcon />
         {t('home.music.previous.label')}
       </Eyebrow>
-      <div className="grid grid-cols-4 gap-2 lg:grid-cols-3 lg:gap-2.5">
-        {months.map((month, index) => (
-          <Frame
-            key={month}
-            texture="tight"
-            className={
-              index === months.length - 1
-                ? 'hidden aspect-square rounded-chip text-[9px] lg:grid lg:rounded-tile'
-                : 'aspect-square rounded-chip text-[9px] lg:rounded-tile'
-            }
-          >
-            {month}
-          </Frame>
+      <ol className="grid grid-cols-2 gap-2.5">
+        {previousPicks.map((pick) => (
+          <PickTile key={pick.id} pick={pick} />
         ))}
-        <div className="grid aspect-square place-items-center rounded-chip border border-dashed border-hatch-line font-mono text-[11px] font-medium text-on-panel-accent lg:rounded-tile lg:text-label-wide/none">
-          <span className="lg:hidden">{t('home.music.previous.remainingShort')}</span>
-          <span className="hidden lg:inline">{t('home.music.previous.remaining')}</span>
-        </div>
-      </div>
+      </ol>
     </div>
+  );
+}
+
+function PickTile({ pick }: { pick: MusicPreviousPick }) {
+  const { t, i18n } = useTranslation();
+  const month = formatPickMonth(pick.month, i18n.language);
+
+  const sleeve = pick.art ? (
+    /* Unmodified cover art, as Spotify's guidelines require — resized, never cropped or
+       overlaid. `alt` is empty because the title and artist are right underneath. */
+    <LazyImage
+      src={pick.art}
+      alt=""
+      width={420}
+      height={420}
+      className="aspect-square w-full rounded-chip object-cover lg:rounded-tile"
+    />
+  ) : (
+    <Frame texture="tight" className="aspect-square rounded-chip text-[9px] lg:rounded-tile">
+      {t('home.music.album.sleeveCaption')}
+    </Frame>
+  );
+
+  const body = (
+    <>
+      {sleeve}
+      {month && (
+        <p className="mt-2 font-mono text-[10px]/none uppercase tracking-[0.14em] text-on-panel-quiet">
+          {month}
+        </p>
+      )}
+      {/* Track and album names are shown as Spotify returns them — never reworded. Truncating is
+          the one change its guidelines allow when space runs out; the full name stays in the
+          title attribute. */}
+      <p
+        className="mt-1.5 truncate text-note-sm text-on-panel-body"
+        title={`${pick.title} — ${pick.artist}`}
+      >
+        {pick.title}
+      </p>
+      <p className="truncate font-mono text-[11px] text-on-panel-dim">{pick.artist}</p>
+    </>
+  );
+
+  return (
+    <li className="min-w-0">
+      {pick.url ? (
+        <a
+          href={pick.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block min-w-0 no-underline transition-opacity duration-150 hover:opacity-80"
+        >
+          {body}
+        </a>
+      ) : (
+        body
+      )}
+    </li>
   );
 }

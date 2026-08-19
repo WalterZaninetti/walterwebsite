@@ -29,7 +29,7 @@
   "home": {
     "hero": {
       "eyebrow": "Walter · Italia",
-      "eyebrowSuffix": " · classe 1996",
+      "eyebrowSuffix": " · classe 1994",
       "headline": "Strumenti piccoli,",
       "headlineAccent": "fatti con cura.",
       "portraitCaption": "ritratto o foto della scrivania — mettine una",
@@ -83,8 +83,8 @@
     "music": {
       "heading": "Musica,",
       "headingAccent": "presa sul serio",
-      "intro": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Diciannove finora. È la cosa che conosco meglio a parte il codice — ed è il motivo per cui esiste il DJ Tool.",
-      "introShort": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Diciannove finora — ed è il motivo per cui esiste il DJ Tool.",
+      "intro": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Tre finora. È la cosa che conosco meglio a parte il codice — ed è il motivo per cui esiste il DJ Tool.",
+      "introShort": "Ogni mese scelgo un disco e scrivo perché mi è entrato sotto pelle. Tre finora — ed è il motivo per cui esiste il DJ Tool.",
       "album": {
         "label": "Album del mese",
         "issue": "{{month}} · scelta n. {{pick}}",
@@ -109,15 +109,7 @@
         }
       },
       "previous": {
-        "label": "Scelte precedenti",
-        "months": [
-          "Giu",
-          "Mag",
-          "Apr",
-          "Mar"
-        ],
-        "remaining": "+15",
-        "remainingShort": "+16"
+        "label": "Scelte precedenti"
       },
       "links": {
         "primary": "Collezione Bandcamp ↗"
@@ -146,11 +138,8 @@
       "emailLabel": "Email",
       "emailPlaceholder": "tu@qualcosa.it",
       "topicLabel": "Di cosa si tratta",
-      "topicMagic": "Magic",
-      "topicMusic": "Musica / DJ",
-      "topicFood": "Cibo",
-      "topicOther": "Altro",
-      "topicOtherShort": "Altro",
+      "topicPlaceholder": "Magic, musica, cibo, altro…",
+      "topicFallback": "Altro",
       "ideaLabel": "L'idea",
       "ideaPlaceholder": "Continuo ad aprire tre schede per capire…",
       "submit": "Manda l'idea",

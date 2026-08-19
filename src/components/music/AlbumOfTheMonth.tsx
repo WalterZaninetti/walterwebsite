@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { albumOfTheMonth, type MusicTrack } from '../../content/music';
+import { formatPickMonth } from '../../lib/relativeTime';
 import { LazyImage } from '../LazyImage';
 import { Chip } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
@@ -22,12 +23,7 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
 
   if (!album) return null;
 
-  /* Localised month name from 'YYYY-MM'. The day is forced to the 2nd and read in UTC so a
-     negative timezone offset cannot roll the 1st back into the previous month. */
-  const month = album.month
-    ? new Intl.DateTimeFormat(i18n.language, { month: 'long', year: 'numeric', timeZone: 'UTC' })
-        .format(new Date(`${album.month}-02T00:00:00Z`))
-    : null;
+  const month = formatPickMonth(album.month, i18n.language);
 
   /* "Masayoshi Takanaka · Universal Music LLC, 1978" — and correct when either half is missing,
      since `label` is on its way out of the API. */

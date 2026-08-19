@@ -37,3 +37,24 @@ export function formatRelativeTime(iso: string | null, locale: string, now = Dat
   }
   return format.format(-elapsed, 'second');
 }
+
+/**
+ * "August 2026" / "agosto 2026", from a 'YYYY-MM' string.
+ *
+ * The day is forced to the 2nd and read in UTC so a negative timezone offset cannot roll the 1st
+ * back into the previous month — which would silently mislabel every pick west of Greenwich.
+ *
+ * Shared by the monthly card and the archive rail so the two never drift apart in wording.
+ */
+export function formatPickMonth(month: string | null, locale: string) {
+  if (!month) return null;
+
+  const date = new Date(`${month}-02T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+
+  return new Intl.DateTimeFormat(locale, {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(date);
+}

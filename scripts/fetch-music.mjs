@@ -58,6 +58,12 @@ const COUNT = 5;
 const ART_PX = 128;
 /** The sleeve is its own size: 158px on desktop, near-full-width on a phone. 640 covers 2x. */
 const SLEEVE_PX = 640;
+/**
+ * The archive tiles. They sit two-across in the section's narrow column, which is ~210 CSS px
+ * each on a wide desktop — so ART_PX's 128 would upscale even at 1x. 420 covers 2x there and
+ * still costs a fraction of a full sleeve.
+ */
+const PICK_PX = 420;
 const TIMEOUT_MS = 10_000;
 
 if (existsSync(new URL('../.env', import.meta.url))) {
@@ -193,6 +199,7 @@ async function fetchAlbum(headers) {
   const sleeve = [...(album.images ?? [])].sort((a, b) => b.width - a.width)[0];
 
   return {
+    previousInput: Array.isArray(input.previous) ? input.previous : [],
     id: album.id,
     title: album.name,
     artist: (album.artists ?? []).map((a) => a.name).join(', '),
@@ -211,6 +218,43 @@ async function fetchAlbum(headers) {
     month: input.month ?? null,
     artSource: sleeve?.url ?? null,
   };
+}
+
+/**
+ * The two picks before this one. Deliberately thinner than `fetchAlbum`: the archive renders a
+ * sleeve and a month, so it asks for one album each and keeps the four fields the tile shows.
+ * No tracklist, no genre lookup, no label — none of it is drawn, and each would cost a request.
+ *
+ * A pick that fails to fetch is dropped rather than rendered bare: unlike the monthly card, which
+ * degrades field by field, a sleeve tile with no sleeve is just a hole in the grid.
+ */
+async function fetchPreviousPicks(headers, entries) {
+  const picks = [];
+
+  for (const [index, entry] of entries.entries()) {
+    if (!entry?.spotifyId) continue;
+    try {
+      const album = await fetchJson(`https://api.spotify.com/v1/albums/${entry.spotifyId}`, {
+        headers,
+      });
+      const sleeve = [...(album.images ?? [])].sort((a, b) => b.width - a.width)[0];
+      picks.push({
+        id: album.id,
+        title: album.name,
+        artist: (album.artists ?? []).map((a) => a.name).join(', '),
+        url: album.external_urls?.spotify ?? null,
+        pick: entry.pick ?? null,
+        month: entry.month ?? null,
+        artSource: sleeve?.url ?? null,
+        /* Positional, so a re-ordered list rewrites the same files rather than orphaning them. */
+        artName: `album-prev-${index}.webp`,
+      });
+    } catch (error) {
+      warn('album', `previous pick ${entry.spotifyId} failed (${error.message}) — dropped`);
+    }
+  }
+
+  return picks;
 }
 
 /* --------------------------------------------------------------- Bandcamp */
@@ -350,7 +394,7 @@ async function collectAlbum(headers, previous) {
     const album = await fetchAlbum(headers);
     if (!album) return previous;
 
-    const { artSource, ...rest } = album;
+    const { artSource, previousInput, ...rest } = album;
     let art = previous?.art ?? null;
 
     if (artSource) {
@@ -363,7 +407,23 @@ async function collectAlbum(headers, previous) {
       }
     }
 
-    return { ...rest, art, fetchedAt: new Date().toISOString() };
+    /* PICK_PX, not ART_PX: these are half-column tiles, not 48px feed rows. */
+    const fetched = await fetchPreviousPicks(headers, previousInput);
+    const picks = [];
+    for (const { artSource: source, artName, ...pick } of fetched) {
+      let picked = null;
+      if (source) {
+        try {
+          picked = await writeSleeve(source, artName, PICK_PX);
+        } catch (error) {
+          warn('album', `sleeve for "${pick.title}" failed (${error.message}) — pick dropped`);
+          continue;
+        }
+      }
+      picks.push({ ...pick, art: picked });
+    }
+
+    return { ...rest, art, previous: picks, fetchedAt: new Date().toISOString() };
   } catch (error) {
     diagnose('album', error);
     warn('album', 'keeping the committed snapshot');
@@ -418,7 +478,7 @@ const snapshot = { spotify, bandcamp, album };
 /* Drop art from runs that no longer reference it. Done after both sources resolve so a fallback
    never deletes the very files it is falling back on. */
 const live = new Set(
-  [...spotify.items, ...bandcamp.items, ...(album ? [album] : [])]
+  [...spotify.items, ...bandcamp.items, ...(album ? [album, ...(album.previous ?? [])] : [])]
     .map((item) => item.art?.split('/').pop())
     .filter(Boolean),
 );
@@ -431,5 +491,9 @@ writeFileSync(SNAPSHOT, `${JSON.stringify(snapshot, null, 2)}\n`);
 note(
   '',
   `wrote ${spotify.items.length} Spotify + ${bandcamp.items.length} Bandcamp rows` +
-    `${album ? `, album of the month "${album.title}"` : ', no album of the month'}`,
+    `${
+      album
+        ? `, album of the month "${album.title}" + ${(album.previous ?? []).length} previous`
+        : ', no album of the month'
+    }`,
 );

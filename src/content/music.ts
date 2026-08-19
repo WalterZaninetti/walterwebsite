@@ -43,6 +43,22 @@ export type MusicTrack = { n: number; title: string; sec: number | null };
  * rather than hand-write prose the card shows what the API actually has — including the
  * tracklist.
  */
+/**
+ * One earlier pick, as the archive tile draws it: a sleeve, a month and a link out. Deliberately
+ * not a `MusicAlbum` — the tile shows no tracklist, label or runtime, so the script never fetches
+ * them and the type does not pretend they exist.
+ */
+export type MusicPreviousPick = {
+  id: string;
+  title: string;
+  artist: string;
+  url: string | null;
+  pick: number | null;
+  /** 'YYYY-MM'. */
+  month: string | null;
+  art: string | null;
+};
+
 export type MusicAlbum = {
   id: string;
   title: string;
@@ -61,6 +77,8 @@ export type MusicAlbum = {
   pick: number | null;
   month: string | null;
   art: string | null;
+  /** The earlier picks, newest first. Empty before the first successful fetch. */
+  previous: MusicPreviousPick[];
   fetchedAt: string | null;
 };
 
@@ -73,6 +91,9 @@ export const musicFeeds = snapshot as unknown as Record<MusicSourceId, MusicFeed
 
 /** Null only before the first successful fetch — the card renders nothing rather than a shell. */
 export const albumOfTheMonth = (snapshot.album ?? null) as MusicAlbum | null;
+
+/** The archive rail's rows. Read off the album so there is one snapshot shape, not two. */
+export const previousPicks: MusicPreviousPick[] = albumOfTheMonth?.previous ?? [];
 
 /**
  * Where each card's footer link points — the whole profile, not the five rows above it.

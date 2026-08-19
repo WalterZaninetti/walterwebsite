@@ -29,7 +29,7 @@
   "home": {
     "hero": {
       "eyebrow": "Walter · Italy",
-      "eyebrowSuffix": " · est. 1996",
+      "eyebrowSuffix": " · est. 1994",
       "headline": "Small tools,",
       "headlineAccent": "made carefully.",
       "portraitCaption": "portrait or desk photo — drop one in",
@@ -83,8 +83,8 @@
     "music": {
       "heading": "Music,",
       "headingAccent": "taken seriously",
-      "intro": "Every month I pick one record and write down why it got under my skin. Nineteen so far. It's the thing I know most about that isn't code — and the reason the DJ tool exists.",
-      "introShort": "Every month I pick one record and write down why it got under my skin. Nineteen so far — and the reason the DJ tool exists.",
+      "intro": "Every month I pick one record and write down why it got under my skin. Three so far. It's the thing I know most about that isn't code — and the reason the DJ tool exists.",
+      "introShort": "Every month I pick one record and write down why it got under my skin. Three so far — and the reason the DJ tool exists.",
       "album": {
         "label": "Album of the month",
         "issue": "{{month}} · pick no. {{pick}}",
@@ -109,15 +109,7 @@
         }
       },
       "previous": {
-        "label": "Previous picks",
-        "months": [
-          "Jun",
-          "May",
-          "Apr",
-          "Mar"
-        ],
-        "remaining": "+15",
-        "remainingShort": "+16"
+        "label": "Previous picks"
       },
       "links": {
         "primary": "Bandcamp collection ↗"
@@ -146,11 +138,8 @@
       "emailLabel": "Email",
       "emailPlaceholder": "you@somewhere.it",
       "topicLabel": "What's it about",
-      "topicMagic": "Magic",
-      "topicMusic": "Music / DJ",
-      "topicFood": "Food",
-      "topicOther": "Something else",
-      "topicOtherShort": "Else",
+      "topicPlaceholder": "Magic, music, food, something else…",
+      "topicFallback": "Something else",
       "ideaLabel": "The idea",
       "ideaPlaceholder": "I keep opening three tabs to figure out…",
       "submit": "Send the idea",

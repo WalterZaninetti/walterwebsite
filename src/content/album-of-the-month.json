@@ -1,5 +1,9 @@
 {
   "spotifyId": "0zXeZw0oFC2Db99RqlfHur",
-  "pick": 20,
-  "month": "2026-08"
+  "pick": 3,
+  "month": "2026-08",
+  "previous": [
+    { "spotifyId": "7fK9JzCaIIIWehaWd7IoUE", "pick": 2, "month": "2026-07" },
+    { "spotifyId": "2ZytN2cY4Zjrr9ukb2rqTP", "pick": 1, "month": "2026-06" }
+  ]
 }

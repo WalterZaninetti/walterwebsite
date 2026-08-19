@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { proposeTopics, site, type ProposeTopic } from '../content/site';
-import { Chip } from './ui/Pill';
+import { site } from '../content/site';
 import { Eyebrow } from './ui/Eyebrow';
 import { NoteIcon } from './ui/icons';
 import { cx } from './ui/cx';
@@ -17,14 +16,6 @@ const fieldClasses = cx(
   'focus-visible:ring-2 focus-visible:ring-sage-solid focus-visible:ring-offset-2 focus-visible:ring-offset-panel-alt',
 );
 
-/** Topic ids are stable; their labels are translated. */
-const TOPIC_KEYS: Record<ProposeTopic, string> = {
-  Magic: 'topicMagic',
-  Music: 'topicMusic',
-  Food: 'topicFood',
-  Other: 'topicOther',
-};
-
 /**
  * There's no backend behind the site yet, so submitting composes the message
  * into a mail draft to the address the card already offers as the fallback.
@@ -35,12 +26,12 @@ export function ProposeToolForm() {
   const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [topic, setTopic] = useState<ProposeTopic>('Magic');
+  const [topic, setTopic] = useState('');
   const [idea, setIdea] = useState('');
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const topicLabel = t(`home.propose.${TOPIC_KEYS[topic]}`);
+    const topicLabel = topic.trim() || t('home.propose.topicFallback');
     const body = [
       `${t('home.propose.mailFrom')}: ${name || '—'} <${email || '—'}>`,
       `${t('home.propose.mailAbout')}: ${topicLabel}`,
@@ -98,34 +89,20 @@ export function ProposeToolForm() {
         </Field>
       </div>
 
-      {/* A <legend> is rendered out-of-flow in the fieldset's border box, so it
-          is not a flex item and gap never applies to it — the spacing below the
-          label has to be its own margin. */}
-      <fieldset className="mt-[14px] lg:mt-0 lg:mb-[14px]">
-        <legend className="mb-[9px] font-mono text-label font-medium uppercase tracking-[0.16em] text-on-panel-accent">
-          {t('home.propose.topicLabel')}
-        </legend>
-        <div className="flex flex-wrap gap-2">
-          {proposeTopics.map((option) => (
-            <Chip
-              key={option}
-              variant={topic === option ? 'solid' : 'outline'}
-              onClick={() => setTopic(option)}
-              aria-pressed={topic === option}
-              className="px-3.5 py-[9px] lg:py-2"
-            >
-              {option === 'Other' ? (
-                <>
-                  <span className="md:hidden">{t('home.propose.topicOtherShort')}</span>
-                  <span className="hidden md:inline">{t('home.propose.topicOther')}</span>
-                </>
-              ) : (
-                t(`home.propose.${TOPIC_KEYS[option]}`)
-              )}
-            </Chip>
-          ))}
-        </div>
-      </fieldset>
+      {/* Was four preset chips. A free-text field asks the same question without
+          making the answer pick a side — and the mail body reads the same either
+          way, since it only ever interpolated the chosen label. */}
+      <div className="mt-[14px] lg:mt-0 lg:mb-[14px]">
+        <Field label={t('home.propose.topicLabel')}>
+          <input
+            type="text"
+            value={topic}
+            onChange={(event) => setTopic(event.target.value)}
+            placeholder={t('home.propose.topicPlaceholder')}
+            className={cx(fieldClasses, 'h-12 lg:h-[46px]')}
+          />
+        </Field>
+      </div>
 
       <div className="mt-[14px] lg:mt-0 lg:mb-4">
         <Field label={t('home.propose.ideaLabel')}>
