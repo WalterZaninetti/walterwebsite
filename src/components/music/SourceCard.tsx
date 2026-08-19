@@ -53,15 +53,18 @@ export function SourceCard({ source, className }: { source: MusicSourceId; class
           {t(`home.music.sources.${source}.empty`)}
         </p>
       ) : (
-        <ol className="flex min-w-0 flex-col gap-3 lg:gap-[14px]">
+        <ol className="mb-[18px] flex min-w-0 flex-col gap-3 lg:gap-[14px]">
           {items.map((item) => (
             <Row key={item.id} item={item} locale={i18n.language} />
           ))}
         </ol>
       )}
 
+      {/* mt-auto, not a fixed margin: the two captions wrap to different line counts, so without
+          it the footer rules sit at different heights on cards that are the same height. Pushing
+          to the bottom of the flex column lines them up. */}
       {profile && (
-        <div className="mt-[18px] flex items-center justify-between gap-3 border-t border-line-on-panel-soft pt-[14px] lg:pt-4">
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-line-on-panel-soft pt-[14px] lg:pt-4">
           <a
             href={profile}
             target="_blank"

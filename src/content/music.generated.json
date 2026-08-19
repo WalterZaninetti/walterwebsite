@@ -1,8 +1,49 @@
 {
   "spotify": {
-    "items": [],
-    "fetchedAt": null,
-    "profileUrl": null
+    "items": [
+      {
+        "id": "6PypGyiu0Y2lCDBN1XZEnP",
+        "title": "Everybody Hurts",
+        "artist": "R.E.M.",
+        "url": "https://open.spotify.com/track/6PypGyiu0Y2lCDBN1XZEnP",
+        "at": "2026-08-17T20:29:30.537Z",
+        "art": "/images/music/spotify-0.webp"
+      },
+      {
+        "id": "0y0DIqOA7kU31A6yFvgqCW",
+        "title": "Dance, I Got No Rhythm",
+        "artist": "SE62",
+        "url": "https://open.spotify.com/track/0y0DIqOA7kU31A6yFvgqCW",
+        "at": "2026-08-17T20:27:44.161Z",
+        "art": "/images/music/spotify-1.webp"
+      },
+      {
+        "id": "3J31Ng3dKKJ6sEHDtV9hSp",
+        "title": "No Other Heart",
+        "artist": "Mac DeMarco",
+        "url": "https://open.spotify.com/track/3J31Ng3dKKJ6sEHDtV9hSp",
+        "at": "2026-08-17T17:17:41.591Z",
+        "art": "/images/music/spotify-2.webp"
+      },
+      {
+        "id": "2os4nK3Y63rxYs53hVxexF",
+        "title": "Lookin' Out My Back Door",
+        "artist": "Creedence Clearwater Revival",
+        "url": "https://open.spotify.com/track/2os4nK3Y63rxYs53hVxexF",
+        "at": "2026-08-16T13:42:06.566Z",
+        "art": "/images/music/spotify-3.webp"
+      },
+      {
+        "id": "4BM8yJ0PzBi2ZewpMTOxtx",
+        "title": "Fernando",
+        "artist": "ABBA",
+        "url": "https://open.spotify.com/track/4BM8yJ0PzBi2ZewpMTOxtx",
+        "at": "2026-08-16T12:55:17.192Z",
+        "art": "/images/music/spotify-4.webp"
+      }
+    ],
+    "profileUrl": "https://open.spotify.com/user/1169527641",
+    "fetchedAt": "2026-08-19T09:36:07.543Z"
   },
   "bandcamp": {
     "items": [
@@ -53,6 +94,6 @@
       }
     ],
     "profileUrl": null,
-    "fetchedAt": "2026-08-19T09:01:18.509Z"
+    "fetchedAt": "2026-08-19T09:36:07.466Z"
   }
 }
