@@ -35,18 +35,18 @@ export type WindowKind = 'open-field' | 'greenhouse' | 'stored';
 
 export type Produce = {
   id: ProduceId;
+  /**
+   * The designation exactly as its own disciplinare writes it — "Carciofo di
+   * Paestum", not "artichoke". This is the unit the sources actually license a
+   * claim about: a disciplinare fixes when *this* protected product is picked
+   * in *these* comuni, and says nothing about artichokes in general.
+   */
+  name: string;
+  designation: 'DOP' | 'IGP';
+  category: 'fruit' | 'vegetable';
+  /** What kind of thing it is, for grouping and for the English reader. */
   en: string;
   it: string;
-  category: 'fruit' | 'vegetable';
-  /**
-   * "You will see this in an Italian shop all year round."
-   *
-   * The one editorial judgement per item, and the whole gate on the flown
-   * bucket. Without it, flown is pure computed absence and lists cherries in
-   * January — true, and useless, because nobody is selling cherries in January
-   * either.
-   */
-  alwaysOnShelf: boolean;
 };
 
 export type Zone = {
@@ -72,19 +72,30 @@ export type Province = {
 
 export type Source = {
   id: SourceId;
+  /** The document's own title, verbatim. A proposal says it is a proposal. */
   name: string;
   url: string;
   year: number;
-  /** How narrow this authority is. Rendered to the reader; not a quality score. */
-  scope: 'region' | 'zone' | 'national';
+  /**
+   * ISO `YYYY-MM-DD`: the day this document was last opened and confirmed to
+   * say what the windows citing it claim.
+   *
+   * Not rendered — the reader sees the name and the publication year. It is
+   * here because these URLs rot: the ministry's own national calendar is
+   * already a 404, and without an accessed date there is no way to tell a link
+   * that broke last week from one that was never checked.
+   */
+  accessed: string;
 };
 
 export type Window = {
   produce: ProduceId;
-  /** Exactly one of `region` / `zone` is set. Enforced by the invariant test,
-   *  because the override rule below is only well defined if it holds. */
-  region?: RegionId;
-  zone?: ZoneId;
+  /**
+   * Every province the disciplinare's zone falls in. One row per document, not
+   * one per province: the zone is a single fact about a single publication, and
+   * splitting it would invite the rows to drift apart.
+   */
+  provinces: readonly ProvinceId[];
   kind: WindowKind;
   /** Both inclusive. May wrap the year: start 22, end 7 is mid-December to
    *  mid-April, which is the common case for citrus. */
@@ -107,21 +118,19 @@ export type Entry = {
   kind: WindowKind;
   window: Window;
   source: Source;
-  /** Which key matched. 'region' means a region-specific row beat the zone default. */
-  basis: 'region' | 'zone';
 };
 
 /**
- * `flown` is Produce[] and not Entry[] on purpose. The other two buckets are
- * claims, backed by a window and therefore by a source. This one is an
- * absence: nothing is being cited because nothing is being claimed beyond "no
- * window in the catalogue covers this here, now". Giving it an Entry would
- * hand it a provenance it has not got.
+ * Two buckets, and no third.
+ *
+ * The old `flown` bucket guessed that a thing on the shelf all year with no
+ * window near you must have travelled. Nothing in this dataset supports that
+ * guess: a disciplinare says when its own product is picked and nothing at all
+ * about what else is in the shop. So the guess is gone rather than dressed up.
  */
 export type Answer = {
   picking: readonly Entry[];
   stored: readonly Entry[];
-  flown: readonly Produce[];
 };
 
 /** The half-month containing `now`. Day 1-15 is the early half, 16-31 the late one. */
@@ -161,73 +170,47 @@ export function regionName(region: Region, locale: 'en' | 'it'): string {
   return locale === 'en' ? (region.en ?? region.it) : region.it;
 }
 
-export function produceName(produce: Produce, locale: 'en' | 'it'): string {
+/** The designation is a proper noun: the same in both languages, by design. */
+export function produceName(produce: Produce): string {
+  return `${produce.name} ${produce.designation}`;
+}
+
+/** What kind of thing it is — "artichoke" / "carciofo" — for grouping. */
+export function produceKind(produce: Produce, locale: 'en' | 'it'): string {
   return locale === 'en' ? produce.en : produce.it;
 }
 
-const KINDS: readonly WindowKind[] = ['open-field', 'greenhouse', 'stored'];
-
-/**
- * Every window that could apply to this region, for one produce and one kind,
- * resolved down to the single row that wins.
- *
- * A region row *overrides* the zone row rather than adding to it. Two rows for
- * the same (produce, kind, region) would make this undefined, which is why the
- * invariant test rejects them rather than this function guessing.
- */
-function resolve(
-  data: Dataset,
-  produce: ProduceId,
-  kind: WindowKind,
-  region: RegionId,
-  zone: ZoneId,
-): Window | undefined {
-  let zoneRow: Window | undefined;
-  for (const w of data.windows) {
-    if (w.produce !== produce || w.kind !== kind) continue;
-    if (w.region === region) return w;
-    if (w.zone === zone) zoneRow = w;
-  }
-  return zoneRow;
-}
-
-export function whatsInSeason(data: Dataset, region: RegionId, half: HalfMonth): Answer {
-  const home = data.regions.find((r) => r.id === region);
-  if (!home) return { picking: [], stored: [], flown: [] };
+export function whatsInSeason(data: Dataset, province: ProvinceId, half: HalfMonth): Answer {
+  const here = data.provinces.find((p) => p.id === province);
+  if (!here) return { picking: [], stored: [] };
 
   const picking: Entry[] = [];
   const stored: Entry[] = [];
-  const flown: Produce[] = [];
 
-  for (const produce of data.produce) {
-    let found = false;
+  for (const window of data.windows) {
+    if (!window.provinces.includes(here.id)) continue;
+    if (!covers(half, window.start, window.end)) continue;
 
-    for (const kind of KINDS) {
-      const window = resolve(data, produce.id, kind, home.id, home.zone);
-      if (!window || !covers(half, window.start, window.end)) continue;
+    const produce = data.produce.find((x) => x.id === window.produce);
+    const source = data.sources.find((s) => s.id === window.source);
+    // A window whose produce or source id does not resolve is a broken row,
+    // not a row to render without provenance. The invariant test makes it
+    // unrepresentable; this drops it rather than shipping an uncited claim.
+    if (!produce || !source) continue;
 
-      const source = data.sources.find((s) => s.id === window.source);
-      // A window whose source id does not resolve is a broken row, not a row
-      // to render without provenance. The invariant test makes it
-      // unrepresentable; this drops it rather than shipping an uncited claim.
-      if (!source) continue;
-
-      found = true;
-      const entry: Entry = {
-        produce,
-        kind,
-        window,
-        source,
-        basis: window.region ? 'region' : 'zone',
-      };
-      if (kind === 'stored') stored.push(entry);
-      else picking.push(entry);
-    }
-
-    if (!found && produce.alwaysOnShelf) flown.push(produce);
+    const entry: Entry = { produce, kind: window.kind, window, source };
+    if (window.kind === 'stored') stored.push(entry);
+    else picking.push(entry);
   }
 
-  return { picking, stored, flown };
+  return { picking, stored };
+}
+
+/** Every province any window in the catalogue answers for. */
+export function answeredProvinces(data: Dataset): ReadonlySet<ProvinceId> {
+  const seen = new Set<ProvinceId>();
+  for (const w of data.windows) for (const p of w.provinces) seen.add(p);
+  return seen;
 }
 
 /**

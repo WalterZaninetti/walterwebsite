@@ -7,7 +7,8 @@ import {
   currentHalfMonth,
   covers,
   produceName,
-  regionName,
+  answeredProvinces,
+  produceKind,
   splitHalfMonth,
   whatsInSeason,
 } from '../../lib/seasonable';
@@ -66,11 +67,6 @@ export function SeasonablePage() {
     window.history.replaceState(null, '', next);
   }, [province, half]);
 
-  const region = useMemo(
-    () => dataset.provinces.find((p) => p.id === province)?.region ?? null,
-    [province],
-  );
-
   return (
     <div className="mx-auto w-full max-w-[1440px]">
       <SkipLink />
@@ -84,12 +80,12 @@ export function SeasonablePage() {
           onHalf={setHalf}
         />
 
-        <Answer region={region} half={half} locale={locale} />
+        <Answer province={province} half={half} locale={locale} />
 
         <div className="bg-canvas px-5 pb-12 md:px-13 md:pb-16">
           <div className="max-w-[62ch]">
             <Sections />
-            <Ask region={region} half={half} locale={locale} />
+            <Ask province={province} half={half} locale={locale} />
             <BackLink />
           </div>
         </div>
@@ -242,9 +238,18 @@ function Pickers({ province, half, locale, onProvince, onHalf }: BandProps) {
   // Sorted in the reading language, though the names themselves are Italian:
   // an English reader still scans an alphabetical list, and Intl.Collator is
   // what gets Forlì next to Foggia rather than after Frosinone.
-  const provinces = useMemo(() => {
+  /**
+   * Split into "answers something" and "answers nothing", because with this
+   * dataset the second group is the larger one and a flat list of 107 invites
+   * the reader to pick a province, get an empty page, and conclude the tool is
+   * broken. Both groups stay selectable: a shared link has to resolve, and an
+   * empty answer is a real answer that the copy explains.
+   */
+  const [answering, silent] = useMemo(() => {
     const collator = new Intl.Collator(locale);
-    return [...dataset.provinces].sort((a, b) => collator.compare(a.name, b.name));
+    const answered = answeredProvinces(dataset);
+    const sorted = [...dataset.provinces].sort((a, b) => collator.compare(a.name, b.name));
+    return [sorted.filter((p) => answered.has(p.id)), sorted.filter((p) => !answered.has(p.id))];
   }, [locale]);
 
   const halves = useMemo(() => {
@@ -277,11 +282,20 @@ function Pickers({ province, half, locale, onProvince, onHalf }: BandProps) {
           onChange={(event) => onProvince(event.target.value || null)}
         >
           <option value="">{t('seasonable.picker.placePlaceholder')}</option>
-          {provinces.map((p) => (
-            <option key={p.id} value={p.id}>
-              {p.name}
-            </option>
-          ))}
+          <optgroup label={t('seasonable.picker.groupAnswering')}>
+            {answering.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
+              </option>
+            ))}
+          </optgroup>
+          <optgroup label={t('seasonable.picker.groupSilent')}>
+            {silent.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
+              </option>
+            ))}
+          </optgroup>
         </select>
       </div>
 
@@ -309,33 +323,33 @@ function Pickers({ province, half, locale, onProvince, onHalf }: BandProps) {
   );
 }
 
-type AnswerProps = { region: string | null; half: HalfMonth; locale: 'en' | 'it' };
+type AnswerProps = { province: string | null; half: HalfMonth; locale: 'en' | 'it' };
 
 /**
  * The payload, on canvas, immediately under the seam.
  *
- * One `role="status"` on the wrapper rather than one per row: the region has to
+ * One `role="status"` on the wrapper rather than one per row: the answer has to
  * announce itself once when it changes, and a live region per produce would
  * read the whole list aloud on every keystroke of the picker.
  */
-function Answer({ region, half, locale }: AnswerProps) {
+function Answer({ province, half, locale }: AnswerProps) {
   const { t } = useTranslation();
 
-  const home = region ? dataset.regions.find((r) => r.id === region) : undefined;
+  const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;
   const answer = useMemo(
-    () => (region ? whatsInSeason(dataset, region, half) : null),
-    [region, half],
+    () => (province ? whatsInSeason(dataset, province, half) : null),
+    [province, half],
   );
 
   return (
     <div className="bg-canvas px-5 pt-11 pb-4 md:px-13 md:pt-14 md:pb-6">
       <div role="status" aria-live="polite">
-        {!answer || !home ? (
+        {!answer || !here ? (
           <p className="max-w-[62ch] text-note text-ink-body text-pretty md:text-body">
             {t('seasonable.states.noPlace')}
           </p>
         ) : (
-          <Buckets answer={answer} region={regionName(home, locale)} half={half} locale={locale} />
+          <Buckets answer={answer} place={here.name} half={half} locale={locale} />
         )}
       </div>
     </div>
@@ -344,22 +358,22 @@ function Answer({ region, half, locale }: AnswerProps) {
 
 type BucketsProps = {
   answer: ReturnType<typeof whatsInSeason>;
-  region: string;
+  place: string;
   half: HalfMonth;
   locale: 'en' | 'it';
 };
 
-function Buckets({ answer, region, half, locale }: BucketsProps) {
+function Buckets({ answer, place, half, locale }: BucketsProps) {
   const { t } = useTranslation();
-  const { picking, stored, flown } = answer;
+  const { picking, stored } = answer;
 
-  // Should be unreachable — seasonable.test.ts asserts it across all twenty
-  // regions and all twenty-four half-months. Rendered anyway, because
-  // "unreachable" is how blank screens ship.
-  if (picking.length === 0 && stored.length === 0 && flown.length === 0) {
+  // Reachable, and often: most provinces are named by no disciplinare at all,
+  // and the ones that are answer for part of the year. An empty answer is a
+  // real result here rather than a failure, and it says so.
+  if (picking.length === 0 && stored.length === 0) {
     return (
       <p className="max-w-[62ch] text-note text-ink-body text-pretty md:text-body">
-        {t('seasonable.states.nothing', { region })}
+        {t('seasonable.states.nothing', { place })}
       </p>
     );
   }
@@ -368,12 +382,12 @@ function Buckets({ answer, region, half, locale }: BucketsProps) {
     <div className="grid gap-10 md:gap-12">
       <Bucket
         title={t('seasonable.buckets.picking.title')}
-        note={t('seasonable.buckets.picking.note', { region })}
-        empty={t('seasonable.states.noPicking', { region })}
+        note={t('seasonable.buckets.picking.note', { place })}
+        empty={t('seasonable.states.noPicking', { place })}
         entries={picking}
         half={half}
         locale={locale}
-        region={region}
+        place={place}
       />
       <Bucket
         title={t('seasonable.buckets.stored.title')}
@@ -382,16 +396,7 @@ function Buckets({ answer, region, half, locale }: BucketsProps) {
         entries={stored}
         half={half}
         locale={locale}
-        region={region}
-      />
-      <Bucket
-        title={t('seasonable.buckets.flown.title')}
-        note={t('seasonable.buckets.flown.note')}
-        empty={t('seasonable.states.noFlown')}
-        flown={flown}
-        half={half}
-        locale={locale}
-        region={region}
+        place={place}
       />
     </div>
   );
@@ -401,11 +406,10 @@ type BucketProps = {
   title: string;
   note: string;
   empty: string;
-  entries?: readonly Entry[];
-  flown?: readonly Produce[];
+  entries: readonly Entry[];
   half: HalfMonth;
   locale: 'en' | 'it';
-  region: string;
+  place: string;
 };
 
 /**
@@ -414,25 +418,24 @@ type BucketProps = {
  * here rather than in the model: the model's job is which windows apply, and
  * showing the same word twice in a list is a rendering decision.
  */
-function Bucket({ title, note, empty, entries, flown, half, locale, region }: BucketProps) {
+function Bucket({ title, note, empty, entries, half, locale, place }: BucketProps) {
   const rows = useMemo(() => {
-    if (flown) {
-      const collator = new Intl.Collator(locale);
-      return [...flown]
-        .sort((a, b) => collator.compare(a[locale], b[locale]))
-        .map((produce) => ({ produce, entries: [] as Entry[] }));
-    }
     const grouped = new Map<string, { produce: Produce; entries: Entry[] }>();
-    for (const entry of entries ?? []) {
+    for (const entry of entries) {
       const row = grouped.get(entry.produce.id);
       if (row) row.entries.push(entry);
       else grouped.set(entry.produce.id, { produce: entry.produce, entries: [entry] });
     }
     const collator = new Intl.Collator(locale);
-    return [...grouped.values()].sort((a, b) =>
-      collator.compare(a.produce[locale], b.produce[locale]),
+    // Sorted by the kind of thing, then by the designation: three chestnuts in
+    // a row read as one answer about chestnuts rather than three unrelated
+    // names that happen to start with different letters.
+    return [...grouped.values()].sort(
+      (a, b) =>
+        collator.compare(a.produce[locale], b.produce[locale]) ||
+        collator.compare(a.produce.name, b.produce.name),
     );
-  }, [entries, flown, locale]);
+  }, [entries, locale]);
 
   return (
     <section>
@@ -450,7 +453,7 @@ function Bucket({ title, note, empty, entries, flown, half, locale, region }: Bu
               entries={row.entries}
               half={half}
               locale={locale}
-              region={region}
+              place={place}
             />
           ))}
         </ul>
@@ -464,10 +467,10 @@ type RowProps = {
   entries: readonly Entry[];
   half: HalfMonth;
   locale: 'en' | 'it';
-  region: string;
+  place: string;
 };
 
-function Row({ produce, entries, half, locale, region }: RowProps) {
+function Row({ produce, entries, half, locale, place }: RowProps) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const panelId = `seasonable-src-${produce.id}`;
@@ -480,7 +483,8 @@ function Row({ produce, entries, half, locale, region }: RowProps) {
     // affordance with the thing it describes.
     <li className="grid gap-y-1.5 md:grid-cols-[13rem_1fr] md:items-center md:gap-x-5">
       <div className="flex flex-wrap items-baseline gap-x-2">
-        <span className="text-body-sm text-ink-strong">{produceName(produce, locale)}</span>
+        <span className="text-body-sm text-ink-strong">{produceName(produce)}</span>
+        <span className="font-mono text-micro text-ink-muted">{produceKind(produce, locale)}</span>
         {entries.length > 0 && (
           <span className="font-mono text-micro text-ink-muted">
             {entries.map((entry) => t(KIND_KEY[entry.kind])).join(' · ')}
@@ -501,16 +505,7 @@ function Row({ produce, entries, half, locale, region }: RowProps) {
         <YearStrip entries={entries} half={half} />
         {open && (
           <div id={panelId} className="mt-2 grid gap-1">
-            {entries.length === 0 ? (
-              // The flown bucket has no window and therefore nothing to cite.
-              // Saying so is the point: it is an inference about the calendar,
-              // not a measurement, and it must not borrow the authority the
-              // other two buckets have earned.
-              <p className="max-w-[62ch] font-mono text-micro text-ink-body">
-                {t('seasonable.row.flownReason')}
-              </p>
-            ) : (
-              entries.map((entry) => (
+            {              entries.map((entry) => (
                 <p
                   key={`${entry.kind}-${entry.source.id}`}
                   className="max-w-[62ch] font-mono text-micro text-ink-body"
@@ -524,15 +519,9 @@ function Row({ produce, entries, half, locale, region }: RowProps) {
                   </a>
                   {', '}
                   {entry.source.year}.{' '}
-                  {t(
-                    entry.basis === 'region'
-                      ? 'seasonable.row.basisRegionTail'
-                      : 'seasonable.row.basisZoneTail',
-                    { region },
-                  )}
+                  {t('seasonable.row.basisTail', { place })}
                 </p>
-              ))
-            )}
+              ))}
           </div>
         )}
       </div>
@@ -662,10 +651,10 @@ function Sections() {
  *
  * Still `mailto:`. There is no form backend and none is being added.
  */
-function Ask({ region, half, locale }: AnswerProps) {
+function Ask({ province, half, locale }: AnswerProps) {
   const { t } = useTranslation();
 
-  const home = region ? dataset.regions.find((r) => r.id === region) : undefined;
+  const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;
   const month = new Intl.DateTimeFormat(locale, { month: 'long' }).format(
     new Date(2026, splitHalfMonth(half).month, 1),
   );
@@ -674,7 +663,7 @@ function Ask({ region, half, locale }: AnswerProps) {
     { month },
   );
   const subject = t('seasonable.s3.askSubject', {
-    region: home ? regionName(home, locale) : '',
+    place: here ? here.name : '',
     half: when,
   });
 

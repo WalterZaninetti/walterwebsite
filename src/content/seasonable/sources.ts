@@ -1,65 +1,73 @@
 /**
  * Where every date on this page comes from.
  *
- * ─────────────────────────────────────────────────────────────────────────
- *  UNFINISHED, DELIBERATELY, AND THE BUILD ENFORCES IT.
+ * Every source below is one document: a DOP or IGP disciplinare di produzione,
+ * with the title it gives itself, the year it was published, and a URL that
+ * resolves to its text. Nothing here is an organisation's homepage, and nothing
+ * is a body's name standing in for a publication it never wrote.
  *
- *  Every `year` below is 0, and `seasonable.test.ts` fails on `year === 0`.
- *  `npm test` runs inside `npm run deploy`, so this dataset cannot reach
- *  production until a person fills these in.
+ * Why disciplinari and not agricultural calendars: they are the only Italian
+ * documents that state a harvest window *and* the exact comuni it applies to.
+ * Regional disciplinari di produzione integrata were the obvious candidate and
+ * turned out to carry no dates at all — they regulate how a crop is grown, not
+ * when it is picked. CREA publishes no seasonality calendar. The ministry's own
+ * national calendar is a dead link. `.pipeline/seasonable/sources-ledger.md`
+ * records all of that, so nobody re-checks it.
  *
- *  That is not an oversight left as a comment — it is the only honest way to
- *  hand over this file. The page's entire claim is that every window cites a
- *  real, checkable publication. The bodies named below are real and are the
- *  right ones to cite; the specific documents and their years are not
- *  something this build could verify, and writing a plausible year next to a
- *  real organisation would manufacture exactly the false provenance the page
- *  exists to refuse.
- *
- *  To finish: open each body's calendar, put its title in `name`, its
- *  permanent URL in `url`, and its publication year in `year`. Then `npm test`
- *  passes and the page can ship.
- * ─────────────────────────────────────────────────────────────────────────
- *
- * `scope` is rendered to the reader as how narrow the claim is: a regional
- * calendar is a narrower authority than a national one, and the page says so
- * rather than presenting both as equally certain. It is not a quality score.
+ * `name` is the document's own title, verbatim, including the word "proposta"
+ * where the document is a proposed modification rather than a settled one. The
+ * reader can then see exactly what they are being pointed at.
  */
 
 import type { Source } from '../../lib/seasonable';
 
-const src = (id: string, name: string, url: string, scope: Source['scope']): Source => ({
+const src = (id: string, name: string, url: string, year: number): Source => ({
   id,
   name,
   url,
-  scope,
-  // See the block above. The invariant test rejects this value.
-  year: 0,
+  year,
+  // Every document below was opened and read on this date.
+  accessed: '2026-08-20',
 });
 
+const D = 'https://www.disciplinare.it';
+
 export const sources: readonly Source[] = [
-  src('crea', 'CREA — Consiglio per la ricerca in agricoltura', 'https://www.crea.gov.it', 'national'),
-  src('ismea', 'ISMEA', 'https://www.ismea.it', 'national'),
-  src('masaf', "MASAF — Ministero dell'agricoltura", 'https://www.politicheagricole.it', 'national'),
-  src('campagna-amica', 'Fondazione Campagna Amica', 'https://www.campagnamica.it', 'national'),
+  // ── Fruit ────────────────────────────────────────────────────────────────
+  src('albicocca-vesuviana', 'Albicocca Vesuviana — Domanda di registrazione e pubblicazione del disciplinare di produzione', `${D}/albicocca-vesuviana-dop-domanda-di-registrazione-e-pubblicazione-del-disciplinare-di-produzione.html`, 2026),
+  src('castagna-cuneo', 'Castagna Cuneo IGP — Modifiche disciplinare di produzione 2023', `${D}/castagna-cuneo-igp-modifiche-disciplinare-di-produzione-2023.html`, 2023),
+  src('castagna-monte-amiata', 'Castagna del Monte Amiata IGP — Domanda di modifica del disciplinare 2026', `${D}/castagna-del-monte-amiata-igp-domanda-di-modifica-del-disciplinare-2026.html`, 2026),
+  src('castagna-vallerano', 'Castagna di Vallerano DOP', `${D}/castagna-di-vallerano-dop-disciplinare-di-produzione.html`, 2020),
+  src('ciliegia-bracigliano', 'Ciliegia di Bracigliano IGP — Modifica del disciplinare di produzione', `${D}/ciliegia-di-bracigliano-igp-modifica-del-disciplinare-di-produzione-2025.html`, 2025),
+  src('ciliegia-lari', 'Ciliegia di Lari IGP — Approvazione della modifica ordinaria al disciplinare di produzione', `${D}/ciliegia-di-lari-igp-approvazione-della-modifica-ordinaria-al-disciplinare-di-produzione-2025.html`, 2025),
+  src('ciliegia-vignola', 'Ciliegia di Vignola IGP — Proposta di modifica del disciplinare di produzione', `${D}/ciliegia-di-vignola-igp-proposta-di-modifica-del-disciplinare-di-produzione-2025.html`, 2025),
+  src('fichi-cosenza', 'Fichi di Cosenza DOP', `${D}/fichi-di-cosenza-dop-disciplinare-di-produzione.html`, 2008),
+  src('fragola-basilicata', 'Fragola della Basilicata IGP — Domanda di registrazione e disciplinare di produzione', `${D}/fragola-della-basilicata-igp-domanda-di-registrazione-e-disciplinare-di-produzione.html`, 2024),
+  src('limone-interdonato', 'Limone Interdonato Messina IGP — modifica disciplinare', `${D}/limone-interdonato-messina-igp-modifica-disciplinare.html`, 2017),
+  src('limone-sorrento', 'Limone di Sorrento IGP', `${D}/limone-di-sorrento-ipg.html`, 2001),
+  src('marroni-monfenera', 'Marroni del Monfenera IGP', `${D}/marroni-del-monfenera-igp-disciplinare-di-produzione.html`, 2009),
+  src('mela-rossa-cuneo', 'Mela Rossa Cuneo IGP — Modifiche disciplinare di produzione 2023', `${D}/mela-rossa-cuneo-igp-modifiche-disciplinare-di-produzione-2023.html`, 2023),
+  src('mela-valtellina', 'Mela di Valtellina IGP — Disciplinare di produzione', `${D}/mela-di-valtellina-igp-disciplinare-di-produzione.html`, 2006),
+  src('pesca-delia', 'Pesca di Delia IGP', `${D}/pesca-di-delia-igp-disciplinare-di-produzione.html`, 2021),
+  src('pesca-leonforte', 'Pesca di Leonforte IGP — Approvazione della modifica ordinaria al disciplinare', `${D}/pesca-di-leonforte-igp-approvazione-della-modifica-ordinaria-al-disciplinare-di-produzione-2024.html`, 2024),
+  src('susina-dro', 'Susina di Dro DOP', `${D}/susina-di-dro-dop-disciplinare-di-produzione.html`, 2009),
 
-  src('zona-alpina', 'CREA — colture di montagna', 'https://www.crea.gov.it', 'zone'),
-  src('zona-padana', 'CREA — orticoltura padana', 'https://www.crea.gov.it', 'zone'),
-  src('zona-tirrenica', 'CREA — orticoltura tirrenica', 'https://www.crea.gov.it', 'zone'),
-  src('zona-meridionale', 'CREA — orticoltura meridionale', 'https://www.crea.gov.it', 'zone'),
-  src('zona-insulare', 'CREA — colture insulari', 'https://www.crea.gov.it', 'zone'),
-
-  src('reg-sicilia', 'Regione Siciliana — Assessorato Agricoltura', 'https://www.regione.sicilia.it', 'region'),
-  src('reg-emilia-romagna', 'Regione Emilia-Romagna — Agricoltura', 'https://agricoltura.regione.emilia-romagna.it', 'region'),
-  src('reg-piemonte', 'Regione Piemonte — Agricoltura', 'https://www.regione.piemonte.it', 'region'),
-  src('reg-veneto', 'Regione Veneto — Agricoltura', 'https://www.regione.veneto.it', 'region'),
-  src('reg-puglia', 'Regione Puglia — Agricoltura', 'https://www.regione.puglia.it', 'region'),
-  src('reg-campania', 'Regione Campania — Agricoltura', 'https://www.agricoltura.regione.campania.it', 'region'),
-  src('reg-trentino', 'Provincia autonoma di Trento — Agricoltura', 'https://www.provincia.tn.it', 'region'),
-  src('reg-lazio', 'Regione Lazio — Agricoltura', 'https://www.regione.lazio.it', 'region'),
-  src('reg-toscana', 'Regione Toscana — Agricoltura', 'https://www.regione.toscana.it', 'region'),
-  src('reg-calabria', 'Regione Calabria — Agricoltura', 'https://www.regione.calabria.it', 'region'),
-  src('reg-sardegna', 'Regione Sardegna — Agricoltura', 'https://www.regione.sardegna.it', 'region'),
-  src('reg-basilicata', 'Regione Basilicata — Agricoltura', 'https://www.regione.basilicata.it', 'region'),
-  src('reg-lombardia', 'Regione Lombardia — Agricoltura', 'https://www.regione.lombardia.it', 'region'),
+  // ── Vegetables ───────────────────────────────────────────────────────────
+  src('aglio-polesano', 'Aglio Bianco Polesano DOP — Proposta modifica disciplinare di produzione', `${D}/aglio-bianco-polesano-dop-proposta-modifica-disciplinare-di-produzione-2013.html`, 2013),
+  src('asparago-badoere', 'Asparago di Badoere IGP — Modifiche ordinarie al disciplinare di produzione', `${D}/asparago-di-badoere-igp-modifiche-ordinarie-al-disciplinare-di-produzione-2023.html`, 2023),
+  src('asparago-bassano', 'Disciplinare di produzione Asparago Bianco di Bassano DOP', `${D}/asparago-bianco-di-bassano-dop.html`, 2006),
+  src('asparago-canino', 'Asparago verde di Canino IGP', `${D}/asparago-verde-di-canino-igp-disciplinare-di-produzione.html`, 2023),
+  src('asparago-cantello', 'Asparago di Cantello IGP', `${D}/asparago-di-cantello-igp-disciplinare-di-produzione-2023.html`, 2023),
+  src('asparago-cimadolmo', 'Asparago bianco di Cimadolmo IGP', `${D}/asparago-bianco-di-cimadolmo-igp.html`, 2001),
+  src('carciofo-paestum', 'Carciofo di Paestum IGP', `${D}/carciofo-di-paestum-igp-disciplinare-di-produzione.html`, 2004),
+  src('carciofo-romanesco', 'Disciplinare di produzione del Carciofo Romanesco del Lazio IGP', `${D}/carciofo-romanesco-del-lazio-igp.html`, 2002),
+  src('carota-ispica', 'Carota Novella di Ispica IGP — Modifica del disciplinare 2022', `${D}/carota-novella-di-ispica-igp-modifica-del-disciplinare-2022.html`, 2022),
+  src('cicoria-molfettese', 'Cicoria puntarelle molfettese — Domanda di registrazione della IGP', `${D}/cicoria-puntarelle-molfettese-domanda-di-registrazione-della-igp.html`, 2025),
+  src('finocchio-capo-rizzuto', 'Finocchio di Isola Capo Rizzuto IGP — Richiesta di riconoscimento', `${D}/finocchio-di-isola-capo-rizzuto-igp-richiesta-di-riconoscimento.html`, 2020),
+  src('melanzana-rotonda', 'Melanzana Rossa di Rotonda DOP — Disciplinare di produzione', `${D}/melanzana-rossa-di-rotonda-disciplinare-di-produzione.html`, 2022),
+  src('patata-fucino', 'Patata del Fucino IGP', `${D}/patata-del-fucino-igp-disciplinare-di-produzione-2020.html`, 2020),
+  src('patata-galatina', 'Patata novella di Galatina DOP — Proposta di riconoscimento', `${D}/patata-novella-di-galatina-dop-proposta-di-riconoscimento.html`, 2013),
+  src('patata-sila', 'Patata della Sila IGP', `${D}/patata-della-sila-igp-disciplinare-di-produzione-2024.html`, 2024),
+  src('piennolo-vesuvio', 'Pomodorino del Piennolo del Vesuvio — Proposta di riconoscimento', `${D}/pomodorino-del-piennolo-del-vesuvio-proposta-di-riconoscimento-2006.html`, 2006),
+  src('san-marzano', "Pomodoro San Marzano dell'Agro Sarnese-Nocerino DOP — Modifica disciplinare", `${D}/pomodoro-san-marzano-dellagro-sarnese-nocerino-dop-modifica-disciplinare-di-produzione-2019.html`, 2019),
 ];

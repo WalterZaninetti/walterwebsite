@@ -1,86 +1,68 @@
 /**
- * The catalogue: 45 items, fruit and vegetables only.
+ * The catalogue: 34 protected designations whose own disciplinare states when
+ * they are picked.
  *
- * Forty-five is what `seasonable.s2.body` tells the reader, so the two move
- * together — change this list and change that sentence. It is deliberately
- * most-of-a-normal-week rather than everything that grows: the run chose a
- * catalogue every window of which can cite a source over a longer one where
- * some rows would have to say "widely reported". Medlar, cardoon and
- * puntarelle wait for a pass that can source them.
+ * Why designations and not "apple, pear, orange". A disciplinare fixes the
+ * harvest window for *its* product in *its* comuni. It is evidence about the
+ * Carciofo di Paestum; it is not evidence about artichokes in Salerno, and
+ * treating it as such would be the same borrowed authority this page exists to
+ * refuse. So the row names what the document names.
  *
- * Names live here rather than in the locale files because a bilingual lookup
- * table of 45 nouns is data, not prose — the same reason src/content/site.ts
- * holds record and track names.
+ * The catalogue is therefore short, and it is short in a specific way: a
+ * designation is here only if its disciplinare states BOTH ends of a window.
+ * A great many state only a start ("a partire dal 10 ottobre" for Radicchio
+ * Rosso di Treviso) or only an end, and those are not windows. The ones that
+ * were checked and dropped are listed in `.pipeline/seasonable/sources-ledger.md`
+ * so the next pass does not re-check them.
  *
- * `alwaysOnShelf` is the one editorial judgement per item and the only gate on
- * the flown bucket. It means "an Italian shop stocks this in every month of the
- * year", not "it is imported": apples and onions carry it too, and never appear
- * as flown because their storage windows cover the year.
+ * `en` and `it` are the kind of thing it is, used for grouping and for the
+ * English reader. The designation itself is a proper noun and is not translated.
  */
 
 import type { Produce } from '../../lib/seasonable';
 
-const fruit = (id: string, en: string, it: string, alwaysOnShelf = false): Produce => ({
-  id,
-  en,
-  it,
-  category: 'fruit',
-  alwaysOnShelf,
-});
+const fruit = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, it: string): Produce =>
+  ({ id, name, designation, category: 'fruit', en, it });
 
-const veg = (id: string, en: string, it: string, alwaysOnShelf = false): Produce => ({
-  id,
-  en,
-  it,
-  category: 'vegetable',
-  alwaysOnShelf,
-});
+const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, it: string): Produce =>
+  ({ id, name, designation, category: 'vegetable', en, it });
 
 export const produce: readonly Produce[] = [
-  fruit('apple', 'apple', 'mela', true),
-  fruit('pear', 'pear', 'pera', true),
-  fruit('orange', 'orange', 'arancia', true),
-  fruit('lemon', 'lemon', 'limone', true),
-  fruit('mandarin', 'mandarin', 'mandarino'),
-  fruit('peach', 'peach', 'pesca'),
-  fruit('apricot', 'apricot', 'albicocca'),
-  fruit('cherry', 'cherry', 'ciliegia'),
-  fruit('plum', 'plum', 'susina'),
-  fruit('strawberry', 'strawberry', 'fragola', true),
-  fruit('grape', 'grape', 'uva'),
-  fruit('melon', 'melon', 'melone'),
-  fruit('watermelon', 'watermelon', 'anguria'),
-  fruit('fig', 'fig', 'fico'),
-  fruit('persimmon', 'persimmon', 'cachi'),
-  fruit('chestnut', 'chestnut', 'castagna'),
-  fruit('pomegranate', 'pomegranate', 'melograno'),
-  fruit('kiwi', 'kiwi', 'kiwi', true),
+  // ── Fruit ────────────────────────────────────────────────────────────────
+  fruit('albicocca-vesuviana', 'Albicocca Vesuviana', 'IGP', 'apricot', 'albicocca'),
+  fruit('castagna-cuneo', 'Castagna Cuneo', 'IGP', 'chestnut', 'castagna'),
+  fruit('castagna-monte-amiata', 'Castagna del Monte Amiata', 'IGP', 'chestnut', 'castagna'),
+  fruit('castagna-vallerano', 'Castagna di Vallerano', 'DOP', 'chestnut', 'castagna'),
+  fruit('ciliegia-bracigliano', 'Ciliegia di Bracigliano', 'IGP', 'cherry', 'ciliegia'),
+  fruit('ciliegia-lari', 'Ciliegia di Lari', 'IGP', 'cherry', 'ciliegia'),
+  fruit('ciliegia-vignola', 'Ciliegia di Vignola', 'IGP', 'cherry', 'ciliegia'),
+  fruit('fichi-cosenza', 'Fichi di Cosenza', 'DOP', 'fig', 'fico'),
+  fruit('fragola-basilicata', 'Fragola della Basilicata', 'IGP', 'strawberry', 'fragola'),
+  fruit('limone-interdonato', 'Limone Interdonato Messina', 'IGP', 'lemon', 'limone'),
+  fruit('limone-sorrento', 'Limone di Sorrento', 'IGP', 'lemon', 'limone'),
+  fruit('marroni-monfenera', 'Marroni del Monfenera', 'IGP', 'chestnut', 'castagna'),
+  fruit('mela-rossa-cuneo', 'Mela Rossa Cuneo', 'IGP', 'apple', 'mela'),
+  fruit('mela-valtellina', 'Mela di Valtellina', 'IGP', 'apple', 'mela'),
+  fruit('pesca-delia', 'Pesca di Delia', 'IGP', 'peach', 'pesca'),
+  fruit('pesca-leonforte', 'Pesca di Leonforte', 'IGP', 'peach', 'pesca'),
+  fruit('susina-dro', 'Susina di Dro', 'DOP', 'plum', 'susina'),
 
-  veg('artichoke', 'artichoke', 'carciofo'),
-  veg('asparagus', 'asparagus', 'asparago'),
-  veg('aubergine', 'aubergine', 'melanzana', true),
-  veg('courgette', 'courgette', 'zucchina', true),
-  veg('tomato', 'tomato', 'pomodoro', true),
-  veg('pepper', 'pepper', 'peperone', true),
-  veg('cucumber', 'cucumber', 'cetriolo', true),
-  veg('green-bean', 'green bean', 'fagiolino', true),
-  veg('broad-bean', 'broad bean', 'fava'),
-  veg('pea', 'pea', 'pisello'),
-  veg('broccoli', 'broccoli', 'broccolo'),
-  veg('cauliflower', 'cauliflower', 'cavolfiore'),
-  veg('cabbage', 'cabbage', 'cavolo cappuccio'),
-  veg('black-kale', 'black kale', 'cavolo nero'),
-  veg('fennel', 'fennel', 'finocchio'),
-  veg('radicchio', 'radicchio', 'radicchio'),
-  veg('chicory', 'chicory', 'cicoria'),
-  veg('spinach', 'spinach', 'spinaci'),
-  veg('lettuce', 'lettuce', 'lattuga', true),
-  veg('rocket', 'rocket', 'rucola', true),
-  veg('leek', 'leek', 'porro'),
-  veg('onion', 'onion', 'cipolla', true),
-  veg('garlic', 'garlic', 'aglio', true),
-  veg('potato', 'potato', 'patata', true),
-  veg('carrot', 'carrot', 'carota', true),
-  veg('celery', 'celery', 'sedano', true),
-  veg('pumpkin', 'pumpkin', 'zucca'),
+  // ── Vegetables ───────────────────────────────────────────────────────────
+  veg('aglio-polesano', 'Aglio Bianco Polesano', 'DOP', 'garlic', 'aglio'),
+  veg('asparago-badoere', 'Asparago di Badoere', 'IGP', 'asparagus', 'asparago'),
+  veg('asparago-bassano', 'Asparago Bianco di Bassano', 'DOP', 'asparagus', 'asparago'),
+  veg('asparago-canino', 'Asparago Verde di Canino', 'IGP', 'asparagus', 'asparago'),
+  veg('asparago-cantello', 'Asparago di Cantello', 'IGP', 'asparagus', 'asparago'),
+  veg('asparago-cimadolmo', 'Asparago Bianco di Cimadolmo', 'IGP', 'asparagus', 'asparago'),
+  veg('carciofo-paestum', 'Carciofo di Paestum', 'IGP', 'artichoke', 'carciofo'),
+  veg('carciofo-romanesco', 'Carciofo Romanesco del Lazio', 'IGP', 'artichoke', 'carciofo'),
+  veg('carota-ispica', 'Carota Novella di Ispica', 'IGP', 'carrot', 'carota'),
+  veg('cicoria-molfettese', 'Cicoria Puntarelle Molfettese', 'IGP', 'chicory', 'cicoria'),
+  veg('finocchio-capo-rizzuto', 'Finocchio di Isola Capo Rizzuto', 'IGP', 'fennel', 'finocchio'),
+  veg('melanzana-rotonda', 'Melanzana Rossa di Rotonda', 'DOP', 'aubergine', 'melanzana'),
+  veg('patata-fucino', 'Patata del Fucino', 'IGP', 'potato', 'patata'),
+  veg('patata-galatina', 'Patata Novella di Galatina', 'DOP', 'potato', 'patata'),
+  veg('patata-sila', 'Patata della Sila', 'IGP', 'potato', 'patata'),
+  veg('piennolo-vesuvio', 'Pomodorino del Piennolo del Vesuvio', 'DOP', 'tomato', 'pomodoro'),
+  veg('san-marzano', "Pomodoro San Marzano dell'Agro Sarnese-Nocerino", 'DOP', 'tomato', 'pomodoro'),
 ];

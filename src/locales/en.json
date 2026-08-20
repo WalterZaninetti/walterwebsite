@@ -73,9 +73,9 @@
         "eyebrow": "03 · for everyone",
         "eyebrowShort": "03 · everyone",
         "title": "Seasonable",
-        "description": "Pick a province and a fortnight; it names the fruit and vegetables genuinely in season there. Not just what's on the shelf.",
-        "descriptionShort": "Province + fortnight — what's really in season there.",
-        "meta": "20 regions · sourced",
+        "description": "Pick a province and a fortnight; it names the DOP and IGP produce being picked there, quoting the document that says so.",
+        "descriptionShort": "Province + fortnight — what's protected, and being picked.",
+        "meta": "34 designations · quoted",
         "thumbCaption": "produce still life",
         "thumbCaptionShort": "produce photo"
       }
@@ -513,35 +513,31 @@
   "seasonable": {
     "eyebrow": "for everyone",
     "title": "Seasonable",
-    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province and this names what is genuinely being picked near you now. And what is on the shelf without being grown there at all.",
-    "deckShort": "Strawberries in January look right, then taste of nothing. Pick a province and see what's genuinely in season near you now.",
+    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province: this names the protected produce being picked there this fortnight, and shows you the document that fixes the dates.",
+    "deckShort": "Strawberries in January look right, then taste of nothing. Pick a province and see what's genuinely being picked there now.",
     "picker": {
       "placeLabel": "Where you are",
       "placePlaceholder": "Pick a province",
       "whenLabel": "When",
       "halfEarly": "1–15 {{month}}",
-      "halfLate": "16–31 {{month}}"
+      "halfLate": "16–31 {{month}}",
+      "groupAnswering": "A designation names these",
+      "groupSilent": "No designation names these yet"
     },
     "buckets": {
       "picking": {
         "title": "Being picked now",
-        "note": "Open field or greenhouse in {{region}}, this fortnight."
+        "note": "Its disciplinare puts the harvest in {{place}}, this fortnight."
       },
       "stored": {
         "title": "From storage",
-        "note": "Picked earlier in the year near you, and it keeps."
-      },
-      "flown": {
-        "title": "On the shelf, not in the fields",
-        "note": "On the shelf all year, but nothing near you is picking it now."
+        "note": "Picked earlier in the year, and the same document says it can still be sold."
       }
     },
     "row": {
       "showSource": "Where this date comes from",
       "hideSource": "Close",
-      "basisRegionTail": "A calendar written for {{region}} itself.",
-      "basisZoneTail": "Written for this climate band, not for {{region}} alone.",
-      "flownReason": "No source, because there's nothing to cite: nothing in the list is being picked near you now."
+      "basisTail": "The zone in that document takes in {{place}}."
     },
     "kind": {
       "openField": "open field",
@@ -550,27 +546,26 @@
     },
     "s1": {
       "heading": "How it decides",
-      "body": "A calendar for Italy is wrong for Sicily and for Piedmont at the same moment. So this one answers by region: twenty of them, each sitting in a climate band. Where I have a region's own row, it beats the band's. It works in fortnights rather than months, because two weeks is roughly how far a warm year moves everything. And it keeps open field, greenhouse and storage apart — three different answers to the same question, which the charts I don't trust collapse into one green bar."
+      "body": "A calendar for Italy is wrong for Sicily and for Piedmont at the same moment. This one doesn't average them. It shows only produce with a protected designation, because a DOP or IGP disciplinare is the one Italian document that fixes both a harvest window and the exact comuni it applies to — so the answer can be per province, and every date is a quotation rather than a judgement. What that costs is breadth: a disciplinare tells you when the Carciofo di Paestum is cut, and nothing whatsoever about artichokes in general."
     },
     "s2": {
       "heading": "What it can't tell you",
-      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It answers for a region, not for your valley: forty kilometres and six hundred metres of altitude are enough to make it wrong. And it holds forty-five things, which is most of what you buy in a normal week and nowhere near everything that grows. If what you're looking for isn't here, that's a gap in the list, not a verdict on the fruit."
+      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It holds thirty-four designations, which is a small corner of what you buy, and most provinces are named by no disciplinare at all. An empty list means I have no document for where you are. It is not a verdict on what grows there."
     },
     "s3": {
       "heading": "Where the dates come from",
-      "body": "Every window in here cites something, with the year it was published: a regional agricultural calendar, a consortium's own figures, a ministry publication. Tap any row to see which one, and whether it was written for that region or for its climate band. Nothing is on the list because it sounded right — where I couldn't find a source, the item isn't here yet.",
-      "ask": "If you grow this or buy it every week, you know something the calendars don't. The dates on this page are the ones I could source; the ones you'd correct are worth more.",
+      "body": "Every window in here is one sentence from one DOP or IGP disciplinare, with the year that document was published. Tap any row to read the sentence and follow the link. Nothing is on the list because it sounded right: a great many designations state only when the harvest begins and never when it ends, and half a window is not a window, so those aren't here.",
+      "ask": "If you grow this or buy it every week, you know something the documents don't. The dates on this page are the ones I could quote; the ones you'd correct are worth more.",
       "askLink": "Tell me what's wrong",
-      "askSubject": "Seasonable: {{region}}, {{half}}"
+      "askSubject": "Seasonable: {{place}}, {{half}}"
     },
     "states": {
       "noPlace": "Pick a province and the list fills in. The month is already set to this fortnight.",
-      "noPicking": "Nothing on the list is being picked in {{region}} this fortnight. That happens — it's the answer, not a hole.",
-      "noStored": "Nothing from storage this fortnight — what keeps has either run out or is back in the field.",
-      "noFlown": "Everything on the shelf is also in the fields. Everything you can buy here all year round is genuinely in season near you right now.",
-      "nothing": "Nothing at all for {{region}} in this fortnight. With the list as it stands that shouldn't happen, so it's more likely to be my mistake than an answer. Tell me and I'll look."
+      "noPicking": "Nothing on the list is being picked in {{place}} this fortnight. That happens — it's the answer, not a hole.",
+      "noStored": "Nothing in storage here this fortnight.",
+      "nothing": "No designation in the list names {{place}}. Most provinces haven't got one — that's a gap in the documents, not a verdict on what grows there."
     },
     "metaTitle": "Seasonable — what's genuinely in season near you — Walter",
-    "metaDescription": "Pick an Italian province and a fortnight. Seasonable names the fruit and vegetables genuinely in season there, and where each date came from."
+    "metaDescription": "Pick an Italian province and a fortnight. Seasonable names the DOP and IGP produce being harvested there, quoting the disciplinare that fixes each date."
   }
 }
