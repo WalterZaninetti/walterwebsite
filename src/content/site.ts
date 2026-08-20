@@ -25,8 +25,8 @@ export type ProjectId = 'magic' | 'dj' | 'food';
 /**
  * The `--project-*` token family a project's world draws from. Split out
  * from `id` on purpose: `id` also keys `home.projects.*` (unchanged,
- * per copy.md) and, for `food`, the new cross-page `projects.seasonable.*`
- * locale namespace does not match it. `world` is what a component reaches
+ * per copy.md) and, for `food`, the `seasonable.*` locale namespace the page
+ * moved to does not match it. `world` is what a component reaches
  * for when it needs the token family, so the id/namespace naming question
  * never has to touch it. Today `world` and `id` hold the same three values;
  * that is a coincidence of there being three projects and three worlds, not

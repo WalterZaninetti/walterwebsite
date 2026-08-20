@@ -9,9 +9,10 @@
     "build": "npm run fetch:music && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
+    "test": "node --test src/lib/*.test.ts",
     "analyze": "ANALYZE=true vite build",
     "check:csp": "node scripts/check-csp.mjs",
-    "deploy": "npm run build && npm run check:csp && npx firebase-tools deploy --only hosting"
+    "deploy": "npm run build && npm test && npm run check:csp && npx firebase-tools deploy --only hosting"
   },
   "dependencies": {
     "i18next": "^26.3.6",

@@ -362,6 +362,20 @@
   --project-food-border: transparent;
   --project-food-seam: #87441f;
   --project-food-shadow: 0 16px 34px rgb(135 68 31 / 0.3);
+  /* Seasonable's data marks. Unlike the rungs above, these are authored
+     against --canvas, not against the band — the same carve-out Crate's marks
+     take (theme.css:334). They paint the year strip's segments, so the target
+     is 3:1 (WCAG 1.4.11), and no segment encodes its meaning by colour alone:
+     the three window kinds are three geometries — solid, hatched, and a
+     third-height bar — which survive a greyscale print.
+     -mark is --project-food itself here. The band's own terracotta happens to
+     measure 7.03:1 on canvas, so light needs no second value and the token
+     exists to name the on-canvas role; dark is where it earns its keep.
+     -quiet holds hue 47.12 and chroma 0.1042 and moves only lightness, so it
+     is this terracotta dimmed rather than a second colour standing near it.
+     It has no headroom: 3.10 against a 3:1 floor. Darkening --canvas breaks it. */
+  --project-food-mark: #87441f;       /* 7.03:1 vs canvas */
+  --project-food-mark-quiet: #c67e59; /* 3.10:1 vs canvas */
 
   --hero-glow: none;
 
@@ -628,6 +642,13 @@
   --project-food-border: rgb(255 246 238 / 0.22);/* 4.16:1 vs canvas */
   --project-food-seam: #e6b493;                  /* 9.95 vs canvas · 3.93 vs band */
   --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
+  /* The world does not invert, but a mark on the dark canvas must: #87441f
+     measures 2.53:1 on #101510 and fails even the 3:1 graphic floor. -mark
+     lifts to the value --project-food-seam already carries in dark, which ties
+     the strip to the seam directly above it. -quiet holds hue 54.85 and chroma
+     0.0734 and moves lightness only. */
+  --project-food-mark: #e6b493;       /* 9.95:1 vs canvas */
+  --project-food-mark-quiet: #8a5d3f; /* 3.27:1 vs canvas */
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,
@@ -836,6 +857,8 @@
 
   --shadow-lift-magic: var(--project-magic-shadow);
   --shadow-lift-dj: var(--project-dj-shadow);
+  --color-project-food-mark: var(--project-food-mark);
+  --color-project-food-mark-quiet: var(--project-food-mark-quiet);
   --shadow-lift-food: var(--project-food-shadow);
   /* Warm shadow: a neutral-black shadow on a cream ground reads as grey dirt. */
   --shadow-card: 0 2px 14px rgb(70 45 15 / 0.08);
@@ -955,6 +978,19 @@
     135deg,
     var(--project-food-hatch) 0 9px,
     transparent 9px 18px
+  );
+}
+
+/* Greenhouse, in the year strip. Follows hatch-food's shape but is authored in
+   the on-canvas mark rather than the band's cream, and at a quarter of the
+   pitch: the segments it fills are 11.6px wide at 320px, and a 9px stripe in
+   one would read as a solid block. The angle stays 135deg so a hatched segment
+   and the card above it lean the same way. */
+@utility hatch-food-mark {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--project-food-mark) 0 1.5px,
+    transparent 1.5px 4.5px
   );
 }
 

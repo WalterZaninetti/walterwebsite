@@ -10,11 +10,11 @@
     "languageEnglish": "English",
     "languageItalian": "Italian",
     "skipToContent": "Skip to content",
-    "loadingMagic": "Loading Magic Tools…",
-    "chunkErrorTitle": "Magic Tools didn't load",
+    "chunkErrorTitle": "{{name}} didn't load",
     "chunkErrorBody": "The page loads its own chunk of code, and that chunk didn't arrive — usually a connection dropping part-way through. Reloading gets it again, and the rest of the site is fine.",
     "chunkErrorBodyShort": "The page's code didn't finish downloading, usually a dropped connection. Reloading gets it again — the rest of the site is fine.",
-    "chunkErrorAction": "Reload the page"
+    "chunkErrorAction": "Reload the page",
+    "loading": "Loading {{name}}…"
   },
   "nav": {
     "projects": "Projects",
@@ -75,7 +75,7 @@
         "title": "Seasonable",
         "description": "Pick a place and a month; it names the fruit and vegetables genuinely in season there. Not the ones flown in.",
         "descriptionShort": "Place + month → what's really in season there.",
-        "meta": "not built yet",
+        "meta": "20 regions · sourced",
         "thumbCaption": "produce still life",
         "thumbCaptionShort": "produce photo"
       }
@@ -508,31 +508,69 @@
     "linkLegal": "Cookies & privacy"
   },
   "projects": {
-    "backLabel": "← Back to the projects",
-    "seasonable": {
-      "title": "Seasonable",
-      "deck": "Tell it where you are and what month it is, and it names the fruit and vegetables genuinely in season there. It isn't built yet — this page is a description, not a link.",
-      "deckShort": "A place and a month in; what's genuinely in season there out. Not built yet — a description, not a link.",
-      "s1": {
-        "heading": "The strawberries in January",
-        "body": "You buy the thing because it's there. Strawberries in January, tomatoes in March — they look right under the shop lights, and then they taste of almost nothing and you cook them into something else to hide it. Working out what's actually in season is not hard, exactly. It's just that the answer changes with the month and with where you're standing, and the chart pinned in your head is the one from wherever you grew up.",
-        "bodyShort": "You buy the thing because it's there. Strawberries in January, tomatoes in March: right under the shop lights, then a taste of almost nothing. The answer changes with the month and with where you're standing, and the chart in your head is the one from wherever you grew up."
+    "backLabel": "← Back to the projects"
+  },
+  "seasonable": {
+    "eyebrow": "for everyone",
+    "title": "Seasonable",
+    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province and this names what is genuinely being picked near you now — and what is only there because it flew.",
+    "deckShort": "Strawberries in January look right, then taste of nothing. Pick a province and see what's genuinely in season near you now.",
+    "picker": {
+      "placeLabel": "Where you are",
+      "placePlaceholder": "Pick a province",
+      "whenLabel": "When",
+      "halfEarly": "1–15 {{month}}",
+      "halfLate": "16–31 {{month}}"
+    },
+    "buckets": {
+      "picking": {
+        "title": "Being picked now",
+        "note": "Open field or greenhouse in {{region}}, this fortnight."
       },
-      "s2": {
-        "heading": "What it would do",
-        "body": "Two fields — a place and a month — and a short list back: what is being picked near you now, what is stored from earlier in the year, and what is only on the shelf because it flew. Nothing to log into, nothing to install.",
-        "bodyShort": "Two fields, a place and a month, and a short list back: what's being picked near you now, what's stored from earlier, and what's only there because it flew.",
-        "caveat": "The hard part is the word genuinely. A calendar for Italy is wrong for Sicily and for Piedmont at the same time, greenhouse and open field are different answers to the same question, and a warm year moves everything by two weeks. An honest version has to say where each date came from and how narrow the claim is. That is most of the work, and most of why it isn't written yet.",
-        "caveatShort": "The hard part is the word genuinely. A calendar for Italy is wrong for Sicily and for Piedmont at once, and a warm year moves everything by two weeks. Saying where each date came from is most of the work — and most of why it isn't written yet."
+      "stored": {
+        "title": "From storage",
+        "note": "Picked earlier in the year near you, and it keeps."
       },
-      "s3": {
-        "heading": "Where it actually is",
-        "body": "Right now it's a name and a page of notes. No repository, nothing to open, and no date I'd trust enough to give you. It would be a small web page, free, with the source there to read — the same as everything else here. When there is something to use, it will be at this address.",
-        "bodyShort": "Right now it's a name and a page of notes. No repository, nothing to open, no date I'd trust enough to give you. It would be a small free web page with readable source, like everything else here. When there's something to use, it will be here."
-      },
-      "metaTitle": "Seasonable — what's genuinely in season — Walter",
-      "metaDescription": "Give it a place and a month; it names what's genuinely in season there. Not built yet — this page describes it, and says why the honest version is hard.",
-      "figureCaption": "strawberries"
-    }
+      "flown": {
+        "title": "It flew",
+        "note": "On the shelf all year, but nothing near you is picking it now."
+      }
+    },
+    "row": {
+      "showSource": "Where this date comes from",
+      "hideSource": "Close",
+      "basisRegionTail": "A calendar written for {{region}} itself.",
+      "basisZoneTail": "Written for this climate band, not for {{region}} alone.",
+      "flownReason": "No source, because there's nothing to cite: nothing in the list is being picked near you now."
+    },
+    "kind": {
+      "openField": "open field",
+      "greenhouse": "greenhouse",
+      "stored": "stored"
+    },
+    "s1": {
+      "heading": "How it decides",
+      "body": "A calendar for Italy is wrong for Sicily and for Piedmont at the same moment. So this one answers by region: twenty of them, each sitting in a climate band. Where I have a region's own row, it beats the band's. It works in fortnights rather than months, because two weeks is roughly how far a warm year moves everything. And it keeps open field, greenhouse and storage apart — three different answers to the same question, which the charts I don't trust collapse into one green bar."
+    },
+    "s2": {
+      "heading": "What it can't tell you",
+      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It answers for a region, not for your valley: forty kilometres and six hundred metres of altitude are enough to make it wrong. And it holds forty-five things, which is most of what you buy in a normal week and nowhere near everything that grows. If what you're looking for isn't here, that's a gap in the list, not a verdict on the fruit."
+    },
+    "s3": {
+      "heading": "Where the dates come from",
+      "body": "Every window in here cites something, with the year it was published: a regional agricultural calendar, a consortium's own figures, a ministry publication. Tap any row to see which one, and whether it was written for that region or for its climate band. Nothing is on the list because it sounded right — where I couldn't find a source, the item isn't here yet.",
+      "ask": "If you grow this or buy it every week, you know something the calendars don't. The dates on this page are the ones I could source; the ones you'd correct are worth more.",
+      "askLink": "Tell me what's wrong",
+      "askSubject": "Seasonable: {{region}}, {{half}}"
+    },
+    "states": {
+      "noPlace": "Pick a province and the list fills in. The month is already set to this fortnight.",
+      "noPicking": "Nothing on the list is being picked in {{region}} this fortnight. That happens — it's the answer, not a hole.",
+      "noStored": "Nothing from storage this fortnight — what keeps has either run out or is back in the field.",
+      "noFlown": "Nothing on this list flew. Everything you can buy here all year round is genuinely in season near you right now.",
+      "nothing": "Nothing at all for {{region}} in this fortnight. With the list as it stands that shouldn't happen, so it's more likely to be my mistake than an answer. Tell me and I'll look."
+    },
+    "metaTitle": "Seasonable — what's genuinely in season near you — Walter",
+    "metaDescription": "Pick an Italian province and a fortnight. Seasonable names the fruit and vegetables genuinely in season there, and where each date came from."
   }
 }

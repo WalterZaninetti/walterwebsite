@@ -45,7 +45,7 @@ export function useRoute(): Route {
   // Client-side navigation doesn't reload the document, so the title is ours
   // to keep in step — and it has to follow the language too.
   useEffect(() => {
-    // copy.md's `dj.metaTitle` / `projects.seasonable.metaTitle` are whole title strings
+    // copy.md's `dj.metaTitle` / `seasonable.metaTitle` are whole title strings
     // (already end in " — Walter"), unlike the other four rows, which build theirs here.
     // `/dj-tools` keeps its path while the tool it describes is named Crate: the route is
     // final-tier and already indexed, and the URL is not the name.
@@ -54,13 +54,13 @@ export function useRoute(): Route {
       legal: `${t('legal.title')} — Walter`,
       magic: `${t('magic.hero.title')} — Walter`,
       'dj-tools': t('dj.metaTitle'),
-      seasonable: t('projects.seasonable.metaTitle'),
+      seasonable: t('seasonable.metaTitle'),
       notfound: `${t('notFound.title')} — Walter`,
     };
     document.title = titles[route];
   }, [route, t, i18n.resolvedLanguage]);
 
-  // `ProjectPage`'s foot-of-page "back to the projects" link is a cross-route
+  // Each project page's foot-of-page "back to the projects" link is a cross-route
   // fragment link (`/#projects`) reached by a full navigation, not `navigate`
   // below — deliberately, so the browser's own back/forward and anchor
   // handling apply. But this is a client-rendered app: on a fresh document

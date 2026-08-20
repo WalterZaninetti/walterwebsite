@@ -10,11 +10,11 @@
     "languageEnglish": "Inglese",
     "languageItalian": "Italiano",
     "skipToContent": "Vai al contenuto",
-    "loadingMagic": "Carico Magic Tools…",
-    "chunkErrorTitle": "Magic Tools non si è caricato",
+    "chunkErrorTitle": "{{name}} non si è caricato",
     "chunkErrorBody": "La pagina carica una sua parte di codice, e quella parte non è arrivata — di solito è la connessione che cade a metà. Ricaricare la recupera, e il resto del sito funziona.",
     "chunkErrorBodyShort": "Il codice della pagina non è arrivato tutto, di solito è la connessione. Ricaricare risolve — il resto del sito funziona.",
-    "chunkErrorAction": "Ricarica la pagina"
+    "chunkErrorAction": "Ricarica la pagina",
+    "loading": "Carico {{name}}…"
   },
   "nav": {
     "projects": "Progetti",
@@ -75,7 +75,7 @@
         "title": "Seasonable",
         "description": "Scegli un posto e un mese: ti dice quali frutta e verdura sono davvero di stagione lì. Non quelle arrivate in aereo.",
         "descriptionShort": "Posto + mese → cosa è davvero di stagione lì.",
-        "meta": "ancora da scrivere",
+        "meta": "20 regioni · con fonti",
         "thumbCaption": "natura morta con verdure",
         "thumbCaptionShort": "foto di verdure"
       }
@@ -508,31 +508,69 @@
     "linkLegal": "Cookie e privacy"
   },
   "projects": {
-    "backLabel": "← Torna ai progetti",
-    "seasonable": {
-      "title": "Seasonable",
-      "deck": "Gli dici dove sei e in che mese siamo, e ti dice quali frutta e verdura sono davvero di stagione lì. Non è ancora scritto: questa pagina è una descrizione, non un link.",
-      "deckShort": "Un posto e un mese, e sai cosa è davvero di stagione lì. Non è ancora scritto: una descrizione, non un link.",
-      "s1": {
-        "heading": "Le fragole a gennaio",
-        "body": "Compri la cosa perché c'è. Fragole a gennaio, pomodori a marzo: sotto le luci del negozio sembrano giuste, poi non sanno di niente e finisci per cucinarle dentro qualcos'altro per non sentirlo. Capire cosa è davvero di stagione non è difficile. È che la risposta cambia col mese e con il posto in cui sei, e il calendario che hai in testa è quello di dove sei cresciuto.",
-        "bodyShort": "Compri la cosa perché c'è. Fragole a gennaio, pomodori a marzo: sotto le luci sembrano giuste, poi non sanno di niente. La risposta cambia col mese e col posto in cui sei, e il calendario che hai in testa è quello di dove sei cresciuto."
+    "backLabel": "← Torna ai progetti"
+  },
+  "seasonable": {
+    "eyebrow": "per tutti",
+    "title": "Seasonable",
+    "deck": "Le fragole a gennaio sotto le luci del negozio sembrano giuste, poi non sanno di niente. Scegli una provincia e qui sotto trovi cosa si raccoglie davvero vicino a te adesso — e cosa c'è solo perché è arrivato in aereo.",
+    "deckShort": "Le fragole a gennaio sembrano giuste, poi non sanno di niente. Scegli una provincia e vedi cosa è davvero di stagione vicino a te adesso.",
+    "picker": {
+      "placeLabel": "Dove sei",
+      "placePlaceholder": "Scegli una provincia",
+      "whenLabel": "Quando",
+      "halfEarly": "1–15 {{month}}",
+      "halfLate": "16–31 {{month}}"
+    },
+    "buckets": {
+      "picking": {
+        "title": "Si raccoglie adesso",
+        "note": "Pieno campo o serra in {{region}}, in questa quindicina."
       },
-      "s2": {
-        "heading": "Cosa farebbe",
-        "body": "Due campi, un posto e un mese, e una lista corta in risposta: cosa si raccoglie adesso vicino a te, cosa è di conserva e cosa è sul banco solo perché è arrivato in aereo. Niente account, niente da installare.",
-        "bodyShort": "Due campi, un posto e un mese, e una lista corta: cosa si raccoglie adesso vicino a te, cosa è di conserva, cosa è lì solo perché è arrivato in aereo.",
-        "caveat": "La parte difficile è la parola davvero. Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte nello stesso momento. Serra e pieno campo sono due risposte diverse alla stessa domanda, e un anno caldo sposta tutto di due settimane. Una versione onesta deve dire da dove viene ogni data. È lì quasi tutto il lavoro, ed è quasi tutto il motivo per cui non l'ho ancora scritto.",
-        "caveatShort": "La parte difficile è la parola davvero. Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte insieme, e un anno caldo sposta tutto di due settimane. Dire da dove viene ogni data è quasi tutto il lavoro."
+      "stored": {
+        "title": "Di conserva",
+        "note": "Raccolto prima, vicino a te, e si conserva."
       },
-      "s3": {
-        "heading": "A che punto è davvero",
-        "body": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da aprire, e nessuna data che mi fiderei a darti. Sarebbe una pagina web piccola, gratis, con il codice lì da leggere — come tutto il resto qui. Quando ci sarà qualcosa da usare, sarà a questo indirizzo.",
-        "bodyShort": "Per ora è un nome e una pagina di appunti. Nessun repository, niente da aprire, nessuna data che mi fiderei a darti. Sarebbe una pagina web piccola e gratis, con il codice leggibile. Quando ci sarà qualcosa da usare, sarà qui."
-      },
-      "metaTitle": "Seasonable — cosa è davvero di stagione — Walter",
-      "metaDescription": "Un posto e un mese, e sai quali frutta e verdura sono davvero di stagione lì. Non è ancora scritto: questa pagina lo descrive e dice perché è difficile.",
-      "figureCaption": "fragole"
-    }
+      "flown": {
+        "title": "Arrivato in aereo",
+        "note": "Sul banco tutto l'anno, ma qui adesso non lo raccoglie nessuno."
+      }
+    },
+    "row": {
+      "showSource": "Da dove viene questa data",
+      "hideSource": "Chiudi",
+      "basisRegionTail": "Un calendario scritto per {{region}}.",
+      "basisZoneTail": "Scritto per questa fascia climatica, non per la sola {{region}}.",
+      "flownReason": "Nessuna fonte, perché non c'è niente da citare: qui adesso non lo raccoglie nessuno."
+    },
+    "kind": {
+      "openField": "pieno campo",
+      "greenhouse": "serra",
+      "stored": "di conserva"
+    },
+    "s1": {
+      "heading": "Come decide",
+      "body": "Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte nello stesso momento. Così questo risponde per regione: venti, ognuna dentro una fascia climatica. Dove ho la riga di una regione, quella batte la fascia. Ragiona in quindicine e non in mesi, perché due settimane è quanto sposta tutto un anno caldo. E tiene separati pieno campo, serra e conserva: sono tre risposte diverse alla stessa domanda, e i calendari di cui non mi fido le schiacciano in una barra verde."
+    },
+    "s2": {
+      "heading": "Cosa non può dirti",
+      "body": "Non sa niente di quest'anno. Una primavera fredda o un settembre caldo spostano le date vere e qui non si sposta niente: le finestre sono l'anno normale, non quello in cui sei. Risponde per regione, non per la tua valle: quaranta chilometri e seicento metri di quota bastano a farlo sbagliare. E tiene quarantacinque cose, che sono quasi tutto quello che compri in una settimana normale e molto meno di tutto quello che cresce. Se quello che cerchi non c'è, è un buco nell'elenco, non un giudizio sulla frutta."
+    },
+    "s3": {
+      "heading": "Da dove vengono le date",
+      "body": "Ogni finestra qui dentro cita qualcosa, con l'anno in cui è uscito: un calendario agricolo regionale, i dati di un consorzio, una pubblicazione ministeriale. Tocca una riga per vedere quale. Vedi anche se è scritta per quella regione o per la sua fascia climatica. Niente è nell'elenco perché suonava giusto: dove non ho trovato una fonte, quella voce ancora non c'è.",
+      "ask": "Se lo coltivi o lo compri ogni settimana, sai qualcosa che i calendari non sanno. Le date di questa pagina sono quelle che ho potuto documentare; quelle che correggeresti tu valgono di più.",
+      "askLink": "Dimmi cosa non va",
+      "askSubject": "Seasonable: {{region}}, {{half}}"
+    },
+    "states": {
+      "noPlace": "Scegli una provincia e l'elenco si riempie. Il mese è già su questa quindicina.",
+      "noPicking": "In {{region}} in questa quindicina non si raccoglie niente di quello che c'è in elenco. Succede: è la risposta, non un buco.",
+      "noStored": "Niente di conserva in questa quindicina: quello che si conserva è finito, o è tornato nei campi.",
+      "noFlown": "Niente è arrivato in aereo. Tutto quello che trovi tutto l'anno, adesso qui è davvero di stagione.",
+      "nothing": "Per {{region}} in questa quindicina non c'è niente. Con l'elenco com'è adesso non dovrebbe succedere, quindi è più probabile un mio errore che una risposta. Scrivimi e controllo."
+    },
+    "metaTitle": "Seasonable — davvero di stagione, vicino a te — Walter",
+    "metaDescription": "Scegli una provincia e una quindicina. Seasonable dice quali frutta e verdura sono davvero di stagione lì, e da dove viene ogni data."
   }
 }

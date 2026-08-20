@@ -90,7 +90,7 @@ export function SiteHeader() {
 }
 
 /**
- * Exported so `ProjectPage` (the two new project pages' shared shell) can
+ * Exported so the project pages (`/magic-tools`, `/dj-tools`, `/seasonable`) can
  * reuse it verbatim in its own header rather than growing a second,
  * drift-prone copy of the same pill.
  */

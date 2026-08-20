@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Hero } from './components/Hero';
 import { LegalPage } from './components/LegalPage';
-import { ProjectPage } from './components/ProjectPage';
 import { ProjectShelf } from './components/ProjectShelf';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
@@ -20,22 +19,41 @@ const MagicToolsPage = lazy(() =>
   import('./components/magic/MagicToolsPage').then((m) => ({ default: m.MagicToolsPage })),
 );
 
+/**
+ * Lazy for a different reason than Magic Tools: this chunk carries the
+ * seasonality dataset as well as the page, and the homepage should not pay for
+ * either. Bundling them together is deliberate — one chunk means there is no
+ * interval where the page has rendered and the data has not, so there is no
+ * inert-tool state to design, translate and verify. Crate stays eager; it ships
+ * order, ids and numbers rather than a table.
+ */
+const SeasonablePage = lazy(() =>
+  import('./components/food/SeasonablePage').then((m) => ({ default: m.SeasonablePage })),
+);
+
 export default function App() {
   const route = useRoute();
 
   return (
     <ThemeProvider>
       {route === 'magic' && (
-        <MagicChunkBoundary>
-          <Suspense fallback={<MagicLoadingFallback />}>
+        <ChunkBoundary name="Magic Tools">
+          <Suspense fallback={<LoadingFallback name="Magic Tools" />}>
             <MagicToolsPage />
           </Suspense>
-        </MagicChunkBoundary>
+        </ChunkBoundary>
+      )}
+
+      {route === 'seasonable' && (
+        <ChunkBoundary name="Seasonable">
+          <Suspense fallback={<LoadingFallback name="Seasonable" />}>
+            <SeasonablePage />
+          </Suspense>
+        </ChunkBoundary>
       )}
 
       {route === 'legal' && <LegalPage />}
       {route === 'dj-tools' && <DjToolsPage />}
-      {route === 'seasonable' && <ProjectPage projectId="food" />}
       {route === 'notfound' && <NotFoundPage />}
 
       {route === 'home' && (
@@ -63,16 +81,20 @@ export default function App() {
   );
 }
 
-/** `Suspense` fallback for the lazy `/magic-tools` chunk. Lives on `--canvas`,
- * not a magic token, because it renders before the magic chunk — and its
- * bundle — exists. `role="status"` sits on the wrapper so the region
- * announces once rather than per-node. */
-function MagicLoadingFallback() {
+/** `Suspense` fallback for a lazy route's chunk. Lives on `--canvas` rather
+ * than on the route's own world tokens, because it renders before that route's
+ * bundle — and its styles — exist. `role="status"` sits on the wrapper so the
+ * region announces once rather than per-node.
+ *
+ * `name` is interpolated rather than duplicated per route: the body copy under
+ * the error was already generic, and a near-identical string pair for every
+ * lazy route accumulates. */
+function LoadingFallback({ name }: { name: string }) {
   const { t } = useTranslation();
   return (
     <div role="status" className="grid min-h-[60vh] place-items-center bg-canvas">
       <p className="magic-loading-fade font-mono text-micro uppercase tracking-[0.18em] text-ink-muted">
-        {t('common.loadingMagic')}
+        {t('common.loading', { name })}
       </p>
     </div>
   );
@@ -84,7 +106,10 @@ function MagicLoadingFallback() {
  * Only a dynamic-import failure reaches here — the class boundary is the one
  * way React lets a render error be caught at all.
  */
-class MagicChunkBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+class ChunkBoundary extends Component<
+  { name: string; children: ReactNode },
+  { failed: boolean }
+> {
   state = { failed: false };
 
   static getDerivedStateFromError() {
@@ -92,18 +117,18 @@ class MagicChunkBoundary extends Component<{ children: ReactNode }, { failed: bo
   }
 
   render() {
-    if (this.state.failed) return <MagicChunkError />;
+    if (this.state.failed) return <ChunkError name={this.props.name} />;
     return this.props.children;
   }
 }
 
-function MagicChunkError() {
+function ChunkError({ name }: { name: string }) {
   const { t } = useTranslation();
   return (
     <div role="alert" className="px-5 py-16 md:px-13 md:py-24">
       <div className="mx-auto max-w-[62ch]">
         <h1 className="mb-5 text-display-sm font-display text-ink-strong md:text-display">
-          {t('common.chunkErrorTitle')}
+          {t('common.chunkErrorTitle', { name })}
         </h1>
         <p className="mb-8 text-note text-ink-body text-pretty">
           <span className="md:hidden">{t('common.chunkErrorBodyShort')}</span>
