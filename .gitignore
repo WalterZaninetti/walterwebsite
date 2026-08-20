@@ -31,8 +31,18 @@ firebase-debug.*.log
 .env.*
 !.env.example
 
-# Page pipeline working directory
-.pipeline/
+# Page pipeline working directory. Local scratch, with one exception: the
+# sources ledger is the audit trail for every date on /seasonable — what was
+# checked, what was rejected and why. Losing it means re-walking 254
+# disciplinari to find out which ones state no harvest date.
+# Directory patterns stop git descending, hence the file-level form.
+.pipeline/*
+!.pipeline/seasonable/
+.pipeline/seasonable/*
+!.pipeline/seasonable/sources-ledger.md
 
-# Claude Code project config
-.claude/
+# Claude Code project config. Local, except the skills: they are project
+# convention rather than machine state, and seasonable-sourcing carries the
+# rules the dataset's provenance depends on.
+.claude/*
+!.claude/skills/
