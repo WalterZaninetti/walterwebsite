@@ -513,7 +513,7 @@
   "seasonable": {
     "eyebrow": "per tutti",
     "title": "Seasonable",
-    "deck": "Le fragole a gennaio sotto le luci del negozio sembrano giuste, poi non sanno di niente. Scegli una provincia e qui sotto trovi cosa si raccoglie davvero vicino a te adesso — e cosa c'è solo perché è arrivato in aereo.",
+    "deck": "Le fragole a gennaio sotto le luci del negozio sembrano giuste, poi non sanno di niente. Scegli una provincia e qui sotto trovi cosa si raccoglie davvero vicino a te adesso. E cosa è sul banco senza essere cresciuto da quelle parti.",
     "deckShort": "Le fragole a gennaio sembrano giuste, poi non sanno di niente. Scegli una provincia e vedi cosa è davvero di stagione vicino a te adesso.",
     "picker": {
       "placeLabel": "Dove sei",
@@ -532,7 +532,7 @@
         "note": "Raccolto prima, vicino a te, e si conserva."
       },
       "flown": {
-        "title": "Arrivato in aereo",
+        "title": "Sul banco, non nei campi",
         "note": "Sul banco tutto l'anno, ma qui adesso non lo raccoglie nessuno."
       }
     },
@@ -567,7 +567,7 @@
       "noPlace": "Scegli una provincia e l'elenco si riempie. Il mese è già su questa quindicina.",
       "noPicking": "In {{region}} in questa quindicina non si raccoglie niente di quello che c'è in elenco. Succede: è la risposta, non un buco.",
       "noStored": "Niente di conserva in questa quindicina: quello che si conserva è finito, o è tornato nei campi.",
-      "noFlown": "Niente è arrivato in aereo. Tutto quello che trovi tutto l'anno, adesso qui è davvero di stagione.",
+      "noFlown": "Tutto quello che è sul banco è anche nei campi. Tutto quello che trovi tutto l'anno, adesso qui è davvero di stagione.",
       "nothing": "Per {{region}} in questa quindicina non c'è niente. Con l'elenco com'è adesso non dovrebbe succedere, quindi è più probabile un mio errore che una risposta. Scrivimi e controllo."
     },
     "metaTitle": "Seasonable — davvero di stagione, vicino a te — Walter",

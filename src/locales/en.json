@@ -513,7 +513,7 @@
   "seasonable": {
     "eyebrow": "for everyone",
     "title": "Seasonable",
-    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province and this names what is genuinely being picked near you now — and what is only there because it flew.",
+    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province and this names what is genuinely being picked near you now. And what is on the shelf without being grown there at all.",
     "deckShort": "Strawberries in January look right, then taste of nothing. Pick a province and see what's genuinely in season near you now.",
     "picker": {
       "placeLabel": "Where you are",
@@ -532,7 +532,7 @@
         "note": "Picked earlier in the year near you, and it keeps."
       },
       "flown": {
-        "title": "It flew",
+        "title": "On the shelf, not in the fields",
         "note": "On the shelf all year, but nothing near you is picking it now."
       }
     },
@@ -567,7 +567,7 @@
       "noPlace": "Pick a province and the list fills in. The month is already set to this fortnight.",
       "noPicking": "Nothing on the list is being picked in {{region}} this fortnight. That happens — it's the answer, not a hole.",
       "noStored": "Nothing from storage this fortnight — what keeps has either run out or is back in the field.",
-      "noFlown": "Nothing on this list flew. Everything you can buy here all year round is genuinely in season near you right now.",
+      "noFlown": "Everything on the shelf is also in the fields. Everything you can buy here all year round is genuinely in season near you right now.",
       "nothing": "Nothing at all for {{region}} in this fortnight. With the list as it stands that shouldn't happen, so it's more likely to be my mistake than an answer. Tell me and I'll look."
     },
     "metaTitle": "Seasonable — what's genuinely in season near you — Walter",
