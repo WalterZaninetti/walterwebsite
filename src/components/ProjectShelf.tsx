@@ -6,7 +6,7 @@ import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
 import { LazyImage } from './LazyImage';
 import { Tile } from './ui/Tile';
-import { CardsIcon, DiscIcon, LeafIcon, ShelfIcon } from './ui/icons';
+import { ArrowRightIcon, CardsIcon, DiscIcon, LeafIcon, ShelfIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
 /**
@@ -160,7 +160,10 @@ function ProjectCard({ project }: { project: Project }) {
         )}
       >
         <span>{t(`${key}.meta`)}</span>
-        <span>{t('home.projects.openLabel')}</span>
+        <span className="inline-flex items-center gap-1.5">
+          {t('home.projects.openLabel')}
+          <ArrowRightIcon className="size-[1em] shrink-0" />
+        </span>
       </div>
     </a>
   );

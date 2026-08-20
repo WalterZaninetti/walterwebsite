@@ -6,6 +6,7 @@ import { Chip } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
 import { cx } from '../ui/cx';
+import { ArrowUpRightIcon } from '../ui/icons';
 
 /**
  * The monthly pick. Sleeve sits beside the metadata on desktop, above it on mobile, with the
@@ -115,18 +116,20 @@ export function AlbumOfTheMonth({ className }: { className?: string }) {
             href={album.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent-on-panel"
+            className="inline-flex items-center gap-1.5 font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent-on-panel"
           >
             {t('home.music.album.listenLink')}
+            <ArrowUpRightIcon className="size-[1em] shrink-0" />
           </a>
         )}
         <a
           href="#picks"
-          className="font-mono text-meta font-medium text-on-panel-quiet no-underline transition-colors duration-150 hover:text-on-panel-body"
+          className="inline-flex items-center gap-1.5 font-mono text-meta font-medium text-on-panel-quiet no-underline transition-colors duration-150 hover:text-on-panel-body"
         >
           {/* Derived, not typed: the count and the pick number are the same number, and
               keeping them in step by hand is exactly the kind of thing that drifts. */}
           {t('home.music.album.archiveLink', { count: album.pick ?? 0 })}
+          <ArrowUpRightIcon className="size-[1em] shrink-0" />
         </a>
       </div>
     </article>

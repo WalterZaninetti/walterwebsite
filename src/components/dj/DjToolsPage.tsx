@@ -20,7 +20,7 @@ import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { SkipLink } from '../ui/SkipLink';
 import { Tile } from '../ui/Tile';
-import { DiscIcon, MoonIcon, NoteIcon, ShelfIcon, SunIcon, WaveIcon } from '../ui/icons';
+import { ArrowLeftIcon, DiscIcon, MoonIcon, NoteIcon, ShelfIcon, SunIcon, WaveIcon } from '../ui/icons';
 import { IconButton, ThemeSwitch } from '../SiteHeader';
 import { SiteFooter } from '../SiteFooter';
 import { cx } from '../ui/cx';
@@ -543,8 +543,9 @@ function BackLink() {
   return (
     <a
       href="/#projects"
-      className="inline-block font-mono text-meta text-ink-muted no-underline transition-colors duration-150 hover:text-accent"
+      className="inline-flex items-center gap-1.5 font-mono text-meta text-ink-muted no-underline transition-colors duration-150 hover:text-accent"
     >
+      <ArrowLeftIcon className="size-[1em] shrink-0" />
       {t('projects.backLabel')}
     </a>
   );

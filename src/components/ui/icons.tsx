@@ -110,6 +110,52 @@ function bareGlyph(className?: string) {
   } as const;
 }
 
+/**
+ * The three arrows that used to live inside translatable strings as ←, → and ↗.
+ *
+ * They had to come out. Every face this site ships is Google's `latin` subset,
+ * and that subset contains U+2191 and U+2193 but not U+2190, U+2192 or U+2197 —
+ * so all three fell back to a system face wherever they appeared, which is the
+ * failure djTools.ts:48 records for U+2605. Widening the `unicode-range` would
+ * have made it worse rather than better: the glyphs are absent from the font
+ * files themselves, so declaring the range only swaps a readable fallback for
+ * a .notdef box.
+ *
+ * Sized in `em` at the call site so they track the label they sit beside.
+ * An arrow on a link is an icon rather than a word, so it also has no business
+ * being in a string translators are asked to carry.
+ */
+
+/** Back. Lucide `arrow-left`. */
+export function ArrowLeftIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M19 12H5" />
+      <path d="m12 19-7-7 7-7" />
+    </svg>
+  );
+}
+
+/** Onward, within the site. Lucide `arrow-right`. */
+export function ArrowRightIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
+
+/** Leaves the site. Lucide `arrow-up-right`. */
+export function ArrowUpRightIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M7 7h10v10" />
+      <path d="M7 17 17 7" />
+    </svg>
+  );
+}
+
 /** Magic Tools — a deck seen end-on. Lucide `gallery-vertical-end`. */
 export function CardsIcon({ className }: GlyphProps = {}) {
   return (

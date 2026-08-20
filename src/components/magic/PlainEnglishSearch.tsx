@@ -9,6 +9,7 @@ import {
   type TranslateResult,
 } from '../../lib/translateApi';
 import { SectionHead } from './controls';
+import { ArrowUpRightIcon } from '../ui/icons';
 
 type LegendGroup = { title: string; items: string[] };
 
@@ -230,11 +231,12 @@ export function PlainEnglishSearch() {
                 rel="noopener"
                 aria-disabled={!result}
                 onClick={(e) => !result && e.preventDefault()}
-                className={`rounded-pill bg-magic-ember-light px-6 py-[13px] font-magic-body text-[13.5px] font-medium text-magic-abyss no-underline transition-colors hover:bg-white ${
+                className={`inline-flex items-center gap-1.5 rounded-pill bg-magic-ember-light px-6 py-[13px] font-magic-body text-[13.5px] font-medium text-magic-abyss no-underline transition-colors hover:bg-white ${
                   result ? '' : 'pointer-events-none opacity-50'
                 }`}
               >
                 {t('magic.search.search')}
+                <ArrowUpRightIcon className="size-[1em] shrink-0" />
               </a>
               <button
                 type="button"

@@ -4,6 +4,7 @@ import { Eyebrow } from './ui/Eyebrow';
 import { LanguageSwitch } from './ui/LanguageSwitch';
 import { Monogram } from './ui/Monogram';
 import { SkipLink } from './ui/SkipLink';
+import { ArrowLeftIcon } from './ui/icons';
 
 type Section = { heading: string; body: string[] };
 
@@ -37,8 +38,9 @@ export function LegalPage() {
             <a
               href="/"
               onClick={navigate}
-              className="text-header-nav no-underline transition-colors duration-150 hover:text-header-ink"
+              className="inline-flex items-center gap-1.5 text-header-nav no-underline transition-colors duration-150 hover:text-header-ink"
             >
+              <ArrowLeftIcon className="size-[1em] shrink-0" />
               {t('legal.backLabel')}
             </a>
           </div>

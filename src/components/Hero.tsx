@@ -3,6 +3,7 @@ import { site } from '../content/site';
 import { AccentButton, PanelPill } from './ui/Pill';
 import { Eyebrow } from './ui/Eyebrow';
 import { Frame } from './ui/Frame';
+import { ArrowUpRightIcon } from './ui/icons';
 
 /**
  * Full-height intro screen.
@@ -118,9 +119,10 @@ export function Hero() {
               <PanelPill
                 key={social.id}
                 href={social.href}
-                className="inline-flex min-h-11 items-center px-3.5 text-[12.5px] lg:min-h-0 lg:px-[15px] lg:py-[9px] lg:text-meta"
+                className="inline-flex min-h-11 items-center gap-1.5 px-3.5 text-[12.5px] lg:min-h-0 lg:px-[15px] lg:py-[9px] lg:text-meta"
               >
-                {t(`socials.${social.id}`)} ↗
+                {t(`socials.${social.id}`)}
+                <ArrowUpRightIcon className="size-[1em] shrink-0" />
               </PanelPill>
             ))}
           </div>

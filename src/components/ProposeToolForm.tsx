@@ -5,6 +5,7 @@ import { site } from '../content/site';
 import { Eyebrow } from './ui/Eyebrow';
 import { NoteIcon } from './ui/icons';
 import { cx } from './ui/cx';
+import { ArrowRightIcon } from './ui/icons';
 
 // These are the only controls on the page that drop the browser's own outline,
 // so they have to put back something at least as loud: the border swap alone
@@ -61,7 +62,7 @@ export function ProposeToolForm() {
 
       <h2 className="mb-2.5 text-display-sm font-display lg:mb-2 lg:text-display">
         {t('home.propose.heading')}
-        <span className="italic text-on-panel-accent"> →</span>
+        <ArrowRightIcon className="ml-2 inline size-[0.8em] shrink-0 align-baseline text-on-panel-accent" />
       </h2>
       <p className="mb-5 max-w-[34em] text-note/[1.7] text-on-panel-muted text-pretty lg:mb-6 lg:text-copy">
         <span className="md:hidden">{t('home.propose.bodyShort')}</span>

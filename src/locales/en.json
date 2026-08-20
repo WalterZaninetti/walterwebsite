@@ -47,13 +47,13 @@
     },
     "projects": {
       "heading": "Things I made",
-      "openLabel": "Open →",
+      "openLabel": "Open",
       "magic": {
         "eyebrow": "01 · for magic players",
         "eyebrowShort": "01 · magic",
         "title": "Magic Tools",
         "description": "A geometric calculator for building mana bases that actually hold up, and a converter that turns plain English into Scryfall filters.",
-        "descriptionShort": "Mana-base geometry and plain English → Scryfall filters.",
+        "descriptionShort": "Mana-base geometry and plain English — Scryfall filters.",
         "meta": "MIT · web",
         "thumbCaption": "mana pentagon diagram",
         "thumbCaptionShort": "mana pentagon",
@@ -74,7 +74,7 @@
         "eyebrowShort": "03 · everyone",
         "title": "Seasonable",
         "description": "Pick a province and a fortnight; it names the fruit and vegetables genuinely in season there. Not just what's on the shelf.",
-        "descriptionShort": "Province + fortnight → what's really in season there.",
+        "descriptionShort": "Province + fortnight — what's really in season there.",
         "meta": "20 regions · sourced",
         "thumbCaption": "produce still life",
         "thumbCaptionShort": "produce photo"
@@ -91,20 +91,20 @@
         "sleeveCaption": "album sleeve",
         "extent_one": "{{count}} track · {{minutes}} min",
         "extent_other": "{{count}} tracks · {{minutes}} min",
-        "listenLink": "Listen on Spotify ↗",
-        "archiveLink": "All {{count}} picks ↗"
+        "listenLink": "Listen on Spotify",
+        "archiveLink": "All {{count}} picks"
       },
       "sources": {
         "spotify": {
           "label": "On repeat",
           "caption": "The last five things I actually played, straight from Spotify.",
-          "link": "Open Spotify ↗",
+          "link": "Open Spotify",
           "empty": "Nothing to show — the feed will fill on the next deploy."
         },
         "bandcamp": {
           "label": "Just bought",
           "caption": "The last five records into the collection. Bandcamp counts purchases, not plays — these are the ones I paid for.",
-          "link": "Open Bandcamp ↗",
+          "link": "Open Bandcamp",
           "empty": "Nothing to show — the feed will fill on the next deploy."
         }
       },
@@ -112,7 +112,7 @@
         "label": "Previous picks"
       },
       "links": {
-        "primary": "Bandcamp collection ↗"
+        "primary": "Bandcamp collection"
       }
     },
     "coffee": {
@@ -160,7 +160,7 @@
     "crumbPage": "Magic Tools",
     "navOdds": "Draw odds",
     "navSearch": "Plain-English search",
-    "repo": "GitHub ↗",
+    "repo": "GitHub",
     "hero": {
       "title": "Magic Tools",
       "blurb": "Two things I kept doing by hand: working out whether my mana base actually delivers, and translating what I mean into Scryfall syntax. Both are here, both are open source.",
@@ -268,7 +268,7 @@
       "queryLabel": "Scryfall query",
       "submit": "Translate",
       "submitBusy": "Translating…",
-      "search": "Search on Scryfall ↗",
+      "search": "Search on Scryfall",
       "copy": "Copy query",
       "copied": "Copied",
       "emptyQuery": "—",
@@ -447,7 +447,7 @@
     "title": "Cookies & privacy",
     "updated": "Last updated 30 July 2026",
     "intro": "The short version: this site sets no cookies, runs no analytics, and sends nothing about you to anyone. There is no banner to dismiss because there is nothing to consent to.",
-    "backLabel": "← Back to the site",
+    "backLabel": "Back to the site",
     "sections": [
       {
         "heading": "Cookies",
@@ -508,7 +508,7 @@
     "linkLegal": "Cookies & privacy"
   },
   "projects": {
-    "backLabel": "← Back to the projects"
+    "backLabel": "Back to the projects"
   },
   "seasonable": {
     "eyebrow": "for everyone",

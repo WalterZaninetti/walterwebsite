@@ -47,13 +47,13 @@
     },
     "projects": {
       "heading": "Cose che ho fatto",
-      "openLabel": "Apri →",
+      "openLabel": "Apri",
       "magic": {
         "eyebrow": "01 · per chi gioca a magic",
         "eyebrowShort": "01 · magic",
         "title": "Magic Tools",
         "description": "Un calcolatore geometrico per costruire basi di mana che reggono davvero, e un convertitore che trasforma il linguaggio naturale in filtri Scryfall.",
-        "descriptionShort": "Geometria della base di mana e linguaggio naturale → filtri Scryfall.",
+        "descriptionShort": "Geometria della base di mana e linguaggio naturale — filtri Scryfall.",
         "meta": "MIT · web",
         "thumbCaption": "diagramma pentagono del mana",
         "thumbCaptionShort": "pentagono del mana",
@@ -74,7 +74,7 @@
         "eyebrowShort": "03 · tutti",
         "title": "Seasonable",
         "description": "Scegli una provincia e una quindicina: ti dice quali frutta e verdura sono davvero di stagione lì. Non solo quello che c'è sul banco.",
-        "descriptionShort": "Provincia + quindicina → cosa è davvero di stagione lì.",
+        "descriptionShort": "Provincia + quindicina — cosa è davvero di stagione lì.",
         "meta": "20 regioni · con fonti",
         "thumbCaption": "natura morta con verdure",
         "thumbCaptionShort": "foto di verdure"
@@ -91,20 +91,20 @@
         "sleeveCaption": "copertina",
         "extent_one": "{{count}} brano · {{minutes}} min",
         "extent_other": "{{count}} brani · {{minutes}} min",
-        "listenLink": "Ascolta su Spotify ↗",
-        "archiveLink": "Tutte le {{count}} scelte ↗"
+        "listenLink": "Ascolta su Spotify",
+        "archiveLink": "Tutte le {{count}} scelte"
       },
       "sources": {
         "spotify": {
           "label": "In loop",
           "caption": "Le ultime cinque cose che ho ascoltato davvero, direttamente da Spotify.",
-          "link": "Apri Spotify ↗",
+          "link": "Apri Spotify",
           "empty": "Niente da mostrare — il feed si riempirà al prossimo deploy."
         },
         "bandcamp": {
           "label": "Appena comprati",
           "caption": "Gli ultimi cinque dischi entrati in collezione. Bandcamp conta gli acquisti, non gli ascolti: questi li ho pagati.",
-          "link": "Apri Bandcamp ↗",
+          "link": "Apri Bandcamp",
           "empty": "Niente da mostrare — il feed si riempirà al prossimo deploy."
         }
       },
@@ -112,7 +112,7 @@
         "label": "Scelte precedenti"
       },
       "links": {
-        "primary": "Collezione Bandcamp ↗"
+        "primary": "Collezione Bandcamp"
       }
     },
     "coffee": {
@@ -160,7 +160,7 @@
     "crumbPage": "Magic Tools",
     "navOdds": "Probabilità",
     "navSearch": "Ricerca a parole tue",
-    "repo": "GitHub ↗",
+    "repo": "GitHub",
     "hero": {
       "title": "Magic Tools",
       "blurb": "Due cose che continuavo a fare a mano: capire se la mia base di mana funziona davvero, e tradurre quello che intendo in sintassi Scryfall. Sono entrambe qui, entrambe open source.",
@@ -268,7 +268,7 @@
       "queryLabel": "Query Scryfall",
       "submit": "Traduci",
       "submitBusy": "Traduco…",
-      "search": "Cerca su Scryfall ↗",
+      "search": "Cerca su Scryfall",
       "copy": "Copia query",
       "copied": "Copiata",
       "emptyQuery": "—",
@@ -447,7 +447,7 @@
     "title": "Cookie e privacy",
     "updated": "Ultimo aggiornamento 30 luglio 2026",
     "intro": "In breve: questo sito non usa cookie, non fa analytics e non manda a nessuno informazioni su di te. Non c'è nessun banner da chiudere perché non c'è niente da consentire.",
-    "backLabel": "← Torna al sito",
+    "backLabel": "Torna al sito",
     "sections": [
       {
         "heading": "Cookie",
@@ -508,7 +508,7 @@
     "linkLegal": "Cookie e privacy"
   },
   "projects": {
-    "backLabel": "← Torna ai progetti"
+    "backLabel": "Torna ai progetti"
   },
   "seasonable": {
     "eyebrow": "per tutti",

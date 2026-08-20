@@ -3,7 +3,7 @@ import { musicFeeds, musicProfiles, type MusicSourceId } from '../../content/mus
 import { formatRelativeTime } from '../../lib/relativeTime';
 import { LazyImage } from '../LazyImage';
 import { Eyebrow } from '../ui/Eyebrow';
-import { BandcampMark, SpotifyMark } from '../ui/icons';
+import { ArrowUpRightIcon, BandcampMark, SpotifyMark } from '../ui/icons';
 import { cx } from '../ui/cx';
 
 /**
@@ -69,9 +69,10 @@ export function SourceCard({ source, className }: { source: MusicSourceId; class
             href={profile}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent-on-panel"
+            className="inline-flex items-center gap-1.5 font-mono text-meta font-medium text-on-panel-body no-underline transition-colors duration-150 hover:text-accent-on-panel"
           >
             {t(`home.music.sources.${source}.link`)}
+            <ArrowUpRightIcon className="size-[1em] shrink-0" />
           </a>
         </div>
       )}

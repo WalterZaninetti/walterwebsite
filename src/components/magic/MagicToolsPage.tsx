@@ -7,7 +7,7 @@ import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { SkipLink } from '../ui/SkipLink';
 import { Tile } from '../ui/Tile';
-import { CardsIcon } from '../ui/icons';
+import { ArrowUpRightIcon, CardsIcon } from '../ui/icons';
 import { DrawOdds } from './DrawOdds';
 import { ManaPips } from './ManaPips';
 import { ManaSources } from './ManaSources';
@@ -78,9 +78,10 @@ function Header() {
         />
         <a
           href={magic.repoHref}
-          className="shrink-0 rounded-pill border border-magic-field px-3.5 py-2 text-magic-ember-deep no-underline transition-colors hover:border-magic-ember-deep hover:bg-magic-ember-deep hover:text-magic-paper"
+          className="inline-flex items-center gap-1.5 shrink-0 rounded-pill border border-magic-field px-3.5 py-2 text-magic-ember-deep no-underline transition-colors hover:border-magic-ember-deep hover:bg-magic-ember-deep hover:text-magic-paper"
         >
           {t('magic.repo')}
+          <ArrowUpRightIcon className="size-[1em] shrink-0" />
         </a>
       </div>
     </div>

@@ -14,6 +14,7 @@ import { MusicSection } from './components/music/MusicSection';
 import { DjToolsPage } from './components/dj/DjToolsPage';
 import { useRoute } from './lib/route';
 import { ThemeProvider } from './lib/theme';
+import { ArrowLeftIcon } from './components/ui/icons';
 
 const MagicToolsPage = lazy(() =>
   import('./components/magic/MagicToolsPage').then((m) => ({ default: m.MagicToolsPage })),
@@ -147,8 +148,9 @@ function ChunkError({ name }: { name: string }) {
           </AccentButton>
           <a
             href="/"
-            className="font-mono text-meta text-ink-muted underline-offset-2 transition-colors duration-150 hover:text-accent hover:underline"
+            className="inline-flex items-center gap-1.5 font-mono text-meta text-ink-muted underline-offset-2 transition-colors duration-150 hover:text-accent hover:underline"
           >
+            <ArrowLeftIcon className="size-[1em] shrink-0" />
             {t('legal.backLabel')}
           </a>
         </div>

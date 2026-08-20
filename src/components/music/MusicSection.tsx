@@ -8,7 +8,7 @@ import { LazyImage } from '../LazyImage';
 import { PanelPill } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { Frame } from '../ui/Frame';
-import { WaveIcon } from '../ui/icons';
+import { ArrowUpRightIcon, WaveIcon } from '../ui/icons';
 import { cx } from '../ui/cx';
 
 /**
@@ -87,7 +87,10 @@ function MusicLinks({ className, stacked = false }: { className?: string; stacke
             : 'px-[18px] py-[11px] text-[12.5px]',
         )}
       >
-        {t('home.music.links.primary')}
+        <span className="inline-flex items-center gap-1.5">
+          {t('home.music.links.primary')}
+          <ArrowUpRightIcon className="size-[1em] shrink-0" />
+        </span>
       </PanelPill>
     </div>
   );
