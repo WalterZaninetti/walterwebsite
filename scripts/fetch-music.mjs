@@ -454,6 +454,30 @@ async function collect(source, fetcher, previous) {
   }
 }
 
+/**
+ * `fetchedAt` is the only field that moves on a run where nothing was published, so without this
+ * every build dirties music.generated.json — including the build inside `npm run deploy`, which
+ * left the working tree modified after every single deploy. The timestamps were never read: the
+ * rows carry their own `at`, and nothing in src/ renders `fetchedAt`.
+ *
+ * So it means "when this section last changed" rather than "when we last asked", which is the
+ * more useful of the two and the only one that can be recorded without churn. A section that
+ * comes back identical keeps its old stamp; one that genuinely moved gets a new one.
+ *
+ * Compared with sorted keys because part of the album payload is spread straight from the API
+ * response, and key order there is not ours to rely on.
+ */
+function settle(next, prev) {
+  if (!next || !prev) return next;
+  const stable = (value) =>
+    JSON.stringify({ ...value, fetchedAt: null }, (_, inner) =>
+      inner && typeof inner === 'object' && !Array.isArray(inner)
+        ? Object.fromEntries(Object.keys(inner).sort().map((key) => [key, inner[key]]))
+        : inner,
+    );
+  return stable(next) === stable(prev) ? { ...next, fetchedAt: prev.fetchedAt } : next;
+}
+
 const previous = readSnapshot();
 
 mkdirSync(ART_DIR, { recursive: true });
@@ -473,7 +497,11 @@ const [spotify, bandcamp, album] = await Promise.all([
   collectAlbum(headers, previous.album),
 ]);
 
-const snapshot = { spotify, bandcamp, album };
+const snapshot = {
+  spotify: settle(spotify, previous.spotify),
+  bandcamp: settle(bandcamp, previous.bandcamp),
+  album: settle(album, previous.album),
+};
 
 /* Drop art from runs that no longer reference it. Done after both sources resolve so a fallback
    never deletes the very files it is falling back on. */
