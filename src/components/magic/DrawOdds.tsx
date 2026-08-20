@@ -24,7 +24,11 @@ export function DrawOdds() {
   const peak = Math.max(...odds.distribution, 1e-9);
   const drawMax = Math.min(deck, 40);
 
-  // Cumulative table: P(X ≥ k), walked down from 1 by subtracting each P(X = k).
+  // Cumulative table: P(X >= k), walked down from 1 by subtracting each P(X = k).
+  // Rendered as "k+" rather than "\u2265 k": U+2265 is outside the latin subset every
+  // face here ships, so it fell back to a system font in a 54px mono column.
+  // "3+" is shorter, in-subset, reads the same in both languages, and the label
+  // above the column already says "at least n".
   const cumulative = useMemo(() => {
     const rows: { k: number; p: number }[] = [];
     let acc = 1;
@@ -194,7 +198,7 @@ export function DrawOdds() {
                         current ? 'text-magic-ink' : 'text-magic-ink-muted'
                       }`}
                     >
-                      ≥ {k}
+                      {k}+
                     </span>
                     <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
                       <span
