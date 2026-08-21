@@ -4,8 +4,8 @@ import type { Project, ProjectId } from '../content/site';
 import { projects } from '../content/site';
 import { navigate } from '../lib/route';
 import { Eyebrow } from './ui/Eyebrow';
-import { LazyImage } from './LazyImage';
 import { Tile } from './ui/Tile';
+import { CrateThumb, MagicThumb, SeasonableThumb } from './ProjectThumbs';
 import { ArrowRightIcon, CardsIcon, DiscIcon, LeafIcon, ShelfIcon } from './ui/icons';
 import { cx } from './ui/cx';
 
@@ -19,7 +19,10 @@ const cardTheme: Record<
   ProjectId,
   {
     surface: string;
+    /** The thumb's own well — one step deeper than the card it is inset into. */
     thumb: string;
+    /** The figure drawn in it. Each is its project's own page figure, small. */
+    figure: ComponentType;
     eyebrow: string;
     body: string;
     meta: string;
@@ -28,7 +31,8 @@ const cardTheme: Record<
 > = {
   magic: {
     surface: 'bg-project-magic text-project-magic-fg hover:shadow-lift-magic',
-    thumb: 'bg-project-magic-thumb text-project-magic-accent',
+    thumb: 'bg-project-magic-thumb',
+    figure: MagicThumb,
     eyebrow: 'text-project-magic-accent',
     body: 'text-project-magic-body',
     meta: 'text-project-magic-accent',
@@ -37,7 +41,8 @@ const cardTheme: Record<
   dj: {
     surface:
       'bg-project-dj text-project-dj-fg border border-project-dj-border hover:shadow-lift-dj',
-    thumb: 'camelot',
+    thumb: 'bg-project-dj-badge',
+    figure: CrateThumb,
     eyebrow: 'text-project-dj-accent',
     body: 'text-project-dj-body',
     meta: 'text-project-dj-accent',
@@ -46,7 +51,8 @@ const cardTheme: Record<
   food: {
     surface:
       'bg-project-food text-project-food-fg border border-project-food-border hover:shadow-lift-food',
-    thumb: 'hatch-food text-project-food-thumb-fg',
+    thumb: 'bg-project-food-thumb',
+    figure: SeasonableThumb,
     eyebrow: 'text-project-food-accent',
     body: 'text-project-food-body',
     meta: 'text-project-food-meta',
@@ -92,8 +98,9 @@ export function ProjectShelf() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const theme = cardTheme[project.id];
+  const Figure = theme.figure;
   const key = `home.projects.${project.id}` as const;
 
   return (
@@ -114,31 +121,19 @@ function ProjectCard({ project }: { project: Project }) {
         so the tile rides it rather than detaching on hover.
       */}
       <Tile icon={theme.tile} className="absolute -top-6 left-5 lg:-top-7 lg:left-[26px]" />
+      {/*
+        One branch fewer than this had: the three thumbs used to be an image,
+        a captioned gradient and a caption over a hatch, so the card carried a
+        three-way conditional and three sets of copy keys. They are all
+        figures now, so the card just renders the one the table names.
+      */}
       <div
         className={cx(
-          'mb-4 grid h-[110px] place-items-center overflow-hidden rounded-field lg:mb-[22px] lg:h-[150px] lg:rounded-thumb',
+          'mb-4 h-[110px] overflow-hidden rounded-field lg:mb-[22px] lg:h-[150px] lg:rounded-thumb',
           theme.thumb,
         )}
       >
-        {project.id === 'magic' ? (
-          <LazyImage
-            // The shot has the tool's own words baked in, so it ships per language.
-            src={`/images/magic-draw-odds-${i18n.resolvedLanguage === 'it' ? 'it' : 'en'}.png`}
-            width={960}
-            height={266}
-            alt={t(`${key}.thumbAlt`)}
-            className="h-full w-full object-cover object-left"
-          />
-        ) : project.id === 'dj' ? (
-          <span className="rounded-pill bg-project-dj-badge px-2.5 py-[5px] font-mono text-label/none text-project-dj-fg">
-            {t(`${key}.thumbCaption`)}
-          </span>
-        ) : (
-          <span className="font-mono text-label/none">
-            <span className="md:hidden">{t(`${key}.thumbCaptionShort`)}</span>
-            <span className="hidden md:inline">{t(`${key}.thumbCaption`)}</span>
-          </span>
-        )}
+        <Figure />
       </div>
 
       <Eyebrow className={cx('mb-2 tracking-[0.16em] lg:mb-2.5 lg:tracking-[0.18em]', theme.eyebrow)}>

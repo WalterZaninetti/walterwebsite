@@ -54,10 +54,7 @@
         "title": "Magic Tools",
         "description": "A geometric calculator for building mana bases that actually hold up, and a converter that turns plain English into Scryfall filters.",
         "descriptionShort": "Mana-base geometry and plain English — Scryfall filters.",
-        "meta": "MIT · web",
-        "thumbCaption": "mana pentagon diagram",
-        "thumbCaptionShort": "mana pentagon",
-        "thumbAlt": "Screenshot of the Magic Tools draw-odds calculator: a percentage gauge with its three result stats."
+        "meta": "MIT · web"
       },
       "dj": {
         "eyebrow": "02 · for djs",
@@ -65,9 +62,7 @@
         "title": "Crate",
         "description": "A desktop app for the Rekordbox library you already have — stacked filters, Camelot moves, duplicates and dead paths, and a playlist back out.",
         "descriptionShort": "Rekordbox, filtered: stacked filters, keys, duplicates, a playlist back out.",
-        "meta": "not built yet",
-        "thumbCaption": "camelot wheel",
-        "thumbCaptionShort": "camelot wheel"
+        "meta": "not built yet"
       },
       "food": {
         "eyebrow": "03 · for everyone",
@@ -75,9 +70,7 @@
         "title": "Seasonable",
         "description": "Pick a province and a fortnight; it names the DOP and IGP produce being picked there, quoting the document that says so.",
         "descriptionShort": "Province + fortnight — what's protected, and being picked.",
-        "meta": "34 designations · quoted",
-        "thumbCaption": "produce still life",
-        "thumbCaptionShort": "produce photo"
+        "meta": "34 designations · quoted"
       }
     },
     "music": {

@@ -54,10 +54,7 @@
         "title": "Magic Tools",
         "description": "Un calcolatore geometrico per costruire basi di mana che reggono davvero, e un convertitore che trasforma il linguaggio naturale in filtri Scryfall.",
         "descriptionShort": "Geometria della base di mana e linguaggio naturale — filtri Scryfall.",
-        "meta": "MIT · web",
-        "thumbCaption": "diagramma pentagono del mana",
-        "thumbCaptionShort": "pentagono del mana",
-        "thumbAlt": "Schermata del calcolatore delle probabilità di pescata di Magic Tools: un indicatore percentuale con le sue tre statistiche di risultato."
+        "meta": "MIT · web"
       },
       "dj": {
         "eyebrow": "02 · per i dj",
@@ -65,9 +62,7 @@
         "title": "Crate",
         "description": "Un'app desktop per la libreria Rekordbox che hai già — filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più, e una playlist che torna indietro.",
         "descriptionShort": "Rekordbox, filtrato: filtri che si sommano, tonalità, doppioni, una playlist indietro.",
-        "meta": "ancora da scrivere",
-        "thumbCaption": "ruota camelot",
-        "thumbCaptionShort": "ruota camelot"
+        "meta": "ancora da scrivere"
       },
       "food": {
         "eyebrow": "03 · per tutti",
@@ -75,9 +70,7 @@
         "title": "Seasonable",
         "description": "Scegli una provincia e una quindicina: ti dice quali prodotti DOP e IGP si raccolgono lì, citando il documento che lo dice.",
         "descriptionShort": "Provincia + quindicina — cosa è a denominazione, e si raccoglie.",
-        "meta": "34 denominazioni · citate",
-        "thumbCaption": "natura morta con verdure",
-        "thumbCaptionShort": "foto di verdure"
+        "meta": "34 denominazioni · citate"
       }
     },
     "music": {

@@ -373,6 +373,13 @@
   --project-food-body: rgb(21 50 9 / 0.88);      /*  7.80:1 */
   --project-food-meta: rgb(21 50 9 / 0.8);       /*  6.19:1 */
   --project-food-hatch: rgb(21 50 9 / 0.2);
+  /* The thumb well. Magic and Crate each had one already (-thumb, -badge);
+     food never did, because its thumb was a hatch over the card itself. It
+     needs one now that a figure is drawn in there — a hatch under a year
+     strip is two textures fighting. One step deeper than the band, far
+     enough to read as inset (1.24:1) and no further, since the figure is
+     what should carry the contrast. */
+  --project-food-thumb: #a9d69a;                 /*  1.24 vs band · 8.56 under -fg */
   --project-food-thumb-fg: #153209;
   --project-food-border: #6e9262;                /*  3.39:1 vs canvas */
   --project-food-seam: #31601e;                  /*  7.16 canvas · 5.65 band */
@@ -663,6 +670,7 @@
   --project-food-body: rgb(231 245 227 / 0.88);  /*  9.51:1 */
   --project-food-meta: rgb(231 245 227 / 0.8);   /*  8.17:1 */
   --project-food-hatch: rgb(231 245 227 / 0.18);
+  --project-food-thumb: #10220a;                 /*  1.25 vs band · 14.79 under -fg */
   --project-food-border: rgb(231 245 227 / 0.45);/*  4.14:1 vs canvas, composited */
   --project-food-seam: #a1cc93;                  /* 10.18 canvas · 7.36 band */
   --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
@@ -872,6 +880,7 @@
   --color-project-food-accent: var(--project-food-accent);
   --color-project-food-body: var(--project-food-body);
   --color-project-food-meta: var(--project-food-meta);
+  --color-project-food-thumb: var(--project-food-thumb);
   --color-project-food-thumb-fg: var(--project-food-thumb-fg);
   --color-project-food-border: var(--project-food-border);
   --color-project-food-seam: var(--project-food-seam);
