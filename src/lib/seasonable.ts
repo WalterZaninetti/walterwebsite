@@ -236,6 +236,32 @@ export function seasonYear(data: Dataset, province: ProvinceId): readonly Season
   return [...rows.values()];
 }
 
+/**
+ * The distinct documents behind a row, and the distinct kinds of window in it.
+ *
+ * A designation can carry more than one window out of *one* document, and the
+ * common case is a crop with an early and a late type: Finocchio di Isola Capo
+ * Rizzuto has a `precoce` picked from October and a `tardiva` picked from
+ * March, both stated in the same richiesta di riconoscimento. Two windows, one
+ * source, one kind.
+ *
+ * The row needs both facts kept and both displays collapsed. The windows stay
+ * separate because they describe different parts of the year and the calendar
+ * has to draw both; the citation and the kind label are one each, because a
+ * reader shown the same document twice reasonably concludes there are two.
+ * That is a rendering concern, so it is a reading of the row rather than
+ * something `seasonYear` flattens before anyone sees it.
+ */
+export function sourcesOf(row: SeasonRow): readonly Source[] {
+  const seen = new Map<SourceId, Source>();
+  for (const entry of row.entries) if (!seen.has(entry.source.id)) seen.set(entry.source.id, entry.source);
+  return [...seen.values()];
+}
+
+export function kindsOf(row: SeasonRow): readonly WindowKind[] {
+  return [...new Set(row.entries.map((entry) => entry.kind))];
+}
+
 /** Every province any window in the catalogue answers for. */
 export function answeredProvinces(data: Dataset): ReadonlySet<ProvinceId> {
   const seen = new Set<ProvinceId>();

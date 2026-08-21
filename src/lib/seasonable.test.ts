@@ -21,7 +21,14 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import type { Dataset } from './seasonable.ts';
-import { covers, currentHalfMonth, seasonYear, windowLength } from './seasonable.ts';
+import {
+  covers,
+  currentHalfMonth,
+  kindsOf,
+  seasonYear,
+  sourcesOf,
+  windowLength,
+} from './seasonable.ts';
 import { produce } from '../content/seasonable/produce.ts';
 import { provinces, regions, zones } from '../content/seasonable/geography.ts';
 import { sources } from '../content/seasonable/sources.ts';
@@ -219,6 +226,31 @@ test('one designation is one row, however many windows it carries', () => {
     const rows = seasonYear(dataset, province.id);
     const ids = rows.map((r) => r.produce.id);
     assert.equal(new Set(ids).size, ids.length, `${province.id} repeats a designation`);
+  }
+});
+
+test('two windows out of one document cite it once', () => {
+  // Finocchio di Isola Capo Rizzuto has a precoce and a tardiva window, both
+  // stated in the same richiesta di riconoscimento. The row printed the
+  // citation twice and labelled itself "open field · open field".
+  const row = seasonYear(dataset, 'kr').find((r) => r.produce.id === 'finocchio-capo-rizzuto');
+  assert.ok(row, 'Crotone should answer for Finocchio di Isola Capo Rizzuto');
+  assert.equal(row.entries.length, 2, 'both windows must survive — the calendar draws both');
+  assert.equal(sourcesOf(row).length, 1);
+  assert.equal(kindsOf(row).length, 1);
+  // Both windows still reach the calendar, on their own sides of the year.
+  assert.notEqual(row.calendar[0], null, 'the precoce window runs into January');
+  assert.notEqual(row.calendar[7], null, 'the tardiva window runs in April');
+});
+
+test('no row ever renders one document twice', () => {
+  for (const province of provinces) {
+    for (const row of seasonYear(dataset, province.id)) {
+      const ids = sourcesOf(row).map((s) => s.id);
+      assert.equal(new Set(ids).size, ids.length, `${province.id}/${row.produce.id} repeats a source`);
+      const kinds = kindsOf(row);
+      assert.equal(new Set(kinds).size, kinds.length, `${province.id}/${row.produce.id} repeats a kind`);
+    }
   }
 });
 

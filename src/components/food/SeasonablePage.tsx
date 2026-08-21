@@ -7,8 +7,10 @@ import {
   currentHalfMonth,
   produceName,
   answeredProvinces,
+  kindsOf,
   produceKind,
   seasonYear,
+  sourcesOf,
   splitHalfMonth,
 } from '../../lib/seasonable';
 import { useMetaDescription } from '../../lib/meta';
@@ -586,7 +588,9 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
           <span className="mt-0.5 block font-mono text-micro text-ink-muted">
             {produceKind(row.produce, locale)}
             {' · '}
-            {row.entries.map((entry) => t(KIND_KEY[entry.kind])).join(' · ')}
+            {kindsOf(row)
+              .map((kind) => t(KIND_KEY[kind]))
+              .join(' · ')}
           </span>
           <button
             type="button"
@@ -614,20 +618,17 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
           {/* 13 columns: the designation plus the twelve months. */}
           <td colSpan={13} className="pb-3 pl-0">
             <div className="grid gap-1">
-              {row.entries.map((entry) => (
-                <p
-                  key={`${entry.kind}-${entry.source.id}`}
-                  className="max-w-[62ch] font-mono text-micro text-ink-body"
-                >
+              {sourcesOf(row).map((source) => (
+                <p key={source.id} className="max-w-[62ch] font-mono text-micro text-ink-body">
                   <a
-                    href={entry.source.url}
+                    href={source.url}
                     rel="noreferrer"
                     className="text-accent underline underline-offset-2"
                   >
-                    {entry.source.name}
+                    {source.name}
                   </a>
                   {', '}
-                  {entry.source.year}. {t('seasonable.row.basisTail', { place })}
+                  {source.year}. {t('seasonable.row.basisTail', { place })}
                 </p>
               ))}
             </div>
