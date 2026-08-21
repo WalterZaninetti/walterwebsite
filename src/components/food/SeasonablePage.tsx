@@ -435,12 +435,14 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
   const months = useMemo(() => {
     const long = new Intl.DateTimeFormat(locale, { month: 'long' });
     const short = new Intl.DateTimeFormat(locale, { month: 'short' });
+    const narrow = new Intl.DateTimeFormat(locale, { month: 'narrow' });
     return Array.from({ length: 12 }, (_, m) => ({
       index: m,
       long: long.format(new Date(2026, m, 1)),
       // `short` carries a trailing dot in Italian ("gen."), which reads as
       // noise in a header cell that is already three characters wide.
       short: short.format(new Date(2026, m, 1)).replace(/\.$/, ''),
+      narrow: narrow.format(new Date(2026, m, 1)),
     }));
   }, [locale]);
 
@@ -482,15 +484,21 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
         its row header has been scrolled off the left edge.
       */}
       <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
-        <table className="w-full min-w-[42rem] table-fixed border-collapse text-left">
+        <table className="w-full min-w-[26rem] table-fixed border-collapse text-left md:min-w-[42rem]">
           {/*
             Without this the designation column sizes to its longest name —
             "Pomodoro San Marzano dell'Agro Sarnese-Nocerino DOP" — and squeezes
             twelve months into the last third of the table, which is the one
             thing the column axis exists to prevent.
+
+            The mobile width is the same argument at the size where it bites
+            hardest. At 15rem the names took three quarters of a 320px screen
+            and the reader met a table with almost no calendar in it, which is
+            the wrong half to show first: they can infer a truncated name, and
+            cannot infer a month they cannot see.
           */}
           <colgroup>
-            <col className="w-[15rem] md:w-[18rem]" />
+            <col className="w-[9.5rem] md:w-[18rem]" />
             {Array.from({ length: 12 }, (_, i) => (
               <col key={i} />
             ))}
@@ -499,7 +507,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
             <tr>
               <th
                 scope="col"
-                className="sticky left-0 z-10 bg-canvas pb-2 pr-3 align-bottom font-mono text-label-wide uppercase text-ink-muted"
+                className="sticky left-0 z-10 border-r border-line-card bg-canvas pb-2 pr-3 align-bottom font-mono text-label-wide uppercase text-ink-muted"
               >
                 {t('seasonable.table.productHeader')}
               </th>
@@ -512,7 +520,16 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
                     month.index === nowMonth ? 'text-accent' : 'text-ink-muted',
                   )}
                 >
-                  <span aria-hidden="true">{month.short}</span>
+                  {/*
+                    A month column is 22px wide on a phone, where three letters
+                    of the abbreviation collide with their neighbours and the
+                    axis reads as one run of characters. The narrow form is one
+                    letter and ambiguous on its own — Italian has two G and two
+                    A — which is exactly why the long name stays in `sr-only`
+                    and the reader can always count along from January.
+                  */}
+                  <span aria-hidden="true" className="sm:hidden">{month.narrow}</span>
+                  <span aria-hidden="true" className="hidden sm:inline">{month.short}</span>
                   <span className="sr-only">{month.long}</span>
                 </th>
               ))}
@@ -556,7 +573,7 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
       <tr className="border-t border-line-card">
         <th
           scope="row"
-          className="sticky left-0 z-10 bg-canvas py-2.5 pr-3 align-middle font-normal"
+          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-2.5 pr-3 align-middle font-normal"
         >
           <span
             className={cx(
