@@ -517,16 +517,6 @@
       "groupAnswering": "A designation names these",
       "groupSilent": "No designation names these yet"
     },
-    "buckets": {
-      "picking": {
-        "title": "Being picked now",
-        "note": "Its disciplinare puts the harvest in {{place}}, this fortnight."
-      },
-      "stored": {
-        "title": "From storage",
-        "note": "Picked earlier in the year, and the same document says it can still be sold."
-      }
-    },
     "row": {
       "showSource": "Where this date comes from",
       "hideSource": "Close",
@@ -536,6 +526,13 @@
       "openField": "open field",
       "greenhouse": "greenhouse",
       "stored": "stored"
+    },
+    "table": {
+      "heading": "The whole year, and where you are in it",
+      "note": "Every designation with a document naming {{place}}. Each column is one month, split into its two halves; the line marks the fortnight you picked.",
+      "productHeader": "Designation",
+      "firstHalf": "first half",
+      "secondHalf": "second half"
     },
     "s1": {
       "heading": "How it decides",
@@ -554,8 +551,6 @@
     },
     "states": {
       "noPlace": "Pick a province and the list fills in. The month is already set to this fortnight.",
-      "noPicking": "Nothing on the list is being picked in {{place}} this fortnight. That happens — it's the answer, not a hole.",
-      "noStored": "Nothing in storage here this fortnight.",
       "nothing": "No designation in the list names {{place}}. Most provinces haven't got one — that's a gap in the documents, not a verdict on what grows there."
     },
     "metaTitle": "Seasonable — what's genuinely in season near you — Walter",

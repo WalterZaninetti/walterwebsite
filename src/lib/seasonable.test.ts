@@ -21,7 +21,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import type { Dataset } from './seasonable.ts';
-import { covers, currentHalfMonth, whatsInSeason, windowLength } from './seasonable.ts';
+import { covers, currentHalfMonth, seasonYear, windowLength } from './seasonable.ts';
 import { produce } from '../content/seasonable/produce.ts';
 import { provinces, regions, zones } from '../content/seasonable/geography.ts';
 import { sources } from '../content/seasonable/sources.ts';
@@ -165,41 +165,67 @@ test('currentHalfMonth() splits the month at the 15th', () => {
 });
 
 test('an unknown province answers nothing rather than everything', () => {
-  const answer = whatsInSeason(dataset, 'nowhere', 3);
-  assert.deepEqual(answer.picking, []);
-  assert.deepEqual(answer.stored, []);
+  assert.deepEqual(seasonYear(dataset, 'nowhere'), []);
 });
 
 test('a province answers only for windows that name it', () => {
   // Carciofo di Paestum, 1 February to 20 May, provincia di Salerno.
-  const salerno = whatsInSeason(dataset, 'sa', 4);
-  assert.ok(salerno.picking.some((e) => e.produce.id === 'carciofo-paestum'));
+  const salerno = seasonYear(dataset, 'sa');
+  assert.ok(salerno.some((row) => row.produce.id === 'carciofo-paestum'));
   // Milano is named by no disciplinare in the catalogue.
-  const milano = whatsInSeason(dataset, 'mi', 4);
-  assert.deepEqual(milano.picking, []);
-  assert.deepEqual(milano.stored, []);
+  assert.deepEqual(seasonYear(dataset, 'mi'), []);
 });
 
-test('a window outside its season does not answer', () => {
-  // Same province, mid-September: the artichoke window has closed.
-  const salerno = whatsInSeason(dataset, 'sa', 17);
-  assert.ok(!salerno.picking.some((e) => e.produce.id === 'carciofo-paestum'));
+test('a calendar is open exactly where its window covers', () => {
+  const row = seasonYear(dataset, 'sa').find((r) => r.produce.id === 'carciofo-paestum');
+  assert.ok(row, 'Salerno should answer for Carciofo di Paestum');
+  // 1 February to 20 May is half-months 2 through 9 inclusive.
+  assert.equal(row.calendar[4], 'open-field');
+  // Mid-September: the window has closed.
+  assert.equal(row.calendar[17], null);
+  assert.equal(row.calendar.length, 24);
+  assert.equal(
+    row.calendar.filter((k) => k !== null).length,
+    8,
+    'the artichoke window is eight half-months long',
+  );
 });
 
-test('stored and picking are separated by the window kind', () => {
+test('the window kind reaches the calendar', () => {
   // Aglio Bianco Polesano is a storage window only, all year bar early July.
-  const rovigo = whatsInSeason(dataset, 'ro', 0);
-  assert.ok(rovigo.stored.some((e) => e.produce.id === 'aglio-polesano'));
-  assert.ok(!rovigo.picking.some((e) => e.produce.id === 'aglio-polesano'));
-  for (const e of rovigo.stored) assert.equal(e.kind, 'stored');
-  for (const e of rovigo.picking) assert.notEqual(e.kind, 'stored');
+  const row = seasonYear(dataset, 'ro').find((r) => r.produce.id === 'aglio-polesano');
+  assert.ok(row, 'Rovigo should answer for Aglio Bianco Polesano');
+  assert.equal(row.calendar[0], 'stored');
+  assert.ok(row.entries.every((e) => e.kind === 'stored'));
+});
+
+test('a wrapping window is open on both sides of the year end', () => {
+  // start > end is the bug this whole model is shaped around, and the table
+  // now renders it as two runs rather than one, so it is worth asserting on
+  // the calendar and not only on covers().
+  const wrapping = windows.find((w) => w.start > w.end);
+  assert.ok(wrapping, 'the catalogue should contain at least one wrapping window');
+  const row = seasonYear(dataset, wrapping.provinces[0]).find(
+    (r) => r.produce.id === wrapping.produce,
+  );
+  assert.ok(row);
+  assert.notEqual(row.calendar[wrapping.start], null);
+  assert.notEqual(row.calendar[wrapping.end], null);
+  assert.notEqual(row.calendar[0], null, 'a wrapping window must be open in early January');
+});
+
+test('one designation is one row, however many windows it carries', () => {
+  for (const province of provinces) {
+    const rows = seasonYear(dataset, province.id);
+    const ids = rows.map((r) => r.produce.id);
+    assert.equal(new Set(ids).size, ids.length, `${province.id} repeats a designation`);
+  }
 });
 
 test('every rendered entry carries a resolvable source', () => {
   for (const p of provinces) {
-    for (let h = 0; h < 24; h += 1) {
-      const answer = whatsInSeason(dataset, p.id, h);
-      for (const e of [...answer.picking, ...answer.stored]) {
+    for (const row of seasonYear(dataset, p.id)) {
+      for (const e of row.entries) {
         assert.ok(e.source.url.startsWith('https://'), `${e.produce.id} has no source url`);
         assert.ok(e.source.year > 0, `${e.produce.id} cites an unverified year`);
       }

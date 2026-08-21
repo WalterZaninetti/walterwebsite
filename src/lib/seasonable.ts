@@ -121,16 +121,27 @@ export type Entry = {
 };
 
 /**
- * Two buckets, and no third.
+ * One designation, and what happens to it in each of the twenty-four
+ * half-months of a normal year in one province.
  *
- * The old `flown` bucket guessed that a thing on the shelf all year with no
- * window near you must have travelled. Nothing in this dataset supports that
- * guess: a disciplinare says when its own product is picked and nothing at all
- * about what else is in the shop. So the guess is gone rather than dressed up.
+ * This replaced a pair of buckets — "being picked now" and "from storage" —
+ * that answered only for the fortnight the reader had selected. Two buckets
+ * can say *that* something is in season; they cannot say *when*, and a reader
+ * who cannot see the shape of a window has no way to judge how close to its
+ * edge the answer sits. `calendar` is the whole year, so the page can draw a
+ * month axis and let the reader read the answer off it instead of trusting it.
+ *
+ * `calendar[h]` is the kind of window covering half-month `h`, or null. The
+ * two buckets are still recoverable — `calendar[h] === 'stored'` is the old
+ * stored bucket — but they are now a reading of the row rather than a
+ * partition performed before the reader sees anything.
  */
-export type Answer = {
-  picking: readonly Entry[];
-  stored: readonly Entry[];
+export type SeasonRow = {
+  produce: Produce;
+  /** Every window naming this province, for this produce. Usually one. */
+  entries: readonly Entry[];
+  /** Length 24, indexed by half-month. */
+  calendar: readonly (WindowKind | null)[];
 };
 
 /** The half-month containing `now`. Day 1-15 is the early half, 16-31 the late one. */
@@ -180,16 +191,26 @@ export function produceKind(produce: Produce, locale: 'en' | 'it'): string {
   return locale === 'en' ? produce.en : produce.it;
 }
 
-export function whatsInSeason(data: Dataset, province: ProvinceId, half: HalfMonth): Answer {
+/**
+ * Every designation a document names for this province, with its whole year.
+ *
+ * Rows are grouped by produce rather than by window because a designation can
+ * carry two windows — Aglio Bianco Polesano is picked in one range and may be
+ * *sold* from storage in another, out of the same document — and those are two
+ * facts about one thing, not two things.
+ *
+ * Where two windows overlap, open field wins the cell. If it is growing
+ * outside, that is the truer answer to the question the page asked, and the
+ * row's own labels still name both kinds.
+ */
+export function seasonYear(data: Dataset, province: ProvinceId): readonly SeasonRow[] {
   const here = data.provinces.find((p) => p.id === province);
-  if (!here) return { picking: [], stored: [] };
+  if (!here) return [];
 
-  const picking: Entry[] = [];
-  const stored: Entry[] = [];
+  const rows = new Map<ProduceId, { produce: Produce; entries: Entry[]; calendar: (WindowKind | null)[] }>();
 
   for (const window of data.windows) {
     if (!window.provinces.includes(here.id)) continue;
-    if (!covers(half, window.start, window.end)) continue;
 
     const produce = data.produce.find((x) => x.id === window.produce);
     const source = data.sources.find((s) => s.id === window.source);
@@ -198,12 +219,21 @@ export function whatsInSeason(data: Dataset, province: ProvinceId, half: HalfMon
     // unrepresentable; this drops it rather than shipping an uncited claim.
     if (!produce || !source) continue;
 
-    const entry: Entry = { produce, kind: window.kind, window, source };
-    if (window.kind === 'stored') stored.push(entry);
-    else picking.push(entry);
+    let row = rows.get(produce.id);
+    if (!row) {
+      row = { produce, entries: [], calendar: Array.from({ length: HALF_MONTHS }, () => null) };
+      rows.set(produce.id, row);
+    }
+    row.entries.push({ produce, kind: window.kind, window, source });
+
+    for (let h = 0; h < HALF_MONTHS; h += 1) {
+      if (!covers(h, window.start, window.end)) continue;
+      if (row.calendar[h] === 'open-field') continue;
+      row.calendar[h] = window.kind;
+    }
   }
 
-  return { picking, stored };
+  return [...rows.values()];
 }
 
 /** Every province any window in the catalogue answers for. */

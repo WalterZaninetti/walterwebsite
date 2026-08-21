@@ -18,6 +18,7 @@
       {
         "source": "**",
         "headers": [
+          { "key": "Cache-Control", "value": "no-cache" },
           {
             "key": "Content-Security-Policy",
             "value": "default-src 'self'; script-src 'self' 'sha256-UB+bzuEsrRU1Mq6d9IVOqwxpd/YrhYCKoaTyWti6jIE='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
@@ -48,10 +49,6 @@
       },
       {
         "source": "/service-worker.js",
-        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
-      },
-      {
-        "source": "/index.html",
         "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
       }
     ]

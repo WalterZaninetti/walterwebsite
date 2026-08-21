@@ -517,16 +517,6 @@
       "groupAnswering": "Qui una denominazione risponde",
       "groupSilent": "Qui ancora nessuna denominazione"
     },
-    "buckets": {
-      "picking": {
-        "title": "Si raccoglie adesso",
-        "note": "Il suo disciplinare mette la raccolta in provincia di {{place}}, in questa quindicina."
-      },
-      "stored": {
-        "title": "Di conserva",
-        "note": "Raccolto prima nell'anno, e lo stesso documento dice fino a quando si può vendere."
-      }
-    },
     "row": {
       "showSource": "Da dove viene questa data",
       "hideSource": "Chiudi",
@@ -536,6 +526,13 @@
       "openField": "pieno campo",
       "greenhouse": "serra",
       "stored": "di conserva"
+    },
+    "table": {
+      "heading": "Tutto l'anno, e dove sei tu dentro",
+      "note": "Ogni denominazione con un documento che nomina {{place}}. Ogni colonna è un mese, diviso nelle sue due metà; la linea segna la quindicina che hai scelto.",
+      "productHeader": "Denominazione",
+      "firstHalf": "prima metà",
+      "secondHalf": "seconda metà"
     },
     "s1": {
       "heading": "Come decide",
@@ -554,8 +551,6 @@
     },
     "states": {
       "noPlace": "Scegli una provincia e l'elenco si riempie. Il mese è già su questa quindicina.",
-      "noPicking": "In provincia di {{place}} in questa quindicina non si raccoglie niente di quello che c'è in elenco. Succede: è la risposta, non un buco.",
-      "noStored": "Niente di conserva qui in questa quindicina.",
       "nothing": "Nessuna denominazione dell'elenco nomina {{place}}. La maggior parte delle province non ne ha una: è un buco nei documenti, non un giudizio su cosa cresce lì."
     },
     "metaTitle": "Seasonable — davvero di stagione, vicino a te — Walter",

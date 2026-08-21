@@ -169,102 +169,100 @@ export function CrateThumb() {
 }
 
 /**
- * Seasonable — the year strip, which is the page's signature and now the
+ * Seasonable — the season table, which is the page's signature and now the
  * card's too.
  *
- * Four rows, each the whole year in twenty-four half-month segments, and one
- * vertical line cutting through all of them at the selected fortnight. The
- * page's `YearStrip` reasoning transfers intact, including the part that
- * matters most: the three window kinds are three *geometries*, not three
- * colours — solid full height for open field, a third-height bar for stored,
- * a hairline for the year itself. Print it in greyscale and every row still
- * parses, which is what satisfies SC 1.4.1 rather than a legend claiming to.
+ * It drew the year as four horizontal strips for one iteration, because that
+ * is what the page drew. The page stopped: a strip shows the *shape* of a
+ * window and carries no axis, so a reader can see that something ends two
+ * thirds of the way along and still not know whether that means August or
+ * September. The answer there is now a double-entry table — a designation per
+ * row, a month per column — and the thumbnail follows it rather than
+ * preserving a figure the destination no longer has.
  *
- * The third row wraps the year end to start, because a real window does
- * (`aglio-polesano` runs July to the following June) and a thumbnail that
- * only ever showed contiguous blocks would be quietly lying about the shape
- * of the data.
+ * Four rows, twelve month columns, each column split into its two fortnights,
+ * and one accent rule down the column the reader is standing in. The left
+ * block stands in for the designation column: real names would be four
+ * unreadable words at this size, and four bars say "this axis is labelled"
+ * without pretending to be legible.
+ *
+ * The three kinds stay three geometries — full-height for open field, a low
+ * bar for storage. Row three wraps the year end to start, because a real
+ * window does (Aglio Bianco Polesano runs July to the following June) and a
+ * thumbnail that only ever showed contiguous blocks would be quietly lying
+ * about the shape of the data.
  */
-const SEGMENTS = 24;
-const STRIP_X = 18;
-const STRIP_W = 324;
-const SEG = STRIP_W / SEGMENTS;
+const GRID_X = 116;
+const COL_W = 19.2;
+const CELL_PAD = 1.4;
+const HALF_W = (COL_W - CELL_PAD * 2 - 1) / 2;
+const ROW_Y = [50, 74, 98, 122];
+const NAME_W = [88, 70, 82, 60];
 
 /** [from, to] inclusive; from > to wraps the year, exactly as `covers()` reads it. */
 const ROWS: readonly { span: readonly [number, number]; stored?: boolean }[] = [
-  { span: [3, 11] },
-  { span: [8, 17] },
-  { span: [20, 5] },
-  { span: [1, 14], stored: true },
+  { span: [4, 12] },
+  { span: [9, 18] },
+  { span: [21, 6] },
+  { span: [2, 15], stored: true },
 ];
 const NOW = 9;
 
-/**
- * A window as one rect per contiguous run, never one per half-month.
- *
- * The page's `YearStrip` gets away with twenty-four sibling elements because
- * flexbox lays them out on whole pixels. In SVG each segment lands on a
- * fractional x, and the rasteriser leaves a hairline of ground between every
- * pair — which turned a solid nine-month window into something that read as
- * dashed. A wrapping window is the only case that yields two runs.
- */
-function runs([from, to]: readonly [number, number]): [number, number][] {
-  return from <= to
-    ? [[from, to - from + 1]]
-    : [
-        [from, SEGMENTS - from],
-        [0, to + 1],
-      ];
-}
-
 export function SeasonableThumb() {
+  const covers = ([from, to]: readonly [number, number], h: number) =>
+    from <= to ? h >= from && h <= to : h >= from || h <= to;
+
+  const halfX = (h: number) =>
+    GRID_X + Math.floor(h / 2) * COL_W + CELL_PAD + (h % 2 === 1 ? HALF_W + 1 : 0);
+
   return (
     <svg {...BOX} className={FILL} aria-hidden="true" fill="none">
-      {ROWS.map((row, rowIndex) => {
-        const y = 28 + rowIndex * 31;
-        return (
-          <g key={rowIndex}>
-            {/* The track: the whole year is always visible, whether or not
-                anything is growing in it. */}
-            <rect
-              x={STRIP_X}
-              y={y + 11}
-              width={STRIP_W}
-              height="1.5"
-              fill="var(--project-food-accent)"
-            />
-            {runs(row.span).map(([from, count], i) => (
-              <rect
-                key={i}
-                x={STRIP_X + from * SEG}
-                y={row.stored ? y + 8 : y}
-                width={count * SEG}
-                height={row.stored ? 4.5 : 12.5}
-                fill={row.stored ? 'var(--project-food-meta)' : 'var(--project-food-fg)'}
-              />
-            ))}
-          </g>
-        );
-      })}
+      {/* The month axis, abstracted to twelve ticks. */}
+      {Array.from({ length: 12 }, (_, m) => (
+        <rect
+          key={m}
+          x={GRID_X + m * COL_W + CELL_PAD}
+          y="28"
+          width={COL_W - CELL_PAD * 2}
+          height="3"
+          rx="1.5"
+          fill="var(--project-food-accent)"
+        />
+      ))}
 
-      {/* Now. An inked core with a well-coloured edge either side, because a
-          plain rule disappears exactly where it crosses a filled segment —
-          the measurement that produced this construction is recorded at
-          SeasonablePage.tsx's YearStrip. */}
-      <rect
-        x={STRIP_X + (NOW + 0.5) * SEG - 3}
-        y="18"
-        width="6"
-        height="120"
-        fill="var(--project-food-thumb)"
-      />
-      <rect
-        x={STRIP_X + (NOW + 0.5) * SEG - 1}
-        y="18"
-        width="2"
-        height="120"
-        fill="var(--project-food-fg)"
-      />
+      {/* The designation column: four bars, not four unreadable words. */}
+      {ROW_Y.map((y, i) => (
+        <rect
+          key={i}
+          x="16"
+          y={y - 3}
+          width={NAME_W[i]}
+          height="6"
+          rx="3"
+          fill="var(--project-food-accent)"
+        />
+      ))}
+
+      {ROWS.map((row, i) =>
+        Array.from({ length: 24 }, (_, h) =>
+          covers(row.span, h) ? (
+            <rect
+              key={`${i}-${h}`}
+              x={halfX(h)}
+              y={row.stored ? ROW_Y[i] + 2 : ROW_Y[i] - 7}
+              width={HALF_W}
+              height={row.stored ? 4 : 14}
+              rx="1"
+              fill={row.stored ? 'var(--project-food-meta)' : 'var(--project-food-fg)'}
+            />
+          ) : null,
+        ),
+      )}
+
+      {/* Where you are standing. One rule down every row, at the left edge of
+          the selected fortnight — an axis, never a cell that could be mistaken
+          for a window. */}
+      <rect x={halfX(NOW) - 1} y="22" width="2" height="114" fill="var(--accent)" />
     </svg>
   );
 }
