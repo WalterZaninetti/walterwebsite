@@ -16,6 +16,20 @@
  * states one separately from harvest — Aglio Bianco Polesano is picked in
  * summer and may be sold until the following June, which is a fact about
  * storage that the disciplinare states outright rather than one we inferred.
+ *
+ * **Where a document gives a calendar per variety, the window is the union of
+ * all of them**, and the comment quotes all of them. A designation is one
+ * thing to the reader — you buy Ciliegia di Vignola, not the early varieties
+ * of it — so a row that carries one variety's dates under the designation's
+ * name is not a narrower truth, it is a false one.
+ *
+ * This rule is written here because leaving it unwritten cost four rows.
+ * Vignola quoted only `varieta' precoci` and closed a month early; Mela di
+ * Valtellina omitted Gala from both its harvest and its storage window; Mela
+ * Rossa Cuneo carried Gala's commercialisation dates while Braeburn and Fuji
+ * run two months longer. Every one of them under-reported, and none of them
+ * looked wrong — the quoted sentence was accurate, it just was not the whole
+ * sentence.
  */
 
 import type { Window } from '../../lib/seasonable';
@@ -43,8 +57,10 @@ export const windows: readonly Window[] = [
   w('ciliegia-bracigliano', ['sa', 'av'], 'open-field', 8, 13, 'ciliegia-bracigliano'),
   // "compreso tra il mese di maggio e quello di luglio"
   w('ciliegia-lari', ['pi'], 'open-field', 8, 13, 'ciliegia-lari'),
-  // "Le varieta' precoci vengono raccolte dal 1° maggio al 30 giugno"
-  w('ciliegia-vignola', ['mo', 'bo'], 'open-field', 8, 11, 'ciliegia-vignola'),
+  // "Le varieta' precoci vengono raccolte dal 1° maggio al 30 giugno; le
+  //  varieta' medie dal 15 maggio al 15 luglio e le tardive dal 25 maggio al
+  //  30 luglio"
+  w('ciliegia-vignola', ['mo', 'bo'], 'open-field', 8, 13, 'ciliegia-vignola'),
   // "nel periodo compreso fra il 10 agosto ed il 10 ottobre"
   w('fichi-cosenza', ['cs'], 'open-field', 14, 18, 'fichi-cosenza'),
   // "compreso tra il mese di novembre e quello di giugno"
@@ -55,14 +71,18 @@ export const windows: readonly Window[] = [
   w('limone-sorrento', ['na'], 'open-field', 2, 19, 'limone-sorrento'),
   // "avviene manualmente dal 15 Settembre al 15 Novembre"
   w('marroni-monfenera', ['tv'], 'open-field', 16, 20, 'marroni-monfenera'),
-  // "Gala da inizio agosto a fine maggio" — a commercialisation window, i.e. storage
-  w('mela-rossa-cuneo', ['cn', 'to'], 'stored', 14, 9, 'mela-rossa-cuneo'),
+  // "Gala da inizio agosto a fine maggio; Red Delicious da inizio settembre a
+  //  fine giugno; Braeburn da fine settembre a fine luglio; Fuji da inizio
+  //  ottobre a fine luglio" — a commercialisation window, i.e. storage
+  w('mela-rossa-cuneo', ['cn', 'to'], 'stored', 14, 13, 'mela-rossa-cuneo'),
   // "Red Delicious: seconda decade di settembre-seconda decade di ottobre;
-  //  Golden Delicious: seconda decade di settembre-fine ottobre"
-  w('mela-valtellina', ['so'], 'open-field', 17, 19, 'mela-valtellina'),
-  // "il periodo di conservazione ... si conclude entro la fine del mese di
-  //  agosto dell'anno successivo per le varieta' Red Delicious e Golden Delicious"
-  w('mela-valtellina', ['so'], 'stored', 19, 15, 'mela-valtellina'),
+  //  Golden Delicious: seconda decade di settembre-fine ottobre; Gala: seconda
+  //  decade di agosto-seconda decade di settembre"
+  w('mela-valtellina', ['so'], 'open-field', 15, 19, 'mela-valtellina'),
+  // "Red Delicious dalla raccolta a fine luglio dell'anno successivo; Golden
+  //  Delicious dalla raccolta a fine agosto dell'anno successivo; Gala dalla
+  //  raccolta a fine aprile dell'anno successivo"
+  w('mela-valtellina', ['so'], 'stored', 17, 15, 'mela-valtellina'),
   // "epoca di maturazione: va dal 25 maggio ... al 10 ottobre per le varieta' tardive"
   w('pesca-delia', ['cl', 'ag'], 'open-field', 9, 18, 'pesca-delia'),
   // "a partire dalla prima decade di agosto fino alla prima decade di novembre"

@@ -34,7 +34,7 @@ const D = 'https://www.disciplinare.it';
 
 export const sources: readonly Source[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
-  src('albicocca-vesuviana', 'Albicocca Vesuviana — Domanda di registrazione e pubblicazione del disciplinare di produzione', `${D}/albicocca-vesuviana-dop-domanda-di-registrazione-e-pubblicazione-del-disciplinare-di-produzione.html`, 2026),
+  src('albicocca-vesuviana', 'Albicocca Vesuviana DOP — Domanda di registrazione e pubblicazione del disciplinare di produzione', `${D}/albicocca-vesuviana-dop-domanda-di-registrazione-e-pubblicazione-del-disciplinare-di-produzione.html`, 2026),
   src('castagna-cuneo', 'Castagna Cuneo IGP — Modifiche disciplinare di produzione 2023', `${D}/castagna-cuneo-igp-modifiche-disciplinare-di-produzione-2023.html`, 2023),
   src('castagna-monte-amiata', 'Castagna del Monte Amiata IGP — Domanda di modifica del disciplinare 2026', `${D}/castagna-del-monte-amiata-igp-domanda-di-modifica-del-disciplinare-2026.html`, 2026),
   src('castagna-vallerano', 'Castagna di Vallerano DOP', `${D}/castagna-di-vallerano-dop-disciplinare-di-produzione.html`, 2020),

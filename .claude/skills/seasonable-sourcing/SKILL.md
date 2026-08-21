@@ -32,6 +32,16 @@ These are not preferences. A change that breaks one of them does not ship.
    widen it, do not fall back to a national figure to keep the product on the list.
 7. **Record `accessed`.** These URLs rot — MASAF's national calendar is already a 404. Every
    source carries the ISO date it was last opened.
+8. **Read the whole sentence, and take the union across varieties.** Where a disciplinare
+   gives a calendar per variety or per tipologia, the window spans the earliest start to the
+   latest end, and the comment quotes every clause. A designation is one thing to the reader —
+   you buy Ciliegia di Vignola, not the early varieties of it — so a row carrying one
+   variety's dates under the designation's name is not a narrower truth, it is a false one.
+   This is the failure mode that survives every other check on this list: the quote is
+   accurate, the conversion is correct, and the row is still wrong, because the sentence
+   continued after the semicolon. Four rows shipped that way before anyone re-read the
+   sources. When a quote contains `precoci`, `medie`, `tardive`, `tipologia`, a variety name,
+   or a semicolon, assume there is more of it.
 
 ## Where the documents are
 

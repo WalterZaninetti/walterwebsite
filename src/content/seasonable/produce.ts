@@ -29,7 +29,7 @@ const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, i
 
 export const produce: readonly Produce[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
-  fruit('albicocca-vesuviana', 'Albicocca Vesuviana', 'IGP', 'apricot', 'albicocca'),
+  fruit('albicocca-vesuviana', 'Albicocca Vesuviana', 'DOP', 'apricot', 'albicocca'),
   fruit('castagna-cuneo', 'Castagna Cuneo', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-monte-amiata', 'Castagna del Monte Amiata', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-vallerano', 'Castagna di Vallerano', 'DOP', 'chestnut', 'castagna'),
