@@ -348,34 +348,50 @@
      that a second rung would be a token nobody could tell apart. */
   --project-dj-wave: #4a6fa5;       /* 3.37:1 on the light band, 3.57:1 on the dark */
 
-  /* Brightened exactly one step. The card carries its hierarchy in opacity
-     where the other two carry theirs in hue (theme.css:273-277), and that
-     ladder is the constraint: at #8f4820 the .75 rung drops to 4.34:1 and
-     breaks. At #87441f the three alphas read 5.73 / 5.01 / 4.64 unchanged. */
-  --project-food: #87441f;
-  --project-food-fg: #fff6ee;                    /* 6.84:1 */
-  --project-food-accent: rgb(255 246 238 / 0.75);/* 4.64:1 */
-  --project-food-body: rgb(255 246 238 / 0.88);  /* 5.73:1 */
-  --project-food-meta: rgb(255 246 238 / 0.8);   /* 5.01:1 */
-  --project-food-hatch: rgb(255 246 238 / 0.2);
-  --project-food-thumb-fg: #fff6ee;
-  --project-food-border: transparent;
-  --project-food-seam: #87441f;
-  --project-food-shadow: 0 16px 34px rgb(135 68 31 / 0.3);
+  /* Repainted from terracotta to a pale leaf green, and with it the ladder
+     turns over: this is the one world whose ground is lighter than the canvas
+     it sits on, so the rungs are alphas of a deep green ink rather than of
+     cream. Every value here holds hue 138 — one hue for the whole food world,
+     a step yellower than the site's chrome green (h≈153) so the page reads as
+     its own place without leaving the family.
+
+     Two consequences worth naming, both measured rather than assumed:
+
+     -border stops being transparent. A pale band sits 1.26:1 from the cream
+     canvas, so hue cannot draw that edge and the band would bleed into the
+     header above it. It is a solid line at 3.39:1 rather than an alpha,
+     because an alpha of this ink tops out at 2.31:1 on canvas and cannot
+     reach the 3:1 boundary floor however far it is pushed.
+
+     -seam is no longer the band's own value. It was #87441f twice, which
+     worked while the band was dark; a pale seam on a cream canvas is not a
+     seam. It takes the deep green instead and reads 7.16 on canvas, 5.65 on
+     the band — visible from both sides, which is the seam's whole job. */
+  --project-food: #c8eabd;
+  --project-food-fg: #153209;                    /* 10.69:1 */
+  --project-food-accent: rgb(21 50 9 / 0.75);    /*  5.39:1 */
+  --project-food-body: rgb(21 50 9 / 0.88);      /*  7.80:1 */
+  --project-food-meta: rgb(21 50 9 / 0.8);       /*  6.19:1 */
+  --project-food-hatch: rgb(21 50 9 / 0.2);
+  --project-food-thumb-fg: #153209;
+  --project-food-border: #6e9262;                /*  3.39:1 vs canvas */
+  --project-food-seam: #31601e;                  /*  7.16 canvas · 5.65 band */
+  --project-food-shadow: 0 16px 34px rgb(49 96 30 / 0.26);
   /* Seasonable's data marks. Unlike the rungs above, these are authored
      against --canvas, not against the band — the same carve-out Crate's marks
      take (theme.css:334). They paint the year strip's segments, so the target
      is 3:1 (WCAG 1.4.11), and no segment encodes its meaning by colour alone:
      the three window kinds are three geometries — solid, hatched, and a
      third-height bar — which survive a greyscale print.
-     -mark is --project-food itself here. The band's own terracotta happens to
-     measure 7.03:1 on canvas, so light needs no second value and the token
-     exists to name the on-canvas role; dark is where it earns its keep.
-     -quiet holds hue 47.12 and chroma 0.1042 and moves only lightness, so it
-     is this terracotta dimmed rather than a second colour standing near it.
-     It has no headroom: 3.10 against a 3:1 floor. Darkening --canvas breaks it. */
-  --project-food-mark: #87441f;       /* 7.03:1 vs canvas */
-  --project-food-mark-quiet: #c67e59; /* 3.10:1 vs canvas */
+     -mark can no longer be --project-food itself. That shortcut was only ever
+     available because the old band was dark enough to double as an on-canvas
+     mark; the pale green measures 1.26:1 there and would draw nothing. Both
+     rungs are now solved at the world's hue 138, moving lightness only, so
+     the strip is this green light and dark rather than two colours standing
+     near each other. -quiet gains headroom in the move: 3.21 against a 3:1
+     floor where the terracotta had 3.10. */
+  --project-food-mark: #32611f;       /* 7.05:1 vs canvas */
+  --project-food-mark-quiet: #689956; /* 3.21:1 vs canvas */
 
   --hero-glow: none;
 
@@ -627,28 +643,33 @@
   --project-dj-mark-quiet: #2f6a97; /* 3.19:1 vs canvas */
   --project-dj-wave: #4a6fa5;       /* 3.57:1 on the dark band */
 
-  /* Food still does not invert (theme.css:473-479). The reason survives the
-     repaint intact: it is the only card that ever flipped to a light ground,
-     and its opacity ladder needed alpha >=0.83 to clear AA when it did. Held
-     here byte-identical to light — 6.84 / 5.73 / 5.01 / 4.64 in both
-     schemes, the one world where the numbers are literally the same twice. */
-  --project-food: #87441f;
-  --project-food-fg: #fff6ee;
-  --project-food-thumb-fg: #fff6ee;
-  --project-food-accent: rgb(255 246 238 / 0.75);
-  --project-food-body: rgb(255 246 238 / 0.88);
-  --project-food-meta: rgb(255 246 238 / 0.8);
-  --project-food-hatch: rgb(255 246 238 / 0.18);
-  --project-food-border: rgb(255 246 238 / 0.22);/* 4.16:1 vs canvas */
-  --project-food-seam: #e6b493;                  /* 9.95 vs canvas · 3.93 vs band */
+  /* Food inverts here, and that is a reversal of the old rule rather than an
+     oversight of it. "Food does not invert" was written when the band was a
+     mid-dark terracotta that sat comfortably on either canvas; the pale green
+     that replaced it does not. Held byte-identical, it would make this one
+     card the brightest object on the entire dark site — a lit slab beside
+     Magic's deep crimson and Crate's navy, which is not a world holding its
+     identity but a world shouting over its neighbours.
+
+     So the ground goes deep and the ink goes pale, and the light scheme's one
+     real relationship is what carries over: ground and ink are the same hue
+     138, and the reader still meets a green place. The ladder reads
+     11.80 / 9.51 / 8.17 / 7.36 — every rung higher than light's, because a
+     deep ground is the easier of the two to write on. */
+  --project-food: #1d3515;
+  --project-food-fg: #e7f5e3;                    /* 11.80:1 */
+  --project-food-thumb-fg: #e7f5e3;
+  --project-food-accent: rgb(231 245 227 / 0.75);/*  7.36:1 */
+  --project-food-body: rgb(231 245 227 / 0.88);  /*  9.51:1 */
+  --project-food-meta: rgb(231 245 227 / 0.8);   /*  8.17:1 */
+  --project-food-hatch: rgb(231 245 227 / 0.18);
+  --project-food-border: rgb(231 245 227 / 0.45);/*  4.14:1 vs canvas, composited */
+  --project-food-seam: #a1cc93;                  /* 10.18 canvas · 7.36 band */
   --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
-  /* The world does not invert, but a mark on the dark canvas must: #87441f
-     measures 2.53:1 on #101510 and fails even the 3:1 graphic floor. -mark
-     lifts to the value --project-food-seam already carries in dark, which ties
-     the strip to the seam directly above it. -quiet holds hue 54.85 and chroma
-     0.0734 and moves lightness only. */
-  --project-food-mark: #e6b493;       /* 9.95:1 vs canvas */
-  --project-food-mark-quiet: #8a5d3f; /* 3.27:1 vs canvas */
+  /* Both rungs solved at the world's hue 138 against the dark canvas, moving
+     lightness only — the same two roles as light, re-measured not re-picked. */
+  --project-food-mark: #97c188;       /* 9.06:1 vs canvas */
+  --project-food-mark-quiet: #4b723d; /* 3.31:1 vs canvas */
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,

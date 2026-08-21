@@ -20,7 +20,15 @@ import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { SkipLink } from '../ui/SkipLink';
 import { Tile } from '../ui/Tile';
-import { ArrowLeftIcon, LeafIcon, MoonIcon, SunIcon } from '../ui/icons';
+import {
+  ArrowLeftIcon,
+  LeafIcon,
+  MoonIcon,
+  NoteIcon,
+  PinIcon,
+  SunIcon,
+  ThermometerIcon,
+} from '../ui/icons';
 import { IconButton, ThemeSwitch } from '../SiteHeader';
 import { SiteFooter } from '../SiteFooter';
 import { cx } from '../ui/cx';
@@ -41,9 +49,12 @@ import { cx } from '../ui/cx';
  * data marks (theme.css:334), and this follows it rather than inventing a
  * second mechanism.
  *
- * The two pickers live in the band and the answer lives on the canvas: input in
- * the world, output on the page. That also keeps the band to one job and the
- * page to one CTA, which is the `mailto:` at the foot.
+ * The band used to hold the two pickers. It doesn't: the tool has its own
+ * container on canvas now, directly under the seam and directly above the
+ * answer it produces. Input and output are one object read top to bottom, and
+ * the band is left doing the single job a band is good at — saying what this
+ * is to someone who has never seen it. The page still has one CTA, the
+ * `mailto:` at the foot.
  */
 export function SeasonablePage() {
   const { t, i18n } = useTranslation();
@@ -72,7 +83,9 @@ export function SeasonablePage() {
       <SkipLink />
       <PageHeader />
       <main id="main">
-        <Band
+        <Band />
+
+        <Console
           province={province}
           half={half}
           locale={locale}
@@ -82,9 +95,10 @@ export function SeasonablePage() {
 
         <Answer province={province} half={half} locale={locale} />
 
+        <Sections />
+
         <div className="bg-canvas px-5 pb-12 md:px-13 md:pb-16">
           <div className="max-w-[62ch]">
-            <Sections />
             <Ask province={province} half={half} locale={locale} />
             <BackLink />
           </div>
@@ -165,7 +179,7 @@ function PageHeader() {
   );
 }
 
-type BandProps = {
+type ConsoleProps = {
   province: string | null;
   half: HalfMonth;
   locale: 'en' | 'it';
@@ -174,19 +188,21 @@ type BandProps = {
 };
 
 /**
- * The one full-bleed world block, and the two fields inside it.
+ * The one full-bleed world block, and nothing else in it.
  *
- * The pickers sit here rather than under the seam because the deck and the
- * controls are one move: the situation is named in two sentences and the
- * reader is handed the tool in the same breath. That is what serves the
- * unaware first-timer and the person standing in a shop on one screen.
+ * It carries the eyebrow, the name and the deck — the argument, for a reader
+ * who has never seen this page. The tool used to be in here too, which made
+ * the band do two jobs and made the fields inherit a ground they had to fight:
+ * a `<select>` on a coloured slab has to re-state its own border, its own
+ * focus ring and its own text colour, and every one of those was a token that
+ * existed only because the field was in the wrong place.
  */
-function Band({ province, half, locale, onProvince, onHalf }: BandProps) {
+function Band() {
   const { t } = useTranslation();
 
   return (
     <>
-      <div className="border-t border-project-food-border bg-project-food px-5 pt-12 pb-9 text-project-food-fg md:px-10 md:pt-16 md:pb-11">
+      <div className="border-t border-project-food-border bg-project-food px-5 pt-12 pb-12 text-project-food-fg md:px-10 md:pt-16 md:pb-14">
         <Eyebrow className="mb-3 tracking-[0.16em] text-project-food-accent md:tracking-[0.18em]">
           {t('seasonable.eyebrow')}
         </Eyebrow>
@@ -197,42 +213,55 @@ function Band({ province, half, locale, onProvince, onHalf }: BandProps) {
           <span className="lg:hidden">{t('seasonable.deckShort')}</span>
           <span className="hidden lg:inline">{t('seasonable.deck')}</span>
         </p>
-
-        <Pickers
-          province={province}
-          half={half}
-          locale={locale}
-          onProvince={onProvince}
-          onHalf={onHalf}
-        />
       </div>
       <div className="relative">
         <span aria-hidden="true" className="block h-[3px] bg-project-food-seam" />
-        {/* The site's clover stamp, not the world's terracotta — the same
-            sticker sits on all three shelf cards over three different grounds,
-            and that is what ties the worlds together. */}
+        {/* The site's clover stamp, not the world's green — the same sticker
+            sits on all three shelf cards over three different grounds, and
+            that is what ties the worlds together. It stays the site's clover
+            now that the world is green too, which is the one case where
+            holding the rule costs something: stamp and ground are neighbours
+            in hue rather than opposites. The tile's own ring is what keeps
+            them apart. */}
         <Tile icon={LeafIcon} className="absolute top-1/2 left-5 -translate-y-1/2 md:left-10" />
       </div>
     </>
   );
 }
 
+/**
+ * The field sits on `--canvas` inside a `--surface` card rather than on the
+ * card itself, and that is a measurement rather than a preference: the border
+ * has to clear SC 1.4.11's 3:1, and `--project-food-mark-quiet` reads 2.99:1
+ * on the dark surface against 3.31:1 on the dark canvas. One hundredth, and
+ * the fix is free — a cream well inset in a white card is what an input is
+ * supposed to look like anyway.
+ */
 const FIELD_CLASS =
-  'w-full appearance-none rounded-[3px] border border-project-food-accent bg-transparent px-3 py-2.5 font-mono text-note-sm text-project-food-fg ' +
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-project-food-fg';
+  'w-full appearance-none rounded-[3px] border border-project-food-mark-quiet bg-canvas px-3.5 py-3 font-mono text-note-sm text-ink-strong ' +
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
 
 /**
- * Two native selects, and no submit button.
+ * The tool, in a container of its own — on canvas, under the seam, directly
+ * above the answer it produces.
  *
- * `brief.md` wanted the answer to recompute as the fields change, which is the
- * truest reading of "two fields and a short list back" — and it leaves the page
- * with exactly one call to action, the `mailto:` at the foot.
+ * It used to live in the band. Two things were wrong with that. The fields had
+ * to fight a coloured ground, re-stating border, focus ring and text colour in
+ * world tokens that existed for no other reason; and the band was doing two
+ * jobs at once, pitching the page to someone who had never seen it while also
+ * being the control surface for someone who had. Here the controls read as one
+ * object with the list they fill in, and the band goes back to one job.
+ *
+ * No submit button. `brief.md` wanted the answer to recompute as the fields
+ * change, which is the truest reading of "two fields and a short list back" —
+ * and it leaves the page with exactly one call to action, the `mailto:` at the
+ * foot.
  *
  * Native `<select>` rather than a custom listbox: 107 provinces is exactly the
  * length where a phone's own wheel picker beats anything reimplemented, and it
  * arrives keyboard-operable, screen-reader-labelled and zoom-safe for free.
  */
-function Pickers({ province, half, locale, onProvince, onHalf }: BandProps) {
+function Console({ province, half, locale, onProvince, onHalf }: ConsoleProps) {
   const { t } = useTranslation();
 
   // Sorted in the reading language, though the names themselves are Italian:
@@ -267,57 +296,63 @@ function Pickers({ province, half, locale, onProvince, onHalf }: BandProps) {
   }, [locale, t]);
 
   return (
-    <div className="mt-9 grid max-w-[36rem] gap-4 sm:grid-cols-2 md:mt-11">
-      <div>
-        <label
-          htmlFor="seasonable-place"
-          className="mb-2 block font-mono text-label-wide uppercase text-project-food-meta"
-        >
-          {t('seasonable.picker.placeLabel')}
-        </label>
-        <select
-          id="seasonable-place"
-          className={FIELD_CLASS}
-          value={province ?? ''}
-          onChange={(event) => onProvince(event.target.value || null)}
-        >
-          <option value="">{t('seasonable.picker.placePlaceholder')}</option>
-          <optgroup label={t('seasonable.picker.groupAnswering')}>
-            {answering.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.name}
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label={t('seasonable.picker.groupSilent')}>
-            {silent.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.name}
-              </option>
-            ))}
-          </optgroup>
-        </select>
-      </div>
+    // pt-10 clears the tile straddling the seam above, whose lower half
+    // overhangs 24px. Anything tighter and the sticker lands on the card.
+    <div className="bg-canvas px-5 pt-10 md:px-13 md:pt-12">
+      <div className="rounded-card border border-line-card bg-surface px-5 py-6 md:px-7 md:py-7">
+        <div className="grid max-w-[42rem] gap-4 sm:grid-cols-2">
+          <div>
+            <label
+              htmlFor="seasonable-place"
+              className="mb-2 block font-mono text-label-wide uppercase text-ink-muted"
+            >
+              {t('seasonable.picker.placeLabel')}
+            </label>
+            <select
+              id="seasonable-place"
+              className={FIELD_CLASS}
+              value={province ?? ''}
+              onChange={(event) => onProvince(event.target.value || null)}
+            >
+              <option value="">{t('seasonable.picker.placePlaceholder')}</option>
+              <optgroup label={t('seasonable.picker.groupAnswering')}>
+                {answering.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label={t('seasonable.picker.groupSilent')}>
+                {silent.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name}
+                  </option>
+                ))}
+              </optgroup>
+            </select>
+          </div>
 
-      <div>
-        <label
-          htmlFor="seasonable-when"
-          className="mb-2 block font-mono text-label-wide uppercase text-project-food-meta"
-        >
-          {t('seasonable.picker.whenLabel')}
-        </label>
-        <select
-          id="seasonable-when"
-          className={FIELD_CLASS}
-          value={half}
-          onChange={(event) => onHalf(Number(event.target.value))}
-        >
-          {halves.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+          <div>
+            <label
+              htmlFor="seasonable-when"
+              className="mb-2 block font-mono text-label-wide uppercase text-ink-muted"
+            >
+              {t('seasonable.picker.whenLabel')}
+            </label>
+            <select
+              id="seasonable-when"
+              className={FIELD_CLASS}
+              value={half}
+              onChange={(event) => onHalf(Number(event.target.value))}
+            >
+              {halves.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -610,35 +645,57 @@ function YearStrip({ entries, half }: { entries: readonly Entry[]; half: HalfMon
   );
 }
 
-const SECTION_KEYS = ['s1', 's2', 's3'] as const;
-
 /**
- * The three prose sections, on plain canvas with `--accent` numerals — never
- * the world (direction.md §3.3). They sit below the answer rather than above
- * it: this is a tool page with prose, not a prose page with a tool in it.
+ * Three arguments, one card each — Crate's opening cards in the same shape,
+ * down to the punched `Tile` and the `--accent` numeral over a hairline
+ * (`DjToolsPage.tsx:231`). They were three stacked paragraphs in a 62ch
+ * column, which on a desktop page put the entire case for the tool in the
+ * left third and made the reader scroll past all of it.
+ *
+ * The tiles keep the site's clover rather than taking the world's green, the
+ * same way Crate's do over navy. That rule is cheapest to follow where the
+ * card is neutral, which is here: these sit on `--surface`, not on the band.
+ *
+ * The three glyphs are the three arguments and not decoration — a pin for the
+ * province the answer is scoped to, a thermometer for the weather no
+ * document knows about, a sheet for the disciplinare every date is quoted
+ * from. Still below the answer rather than above it: this is a tool page with
+ * prose, not a prose page with a tool in it.
  */
+const SECTION_CARDS = [
+  { key: 's1', icon: PinIcon },
+  { key: 's2', icon: ThermometerIcon },
+  { key: 's3', icon: NoteIcon },
+] as const;
+
 function Sections() {
   const { t } = useTranslation();
 
   return (
-    <>
-      {SECTION_KEYS.map((key, index) => (
-        <section key={key} className="mb-10 md:mb-12">
-          <div className="mb-4 flex items-center gap-3 md:mb-5">
-            <span className="font-mono text-label text-accent">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <span aria-hidden="true" className="h-px w-8 bg-accent" />
-          </div>
-          <h2 className="mb-3 font-display text-section-sm text-ink-strong md:mb-4 md:text-section">
-            {t(`seasonable.${key}.heading`)}
-          </h2>
-          <p className="text-note text-ink-body text-pretty md:text-body">
-            {t(`seasonable.${key}.body`)}
-          </p>
-        </section>
-      ))}
-    </>
+    <div className="bg-canvas px-5 pt-14 pb-12 md:px-13 md:pt-16 md:pb-16">
+      <ul className="grid list-none gap-y-14 lg:grid-cols-3 lg:gap-x-8">
+        {SECTION_CARDS.map((card, index) => (
+          <li
+            key={card.key}
+            className="relative rounded-card border border-line-card bg-surface px-6 pt-11 pb-7 md:px-7 md:pt-12 md:pb-8"
+          >
+            <Tile icon={card.icon} className="absolute -top-6 left-6 md:left-7 lg:-top-7" />
+            <div className="mb-3 flex items-center gap-3 md:mb-4">
+              <span className="font-mono text-label text-accent">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span aria-hidden="true" className="h-px w-8 bg-accent" />
+            </div>
+            <h2 className="mb-3 font-display text-section-sm text-ink-strong text-balance md:mb-4">
+              {t(`seasonable.${card.key}.heading`)}
+            </h2>
+            <p className="text-note text-ink-body text-pretty">
+              {t(`seasonable.${card.key}.body`)}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

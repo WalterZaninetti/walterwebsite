@@ -12,7 +12,7 @@
  *   Lucide — ISC — https://lucide.dev
  *     raw.githubusercontent.com/lucide-icons/lucide/main/icons/<slug>.svg
  *     gallery-vertical-end · disc-3 · leaf · library-big · audio-lines · coffee
- *     file-text · sun · moon · menu · x
+ *     file-text · sun · moon · menu · x · map-pin · thermometer
  *
  *   Simple Icons — CC0 — https://simpleicons.org
  *     raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/<slug>.svg
@@ -242,6 +242,34 @@ export function NoteIcon({ className }: GlyphProps = {}) {
       <path d="M10 9H8" />
       <path d="M16 13H8" />
       <path d="M16 17H8" />
+    </svg>
+  );
+}
+
+/**
+ * Seasonable's first card — a province is a place, and this is the only glyph
+ * in the set that says place. Lucide `map-pin`.
+ */
+export function PinIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+/**
+ * Seasonable's second card, which is about the weather the documents cannot
+ * know: "a cold spring or a hot September moves the real thing by two weeks".
+ * Lucide `thermometer`. Not `sun` — that glyph is the theme switch two rows
+ * up in the same header, and one shape cannot mean both "make the page light"
+ * and "this year was warm".
+ */
+export function ThermometerIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
     </svg>
   );
 }
