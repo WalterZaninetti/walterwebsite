@@ -2,12 +2,20 @@
   "spotify": {
     "items": [
       {
+        "id": "67NImHjgCswKowEhdKvlhO",
+        "title": "Social Assassin - Iñigo Vontier & Dan Solo Remix",
+        "artist": "Thomass Jackson, Iñigo Vontier,Dan Solo",
+        "url": "https://open.spotify.com/track/67NImHjgCswKowEhdKvlhO",
+        "at": "2026-08-20T17:53:37.037Z",
+        "art": "/images/music/spotify-0.webp"
+      },
+      {
         "id": "0mwr3py9MZIOdvOrI31h6r",
         "title": "California Girls",
         "artist": "The Beach Boys",
         "url": "https://open.spotify.com/track/0mwr3py9MZIOdvOrI31h6r",
         "at": "2026-08-19T19:17:54.999Z",
-        "art": "/images/music/spotify-0.webp"
+        "art": "/images/music/spotify-1.webp"
       },
       {
         "id": "5byzjMoXFXYJkDzyAvTjOW",
@@ -15,7 +23,7 @@
         "artist": "1 44 9 8, DJ Lil Cut, BBoy Enea, More Groove",
         "url": "https://open.spotify.com/track/5byzjMoXFXYJkDzyAvTjOW",
         "at": "2026-08-19T13:54:24.161Z",
-        "art": "/images/music/spotify-1.webp"
+        "art": "/images/music/spotify-2.webp"
       },
       {
         "id": "0jWgAnTrNZmOGmqgvHhZEm",
@@ -23,7 +31,7 @@
         "artist": "4 Non Blondes",
         "url": "https://open.spotify.com/track/0jWgAnTrNZmOGmqgvHhZEm",
         "at": "2026-08-19T13:47:38.584Z",
-        "art": "/images/music/spotify-2.webp"
+        "art": "/images/music/spotify-3.webp"
       },
       {
         "id": "1cK74IBdBXzuYHUrza85TO",
@@ -31,19 +39,11 @@
         "artist": "Thomass Jackson",
         "url": "https://open.spotify.com/track/1cK74IBdBXzuYHUrza85TO",
         "at": "2026-08-19T09:50:53.251Z",
-        "art": "/images/music/spotify-3.webp"
-      },
-      {
-        "id": "0gdmDP6xy3ZV7JNoHWAN9k",
-        "title": "Town Called Malice",
-        "artist": "The Jam",
-        "url": "https://open.spotify.com/track/0gdmDP6xy3ZV7JNoHWAN9k",
-        "at": "2026-08-19T09:43:35.846Z",
         "art": "/images/music/spotify-4.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-08-20T09:18:44.146Z"
+    "fetchedAt": "2026-08-21T14:59:35.857Z"
   },
   "bandcamp": {
     "items": [
