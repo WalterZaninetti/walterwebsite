@@ -115,10 +115,12 @@ function Download() {
           <span className="hidden lg:inline">{t('dj.download.body')}</span>
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
-          {/* A plain anchor with `download`: no click handler, so the in-app
-              router never sees it, and the attribute makes the browser save the
-              file even if the hosting header ever goes missing. */}
-          <AccentButton href="/crate.html" download="crate.html">
+          {/* `/crate`, not `/crate.html`: hosting has cleanUrls on, so the
+              .html path 301s here anyway. The `download` attribute names the
+              saved file, so the URL not carrying the extension costs nothing —
+              and a plain anchor with no click handler keeps the in-app router
+              out of it. */}
+          <AccentButton href="/crate" download="crate.html">
             {t('dj.download.cta')}
           </AccentButton>
           <span className="font-mono text-meta text-ink-muted">{t('dj.download.note')}</span>
