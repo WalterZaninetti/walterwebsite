@@ -156,3 +156,23 @@ export const openingCards = [
 ] as const;
 
 export type OpeningCardId = (typeof openingCards)[number]['id'];
+
+/**
+ * The download card's spec sheet — the questions a reader has between reading
+ * the argument and saving a 400 KB HTML file from a stranger's site, in the
+ * order they get asked: what is it, how big, what does it need, what does it
+ * send, does it need me to be online, and how do I get the next one.
+ *
+ * Every row is checkable against `public/crate.html` rather than claimed:
+ * the file contains no `fetch`, no `XMLHttpRequest` and no external `script`,
+ * `link` or `img`, which is what makes both `sends` and `offline` statements
+ * of fact. `updates` is the row a product page would leave out — there is no
+ * updater, so it says so.
+ *
+ * It also absorbs what used to be a lone `note` beside the button ("One HTML
+ * file, about 400 KB. Any machine with a browser."): the same three facts,
+ * as three rows a reader can find rather than one line they skim.
+ */
+export const downloadSpec = ['format', 'size', 'needs', 'sends', 'offline', 'updates'] as const;
+
+export type DownloadSpecId = (typeof downloadSpec)[number];

@@ -440,7 +440,33 @@
       "body": "Scarica il file, doppio clic, e puntalo all'export XML che Rekordbox già fa. Si apre nel browser e legge quel file dal tuo disco — non carica niente da nessuna parte, perché non c'è nessun server dove caricarlo. Due cose che in questa forma non può fare: guardare sul disco se i file sono ancora dove Rekordbox crede che siano, e ricordarsi l'export da una volta all'altra, quindi glielo ripunti ogni volta.",
       "bodyShort": "Scarica il file, doppio clic, puntalo all'export di Rekordbox. Legge il file dal tuo disco e non carica niente — non c'è nessun server dove caricare. Non può controllare se i file ci sono ancora, e si dimentica l'export ogni volta che chiudi.",
       "cta": "Scarica Crate",
-      "note": "Un file HTML, circa 400 KB. Qualsiasi computer con un browser."
+      "spec": {
+        "heading": "Il file",
+        "format": {
+          "label": "Formato",
+          "value": "Un file HTML"
+        },
+        "size": {
+          "label": "Peso",
+          "value": "Circa 400 KB"
+        },
+        "needs": {
+          "label": "Serve",
+          "value": "Qualsiasi computer con un browser"
+        },
+        "sends": {
+          "label": "Invia",
+          "value": "Niente. Non c’è nessun server."
+        },
+        "offline": {
+          "label": "Offline",
+          "value": "Funziona col Wi-Fi spento"
+        },
+        "updates": {
+          "label": "Aggiornamenti",
+          "value": "Lo riscarichi"
+        }
+      }
     }
   },
   "legal": {

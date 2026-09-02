@@ -440,7 +440,33 @@
       "body": "Download the file, double-click it, and point it at the XML export Rekordbox already makes. It opens in your browser and reads that file off your own disk — nothing is uploaded anywhere, because there is no server to upload it to. Two things this shape can't do: look at your disk to check the files are still where Rekordbox thinks they are, and remember your export between sessions, so you point it at the file each time.",
       "bodyShort": "Download it, double-click it, point it at your Rekordbox export. It reads the file off your own disk and uploads nothing — there is no server to upload to. It can't check your files are still there, and it forgets your export between sessions.",
       "cta": "Download Crate",
-      "note": "One HTML file, about 400 KB. Any machine with a browser."
+      "spec": {
+        "heading": "The file",
+        "format": {
+          "label": "Format",
+          "value": "One HTML file"
+        },
+        "size": {
+          "label": "Size",
+          "value": "About 400 KB"
+        },
+        "needs": {
+          "label": "Needs",
+          "value": "Any machine with a browser"
+        },
+        "sends": {
+          "label": "Sends",
+          "value": "Nothing. There is no server."
+        },
+        "offline": {
+          "label": "Offline",
+          "value": "Works with the Wi-Fi off"
+        },
+        "updates": {
+          "label": "Updates",
+          "value": "You download it again"
+        }
+      }
     }
   },
   "legal": {

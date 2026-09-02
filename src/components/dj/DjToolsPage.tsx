@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import {
   bpmHistogram,
   capabilities,
+  downloadSpec,
   filterChips,
   heroWave,
   heroWaveLitFrom,
@@ -111,19 +112,25 @@ function Download() {
 
   return (
     <div className="bg-canvas px-5 pb-16 md:px-13 md:pb-20">
-      <div className="rounded-card border border-line-card bg-surface px-6 py-8 md:px-10 md:py-10">
-        <div className="mb-3 flex items-center gap-3 md:mb-4">
-          <span className="font-mono text-label text-accent">07</span>
-          <span aria-hidden="true" className="h-px w-8 bg-accent" />
-        </div>
-        <h2 className="mb-3 font-display text-section-sm text-ink-strong text-balance md:mb-4">
-          {t('dj.download.heading')}
-        </h2>
-        <p className="max-w-[62ch] text-note text-ink-body text-pretty">
-          <span className="lg:hidden">{t('dj.download.bodyShort')}</span>
-          <span className="hidden lg:inline">{t('dj.download.body')}</span>
-        </p>
-        <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+      {/* Two columns from `lg`. The prose column is the same 62ch it has always
+          been, so at 1440 the card used to be a paragraph in its left half and
+          nothing in its right — the spec sheet is what that half is for. Below
+          `lg` the sheet stacks under the button, where it reads as the small
+          print it partly replaces. */}
+      <div className="rounded-card border border-line-card bg-surface px-6 py-8 md:px-10 md:py-10 lg:grid lg:grid-cols-[minmax(0,62ch)_minmax(0,1fr)] lg:gap-x-16 xl:gap-x-24">
+        <div>
+          <div className="mb-3 flex items-center gap-3 md:mb-4">
+            <span className="font-mono text-label text-accent">07</span>
+            <span aria-hidden="true" className="h-px w-8 bg-accent" />
+          </div>
+          <h2 className="mb-3 font-display text-section-sm text-ink-strong text-balance md:mb-4">
+            {t('dj.download.heading')}
+          </h2>
+          <p className="text-note text-ink-body text-pretty">
+            <span className="lg:hidden">{t('dj.download.bodyShort')}</span>
+            <span className="hidden lg:inline">{t('dj.download.body')}</span>
+          </p>
+          <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
           {/* `/crate`, not `/crate.html`: hosting has cleanUrls on, so the
               .html path 301s here anyway. The `download` attribute names the
               saved file, so the URL not carrying the extension costs nothing —
@@ -135,16 +142,71 @@ function Download() {
               label already says, and the rust's own cast under it (--shadow-cta)
               lifting a pixel on hover. Full width below `sm`, where a pill
               floating in a wide card reads as an afterthought. */}
-          <AccentButton
-            href="/crate"
-            download="crate.html"
-            className="group flex h-13 w-full items-center justify-center gap-2.5 px-7 text-[13.5px] shadow-cta hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
-          >
-            <DownloadIcon className="size-[1.15em] shrink-0 transition-transform duration-150 group-hover:translate-y-0.5" />
-            {t('dj.download.cta')}
-          </AccentButton>
-          <span className="max-w-[34ch] font-mono text-meta text-ink-muted">{t('dj.download.note')}</span>
+            <AccentButton
+              href="/crate"
+              download="crate.html"
+              className="group flex h-13 w-full items-center justify-center gap-2.5 px-7 text-[13.5px] shadow-cta hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
+            >
+              <DownloadIcon className="size-[1.15em] shrink-0 transition-transform duration-150 group-hover:translate-y-0.5" />
+              {t('dj.download.cta')}
+            </AccentButton>
+          </div>
         </div>
+
+        <SpecSheet />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Six facts about the file, on the canvas rather than on the card, so it reads
+ * as something cut out of the page rather than a second card floating in the
+ * first.
+ *
+ * A `dl` because that is what it is — six terms and their definitions — and
+ * because the labels are then announced with their values rather than as a
+ * loose column of nouns. The rules are on the rows, not between them, so the
+ * sheet keeps its shape when Italian's longer labels wrap.
+ *
+ * The values are checkable rather than asserted; `downloadSpec` records how.
+ * `updates` is deliberately unflattering: a page that lists five good facts
+ * and hides the sixth is doing the thing this page's whole argument is
+ * against.
+ */
+function SpecSheet() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="mt-10 lg:mt-0">
+      <div className="rounded-card border border-line-card bg-canvas px-5 py-5 md:px-6 md:py-6">
+        <h3 className="mb-4 font-mono text-label uppercase tracking-[0.14em] text-ink-muted md:mb-5">
+          {t('dj.download.spec.heading')}
+        </h3>
+        <dl className="text-pretty">
+          {downloadSpec.map((row, index) => (
+            <div
+              key={row}
+              className={cx(
+                // Label over value on a phone: at 390px a 7.5rem label column
+                // leaves the value about 20 characters, so "Qualsiasi computer
+                // con un browser" broke into three lines beside a one-word
+                // term. Side by side from `sm`, where the row fits.
+                'flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:gap-5',
+                index > 0 && 'border-t border-line-card',
+                index === 0 && 'pt-0',
+                index === downloadSpec.length - 1 && 'pb-0',
+              )}
+            >
+              <dt className="font-mono text-micro uppercase tracking-[0.12em] text-ink-muted sm:w-[7.5rem] sm:shrink-0">
+                {t(`dj.download.spec.${row}.label`)}
+              </dt>
+              <dd className="min-w-0 font-mono text-meta text-ink-strong">
+                {t(`dj.download.spec.${row}.value`)}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
