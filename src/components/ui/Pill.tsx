@@ -1,7 +1,14 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 import { cx } from './cx';
 
-const base = 'rounded-pill no-underline transition-colors duration-150';
+/**
+ * Shadow and transform ride along with the colours so a pill that lifts on
+ * hover animates rather than snaps. Both are inert on the pills that change
+ * neither, and declaring the list here rather than at a call site keeps a
+ * second `transition-*` utility from racing this one on stylesheet order.
+ */
+const base =
+  'rounded-pill no-underline transition-[background-color,border-color,color,box-shadow,transform] duration-150';
 
 /**
  * Outlined pill link sitting on one of the dark panels — socials, Spotify,

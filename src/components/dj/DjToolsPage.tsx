@@ -21,7 +21,16 @@ import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
 import { SkipLink } from '../ui/SkipLink';
 import { Tile } from '../ui/Tile';
-import { ArrowLeftIcon, DiscIcon, MoonIcon, NoteIcon, ShelfIcon, SunIcon, WaveIcon } from '../ui/icons';
+import {
+  ArrowLeftIcon,
+  DiscIcon,
+  DownloadIcon,
+  MoonIcon,
+  NoteIcon,
+  ShelfIcon,
+  SunIcon,
+  WaveIcon,
+} from '../ui/icons';
 import { IconButton, ThemeSwitch } from '../SiteHeader';
 import { SiteFooter } from '../SiteFooter';
 import { cx } from '../ui/cx';
@@ -114,16 +123,27 @@ function Download() {
           <span className="lg:hidden">{t('dj.download.bodyShort')}</span>
           <span className="hidden lg:inline">{t('dj.download.body')}</span>
         </p>
-        <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+        <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
           {/* `/crate`, not `/crate.html`: hosting has cleanUrls on, so the
               .html path 301s here anyway. The `download` attribute names the
               saved file, so the URL not carrying the extension costs nothing —
               and a plain anchor with no click handler keeps the in-app router
-              out of it. */}
-          <AccentButton href="/crate" download="crate.html">
+              out of it.
+
+              The page's one CTA, so it is sized like one: a 52px target with
+              the site's own button padding, the glyph carrying the verb the
+              label already says, and the rust's own cast under it (--shadow-cta)
+              lifting a pixel on hover. Full width below `sm`, where a pill
+              floating in a wide card reads as an afterthought. */}
+          <AccentButton
+            href="/crate"
+            download="crate.html"
+            className="group flex h-13 w-full items-center justify-center gap-2.5 px-7 text-[13.5px] shadow-cta hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
+          >
+            <DownloadIcon className="size-[1.15em] shrink-0 transition-transform duration-150 group-hover:translate-y-0.5" />
             {t('dj.download.cta')}
           </AccentButton>
-          <span className="font-mono text-meta text-ink-muted">{t('dj.download.note')}</span>
+          <span className="max-w-[34ch] font-mono text-meta text-ink-muted">{t('dj.download.note')}</span>
         </div>
       </div>
     </div>

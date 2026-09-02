@@ -248,6 +248,10 @@
   --accent-hover-fg: #fffdf4;  /* 12.07:1 */
   --accent-hover-alt: #cfead8;
   --accent-hover-alt-fg: #0d3d22; /* 9.61:1 */
+  /* The rust's own cast, for a solid CTA that lifts on hover. Tinted rather
+     than neutral for the reason --shadow-card is: black under a rust pill on
+     cream reads as dirt under it. */
+  --accent-shadow: 0 10px 24px -8px rgb(161 91 41 / 0.42);
 
   /* Clover as a solid fill. --sage is display-only (>=38px, 3:1 floor) and
      was the site's measured minimum at 3.50:1. It now reads 4.85:1, which
@@ -579,6 +583,9 @@
   --accent-hover-fg: #101510;  /* 17.78:1 */
   --accent-hover-alt: #fffbe8;
   --accent-hover-alt-fg: #101510;
+  /* Amber on a near-black canvas: a cast has nothing to darken, so this one
+     carries the accent's own hue and reads as light coming off the button. */
+  --accent-shadow: 0 10px 26px -8px rgb(224 138 78 / 0.38);
 
   --sage: #7fcfa0;             /* 9.97:1 on canvas */
   --sage-solid: #7fcfa0;
@@ -892,6 +899,7 @@
   --shadow-lift-food: var(--project-food-shadow);
   /* Warm shadow: a neutral-black shadow on a cream ground reads as grey dirt. */
   --shadow-card: 0 2px 14px rgb(70 45 15 / 0.08);
+  --shadow-cta: var(--accent-shadow);
 
   /* Magic Tools — same utility names as before the semantic split, so
      bg-magic-parchment etc. keep working and start tracking .dark. */

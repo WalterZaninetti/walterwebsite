@@ -12,7 +12,7 @@
  *   Lucide — ISC — https://lucide.dev
  *     raw.githubusercontent.com/lucide-icons/lucide/main/icons/<slug>.svg
  *     gallery-vertical-end · disc-3 · leaf · library-big · audio-lines · coffee
- *     file-text · sun · moon · menu · x · map-pin · thermometer
+ *     file-text · download · sun · moon · menu · x · map-pin · thermometer
  *
  *   Simple Icons — CC0 — https://simpleicons.org
  *     raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/<slug>.svg
@@ -242,6 +242,17 @@ export function NoteIcon({ className }: GlyphProps = {}) {
       <path d="M10 9H8" />
       <path d="M16 13H8" />
       <path d="M16 17H8" />
+    </svg>
+  );
+}
+
+/** Crate's download CTA — a tray taking a file. Lucide `download`. */
+export function DownloadIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="M12 15V3" />
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <path d="m7 10 5 5 5-5" />
     </svg>
   );
 }
