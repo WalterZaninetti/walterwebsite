@@ -60,9 +60,9 @@
         "eyebrow": "02 · per i dj",
         "eyebrowShort": "02 · dj",
         "title": "Crate",
-        "description": "Un'app desktop per la libreria Rekordbox che hai già — filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più, e una playlist che torna indietro.",
+        "description": "Uno strumento per la libreria Rekordbox che hai già — filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più, e una playlist che torna indietro.",
         "descriptionShort": "Rekordbox, filtrato: filtri che si sommano, tonalità, doppioni, una playlist indietro.",
-        "meta": "ancora da scrivere"
+        "meta": "un file, niente da installare"
       },
       "food": {
         "eyebrow": "03 · per tutti",
@@ -383,8 +383,8 @@
     "title": "Crate",
     "eyebrow": "02 · per i dj",
     "eyebrowShort": "02 · dj",
-    "deck": "Un'app desktop per la libreria Rekordbox che hai già: filtri che si sommano, tonalità, doppioni, e una playlist che torna indietro. Non è ancora scritta: questa pagina è una descrizione, non un download.",
-    "deckShort": "Un'app desktop per la libreria Rekordbox che hai già. Non è ancora scritta: una descrizione, non un download.",
+    "deck": "Uno strumento per la libreria Rekordbox che hai già: filtri che si sommano, quello che è rotto, la forma di quello che possiedi, e una playlist che torna indietro. Un file da scaricare, niente da installare, e la collezione non esce dal tuo computer.",
+    "deckShort": "Uno strumento per la libreria Rekordbox che hai già. Un file, niente da installare, e la collezione non esce dal tuo computer.",
     "problem": {
       "heading": "La collezione che non vedi",
       "body": "Qualche migliaio di tracce in Rekordbox, e forse duecento le conosci a orecchio. Le altre le trovi scorrendo. Il mix armonico lo fai a mente, o leggendo la tonalità due battute prima che ti serva — e va bene, finché il disco dopo deve essere quello giusto al primo colpo. Rekordbox ti ordina le colonne come vuoi; la forma di quello che hai dentro non te la dice.",
@@ -425,8 +425,8 @@
     },
     "status": {
       "heading": "A che punto è davvero",
-      "body": "Per ora è un nome e un elenco di cose che farebbe. Nessun repository, niente da scaricare, e nessuna data che mi fiderei a darti. Sarà un'applicazione desktop e non una pagina web, perché il file della collezione sta sul tuo computer e preferisco che ci resti. Quando ci sarà qualcosa da aprire, sarà a questo indirizzo.",
-      "bodyShort": "Per ora è un nome e un elenco di cose che farebbe. Nessun repository, niente da scaricare, nessuna data che mi fiderei a darti. Sarà un'app desktop: il file della collezione sta sul tuo computer e preferisco che ci resti."
+      "body": "Adesso c'è qualcosa da aprire, ed è un file solo. Anche la versione desktop è scritta, ed è la migliore — quella il disco lo vede — ma non è ancora firmata, e darti un'app che macOS chiama danneggiata non è la prima impressione che voglio. Quindi qui scarichi quella che non ti chiede niente: nessun installer, nessun account, nessuna finestra dei permessi. Quella firmata arriva quando sarà firmata, e una data continuo a non dartela.",
+      "bodyShort": "Adesso c'è qualcosa da aprire: un file solo, nessun installer, nessun account. La versione desktop è scritta ed è la migliore, ma non è ancora firmata — e un'app che macOS chiama danneggiata non è una prima impressione che voglio. Su quella, nessuna data."
     },
     "figures": {
       "wheel": "8A, e le tre mosse che ne escono",
@@ -434,7 +434,14 @@
       "stack": "sei condizioni, un risultato"
     },
     "metaTitle": "Crate — uno strumento per la libreria Rekordbox — Walter",
-    "metaDescription": "Legge l'export di Rekordbox senza scriverci niente: filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più. Non è ancora scritta."
+    "metaDescription": "Legge l'export di Rekordbox senza scriverci niente: filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più. Un file, niente da installare.",
+    "download": {
+      "heading": "Niente da installare",
+      "body": "Scarica il file, doppio clic, e puntalo all'export XML che Rekordbox già fa. Si apre nel browser e legge quel file dal tuo disco — non carica niente da nessuna parte, perché non c'è nessun server dove caricarlo. Due cose che in questa forma non può fare: guardare sul disco se i file sono ancora dove Rekordbox crede che siano, e ricordarsi l'export da una volta all'altra, quindi glielo ripunti ogni volta.",
+      "bodyShort": "Scarica il file, doppio clic, puntalo all'export di Rekordbox. Legge il file dal tuo disco e non carica niente — non c'è nessun server dove caricare. Non può controllare se i file ci sono ancora, e si dimentica l'export ogni volta che chiudi.",
+      "cta": "Scarica Crate",
+      "note": "Un file HTML, circa 400 KB. Qualsiasi computer con un browser."
+    }
   },
   "legal": {
     "title": "Cookie e privacy",

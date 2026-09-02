@@ -60,9 +60,9 @@
         "eyebrow": "02 · for djs",
         "eyebrowShort": "02 · djs",
         "title": "Crate",
-        "description": "A desktop app for the Rekordbox library you already have — stacked filters, Camelot moves, duplicates and dead paths, and a playlist back out.",
+        "description": "A tool for the Rekordbox library you already have — stacked filters, Camelot moves, duplicates and dead paths, and a playlist back out.",
         "descriptionShort": "Rekordbox, filtered: stacked filters, keys, duplicates, a playlist back out.",
-        "meta": "not built yet"
+        "meta": "one file, no install"
       },
       "food": {
         "eyebrow": "03 · for everyone",
@@ -383,8 +383,8 @@
     "title": "Crate",
     "eyebrow": "02 · for djs",
     "eyebrowShort": "02 · djs",
-    "deck": "A desktop app for the Rekordbox library you already have: stack filters, find what's broken, see the shape of it, hand a playlist back. It isn't built yet — this page is a description, not a download.",
-    "deckShort": "A desktop app for the Rekordbox library you already have. It isn't built yet — a description, not a download.",
+    "deck": "A tool for the Rekordbox library you already have: stack filters, find what's broken, see the shape of it, hand a playlist back. One file to download, nothing to install, and your collection never leaves your machine.",
+    "deckShort": "A tool for the Rekordbox library you already have. One file, nothing to install, and your collection never leaves your machine.",
     "problem": {
       "heading": "The collection you can't see",
       "body": "A few thousand tracks in Rekordbox, and you know maybe two hundred of them by feel. The rest you find by scrolling. The harmonic mixing you do in your head, or off the key tag two bars before you need it — fine, until the next record has to be right the first time. Rekordbox will sort any column you ask it to; it won't tell you the shape of what you own.",
@@ -425,8 +425,8 @@
     },
     "status": {
       "heading": "Where it actually is",
-      "body": "Right now it's a name and a list of what it would do. No repository, nothing to download, and no date I'd trust enough to give you. It'll be a desktop application rather than a web page, because the collection file lives on your machine and I'd rather it stayed there. When there's something to open, it will be at this address.",
-      "bodyShort": "Right now it's a name and a list of what it would do. No repository, nothing to download, no date I'd trust enough to give you. It'll be a desktop app: the collection file lives on your machine and I'd rather it stayed there."
+      "body": "There's something to open now, and it's one file. The desktop version is written too, and it's the better one — that one can see your disk — but it isn't signed yet, and handing you an app macOS calls damaged is not the first impression I'd want. So the download here is the one that asks nothing of you: no installer, no account, no permission dialog. The signed one comes when it's signed, and I still won't give you a date.",
+      "bodyShort": "There's something to open now: one file, no installer, no account. The desktop version is written and it's the better one, but it isn't signed yet — and an app macOS calls damaged is not a first impression I'd want. No date on that."
     },
     "figures": {
       "wheel": "8A, and the three moves out of it",
@@ -434,7 +434,14 @@
       "stack": "six conditions, one result"
     },
     "metaTitle": "Crate — a Rekordbox library tool — Walter",
-    "metaDescription": "Reads your Rekordbox export and writes nothing back: stacked filters, Camelot moves, dead paths and duplicates, a playlist back out. Not built yet."
+    "metaDescription": "Reads your Rekordbox export and writes nothing back: stacked filters, Camelot moves, dead paths and duplicates, a playlist back out. One file, nothing to install.",
+    "download": {
+      "heading": "Nothing to install",
+      "body": "Download the file, double-click it, and point it at the XML export Rekordbox already makes. It opens in your browser and reads that file off your own disk — nothing is uploaded anywhere, because there is no server to upload it to. Two things this shape can't do: look at your disk to check the files are still where Rekordbox thinks they are, and remember your export between sessions, so you point it at the file each time.",
+      "bodyShort": "Download it, double-click it, point it at your Rekordbox export. It reads the file off your own disk and uploads nothing — there is no server to upload to. It can't check your files are still there, and it forgets your export between sessions.",
+      "cta": "Download Crate",
+      "note": "One HTML file, about 400 KB. Any machine with a browser."
+    }
   },
   "legal": {
     "title": "Cookies & privacy",

@@ -15,6 +15,7 @@ import type { Capability } from '../../content/djTools';
 import { useMetaDescription } from '../../lib/meta';
 import { navigate } from '../../lib/route';
 import { useTheme } from '../../lib/theme-context';
+import { AccentButton } from '../ui/Pill';
 import { Eyebrow } from '../ui/Eyebrow';
 import { LanguageSwitch } from '../ui/LanguageSwitch';
 import { Monogram } from '../ui/Monogram';
@@ -43,11 +44,21 @@ import { cx } from '../ui/cx';
  * failure the shared direction's §3.2 forbids. `--project-dj-wave` is the one
  * exception and it is authored against the band, where it is used.
  *
- * The page asks for nothing. It carried a `mailto:`-composing field set for
- * part of this run; it was removed, which returns it to the position
- * `site.md` took first — a page about software that does not exist yet does
- * not get to ask for an address. The only link out is the foot-of-page return
- * to the shelf.
+ * The page asked for nothing for as long as there was nothing to give. It
+ * carried a `mailto:`-composing field set for part of an earlier run; that was
+ * removed on the reasoning that a page about software which does not exist does
+ * not get to ask for an address.
+ *
+ * That premise is now void: the software exists, so the page has one outward
+ * link and it is a download rather than a request. It still asks for no
+ * address, which is the same posture arrived at from the other side — there is
+ * nothing to sign up for because there is nothing to be notified about.
+ *
+ * The file is served with `Content-Disposition: attachment` (firebase.json), so
+ * it is never rendered from this origin. That is not a nicety: the site's CSP
+ * allows exactly one inline script by hash, and `crate.html` is one large inline
+ * script, so rendering it here would be blocked outright. It is a download, and
+ * the header makes the browser treat it as one.
  */
 export function DjToolsPage() {
   const { t } = useTranslation();
@@ -63,6 +74,7 @@ export function DjToolsPage() {
 
         <OpeningCards />
         <Rack />
+        <Download />
 
         <div className="bg-canvas px-5 pb-12 md:px-13 md:pb-16">
           <BackLink />
@@ -70,6 +82,48 @@ export function DjToolsPage() {
 
         <SiteFooter />
       </main>
+    </div>
+  );
+}
+
+/**
+ * The one thing the page asks the reader to do, and the first time it has ever
+ * had one. It sits after the rack because the capabilities are the argument and
+ * this is the conclusion; a download button above them would be asking before
+ * the case has been made.
+ *
+ * The caveats are in the body copy rather than in small print under the button,
+ * because a reader who finds out afterwards that it cannot see their disk has
+ * been sold something. Stating it here costs a few downloads and keeps the
+ * page's one real asset, which is that it does not oversell.
+ */
+function Download() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="bg-canvas px-5 pb-16 md:px-13 md:pb-20">
+      <div className="rounded-card border border-line-card bg-surface px-6 py-8 md:px-10 md:py-10">
+        <div className="mb-3 flex items-center gap-3 md:mb-4">
+          <span className="font-mono text-label text-accent">07</span>
+          <span aria-hidden="true" className="h-px w-8 bg-accent" />
+        </div>
+        <h2 className="mb-3 font-display text-section-sm text-ink-strong text-balance md:mb-4">
+          {t('dj.download.heading')}
+        </h2>
+        <p className="max-w-[62ch] text-note text-ink-body text-pretty">
+          <span className="lg:hidden">{t('dj.download.bodyShort')}</span>
+          <span className="hidden lg:inline">{t('dj.download.body')}</span>
+        </p>
+        <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+          {/* A plain anchor with `download`: no click handler, so the in-app
+              router never sees it, and the attribute makes the browser save the
+              file even if the hosting header ever goes missing. */}
+          <AccentButton href="/crate.html" download="crate.html">
+            {t('dj.download.cta')}
+          </AccentButton>
+          <span className="font-mono text-meta text-ink-muted">{t('dj.download.note')}</span>
+        </div>
+      </div>
     </div>
   );
 }
