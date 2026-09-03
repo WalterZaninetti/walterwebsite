@@ -628,7 +628,10 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
                     {source.name}
                   </a>
                   {', '}
-                  {source.year}. {t('seasonable.row.basisTail', { place })}
+                  {source.year === undefined
+                    ? t('seasonable.row.consulted', { date: source.accessed })
+                    : `${source.year}.`}{' '}
+                  {t('seasonable.row.basisTail', { place })}
                 </p>
               ))}
             </div>

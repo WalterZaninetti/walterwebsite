@@ -327,3 +327,66 @@ Napoli still does, through Pomodorino del Piennolo and San Marzano.
 3. The working corpus is in the session scratchpad: the full eAmbrosia register dump, 127
    per-designation dossiers, 53 EU-hosted specification PDFs, 109 OJ C documents, 117 recent
    publications and all 129 MASAF disciplinari, with extracted text alongside each.
+
+---
+
+## 2026-09-03 (second pass) — 25 designations added, four regions opened
+
+### The rule that changed, and why
+
+`Source.year` is now optional. The reason is a property of the corpus rather than a shortcut:
+**for most designations no single dated document states a whole, current window.** The EU's
+*documento unico* is a summary that usually drops the harvest clause — Ciliegia di Vignola,
+Carciofo Spinoso di Sardegna and Cappero di Pantelleria all publish one that never mentions a
+month — and an amendment then moves one endpoint without restating the other. Oliva Ascolana's
+2025 ordinary modification says the start went "dal 10 al 1° settembre" and contains the word
+*ottobre* zero times.
+
+That leaves the ministry's consolidated disciplinare as the only document that is both whole and
+current, and those print no date at all. So a source now either prints a year, or it is a
+consolidated text and the reader is shown **the day it was consulted** instead. Two new tests
+hold the line: a year that is present must be plausible, and a source may only omit one if its
+name says *disciplinare* and its URL is `masaf.gov.it`.
+
+Gazzetta Ufficiale was tried first and cannot work: **the decree approves the disciplinare
+without containing it.** DECRETO 9 aprile 2025 for Finocchio di Isola Capo Rizzuto is dated,
+official, permanently addressable — and states no harvest date, because the text it approves is
+published elsewhere. GU can satisfy invariant 3 or invariant 4, never both at once.
+
+### Added — 25 designations, 28 windows
+
+Sourced from `masaf.gov.it/…/IDPagina/3343`, the ministry's index of disciplinari in force for
+class 1.6, except **Ficodindia dell'Etna** and **Kiwi Latina**, which are cited to dated OJ
+documents because the ministry's PDF for the first is an image scan and for the second omits the
+harvest sentence.
+
+Aglio di Voghiera · Cappero delle Isole Eolie · Cappero di Pantelleria · Carciofo Brindisino ·
+Carciofo Spinoso di Sardegna · Cedro di Santa Maria del Cedro (2) · Fagioli Bianchi di Rotonda
+(2) · Fagiolo Cannellino di Atina · Ficodindia dell'Etna · Ficodindia di San Cono · Fungo di
+Borgotaro · Kiwi Latina · Lenticchia di Onano · Limone Costa d'Amalfi · Marrone di Combai ·
+Marrone di Serino · Mela Val di Non · Oliva Ascolana del Piceno · Patata dell'Alto Viterbese ·
+Patata Rossa di Colfiorito · Peperoncino di Calabria · Peperone di Pontecorvo · Pera dell'Emilia
+Romagna (`stored`) · Pescabivona · Radicchio di Chioggia (2).
+
+Two earlier ledger entries were wrong and are corrected here: **Marrone di Combai** ("dal 15
+settembre al 15 novembre") and **Patata dell'Alto Viterbese** ("tra 15 giugno e 30 settembre")
+were logged as unusable; the current disciplinari state both ends of each.
+
+### Where it leaves the dataset
+
+61 windows, 55 designations, 55 sources, **55 of 107 provinces**, and **16 of 20 regions**, up
+from 13. Sardegna, Umbria and Marche answer for the first time. So does **Trapani**, which the
+brief names as the shop the whole tool is aimed at.
+
+Still silent: **Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.** Liguria's nearest miss
+is Olive Taggiasche Liguri IGP, which fixes only an end ("entro il 31 marzo"); Friuli's is
+Brovada DOP, whose turnip harvest window is stated but whose designation is a fermented product
+rather than fresh produce.
+
+### Not done, still queued
+
+Re-sourcing the 29 rows inherited from `disciplinare.it`. Five of them still cite a *proposal*
+rather than a text in force — castagna-monte-amiata, ciliegia-vignola, fragola-basilicata,
+patata-galatina, piennolo-vesuvio — and every one of their windows was confirmed correct against
+MASAF, so only the citation needs moving. Prefer, in order: an OJ C *modifica ordinaria
+approvata* notice; the registered specification on EUR-Lex; the ministry's consolidated text.

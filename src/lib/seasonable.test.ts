@@ -113,11 +113,32 @@ test('every designation has at least one window', () => {
 
 // ── The provenance gate ────────────────────────────────────────────────────
 
-test('every source has a verified publication year', () => {
-  const unverified = sources.filter((s) => !s.year);
-  assert.equal(unverified.length, 0, `${unverified.length} source(s) still carry an unverified year`);
+test('a source either prints a plausible year or prints none at all', () => {
+  // `year` is optional because the ministry's consolidated disciplinari carry
+  // no date anywhere in them, and they are the only document stating the
+  // current window for most designations. What must never happen is a year
+  // that is present and wrong, or a zero standing in for "unknown" — that is
+  // the shape the old dataset had, and it is why this gate exists.
   for (const s of sources) {
-    assert.ok(s.year >= 1990 && s.year <= new Date().getFullYear() + 1, `${s.id}: year ${s.year}`);
+    if (s.year === undefined) continue;
+    assert.ok(
+      Number.isInteger(s.year) && s.year >= 1990 && s.year <= new Date().getFullYear() + 1,
+      `${s.id}: year ${s.year}`,
+    );
+  }
+});
+
+test('an undated source is a consolidated text, and says so in its name', () => {
+  // The only licence to omit a year is being the text in force. If a source
+  // drops the year without being a disciplinare consolidato, it is an
+  // unverified year wearing a disguise.
+  for (const s of sources.filter((x) => x.year === undefined)) {
+    assert.match(
+      s.name,
+      /disciplinare/i,
+      `${s.id} omits a year without being a disciplinare`,
+    );
+    assert.ok(s.url.includes('masaf.gov.it'), `${s.id} omits a year but is not the ministry's text`);
   }
 });
 
@@ -261,7 +282,11 @@ test('every rendered entry carries a resolvable source', () => {
     for (const row of seasonYear(dataset, p.id)) {
       for (const e of row.entries) {
         assert.ok(e.source.url.startsWith('https://'), `${e.produce.id} has no source url`);
-        assert.ok(e.source.year > 0, `${e.produce.id} cites an unverified year`);
+        assert.ok(
+          e.source.year === undefined || e.source.year > 0,
+          `${e.produce.id} cites an unverified year`,
+        );
+        assert.ok(e.source.accessed, `${e.produce.id} cites a source with no accessed date`);
       }
     }
   }
@@ -271,5 +296,5 @@ test('the catalogue answers for a real share of the country', () => {
   const answered = new Set(windows.flatMap((w) => [...w.provinces]));
   // Not a coverage target — a floor, so that silently losing half the dataset
   // fails here rather than rendering an empty page for most of Italy.
-  assert.ok(answered.size >= 30, `only ${answered.size} provinces answer anything`);
+  assert.ok(answered.size >= 50, `only ${answered.size} provinces answer anything`);
 });

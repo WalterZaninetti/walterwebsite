@@ -75,15 +75,30 @@ export type Source = {
   /** The document's own title, verbatim. A proposal says it is a proposal. */
   name: string;
   url: string;
-  year: number;
+  /**
+   * The year printed on the document, where it prints one.
+   *
+   * Optional, and the exception is deliberate rather than lazy. The ministry
+   * publishes the consolidated disciplinare in force for every designation,
+   * and those PDFs carry no date at all — 87 of the 117 that yield text print
+   * no year, no decree reference, nothing. They are the only document that
+   * states the *current* window for most products: the EU's single document is
+   * a summary that usually drops the harvest clause, and an amendment moves one
+   * endpoint without restating the other.
+   *
+   * So a source either prints a year, or it is a consolidated text and the
+   * reader is shown the date it was consulted instead. Both are honest; only
+   * one of them was available.
+   */
+  year?: number;
   /**
    * ISO `YYYY-MM-DD`: the day this document was last opened and confirmed to
    * say what the windows citing it claim.
    *
-   * Not rendered — the reader sees the name and the publication year. It is
-   * here because these URLs rot: the ministry's own national calendar is
-   * already a 404, and without an accessed date there is no way to tell a link
-   * that broke last week from one that was never checked.
+   * Rendered only where `year` is absent, and load-bearing there. It is here at
+   * all because these URLs rot: the ministry's own national calendar is already
+   * a 404, and without an accessed date there is no way to tell a link that
+   * broke last week from one that was never checked.
    */
   accessed: string;
 };
