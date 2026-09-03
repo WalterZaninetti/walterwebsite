@@ -598,3 +598,61 @@ The earlier filter required a range word from a fixed list and missed the constr
   province that answered nothing before.
 
 56 designations, 61 documented windows, **74 of 107 provinces**, 16 of 20 regions.
+
+---
+
+## 2026-09-03 (seventh pass) — the widened sweep, run over everything
+
+Re-run permissively across all 82 designations not yet shipped: any sentence tying a harvest word
+to two distinct month names, with no requirement on the connecting phrase. 36 designations produced
+a candidate, 21 of them naming two months. Almost all resolved to things already checked. Two did
+not, and one of those is a mistake of mine.
+
+### Restored — Limone di Sorrento
+
+**Deleted in the third pass for a reason that stopped being true in the fifth.** It went because no
+single *dated* document stated both ends. Once `Source.year` became optional and the ministry's
+consolidated text became a citable publisher, the obstacle was gone — and I did not go back for it.
+The consolidated disciplinare says plainly:
+
+> «La raccolta va effettuata nel periodo che va dal 1° gennaio al 31 ottobre»
+
+0→19, Napoli. The 2010 Union amendment (OJ C 105, approved by Reg. (UE) 14/2011) is what moved the
+start from February to January; the ministry's text is where both ends now sit in one sentence.
+
+**The lesson worth keeping: when a sourcing rule is relaxed, re-run the rejections.** Nothing did
+that automatically, and one good row sat deleted for two passes.
+
+### Added — Marrone della Valle di Susa IGP
+
+> «il periodo di raccolta ha inizio al 20 di settembre per concludersi il 10 novembre»
+
+17→20, provincia di Torino. It becomes the **seventh** chestnut designation, and is added to the
+generalised chestnut row's parts; its window sits inside the existing union, so 16→21 is unchanged.
+Torino now answers from a document, so it drops out of the generalised row's province list.
+
+### Checked and still not usable
+
+- **Castagna di Montella** — the scan is readable after all, and art. 5 says «Il prodotto fresco può
+  essere immesso al consumo a partire dal 4 ottobre dell'anno di produzione». A start, no end. The
+  existing verdict stands.
+- **Castagna di Roccamonfina** — «le castagne vengono raccolte a terra dopo la loro naturale caduta
+  dalle piante». No dates at all.
+- **Brovada DOP** states both ends twice — rape harvest «dal 1° settembre … entro il 31 dicembre»,
+  and consumption «dal 26 di settembre … il 15 maggio». It is the only route into
+  **Friuli-Venezia Giulia**, and it is excluded only because the designation is a fermented product
+  rather than fresh produce, like Farina di Neccio and Amarene Brusche. That is a judgement, not a
+  fact, and it is the one worth revisiting if Friuli matters more than the rule.
+- **Nocciola Romana**, **Pistacchio di Raffadali**, **Pistacchio Verde di Bronte** state both ends
+  and are nuts; **Farro di Monteleone di Spoleto** is a cereal. All excluded on the same standing
+  grounds as Nocciola del Piemonte.
+
+### The image scans
+
+Eleven MASAF PDFs yield no text. They are readable by rendering the pages, which was not tried
+before. **None of the seven unshipped ones covers a province that does not already answer**, so
+reading them adds products rather than coverage: Arancia Rossa di Sicilia, Uva da tavola di
+Canicattì, Fico Bianco del Cilento, Cipollotto Nocerino, Fagiolo di Sarconi, Fagiolo di Sorana,
+Fagiolo Cuneo. Montella was read and is negative. The rest are an open, low-priority seam.
+
+58 designations, 63 documented windows, 2 generalised, **74 of 107 provinces**, 16 of 20 regions.

@@ -167,10 +167,18 @@ export const windows: readonly Window[] = [
   // vary by a single half-month between them.
   g(
     'chestnut-generic',
-    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'lu', 'ms', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'to', 'vb', 'vc', 've', 'vi', 'vr'],
+    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'lu', 'ms', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
     16,
     21,
-    ['castagna-cuneo', 'castagna-monte-amiata', 'castagna-vallerano', 'marrone-combai', 'marrone-serino', 'marroni-monfenera'],
+    [
+      'castagna-cuneo',
+      'castagna-monte-amiata',
+      'castagna-vallerano',
+      'marrone-combai',
+      'marrone-serino',
+      'marrone-valle-susa',
+      'marroni-monfenera',
+    ],
   ),
 
   // "La raccolta per la varieta' Navelina inizia il 1° novembre e termina alla
@@ -180,6 +188,13 @@ export const windows: readonly Window[] = [
   // "La raccolta non puo' essere iniziata prima del 20 luglio e non puo'
   //  terminare dopo il 15 dicembre"
   w('mele-trentino', ['tn'], 'open-field', 13, 22, 'mele-trentino'),
+  // "La raccolta va effettuata nel periodo che va dal 1° gennaio al 31 ottobre"
+  //  — restored: the 2010 amendment moved the start forward a month, and the
+  //  ministry's consolidated text states both ends of the window in force.
+  w('limone-sorrento', ['na'], 'open-field', 0, 19, 'limone-sorrento'),
+  // "il periodo di raccolta ha inizio al 20 di settembre per concludersi il 10
+  //  novembre"
+  w('marrone-valle-susa', ['to'], 'open-field', 17, 20, 'marrone-valle-susa'),
   // ── Vegetables ───────────────────────────────────────────────────────────
   // "L'estirpazione dell'Aglio di Voghiera avviene dal 10 giugno sino al 31
   //  luglio"
