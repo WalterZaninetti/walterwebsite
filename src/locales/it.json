@@ -565,10 +565,13 @@
     },
     "table": {
       "heading": "Tutto l'anno, e dove sei tu dentro",
-      "note": "Cosa risponde per {{place}}: le denominazioni il cui documento la nomina e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione. Ogni colonna è un mese, diviso nelle sue due metà; la linea segna la quindicina che hai scelto.",
+      "note": "Cosa risponde per {{place}}: le denominazioni il cui documento la nomina e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione. Ogni colonna è un mese, diviso nelle sue due metà.",
       "productHeader": "Denominazione",
       "firstHalf": "prima metà",
-      "secondHalf": "seconda metà"
+      "secondHalf": "seconda metà",
+      "summary": "su {{total}} di stagione qui, {{half}}",
+      "legendNow": "la quindicina che hai scelto",
+      "inSeasonNow": "Di stagione nella quindicina che hai scelto."
     },
     "s1": {
       "heading": "Come decide",

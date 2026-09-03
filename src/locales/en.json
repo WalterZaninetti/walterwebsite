@@ -565,10 +565,13 @@
     },
     "table": {
       "heading": "The whole year, and where you are in it",
-      "note": "What answers for {{place}}: designations whose own document names it, and where none does, the span that region's designations agree on. Each column is one month, split into its two halves; the line marks the fortnight you picked.",
+      "note": "What answers for {{place}}: designations whose own document names it, and where none does, the span that region's designations agree on. Each column is one month, split into its two halves.",
       "productHeader": "Designation",
       "firstHalf": "first half",
-      "secondHalf": "second half"
+      "secondHalf": "second half",
+      "summary": "of {{total}} in season here, {{half}}",
+      "legendNow": "the fortnight you picked",
+      "inSeasonNow": "In season in the fortnight you picked."
     },
     "s1": {
       "heading": "How it decides",

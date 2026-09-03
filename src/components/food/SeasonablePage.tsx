@@ -484,6 +484,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
 
   const { month: nowMonth, late: nowLate } = splitHalfMonth(half);
   const activeNow = ordered.filter((row) => row.calendar[half] !== null).length;
+  const drawnKinds = [...new Set(ordered.flatMap((row) => kindsOf(row)))];
   const when = t(nowLate ? 'seasonable.picker.halfLate' : 'seasonable.picker.halfEarly', {
     month: months[nowMonth].long,
   });
@@ -499,7 +500,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
         </p>
       </figcaption>
 
-      <Legend active={activeNow} total={ordered.length} when={when} />
+      <Legend active={activeNow} total={ordered.length} when={when} kinds={drawnKinds} />
 
       {/*
         The table is 13 columns and the narrowest phone is 320px, so it scrolls
@@ -508,7 +509,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
         its row header has been scrolled off the left edge.
       */}
       <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
-        <table className="w-full min-w-[26rem] table-fixed border-collapse text-left md:min-w-[42rem]">
+        <table className="w-full min-w-[26rem] table-fixed border-collapse border-b border-line-card text-left md:min-w-[42rem]">
           {/*
             Without this the designation column sizes to its longest name —
             "Pomodoro San Marzano dell'Agro Sarnese-Nocerino DOP" — and squeezes
@@ -600,19 +601,24 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
  * same fact. The swatches sit in a lane chip of the same height as the table's,
  * so a key is literally a one-month excerpt of a row.
  *
+ * Only the kinds actually drawn below get a key. The catalogue holds no
+ * greenhouse window at all today and most provinces answer in open field
+ * alone; a key for a shape nobody can find in the chart sends the reader
+ * looking for it, which is the opposite of what a legend is for.
+ *
  * The count leads. A reader arrives with a fortnight selected and one question
  * about it, and until now the answer to that question was "sort order" — the
  * rows in season were on top, and nothing said how many of them there were or
  * where the group ended.
  */
-function Legend({ active, total, when }: { active: number; total: number; when: string }) {
+type LegendProps = { active: number; total: number; when: string; kinds: readonly WindowKind[] };
+
+const KIND_ORDER: readonly WindowKind[] = ['open-field', 'greenhouse', 'stored'];
+
+function Legend({ active, total, when, kinds }: LegendProps) {
   const { t } = useTranslation();
 
-  const keys = [
-    { kind: 'open-field' as const, label: t(KIND_KEY['open-field']) },
-    { kind: 'greenhouse' as const, label: t(KIND_KEY.greenhouse) },
-    { kind: 'stored' as const, label: t(KIND_KEY.stored) },
-  ];
+  const keys = KIND_ORDER.filter((kind) => kinds.includes(kind));
 
   return (
     <div className="mb-5 flex flex-col gap-4 rounded-card border border-line-card bg-canvas px-4 py-4 md:flex-row md:items-center md:justify-between md:gap-8 md:px-5">
@@ -622,12 +628,12 @@ function Legend({ active, total, when }: { active: number; total: number; when: 
       </p>
 
       <ul className="flex list-none flex-wrap items-center gap-x-4 gap-y-2.5">
-        {keys.map((key) => (
-          <li key={key.kind} className="flex items-center gap-2">
+        {keys.map((kind) => (
+          <li key={kind} className="flex items-center gap-2">
             <span aria-hidden="true" className="flex h-5 w-9 items-center rounded-[3px] bg-canvas-band">
-              <Mark kind={key.kind} className="rounded-[3px]" />
+              <Mark kind={kind} className="rounded-[3px]" />
             </span>
-            <span className="font-mono text-micro text-ink-muted">{key.label}</span>
+            <span className="font-mono text-micro text-ink-muted">{t(KIND_KEY[kind])}</span>
           </li>
         ))}
         <li className="flex items-center gap-2">
@@ -669,7 +675,7 @@ function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps
       <tr className="border-t border-line-card">
         <th
           scope="row"
-          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-3 pr-3 align-middle font-normal"
+          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-2.5 pr-3 align-middle font-normal"
         >
           {/* The dot is always in the flow, transparent when the row is quiet,
               so the names stay on one left edge instead of shifting by 14px
@@ -677,7 +683,7 @@ function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps
           <div className="flex gap-2">
             <span
               className={cx(
-                'mt-[0.55rem] size-1.5 shrink-0 rounded-full',
+                'mt-[0.4rem] size-1.5 shrink-0 rounded-full',
                 activeNow ? 'bg-accent' : 'bg-transparent',
               )}
             >
@@ -686,13 +692,13 @@ function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps
             <div className="min-w-0">
               <span
                 className={cx(
-                  'block text-body-sm',
+                  'block text-body-sm leading-snug',
                   activeNow ? 'text-ink-strong' : 'text-ink-body',
                 )}
               >
                 {produceName(row.produce)}
               </span>
-              <span className="mt-0.5 block font-mono text-micro text-ink-muted">
+              <span className="mt-1 block font-mono text-micro leading-tight text-ink-muted">
                 {produceKind(row.produce, locale)}
                 {' · '}
                 {kindsOf(row)
@@ -710,7 +716,7 @@ function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps
                 onClick={() => setOpen((was) => !was)}
                 aria-expanded={open}
                 aria-controls={panelId}
-                className="mt-1 block text-left font-mono text-micro text-ink-muted underline-offset-2 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="mt-1.5 block text-left font-mono text-micro leading-tight text-ink-muted underline-offset-2 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {open ? t('seasonable.row.hideSource') : t('seasonable.row.showSource')}
               </button>
@@ -832,19 +838,24 @@ function Cell({ calendar, month, now }: CellProps) {
           <Half kind={late} prev={early} next={calendar[month * 2 + 2] ?? null} />
         </div>
       </div>
+      {/* The rust ring is a knockout, not a shadow. The cursor crosses the bars
+          it is measuring, and rust on the mark green is 1.4:1 — over a long
+          window it simply disappears, which is the one place a reader is most
+          likely to be tracing it. A hairline of the page's own ground either
+          side keeps it at 7:1 over a bar and is invisible everywhere else. */}
       {now && (
         <>
           <span
             aria-hidden="true"
             className={cx(
-              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent',
+              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_1px_var(--canvas)]',
               now === 'early' ? 'left-0' : 'left-1/2',
             )}
           />
           <span
             aria-hidden="true"
             className={cx(
-              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent',
+              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_1px_var(--canvas)]',
               now === 'early' ? 'left-1/2 -translate-x-full' : 'right-0',
             )}
           />

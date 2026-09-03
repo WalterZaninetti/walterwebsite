@@ -436,8 +436,8 @@
      field well ran into. It is one step darker for it, and gains rather than
      loses on canvas. In dark the lane is deeper than canvas, so the same value
      comes out ahead there without being touched. */
-  --project-food-mark: #32611f;       /* 6.81:1 vs lane · 7.05 vs canvas */
-  --project-food-mark-quiet: #649453; /* 3.17:1 vs lane · 3.42 vs canvas */
+  --project-food-mark: #32611f;       /* 6.54:1 vs lane · 7.06 vs canvas */
+  --project-food-mark-quiet: #649453; /* 3.18:1 vs lane · 3.42 vs canvas */
 
   --hero-glow: none;
 
@@ -733,8 +733,8 @@
      lightness only — the same two roles as light, re-measured not re-picked.
      The lane is darker than canvas in this scheme, so both rungs come out
      above their on-canvas figure rather than below it. */
-  --project-food-mark: #97c188;       /* 9.63:1 vs lane · 9.06 vs canvas */
-  --project-food-mark-quiet: #4b723d; /* 3.49:1 vs lane · 3.31 vs canvas */
+  --project-food-mark: #97c188;       /* 9.54:1 vs lane · 9.06 vs canvas */
+  --project-food-mark-quiet: #4b723d; /* 3.49:1 vs lane · 3.32 vs canvas */
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,
