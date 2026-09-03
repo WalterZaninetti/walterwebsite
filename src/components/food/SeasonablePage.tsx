@@ -430,6 +430,22 @@ type TableProps = {
  * reads as starting mid-March. The dataset's resolution is the half-month and
  * the copy makes a claim about two-week errors; a table that rounded to whole
  * months would be quietly coarser than the thing it documents.
+ *
+ * Three things make it a chart rather than a grid of ticks, and all three came
+ * out of the same complaint — that the answer was there and unreadable.
+ *
+ *  - **The lane.** Every row draws its whole year as a filled track, month
+ *    boundaries scored into it in the page's own ground. An empty August is
+ *    now visibly an empty August rather than absence of anything, and the run
+ *    of months a window covers has an edge to be measured against.
+ *  - **One bar, not twenty-four ticks.** Adjacent fortnights of the same kind
+ *    abut and round only at the ends of the run, so a window is a single
+ *    object with a start and a stop. It used to be a dashed line of separate
+ *    marks, which is the shape that hid the length.
+ *  - **A cursor, not a hairline.** The picked fortnight is bracketed on both
+ *    edges, capped in the header, and counted in the strip above. The fact
+ *    the reader came for is "how many of these, right now", and nothing on
+ *    the page said it.
  */
 function SeasonTable({ rows, place, half, locale }: TableProps) {
   const { t } = useTranslation();
@@ -466,11 +482,15 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
     );
   }, [rows, half, locale]);
 
-  const nowMonth = splitHalfMonth(half).month;
+  const { month: nowMonth, late: nowLate } = splitHalfMonth(half);
+  const activeNow = ordered.filter((row) => row.calendar[half] !== null).length;
+  const when = t(nowLate ? 'seasonable.picker.halfLate' : 'seasonable.picker.halfEarly', {
+    month: months[nowMonth].long,
+  });
 
   return (
     <figure className="m-0">
-      <figcaption className="mb-5 max-w-[62ch] md:mb-6">
+      <figcaption className="mb-5 max-w-[62ch]">
         <h2 className="font-display text-title-sm text-ink-strong">
           {t('seasonable.table.heading')}
         </h2>
@@ -478,6 +498,8 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
           {t('seasonable.table.note', { place })}
         </p>
       </figcaption>
+
+      <Legend active={activeNow} total={ordered.length} when={when} />
 
       {/*
         The table is 13 columns and the narrowest phone is 320px, so it scrolls
@@ -509,7 +531,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
             <tr>
               <th
                 scope="col"
-                className="sticky left-0 z-10 border-r border-line-card bg-canvas pb-2 pr-3 align-bottom font-mono text-label-wide uppercase text-ink-muted"
+                className="sticky left-0 z-10 border-r border-line-card bg-canvas pb-2.5 pr-3 align-bottom font-mono text-label-wide uppercase text-ink-muted"
               >
                 {t('seasonable.table.productHeader')}
               </th>
@@ -518,7 +540,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
                   key={month.index}
                   scope="col"
                   className={cx(
-                    'pb-2 text-center align-bottom font-mono text-micro font-medium uppercase',
+                    'relative pb-2.5 text-center align-bottom font-mono text-micro font-medium uppercase',
                     month.index === nowMonth ? 'text-accent' : 'text-ink-muted',
                   )}
                 >
@@ -533,6 +555,18 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
                   <span aria-hidden="true" className="sm:hidden">{month.narrow}</span>
                   <span aria-hidden="true" className="hidden sm:inline">{month.short}</span>
                   <span className="sr-only">{month.long}</span>
+                  {/* The cap on the cursor the rows below carry. It sits over
+                      the picked half of the month, so the header states the
+                      fortnight the axis itself can only state the month of. */}
+                  {month.index === nowMonth && (
+                    <span
+                      aria-hidden="true"
+                      className={cx(
+                        'absolute bottom-0 h-[3px] w-1/2 rounded-t-[2px] bg-accent',
+                        nowLate ? 'right-0' : 'left-0',
+                      )}
+                    />
+                  )}
                 </th>
               ))}
             </tr>
@@ -547,6 +581,7 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
                 locale={locale}
                 place={place}
                 nowMonth={nowMonth}
+                nowLate={nowLate}
               />
             ))}
           </tbody>
@@ -556,15 +591,70 @@ function SeasonTable({ rows, place, half, locale }: TableProps) {
   );
 }
 
+/**
+ * How to read the chart, drawn in the chart's own marks rather than described.
+ *
+ * The three window kinds were already three geometries and nothing on the page
+ * said which was which — the row's own label named the kind in words, which
+ * only works if you have already worked out that the word and the shape are the
+ * same fact. The swatches sit in a lane chip of the same height as the table's,
+ * so a key is literally a one-month excerpt of a row.
+ *
+ * The count leads. A reader arrives with a fortnight selected and one question
+ * about it, and until now the answer to that question was "sort order" — the
+ * rows in season were on top, and nothing said how many of them there were or
+ * where the group ended.
+ */
+function Legend({ active, total, when }: { active: number; total: number; when: string }) {
+  const { t } = useTranslation();
+
+  const keys = [
+    { kind: 'open-field' as const, label: t(KIND_KEY['open-field']) },
+    { kind: 'greenhouse' as const, label: t(KIND_KEY.greenhouse) },
+    { kind: 'stored' as const, label: t(KIND_KEY.stored) },
+  ];
+
+  return (
+    <div className="mb-5 flex flex-col gap-4 rounded-card border border-line-card bg-canvas px-4 py-4 md:flex-row md:items-center md:justify-between md:gap-8 md:px-5">
+      <p className="flex items-baseline gap-2.5 font-mono text-meta text-ink-body">
+        <span className="font-display text-title-sm leading-none text-accent">{active}</span>
+        <span className="text-pretty">{t('seasonable.table.summary', { total, half: when })}</span>
+      </p>
+
+      <ul className="flex list-none flex-wrap items-center gap-x-4 gap-y-2.5">
+        {keys.map((key) => (
+          <li key={key.kind} className="flex items-center gap-2">
+            <span aria-hidden="true" className="flex h-5 w-9 items-center rounded-[3px] bg-canvas-band">
+              <Mark kind={key.kind} className="rounded-[3px]" />
+            </span>
+            <span className="font-mono text-micro text-ink-muted">{key.label}</span>
+          </li>
+        ))}
+        <li className="flex items-center gap-2">
+          <span
+            aria-hidden="true"
+            className="relative flex h-5 w-9 items-center justify-center rounded-[3px] bg-canvas-band"
+          >
+            <span className="absolute inset-y-0 left-2.5 w-0.5 bg-accent" />
+            <span className="absolute inset-y-0 right-2.5 w-0.5 bg-accent" />
+          </span>
+          <span className="font-mono text-micro text-ink-muted">{t('seasonable.table.legendNow')}</span>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 type TableRowProps = {
   row: SeasonRow;
   half: HalfMonth;
   locale: 'en' | 'it';
   place: string;
   nowMonth: number;
+  nowLate: boolean;
 };
 
-function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
+function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const panelId = `seasonable-src-${row.produce.id}`;
@@ -579,46 +669,61 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
       <tr className="border-t border-line-card">
         <th
           scope="row"
-          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-2.5 pr-3 align-middle font-normal"
+          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-3 pr-3 align-middle font-normal"
         >
-          <span
-            className={cx(
-              'block text-body-sm',
-              activeNow ? 'text-ink-strong' : 'text-ink-body',
-            )}
-          >
-            {produceName(row.produce)}
-          </span>
-          <span className="mt-0.5 block font-mono text-micro text-ink-muted">
-            {produceKind(row.produce, locale)}
-            {' · '}
-            {kindsOf(row)
-              .map((kind) => t(KIND_KEY[kind]))
-              .join(' · ')}
-            {generalised && (
-              <>
+          {/* The dot is always in the flow, transparent when the row is quiet,
+              so the names stay on one left edge instead of shifting by 14px
+              between a row that answers now and one that does not. */}
+          <div className="flex gap-2">
+            <span
+              className={cx(
+                'mt-[0.55rem] size-1.5 shrink-0 rounded-full',
+                activeNow ? 'bg-accent' : 'bg-transparent',
+              )}
+            >
+              {activeNow && <span className="sr-only">{t('seasonable.table.inSeasonNow')}</span>}
+            </span>
+            <div className="min-w-0">
+              <span
+                className={cx(
+                  'block text-body-sm',
+                  activeNow ? 'text-ink-strong' : 'text-ink-body',
+                )}
+              >
+                {produceName(row.produce)}
+              </span>
+              <span className="mt-0.5 block font-mono text-micro text-ink-muted">
+                {produceKind(row.produce, locale)}
                 {' · '}
-                <span className="text-ink-muted italic">{t('seasonable.row.generalised')}</span>
-              </>
-            )}
-          </span>
-          <button
-            type="button"
-            onClick={() => setOpen((was) => !was)}
-            aria-expanded={open}
-            aria-controls={panelId}
-            className="mt-1 block text-left font-mono text-micro text-ink-muted underline-offset-2 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            {open ? t('seasonable.row.hideSource') : t('seasonable.row.showSource')}
-          </button>
+                {kindsOf(row)
+                  .map((kind) => t(KIND_KEY[kind]))
+                  .join(' · ')}
+                {generalised && (
+                  <>
+                    {' · '}
+                    <span className="text-ink-muted italic">{t('seasonable.row.generalised')}</span>
+                  </>
+                )}
+              </span>
+              <button
+                type="button"
+                onClick={() => setOpen((was) => !was)}
+                aria-expanded={open}
+                aria-controls={panelId}
+                className="mt-1 block text-left font-mono text-micro text-ink-muted underline-offset-2 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                {open ? t('seasonable.row.hideSource') : t('seasonable.row.showSource')}
+              </button>
+            </div>
+          </div>
         </th>
 
         {Array.from({ length: 12 }, (_, month) => (
           <Cell
             key={month}
-            early={row.calendar[month * 2]}
-            late={row.calendar[month * 2 + 1]}
-            nowHalf={month === nowMonth ? (half % 2 === 0 ? 'early' : 'late') : null}
+            calendar={row.calendar}
+            month={month}
+            now={month === nowMonth ? (nowLate ? 'late' : 'early') : null}
           />
         ))}
       </tr>
@@ -658,19 +763,25 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
 }
 
 type CellProps = {
-  early: WindowKind | null;
-  late: WindowKind | null;
-  nowHalf: 'early' | 'late' | null;
+  calendar: readonly (WindowKind | null)[];
+  month: number;
+  now: 'early' | 'late' | null;
 };
 
 /**
- * One month, drawn as its two fortnights.
+ * One month of the lane, drawn as its two fortnights.
+ *
+ * The cell takes the whole calendar rather than its own two halves because a
+ * bar has to know its neighbours: a fortnight rounds its edge only where the
+ * run it belongs to ends, and the run crosses cell boundaries. Reading one
+ * cell either side is what turns twenty-four marks into however many windows
+ * the row actually has.
  *
  * The three window kinds stay three geometries rather than three colours —
- * solid full height for open field, a hatch for glass, a low bar for storage.
- * That is not a style choice repeated for its own sake: SC 1.4.1 forbids
- * carrying meaning in hue alone, and every face on this site is subset to
- * Latin-1 plus a short extras list, so the geometric-shape glyphs that would
+ * the lane's full height for open field, a hatched band for glass, a low bar
+ * for storage. That is not a style choice repeated for its own sake: SC 1.4.1
+ * forbids carrying meaning in hue alone, and every face on this site is subset
+ * to Latin-1 plus a short extras list, so the geometric-shape glyphs that would
  * have been the easy answer render as fallback dots. Print this table in
  * greyscale and it still parses.
  *
@@ -679,8 +790,10 @@ type CellProps = {
  * it — so the cell announces as a sentence without any of that being written
  * into an aria-label by hand.
  */
-function Cell({ early, late, nowHalf }: CellProps) {
+function Cell({ calendar, month, now }: CellProps) {
   const { t } = useTranslation();
+  const early = calendar[month * 2];
+  const late = calendar[month * 2 + 1];
   const kinds = [early, late].filter((k): k is WindowKind => k !== null);
   const spoken =
     kinds.length === 0
@@ -694,45 +807,102 @@ function Cell({ early, late, nowHalf }: CellProps) {
           .join(', ');
 
   return (
-    // The rule is anchored to the cell rather than to the half inside it, so
-    // it spans the row's full height instead of the 32px the marks occupy.
+    // The cursor is anchored to the cell rather than to the half inside it, so
+    // it spans the row's full height instead of the 20px the lane occupies.
     // Anchored to the half it broke into one tick per row, which read as four
     // marks rather than one axis.
     <td className="relative p-0 align-middle">
       {spoken && <span className="sr-only">{spoken}</span>}
-      <div className="flex h-8 items-center gap-px px-px">
-        <Half kind={early} />
-        <Half kind={late} />
-      </div>
-      {nowHalf && (
-        <span
-          aria-hidden="true"
+      <div className="flex h-10 items-center">
+        <div
           className={cx(
-            'pointer-events-none absolute inset-y-0 w-0.5 bg-accent',
-            nowHalf === 'early' ? 'left-0' : 'left-1/2',
+            'relative flex h-5 w-full bg-canvas-band',
+            month === 0 && 'rounded-l-[3px]',
+            month === 11 && 'rounded-r-[3px]',
           )}
-        />
+        >
+          {/* Scored in the page's own ground rather than a hairline: the month
+              boundary has to survive being crossed by a bar that is darker than
+              any rule would be, and a notch of canvas reads through it where a
+              grey line would disappear under it. */}
+          {month > 0 && (
+            <span aria-hidden="true" className="absolute inset-y-0 left-0 w-px bg-canvas" />
+          )}
+          <Half kind={early} prev={calendar[month * 2 - 1] ?? null} next={late} />
+          <Half kind={late} prev={early} next={calendar[month * 2 + 2] ?? null} />
+        </div>
+      </div>
+      {now && (
+        <>
+          <span
+            aria-hidden="true"
+            className={cx(
+              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent',
+              now === 'early' ? 'left-0' : 'left-1/2',
+            )}
+          />
+          <span
+            aria-hidden="true"
+            className={cx(
+              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent',
+              now === 'early' ? 'left-1/2 -translate-x-full' : 'right-0',
+            )}
+          />
+        </>
       )}
     </td>
   );
 }
 
-/** One fortnight: a mark if something is happening in it, nothing if not. */
-function Half({ kind }: { kind: WindowKind | null }) {
+/**
+ * One fortnight of the lane: a mark if something is happening in it, the empty
+ * track if not.
+ *
+ * `prev` and `next` are the fortnights either side, across cell boundaries.
+ * The corner rounds only where the kind changes, so a six-month window is one
+ * capsule with two ends rather than twelve ticks with twenty-four.
+ */
+function Half({
+  kind,
+  prev,
+  next,
+}: {
+  kind: WindowKind | null;
+  prev: WindowKind | null;
+  next: WindowKind | null;
+}) {
   return (
-    <span className="flex h-full flex-1 items-center">
+    // Positioned, so the marks paint over the month score rather than under it.
+    <span className="relative flex h-full flex-1 items-center">
       {kind && (
         <span
           aria-hidden="true"
           className={cx(
-            'block w-full rounded-[1px]',
-            kind === 'open-field' && 'h-4 bg-project-food-mark',
-            kind === 'greenhouse' && 'hatch-food-mark h-4',
-            kind === 'stored' && 'h-1.5 bg-project-food-mark-quiet',
+            'block w-full',
+            prev !== kind && 'rounded-l-[3px]',
+            next !== kind && 'rounded-r-[3px]',
+            kind === 'open-field' && 'h-full bg-project-food-mark',
+            kind === 'greenhouse' && 'hatch-food-mark h-full',
+            kind === 'stored' && 'h-2 bg-project-food-mark-quiet',
           )}
         />
       )}
     </span>
+  );
+}
+
+/** A legend swatch, drawn by the same rules a fortnight in the lane is. */
+function Mark({ kind, className }: { kind: WindowKind; className?: string }) {
+  return (
+    <span
+      className={cx(
+        'block w-full',
+        kind === 'open-field' && 'h-5 bg-project-food-mark',
+        kind === 'greenhouse' && 'hatch-food-mark h-5',
+        kind === 'stored' && 'h-2 bg-project-food-mark-quiet',
+        className,
+      )}
+    />
   );
 }
 /**

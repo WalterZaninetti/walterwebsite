@@ -427,10 +427,17 @@
      mark; the pale green measures 1.26:1 there and would draw nothing. Both
      rungs are now solved at the world's hue 138, moving lightness only, so
      the strip is this green light and dark rather than two colours standing
-     near each other. -quiet gains headroom in the move: 3.21 against a 3:1
-     floor where the terracotta had 3.10. */
-  --project-food-mark: #32611f;       /* 7.05:1 vs canvas */
-  --project-food-mark-quiet: #689956; /* 3.21:1 vs canvas */
+     near each other.
+
+     The ground under them is --canvas-band, not --canvas: the table draws each
+     row's year as a filled lane so an empty month is visibly a track rather
+     than page. That moves the floor, and it moves it the wrong way in light —
+     -quiet measured 2.99:1 on the lane, a hundredth under, the same margin the
+     field well ran into. It is one step darker for it, and gains rather than
+     loses on canvas. In dark the lane is deeper than canvas, so the same value
+     comes out ahead there without being touched. */
+  --project-food-mark: #32611f;       /* 6.81:1 vs lane · 7.05 vs canvas */
+  --project-food-mark-quiet: #649453; /* 3.17:1 vs lane · 3.42 vs canvas */
 
   --hero-glow: none;
 
@@ -723,9 +730,11 @@
   --project-food-seam: #a1cc93;                  /* 10.18 canvas · 7.36 band */
   --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
   /* Both rungs solved at the world's hue 138 against the dark canvas, moving
-     lightness only — the same two roles as light, re-measured not re-picked. */
-  --project-food-mark: #97c188;       /* 9.06:1 vs canvas */
-  --project-food-mark-quiet: #4b723d; /* 3.31:1 vs canvas */
+     lightness only — the same two roles as light, re-measured not re-picked.
+     The lane is darker than canvas in this scheme, so both rungs come out
+     above their on-canvas figure rather than below it. */
+  --project-food-mark: #97c188;       /* 9.63:1 vs lane · 9.06 vs canvas */
+  --project-food-mark-quiet: #4b723d; /* 3.49:1 vs lane · 3.31 vs canvas */
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,
@@ -1068,15 +1077,21 @@
 }
 
 /* Greenhouse, in the year strip. Follows hatch-food's shape but is authored in
-   the on-canvas mark rather than the band's cream, and at a quarter of the
+   the on-canvas mark rather than the band's cream, and at a fraction of the
    pitch: the segments it fills are 11.6px wide at 320px, and a 9px stripe in
    one would read as a solid block. The angle stays 135deg so a hatched segment
-   and the card above it lean the same way. */
+   and the card above it lean the same way.
+
+   The wash under the stripes is what makes it a *band* rather than a texture
+   floating on the lane. Without it a glass window and an empty month differ
+   only by 40% coverage of a thin line, which is the difference the reader is
+   least able to see at a glance and the one the row most needs to make. */
 @utility hatch-food-mark {
-  background: repeating-linear-gradient(
+  background-color: color-mix(in oklab, var(--project-food-mark) 18%, transparent);
+  background-image: repeating-linear-gradient(
     135deg,
-    var(--project-food-mark) 0 1.5px,
-    transparent 1.5px 4.5px
+    var(--project-food-mark) 0 2px,
+    transparent 2px 5px
   );
 }
 

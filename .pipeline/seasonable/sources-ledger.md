@@ -656,3 +656,59 @@ Canicattì, Fico Bianco del Cilento, Cipollotto Nocerino, Fagiolo di Sarconi, Fa
 Fagiolo Cuneo. Montella was read and is negative. The rest are an open, low-priority seam.
 
 58 designations, 63 documented windows, 2 generalised, **74 of 107 provinces**, 16 of 20 regions.
+
+---
+
+## 2026-09-03 (eighth pass) — the four silent regions, closed out
+
+Every remaining region was worked to a verdict rather than left as "no coverage". None can be
+answered from the class-1.6 corpus as the rules currently stand, and two are one judgement away.
+
+### Valle d'Aosta — nothing exists
+
+No DOP or IGP in class 1.6 names any Valdostan comune. Not a gap in our reading; there is no
+designation to read.
+
+### Molise — nothing exists
+
+Same. The only apparent hit, Fagiolo Cannellino di Atina, mentions Isernia solely as a road name
+in its boundary description: «il ponte della Strada Provinciale Roccasecca – Isernia». Its zone is
+Frosinone.
+
+### Liguria — two candidates, both blocked
+
+- **Olive Taggiasche Liguri IGP** — «La raccolta … deve essere effettuata **entro il 31 marzo** di
+  ogni anno». An end with no start. Unusable, and unchanged from the earlier check.
+- **Basilico Genovese DOP** — the interesting one. Its zone is the whole Tyrrhenian slope of the
+  region, so it would answer for all four Ligurian provinces at once. But it states no field window
+  at all: the only temporal clauses are «in ambiente protetto la coltivazione può essere svolta
+  **tutto l'anno**» and a 31 January reporting deadline.
+
+  A whole-year window is what the Mela Alto Adige precedent rejected as true and useless. **This
+  one may not be the same case.** Alto Adige's year was a commercialisation artefact for a fruit
+  nobody picks in February; Genoese basil under glass genuinely is cut every week of the year, and
+  the honest answer to "is this being picked near me now" in Genova is yes, always, under
+  protection. Shipping it would also give `greenhouse` — a kind kept in the type and deliberately
+  never used — its first and entirely accurate row.
+
+### Friuli-Venezia Giulia — Brovada, and only Brovada
+
+**Brovada DOP** states both ends twice: the turnips «dal 1° settembre … entro il 31 dicembre», and
+consumption «dal 26 di settembre … il 15 maggio». It is excluded on one ground only — the
+designation protects a fermented product, not fresh produce, the same rule that excluded Farina di
+Neccio, Farina di castagne della Lunigiana and Amarene Brusche di Modena.
+
+### The register holds no surprises
+
+The EU register's 127 registered Italian class-1.6 designations were diffed against MASAF's index of
+129. The two apparent gaps were both artefacts of name matching — «Pomodoro S. Marzano» against
+«Pomodoro San Marzano», and «Peperone di Senise» against «Peperoni di Senise». Senise was read and
+gives a ripeness criterion, not dates: «a partire dal momento in cui le bacche raggiungono la
+maturazione commerciale … e fino al termine della produzione della pianta».
+
+### What is left
+
+Seven unread image-scan disciplinari: Arancia Rossa di Sicilia, Uva da tavola di Canicattì, Fico
+Bianco del Cilento, Cipollotto Nocerino, Fagiolo di Sarconi, Fagiolo di Sorana, Fagiolo Cuneo.
+They are readable by rendering the pages. **None covers a province that is currently silent**, so
+they add products, not reach. That is the whole of the remaining seam in this corpus.
