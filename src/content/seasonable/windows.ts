@@ -41,7 +41,47 @@ const w = (
   start: number,
   end: number,
   source: string,
-): Window => ({ produce, provinces, kind, start, end, source });
+): Window => ({
+  produce,
+  provinces,
+  kind,
+  start,
+  end,
+  sources: [source],
+  basis: 'documented',
+});
+
+/**
+ * A window nobody wrote down: the union of the documented designations for the
+ * same species, offered to provinces in a region where at least one of those
+ * designations sits and where no document names the province itself.
+ *
+ * It answers *when* a species is picked, never *whether* it grows where you are
+ * standing — a disciplinare names its comuni, and this does not.
+ *
+ * Only two species earn it. The rule is measured, not chosen: at least three
+ * documented designations, leave-one-out coverage of 100% (the union of any two
+ * cherry designations contains the third), and a union no more than one
+ * half-month wider than the designations it generalises. Peach fails on both
+ * counts — its three designations share one Sicilian climate and still spread
+ * across five half-months — and so do potato, artichoke and asparagus.
+ * `.pipeline/seasonable/model/README.md` has the numbers.
+ */
+const g = (
+  produce: string,
+  provinces: readonly string[],
+  start: number,
+  end: number,
+  sources: readonly string[],
+): Window => ({
+  produce,
+  provinces,
+  kind: 'open-field',
+  start,
+  end,
+  sources,
+  basis: 'generalised',
+});
 
 export const windows: readonly Window[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
@@ -114,6 +154,25 @@ export const windows: readonly Window[] = [
   w('pescabivona', ['ag'], 'open-field', 10, 19, 'pescabivona'),
   // "viene effettuata esclusivamente a mano nei mesi di luglio, agosto e settembre"
   w('susina-dro', ['tn'], 'open-field', 12, 17, 'susina-dro'),
+  // Union of the three cherry designations, all of which state 1 May - 31 July
+  // despite sitting 450 km apart in Campania, Toscana and Emilia-Romagna.
+  g(
+    'cherry-generic',
+    ['ar', 'bn', 'ce', 'fc', 'fe', 'fi', 'gr', 'li', 'lu', 'ms', 'na', 'pc', 'po', 'pr', 'pt', 'ra', 're', 'rn', 'si'],
+    8,
+    13,
+    ['ciliegia-bracigliano', 'ciliegia-lari', 'ciliegia-vignola'],
+  ),
+  // Union of the six chestnut designations, which run from Cuneo to Salerno and
+  // vary by a single half-month between them.
+  g(
+    'chestnut-generic',
+    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'lu', 'ms', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'to', 'vb', 'vc', 've', 'vi', 'vr'],
+    16,
+    21,
+    ['castagna-cuneo', 'castagna-monte-amiata', 'castagna-vallerano', 'marrone-combai', 'marrone-serino', 'marroni-monfenera'],
+  ),
+
   // ── Vegetables ───────────────────────────────────────────────────────────
   // "L'estirpazione dell'Aglio di Voghiera avviene dal 10 giugno sino al 31
   //  luglio"

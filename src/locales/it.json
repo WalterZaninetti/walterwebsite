@@ -554,6 +554,8 @@
       "showSource": "Da dove viene questa data",
       "hideSource": "Chiudi",
       "consulted": "testo consolidato, consultato il {{date}}.",
+      "generalised": "generalizzato",
+      "generalisedLead": "Nessun disciplinare nomina {{place}}. Questa è la finestra su cui concordano le {{count}} denominazioni qui sotto, tutte altrove: dice quando si raccoglie, non che qui si coltivi.",
       "basisTail": "La zona di quel documento comprende {{place}}."
     },
     "kind": {
@@ -570,15 +572,15 @@
     },
     "s1": {
       "heading": "Come decide",
-      "body": "Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte nello stesso momento. Questo non fa la media. Tiene solo i prodotti a denominazione, perché un disciplinare DOP o IGP è l'unico documento italiano che fissa insieme una finestra di raccolta e i comuni esatti in cui vale: così la risposta può essere per provincia, e ogni data è una citazione invece che un giudizio. Il prezzo è l'ampiezza: un disciplinare ti dice quando si taglia il Carciofo di Paestum, e niente del tutto sui carciofi in generale."
+      "body": "Un calendario per l'Italia sbaglia sulla Sicilia e sul Piemonte nello stesso momento. Questo non fa la media. Quasi ogni riga è un prodotto a denominazione, perché un disciplinare DOP o IGP è l'unico documento italiano che fissa insieme una finestra di raccolta e i comuni esatti in cui vale: così la risposta può essere per provincia, e la data è una citazione invece che un giudizio. Due righe sono segnate come generalizzate: dove tre o più denominazioni dello stesso frutto concordano su una finestra, quella finestra vale per il resto della loro regione, e la riga lo dice. Il prezzo è l'ampiezza: un disciplinare ti dice quando si taglia il Carciofo di Paestum, e niente del tutto sui carciofi in generale."
     },
     "s2": {
       "heading": "Cosa non può dirti",
-      "body": "Non sa niente di quest'anno. Una primavera fredda o un settembre caldo spostano le date vere e qui non si sposta niente: le finestre sono l'anno normale, non quello in cui sei. Tiene cinquantaquattro denominazioni, che sono un angolo piccolo di quello che compri, e metà delle province non è nominata da nessun disciplinare. Un elenco vuoto vuol dire che per dove sei non ho un documento. Non è un giudizio su cosa cresce lì."
+      "body": "Non sa niente di quest'anno. Una primavera fredda o un settembre caldo spostano le date vere e qui non si sposta niente: le finestre sono l'anno normale, non quello in cui sei. Tiene cinquantaquattro denominazioni, che sono un angolo piccolo di quello che compri, e un terzo delle province non è nominato da niente. Un elenco vuoto vuol dire che per dove sei non ho un documento. Non è un giudizio su cosa cresce lì."
     },
     "s3": {
       "heading": "Da dove vengono le date",
-      "body": "Ogni finestra qui dentro è una frase presa da un disciplinare DOP o IGP. Quasi tutti portano l'anno in cui sono usciti; alcuni sono il testo consolidato del ministero, che è la versione in vigore e non porta nessuna data, e allora trovi il giorno in cui l'ho letto. Tocca una riga per leggere la frase e seguire il link. Niente è nell'elenco perché suonava giusto: moltissime denominazioni dicono solo quando la raccolta comincia e mai quando finisce, e mezza finestra non è una finestra, quindi quelle qui non ci sono.",
+      "body": "Quasi ogni finestra qui dentro è una frase presa da un disciplinare DOP o IGP. Quasi tutti portano l'anno in cui sono usciti; alcuni sono il testo consolidato del ministero, che è la versione in vigore e non porta nessuna data, e allora trovi il giorno in cui l'ho letto. Le due righe generalizzate non citano nessuna frase sulla tua provincia: sono la finestra su cui le loro denominazioni concordano, e rimandano a tutte. Tocca una riga per leggere la frase e seguire il link. Niente è nell'elenco perché suonava giusto: moltissime denominazioni dicono solo quando la raccolta comincia e mai quando finisce, e mezza finestra non è una finestra, quindi quelle qui non ci sono.",
       "ask": "Se lo coltivi o lo compri ogni settimana, sai qualcosa che i documenti non sanno. Le date di questa pagina sono quelle che ho potuto citare; quelle che correggeresti tu valgono di più.",
       "askLink": "Dimmi cosa non va",
       "askSubject": "Seasonable: {{place}}, {{half}}"

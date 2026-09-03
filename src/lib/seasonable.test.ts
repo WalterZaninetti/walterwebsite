@@ -70,7 +70,10 @@ test('every designation names itself and says what it is', () => {
   for (const p of produce) {
     assert.ok(p.name.length > 0, `${p.id} has no name`);
     assert.ok(p.en.length > 0 && p.it.length > 0, `${p.id} is missing a kind`);
-    assert.ok(p.designation === 'DOP' || p.designation === 'IGP', `${p.id}: ${p.designation}`);
+    assert.ok(
+      p.designation === 'DOP' || p.designation === 'IGP' || p.designation === null,
+      `${p.id}: ${p.designation}`,
+    );
     // The designation is the document's, so it must not be pre-suffixed here —
     // produceName() appends it, and "Carciofo di Paestum IGP IGP" is the bug.
     assert.doesNotMatch(p.name, /\b(DOP|IGP)\b/, `${p.id} carries its designation twice`);
@@ -83,11 +86,60 @@ test('every window resolves, and lands somewhere real', () => {
   const provinceIds = ids(provinces);
   for (const w of windows) {
     assert.ok(produceIds.has(w.produce), `window for unknown produce ${w.produce}`);
-    assert.ok(sourceIds.has(w.source), `window cites unknown source ${w.source}`);
+    assert.ok(w.sources.length > 0, `${w.produce} cites no source at all`);
+    for (const id of w.sources) assert.ok(sourceIds.has(id), `window cites unknown source ${id}`);
     assert.ok(w.provinces.length > 0, `${w.produce} answers for no province`);
     for (const p of w.provinces) assert.ok(provinceIds.has(p), `${w.produce} names unknown province ${p}`);
     assert.equal(new Set(w.provinces).size, w.provinces.length, `${w.produce} repeats a province`);
   }
+});
+
+test('a species entry exists only to carry a generalised window', () => {
+  // `designation: null` is the licence to render a row without a DOP or IGP
+  // after it. Nothing else may use it: a species that carried a documented
+  // window would be a quoted claim about "cherry", which no disciplinare makes.
+  const speciesIds = new Set(produce.filter((p) => p.designation === null).map((p) => p.id));
+  for (const w of windows) {
+    if (speciesIds.has(w.produce)) {
+      assert.equal(w.basis, 'generalised', `${w.produce} is a species but carries a documented window`);
+    } else {
+      assert.equal(w.basis, 'documented', `${w.produce} is a designation but carries a generalised window`);
+    }
+  }
+});
+
+test('a generalised window is the union of designations it actually cites', () => {
+  // The row must be exactly what it claims: the union of the documented windows
+  // for the same species, drawn from at least three designations. If someone
+  // widens one by hand this fails, which is the point.
+  const byId = new Map(produce.map((p) => [p.id, p]));
+  for (const w of windows.filter((x) => x.basis === 'generalised')) {
+    const kind = byId.get(w.produce)?.en;
+    assert.ok(kind, `${w.produce} has no kind`);
+    assert.ok(w.sources.length >= 3, `${w.produce} generalises from only ${w.sources.length} designations`);
+    const parts = windows.filter(
+      (x) => x.basis === 'documented' && w.sources.includes(x.sources[0]) && byId.get(x.produce)?.en === kind,
+    );
+    assert.equal(parts.length, w.sources.length, `${w.produce} cites a source that is not one of its parts`);
+    assert.equal(Math.min(...parts.map((x) => x.start)), w.start, `${w.produce} start is not the union's`);
+    assert.equal(Math.max(...parts.map((x) => x.end)), w.end, `${w.produce} end is not the union's`);
+  }
+});
+
+test('a generalised window never lands where a document already answers', () => {
+  const byId = new Map(produce.map((p) => [p.id, p]));
+  for (const p of provinces) {
+    const rows = seasonYear(dataset, p.id);
+    const kinds = rows.flatMap((r) => r.entries.map((e) => [r.produce.en, e.window.basis] as const));
+    for (const [kind, basis] of kinds) {
+      if (basis !== 'generalised') continue;
+      assert.ok(
+        !kinds.some(([k, b]) => k === kind && b === 'documented'),
+        `${p.id} renders a generalised ${kind} beside a documented one`,
+      );
+    }
+  }
+  assert.ok(byId.size > 0);
 });
 
 test('every window sits inside the year', () => {
@@ -174,7 +226,7 @@ test('every source points at a document, not at a homepage', () => {
 });
 
 test('no source is declared and left uncited', () => {
-  const cited = new Set(windows.map((w) => w.source));
+  const cited = new Set(windows.flatMap((w) => [...w.sources]));
   for (const s of sources) assert.ok(cited.has(s.id), `${s.id} is declared but no window cites it`);
 });
 
@@ -293,12 +345,12 @@ test('every rendered entry carries a resolvable source', () => {
   for (const p of provinces) {
     for (const row of seasonYear(dataset, p.id)) {
       for (const e of row.entries) {
-        assert.ok(e.source.url.startsWith('https://'), `${e.produce.id} has no source url`);
-        assert.ok(
-          e.source.year === undefined || e.source.year > 0,
-          `${e.produce.id} cites an unverified year`,
-        );
-        assert.ok(e.source.accessed, `${e.produce.id} cites a source with no accessed date`);
+        assert.ok(e.sources.length > 0, `${e.produce.id} renders with no source`);
+        for (const s of e.sources) {
+          assert.ok(s.url.startsWith('https://'), `${e.produce.id} has no source url`);
+          assert.ok(s.year === undefined || s.year > 0, `${e.produce.id} cites an unverified year`);
+          assert.ok(s.accessed, `${e.produce.id} cites a source with no accessed date`);
+        }
       }
     }
   }

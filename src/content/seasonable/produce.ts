@@ -24,6 +24,14 @@ import type { Produce } from '../../lib/seasonable';
 const fruit = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, it: string): Produce =>
   ({ id, name, designation, category: 'fruit', en, it });
 
+/**
+ * A species rather than a designation: no DOP or IGP, because nobody protects
+ * "cherry". These exist only to carry the generalised tier, and `designation:
+ * null` is what makes them render without a suffix.
+ */
+const species = (id: string, name: string, category: Produce['category'], en: string, it: string): Produce =>
+  ({ id, name, designation: null, category, en, it });
+
 const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, it: string): Produce =>
   ({ id, name, designation, category: 'vegetable', en, it });
 
@@ -54,6 +62,9 @@ export const produce: readonly Produce[] = [
   fruit('pesca-leonforte', 'Pesca di Leonforte', 'IGP', 'peach', 'pesca'),
   fruit('pescabivona', 'Pescabivona', 'IGP', 'peach', 'pesca'),
   fruit('susina-dro', 'Susina di Dro', 'DOP', 'plum', 'susina'),
+  species('cherry-generic', 'Cherry', 'fruit', 'cherry', 'ciliegia'),
+  species('chestnut-generic', 'Chestnut', 'fruit', 'chestnut', 'castagna'),
+
   // ── Vegetables ───────────────────────────────────────────────────────────
   veg('aglio-voghiera', 'Aglio di Voghiera', 'DOP', 'garlic', 'aglio'),
   veg('asparago-badoere', 'Asparago di Badoere', 'IGP', 'asparagus', 'asparago'),

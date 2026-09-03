@@ -554,6 +554,8 @@
       "showSource": "Where this date comes from",
       "hideSource": "Close",
       "consulted": "consolidated text, consulted {{date}}.",
+      "generalised": "generalised",
+      "generalisedLead": "No disciplinare names {{place}}. This is the span the {{count}} designations below agree on, all of them elsewhere — it says when this is picked, not that it is grown here.",
       "basisTail": "The zone in that document takes in {{place}}."
     },
     "kind": {
@@ -570,15 +572,15 @@
     },
     "s1": {
       "heading": "How it decides",
-      "body": "A calendar for Italy is wrong for Sicily and for Piedmont at the same moment. This one doesn't average them. It shows only produce with a protected designation, because a DOP or IGP disciplinare is the one Italian document that fixes both a harvest window and the exact comuni it applies to — so the answer can be per province, and every date is a quotation rather than a judgement. What that costs is breadth: a disciplinare tells you when the Carciofo di Paestum is cut, and nothing whatsoever about artichokes in general."
+      "body": "A calendar for Italy is wrong for Sicily and for Piedmont at the same moment. This one doesn't average them. Almost every row is a protected designation, because a DOP or IGP disciplinare is the one Italian document that fixes both a harvest window and the exact comuni it applies to — so the answer can be per province, and the date is a quotation rather than a judgement. Two rows are marked generalised: where three or more designations for the same fruit agree on a window, that span is offered to the rest of their region, and the row says so. What that costs is breadth: a disciplinare tells you when the Carciofo di Paestum is cut, and nothing whatsoever about artichokes in general."
     },
     "s2": {
       "heading": "What it can't tell you",
-      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It holds fifty-four designations, which is a small corner of what you buy, and half the provinces are named by no disciplinare at all. An empty list means I have no document for where you are. It is not a verdict on what grows there."
+      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It holds fifty-four designations, which is a small corner of what you buy, and a third of the provinces are named by nothing at all. An empty list means I have no document for where you are. It is not a verdict on what grows there."
     },
     "s3": {
       "heading": "Where the dates come from",
-      "body": "Every window in here is one sentence from one DOP or IGP disciplinare. Most carry the year they were published; some are the ministry's consolidated text, which is the version in force and prints no date at all, so those show the day I read them instead. Tap any row to read the sentence and follow the link. Nothing is on the list because it sounded right: a great many designations state only when the harvest begins and never when it ends, and half a window is not a window, so those aren't here.",
+      "body": "Almost every window in here is one sentence from one DOP or IGP disciplinare. Most carry the year they were published; some are the ministry's consolidated text, which is the version in force and prints no date at all, so those show the day I read them instead. The two generalised rows quote no sentence about your province — they are the span their designations agree on, and they link to every one of them. Tap any row to read the sentence and follow the link. Nothing is on the list because it sounded right: a great many designations state only when the harvest begins and never when it ends, and half a window is not a window, so those aren't here.",
       "ask": "If you grow this or buy it every week, you know something the documents don't. The dates on this page are the ones I could quote; the ones you'd correct are worth more.",
       "askLink": "Tell me what's wrong",
       "askSubject": "Seasonable: {{place}}, {{half}}"

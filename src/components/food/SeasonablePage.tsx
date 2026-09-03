@@ -569,6 +569,10 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
   const [open, setOpen] = useState(false);
   const panelId = `seasonable-src-${row.produce.id}`;
   const activeNow = row.calendar[half] !== null;
+  // A row is generalised when nothing in it was quoted from a document naming
+  // this province. The two bases never mix on one row — seasonYear drops the
+  // generalised window wherever a documented one exists — so `every` is exact.
+  const generalised = row.entries.every((e) => e.window.basis === 'generalised');
 
   return (
     <>
@@ -591,6 +595,12 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
             {kindsOf(row)
               .map((kind) => t(KIND_KEY[kind]))
               .join(' · ')}
+            {generalised && (
+              <>
+                {' · '}
+                <span className="text-ink-muted italic">{t('seasonable.row.generalised')}</span>
+              </>
+            )}
           </span>
           <button
             type="button"
@@ -618,6 +628,11 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
           {/* 13 columns: the designation plus the twelve months. */}
           <td colSpan={13} className="pb-3 pl-0">
             <div className="grid gap-1">
+              {generalised && (
+                <p className="max-w-[62ch] font-mono text-micro text-ink-body">
+                  {t('seasonable.row.generalisedLead', { place, count: sourcesOf(row).length })}
+                </p>
+              )}
               {sourcesOf(row).map((source) => (
                 <p key={source.id} className="max-w-[62ch] font-mono text-micro text-ink-body">
                   <a
@@ -630,8 +645,8 @@ function TableRow({ row, half, locale, place, nowMonth }: TableRowProps) {
                   {', '}
                   {source.year === undefined
                     ? t('seasonable.row.consulted', { date: source.accessed })
-                    : `${source.year}.`}{' '}
-                  {t('seasonable.row.basisTail', { place })}
+                    : `${source.year}.`}
+                  {!generalised && <> {t('seasonable.row.basisTail', { place })}</>}
                 </p>
               ))}
             </div>

@@ -491,3 +491,58 @@ generalised from the designations already cited, carrying its cross-validated er
 ship as 1 May–31 July with a measured leave-one-out error of 0.00 half-months. That is not the
 modelled tier and it is close to the "widely reported" tier `brief.md` rejected, so it is a
 decision rather than a step.
+
+---
+
+## 2026-09-03 (fifth pass) — the generalised tier: two species, measured
+
+The modelled tier failed because climate does not drive a species' window; the *documents*
+turned out to. Three cherry designations 450 km apart state the same six half-months. That is a
+fact worth shipping, so it is shipped — as its own tier, marked as such.
+
+### The rule, and it is measured rather than chosen
+
+A species earns a generalised window only if all three hold:
+
+1. **At least three documented designations** for that species.
+2. **Leave-one-out coverage of 100%** — the union of any subset contains the held-out designation.
+3. **Union no more than one half-month wider than the mean designation it generalises.** A
+   generalisation materially wider than its parts has thrown away the answer.
+
+| species | n | union | width | mean part | LOO | verdict |
+|---|---|---|---|---|---|---|
+| cherry | 3 | 8→13 | 6 | 6.0 | 3/3 | **ships** |
+| chestnut | 6 | 16→21 | 6 | 5.0 | 6/6 | **ships** |
+| peach | 3 | 9→20 | 12 | 9.0 | 1/3 | fails 2 and 3 |
+| potato | 5 | 4→21 | 18 | 7.8 | 4/5 | fails 2 and 3 |
+| artichoke | 4 | 16→9 | 18 | 12.5 | 3/4 | fails 2 and 3 |
+| asparagus | 5 | 0→19 | 20 | 9.4 | 4/5 | fails 2 and 3 |
+
+Peach is the instructive failure: its three designations share one Sicilian climate and still
+spread across five half-months, so the union of any two never contains the third. Potato spans
+March to November once Galatina's *novella* meets Sila's mountain crop. Asparagus is broken by
+Canino, which is forced under plastic and picked from January.
+
+### Scoped to the region, not the country
+
+A generalised row is offered only to provinces **in a region where at least one of its
+designations sits**. Cherry therefore reaches the rest of Campania, Toscana and Emilia-Romagna;
+chestnut reaches the rest of Piemonte, Veneto, Toscana, Lazio and Campania. It is not offered to
+Sicily or Sardinia, because nothing in the corpus says sweet cherry or chestnut is commercially
+grown there, and this tier must not start answering *whether* a thing grows somewhere. It answers
+only *when* it is picked. The row says exactly that, in both languages.
+
+### What it cost and what it bought
+
+- `Window.source` became `Window.sources`, an array, because a generalised row genuinely rests on
+  every designation it unions and the reader can follow all of them. `Entry.sources` and
+  `sourcesOf` follow.
+- `Produce.designation` became nullable, for the two species entries.
+- `Window.basis` distinguishes `documented` from `generalised`, and three new tests hold the line:
+  a species entry may only carry a generalised window and a designation may only carry a
+  documented one; a generalised window must be exactly the union of the designations it cites,
+  from at least three of them; and no province may ever render a generalised row beside a
+  documented one for the same kind of thing.
+
+**73 of 107 provinces now answer, up from 54.** 34 are still silent. Designations remain 54;
+the two species entries are not designations and are not counted as such anywhere.

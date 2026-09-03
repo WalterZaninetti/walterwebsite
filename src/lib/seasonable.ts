@@ -42,7 +42,12 @@ export type Produce = {
    * in *these* comuni, and says nothing about artichokes in general.
    */
   name: string;
-  designation: 'DOP' | 'IGP';
+  /**
+   * `null` means this row is a species rather than a protected designation —
+   * "cherry", not "Ciliegia di Vignola". Only the generalised tier uses it, and
+   * `produceName` drops the suffix accordingly.
+   */
+  designation: 'DOP' | 'IGP' | null;
   category: 'fruit' | 'vegetable';
   /** What kind of thing it is, for grouping and for the English reader. */
   en: string;
@@ -116,7 +121,27 @@ export type Window = {
    *  mid-April, which is the common case for citrus. */
   start: HalfMonth;
   end: HalfMonth;
-  source: SourceId;
+  /**
+   * Every document this window rests on.
+   *
+   * A `documented` window has exactly one: the disciplinare the sentence was
+   * read from. A `generalised` one has all of the designations it was derived
+   * from, because that is literally what it is — their union — and the reader
+   * can follow every one of them.
+   */
+  sources: readonly SourceId[];
+  /**
+   * `documented` — one sentence, from one disciplinare, converted.
+   * `generalised` — no document names this province, so the window is the union
+   * of the designations for the same species elsewhere in the same region's
+   * country. It is a claim about *when* a species is picked, never about
+   * *whether* it is grown where you are standing.
+   *
+   * The two never compete: where a province has a documented window for a
+   * species, every generalised window for that species is dropped before
+   * rendering. The generalised tier only fills silence.
+   */
+  basis: 'documented' | 'generalised';
 };
 
 export type Dataset = {
@@ -132,7 +157,7 @@ export type Entry = {
   produce: Produce;
   kind: WindowKind;
   window: Window;
-  source: Source;
+  sources: readonly Source[];
 };
 
 /**
@@ -198,7 +223,7 @@ export function regionName(region: Region, locale: 'en' | 'it'): string {
 
 /** The designation is a proper noun: the same in both languages, by design. */
 export function produceName(produce: Produce): string {
-  return `${produce.name} ${produce.designation}`;
+  return produce.designation ? `${produce.name} ${produce.designation}` : produce.name;
 }
 
 /** What kind of thing it is — "artichoke" / "carciofo" — for grouping. */
@@ -224,22 +249,39 @@ export function seasonYear(data: Dataset, province: ProvinceId): readonly Season
 
   const rows = new Map<ProduceId, { produce: Produce; entries: Entry[]; calendar: (WindowKind | null)[] }>();
 
+  // A generalised window never argues with a document. Where this province has
+  // a documented window for a kind of thing, the generalised one for that same
+  // kind is dropped before rendering, so the reader is never shown a derived
+  // date beside a quoted one for the same fruit and left to work out which
+  // governs. `en` is the join key because it is already what the catalogue
+  // means by a kind of thing, and what the table groups on.
+  const documentedKinds = new Set(
+    data.windows
+      .filter((w) => w.basis === 'documented' && w.provinces.includes(here.id))
+      .map((w) => data.produce.find((x) => x.id === w.produce)?.en)
+      .filter((en): en is string => en !== undefined),
+  );
+
   for (const window of data.windows) {
     if (!window.provinces.includes(here.id)) continue;
 
     const produce = data.produce.find((x) => x.id === window.produce);
-    const source = data.sources.find((s) => s.id === window.source);
-    // A window whose produce or source id does not resolve is a broken row,
-    // not a row to render without provenance. The invariant test makes it
-    // unrepresentable; this drops it rather than shipping an uncited claim.
-    if (!produce || !source) continue;
+    const sources = window.sources
+      .map((id) => data.sources.find((s) => s.id === id))
+      .filter((s): s is Source => s !== undefined);
+    // A window whose produce does not resolve, or that has lost a document, is
+    // a broken row rather than one to render without provenance. The invariant
+    // test makes it unrepresentable; this drops it rather than shipping an
+    // uncited claim.
+    if (!produce || sources.length !== window.sources.length || sources.length === 0) continue;
+    if (window.basis === 'generalised' && documentedKinds.has(produce.en)) continue;
 
     let row = rows.get(produce.id);
     if (!row) {
       row = { produce, entries: [], calendar: Array.from({ length: HALF_MONTHS }, () => null) };
       rows.set(produce.id, row);
     }
-    row.entries.push({ produce, kind: window.kind, window, source });
+    row.entries.push({ produce, kind: window.kind, window, sources });
 
     for (let h = 0; h < HALF_MONTHS; h += 1) {
       if (!covers(h, window.start, window.end)) continue;
@@ -269,7 +311,8 @@ export function seasonYear(data: Dataset, province: ProvinceId): readonly Season
  */
 export function sourcesOf(row: SeasonRow): readonly Source[] {
   const seen = new Map<SourceId, Source>();
-  for (const entry of row.entries) if (!seen.has(entry.source.id)) seen.set(entry.source.id, entry.source);
+  for (const entry of row.entries)
+    for (const source of entry.sources) if (!seen.has(source.id)) seen.set(source.id, source);
   return [...seen.values()];
 }
 
