@@ -145,6 +145,7 @@ function Download() {
             <AccentButton
               href="/crate"
               download="crate.html"
+              tone="ocean"
               className="group flex h-13 w-full items-center justify-center gap-2.5 px-7 text-[13.5px] shadow-cta hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
             >
               <DownloadIcon className="size-[1.15em] shrink-0 transition-transform duration-150 group-hover:translate-y-0.5" />
@@ -299,12 +300,18 @@ function Band() {
       </div>
       <div className="relative">
         <span aria-hidden="true" className="block h-[3px] bg-project-dj-seam" />
-        {/* The tile keeps the site's clover, not the world's amber. It is the
-            site's stamp rather than the page's: the same green sticker sits on
-            all three shelf cards, over three different grounds, and that is
-            what ties the worlds together. Overriding it here would have made
-            this page the only one whose stamp matched its own band. */}
-        <Tile icon={DiscIcon} className="absolute top-1/2 left-5 -translate-y-1/2 md:left-10" />
+        {/* The tile used to keep the site's clover — one green sticker across
+            all three shelf cards was what tied the worlds together, and this
+            page overriding it would have made it the only one whose stamp
+            matched its own band.
+
+            It now takes the world's blue anyway. The argument held right up
+            until you looked at this page alone: the green was the one mark on
+            it that belonged to no world, and the shelf card is where the
+            three-stickers-alike reading happens, not here. Not the band's
+            amber either — that is the rung this page lights figures with, and
+            a sticker in it would compete with them. */}
+        <Tile icon={DiscIcon} tone={djTile} className="absolute top-1/2 left-5 -translate-y-1/2 md:left-10" />
       </div>
     </>
   );
@@ -366,6 +373,14 @@ function HeroWave() {
  */
 const cardIcons = { shelf: ShelfIcon, wave: WaveIcon, note: NoteIcon };
 
+/**
+ * All four stickers on the page, as one string. `Tile` takes fill, glyph and
+ * ring together rather than layering them, so the override is one token group
+ * — and the ring still resolves per scheme inside the token (cream in light,
+ * transparent in dark), which is what keeps this component from branching.
+ */
+const djTile = 'bg-project-dj-tile text-project-dj-tile-fg ring-2 ring-project-dj-tile-ring';
+
 function OpeningCards() {
   const { t } = useTranslation();
 
@@ -379,6 +394,7 @@ function OpeningCards() {
           >
             <Tile
               icon={cardIcons[card.icon]}
+              tone={djTile}
               className="absolute -top-6 left-6 lg:-top-7 md:left-7"
             />
             <div className="mb-3 flex items-center gap-3 md:mb-4">

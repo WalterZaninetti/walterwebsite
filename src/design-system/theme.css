@@ -248,6 +248,13 @@
   --accent-hover-fg: #fffdf4;  /* 12.07:1 */
   --accent-hover-alt: #cfead8;
   --accent-hover-alt-fg: #0d3d22; /* 9.61:1 */
+  /* The third hover, and the only one that is not the site's green. A rust
+     button that fills deep green on hover is the site's own gesture; on Crate
+     it was the last green left once the tile turned, so the button hovers into
+     the world it sits in. Ocean-900, the ramp's floor, so it reads as the same
+     blue gone dark rather than a second blue. */
+  --accent-hover-ocean: #0a3560;
+  --accent-hover-ocean-fg: #fffdf4; /* 12.19:1 */
   /* The rust's own cast, for a solid CTA that lifts on hover. Tinted rather
      than neutral for the reason --shadow-card is: black under a rust pill on
      cream reads as dirt under it. */
@@ -346,6 +353,21 @@
      a second colour standing near it. */
   --project-dj-mark: #15568f;       /* 7.33:1 vs canvas */
   --project-dj-mark-quiet: #5b98c4; /* 3.00:1 vs canvas */
+  /* Crate's own sticker. The site's clover stamps the other two worlds and
+     stamped this one too, on the reasoning that one green sticker across
+     three grounds is what ties the shelf together — overruled, because the
+     page's colour is the blue and a green tile on it was the one mark that
+     belonged to no world. It is the mark blue rather than a fourth value:
+     7.33 vs canvas, 7.61 vs the card it is punched over.
+
+     Against the band it measures 2.27:1, and that is the ring's job rather
+     than the fill's — one tile straddles the seam, and 2px of canvas cream
+     over navy is what draws its edge there (§1.4). The clover cleared 4.19
+     on the band because it was a mid green; no blue on this hue clears both
+     a cream canvas and a near-black band, so the edge carries it. */
+  --project-dj-tile: #15568f;      /* glyph 7.33:1 · 7.33 canvas · 7.61 surface */
+  --project-dj-tile-fg: #fffbe8;
+  --project-dj-tile-ring: #fffbe8;
   /* The hero wave's unlit rung — the only mark authored against the band
      rather than the canvas, because the wave is the one figure inside the
      world. One value serves both schemes: the two grounds are close enough
@@ -583,6 +605,10 @@
   --accent-hover-fg: #101510;  /* 17.78:1 */
   --accent-hover-alt: #fffbe8;
   --accent-hover-alt-fg: #101510;
+  /* Dark inverts the hover to a pale ground, as the other two do. Ocean-200
+     rather than the cream, so the gesture still lands in the page's blue. */
+  --accent-hover-ocean: #cfe6f8;
+  --accent-hover-ocean-fg: #0a3560; /* 9.66:1 */
   /* Amber on a near-black canvas: a cast has nothing to darken, so this one
      carries the accent's own hue and reads as light coming off the button. */
   --accent-shadow: 0 10px 26px -8px rgb(224 138 78 / 0.38);
@@ -655,6 +681,12 @@
   --project-dj-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
   --project-dj-mark: #7ab8e6;       /* 8.64:1 vs canvas */
   --project-dj-mark-quiet: #2f6a97; /* 3.19:1 vs canvas */
+  /* The tile inverts here for the same reason the site's does, and drops the
+     ring with it: 8.64 against the canvas and 7.81 against the cards, so
+     every ground it straddles is already clear of it. */
+  --project-dj-tile: #7ab8e6;      /* glyph 8.74:1 · 8.64 canvas · 7.81 surface */
+  --project-dj-tile-fg: #0a1224;
+  --project-dj-tile-ring: transparent;
   --project-dj-wave: #4a6fa5;       /* 3.57:1 on the dark band */
 
   /* Food inverts here, and that is a reversal of the old rule rather than an
@@ -823,6 +855,8 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-hover-fg: var(--accent-hover-fg);
   --color-accent-hover-alt: var(--accent-hover-alt);
+  --color-accent-hover-ocean: var(--accent-hover-ocean);
+  --color-accent-hover-ocean-fg: var(--accent-hover-ocean-fg);
   --color-accent-hover-alt-fg: var(--accent-hover-alt-fg);
 
   --color-sage: var(--sage);
@@ -878,6 +912,9 @@
   --color-project-dj-badge: var(--project-dj-badge);
   --color-project-dj-border: var(--project-dj-border);
   --color-project-dj-seam: var(--project-dj-seam);
+  --color-project-dj-tile: var(--project-dj-tile);
+  --color-project-dj-tile-fg: var(--project-dj-tile-fg);
+  --color-project-dj-tile-ring: var(--project-dj-tile-ring);
   --color-project-dj-mark: var(--project-dj-mark);
   --color-project-dj-mark-quiet: var(--project-dj-mark-quiet);
   --color-project-dj-wave: var(--project-dj-wave);
