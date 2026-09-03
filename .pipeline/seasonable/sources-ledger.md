@@ -390,3 +390,58 @@ rather than a text in force — castagna-monte-amiata, ciliegia-vignola, fragola
 patata-galatina, piennolo-vesuvio — and every one of their windows was confirmed correct against
 MASAF, so only the citation needs moving. Prefer, in order: an OJ C *modifica ordinaria
 approvata* notice; the registered specification on EUR-Lex; the ministry's consolidated text.
+
+---
+
+## 2026-09-03 (third pass) — off the aggregator entirely
+
+**No source points at `disciplinare.it` any more.** All 54 now resolve to `eur-lex.europa.eu` or
+`www.masaf.gov.it`, and a test rejects any other host, so the page can no longer lose its entire
+evidence base to one commercial site going away.
+
+The split, decided per row rather than by preference:
+
+- **9 to EUR-Lex** (`oj`), where a dated EU document states the whole shipped window verbatim:
+  Asparago Bianco di Bassano (OJ C 321, 2006), Carciofo di Paestum (C 153, 2003), Carciofo
+  Romanesco del Lazio (C 51, 2002), Castagna di Vallerano (C 190, 2008), Limone Interdonato
+  Messina (C 74, 2009), Patata della Sila (C 33, 2010), plus Ficodindia dell'Etna, Kiwi Latina and
+  Finocchio di Isola Capo Rizzuto from earlier passes.
+- **45 to MASAF** (`masaf`), the ministry's consolidated disciplinare, where no dated document
+  states a current whole window.
+
+All 54 URLs were fetched and returned 200/202 on 2026-09-03.
+
+### Rows where the dated EU text was rejected in favour of the ministry's
+
+Citing EUR-Lex would have shipped a window we know is superseded:
+
+| Designation | EU text says | In force says |
+|---|---|---|
+| Asparago di Badoere | tra il primo febbraio e il **31 maggio** (C 22, 2010) | …e il **30 giugno** |
+| Carota Novella di Ispica | a partire dal **20 febbraio** (C 122, 2010) | dal **1° febbraio** |
+| Pesca di Leonforte | dalla prima decade di **settembre** (C 266, 2009) | prima decade di **agosto** |
+| Pomodoro San Marzano | tra il **30 luglio** ed il **30 settembre** (C 73, 2010) | tra il **15 luglio** ed il **15 ottobre** |
+
+### Two rows the text in force no longer supports
+
+Re-reading the current disciplinare — rather than trusting a correctly-converted row — cost two
+entries. This is the failure mode the per-designation loop now warns about.
+
+- **Mela di Valtellina — deleted, both rows.** The current disciplinare has no harvest calendar at
+  all. §5.6 Raccolta fixes only a ripeness criterion ("L'inizio del periodo di raccolta coincide
+  con il momento in cui la mela raggiunge la maturazione ottimale"), and the per-variety table the
+  old row quoted is gone. §5.7 Conservazione gives a storage **end** with no start ("si conclude
+  entro la fine del mese di luglio dell'anno successivo per la varietà Gala"), which is half a
+  window. Sondrio no longer answers. The ministry's PDF is an image scan; this was read by
+  rendering the pages.
+- **Asparago Bianco di Cimadolmo — window moved, 5→9 became 4→9.** The text in force says only
+  "I primi turioni si raccolgono in marzo"; the version the row used to cite said "in marzo (il
+  venti circa)". The end, "non deve in ogni caso protrarsi oltre il 30 maggio", is unchanged.
+
+**Castagna del Monte Amiata** was checked the same way and confirmed: "La raccolta dei frutti deve
+avvenire tra settembre e novembre di ogni anno", exactly the shipped 16→21.
+
+### Where it leaves the dataset
+
+59 windows, 54 designations, 54 sources, 54 of 107 provinces, 16 of 20 regions. Every citation is
+a publisher of record; none is a proposal.

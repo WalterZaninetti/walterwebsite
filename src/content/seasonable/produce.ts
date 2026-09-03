@@ -48,7 +48,6 @@ export const produce: readonly Produce[] = [
   fruit('marroni-monfenera', 'Marroni del Monfenera', 'IGP', 'chestnut', 'castagna'),
   fruit('mela-rossa-cuneo', 'Mela Rossa Cuneo', 'IGP', 'apple', 'mela'),
   fruit('mela-val-di-non', 'Mela Val di Non', 'DOP', 'apple', 'mela'),
-  fruit('mela-valtellina', 'Mela di Valtellina', 'IGP', 'apple', 'mela'),
   fruit('oliva-ascolana', 'Oliva Ascolana del Piceno', 'DOP', 'olive', 'oliva'),
   fruit('pera-emilia-romagna', "Pera dell'Emilia Romagna", 'IGP', 'pear', 'pera'),
   fruit('pesca-delia', 'Pesca di Delia', 'IGP', 'peach', 'pesca'),

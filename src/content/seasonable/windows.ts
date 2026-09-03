@@ -98,14 +98,6 @@ export const windows: readonly Window[] = [
   // "deve effettuarsi nei mesi di agosto, settembre, ottobre e prima quindicina
   //  di novembre"
   w('mela-val-di-non', ['tn'], 'open-field', 14, 20, 'mela-val-di-non'),
-  // "Red Delicious: seconda decade di settembre-seconda decade di ottobre;
-  //  Golden Delicious: seconda decade di settembre-fine ottobre; Gala: seconda
-  //  decade di agosto-seconda decade di settembre"
-  w('mela-valtellina', ['so'], 'open-field', 15, 19, 'mela-valtellina'),
-  // "Red Delicious dalla raccolta a fine luglio dell'anno successivo; Golden
-  //  Delicious dalla raccolta a fine agosto dell'anno successivo; Gala dalla
-  //  raccolta a fine aprile dell'anno successivo"
-  w('mela-valtellina', ['so'], 'stored', 17, 15, 'mela-valtellina'),
   // "la raccolta va effettuata tra il 1° settembre ed il 20 ottobre di ciascun
   //  anno"
   w('oliva-ascolana', ['ap', 'fm', 'te'], 'open-field', 16, 19, 'oliva-ascolana'),
@@ -135,8 +127,10 @@ export const windows: readonly Window[] = [
   w('asparago-canino', ['vt'], 'open-field', 16, 19, 'asparago-canino'),
   // "La raccolta del prodotto inizia a marzo e si protrae fino a giugno"
   w('asparago-cantello', ['va'], 'open-field', 4, 11, 'asparago-cantello'),
-  // "I primi turioni si raccolgono in marzo (il 20 circa)" / "non deve ... protrarsi oltre il 30 maggio"
-  w('asparago-cimadolmo', ['tv'], 'open-field', 5, 9, 'asparago-cimadolmo'),
+  // "I primi turioni si raccolgono in marzo" / "Il periodo di raccolta non deve
+  //  in ogni caso protrarsi oltre il 30 maggio" — the text in force says only
+  //  "in marzo", where the version this row used to cite said "il 20 circa".
+  w('asparago-cimadolmo', ['tv'], 'open-field', 4, 9, 'asparago-cimadolmo'),
   // "va effettuata esclusivamente a mano a partire dal mese di Aprile fino alla
   //  fine di Agosto"
   w('cappero-eolie', ['me'], 'open-field', 6, 15, 'cappero-eolie'),

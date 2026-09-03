@@ -128,6 +128,18 @@ test('a source either prints a plausible year or prints none at all', () => {
   }
 });
 
+test('every source is cited to a publisher, not to an aggregator', () => {
+  // Every citation on this page once resolved to disciplinare.it, a commercial
+  // aggregator: one host away from the whole page losing its evidence, and
+  // several of the copies it served were proposals rather than texts in force.
+  // Sources are now the EU's Official Journal or the ministry's own register.
+  const allowed = ['eur-lex.europa.eu', 'www.masaf.gov.it'];
+  for (const s of sources) {
+    const host = new URL(s.url).hostname;
+    assert.ok(allowed.includes(host), `${s.id} cites ${host}, which is not a publisher of record`);
+  }
+});
+
 test('an undated source is a consolidated text, and says so in its name', () => {
   // The only licence to omit a year is being the text in force. If a source
   // drops the year without being a disciplinare consolidato, it is an
