@@ -267,6 +267,12 @@
   --sage-solid: #cfead8;
   --sage-solid-fg: #0d3d22;    /* 9.61:1 */
 
+  /* The same pair in ocean, for the one bar that is not the site's green:
+     Crate's footer. A solid fill for a pill on a dark ground, so it is the
+     pale rung and its fg is the dark one. */
+  --ocean-solid: #cfe6f8;
+  --ocean-solid-fg: #0a3560;   /* 9.66:1 */
+
   /* The icon tile — the run's one new colour role. Two tokens plus an edge.
      The ring is the canvas cream: invisible on the page, 8.75 / 14.33 / 7.03
      against the three world cards it is punched over. See direction.md §1.4
@@ -617,6 +623,9 @@
   --sage-solid: #7fcfa0;
   --sage-solid-fg: #08281a;    /* 8.53:1 */
 
+  --ocean-solid: #7ab8e6;
+  --ocean-solid-fg: #0a1224;   /* 8.74:1 */
+
   /* The tile inverts, and loses its ring doing it. In dark both grounds it
      straddles push the same way (canvas Y 0.008, cards Y ~0.089), so one
      value clears 3:1 against all of them and the edge is unnecessary. This
@@ -862,6 +871,8 @@
   --color-sage: var(--sage);
   --color-sage-solid: var(--sage-solid);
   --color-sage-solid-fg: var(--sage-solid-fg);
+  --color-ocean-solid: var(--ocean-solid);
+  --color-ocean-solid-fg: var(--ocean-solid-fg);
 
   --color-tile: var(--tile);
   --color-tile-fg: var(--tile-fg);

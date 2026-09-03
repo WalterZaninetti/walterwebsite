@@ -90,7 +90,7 @@ export function DjToolsPage() {
           <BackLink />
         </div>
 
-        <SiteFooter />
+        <SiteFooter tone="dj" />
       </main>
     </div>
   );
