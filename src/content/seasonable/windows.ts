@@ -173,6 +173,13 @@ export const windows: readonly Window[] = [
     ['castagna-cuneo', 'castagna-monte-amiata', 'castagna-vallerano', 'marrone-combai', 'marrone-serino', 'marroni-monfenera'],
   ),
 
+  // "La raccolta per la varieta' Navelina inizia il 1° novembre e termina alla
+  //  fine di febbraio; mentre per le varieta' Brasiliano e Washington navel
+  //  inizia nella prima decade di dicembre e termina alla fine di maggio"
+  w('arancia-ribera', ['ag', 'pa'], 'open-field', 20, 9, 'arancia-ribera'),
+  // "La raccolta non puo' essere iniziata prima del 20 luglio e non puo'
+  //  terminare dopo il 15 dicembre"
+  w('mele-trentino', ['tn'], 'open-field', 13, 22, 'mele-trentino'),
   // ── Vegetables ───────────────────────────────────────────────────────────
   // "L'estirpazione dell'Aglio di Voghiera avviene dal 10 giugno sino al 31
   //  luglio"

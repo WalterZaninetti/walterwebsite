@@ -55,6 +55,7 @@ export const produce: readonly Produce[] = [
   fruit('marrone-serino', 'Marrone di Serino', 'IGP', 'chestnut', 'castagna'),
   fruit('marroni-monfenera', 'Marroni del Monfenera', 'IGP', 'chestnut', 'castagna'),
   fruit('mela-rossa-cuneo', 'Mela Rossa Cuneo', 'IGP', 'apple', 'mela'),
+  fruit('mele-trentino', 'Mele del Trentino', 'IGP', 'apple', 'mela'),
   fruit('mela-val-di-non', 'Mela Val di Non', 'DOP', 'apple', 'mela'),
   fruit('oliva-ascolana', 'Oliva Ascolana del Piceno', 'DOP', 'olive', 'oliva'),
   fruit('pera-emilia-romagna', "Pera dell'Emilia Romagna", 'IGP', 'pear', 'pera'),
@@ -62,6 +63,7 @@ export const produce: readonly Produce[] = [
   fruit('pesca-leonforte', 'Pesca di Leonforte', 'IGP', 'peach', 'pesca'),
   fruit('pescabivona', 'Pescabivona', 'IGP', 'peach', 'pesca'),
   fruit('susina-dro', 'Susina di Dro', 'DOP', 'plum', 'susina'),
+  fruit('arancia-ribera', 'Arancia di Ribera', 'DOP', 'orange', 'arancia'),
   species('cherry-generic', 'Cherry', 'fruit', 'cherry', 'ciliegia'),
   species('chestnut-generic', 'Chestnut', 'fruit', 'chestnut', 'castagna'),
 

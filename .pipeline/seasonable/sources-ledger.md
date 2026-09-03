@@ -546,3 +546,55 @@ only *when* it is picked. The row says exactly that, in both languages.
 
 **73 of 107 provinces now answer, up from 54.** 34 are still silent. Designations remain 54;
 the two species entries are not designations and are not counted as such anywhere.
+
+---
+
+## 2026-09-03 (sixth pass) — Sondrio cannot be answered, and here is the proof
+
+**Sondrio stays silent, and the reason is now citable rather than inferred.**
+
+Only one class-1.6 designation covers the province: **Mela di Valtellina PGI-IT-0574**, whose art. 3
+lists Sondrio and forty-odd Valtellina comuni and nothing else. Every other corpus was swept for
+"Sondrio" — 129 MASAF disciplinari, 53 EU-hosted specifications, 109 OJ C documents, 117 later
+publications — and only Valtellina's own papers mention it.
+
+That designation stopped stating a harvest window in 2020. The minor modification published as
+**Ares/eAmbrosia attachment 64047 (22 June 2020)**, approved by the Commission, quotes the clause it
+deleted:
+
+> «…la raccolta è eseguita mediante un accurato stacco manuale delle mele e secondo il seguente
+> calendario: Red Delicious: seconda decade di settembre-seconda decade di ottobre. Golden
+> Delicious: seconda decade di settembre-fine ottobre. Gala: seconda decade di agosto-seconda decade
+> di settembre.» **È modificato come segue:** «L'inizio del periodo di raccolta coincide con il
+> momento in cui la mela raggiunge la maturazione ottimale stabilita con i criteri di cui all'art.2…»
+
+So the calendar was replaced by a ripeness criterion. Art. 2 was checked and defines brix, firmness
+and colour — no dates. §5.7 Conservazione gives an end ("fine luglio / fine agosto dell'anno
+successivo") with a start of "dalla raccolta", which is half a window. **The row deleted in the
+third pass was quoting a text that ceased to be in force in 2020; that deletion is confirmed
+correct.**
+
+The generalised tier cannot reach Sondrio either. It needs three documented designations for a
+species; apple has **two** open-field windows in the whole register — Mela Val di Non and, as of
+this pass, Mele del Trentino — and both are in Trentino, so even a relaxed scope would not reach
+Lombardia. Melannurca Campana states only an end, Mela Alto Adige spans the whole year, Mela Rossa
+Cuneo is a commercialisation window.
+
+Answering Sondrio would take two rule changes at once: dropping the generalised tier's n≥3 to n=2,
+which makes leave-one-out meaningless, **and** scoping a species to regions where it has a
+designation *without a window*. Both were declined.
+
+### The sweep had a gap, and it cost two designations
+
+The earlier filter required a range word from a fixed list and missed the construction
+**"non può essere iniziata prima del X e non può terminare dopo il Y"**. Re-running it with
+`prima`, `dopo`, `terminare`, `non può` added found two designations that state both ends:
+
+- **Mele del Trentino IGP** — "La raccolta non può essere iniziata prima del 20 luglio e non può
+  terminare dopo il 15 dicembre" → 13→22, the whole Provincia autonoma di Trento.
+- **Arancia di Ribera DOP** — "per la varietà Navelina inizia il 1° novembre e termina alla fine di
+  febbraio; per le varietà Brasiliano e Washington navel inizia nella prima decade di dicembre e
+  termina alla fine di maggio" → union 20→9, Agrigento and Chiusa Sclafani in **Palermo**, a
+  province that answered nothing before.
+
+56 designations, 61 documented windows, **74 of 107 provinces**, 16 of 20 regions.
