@@ -2,48 +2,48 @@
   "spotify": {
     "items": [
       {
+        "id": "66TSoVnJ1P9Tyok03zUlTr",
+        "title": "What Is Hip?",
+        "artist": "Tower Of Power",
+        "url": "https://open.spotify.com/track/66TSoVnJ1P9Tyok03zUlTr",
+        "at": "2026-09-03T16:16:42.692Z",
+        "art": "/images/music/spotify-0.webp"
+      },
+      {
+        "id": "0mwr3py9MZIOdvOrI31h6r",
+        "title": "California Girls",
+        "artist": "The Beach Boys",
+        "url": "https://open.spotify.com/track/0mwr3py9MZIOdvOrI31h6r",
+        "at": "2026-09-03T12:59:09.294Z",
+        "art": "/images/music/spotify-1.webp"
+      },
+      {
+        "id": "5byzjMoXFXYJkDzyAvTjOW",
+        "title": "Dicevano",
+        "artist": "1 44 9 8, DJ Lil Cut, BBoy Enea, More Groove",
+        "url": "https://open.spotify.com/track/5byzjMoXFXYJkDzyAvTjOW",
+        "at": "2026-09-03T12:45:53.967Z",
+        "art": "/images/music/spotify-2.webp"
+      },
+      {
         "id": "70TPpmAKLK49gcs58JqqWy",
         "title": "Blauer",
         "artist": "Paky",
         "url": "https://open.spotify.com/track/70TPpmAKLK49gcs58JqqWy",
-        "at": "2026-09-03T08:03:10.553Z",
-        "art": "/images/music/spotify-0.webp"
-      },
-      {
-        "id": "2kkM2XJ6DqqGjBOw6HOZ8a",
-        "title": "92°",
-        "artist": "Vulfmon, Tommy de Bourbon",
-        "url": "https://open.spotify.com/track/2kkM2XJ6DqqGjBOw6HOZ8a",
-        "at": "2026-09-02T13:09:45.938Z",
-        "art": "/images/music/spotify-1.webp"
-      },
-      {
-        "id": "7poaDTqWgJQDG5gqvobqXu",
-        "title": "Where Are We Going?",
-        "artist": "Marvin Gaye",
-        "url": "https://open.spotify.com/track/7poaDTqWgJQDG5gqvobqXu",
-        "at": "2026-09-01T17:41:22.368Z",
-        "art": "/images/music/spotify-2.webp"
+        "at": "2026-09-03T12:38:54.608Z",
+        "art": "/images/music/spotify-3.webp"
       },
       {
         "id": "0gdmDP6xy3ZV7JNoHWAN9k",
         "title": "Town Called Malice",
         "artist": "The Jam",
         "url": "https://open.spotify.com/track/0gdmDP6xy3ZV7JNoHWAN9k",
-        "at": "2026-09-01T13:00:44.944Z",
-        "art": "/images/music/spotify-3.webp"
-      },
-      {
-        "id": "34J00EdKYzS5CEdBMf0GK4",
-        "title": "Un Rayo Del Sol",
-        "artist": "The Chakachas",
-        "url": "https://open.spotify.com/track/34J00EdKYzS5CEdBMf0GK4",
-        "at": "2026-08-31T22:18:16.247Z",
+        "at": "2026-09-03T11:10:36.598Z",
         "art": "/images/music/spotify-4.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-09-03T10:17:57.319Z"
+    "fetchedAt": "2026-09-03T16:17:29.156Z"
   },
   "bandcamp": {
     "items": [

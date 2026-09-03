@@ -539,7 +539,7 @@
   "seasonable": {
     "eyebrow": "for everyone",
     "title": "Seasonable",
-    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province: this names the protected produce being picked there this fortnight, and shows you the document that fixes the dates.",
+    "deck": "Strawberries in January look right under the shop lights, and then they taste of almost nothing. Pick a province: this names what's being picked there this fortnight, and shows you the documents the dates come from.",
     "deckShort": "Strawberries in January look right, then taste of nothing. Pick a province and see what's genuinely being picked there now.",
     "picker": {
       "placeLabel": "Where you are",
@@ -565,7 +565,7 @@
     },
     "table": {
       "heading": "The whole year, and where you are in it",
-      "note": "Every designation with a document naming {{place}}. Each column is one month, split into its two halves; the line marks the fortnight you picked.",
+      "note": "What answers for {{place}}: designations whose own document names it, and where none does, the span that region's designations agree on. Each column is one month, split into its two halves; the line marks the fortnight you picked.",
       "productHeader": "Designation",
       "firstHalf": "first half",
       "secondHalf": "second half"

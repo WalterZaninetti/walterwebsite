@@ -539,7 +539,7 @@
   "seasonable": {
     "eyebrow": "per tutti",
     "title": "Seasonable",
-    "deck": "Le fragole a gennaio sotto le luci del negozio sembrano giuste, poi non sanno di niente. Scegli una provincia: qui trovi i prodotti a denominazione che in questa quindicina si raccolgono lì, e il documento che fissa le date.",
+    "deck": "Le fragole a gennaio sotto le luci del negozio sembrano giuste, poi non sanno di niente. Scegli una provincia: qui trovi cosa si raccoglie lì in questa quindicina, e i documenti da cui vengono le date.",
     "deckShort": "Le fragole a gennaio sembrano giuste, poi non sanno di niente. Scegli una provincia e vedi cosa si raccoglie davvero lì adesso.",
     "picker": {
       "placeLabel": "Dove sei",
@@ -565,7 +565,7 @@
     },
     "table": {
       "heading": "Tutto l'anno, e dove sei tu dentro",
-      "note": "Ogni denominazione con un documento che nomina {{place}}. Ogni colonna è un mese, diviso nelle sue due metà; la linea segna la quindicina che hai scelto.",
+      "note": "Cosa risponde per {{place}}: le denominazioni il cui documento la nomina e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione. Ogni colonna è un mese, diviso nelle sue due metà; la linea segna la quindicina che hai scelto.",
       "productHeader": "Denominazione",
       "firstHalf": "prima metà",
       "secondHalf": "seconda metà"
