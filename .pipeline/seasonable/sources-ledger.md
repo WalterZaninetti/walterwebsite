@@ -445,3 +445,49 @@ avvenire tra settembre e novembre di ogni anno", exactly the shipped 16→21.
 
 59 windows, 54 designations, 54 sources, 54 of 107 provinces, 16 of 20 regions. Every citation is
 a publisher of record; none is a proposal.
+
+---
+
+## 2026-09-03 (fourth pass) — the modelled tier was built, measured, and not shipped
+
+Full write-up and the runnable model in `.pipeline/seasonable/model/`.
+
+The chill-and-heat model works: Dynamic model chill portions, Growing Degree Hours to bloom, then
+degree-days from bloom to maturity, driven by ERA5 1991–2020 at each province capital. Its outputs
+are physically sensible — Cuneo latest, Cosenza earliest, Enna at 931 m later than Agrigento at
+230 m.
+
+It fails the gate the plan set for it. Leave-one-out against the documented tree-fruit rows, next
+to a baseline that ignores climate entirely:
+
+| species | n | model | ignore climate |
+|---|---|---|---|
+| cherry | 3 | 0.15 half-months | **0.00** |
+| chestnut | 5 | 1.24 half-months | **0.59** |
+| peach | 3 | 2.80 half-months | 3.00 |
+
+**No species both passes the gate and beats doing nothing.** Cherry passes but the model only adds
+error; chestnut and peach fail outright.
+
+The cause is in the documented data rather than in the model. Three cherry designations 450 km
+apart — Bracigliano, Lari, Vignola — carry **identical** windows, while three peach designations
+inside one Sicilian climate spread across **five half-months**. A designation's window is the union
+over the cultivars it admits, and that union is set by the consortium, not the weather. Cultivar
+beats geography by roughly five to one, and there is no cultivar map to give the model.
+
+Two consequences worth carrying forward:
+
+1. **The schema changes were reverted.** `Window.basis`, `Source.role` and a nullable
+   `Produce.designation` were written and then backed out: a two-valued discriminant with one value
+   in use advertises a plan the evidence has retired.
+2. **It qualifies the page's own argument.** `brief.md` holds that a calendar "is wrong the moment
+   it covers more than one climate at a time". For tree fruit at species level our evidence does not
+   support that — a national constant was the best predictor available. What makes this tool
+   per-province is that **designations are tied to comuni**, not that harvest responds sharply to
+   local climate. Anyone extending the per-province claim to a new tier should measure it first.
+
+The obvious next tier, and the one the evidence *does* support, is a species-level window
+generalised from the designations already cited, carrying its cross-validated error — cherry would
+ship as 1 May–31 July with a measured leave-one-out error of 0.00 half-months. That is not the
+modelled tier and it is close to the "widely reported" tier `brief.md` rejected, so it is a
+decision rather than a step.
