@@ -29,7 +29,6 @@ const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, i
 
 export const produce: readonly Produce[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
-  fruit('albicocca-vesuviana', 'Albicocca Vesuviana', 'DOP', 'apricot', 'albicocca'),
   fruit('castagna-cuneo', 'Castagna Cuneo', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-monte-amiata', 'Castagna del Monte Amiata', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-vallerano', 'Castagna di Vallerano', 'DOP', 'chestnut', 'castagna'),
@@ -39,7 +38,6 @@ export const produce: readonly Produce[] = [
   fruit('fichi-cosenza', 'Fichi di Cosenza', 'DOP', 'fig', 'fico'),
   fruit('fragola-basilicata', 'Fragola della Basilicata', 'IGP', 'strawberry', 'fragola'),
   fruit('limone-interdonato', 'Limone Interdonato Messina', 'IGP', 'lemon', 'limone'),
-  fruit('limone-sorrento', 'Limone di Sorrento', 'IGP', 'lemon', 'limone'),
   fruit('marroni-monfenera', 'Marroni del Monfenera', 'IGP', 'chestnut', 'castagna'),
   fruit('mela-rossa-cuneo', 'Mela Rossa Cuneo', 'IGP', 'apple', 'mela'),
   fruit('mela-valtellina', 'Mela di Valtellina', 'IGP', 'apple', 'mela'),
@@ -48,7 +46,6 @@ export const produce: readonly Produce[] = [
   fruit('susina-dro', 'Susina di Dro', 'DOP', 'plum', 'susina'),
 
   // ── Vegetables ───────────────────────────────────────────────────────────
-  veg('aglio-polesano', 'Aglio Bianco Polesano', 'DOP', 'garlic', 'aglio'),
   veg('asparago-badoere', 'Asparago di Badoere', 'IGP', 'asparagus', 'asparago'),
   veg('asparago-bassano', 'Asparago Bianco di Bassano', 'DOP', 'asparagus', 'asparago'),
   veg('asparago-canino', 'Asparago Verde di Canino', 'IGP', 'asparagus', 'asparago'),
@@ -57,7 +54,6 @@ export const produce: readonly Produce[] = [
   veg('carciofo-paestum', 'Carciofo di Paestum', 'IGP', 'artichoke', 'carciofo'),
   veg('carciofo-romanesco', 'Carciofo Romanesco del Lazio', 'IGP', 'artichoke', 'carciofo'),
   veg('carota-ispica', 'Carota Novella di Ispica', 'IGP', 'carrot', 'carota'),
-  veg('cicoria-molfettese', 'Cicoria Puntarelle Molfettese', 'IGP', 'chicory', 'cicoria'),
   veg('finocchio-capo-rizzuto', 'Finocchio di Isola Capo Rizzuto', 'IGP', 'fennel', 'finocchio'),
   veg('melanzana-rotonda', 'Melanzana Rossa di Rotonda', 'DOP', 'aubergine', 'melanzana'),
   veg('patata-fucino', 'Patata del Fucino', 'IGP', 'potato', 'patata'),

@@ -199,9 +199,11 @@ test('a calendar is open exactly where its window covers', () => {
 });
 
 test('the window kind reaches the calendar', () => {
-  // Aglio Bianco Polesano is a storage window only, all year bar early July.
-  const row = seasonYear(dataset, 'ro').find((r) => r.produce.id === 'aglio-polesano');
-  assert.ok(row, 'Rovigo should answer for Aglio Bianco Polesano');
+  // Mela Rossa Cuneo is a commercialisation window, i.e. storage, and the only
+  // window Cuneo's apple has — so every entry on the row is `stored` and the
+  // calendar has to say so rather than falling back to open-field.
+  const row = seasonYear(dataset, 'cn').find((r) => r.produce.id === 'mela-rossa-cuneo');
+  assert.ok(row, 'Cuneo should answer for Mela Rossa Cuneo');
   assert.equal(row.calendar[0], 'stored');
   assert.ok(row.entries.every((e) => e.kind === 'stored'));
 });

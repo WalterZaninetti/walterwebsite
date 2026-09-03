@@ -45,8 +45,6 @@ const w = (
 
 export const windows: readonly Window[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
-  // "dal 20 maggio al 20 luglio"
-  w('albicocca-vesuviana', ['na'], 'open-field', 9, 13, 'albicocca-vesuviana'),
   // "ha inizio ai primi di settembre per concludersi in novembre"
   w('castagna-cuneo', ['cn'], 'open-field', 16, 21, 'castagna-cuneo'),
   // "deve avvenire tra settembre e novembre di ogni anno"
@@ -67,8 +65,6 @@ export const windows: readonly Window[] = [
   w('fragola-basilicata', ['mt'], 'open-field', 20, 11, 'fragola-basilicata'),
   // "La raccolta avviene dal 1° settembre al 15 aprile"
   w('limone-interdonato', ['me'], 'open-field', 16, 6, 'limone-interdonato'),
-  // "nel periodo che va del 1 febbraio al 31 ottobre"
-  w('limone-sorrento', ['na'], 'open-field', 2, 19, 'limone-sorrento'),
   // "avviene manualmente dal 15 Settembre al 15 Novembre"
   w('marroni-monfenera', ['tv'], 'open-field', 16, 20, 'marroni-monfenera'),
   // "Gala da inizio agosto a fine maggio; Red Delicious da inizio settembre a
@@ -91,8 +87,6 @@ export const windows: readonly Window[] = [
   w('susina-dro', ['tn'], 'open-field', 12, 17, 'susina-dro'),
 
   // ── Vegetables ───────────────────────────────────────────────────────────
-  // "deve essere commercializzato tra il 10 luglio e il 30 giugno dell'anno successivo"
-  w('aglio-polesano', ['ro'], 'stored', 12, 11, 'aglio-polesano'),
   // "tra il primo febbraio e il 30 giugno di ogni anno"
   w('asparago-badoere', ['pd', 'tv', 've'], 'open-field', 2, 11, 'asparago-badoere'),
   // "Il periodo di raccolta deve essere compreso tra il 1 marzo ed il 15 giugno"
@@ -110,12 +104,11 @@ export const windows: readonly Window[] = [
   w('carciofo-romanesco', ['vt', 'rm', 'lt'], 'open-field', 0, 9, 'carciofo-romanesco'),
   // "a partire dal 1° febbraio e fino al 15 di giugno"
   w('carota-ispica', ['rg', 'sr', 'ct', 'cl'], 'open-field', 2, 10, 'carota-ispica'),
-  // "nel periodo compreso tra la seconda meta' di settembre - prima meta' di maggio"
-  w('cicoria-molfettese', ['ba', 'bt'], 'open-field', 17, 8, 'cicoria-molfettese'),
-  // "tipologia precoce: epoca di raccolta: dalla seconda decade di ottobre a meta' febbraio"
-  w('finocchio-capo-rizzuto', ['kr', 'cz'], 'open-field', 19, 2, 'finocchio-capo-rizzuto'),
-  // "tipologia tardiva: epoca di raccolta: da fine marzo a meta' giugno"
-  w('finocchio-capo-rizzuto', ['kr', 'cz'], 'open-field', 5, 10, 'finocchio-capo-rizzuto'),
+  // "epoca di raccolta parte dalla seconda decade di ottobre e fino a meta' marzo per le
+  //  tipologie «precoci»"
+  w('finocchio-capo-rizzuto', ['kr', 'cz'], 'open-field', 19, 4, 'finocchio-capo-rizzuto'),
+  // "... e da inizio marzo sino alla meta' di giugno per quelle «tardive»"
+  w('finocchio-capo-rizzuto', ['kr', 'cz'], 'open-field', 4, 10, 'finocchio-capo-rizzuto'),
   // "inizia dal 1 luglio di ogni anno e termina entro il 30 di novembre"
   w('melanzana-rotonda', ['pz'], 'open-field', 12, 21, 'melanzana-rotonda'),
   // "avra' inizio dal 20 luglio ... e si protrarra' fino al 15 novembre"

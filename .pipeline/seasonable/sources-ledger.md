@@ -110,3 +110,220 @@ persimmon, pomegranate, pumpkin, spinach. Nothing to cite, so nothing to ship.
    storage fact stated outright. Six rows ship as `stored` on that basis. The `greenhouse` kind
    is now unused — kept in the type, absent from the data, rather than guessed at.
 
+
+---
+
+## 2026-09-02 — the EU register sweep
+
+The whole corpus was re-derived from **eAmbrosia**, the EU's own Union register of geographical
+indications, rather than from `disciplinare.it`. eAmbrosia is a JavaScript application, but it
+publishes an OpenAPI spec and a public JSON API:
+
+- `GET  https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/v3/api-docs`
+- `POST …/api/gi-applications/filter`  — the whole register, 3 977 rows, in one request
+- `GET  …/api/gi-applications/id/{id}` — per-designation dossier
+- `GET  …/api/v1/attachments/{id}`     — the filed disciplinare PDFs, EU-hosted
+
+**Italy has 127 registered designations in class 1.6 (fruit, vegetables and cereals).** 52 of
+them carry the full Italian disciplinare as an EU-hosted attachment (53 PDFs; one, Castagna del
+Monte Amiata, is an image scan with no extractable text). 109 OJ C "single document"
+publications were fetched from EUR-Lex in Italian, plus 117 later publications.
+
+### The versioning rule this sweep established
+
+A designation's publication history interleaves **OJ C** (the application or proposed amendment)
+with **OJ L** (the regulation that approves it). An OJ C is only authoritative once a later OJ L
+exists. **41 of the 127 designations carry a pending OJ C with no approving OJ L** — a proposal,
+not a text in force. Reading the newest document is therefore wrong; the rule is *the newest
+document that has been approved*.
+
+A third case exists and matters: an Italian **"Approvazione della modifica ordinaria"** is
+approved nationally under Reg. 1151/2012 and is in force immediately, so it can legitimately be
+newer than anything in EUR-Lex. A **"Proposta di modifica"**, **"Domanda di registrazione"** or
+**"Richiesta di riconoscimento"** is not in force at all.
+
+### The existing rows are accurate
+
+Seven rows were checked line-by-line against the EU text and **all seven converted identically**:
+Asparago Bianco di Bassano, Asparago bianco di Cimadolmo, Carciofo di Paestum, Carciofo Romanesco
+del Lazio, Castagna Cuneo, Castagna di Vallerano, Limone di Sorrento. The `disciplinare.it`
+transcriptions were faithful. Re-sourcing is a provenance upgrade, not a data correction.
+
+### Two designations that are not designations
+
+- **Albicocca Vesuviana** — **absent from the EU register entirely.** Not registered, not a
+  pending application. The row cites a 2026 *Domanda di registrazione*. The page currently calls
+  it a DOP; it is not one.
+- **Cicoria puntarelle molfettese** — status **"Published"**, i.e. an application published for
+  opposition. Not yet registered. The page calls it an IGP; it is not one yet.
+
+### Corrections the approved texts require
+
+- **Finocchio di Isola Capo Rizzuto** — the 2023 approved amendment changed the *tardiva* window
+  from "da fine marzo a metà giugno" to **"da inizio marzo a metà giugno"**. Row should be 4→10,
+  not 5→10.
+- **Limone di Sorrento** — the 2010 amendment (OJ C 105, 24.04.2010), approved by OJ L 6,
+  11.01.2011, moved the start forward a month: "è stata anticipata di un mese la data di inizio
+  della raccolta dei limoni fissandola al 1° gennaio". Row should be 0→19, not 2→19.
+- **Aglio Bianco Polesano** — the row cites a 2013 *proposal*. The approved 2014 amendment
+  (OJ C 347, 03.10.2014) says "commercializzato per un anno a decorrere dal 10 luglio fino al
+  9 luglio dell'anno successivo" — a full calendar year. True, and useless as an answer, exactly
+  like Mela Alto Adige. **Delete.**
+- **Carota Novella di Ispica** — *not* a correction. The 2010 EU text says 20 February, but a
+  2017 approved amendment moved it back: "anticipare la data di raccolta indicata nel disciplinare
+  dal 20 al 1° febbraio". The existing row (1 Feb) is current; the EU register's older text is not.
+
+### New designations that state both ends
+
+Found in approved texts and not yet in the dataset:
+
+| Designation | Window stated | Note |
+|---|---|---|
+| Ficodindia dell'Etna PDO | 2ª decade agosto → dicembre | union of prima/seconda fioritura |
+| Ficodindia di San Cono PDO | 20 agosto → 31 dicembre | union of agostani/tardivi |
+| Fungo di Borgotaro PGI | 1 aprile → 30 novembre | a mushroom — catalogue fit is a judgement |
+| Kiwi Latina PGI | fine ottobre → inizio novembre | ledger previously recorded this as start-only; wrong |
+| Mela Val di Non PDO | agosto → prima quindicina di novembre | Trentino |
+| Limone Costa d'Amalfi PGI | 1 febbraio → 31 ottobre | Salerno |
+| Oliva Ascolana del Piceno PDO | 10 settembre → 20 ottobre | **Marche — a region with no coverage today** |
+| Pescabivona PGI | prima metà di giugno → fine ottobre | maturation, four ecotypes |
+| Pera dell'Emilia Romagna PGI | 25 luglio → 31 maggio | a commercialisation window, so `stored` |
+| Radicchio di Chioggia PGI | 1 aprile → 15 luglio **and** settembre → marzo | two rows |
+| Uva da tavola di Canicattì PGI | 3ª decade agosto → 2ª decade gennaio | wraps the year |
+| Carota dell'Altopiano del Fucino PGI | luglio → settembre/ottobre | Abruzzo |
+| Arancia del Gargano PGI | 15 aprile → fine agosto (Biondo comune) | must re-read for the other varieties |
+| Asparago Bianco di Bassano PDO | 1 febbraio → 1 marzo, *coltura forzata o protetta* | would be the first `greenhouse` row |
+
+### Checked and still unusable
+
+- **Limone di Siracusa PGI** — three tipologie whose windows tile the entire year (Primofiore
+  1 ott–14 apr, Bianchetto 15 apr–30 giu, Verdello 1 lug–30 set). Whole-year, so useless, on the
+  Mela Alto Adige precedent.
+- **Radicchio di Verona PGI** — two start dates (1 ottobre, 15 dicembre), no end.
+- **Marrone di Caprese Michelangelo**, **Marrone di Roccadaspide**, **Marrone del Mugello**,
+  **Marrone di Combai**, **Marrone di San Zeno**, **Melannurca Campana**, **Asparago verde di
+  Altedo**, **Radicchio Rosso di Treviso**, **Radicchio Variegato di Castelfranco**,
+  **Nocciola di Giffoni**, **Scalogno di Romagna** — re-confirmed start-only or end-only in the
+  approved EU text. The earlier ledger entries stand.
+- **Farina di Neccio della Garfagnana**, **Farina di castagne della Lunigiana** — both state a
+  real chestnut harvest window, but the designation is a *flour*, not fresh produce.
+- **Pesca di Verona** — re-confirmed: a commercialisation window with no statement of whether it
+  is storage or field. Unchanged from the earlier decision.
+
+### The publisher trade-off, and why it is not resolvable by picking harder
+
+Three candidate publishers were tested. Each satisfies a different pair of the three things a
+citation here has to be — **current**, **dated**, **permanent** — and none satisfies all three.
+
+| Publisher | Current text? | Printed year? | Permanent URL? |
+|---|---|---|---|
+| **EUR-Lex / eAmbrosia** | not always — 14 designations have a later national modification | always (the OJ date) | yes |
+| **MASAF** `IDPagina/3343` | yes — the ministry's own consolidated disciplinari | **no, for 87 of 117** | yes |
+| **Gazzetta Ufficiale** | yes | yes | yes — but **unreachable** |
+
+MASAF publishes the current disciplinare for all 129 products in class 1.6 as PDFs. 117 carry
+extractable text; 12 are image scans. **87 of the 117 print no date of any kind** — they are bare
+consolidated texts. Only 29 cite a Regulation year, 14 a decree date, 12 a GURI number, and 11
+are Gazzetta prints carrying a browser timestamp. Invariant 3 therefore rejects most of them.
+
+Gazzetta Ufficiale would resolve it — the decree is current, dated and officially published — but
+`gazzettaufficiale.it` refuses automated requests. `ricercaSemplice` returns **"Request
+Rejected"** from a WAF to both a plain HTTP client and a real browser under automation. The
+search cannot be driven; individual atto URLs found via a general web search still resolve, so
+the site is usable one document at a time, by hand.
+
+**Independently of which publisher wins, the MASAF sweep proved the dataset's numbers are sound.**
+Every disputed row was checked against the ministry's current text and confirmed as shipped —
+Pesca di Leonforte (prima decade di agosto, not the EU text's settembre), Asparago di Badoere
+(30 giugno, not 31 maggio), Pomodoro San Marzano (15 luglio–15 ottobre, not 30 luglio–30
+settembre), Carota Novella di Ispica, Castagna Cuneo, Castagna di Vallerano, Ciliegia di Lari,
+Ciliegia di Vignola, Ciliegia di Bracigliano, Limone Interdonato, Mela Rossa Cuneo, Melanzana
+Rossa di Rotonda, Patata del Fucino, Patata novella di Galatina, Pomodorino del Piennolo,
+Fichi di Cosenza, Fragola della Basilicata, Pesca di Delia. In every case where EUR-Lex and MASAF
+disagree, MASAF is newer and the shipped row already matched MASAF.
+
+### What the sweep found that is not yet shipped
+
+The current MASAF disciplinari state **both ends** for roughly 25 designations absent from the
+dataset. Of note, they reach four places the dataset cannot currently answer for at all:
+
+- **Sardegna** — Carciofo Spinoso di Sardegna DOP, "dal 1° settembre al 31 maggio"
+- **Umbria** — Patata Rossa di Colfiorito IGP, "dal 1° agosto fino a tutto il mese di novembre"
+- **Marche** — Oliva Ascolana del Piceno DOP, "tra il 1° settembre ed il 20 ottobre"
+- **Trapani** — Cappero di Pantelleria IGP, "dal 1° maggio al 31 ottobre di ciascun anno"
+
+The last one matters editorially: `brief.md` states the job as making someone *"standing in a shop
+in Trapani in March"* trust this page. The dataset has never had a row for Trapani.
+
+Others with both ends stated: Aglio di Voghiera, Cappero delle Isole Eolie, Carciofo Brindisino,
+Cedro di Santa Maria del Cedro (two windows), Fagioli Bianchi di Rotonda (two), Fagiolo Cannellino
+di Atina, Ficodindia di San Cono, Lenticchia di Onano, Marrone di Combai (previously logged as
+start-only — that was wrong), Marrone di Serino, Patata dell'Alto Viterbese (also previously
+logged as unusable — wrong), Peperoncino di Calabria, Peperone di Pontecorvo, Pescabivona,
+Radicchio di Chioggia (two), Mela Val di Non, Kiwi Latina, Limone Costa d'Amalfi, Fungo di
+Borgotaro, Pera dell'Emilia Romagna, Uva da tavola di Canicattì, Ficodindia dell'Etna.
+
+### Correction to the versioning rule above: *ordinary* modifications never get an OJ L
+
+The rule stated earlier — "an OJ C is authoritative only once a later OJ L exists" — is right for
+**Union (standard) amendments** and **wrong for ordinary ones**. Under art. 6 ter of delegated
+regulation (UE) 664/2014, an *ordinary* modification is approved by the Member State and the
+Commission merely publishes it for information. There is never an approving OJ L, so the
+heuristic marks every one of them "pending" when in fact they are in force.
+
+These publications are titled **"Comunicazione dell'approvazione di una modifica ordinaria di un
+disciplinare di produzione"**, and they are the tier this dataset was missing: EU-published,
+permanently addressable, printed with a date, **and** carrying the consolidated `epoca di
+raccolta` rather than only a summary. They are the correct citation for every designation whose
+current text comes from a recent Italian ordinary modification.
+
+Worked example, now shipped — **Finocchio di Isola Capo Rizzuto**, OJ C C/2023/557 of 25.10.2023,
+`https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=OJ:C_202300557`. It states the change
+explicitly — precoce "dalla seconda decade di ottobre a metà febbraio" became "…a metà marzo",
+tardiva "da fine marzo a metà giugno" became "da inizio marzo a metà giugno" — and repeats both
+in the consolidated description. The national decree that approved it (DECRETO 9 aprile 2025, GU
+Serie Generale n.89 del 16-04-2025, `gazzettaufficiale.it/eli/id/2025/04/16/25A02298/SG`) is
+dated and fetchable but **does not contain the disciplinare text**, only the approval of it — so
+GU alone can never satisfy invariant 4. The OJ C notice can, and does.
+
+Note for anyone re-running the sweep: `gazzettaufficiale.it` refuses automated *search*, but its
+**ELI permalinks fetch normally**. Find the atto id by web search, then fetch `/eli/id/...` directly.
+
+### Deleted this pass
+
+- **Albicocca Vesuviana** — not in the EU register at all (decision: delete).
+- **Cicoria puntarelle molfettese** — status "Published", not registered (decision: delete).
+- **Aglio Bianco Polesano** — the in-force text gives a full calendar year, "commercializzato per
+  un anno a decorrere dal 10 luglio fino al 9 luglio dell'anno successivo". Useless as an answer,
+  on the Mela Alto Adige precedent.
+- **Limone di Sorrento** — **deleted, and this one is recoverable.** The window is certainly
+  1 gennaio – 31 ottobre: MASAF's consolidated disciplinare says so outright, and the Union
+  amendment approved by Reg. (UE) 14/2011 states "è stata anticipata di un mese la data di inizio
+  della raccolta dei limoni fissandola al 1° gennaio". But *no single dated document states both
+  ends*: OJ C 105 of 24.04.2010 gives only the start change and never mentions ottobre, and the
+  registered 2001 specification still says 1 febbraio. Shipping 1 febbraio would be knowingly
+  stale; shipping 1 gennaio would cite a document that does not say it. Deleted rather than
+  softened. **Restore it the moment a consolidated dated text is located.**
+
+### Corrected this pass
+
+- **Finocchio di Isola Capo Rizzuto** — precoce 19→2 became 19→4, tardiva 5→10 became 4→10, now
+  citing the OJ C ordinary-modification notice above.
+
+### Where this leaves the dataset
+
+30 designations, 33 windows, 30 sources. Rovigo, Bari and Barletta-Andria-Trani no longer answer;
+Napoli still does, through Pomodorino del Piennolo and San Marzano.
+
+### The next session's work, in order
+
+1. **Re-source the remaining 29 rows.** For each, prefer in this order: an OJ C *modifica ordinaria
+   approvata* notice; the registered specification on EUR-Lex; eAmbrosia's EU-hosted spec
+   attachment. Six rows still cite a *proposal* rather than a text in force — castagna-monte-amiata,
+   ciliegia-vignola, fragola-basilicata, patata-galatina, piennolo-vesuvio — and all of their
+   windows were confirmed correct against MASAF, so only the citation needs moving.
+2. **Add the ~25 new designations** listed above. Four of them open regions the tool has never
+   answered for: Sardegna, Umbria, Marche, and Trapani.
+3. The working corpus is in the session scratchpad: the full eAmbrosia register dump, 127
+   per-designation dossiers, 53 EU-hosted specification PDFs, 109 OJ C documents, 117 recent
+   publications and all 129 MASAF disciplinari, with extracted text alongside each.
