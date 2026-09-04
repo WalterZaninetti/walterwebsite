@@ -2,12 +2,36 @@
   "spotify": {
     "items": [
       {
+        "id": "4QyFXKzo9k8tivQiFgQ36J",
+        "title": "Stop and Think",
+        "artist": "The Trammps",
+        "url": "https://open.spotify.com/track/4QyFXKzo9k8tivQiFgQ36J",
+        "at": "2026-09-04T09:00:23.365Z",
+        "art": "/images/music/spotify-0.webp"
+      },
+      {
+        "id": "2C5G7y3CVchaQZDmCluKpG",
+        "title": "Let's Take Our Time",
+        "artist": "Durand Jones & The Indications, Aaron Frazer",
+        "url": "https://open.spotify.com/track/2C5G7y3CVchaQZDmCluKpG",
+        "at": "2026-09-04T08:55:14.660Z",
+        "art": "/images/music/spotify-1.webp"
+      },
+      {
         "id": "7poaDTqWgJQDG5gqvobqXu",
         "title": "Where Are We Going?",
         "artist": "Marvin Gaye",
         "url": "https://open.spotify.com/track/7poaDTqWgJQDG5gqvobqXu",
-        "at": "2026-09-03T16:20:37.628Z",
-        "art": "/images/music/spotify-0.webp"
+        "at": "2026-09-04T08:46:22.702Z",
+        "art": "/images/music/spotify-2.webp"
+      },
+      {
+        "id": "0nWOgsqMohZGtVpyFtWCpW",
+        "title": "Sonic Destroyer",
+        "artist": "X-101",
+        "url": "https://open.spotify.com/track/0nWOgsqMohZGtVpyFtWCpW",
+        "at": "2026-09-04T08:40:21.764Z",
+        "art": "/images/music/spotify-3.webp"
       },
       {
         "id": "66TSoVnJ1P9Tyok03zUlTr",
@@ -15,35 +39,11 @@
         "artist": "Tower Of Power",
         "url": "https://open.spotify.com/track/66TSoVnJ1P9Tyok03zUlTr",
         "at": "2026-09-03T16:16:42.692Z",
-        "art": "/images/music/spotify-1.webp"
-      },
-      {
-        "id": "0mwr3py9MZIOdvOrI31h6r",
-        "title": "California Girls",
-        "artist": "The Beach Boys",
-        "url": "https://open.spotify.com/track/0mwr3py9MZIOdvOrI31h6r",
-        "at": "2026-09-03T12:59:09.294Z",
-        "art": "/images/music/spotify-2.webp"
-      },
-      {
-        "id": "5byzjMoXFXYJkDzyAvTjOW",
-        "title": "Dicevano",
-        "artist": "1 44 9 8, DJ Lil Cut, BBoy Enea, More Groove",
-        "url": "https://open.spotify.com/track/5byzjMoXFXYJkDzyAvTjOW",
-        "at": "2026-09-03T12:45:53.967Z",
-        "art": "/images/music/spotify-3.webp"
-      },
-      {
-        "id": "70TPpmAKLK49gcs58JqqWy",
-        "title": "Blauer",
-        "artist": "Paky",
-        "url": "https://open.spotify.com/track/70TPpmAKLK49gcs58JqqWy",
-        "at": "2026-09-03T12:38:54.608Z",
         "art": "/images/music/spotify-4.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-09-03T16:21:43.431Z"
+    "fetchedAt": "2026-09-04T21:48:35.830Z"
   },
   "bandcamp": {
     "items": [
