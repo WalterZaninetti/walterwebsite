@@ -23,26 +23,25 @@ const socialIcons: Record<string, ComponentType> = {
  * on the bar. Rust on this surface is `accent-on-panel`, never `accent`.
  *
  * `tone` is the one thing about this bar a page gets to choose, and only
- * `/dj-tools` chooses it. That page is blue, and the site's green bar under it
- * was the last green on the page once its tiles and its button turned. It
- * takes the world's own navy — `--project-dj`, the same value as the band the
- * page opens with, so the page opens and closes on one ground rather than
- * gaining a seventh colour.
+ * `/dj-tools` chooses it. It takes `--project-dj`, so that page closes on the
+ * ground it has been stacking cards on all the way down.
  *
- * Every ink on the bar was measured against that navy rather than assumed:
- * 13.94 (ink), 8.54 (meta), 16.6 (email), 8.64 (rust), 8.07 (monogram) in
- * light; 10.21 / 5.26 / 17.57 / 6.88 / 8.54 in dark. Only the social pills'
- * hover had to move, because it was a green fill.
+ * In light that ground now sits 1.21:1 from the site's own `--footer-bar` —
+ * Crate's world took the app's deep green, and the two greens are a hair
+ * apart. The tone still earns its keep in dark, where `--footer-bar` is the
+ * near-black #0a0e0a and `--project-dj` stays green. What it no longer earns
+ * is a hover of its own: the pale-ocean fill was here because the page was
+ * blue, and it goes back to the site's clover.
+ *
+ * Every ink on the bar was measured against that green rather than assumed:
+ * 12.03 (ink), 7.37 (meta), 12.87 (email), 7.46 (rust), 6.97 (monogram) in
+ * light, and each improves in dark, where the bar is the deeper of the two.
  */
+const footerPill = 'hover:border-sage-solid hover:bg-sage-solid hover:text-sage-solid-fg';
+
 const footerTones = {
-  site: {
-    bar: 'bg-footer-bar',
-    pill: 'hover:border-sage-solid hover:bg-sage-solid hover:text-sage-solid-fg',
-  },
-  dj: {
-    bar: 'bg-project-dj',
-    pill: 'hover:border-ocean-solid hover:bg-ocean-solid hover:text-ocean-solid-fg',
-  },
+  site: { bar: 'bg-footer-bar', pill: footerPill },
+  dj: { bar: 'bg-project-dj', pill: footerPill },
 } as const;
 
 export function SiteFooter({ tone = 'site' }: { tone?: keyof typeof footerTones } = {}) {

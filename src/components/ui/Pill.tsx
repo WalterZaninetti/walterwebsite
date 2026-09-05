@@ -57,14 +57,18 @@ export function SurfacePill({
 
 /**
  * Solid rust call-to-action. `tone` picks which hover the doc gives it (deep
- * green for the hero and coffee buttons, sage for "Send the idea"); `fg` picks
- * which of the doc's two creams sits on the rust.
+ * green for the hero, the coffee buttons and Crate's download, sage for "Send
+ * the idea"); `fg` picks which of the doc's two creams sits on the rust.
  *
- * `ocean` is the doc's two plus one: Crate's page is blue, and a button that
- * hovered into the site's green was the last green on it. The tone lives here
- * rather than in a className on the call site because the hover's fill and its
- * text have to travel together — two `hover:bg-*` utilities of equal
- * specificity resolve by stylesheet order, not by the order they are written.
+ * The tone lives here rather than in a className on the call site because the
+ * hover's fill and its text have to travel together — two `hover:bg-*`
+ * utilities of equal specificity resolve by stylesheet order, not by the order
+ * they are written.
+ *
+ * There was a third, added when Crate's page was blue and a button hovering
+ * into the site's green was the last green on it. Crate's world took the app's
+ * own deep green, so the exception it existed for is gone and the site's two
+ * are the doc's two again.
  */
 export function AccentButton({
   className,
@@ -73,7 +77,7 @@ export function AccentButton({
   fg = 'cream',
   ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement> & {
-  tone?: 'deep' | 'sage' | 'ocean';
+  tone?: 'deep' | 'sage';
   fg?: 'cream' | 'paper';
 }) {
   return (
@@ -95,7 +99,6 @@ export function AccentButton({
 const hovers = {
   deep: 'hover:bg-accent-hover hover:text-accent-hover-fg',
   sage: 'hover:bg-accent-hover-alt hover:text-accent-hover-alt-fg',
-  ocean: 'hover:bg-accent-hover-ocean hover:text-accent-hover-ocean-fg',
 } as const;
 
 const chipVariants = {

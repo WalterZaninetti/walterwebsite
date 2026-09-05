@@ -248,13 +248,12 @@
   --accent-hover-fg: #fffdf4;  /* 12.07:1 */
   --accent-hover-alt: #cfead8;
   --accent-hover-alt-fg: #0d3d22; /* 9.61:1 */
-  /* The third hover, and the only one that is not the site's green. A rust
-     button that fills deep green on hover is the site's own gesture; on Crate
-     it was the last green left once the tile turned, so the button hovers into
-     the world it sits in. Ocean-900, the ramp's floor, so it reads as the same
-     blue gone dark rather than a second blue. */
-  --accent-hover-ocean: #0a3560;
-  --accent-hover-ocean-fg: #fffdf4; /* 12.19:1 */
+  /* DELETED: --accent-hover-ocean /-fg, the third button hover. It existed
+     because Crate's page was blue and a rust button filling deep green on
+     hover was the last green on it. Crate's world took the app's own deep
+     green, so the button hovers into the world it sits in by taking the
+     site's gesture, and the exception has nothing left to be an exception to.
+     --ocean-solid below stays: it is the second premise badge on that page. */
   /* The rust's own cast, for a solid CTA that lifts on hover. Tinted rather
      than neutral for the reason --shadow-card is: black under a rust pill on
      cream reads as dirt under it. */
@@ -334,20 +333,29 @@
   --project-magic-seam: #7d1f28;
   --project-magic-shadow: 0 16px 34px rgb(125 31 40 / 0.28);
 
-  /* Crate's world: deep indigo with an amber rung, replacing the clover green
-     it shared with the site's own panels. The page needed an identity of its
-     own, and amber on navy is a mixing desk rather than a nightclub — the
-     electronic reading the brief asked for, without the dark-and-neon default.
-     Read by ProjectShelf.tsx and by DjToolsPage.tsx, which are the same object
-     at two sizes. */
-  --project-dj: #101a33;
-  --project-dj-fg: #eaf0ff;      /* 15.12:1 */
-  --project-dj-accent: #f0b184;  /*  9.30:1 */
-  --project-dj-body: #c3cfe6;    /* 11.00:1 */
-  --project-dj-badge: #0a1224;   /* 16.36:1 under -fg */
+  /* Crate's world: the palette the app itself already ships. The indigo-and-
+     amber world these six rungs held was decided here, on the site, while the
+     app was still a description; the app was then built in deep green with a
+     mint rung, and a landing page that hands you a download has to look like
+     the file it hands over. So the values below are lifted verbatim from
+     ~/Projects/crate/src/design-system/theme.css — --dj-panel, --dj-fg,
+     --dj-body, --dj-accent — rather than solved again here.
+
+     The objection this reverses is on the record and still true: #0e2d1c sits
+     1.01:1 from the site's own --panel #0d3d22, so Crate's ground is no longer
+     a colour of its own. What now separates the world is its mint rung against
+     the site's cream one, and its ocean marks below — the app makes the same
+     separation the same way.
+
+     Read by ProjectShelf.tsx, ProjectThumbs.tsx, SiteFooter.tsx and
+     DjToolsPage.tsx, which are the same object at four sizes. */
+  --project-dj: #0e2d1c;
+  --project-dj-fg: #eaf5ec;      /* 13.31:1 */
+  --project-dj-accent: #7fcfa0;  /*  8.03:1 */
+  --project-dj-body: #c6dfcd;    /* 10.52:1 */
+  --project-dj-badge: #061f13;   /* 15.47:1 under -fg */
   --project-dj-border: transparent;
-  --project-dj-seam: #101a33;
-  --project-dj-shadow: 0 16px 34px rgb(16 26 51 / 0.3);
+  --project-dj-shadow: 0 16px 34px rgb(14 45 28 / 0.3);
   /* Crate's data marks. Unlike the six rungs above, these are authored against
      --canvas, not against the band — the same way --project-dj-seam is in dark.
      Ocean, so the page's electric accent is the site's existing blue rather
@@ -359,26 +367,20 @@
      a second colour standing near it. */
   --project-dj-mark: #15568f;       /* 7.33:1 vs canvas */
   --project-dj-mark-quiet: #5b98c4; /* 3.00:1 vs canvas */
-  /* Crate's own sticker. The site's clover stamps the other two worlds and
-     stamped this one too, on the reasoning that one green sticker across
-     three grounds is what ties the shelf together — overruled, because the
-     page's colour is the blue and a green tile on it was the one mark that
-     belonged to no world. It is the mark blue rather than a fourth value:
-     7.33 vs canvas, 7.61 vs the card it is punched over.
+  /* DELETED with the band: --project-dj-seam and --project-dj-tile /-fg /-ring.
+     Crate's page no longer opens on a full-bleed world with a 3px seam and a
+     sticker straddling it, so there is no seam to paint and no tile to stamp.
+     The other two worlds keep theirs; this one is the page that left the
+     shared chrome, not a token that was found to be wrong.
 
-     Against the band it measures 2.27:1, and that is the ring's job rather
-     than the fill's — one tile straddles the seam, and 2px of canvas cream
-     over navy is what draws its edge there (§1.4). The clover cleared 4.19
-     on the band because it was a mid green; no blue on this hue clears both
-     a cream canvas and a near-black band, so the edge carries it. */
-  --project-dj-tile: #15568f;      /* glyph 7.33:1 · 7.33 canvas · 7.61 surface */
-  --project-dj-tile-fg: #fffbe8;
-  --project-dj-tile-ring: #fffbe8;
-  /* The hero wave's unlit rung — the only mark authored against the band
-     rather than the canvas, because the wave is the one figure inside the
-     world. One value serves both schemes: the two grounds are close enough
-     that a second rung would be a token nobody could tell apart. */
-  --project-dj-wave: #4a6fa5;       /* 3.37:1 on the light band, 3.57:1 on the dark */
+     The hero wave's unlit rung stays, and follows the world off blue. It is
+     the one mark authored against the panel rather than the canvas, because
+     the wave is the one figure that sits inside the world. One value serves
+     both schemes: the two panels are close enough that a second rung would be
+     a token nobody could tell apart. Lit-against-quiet measures 2.08:1 and
+     that is not a defect — the histogram's meaning is bar height, so 3:1
+     against the ground it sits on (WCAG 1.4.11) is the applicable floor. */
+  --project-dj-wave: #4a8a63;       /* 3.62:1 on the light panel, 3.99:1 on the dark */
 
   /* Repainted from terracotta to a pale leaf green, and with it the ladder
      turns over: this is the one world whose ground is lighter than the canvas
@@ -636,8 +638,6 @@
   --accent-hover-alt-fg: #101510;
   /* Dark inverts the hover to a pale ground, as the other two do. Ocean-200
      rather than the cream, so the gesture still lands in the page's blue. */
-  --accent-hover-ocean: #cfe6f8;
-  --accent-hover-ocean-fg: #0a3560; /* 9.66:1 */
   /* Amber on a near-black canvas: a cast has nothing to darken, so this one
      carries the accent's own hue and reads as light coming off the button. */
   --accent-shadow: 0 10px 26px -8px rgb(224 138 78 / 0.38);
@@ -703,23 +703,18 @@
   --project-magic-seam: #f2b8ae;                  /* 10.77:1 vs canvas */
   --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
 
-  --project-dj: #0c1526;
-  --project-dj-fg: #eaf0ff;      /* 15.99:1 */
-  --project-dj-accent: #f0b184;  /*  9.84:1 */
-  --project-dj-body: #c3cfe6;    /* 11.63:1 */
-  --project-dj-badge: #070d18;
-  --project-dj-border: rgb(240 177 132 / 0.52); /* 3.56:1 vs canvas, composited */
-  --project-dj-seam: #f0b184;                   /*  9.96:1 vs canvas */
+  /* Crate's dark world, again the app's own: --dj-panel #0c2417 and the mint
+     lifted to #8fd8ac, exactly as ~/Projects/crate ships them. */
+  --project-dj: #0c2417;
+  --project-dj-fg: #eaf5ec;      /* 14.66:1 */
+  --project-dj-accent: #8fd8ac;  /*  9.83:1 */
+  --project-dj-body: #c6dfcd;    /* 11.59:1 */
+  --project-dj-badge: #061f13;   /* 15.47:1 under -fg */
+  --project-dj-border: rgb(143 216 172 / 0.52); /* 3.80:1 vs canvas, composited */
   --project-dj-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
   --project-dj-mark: #7ab8e6;       /* 8.64:1 vs canvas */
   --project-dj-mark-quiet: #2f6a97; /* 3.19:1 vs canvas */
-  /* The tile inverts here for the same reason the site's does, and drops the
-     ring with it: 8.64 against the canvas and 7.81 against the cards, so
-     every ground it straddles is already clear of it. */
-  --project-dj-tile: #7ab8e6;      /* glyph 8.74:1 · 8.64 canvas · 7.81 surface */
-  --project-dj-tile-fg: #0a1224;
-  --project-dj-tile-ring: transparent;
-  --project-dj-wave: #4a6fa5;       /* 3.57:1 on the dark band */
+  --project-dj-wave: #4a8a63;       /* 3.99:1 on the dark panel */
 
   /* Food inverts here, and that is a reversal of the old rule rather than an
      oversight of it. "Food does not invert" was written when the band was a
@@ -895,8 +890,6 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-hover-fg: var(--accent-hover-fg);
   --color-accent-hover-alt: var(--accent-hover-alt);
-  --color-accent-hover-ocean: var(--accent-hover-ocean);
-  --color-accent-hover-ocean-fg: var(--accent-hover-ocean-fg);
   --color-accent-hover-alt-fg: var(--accent-hover-alt-fg);
 
   --color-sage: var(--sage);
@@ -953,10 +946,6 @@
   --color-project-dj-body: var(--project-dj-body);
   --color-project-dj-badge: var(--project-dj-badge);
   --color-project-dj-border: var(--project-dj-border);
-  --color-project-dj-seam: var(--project-dj-seam);
-  --color-project-dj-tile: var(--project-dj-tile);
-  --color-project-dj-tile-fg: var(--project-dj-tile-fg);
-  --color-project-dj-tile-ring: var(--project-dj-tile-ring);
   --color-project-dj-mark: var(--project-dj-mark);
   --color-project-dj-mark-quiet: var(--project-dj-mark-quiet);
   --color-project-dj-wave: var(--project-dj-wave);
@@ -1121,9 +1110,10 @@
   );
 }
 
-/* Crate's Camelot wheel. Followed the world off clover-and-rust when the DJ
-   project went indigo: the sweep is now the page's own two marks, blue into
-   amber. Must read against --project-dj #101a33 / #0c1526. */
+/* Crate's Camelot wheel. The sweep is the page's own two marks — ocean into
+   the world's mint, through the pale ocean rung that keys them together. Its
+   hub is punched out in --project-dj, so it must read against #0e2d1c /
+   #0c2417. */
 @utility camelot {
   background: conic-gradient(
     from 0deg,

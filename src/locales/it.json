@@ -70,7 +70,7 @@
         "title": "Seasonable",
         "description": "Scegli una provincia e una quindicina: ti dice quali prodotti DOP e IGP si raccolgono lì, citando il documento che lo dice.",
         "descriptionShort": "Provincia + quindicina — cosa è a denominazione, e si raccoglie.",
-        "meta": "58 denominazioni · citate"
+        "meta": "60 denominazioni · citate"
       }
     },
     "music": {
@@ -383,6 +383,7 @@
     "title": "Crate",
     "eyebrow": "02 · per i dj",
     "eyebrowShort": "02 · dj",
+    "audience": "per i dj",
     "deck": "Uno strumento per la libreria Rekordbox che hai già: filtri che si sommano, quello che è rotto, la forma di quello che possiedi, e una playlist che torna indietro. Un file da scaricare, niente da installare, e la collezione non esce dal tuo computer.",
     "deckShort": "Uno strumento per la libreria Rekordbox che hai già. Un file, niente da installare, e la collezione non esce dal tuo computer.",
     "problem": {
@@ -431,7 +432,10 @@
     "figures": {
       "wheel": "8A, e le tre mosse che ne escono",
       "bpm": "il mucchio a 122, il buco a 128",
-      "stack": "sei condizioni, un risultato"
+      "stack": "sei condizioni, un risultato",
+      "oneway": "legge in una direzione sola, mai nell’altra",
+      "severity": "in ordine di quanto ti costa, non di quanti sono",
+      "handoff": "ti passa il mucchio; la scaletta è tua"
     },
     "metaTitle": "Crate — uno strumento per la libreria Rekordbox — Walter",
     "metaDescription": "Legge l'export di Rekordbox senza scriverci niente: filtri che si sommano, mosse in Camelot, doppioni e file che non ci sono più. Un file, niente da installare.",

@@ -3,12 +3,13 @@
  * src/locales/{en,it}.json under `dj.*`; everything here is order, ids and
  * numbers, which read the same in both languages.
  *
- * Below the seam the six capabilities sit two to a row from `lg`. Every one
- * carries a figure: the rack version left two of them silent, which worked
- * when each was a full-width row and stopped working once they became cells in
- * a grid, where an empty half reads as missing rather than as restraint. The
- * two that gained one — `read` and `handoff` — get *mechanism* diagrams rather
- * than invented data, which is the honest way to draw a claim about behaviour.
+ * The six capabilities alternate down the page, prose in one column and the
+ * figure in the other. Every one carries a figure: an earlier version left two
+ * of them silent, which worked while each was a full-width row and stopped
+ * working the moment the rows started alternating, where an empty half reads
+ * as missing rather than as restraint. The two that gained one — `read` and
+ * `handoff` — get *mechanism* diagrams rather than invented data, which is the
+ * honest way to draw a claim about behaviour.
  *
  * Every number below draws a sentence the copy already wrote. Nothing here is
  * a measurement of software that does not exist: the histogram's shape is the
@@ -17,26 +18,31 @@
  * because the copy says "it lights more" and never says how many.
  */
 
-/** Order is page order. `well` names the figure, or null for a silent row. */
+/** Order is page order. `well` names the figure; every capability carries one. */
 export type CapabilityId = 'read' | 'filters' | 'harmonic' | 'health' | 'overview' | 'handoff';
 export type WellFigure = 'oneway' | 'stack' | 'wheel' | 'severity' | 'histogram' | 'handback';
 
 export type Capability = {
   id: CapabilityId;
-  well: WellFigure | null;
+  well: WellFigure;
   /** Only `read` carries the honest wart, and only in that row. */
   caveat?: boolean;
-  /** Which `dj.figures.*` key captions the well, where one was written. */
-  caption?: 'stack' | 'bpm' | 'wheel';
+  /**
+   * Which `dj.figures.*` key captions the well. All six carry one now: a
+   * figure large enough to hold a column of the page is a figure a reader
+   * will try to read, and three of them were being left to speak for
+   * themselves at a size where that stopped being restraint.
+   */
+  caption: 'stack' | 'bpm' | 'wheel' | 'oneway' | 'severity' | 'handoff';
 };
 
 export const capabilities: readonly Capability[] = [
-  { id: 'read', well: 'oneway', caveat: true },
+  { id: 'read', well: 'oneway', caveat: true, caption: 'oneway' },
   { id: 'filters', well: 'stack', caption: 'stack' },
   { id: 'harmonic', well: 'wheel', caption: 'wheel' },
-  { id: 'health', well: 'severity' },
+  { id: 'health', well: 'severity', caption: 'severity' },
   { id: 'overview', well: 'histogram', caption: 'bpm' },
-  { id: 'handoff', well: 'handback' },
+  { id: 'handoff', well: 'handback', caption: 'handoff' },
 ];
 
 /**
@@ -130,30 +136,40 @@ export const heroWave = [
   6, 5, 5, 4, 4, 3, 3,
 ] as const;
 
-/** Columns at or above this height are the pile, and take the amber rung. */
+/** Columns at or above this height are the pile, and take the world's mint rung. */
 export const heroWaveLitFrom = 55;
 
-/** Where the two labelled tempi fall along the 48 columns. */
+/**
+ * Where the labelled tempi fall along the 48 columns. Two of these are the two
+ * the copy names; the outer pair are the ends of the range, and they are what
+ * turn the figure from a shape into an axis — without them a reader cannot
+ * tell whether the pile is at 122 or at 128, which is the whole sentence.
+ *
+ * The spacing is the interpolation's own: 122 and 128 sit six BPM and nine
+ * columns apart, so a column is 2/3 of a BPM and the range runs 112 to 140.
+ */
 export const heroWaveTicks = [
+  { label: '112', at: 1 },
   { label: '122', at: 16 },
   { label: '128', at: 25 },
+  { label: '140', at: 43 },
 ] as const;
 
 /**
- * The page's opening: three cards in a row carrying the whole argument before
- * the capability grid — the problem, the mechanism, and the honest status.
+ * The page's opening: three premises carrying the whole argument before the
+ * capability grid — the problem, the mechanism, and the honest status.
  *
  * `status` moves up here from its old position beside the CTA. It loses
- * nothing by it: the signup's own body ("no list and no launch") is what now
- * carries the honest beat immediately before the ask, and three identical
- * cards give the admission no more weight than the other two, which is the
- * treatment it has always needed.
+ * nothing by it: the download card's own body carries the honest beat
+ * immediately before the ask, and three identical cards give the admission no
+ * more weight than the other two, which is the treatment it has always needed.
+ *
+ * The `icon` each card used to name is gone with the tiles. The cards are
+ * numbered now, and a numeral and a glyph introducing the same card is one
+ * introduction too many — the stagger and the badge tone carry the difference
+ * the icons were carrying.
  */
-export const openingCards = [
-  { id: 'problem', icon: 'shelf' },
-  { id: 'mechanism', icon: 'wave' },
-  { id: 'status', icon: 'note' },
-] as const;
+export const openingCards = [{ id: 'problem' }, { id: 'mechanism' }, { id: 'status' }] as const;
 
 export type OpeningCardId = (typeof openingCards)[number]['id'];
 
