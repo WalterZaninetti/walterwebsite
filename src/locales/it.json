@@ -544,15 +544,56 @@
     "picker": {
       "placeLabel": "Dove sei",
       "placePlaceholder": "Scegli una provincia",
-      "whenLabel": "Quando",
       "halfEarly": "1–15 {{month}}",
       "halfLate": "16–31 {{month}}",
       "groupAnswering": "Qui una denominazione risponde",
-      "groupSilent": "Qui ancora nessuna denominazione"
+      "groupSilent": "Qui ancora nessuna denominazione",
+      "regionLabel": "Regione",
+      "regionPlaceholder": "Tutte le regioni",
+      "provinceLabel": "Provincia"
+    },
+    "zone": {
+      "alpine": "Alpi",
+      "padana": "Pianura Padana",
+      "tyrrhenian": "Tirreno",
+      "southern": "Sud",
+      "island": "Isole"
+    },
+    "filter": {
+      "all": "Tutto",
+      "fruit": "Frutta",
+      "vegetable": "Verdura"
+    },
+    "dial": {
+      "heading": "L'anno, e cosa è di stagione in ogni sua quindicina",
+      "label": "Quindicina dell'anno",
+      "today": "Torna a oggi",
+      "inSeasonHere": "di stagione qui",
+      "pickPlace": "scegli una provincia",
+      "heatLow": "poca scelta",
+      "heatHigh": "tanta scelta",
+      "caveat": "Pieno campo, annata media. Qui si contano le denominazioni il cui documento nomina {{place}} e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione."
+    },
+    "phase": {
+      "peak": "Al picco",
+      "starting": "Appena iniziata",
+      "ending": "Ultime settimane",
+      "coming": "In arrivo",
+      "out": "Fuori stagione",
+      "peakNote": "al picco, arriva a {{until}}",
+      "startingNote": "appena aperta, arriva a {{until}}",
+      "endingNote": "finisce a {{until}}",
+      "comingNote": "tra circa {{weeks}} settimane",
+      "outNote": "torna da {{from}}",
+      "allYear": "di stagione tutto l'anno"
+    },
+    "when": {
+      "startEarly": "inizio {{month}}",
+      "startLate": "metà {{month}}",
+      "endEarly": "metà {{month}}",
+      "endLate": "fine {{month}}"
     },
     "row": {
-      "showSource": "Da dove viene questa data",
-      "hideSource": "Chiudi",
       "consulted": "testo consolidato, consultato il {{date}}.",
       "generalised": "generalizzato",
       "generalisedLead": "Nessun disciplinare nomina {{place}}. Questa è la finestra su cui concordano le {{count}} denominazioni qui sotto, tutte altrove: dice quando si raccoglie, non che qui si coltivi.",
@@ -563,15 +604,8 @@
       "greenhouse": "serra",
       "stored": "di conserva"
     },
-    "table": {
-      "heading": "Tutto l'anno, e dove sei tu dentro",
-      "note": "Cosa risponde per {{place}}: le denominazioni il cui documento la nomina e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione. Ogni colonna è un mese, diviso nelle sue due metà.",
-      "productHeader": "Denominazione",
-      "firstHalf": "prima metà",
-      "secondHalf": "seconda metà",
-      "summary": "su {{total}} di stagione qui, {{half}}",
-      "legendNow": "la quindicina che hai scelto",
-      "inSeasonNow": "Di stagione nella quindicina che hai scelto."
+    "strip": {
+      "legendNow": "Le due tacche ruggine segnano la quindicina che hai scelto."
     },
     "s1": {
       "heading": "Come decide",
@@ -590,7 +624,8 @@
     },
     "states": {
       "noPlace": "Scegli una provincia e l'elenco si riempie. Il mese è già su questa quindicina.",
-      "nothing": "Nessuna denominazione dell'elenco nomina {{place}}. La maggior parte delle province non ne ha una: è un buco nei documenti, non un giudizio su cosa cresce lì."
+      "nothing": "Nessuna denominazione dell'elenco nomina {{place}}. La maggior parte delle province non ne ha una: è un buco nei documenti, non un giudizio su cosa cresce lì.",
+      "nothingOfKind": "Di questo tipo qui non è documentato niente. Il resto è nell'altro filtro."
     },
     "metaTitle": "Seasonable — davvero di stagione, vicino a te — Walter",
     "metaDescription": "Scegli una provincia e una quindicina. Seasonable dice quali prodotti DOP e IGP si raccolgono lì, citando il disciplinare che fissa ogni data."

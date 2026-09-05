@@ -544,15 +544,56 @@
     "picker": {
       "placeLabel": "Where you are",
       "placePlaceholder": "Pick a province",
-      "whenLabel": "When",
       "halfEarly": "1–15 {{month}}",
       "halfLate": "16–31 {{month}}",
       "groupAnswering": "A designation names these",
-      "groupSilent": "No designation names these yet"
+      "groupSilent": "No designation names these yet",
+      "regionLabel": "Region",
+      "regionPlaceholder": "Any region",
+      "provinceLabel": "Province"
+    },
+    "zone": {
+      "alpine": "Alps",
+      "padana": "Po Valley",
+      "tyrrhenian": "Tyrrhenian",
+      "southern": "South",
+      "island": "Islands"
+    },
+    "filter": {
+      "all": "Everything",
+      "fruit": "Fruit",
+      "vegetable": "Veg"
+    },
+    "dial": {
+      "heading": "The year, and what's in season in each fortnight of it",
+      "label": "Fortnight of the year",
+      "today": "Back to today",
+      "inSeasonHere": "in season here",
+      "pickPlace": "pick a province",
+      "heatLow": "little",
+      "heatHigh": "plenty",
+      "caveat": "Open field, an average year. Counted here: designations whose own document names {{place}}, and where none does, the span that region's designations agree on."
+    },
+    "phase": {
+      "peak": "At its peak",
+      "starting": "Just started",
+      "ending": "Last fortnights",
+      "coming": "Coming",
+      "out": "Out of season",
+      "peakNote": "at its peak, runs to {{until}}",
+      "startingNote": "just opened, runs to {{until}}",
+      "endingNote": "finishes {{until}}",
+      "comingNote": "in about {{weeks}} weeks",
+      "outNote": "back from {{from}}",
+      "allYear": "in season all year"
+    },
+    "when": {
+      "startEarly": "early {{month}}",
+      "startLate": "mid-{{month}}",
+      "endEarly": "mid-{{month}}",
+      "endLate": "late {{month}}"
     },
     "row": {
-      "showSource": "Where this date comes from",
-      "hideSource": "Close",
       "consulted": "consolidated text, consulted {{date}}.",
       "generalised": "generalised",
       "generalisedLead": "No disciplinare names {{place}}. This is the span the {{count}} designations below agree on, all of them elsewhere — it says when this is picked, not that it is grown here.",
@@ -563,15 +604,8 @@
       "greenhouse": "greenhouse",
       "stored": "stored"
     },
-    "table": {
-      "heading": "The whole year, and where you are in it",
-      "note": "What answers for {{place}}: designations whose own document names it, and where none does, the span that region's designations agree on. Each column is one month, split into its two halves.",
-      "productHeader": "Designation",
-      "firstHalf": "first half",
-      "secondHalf": "second half",
-      "summary": "of {{total}} in season here, {{half}}",
-      "legendNow": "the fortnight you picked",
-      "inSeasonNow": "In season in the fortnight you picked."
+    "strip": {
+      "legendNow": "The two rust marks bracket the fortnight you picked."
     },
     "s1": {
       "heading": "How it decides",
@@ -590,7 +624,8 @@
     },
     "states": {
       "noPlace": "Pick a province and the list fills in. The month is already set to this fortnight.",
-      "nothing": "No designation in the list names {{place}}. Most provinces haven't got one — that's a gap in the documents, not a verdict on what grows there."
+      "nothing": "No designation in the list names {{place}}. Most provinces haven't got one — that's a gap in the documents, not a verdict on what grows there.",
+      "nothingOfKind": "Nothing of that kind is documented here. The other filter has the rest."
     },
     "metaTitle": "Seasonable — what's genuinely in season near you — Walter",
     "metaDescription": "Pick an Italian province and a fortnight. Seasonable names the DOP and IGP produce being harvested there, quoting the disciplinare that fixes each date."

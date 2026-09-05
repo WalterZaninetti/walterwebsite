@@ -13,6 +13,7 @@
  *     raw.githubusercontent.com/lucide-icons/lucide/main/icons/<slug>.svg
  *     gallery-vertical-end · disc-3 · leaf · library-big · audio-lines · coffee
  *     file-text · download · sun · moon · menu · x · map-pin · thermometer
+     chevron-down
  *
  *   Simple Icons — CC0 — https://simpleicons.org
  *     raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/<slug>.svg
@@ -125,6 +126,15 @@ function bareGlyph(className?: string) {
  * An arrow on a link is an icon rather than a word, so it also has no business
  * being in a string translators are asked to carry.
  */
+
+/** A row that opens. Lucide `chevron-down`, rotated by the caller when open. */
+export function ChevronDownIcon({ className }: GlyphProps = {}) {
+  return (
+    <svg {...bareGlyph(className)} {...strokeProps}>
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
 
 /** Back. Lucide `arrow-left`. */
 export function ArrowLeftIcon({ className }: GlyphProps = {}) {

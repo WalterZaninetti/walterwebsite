@@ -439,6 +439,22 @@
   --project-food-mark: #32611f;       /* 6.54:1 vs lane · 7.06 vs canvas */
   --project-food-mark-quiet: #649453; /* 3.18:1 vs lane · 3.42 vs canvas */
 
+  /* The dial's heat, for how much is in season in one fortnight.
+
+     Not a new colour: -heat-1 is -mark-quiet and -heat-4 is -mark, with two
+     rungs interpolated between them in OKLCH at the world's hue 138, moving
+     lightness only — the same rule the two marks were solved under. So the
+     ring, the year strip and the legend are one green getting darker, and the
+     scale's ends are already measured (3.18:1 and 6.54:1 on the empty track).
+
+     Zero is --canvas-band, the empty track itself, so "nothing here" is the
+     absence of the ramp rather than its first step. The count is never left to
+     the colour alone: the hub states it, and every arc names its own figure. */
+  --project-food-heat-1: #649453;
+  --project-food-heat-2: #538342;
+  --project-food-heat-3: #427231;
+  --project-food-heat-4: #32611f;
+
   --hero-glow: none;
 
   /* ==========================================================================
@@ -735,6 +751,12 @@
      above their on-canvas figure rather than below it. */
   --project-food-mark: #97c188;       /* 9.54:1 vs lane · 9.06 vs canvas */
   --project-food-mark-quiet: #4b723d; /* 3.49:1 vs lane · 3.32 vs canvas */
+  /* The ramp turns over with the ground: on a dark track more is lighter, so
+     -heat-1 is the quiet rung and -heat-4 the bright one. 3.49:1 to 9.54:1. */
+  --project-food-heat-1: #4b723d;
+  --project-food-heat-2: #638c55;
+  --project-food-heat-3: #7da66e;
+  --project-food-heat-4: #97c188;
 
   --hero-glow: radial-gradient(
     90% 70% at 88% 10%,
@@ -953,6 +975,10 @@
   --shadow-lift-dj: var(--project-dj-shadow);
   --color-project-food-mark: var(--project-food-mark);
   --color-project-food-mark-quiet: var(--project-food-mark-quiet);
+  --color-project-food-heat-1: var(--project-food-heat-1);
+  --color-project-food-heat-2: var(--project-food-heat-2);
+  --color-project-food-heat-3: var(--project-food-heat-3);
+  --color-project-food-heat-4: var(--project-food-heat-4);
   --shadow-lift-food: var(--project-food-shadow);
   /* Warm shadow: a neutral-black shadow on a cream ground reads as grey dirt. */
   --shadow-card: 0 2px 14px rgb(70 45 15 / 0.08);

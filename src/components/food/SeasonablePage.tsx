@@ -1,14 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
+import type { KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { dataset } from '../../content/seasonable/index';
 import { site } from '../../content/site';
-import type { HalfMonth, SeasonRow, WindowKind } from '../../lib/seasonable';
+import type { HalfMonth, Phase, SeasonPhase, SeasonRow, WindowKind } from '../../lib/seasonable';
 import {
+  HALF_MONTHS,
   currentHalfMonth,
   produceName,
   answeredProvinces,
   kindsOf,
+  phaseAt,
+  phaseRank,
   produceKind,
+  regionName,
   seasonYear,
   sourcesOf,
   splitHalfMonth,
@@ -23,6 +28,7 @@ import { SkipLink } from '../ui/SkipLink';
 import { Tile } from '../ui/Tile';
 import {
   ArrowLeftIcon,
+  ChevronDownIcon,
   LeafIcon,
   MoonIcon,
   NoteIcon,
@@ -33,6 +39,7 @@ import {
 import { IconButton, ThemeSwitch } from '../SiteHeader';
 import { SiteFooter } from '../SiteFooter';
 import { cx } from '../ui/cx';
+import { ProduceGlyph } from './produceGlyphs';
 
 /**
  * Seasonable — `/seasonable`. Left `ProjectPage` the way `/dj-tools` did, and
@@ -49,13 +56,6 @@ import { cx } from '../ui/cx';
  * wearing the world down there; Crate already carved out the other case for
  * data marks (theme.css:334), and this follows it rather than inventing a
  * second mechanism.
- *
- * The band used to hold the two pickers. It doesn't: the tool has its own
- * container on canvas now, directly under the seam and directly above the
- * answer it produces. Input and output are one object read top to bottom, and
- * the band is left doing the single job a band is good at — saying what this
- * is to someone who has never seen it. The page still has one CTA, the
- * `mailto:` at the foot.
  */
 export function SeasonablePage() {
   const { t, i18n } = useTranslation();
@@ -86,15 +86,13 @@ export function SeasonablePage() {
       <main id="main">
         <Band />
 
-        <Console
+        <Clock
           province={province}
           half={half}
           locale={locale}
           onProvince={setProvince}
           onHalf={setHalf}
         />
-
-        <Answer province={province} half={half} locale={locale} />
 
         <Sections />
 
@@ -122,8 +120,11 @@ function readProvince(): string | null {
 }
 
 function readHalf(): HalfMonth {
-  const raw = Number(new URLSearchParams(window.location.search).get('h'));
-  return Number.isInteger(raw) && raw >= 0 && raw <= 23 ? raw : currentHalfMonth();
+  // `Number(null)` is 0, so a missing `h` used to resolve to 1-15 January
+  // rather than to today — on the one page whose copy promises the opposite.
+  const raw = new URLSearchParams(window.location.search).get('h');
+  const half = Number(raw);
+  return raw && Number.isInteger(half) && half >= 0 && half <= 23 ? half : currentHalfMonth();
 }
 
 /**
@@ -180,14 +181,6 @@ function PageHeader() {
   );
 }
 
-type ConsoleProps = {
-  province: string | null;
-  half: HalfMonth;
-  locale: 'en' | 'it';
-  onProvince: (id: string | null) => void;
-  onHalf: (half: HalfMonth) => void;
-};
-
 /**
  * The one full-bleed world block, and nothing else in it.
  *
@@ -230,6 +223,304 @@ function Band() {
   );
 }
 
+type Category = 'all' | 'fruit' | 'vegetable';
+
+type ClockProps = {
+  province: string | null;
+  half: HalfMonth;
+  locale: 'en' | 'it';
+  onProvince: (id: string | null) => void;
+  onHalf: (half: HalfMonth) => void;
+};
+
+type Listed = { row: SeasonRow; phase: Phase };
+
+/**
+ * The tool: a year drawn as a clock, and the list it fills in.
+ *
+ * This replaced a twelve-column table of every designation's whole year. The
+ * table was honest and it was slow to read, because it answered a question the
+ * reader had not asked yet — the shape of fifty-eight windows — before it
+ * answered the one they arrived with, which is what to buy this week. The ring
+ * inverts that. Its twenty-four arcs are the fortnights of the year tinted by
+ * how much is in season in each, so the answer to "when should I come back" is
+ * a shape rather than a sentence, and the hand says where in it you are
+ * standing. The list beside it is the fortnight the hand points at.
+ *
+ * The table's own argument survives, one row at a time: opening a row draws
+ * *its* window on the ring, prints its year as a strip with the months under
+ * it, and cites the document every date came from. Nothing on this page states
+ * a date it cannot source; that constraint moved, it did not lift.
+ */
+function Clock({ province, half, locale, onProvince, onHalf }: ClockProps) {
+  const { t } = useTranslation();
+  const [category, setCategory] = useState<Category>('all');
+  const [open, setOpen] = useState<string | null>(null);
+
+  const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;
+  const rows = useMemo(() => (province ? seasonYear(dataset, province) : []), [province]);
+
+  const months = useMemo(() => {
+    const long = new Intl.DateTimeFormat(locale, { month: 'long' });
+    const short = new Intl.DateTimeFormat(locale, { month: 'short' });
+    return Array.from({ length: 12 }, (_, m) => ({
+      long: long.format(new Date(2026, m, 1)),
+      // `short` carries a trailing dot in Italian ("gen."), which reads as
+      // noise on a dial where the label has no room for it.
+      short: short.format(new Date(2026, m, 1)).replace(/\.$/, ''),
+    }));
+  }, [locale]);
+
+  const shown = useMemo(
+    () => rows.filter((row) => category === 'all' || row.produce.category === category),
+    [rows, category],
+  );
+
+  /** How many of the listed designations each fortnight of the year answers. */
+  const counts = useMemo(
+    () =>
+      Array.from({ length: HALF_MONTHS }, (_, h) =>
+        shown.reduce((n, row) => n + (row.calendar[h] === null ? 0 : 1), 0),
+      ),
+    [shown],
+  );
+
+  const listed = useMemo<Listed[]>(() => {
+    const collator = new Intl.Collator(locale);
+    return shown
+      .map((row) => ({ row, phase: phaseAt(row.calendar, half) }))
+      .sort(
+        (a, b) =>
+          phaseRank(a.phase.phase) - phaseRank(b.phase.phase) ||
+          collator.compare(a.row.produce[locale], b.row.produce[locale]) ||
+          collator.compare(a.row.produce.name, b.row.produce.name),
+      );
+  }, [shown, half, locale]);
+
+  const inSeason = listed.filter((item) => phaseRank(item.phase.phase) <= 2).length;
+  const openRow = listed.find((item) => item.row.produce.id === open);
+
+  return (
+    // pt-10 clears the tile straddling the seam above, whose lower half
+    // overhangs 24px. Anything tighter and the sticker lands on the card.
+    <div className="bg-canvas px-5 pt-10 pb-4 md:px-13 md:pt-12 md:pb-6">
+      <section className="rounded-card border border-line-card bg-surface px-4 py-5 md:px-7 md:py-7">
+        <h2 className="sr-only">{t('seasonable.dial.heading')}</h2>
+
+        <PlacePicker province={province} locale={locale} onProvince={onProvince} />
+
+        <div className="mt-6 grid gap-6 lg:grid-cols-[340px_1fr] lg:items-start lg:gap-8">
+          <Dial
+            counts={counts}
+            half={half}
+            months={months}
+            onHalf={onHalf}
+            openCalendar={openRow?.row.calendar}
+            hasPlace={Boolean(here)}
+            inSeason={inSeason}
+            subtitle={
+              openRow
+                ? produceKind(openRow.row.produce, locale)
+                : here
+                  ? t('seasonable.dial.inSeasonHere')
+                  : t('seasonable.dial.pickPlace')
+            }
+          />
+
+          <div className="flex min-w-0 flex-col gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              {(['all', 'fruit', 'vegetable'] as const).map((value) => (
+                <FilterChip
+                  key={value}
+                  tone="food"
+                  active={category === value}
+                  onClick={() => setCategory(value)}
+                >
+                  {t(`seasonable.filter.${value}`)}
+                </FilterChip>
+              ))}
+              <span className="flex-1" />
+              <button
+                type="button"
+                onClick={() => {
+                  onHalf(currentHalfMonth());
+                  setOpen(null);
+                }}
+                className="rounded-pill px-2 py-1 font-mono text-micro text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                {t('seasonable.dial.today')}
+              </button>
+            </div>
+
+            <div role="status" aria-live="polite" className="min-w-0">
+              {!here ? (
+                <p className="max-w-[62ch] py-6 text-note text-ink-body text-pretty">
+                  {t('seasonable.states.noPlace')}
+                </p>
+              ) : listed.length === 0 ? (
+                <p className="max-w-[62ch] py-6 text-note text-ink-body text-pretty">
+                  {rows.length === 0
+                    ? t('seasonable.states.nothing', { place: here.name })
+                    : t('seasonable.states.nothingOfKind')}
+                </p>
+              ) : (
+                <ul className="flex list-none flex-col gap-1.5 lg:max-h-[32rem] lg:overflow-y-auto lg:pr-1">
+                  {listed.map((item) => (
+                    <Row
+                      key={item.row.produce.id}
+                      item={item}
+                      half={half}
+                      locale={locale}
+                      months={months}
+                      place={here.name}
+                      open={open === item.row.produce.id}
+                      onToggle={() =>
+                        setOpen((was) => (was === item.row.produce.id ? null : item.row.produce.id))
+                      }
+                    />
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <HeatLegend place={here?.name} />
+      </section>
+    </div>
+  );
+}
+
+/**
+ * Zone, then region, then province — the reader's own way down to the answer,
+ * which the flat list of 107 was not.
+ *
+ * The zone chips and the region field only ever *move* the province: they pick
+ * the first one under them that a document actually names. A picker that left
+ * the answer empty until all three had been set would make the two coarse
+ * controls a toll rather than a shortcut, and the coarse controls are the ones
+ * a reader who does not know their own province code can use.
+ */
+function PlacePicker({
+  province,
+  locale,
+  onProvince,
+}: {
+  province: string | null;
+  locale: 'en' | 'it';
+  onProvince: (id: string | null) => void;
+}) {
+  const { t } = useTranslation();
+
+  const answered = useMemo(() => answeredProvinces(dataset), []);
+  const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;
+  const region = here ? dataset.regions.find((r) => r.id === here.region) : undefined;
+
+  const collator = useMemo(() => new Intl.Collator(locale), [locale]);
+
+  /** The one a document names, falling back to the first of them. */
+  const firstIn = (test: (regionId: string) => boolean): string | undefined => {
+    const within = dataset.provinces.filter((p) => test(p.region));
+    return (within.find((p) => answered.has(p.id)) ?? within[0])?.id;
+  };
+
+  const zoneRegions = useMemo(
+    () =>
+      dataset.zones.map((zone) => ({
+        zone,
+        regions: dataset.regions
+          .filter((r) => r.zone === zone.id)
+          .sort((a, b) => collator.compare(regionName(a, locale), regionName(b, locale))),
+      })),
+    [collator, locale],
+  );
+
+  const [answering, silent] = useMemo(() => {
+    const within = dataset.provinces
+      .filter((p) => !region || p.region === region.id)
+      .sort((a, b) => collator.compare(a.name, b.name));
+    return [within.filter((p) => answered.has(p.id)), within.filter((p) => !answered.has(p.id))];
+  }, [answered, collator, region]);
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="mr-1 font-mono text-label-wide uppercase text-ink-muted">
+          {t('seasonable.picker.placeLabel')}
+        </span>
+        {dataset.zones.map((zone) => (
+          <FilterChip
+            key={zone.id}
+            active={region?.zone === zone.id}
+            onClick={() => onProvince(firstIn((id) => zoneOf(id) === zone.id) ?? null)}
+          >
+            {t(`seasonable.zone.${zone.id}`)}
+          </FilterChip>
+        ))}
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2 sm:max-w-[38rem]">
+        <div>
+          <label htmlFor="seasonable-region" className="sr-only">
+            {t('seasonable.picker.regionLabel')}
+          </label>
+          <select
+            id="seasonable-region"
+            className={FIELD_CLASS}
+            value={region?.id ?? ''}
+            onChange={(event) =>
+              onProvince(event.target.value ? (firstIn((id) => id === event.target.value) ?? null) : null)
+            }
+          >
+            <option value="">{t('seasonable.picker.regionPlaceholder')}</option>
+            {zoneRegions.map(({ zone, regions }) => (
+              <optgroup key={zone.id} label={t(`seasonable.zone.${zone.id}`)}>
+                {regions.map((r) => (
+                  <option key={r.id} value={r.id}>
+                    {regionName(r, locale)}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="seasonable-place" className="sr-only">
+            {t('seasonable.picker.provinceLabel')}
+          </label>
+          <select
+            id="seasonable-place"
+            className={FIELD_CLASS}
+            value={province ?? ''}
+            onChange={(event) => onProvince(event.target.value || null)}
+          >
+            <option value="">{t('seasonable.picker.placePlaceholder')}</option>
+            <optgroup label={t('seasonable.picker.groupAnswering')}>
+              {answering.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.name}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label={t('seasonable.picker.groupSilent')}>
+              {silent.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.name}
+                </option>
+              ))}
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function zoneOf(regionId: string): string | undefined {
+  return dataset.regions.find((r) => r.id === regionId)?.zone;
+}
+
 /**
  * The field sits on `--canvas` inside a `--surface` card rather than on the
  * card itself, and that is a measurement rather than a preference: the border
@@ -239,158 +530,243 @@ function Band() {
  * supposed to look like anyway.
  */
 const FIELD_CLASS =
-  'w-full appearance-none rounded-[3px] border border-project-food-mark-quiet bg-canvas px-3.5 py-3 font-mono text-note-sm text-ink-strong ' +
+  'w-full appearance-none rounded-field border border-project-food-mark-quiet bg-canvas px-3.5 py-2.5 font-mono text-note-sm text-ink-strong ' +
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
 
+function FilterChip({
+  active,
+  tone = 'accent',
+  children,
+  onClick,
+}: {
+  active: boolean;
+  tone?: 'accent' | 'food';
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={cx(
+        'rounded-pill border px-3.5 py-1.5 font-mono text-micro font-medium transition-colors duration-150',
+        'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+        active && tone === 'accent' && 'border-accent bg-accent text-accent-fg',
+        active && tone === 'food' && 'border-project-food-seam bg-project-food-seam text-canvas',
+        !active && 'border-line-card text-ink-muted hover:border-accent hover:text-accent',
+      )}
+    >
+      {children}
+    </button>
+  );
+}
+
+/* ── The dial ──────────────────────────────────────────────────────────────
+   Drawn at a 300-unit viewBox and scaled by the box it lands in, so the ring
+   is one set of numbers at every width. Centre (150,150), ring radius 104,
+   stroke 26 — the arcs are the ring, not shapes inside it, which is what lets
+   one `stroke-dasharray` per fortnight replace twenty-four wedge paths. */
+
+const RING_RADIUS = 104;
+const RING_STROKE = 26;
+const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
+const ARC = CIRCUMFERENCE / HALF_MONTHS;
+
+/** Zero is the empty track itself, so nothing here reads as absence. */
+const HEAT = [
+  'var(--canvas-band)',
+  'var(--project-food-heat-1)',
+  'var(--project-food-heat-2)',
+  'var(--project-food-heat-3)',
+  'var(--project-food-heat-4)',
+] as const;
+
 /**
- * The tool, in a container of its own — on canvas, under the seam, directly
- * above the answer it produces.
+ * One rung per designation, saturating at four — an absolute scale, not the
+ * fortnight's share of the busiest one.
  *
- * It used to live in the band. Two things were wrong with that. The fields had
- * to fight a coloured ground, re-stating border, focus ring and text colour in
- * world tokens that existed for no other reason; and the band was doing two
- * jobs at once, pitching the page to someone who had never seen it while also
- * being the control surface for someone who had. Here the controls read as one
- * object with the list they fill in, and the band goes back to one job.
- *
- * No submit button. `brief.md` wanted the answer to recompute as the fields
- * change, which is the truest reading of "two fields and a short list back" —
- * and it leaves the page with exactly one call to action, the `mailto:` at the
- * foot.
- *
- * Native `<select>` rather than a custom listbox: 107 provinces is exactly the
- * length where a phone's own wheel picker beats anything reimplemented, and it
- * arrives keyboard-operable, screen-reader-labelled and zoom-safe for free.
+ * Normalising was the obvious thing and it is wrong here twice over. The
+ * densest province in the catalogue answers five designations, so four rungs
+ * spread over that range spend three of them on the difference between one and
+ * three; and a ring whose darkest step means "five" in Salerno and "two" in
+ * Trento cannot be compared with the next province the reader tries, which is
+ * the comparison the whole page is for.
  */
-function Console({ province, half, locale, onProvince, onHalf }: ConsoleProps) {
+function heatOf(count: number): string {
+  return HEAT[Math.min(4, count)];
+}
+
+/** Where the middle of half-month `h` sits on the ring, in radians from 12. */
+function angleOf(h: number): number {
+  return ((h + 0.5) / HALF_MONTHS) * 2 * Math.PI - Math.PI / 2;
+}
+
+type DialProps = {
+  counts: readonly number[];
+  half: HalfMonth;
+  months: readonly { long: string; short: string }[];
+  onHalf: (half: HalfMonth) => void;
+  openCalendar?: readonly (WindowKind | null)[];
+  hasPlace: boolean;
+  inSeason: number;
+  subtitle: string;
+};
+
+function Dial({
+  counts,
+  half,
+  months,
+  onHalf,
+  openCalendar,
+  hasPlace,
+  inSeason,
+  subtitle,
+}: DialProps) {
   const { t } = useTranslation();
+  const { month: nowMonth } = splitHalfMonth(half);
+  const hand = angleOf(half);
 
-  // Sorted in the reading language, though the names themselves are Italian:
-  // an English reader still scans an alphabetical list, and Intl.Collator is
-  // what gets Forlì next to Foggia rather than after Frosinone.
-  /**
-   * Split into "answers something" and "answers nothing", because with this
-   * dataset the second group is the larger one and a flat list of 107 invites
-   * the reader to pick a province, get an empty page, and conclude the tool is
-   * broken. Both groups stay selectable: a shared link has to resolve, and an
-   * empty answer is a real answer that the copy explains.
-   */
-  const [answering, silent] = useMemo(() => {
-    const collator = new Intl.Collator(locale);
-    const answered = answeredProvinces(dataset);
-    const sorted = [...dataset.provinces].sort((a, b) => collator.compare(a.name, b.name));
-    return [sorted.filter((p) => answered.has(p.id)), sorted.filter((p) => !answered.has(p.id))];
-  }, [locale]);
-
-  const halves = useMemo(() => {
-    const month = new Intl.DateTimeFormat(locale, { month: 'long' });
-    return Array.from({ length: 24 }, (_, index) => {
-      const { month: monthIndex, late } = splitHalfMonth(index);
-      const name = month.format(new Date(2026, monthIndex, 1));
-      return {
-        value: index,
-        label: t(late ? 'seasonable.picker.halfLate' : 'seasonable.picker.halfEarly', {
-          month: name,
-        }),
-      };
-    });
-  }, [locale, t]);
+  // Arrow keys step the fortnight and wrap, which is the one behaviour a
+  // `role="slider"` does not get for free and the one the ring implies: there
+  // is no first or last fortnight on a circle.
+  const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const step = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[event.key];
+    if (step !== undefined) {
+      event.preventDefault();
+      onHalf((half + step + HALF_MONTHS) % HALF_MONTHS);
+      return;
+    }
+    if (event.key === 'Home') {
+      event.preventDefault();
+      onHalf(currentHalfMonth());
+    }
+  };
 
   return (
-    // pt-10 clears the tile straddling the seam above, whose lower half
-    // overhangs 24px. Anything tighter and the sticker lands on the card.
-    <div className="bg-canvas px-5 pt-10 md:px-13 md:pt-12">
-      <div className="rounded-card border border-line-card bg-surface px-5 py-6 md:px-7 md:py-7">
-        <div className="grid max-w-[42rem] gap-4 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="seasonable-place"
-              className="mb-2 block font-mono text-label-wide uppercase text-ink-muted"
-            >
-              {t('seasonable.picker.placeLabel')}
-            </label>
-            <select
-              id="seasonable-place"
-              className={FIELD_CLASS}
-              value={province ?? ''}
-              onChange={(event) => onProvince(event.target.value || null)}
-            >
-              <option value="">{t('seasonable.picker.placePlaceholder')}</option>
-              <optgroup label={t('seasonable.picker.groupAnswering')}>
-                {answering.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label={t('seasonable.picker.groupSilent')}>
-                {silent.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </optgroup>
-            </select>
-          </div>
+    <div
+      role="slider"
+      tabIndex={0}
+      aria-label={t('seasonable.dial.label')}
+      aria-valuemin={0}
+      aria-valuemax={HALF_MONTHS - 1}
+      aria-valuenow={half}
+      aria-valuetext={halfLabel(t, half, months)}
+      onKeyDown={onKeyDown}
+      className="relative mx-auto grid w-full max-w-[340px] place-items-center rounded-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+    >
+      <svg viewBox="0 0 300 300" className="w-full" aria-hidden="true">
+        <circle
+          cx={150}
+          cy={150}
+          r={RING_RADIUS}
+          fill="none"
+          stroke="var(--canvas-band)"
+          strokeWidth={RING_STROKE}
+        />
+        {counts.map((count, h) => (
+          <circle
+            key={h}
+            cx={150}
+            cy={150}
+            r={RING_RADIUS}
+            fill="none"
+            stroke={
+              openCalendar
+                ? openCalendar[h] === null
+                  ? 'var(--canvas-band)'
+                  : 'var(--project-food-mark)'
+                : hasPlace
+                  ? heatOf(count)
+                  : 'var(--canvas-band)'
+            }
+            strokeWidth={RING_STROKE}
+            strokeDasharray={`${ARC - 1.6} ${CIRCUMFERENCE - ARC + 1.6}`}
+            strokeDashoffset={-h * ARC}
+            transform="rotate(-90 150 150)"
+            className="cursor-pointer"
+            onClick={() => onHalf(h)}
+          />
+        ))}
 
-          <div>
-            <label
-              htmlFor="seasonable-when"
-              className="mb-2 block font-mono text-label-wide uppercase text-ink-muted"
+        {months.map((month, m) => {
+          const a = angleOf(m * 2 + 0.5);
+          return (
+            <text
+              key={month.short}
+              x={150 + Math.cos(a) * 133}
+              y={150 + Math.sin(a) * 133 + 4}
+              textAnchor="middle"
+              fontSize={12}
+              fill={m === nowMonth ? 'var(--ink-strong)' : 'var(--ink-muted)'}
+              fontWeight={m === nowMonth ? 700 : 500}
+              className="font-mono"
             >
-              {t('seasonable.picker.whenLabel')}
-            </label>
-            <select
-              id="seasonable-when"
-              className={FIELD_CLASS}
-              value={half}
-              onChange={(event) => onHalf(Number(event.target.value))}
-            >
-              {halves.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+              {month.short}
+            </text>
+          );
+        })}
+
+        <line
+          x1={150}
+          y1={150}
+          x2={150 + Math.cos(hand) * 122}
+          y2={150 + Math.sin(hand) * 122}
+          stroke="var(--accent)"
+          strokeWidth={2.75}
+          strokeLinecap="round"
+        />
+        <circle
+          cx={150 + Math.cos(hand) * 122}
+          cy={150 + Math.sin(hand) * 122}
+          r={6.5}
+          fill="var(--accent)"
+        />
+        <circle cx={150} cy={150} r={74} fill="var(--surface)" />
+      </svg>
+
+      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-1 px-14 text-center">
+        <span className="font-mono text-micro uppercase tracking-[0.1em] text-ink-muted">
+          {halfLabel(t, half, months)}
+        </span>
+        <span className="font-display text-title text-ink-strong leading-none">
+          {hasPlace ? inSeason : '—'}
+        </span>
+        <span className="text-micro text-ink-body text-pretty">{subtitle}</span>
       </div>
     </div>
   );
 }
 
-type AnswerProps = { province: string | null; half: HalfMonth; locale: 'en' | 'it' };
+/** "1–15 September". The picker's own two keys, so the axis and the hub agree. */
+function halfLabel(
+  t: (key: string, opts?: Record<string, unknown>) => string,
+  half: HalfMonth,
+  months: readonly { long: string }[],
+): string {
+  const { month, late } = splitHalfMonth(half);
+  return t(late ? 'seasonable.picker.halfLate' : 'seasonable.picker.halfEarly', {
+    month: months[month].long,
+  });
+}
 
 /**
- * The payload, on canvas, immediately under the console that fills it.
- *
- * One `role="status"` on the wrapper rather than one per row: the answer has to
- * announce itself once when it changes, and a live region per designation would
- * read the whole table aloud on every keystroke of the picker.
+ * "mid-March", "late May" — one endpoint of a window, named the way a person
+ * says it. A start lands on the beginning or the middle of its month, an end
+ * on the middle or the end of it, because the half-month either opens or
+ * closes depending on which side of the window it is.
  */
-function Answer({ province, half, locale }: AnswerProps) {
-  const { t } = useTranslation();
-
-  const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;
-  const rows = useMemo(() => (province ? seasonYear(dataset, province) : []), [province]);
-
-  return (
-    <div className="bg-canvas px-5 pt-11 pb-4 md:px-13 md:pt-14 md:pb-6">
-      <div role="status" aria-live="polite">
-        {!here ? (
-          <p className="max-w-[62ch] text-note text-ink-body text-pretty md:text-body">
-            {t('seasonable.states.noPlace')}
-          </p>
-        ) : rows.length === 0 ? (
-          <p className="max-w-[62ch] text-note text-ink-body text-pretty md:text-body">
-            {t('seasonable.states.nothing', { place: here.name })}
-          </p>
-        ) : (
-          <SeasonTable rows={rows} place={here.name} half={half} locale={locale} />
-        )}
-      </div>
-    </div>
-  );
+function edgeLabel(
+  t: (key: string, opts?: Record<string, unknown>) => string,
+  half: HalfMonth,
+  edge: 'start' | 'end',
+  months: readonly { long: string }[],
+): string {
+  const { month, late } = splitHalfMonth(half);
+  const key = late
+    ? `seasonable.when.${edge}Late`
+    : `seasonable.when.${edge}Early`;
+  return t(key, { month: months[month].long });
 }
 
 const KIND_KEY: Record<WindowKind, string> = {
@@ -399,469 +775,229 @@ const KIND_KEY: Record<WindowKind, string> = {
   stored: 'seasonable.kind.stored',
 };
 
-type TableProps = {
-  rows: readonly SeasonRow[];
-  place: string;
-  half: HalfMonth;
-  locale: 'en' | 'it';
+/**
+ * Three weights across five phases, and the split is the reader's decision
+ * rather than the model's five-way distinction: solid rust is buy it now,
+ * outlined is nearly or not quite any more, quiet is no. Which of the five it
+ * is, the word says.
+ */
+const PHASE_CLASS: Record<SeasonPhase, string> = {
+  peak: 'border-accent bg-accent text-accent-fg',
+  starting: 'border-project-food-seam text-project-food-seam',
+  ending: 'border-accent text-accent',
+  coming: 'border-line-strong text-ink-muted',
+  out: 'border-transparent bg-canvas-band text-ink-muted',
 };
 
-/**
- * The answer as a double-entry table: a designation per row, a month per
- * column, and the cell says what is happening to that designation in that
- * month.
- *
- * This replaced twelve months of unlabelled bar. Each row used to be a
- * 24-segment strip with a line drawn at the selected fortnight — which showed
- * the *shape* of a window accurately and left the reader with no way to say
- * which months they were looking at. Nothing carried the axis. You could see
- * that a window ended two thirds of the way along and still not know whether
- * that meant August or September, and a page whose whole argument is "every
- * date here is quoted from a document" cannot afford an answer the reader has
- * to take on trust.
- *
- * A real `<table>`, not a grid of divs: with `scope` on both header axes, a
- * screen reader announces a cell as "Carciofo di Paestum IGP, March, open
- * field" without being told to. That is the same double entry the sighted
- * reader gets, which is the whole point of using the element.
- *
- * Half-month precision survives the move to a month axis. Each cell is two
- * sub-blocks, one per fortnight, so a window that starts mid-March still
- * reads as starting mid-March. The dataset's resolution is the half-month and
- * the copy makes a claim about two-week errors; a table that rounded to whole
- * months would be quietly coarser than the thing it documents.
- *
- * Three things make it a chart rather than a grid of ticks, and all three came
- * out of the same complaint — that the answer was there and unreadable.
- *
- *  - **The lane.** Every row draws its whole year as a filled track, month
- *    boundaries scored into it in the page's own ground. An empty August is
- *    now visibly an empty August rather than absence of anything, and the run
- *    of months a window covers has an edge to be measured against.
- *  - **One bar, not twenty-four ticks.** Adjacent fortnights of the same kind
- *    abut and round only at the ends of the run, so a window is a single
- *    object with a start and a stop. It used to be a dashed line of separate
- *    marks, which is the shape that hid the length.
- *  - **A cursor, not a hairline.** The picked fortnight is bracketed on both
- *    edges, capped in the header, and counted in the strip above. The fact
- *    the reader came for is "how many of these, right now", and nothing on
- *    the page said it.
- */
-function SeasonTable({ rows, place, half, locale }: TableProps) {
-  const { t } = useTranslation();
-
-  const months = useMemo(() => {
-    const long = new Intl.DateTimeFormat(locale, { month: 'long' });
-    const short = new Intl.DateTimeFormat(locale, { month: 'short' });
-    const narrow = new Intl.DateTimeFormat(locale, { month: 'narrow' });
-    return Array.from({ length: 12 }, (_, m) => ({
-      index: m,
-      long: long.format(new Date(2026, m, 1)),
-      // `short` carries a trailing dot in Italian ("gen."), which reads as
-      // noise in a header cell that is already three characters wide.
-      short: short.format(new Date(2026, m, 1)).replace(/\.$/, ''),
-      narrow: narrow.format(new Date(2026, m, 1)),
-    }));
-  }, [locale]);
-
-  /**
-   * In season now first, then by the kind of thing, then by designation.
-   *
-   * The reader arrived with a fortnight selected and a question about it. The
-   * table answers the whole year, so the rows that answer *their* fortnight
-   * have to be the ones they land on — otherwise the honest, complete view is
-   * also a slower one, and the page has traded its answer for its evidence.
-   */
-  const ordered = useMemo(() => {
-    const collator = new Intl.Collator(locale);
-    return [...rows].sort(
-      (a, b) =>
-        Number(b.calendar[half] !== null) - Number(a.calendar[half] !== null) ||
-        collator.compare(a.produce[locale], b.produce[locale]) ||
-        collator.compare(a.produce.name, b.produce.name),
-    );
-  }, [rows, half, locale]);
-
-  const { month: nowMonth, late: nowLate } = splitHalfMonth(half);
-  const activeNow = ordered.filter((row) => row.calendar[half] !== null).length;
-  const drawnKinds = [...new Set(ordered.flatMap((row) => kindsOf(row)))];
-  const when = t(nowLate ? 'seasonable.picker.halfLate' : 'seasonable.picker.halfEarly', {
-    month: months[nowMonth].long,
-  });
-
-  return (
-    <figure className="m-0">
-      <figcaption className="mb-5 max-w-[62ch]">
-        <h2 className="font-display text-title-sm text-ink-strong">
-          {t('seasonable.table.heading')}
-        </h2>
-        <p className="mt-1.5 font-mono text-meta text-ink-muted text-pretty">
-          {t('seasonable.table.note', { place })}
-        </p>
-      </figcaption>
-
-      <Legend active={activeNow} total={ordered.length} when={when} kinds={drawnKinds} />
-
-      {/*
-        The table is 13 columns and the narrowest phone is 320px, so it scrolls
-        inside its own box rather than making the page scroll sideways. The
-        designation column is sticky, because a month cell means nothing once
-        its row header has been scrolled off the left edge.
-      */}
-      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
-        <table className="w-full min-w-[26rem] table-fixed border-collapse border-b border-line-card text-left md:min-w-[42rem]">
-          {/*
-            Without this the designation column sizes to its longest name —
-            "Pomodoro San Marzano dell'Agro Sarnese-Nocerino DOP" — and squeezes
-            twelve months into the last third of the table, which is the one
-            thing the column axis exists to prevent.
-
-            The mobile width is the same argument at the size where it bites
-            hardest. At 15rem the names took three quarters of a 320px screen
-            and the reader met a table with almost no calendar in it, which is
-            the wrong half to show first: they can infer a truncated name, and
-            cannot infer a month they cannot see.
-          */}
-          <colgroup>
-            <col className="w-[9.5rem] md:w-[18rem]" />
-            {Array.from({ length: 12 }, (_, i) => (
-              <col key={i} />
-            ))}
-          </colgroup>
-          <thead>
-            <tr>
-              <th
-                scope="col"
-                className="sticky left-0 z-10 border-r border-line-card bg-canvas pb-2.5 pr-3 align-bottom font-mono text-label-wide uppercase text-ink-muted"
-              >
-                {t('seasonable.table.productHeader')}
-              </th>
-              {months.map((month) => (
-                <th
-                  key={month.index}
-                  scope="col"
-                  className={cx(
-                    'relative pb-2.5 text-center align-bottom font-mono text-micro font-medium uppercase',
-                    month.index === nowMonth ? 'text-accent' : 'text-ink-muted',
-                  )}
-                >
-                  {/*
-                    A month column is 22px wide on a phone, where three letters
-                    of the abbreviation collide with their neighbours and the
-                    axis reads as one run of characters. The narrow form is one
-                    letter and ambiguous on its own — Italian has two G and two
-                    A — which is exactly why the long name stays in `sr-only`
-                    and the reader can always count along from January.
-                  */}
-                  <span aria-hidden="true" className="sm:hidden">{month.narrow}</span>
-                  <span aria-hidden="true" className="hidden sm:inline">{month.short}</span>
-                  <span className="sr-only">{month.long}</span>
-                  {/* The cap on the cursor the rows below carry. It sits over
-                      the picked half of the month, so the header states the
-                      fortnight the axis itself can only state the month of. */}
-                  {month.index === nowMonth && (
-                    <span
-                      aria-hidden="true"
-                      className={cx(
-                        'absolute bottom-0 h-[3px] w-1/2 rounded-t-[2px] bg-accent',
-                        nowLate ? 'right-0' : 'left-0',
-                      )}
-                    />
-                  )}
-                </th>
-              ))}
-            </tr>
-          </thead>
-
-          <tbody>
-            {ordered.map((row) => (
-              <TableRow
-                key={row.produce.id}
-                row={row}
-                half={half}
-                locale={locale}
-                place={place}
-                nowMonth={nowMonth}
-                nowLate={nowLate}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  );
-}
-
-/**
- * How to read the chart, drawn in the chart's own marks rather than described.
- *
- * The three window kinds were already three geometries and nothing on the page
- * said which was which — the row's own label named the kind in words, which
- * only works if you have already worked out that the word and the shape are the
- * same fact. The swatches sit in a lane chip of the same height as the table's,
- * so a key is literally a one-month excerpt of a row.
- *
- * Only the kinds actually drawn below get a key. The catalogue holds no
- * greenhouse window at all today and most provinces answer in open field
- * alone; a key for a shape nobody can find in the chart sends the reader
- * looking for it, which is the opposite of what a legend is for.
- *
- * The count leads. A reader arrives with a fortnight selected and one question
- * about it, and until now the answer to that question was "sort order" — the
- * rows in season were on top, and nothing said how many of them there were or
- * where the group ended.
- */
-type LegendProps = { active: number; total: number; when: string; kinds: readonly WindowKind[] };
-
-const KIND_ORDER: readonly WindowKind[] = ['open-field', 'greenhouse', 'stored'];
-
-function Legend({ active, total, when, kinds }: LegendProps) {
-  const { t } = useTranslation();
-
-  const keys = KIND_ORDER.filter((kind) => kinds.includes(kind));
-
-  return (
-    <div className="mb-5 flex flex-col gap-4 rounded-card border border-line-card bg-canvas px-4 py-4 md:flex-row md:items-center md:justify-between md:gap-8 md:px-5">
-      <p className="flex items-baseline gap-2.5 font-mono text-meta text-ink-body">
-        <span className="font-display text-title-sm leading-none text-accent">{active}</span>
-        <span className="text-pretty">{t('seasonable.table.summary', { total, half: when })}</span>
-      </p>
-
-      <ul className="flex list-none flex-wrap items-center gap-x-4 gap-y-2.5">
-        {keys.map((kind) => (
-          <li key={kind} className="flex items-center gap-2">
-            <span aria-hidden="true" className="flex h-5 w-9 items-center rounded-[3px] bg-canvas-band">
-              <Mark kind={kind} className="rounded-[3px]" />
-            </span>
-            <span className="font-mono text-micro text-ink-muted">{t(KIND_KEY[kind])}</span>
-          </li>
-        ))}
-        <li className="flex items-center gap-2">
-          <span
-            aria-hidden="true"
-            className="relative flex h-5 w-9 items-center justify-center rounded-[3px] bg-canvas-band"
-          >
-            <span className="absolute inset-y-0 left-2.5 w-0.5 bg-accent" />
-            <span className="absolute inset-y-0 right-2.5 w-0.5 bg-accent" />
-          </span>
-          <span className="font-mono text-micro text-ink-muted">{t('seasonable.table.legendNow')}</span>
-        </li>
-      </ul>
-    </div>
-  );
-}
-
-type TableRowProps = {
-  row: SeasonRow;
+type RowProps = {
+  item: Listed;
   half: HalfMonth;
   locale: 'en' | 'it';
+  months: readonly { long: string; short: string }[];
   place: string;
-  nowMonth: number;
-  nowLate: boolean;
+  open: boolean;
+  onToggle: () => void;
 };
 
-function TableRow({ row, half, locale, place, nowMonth, nowLate }: TableRowProps) {
+function Row({ item, half, locale, months, place, open, onToggle }: RowProps) {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const panelId = `seasonable-src-${row.produce.id}`;
-  const activeNow = row.calendar[half] !== null;
+  const { row, phase } = item;
+  const panelId = `seasonable-row-${row.produce.id}`;
+  const quiet = phaseRank(phase.phase) > 3;
   // A row is generalised when nothing in it was quoted from a document naming
   // this province. The two bases never mix on one row — seasonYear drops the
   // generalised window wherever a documented one exists — so `every` is exact.
   const generalised = row.entries.every((e) => e.window.basis === 'generalised');
 
-  return (
-    <>
-      <tr className="border-t border-line-card">
-        <th
-          scope="row"
-          className="sticky left-0 z-10 border-r border-line-card bg-canvas py-2.5 pr-3 align-middle font-normal"
-        >
-          {/* The dot is always in the flow, transparent when the row is quiet,
-              so the names stay on one left edge instead of shifting by 14px
-              between a row that answers now and one that does not. */}
-          <div className="flex gap-2">
-            <span
-              className={cx(
-                'mt-[0.4rem] size-1.5 shrink-0 rounded-full',
-                activeNow ? 'bg-accent' : 'bg-transparent',
-              )}
-            >
-              {activeNow && <span className="sr-only">{t('seasonable.table.inSeasonNow')}</span>}
-            </span>
-            <div className="min-w-0">
-              <span
-                className={cx(
-                  'block text-body-sm leading-snug',
-                  activeNow ? 'text-ink-strong' : 'text-ink-body',
-                )}
-              >
-                {produceName(row.produce)}
-              </span>
-              <span className="mt-1 block font-mono text-micro leading-tight text-ink-muted">
-                {produceKind(row.produce, locale)}
-                {' · '}
-                {kindsOf(row)
-                  .map((kind) => t(KIND_KEY[kind]))
-                  .join(' · ')}
-                {generalised && (
-                  <>
-                    {' · '}
-                    <span className="text-ink-muted italic">{t('seasonable.row.generalised')}</span>
-                  </>
-                )}
-              </span>
-              <button
-                type="button"
-                onClick={() => setOpen((was) => !was)}
-                aria-expanded={open}
-                aria-controls={panelId}
-                className="mt-1.5 block text-left font-mono text-micro leading-tight text-ink-muted underline-offset-2 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                {open ? t('seasonable.row.hideSource') : t('seasonable.row.showSource')}
-              </button>
-            </div>
-          </div>
-        </th>
+  const note =
+    phase.phase === 'coming'
+      ? t('seasonable.phase.comingNote', { weeks: (phase.away ?? 0) * 2 })
+      : phase.phase === 'out'
+        ? phase.starts === undefined
+          ? ''
+          : t('seasonable.phase.outNote', { from: edgeLabel(t, phase.starts, 'start', months) })
+        : phase.ends === undefined
+          ? t('seasonable.phase.allYear')
+          : t(`seasonable.phase.${phase.phase}Note`, {
+              until: edgeLabel(t, phase.ends, 'end', months),
+            });
 
-        {Array.from({ length: 12 }, (_, month) => (
-          <Cell
-            key={month}
-            calendar={row.calendar}
-            month={month}
-            now={month === nowMonth ? (nowLate ? 'late' : 'early') : null}
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={panelId}
+        className={cx(
+          'flex w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-field border px-3 py-2.5 text-left transition-colors duration-150',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+          open ? 'border-accent bg-canvas-band' : 'border-line-card bg-canvas hover:bg-canvas-band',
+        )}
+      >
+        <span
+          className={cx(
+            'grid size-10 shrink-0 place-items-center rounded-pill bg-surface',
+            quiet ? 'text-ink-muted' : 'text-project-food-mark',
+          )}
+        >
+          <ProduceGlyph kind={row.produce.en} size={24} />
+        </span>
+
+        <span className="flex min-w-0 flex-[1_1_12rem] flex-col gap-0.5">
+          <span
+            className={cx('text-body-sm leading-snug text-pretty', quiet ? 'text-ink-body' : 'text-ink-strong')}
+          >
+            {produceName(row.produce)}
+          </span>
+          <span className="font-mono text-micro leading-tight text-ink-muted">{note}</span>
+        </span>
+
+        {/* Pill and chevron travel as one, so that on a phone — where the
+            designation's own name needs the whole line — the pair wraps
+            together and stays right-aligned instead of the chevron being
+            orphaned on a line of its own. */}
+        <span className="flex flex-1 items-center justify-end gap-2 sm:flex-none">
+          <span
+            className={cx(
+              'rounded-pill border px-2.5 py-1 font-mono text-micro font-medium',
+              PHASE_CLASS[phase.phase],
+            )}
+          >
+            {t(`seasonable.phase.${phase.phase}`)}
+          </span>
+          <ChevronDownIcon
+            className={cx(
+              'size-4 shrink-0 text-ink-muted transition-transform duration-150',
+              open && 'rotate-180',
+            )}
           />
-        ))}
-      </tr>
+        </span>
+      </button>
 
       {open && (
-        <tr id={panelId}>
-          {/* 13 columns: the designation plus the twelve months. */}
-          <td colSpan={13} className="pb-3 pl-0">
-            <div className="grid gap-1">
-              {generalised && (
-                <p className="max-w-[62ch] font-mono text-micro text-ink-body">
-                  {t('seasonable.row.generalisedLead', { place, count: sourcesOf(row).length })}
-                </p>
-              )}
-              {sourcesOf(row).map((source) => (
-                <p key={source.id} className="max-w-[62ch] font-mono text-micro text-ink-body">
-                  <a
-                    href={source.url}
-                    rel="noreferrer"
-                    className="text-accent underline underline-offset-2"
-                  >
-                    {source.name}
-                  </a>
-                  {', '}
-                  {source.year === undefined
-                    ? t('seasonable.row.consulted', { date: source.accessed })
-                    : `${source.year}.`}
-                  {!generalised && <> {t('seasonable.row.basisTail', { place })}</>}
-                </p>
-              ))}
-            </div>
-          </td>
-        </tr>
+        <div id={panelId} className="px-3 pt-3 pb-4">
+          <p className="mb-2 font-mono text-micro text-ink-muted">
+            {produceKind(row.produce, locale)}
+            {' · '}
+            {kindsOf(row)
+              .map((kind) => t(KIND_KEY[kind]))
+              .join(' · ')}
+            {generalised && (
+              <>
+                {' · '}
+                <span className="italic">{t('seasonable.row.generalised')}</span>
+              </>
+            )}
+          </p>
+
+          <YearStrip calendar={row.calendar} half={half} months={months} />
+
+          <div className="mt-3 grid gap-1">
+            {generalised && (
+              <p className="max-w-[62ch] font-mono text-micro text-ink-body">
+                {t('seasonable.row.generalisedLead', { place, count: sourcesOf(row).length })}
+              </p>
+            )}
+            {sourcesOf(row).map((source) => (
+              <p key={source.id} className="max-w-[62ch] font-mono text-micro text-ink-body">
+                <a href={source.url} rel="noreferrer" className="text-accent underline underline-offset-2">
+                  {source.name}
+                </a>
+                {', '}
+                {source.year === undefined
+                  ? t('seasonable.row.consulted', { date: source.accessed })
+                  : `${source.year}.`}
+                {!generalised && <> {t('seasonable.row.basisTail', { place })}</>}
+              </p>
+            ))}
+          </div>
+        </div>
       )}
-    </>
+    </li>
   );
 }
 
-type CellProps = {
-  calendar: readonly (WindowKind | null)[];
-  month: number;
-  now: 'early' | 'late' | null;
-};
-
 /**
- * One month of the lane, drawn as its two fortnights.
+ * One row's whole year, under a month axis — the table's lane, kept for the
+ * row the reader opened.
  *
- * The cell takes the whole calendar rather than its own two halves because a
- * bar has to know its neighbours: a fortnight rounds its edge only where the
- * run it belongs to ends, and the run crosses cell boundaries. Reading one
- * cell either side is what turns twenty-four marks into however many windows
- * the row actually has.
+ * The ring says the same thing and says it faster, and it says it without an
+ * axis: an arc two thirds of the way round is August or September and the
+ * reader cannot tell which. That was the complaint the table was built to
+ * answer and it has not stopped being true, so the strip is where a date gets
+ * checked rather than glanced at.
  *
- * The three window kinds stay three geometries rather than three colours —
- * the lane's full height for open field, a hatched band for glass, a low bar
- * for storage. That is not a style choice repeated for its own sake: SC 1.4.1
- * forbids carrying meaning in hue alone, and every face on this site is subset
- * to Latin-1 plus a short extras list, so the geometric-shape glyphs that would
- * have been the easy answer render as fallback dots. Print this table in
+ * The three window kinds stay three geometries rather than three colours. SC
+ * 1.4.1 forbids carrying meaning in hue alone, and every face on this site is
+ * subset to Latin-1 plus a short extras list, so the geometric-shape glyphs
+ * that would have been the easy answer render as fallback dots. Print this in
  * greyscale and it still parses.
- *
- * The screen reader gets the same fact in words, from the `sr-only` span, and
- * the table's own `scope` headers supply the designation and the month around
- * it — so the cell announces as a sentence without any of that being written
- * into an aria-label by hand.
  */
-function Cell({ calendar, month, now }: CellProps) {
+function YearStrip({
+  calendar,
+  half,
+  months,
+}: {
+  calendar: readonly (WindowKind | null)[];
+  half: HalfMonth;
+  months: readonly { long: string; short: string }[];
+}) {
   const { t } = useTranslation();
-  const early = calendar[month * 2];
-  const late = calendar[month * 2 + 1];
-  const kinds = [early, late].filter((k): k is WindowKind => k !== null);
-  const spoken =
-    kinds.length === 0
-      ? null
-      : [
-          [...new Set(kinds)].map((k) => t(KIND_KEY[k])).join(' · '),
-          early && !late ? t('seasonable.table.firstHalf') : null,
-          late && !early ? t('seasonable.table.secondHalf') : null,
-        ]
-          .filter(Boolean)
-          .join(', ');
 
   return (
-    // The cursor is anchored to the cell rather than to the half inside it, so
-    // it spans the row's full height instead of the 20px the lane occupies.
-    // Anchored to the half it broke into one tick per row, which read as four
-    // marks rather than one axis.
-    <td className="relative p-0 align-middle">
-      {spoken && <span className="sr-only">{spoken}</span>}
-      <div className="flex h-10 items-center">
-        <div
-          className={cx(
-            'relative flex h-5 w-full bg-canvas-band',
-            month === 0 && 'rounded-l-[3px]',
-            month === 11 && 'rounded-r-[3px]',
-          )}
-        >
-          {/* Scored in the page's own ground rather than a hairline: the month
-              boundary has to survive being crossed by a bar that is darker than
-              any rule would be, and a notch of canvas reads through it where a
-              grey line would disappear under it. */}
-          {month > 0 && (
-            <span aria-hidden="true" className="absolute inset-y-0 left-0 w-px bg-canvas" />
-          )}
-          <Half kind={early} prev={calendar[month * 2 - 1] ?? null} next={late} />
-          <Half kind={late} prev={early} next={calendar[month * 2 + 2] ?? null} />
-        </div>
+    <div>
+      <div className="relative flex h-5 overflow-hidden rounded-[3px] bg-canvas-band">
+        {calendar.map((kind, h) => (
+          <Half
+            key={h}
+            kind={kind}
+            prev={h === 0 ? null : calendar[h - 1]}
+            next={h === HALF_MONTHS - 1 ? null : calendar[h + 1]}
+          />
+        ))}
+        {/* Scored in the page's own ground rather than a hairline: a month
+            boundary has to survive being crossed by a bar darker than any rule
+            would be, and a notch of canvas reads through where grey would
+            disappear under it. */}
+        {months.map((month, m) =>
+          m === 0 ? null : (
+            <span
+              key={month.short}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 w-px bg-canvas"
+              style={{ left: `${(m / 12) * 100}%` }}
+            />
+          ),
+        )}
+        {/* The rust cursor is a knockout, not a shadow. It crosses the bar it
+            is measuring, and rust on the mark green is 1.4:1 — over a long
+            window it simply disappears, which is where a reader is most likely
+            to be tracing it. */}
+        {[half, half + 1].map((edge, i) => (
+          <span
+            key={edge}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_1px_var(--canvas)]"
+            style={{
+              left: `${(edge / HALF_MONTHS) * 100}%`,
+              transform: i === 1 ? 'translateX(-100%)' : undefined,
+            }}
+          />
+        ))}
       </div>
-      {/* The rust ring is a knockout, not a shadow. The cursor crosses the bars
-          it is measuring, and rust on the mark green is 1.4:1 — over a long
-          window it simply disappears, which is the one place a reader is most
-          likely to be tracing it. A hairline of the page's own ground either
-          side keeps it at 7:1 over a bar and is invisible everywhere else. */}
-      {now && (
-        <>
-          <span
-            aria-hidden="true"
-            className={cx(
-              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_1px_var(--canvas)]',
-              now === 'early' ? 'left-0' : 'left-1/2',
-            )}
-          />
-          <span
-            aria-hidden="true"
-            className={cx(
-              'pointer-events-none absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_1px_var(--canvas)]',
-              now === 'early' ? 'left-1/2 -translate-x-full' : 'right-0',
-            )}
-          />
-        </>
-      )}
-    </td>
+      <div
+        aria-hidden="true"
+        className="mt-1 grid grid-cols-12 text-center font-mono text-micro text-ink-muted"
+      >
+        {months.map((month, m) => (
+          <span key={month.short} className={m === splitHalfMonth(half).month ? 'text-accent' : ''}>
+            {month.short}
+          </span>
+        ))}
+      </div>
+      <p className="sr-only">{t('seasonable.strip.legendNow')}</p>
+    </div>
   );
 }
 
@@ -869,9 +1005,9 @@ function Cell({ calendar, month, now }: CellProps) {
  * One fortnight of the lane: a mark if something is happening in it, the empty
  * track if not.
  *
- * `prev` and `next` are the fortnights either side, across cell boundaries.
- * The corner rounds only where the kind changes, so a six-month window is one
- * capsule with two ends rather than twelve ticks with twenty-four.
+ * `prev` and `next` are the fortnights either side. The corner rounds only
+ * where the kind changes, so a six-month window is one capsule with two ends
+ * rather than twelve ticks with twenty-four.
  */
 function Half({
   kind,
@@ -883,7 +1019,6 @@ function Half({
   next: WindowKind | null;
 }) {
   return (
-    // Positioned, so the marks paint over the month score rather than under it.
     <span className="relative flex h-full flex-1 items-center">
       {kind && (
         <span
@@ -902,20 +1037,35 @@ function Half({
   );
 }
 
-/** A legend swatch, drawn by the same rules a fortnight in the lane is. */
-function Mark({ kind, className }: { kind: WindowKind; className?: string }) {
+/**
+ * What the ring's colour means, drawn in the ring's own steps, plus the caveat
+ * every date on the page is subject to.
+ */
+function HeatLegend({ place }: { place?: string }) {
+  const { t } = useTranslation();
+
   return (
-    <span
-      className={cx(
-        'block w-full',
-        kind === 'open-field' && 'h-5 bg-project-food-mark',
-        kind === 'greenhouse' && 'hatch-food-mark h-5',
-        kind === 'stored' && 'h-2 bg-project-food-mark-quiet',
-        className,
+    <div className="mt-6 flex flex-col gap-3 border-t border-line-card pt-4 md:flex-row md:items-center md:justify-between md:gap-8">
+      <p className="flex items-center gap-2 font-mono text-micro text-ink-muted">
+        <span>{t('seasonable.dial.heatLow')}</span>
+        <span aria-hidden="true" className="flex items-center gap-1">
+          <span className="h-2.5 w-5 rounded-pill bg-canvas-band" />
+          <span className="h-2.5 w-5 rounded-pill bg-project-food-heat-1" />
+          <span className="h-2.5 w-5 rounded-pill bg-project-food-heat-2" />
+          <span className="h-2.5 w-5 rounded-pill bg-project-food-heat-3" />
+          <span className="h-2.5 w-5 rounded-pill bg-project-food-heat-4" />
+        </span>
+        <span>{t('seasonable.dial.heatHigh')}</span>
+      </p>
+      {place && (
+        <p className="max-w-[52ch] font-mono text-micro text-ink-muted text-pretty md:text-right">
+          {t('seasonable.dial.caveat', { place })}
+        </p>
       )}
-    />
+    </div>
   );
 }
+
 /**
  * Three arguments, one card each — Crate's opening cards in the same shape,
  * down to the punched `Tile` and the `--accent` numeral over a hairline
@@ -970,6 +1120,8 @@ function Sections() {
   );
 }
 
+type AskProps = { province: string | null; half: HalfMonth; locale: 'en' | 'it' };
+
 /**
  * The page's one call to action, and the first thing on this site to ask a
  * reader for anything since site.md ruled that a page about software which does
@@ -979,7 +1131,7 @@ function Sections() {
  *
  * Still `mailto:`. There is no form backend and none is being added.
  */
-function Ask({ province, half, locale }: AnswerProps) {
+function Ask({ province, half, locale }: AskProps) {
   const { t } = useTranslation();
 
   const here = province ? dataset.provinces.find((p) => p.id === province) : undefined;

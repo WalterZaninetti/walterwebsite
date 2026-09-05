@@ -20,11 +20,12 @@
 
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import type { Dataset } from './seasonable.ts';
+import type { Dataset, Window } from './seasonable.ts';
 import {
   covers,
   currentHalfMonth,
   kindsOf,
+  phaseAt,
   seasonYear,
   sourcesOf,
   windowLength,
@@ -361,4 +362,55 @@ test('the catalogue answers for a real share of the country', () => {
   // Not a coverage target — a floor, so that silently losing half the dataset
   // fails here rather than rendering an empty page for most of Italy.
   assert.ok(answered.size >= 50, `only ${answered.size} provinces answer anything`);
+});
+
+/** A calendar open across `[start, end]` inclusive, wrap included. */
+const lane = (start: number, end: number): (Window['kind'] | null)[] =>
+  Array.from({ length: 24 }, (_, h) => (covers(h, start, end) ? 'open-field' : null));
+
+test('phaseAt() names both edges of a long window and the middle between them', () => {
+  const summer = lane(10, 17);
+  assert.equal(phaseAt(summer, 10).phase, 'starting');
+  assert.equal(phaseAt(summer, 11).phase, 'starting');
+  assert.equal(phaseAt(summer, 12).phase, 'peak');
+  assert.equal(phaseAt(summer, 15).phase, 'peak');
+  assert.equal(phaseAt(summer, 16).phase, 'ending');
+  assert.equal(phaseAt(summer, 17).phase, 'ending');
+  assert.equal(phaseAt(summer, 10).ends, 17);
+});
+
+test('phaseAt() gives a short window no edges to stand on', () => {
+  const brief = lane(8, 11);
+  for (const h of [8, 9, 10, 11]) assert.equal(phaseAt(brief, h).phase, 'peak');
+});
+
+test('phaseAt() reads a wrapping window as one season', () => {
+  const citrus = lane(22, 7);
+  assert.equal(phaseAt(citrus, 23).phase, 'starting');
+  assert.equal(phaseAt(citrus, 2).phase, 'peak');
+  assert.equal(phaseAt(citrus, 7).phase, 'ending');
+  assert.equal(phaseAt(citrus, 0).ends, 7);
+});
+
+test('phaseAt() joins two abutting windows rather than reporting two seasons', () => {
+  const both = lane(4, 7).map((cell, h) => cell ?? (covers(h, 8, 13) ? 'stored' : null));
+  assert.equal(phaseAt(both, 8).phase, 'peak');
+  assert.equal(phaseAt(both, 4).ends, 13);
+});
+
+test('phaseAt() counts the fortnights to a window it has not reached', () => {
+  const autumn = lane(18, 21);
+  assert.deepEqual(phaseAt(autumn, 16), { phase: 'coming', starts: 18, away: 2 });
+  assert.equal(phaseAt(autumn, 15).phase, 'out');
+  assert.equal(phaseAt(autumn, 15).starts, 18);
+});
+
+test('phaseAt() finds the next window across the year end', () => {
+  const winter = lane(1, 3);
+  assert.deepEqual(phaseAt(winter, 23), { phase: 'coming', starts: 1, away: 2 });
+});
+
+test('phaseAt() terminates on a calendar with no edge at all', () => {
+  assert.deepEqual(phaseAt(lane(0, 23), 6), { phase: 'peak' });
+  assert.deepEqual(phaseAt(Array.from({ length: 24 }, () => null), 6), { phase: 'out' });
 });

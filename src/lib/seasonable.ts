@@ -339,3 +339,89 @@ export function byName<T extends Entry | Produce>(items: readonly T[], locale: '
     'produce' in item ? item.produce[locale] : item[locale];
   return [...items].sort((a, b) => collator.compare(name(a), name(b)));
 }
+
+/**
+ * Where a row sits in its own season, for one half-month.
+ *
+ * The page used to answer this with a boolean — the calendar cell is open or
+ * it is not — and sort the open ones to the top. That is the whole answer to
+ * "is it in season", and none of the answer to the question a reader actually
+ * arrives with, which is whether to buy it this week or wait. A window that
+ * has two fortnights left and one that has just opened are both "in season"
+ * and are opposite advice.
+ *
+ * Five phases, and the boundaries are the ones a market stall would use:
+ * the first fortnight or two is the start, the last fortnight or two is the
+ * end, everything between is the middle of it. Both edges exist only on a
+ * window longer than four half-months — on a short one every fortnight is
+ * both its beginning and its end, and calling a six-week season "ending" from
+ * its third week would be false precision.
+ */
+export type SeasonPhase = 'peak' | 'starting' | 'ending' | 'coming' | 'out';
+
+export type Phase = {
+  phase: SeasonPhase;
+  /** Last half-month of the run covering the picked one. Absent when nothing
+   *  covers it, and on a row open all year, which has no end to name. */
+  ends?: HalfMonth;
+  /** First half-month of the next run. Absent only on an empty calendar. */
+  starts?: HalfMonth;
+  /** Half-months from the picked one to `starts`. */
+  away?: number;
+};
+
+/** In season now first, then what is nearly here, then the rest. */
+const PHASE_RANK: Record<SeasonPhase, number> = {
+  peak: 0,
+  starting: 1,
+  ending: 2,
+  coming: 3,
+  out: 4,
+};
+
+export function phaseRank(phase: SeasonPhase): number {
+  return PHASE_RANK[phase];
+}
+
+/**
+ * A row's phase in the half-month `half`.
+ *
+ * The run is measured outward from `half` rather than read off a window's
+ * `start` and `end`, because a row can carry more than one window and two
+ * abutting windows are one season to the person buying it. Both walks wrap the
+ * year and both are bounded, so a calendar open in all twenty-four cells
+ * terminates rather than circling.
+ */
+export function phaseAt(
+  calendar: readonly (WindowKind | null)[],
+  half: HalfMonth,
+): Phase {
+  const open = (h: number): boolean =>
+    calendar[((h % HALF_MONTHS) + HALF_MONTHS) % HALF_MONTHS] !== null;
+
+  if (!open(half)) {
+    for (let away = 1; away < HALF_MONTHS; away += 1) {
+      if (!open(half + away)) continue;
+      return {
+        phase: away <= 2 ? 'coming' : 'out',
+        starts: (half + away) % HALF_MONTHS,
+        away,
+      };
+    }
+    return { phase: 'out' };
+  }
+
+  let back = 0;
+  while (back < HALF_MONTHS - 1 && open(half - back - 1)) back += 1;
+  let ahead = 0;
+  while (back + ahead < HALF_MONTHS - 1 && open(half + ahead + 1)) ahead += 1;
+
+  const length = back + ahead + 1;
+  if (length === HALF_MONTHS) return { phase: 'peak' };
+
+  const ends = (half + ahead) % HALF_MONTHS;
+  const starts = (half - back + HALF_MONTHS) % HALF_MONTHS;
+  if (length > 4 && back <= 1) return { phase: 'starting', ends, starts };
+  if (length > 4 && ahead <= 1) return { phase: 'ending', ends, starts };
+  return { phase: 'peak', ends, starts };
+}
