@@ -1,5 +1,5 @@
 /**
- * The catalogue: 34 protected designations whose own disciplinare states when
+ * The catalogue: 60 protected designations whose own disciplinare states when
  * they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -65,6 +65,7 @@ export const produce: readonly Produce[] = [
   fruit('pesca-leonforte', 'Pesca di Leonforte', 'IGP', 'peach', 'pesca'),
   fruit('pescabivona', 'Pescabivona', 'IGP', 'peach', 'pesca'),
   fruit('susina-dro', 'Susina di Dro', 'DOP', 'plum', 'susina'),
+  fruit('arancia-gargano', 'Arancia del Gargano', 'IGP', 'orange', 'arancia'),
   fruit('arancia-ribera', 'Arancia di Ribera', 'DOP', 'orange', 'arancia'),
   species('cherry-generic', 'Cherry', 'fruit', 'cherry', 'ciliegia'),
   species('chestnut-generic', 'Chestnut', 'fruit', 'chestnut', 'castagna'),
@@ -85,6 +86,7 @@ export const produce: readonly Produce[] = [
   veg('carota-ispica', 'Carota Novella di Ispica', 'IGP', 'carrot', 'carota'),
   veg('fagioli-rotonda', 'Fagioli Bianchi di Rotonda', 'DOP', 'bean', 'fagiolo'),
   veg('fagiolo-atina', 'Fagiolo Cannellino di Atina', 'DOP', 'bean', 'fagiolo'),
+  veg('fagiolo-cuneo', 'Fagiolo Cuneo', 'IGP', 'bean', 'fagiolo'),
   veg('finocchio-capo-rizzuto', 'Finocchio di Isola Capo Rizzuto', 'IGP', 'fennel', 'finocchio'),
   veg('fungo-borgotaro', 'Fungo di Borgotaro', 'IGP', 'mushroom', 'fungo'),
   veg('lenticchia-onano', 'Lenticchia di Onano', 'IGP', 'lentil', 'lenticchia'),

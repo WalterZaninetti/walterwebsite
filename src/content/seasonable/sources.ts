@@ -59,11 +59,11 @@ const oj = (id: string, name: string, url: string, year: number): Source => ({
  * that states a whole window *and* is current. The reader is shown the date it
  * was consulted in place of a year.
  */
-const masaf = (id: string, name: string, url: string): Source => ({
+const masaf = (id: string, name: string, url: string, accessed = '2026-09-03'): Source => ({
   id,
   name,
   url,
-  accessed: '2026-09-03',
+  accessed,
 });
 
 export const sources: readonly Source[] = [
@@ -93,6 +93,7 @@ export const sources: readonly Source[] = [
   masaf('pesca-leonforte', 'Disciplinare di produzione della indicazione geografica protetta “Pesca di Leonforte”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F4%252F2%252FD.ed7a5518a82b3fae7b80/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('pescabivona', 'Indicazione geografica protetta (IGP) “Pescabivona” — Disciplinare di produzione', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/c%252Fb%252F0%252FD.49f8eb793a2b49e750e2/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('susina-dro', 'Disciplinare di produzione della denominazione di origine protetta “Susina di Dro”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/7%252F3%252F0%252FD.818711ea48fe0982b98e/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
+  masaf('arancia-gargano', 'Disciplinare di produzione dell’indicazione geografica protetta Arancia del Gargano', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/3%252F5%252F1%252FD.3e0f72d265744b669452/P/BLOB%3AID%3D3343/E/pdf?mode=download', '2026-09-05'),
   masaf('arancia-ribera', 'Disciplinare di produzione della denominazione d’origine protetta “ARANCIA DI RIBERA”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/e%252F0%252F1%252FD.52948b4d059678acd4ea/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('mele-trentino', 'Disciplinare di produzione della indicazione geografica protetta Mele del Trentino', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/5%252F7%252Fc%252FD.3e793f8037ce3e4e7ab1/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('limone-sorrento', 'Disciplinare di produzione dell’indicazione geografica protetta “Limone di Sorrento”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/a%252F7%252Fc%252FD.04cac7bb06e6f0e65527/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
@@ -113,6 +114,7 @@ export const sources: readonly Source[] = [
   masaf('carota-ispica', 'Disciplinare di produzione della indicazione geografica protetta “Carota Novella di Ispica”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252Fc%252F3%252FD.07f4a03557cddf078575/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('fagioli-rotonda', "Disciplinare di produzione della denominazione d'origine protetta «Fagioli bianchi di rotonda»", 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F1%252F2%252FD.390a94581a72babb4d5a/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('fagiolo-atina', 'Disciplinare di produzione Denominazione di Origine Protetta “Fagiolo Cannellino di Atina”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/b%252F8%252F3%252FD.9c34647f05099874c97d/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
+  masaf('fagiolo-cuneo', 'Disciplinare di produzione della indicazione geografica protetta “Fagiolo Cuneo”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252F1%252Ff%252FD.9dd31e6dadf07f48ecad/P/BLOB%3AID%3D3343/E/docx?mode=download', '2026-09-05'),
   oj(
     'finocchio-capo-rizzuto',
     "Comunicazione dell'approvazione di una modifica ordinaria di un disciplinare di produzione — «Finocchio di Isola Capo Rizzuto»",

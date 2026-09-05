@@ -184,6 +184,11 @@ export const windows: readonly Window[] = [
   // "La raccolta per la varieta' Navelina inizia il 1° novembre e termina alla
   //  fine di febbraio; mentre per le varieta' Brasiliano e Washington navel
   //  inizia nella prima decade di dicembre e termina alla fine di maggio"
+  // "15 aprile - fine agosto per il Biondo Comune del Gargano; 1 dicembre -
+  //  30 aprile per la Duretta del Gargano" — the union of the two cultivars,
+  //  which overlap in the second half of April, so it is one run and not two.
+  //  18 half-months: the widest row here, and wide because Gargano citrus is.
+  w('arancia-gargano', ['fg'], 'open-field', 22, 15, 'arancia-gargano'),
   w('arancia-ribera', ['ag', 'pa'], 'open-field', 20, 9, 'arancia-ribera'),
   // "La raccolta non puo' essere iniziata prima del 20 luglio e non puo'
   //  terminare dopo il 15 dicembre"
@@ -203,6 +208,12 @@ export const windows: readonly Window[] = [
   w('asparago-badoere', ['pd', 'tv', 've'], 'open-field', 2, 11, 'asparago-badoere'),
   // "Il periodo di raccolta deve essere compreso tra il 1 marzo ed il 15 giugno"
   w('asparago-bassano', ['vi'], 'open-field', 4, 10, 'asparago-bassano'),
+  // "Le produzioni in coltura forzata o protetta (tunnel) possono essere
+  //  raccolte prima della suddetta data e comunque non prima del 1 febbraio" —
+  //  the sentence after the one above, and the only greenhouse window in the
+  //  corpus. Same document, cited once, on the Finocchio di Isola Capo Rizzuto
+  //  precedent: one disciplinare, two windows, two kinds.
+  w('asparago-bassano', ['vi'], 'greenhouse', 2, 3, 'asparago-bassano'),
   // "La raccolta avviene nel periodo gennaio/giugno e settembre/ottobre"
   w('asparago-canino', ['vt'], 'open-field', 0, 11, 'asparago-canino'),
   w('asparago-canino', ['vt'], 'open-field', 16, 19, 'asparago-canino'),
@@ -238,6 +249,8 @@ export const windows: readonly Window[] = [
   w('fagioli-rotonda', ['pz'], 'open-field', 16, 21, 'fagioli-rotonda'),
   // "nel periodo compreso fra il 10 settembre ed il 30 ottobre di ciascun anno"
   w('fagiolo-atina', ['fr'], 'open-field', 16, 19, 'fagiolo-atina'),
+  // "L'epoca di raccolta va da maggio a novembre"
+  w('fagiolo-cuneo', ['cn'], 'open-field', 8, 21, 'fagiolo-cuneo'),
   // "epoca di raccolta parte dalla seconda decade di ottobre e fino a meta' marzo per le
   //  tipologie «precoci»"
   w('finocchio-capo-rizzuto', ['kr', 'cz'], 'open-field', 19, 4, 'finocchio-capo-rizzuto'),

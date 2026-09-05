@@ -712,3 +712,123 @@ Seven unread image-scan disciplinari: Arancia Rossa di Sicilia, Uva da tavola di
 Bianco del Cilento, Cipollotto Nocerino, Fagiolo di Sarconi, Fagiolo di Sorana, Fagiolo Cuneo.
 They are readable by rendering the pages. **None covers a province that is currently silent**, so
 they add products, not reach. That is the whole of the remaining seam in this corpus.
+
+---
+
+## 2026-09-05 (ninth pass) — the image scans, read at last; `greenhouse` gets its first row
+
+The eighth pass left "seven unread image-scan disciplinari" as the whole remaining seam and
+judged them a low priority because **"none covers a province that does not already answer"**.
+That judgement was wrong about one of them, and stale about three others.
+
+**Three of the seven are no longer image scans.** MASAF has replaced them with `.docx` files —
+Arancia Rossa di Sicilia (listed *31.03.2026*), Fagiolo Cuneo (*12/01/2026*) and Uva da tavola di
+Canicattì. Their text extracts cleanly. The remaining four were rendered at 150 dpi and read.
+
+Three more designations were pulled in the same pass because the second-pass sweep had listed them
+as stating both ends and they were never worked: Arancia del Gargano, Carota dell'Altopiano del
+Fucino, and the *coltura protetta* clause of Asparago Bianco di Bassano.
+
+### Shipped — two designations, three windows
+
+**Arancia del Gargano IGP** — and it opens **Foggia**, a province that answered nothing. So the
+eighth pass's "adds products, not reach" was not true of this one. §5.7:
+
+> «L'epoca di raccolta, data la naturale e accentuata scalarità di maturazione dell'Arancia del
+> Gargano è così stabilita: - 15 aprile - fine agosto per il Biondo Comune del Gargano; - 1
+> dicembre - 30 aprile per la Duretta del Gargano.»
+
+Two cultivars, so invariant 8 applies and the row is the union. Biondo Comune 6→15, Duretta 22→7;
+the two overlap at 6–7, so the union is one contiguous wrapping run, **22→15**. Zone is art. 3:
+Vico del Gargano, Ischitella and Rodi Garganico — **Foggia**.
+
+**This is the widest row in the dataset — 18 of 24 half-months — and that deserves saying out
+loud.** It is not the Mela Alto Adige case: that was a *commercialisation* span for a fruit nobody
+picks in February, and this is the document's own «epoca di raccolta» for two cultivars that are
+genuinely picked at opposite ends of the year. It is wide because Gargano citrus is wide — the
+disciplinare says as much two pages later, boasting that its oranges ripen «non gennaio, febbraio o
+marzo, ma addirittura fine aprile-maggio, e anche agosto». A reader who opens the row sees both
+cultivar clauses. Still: if a later pass wants a rule against unions spanning more than ~15
+half-months, this is the row that would test it.
+
+**Fagiolo Cuneo IGP** — the new `.docx`, art. 5:
+
+> «L'epoca di raccolta va da maggio a novembre.»
+
+**8→21**, provincia di Cuneo. Whole months, no days, so no decade snap. Cuneo already answered;
+this adds density.
+
+**Asparago Bianco di Bassano DOP — the first `greenhouse` row in the dataset.** The kind has been
+in the type since the beginning and has never had a row. The clause was in the sentence
+immediately after the one already shipped, and the second pass took only the first half:
+
+> «Il periodo di raccolta deve essere compreso tra il 1 marzo ed il 15 giugno. Le produzioni in
+> **coltura forzata o protetta (tunnel)** possono essere raccolte prima della suddetta data e
+> comunque **non prima del 1 febbraio** previa autorizzazione dell'organismo di controllo.»
+
+A second window on the same designation, **2→3** (1–28 February), `kind: 'greenhouse'`, citing the
+same source — the Finocchio di Isola Capo Rizzuto precedent, where one document yields two windows
+and is cited once. The open-field row 4→10 is unchanged.
+
+The clause was read in the ministry's PDF, but the row is cited to the **dated** EU text already in
+`sources.ts` — OJ C 321 of 2006, CELEX 52006XC1229(04) — which was re-opened and carries the
+sentence verbatim. So the first greenhouse row in the dataset does not spend the undated-source
+licence, and the reader gets a year rather than a consulted date.
+
+This is invariant 8's failure mode in its other form: not a semicolon this time, but a full stop.
+The quote was accurate, the conversion was correct, and the row was still incomplete.
+
+### Silent — six, and two of them used to say more than they do now
+
+- **Uva da tavola di Canicattì IGP** — the second-pass sweep recorded «3ª decade agosto → 2ª decade
+  gennaio». **That clause is not in the text in force.** The current `.docx` contains no month name
+  anywhere; harvest is «al raggiungimento delle caratteristiche qualitative e organolettiche
+  previste all'articolo 2». Exactly the Mela di Valtellina pattern — a calendar replaced by a
+  ripeness criterion — and the second reason in this ledger to distrust a candidate recorded from
+  a document that is not the one in force.
+- **Carota dell'Altopiano del Fucino IGP** — same. The sweep recorded «luglio → settembre/ottobre»;
+  the ministry's text says «La raccolta è praticata valutando gli stadi di maturazione più idonei».
+  Its only months are «durante il periodo estivo (luglio, agosto) la raccolta si effettua nelle
+  prime ore del mattino» — an instruction about the time of day, not the time of year.
+- **Arancia Rossa di Sicilia IGP** — the 31.03.2026 text contains **no month name at all**. The
+  earlier verdict stands, now against a current document.
+- **Cipollotto Nocerino DOP** — «I Cipollotti vengono raccolti … quando il diametro della sezione
+  normale all'asse del bulbo presenta il calibro tra cm 1-5», and «La semina può essere effettuata
+  tutto l'anno». A calibre, not a date. Peperone di Senise's case exactly.
+- **Fagiolo di Sarconi IGP** — «Raccolta» gives three maturity stages (verde, cerosa, secco) and no
+  dates. Sowing is dated («scalare, dalla terza decade maggio fino a metà luglio») and sowing is
+  not harvest; deriving one from the other is invariant 5.
+- **Fagiolo di Sorana IGP** — «La raccolta è effettuata a mano dalla pianta, al momento della quasi
+  deiscenza delle valve dal baccello». Its two dates, 31 maggio and 31 ottobre, are the deadlines
+  for filing a cultivation declaration and a yield declaration. Reporting deadlines, like Basilico
+  Genovese's 31 January.
+
+### Excluded — one
+
+- **Fico Bianco del Cilento DOP** — «riservata ai fichi **essiccati**», and art. 5 gives a ripeness
+  criterion («quando i fichi sono stramaturi») rather than dates. Excluded twice over: a dried
+  product on the Farina di Neccio / Amarene Brusche rule, and silent anyway.
+
+### Where this leaves the dataset
+
+**60 designations, 66 documented windows, 2 generalised, 75 of 107 provinces, 17 of 20 regions.**
+Puglia gains its third province. `greenhouse` is no longer a kind with no rows, so the calendar's
+three geometries all appear on the page.
+
+The image-scan seam is now **closed**: all four true scans were read and all four are silent.
+
+### What is left, honestly
+
+Nothing cheap. The corpus of 127 class-1.6 designations has been swept four times, and what
+remains unshipped is unshipped for a stated reason. The two live judgement calls are unchanged and
+both belong to Walter, not to a sweep:
+
+1. **Basilico Genovese DOP** — «in ambiente protetto la coltivazione può essere svolta tutto
+   l'anno». Would open Liguria's four provinces at once. Now slightly easier to argue than it was:
+   `greenhouse` has a row, so a year-round protected-culture window would no longer be introducing
+   a kind and a whole-year span in the same change.
+2. **Brovada DOP** — the only route into Friuli-Venezia Giulia, excluded solely for being a
+   fermented product.
+
+Beyond those, more coverage means a different tier of source, which is open question 1 in
+`brief.md` and was resolved against.
