@@ -70,7 +70,7 @@
         "title": "Seasonable",
         "description": "Pick a province and a fortnight; it names the DOP and IGP produce being picked there, quoting the document that says so.",
         "descriptionShort": "Province + fortnight — what's protected, and being picked.",
-        "meta": "61 designations · quoted"
+        "meta": "62 designations · quoted"
       }
     },
     "music": {
@@ -617,7 +617,7 @@
     },
     "s2": {
       "heading": "What it can't tell you",
-      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It holds sixty-one designations, which is a small corner of what you buy, and a quarter of the provinces are named by nothing at all. An empty list means I have no document for where you are. It is not a verdict on what grows there."
+      "body": "It doesn't know about this year. A cold spring or a hot September moves the real dates and nothing here moves with them — the windows are the normal year, not the one you're standing in. It holds sixty-two designations, which is a small corner of what you buy, and a quarter of the provinces are named by nothing at all. An empty list means I have no document for where you are. It is not a verdict on what grows there."
     },
     "s3": {
       "heading": "Where the dates come from",

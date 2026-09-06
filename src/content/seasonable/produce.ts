@@ -1,5 +1,5 @@
 /**
- * The catalogue: 61 protected designations whose own disciplinare states when
+ * The catalogue: 62 protected designations whose own disciplinare states when
  * they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -80,6 +80,7 @@ export const produce: readonly Produce[] = [
   veg('cappero-eolie', 'Cappero delle Isole Eolie', 'DOP', 'caper', 'cappero'),
   veg('cappero-pantelleria', 'Cappero di Pantelleria', 'IGP', 'caper', 'cappero'),
   veg('basilico-genovese', 'Basilico Genovese', 'DOP', 'basil', 'basilico'),
+  veg('brovada', 'Brovada', 'DOP', 'turnip', 'rapa'),
   veg('carciofo-brindisino', 'Carciofo Brindisino', 'IGP', 'artichoke', 'carciofo'),
   veg('carciofo-paestum', 'Carciofo di Paestum', 'IGP', 'artichoke', 'carciofo'),
   veg('carciofo-romanesco', 'Carciofo Romanesco del Lazio', 'IGP', 'artichoke', 'carciofo'),

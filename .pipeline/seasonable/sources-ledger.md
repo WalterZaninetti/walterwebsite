@@ -915,3 +915,80 @@ Three regions still answer nothing. **Valle d'Aosta** and **Molise** were proved
 unread — no class-1.6 designation names a comune in either — so they are finished, not pending.
 **Friuli-Venezia Giulia** is the last one that is one judgement away, on Brovada, excluded solely
 for being a fermented product.
+
+---
+
+## 2026-09-05 (eleventh pass) — Brovada, shipped; Friuli opens; the fresh-produce rule is now spent
+
+Walter's call on the second of the two standing judgements. It ships, and **the rule it breaks was
+load-bearing for three other designations**, so this entry records the debt rather than leaving it
+for someone to trip over.
+
+### What ships
+
+> «La raccolta delle rape deve iniziare a partire dal 1° settembre e quando le foglie basali della
+> rapa ingialliscono e appassiscono e deve concludersi entro il 31 dicembre.»
+
+**16→23**, `open-field`. Art. 3 puts the zone in **Gorizia, Pordenone and Udine** — named comuni
+below 1 200 m. All three were silent. **Trieste is not in the zone and stays silent.**
+
+**Friuli-Venezia Giulia comes off the list.** 82 of 107 provinces, 19 of 20 regions.
+
+### Which of its three windows, and why
+
+The disciplinare states three date ranges and only one of them is a harvest:
+
+| Clause | What it is | Shipped? |
+|---|---|---|
+| «La semina avviene in modo scalare esclusivamente dal 15 giugno al 30 di agosto» | sowing | no — invariant 5 |
+| «La raccolta delle rape … dal 1° settembre … entro il 31 dicembre» | the turnip harvest | **yes** |
+| «L'immissione al consumo … a partire dal 26 di settembre … il 15 maggio» | sale of the fermented product | no |
+
+The row answers "is this being picked near me", so it is the middle one. The third is the
+designation's *own* availability and is a better description of when you can buy Brovada — but it
+is a commercialisation window for a jar, not a harvest, and the page does not answer that question
+for anything else either.
+
+### The honest weakness, stated once
+
+**The row is named for a fermented product and carries a window for its input.** A reader in Udine
+sees "Brovada DOP · al picco" in October, and what is actually at its peak is the *rapa da
+brovada*, a local white turnip with a purple collar. The expanded row quotes «La raccolta delle
+rape…», so nothing is hidden — but the name on the closed row is doing something the other
+sixty-one rows do not.
+
+That is the cost of the decision, and it was taken with the cost visible.
+
+### The three designations this reopens
+
+Brovada was excluded on one ground: the designation protects a processed food rather than fresh
+produce. That ground also excluded three others, and all three were re-read this pass. **All three
+state a fresh-crop harvest window, and all three are now excluded by nothing.**
+
+| Designation | Clause | Half-months | Province |
+|---|---|---|---|
+| **Amarene Brusche di Modena IGP** | «La raccolta viene effettuata nel periodo compreso dal 20 maggio al 31 luglio» | 9→13 | Modena — already answers |
+| **Farina di Castagne della Lunigiana DOP** | «La raccolta delle castagne deve avvenire a partire da settembre … e fino al 15 dicembre» | 16→22 | Massa-Carrara — already answers |
+| **Farina di Neccio della Garfagnana DOP** | «La raccolta delle castagne deve avvenire tra il 1° ottobre e il 30 novembre di ogni anno» | 18→21 | Lucca — check art. 3 before shipping |
+
+None of them opens a new province, so they are density rather than reach — and two are chestnut,
+where the catalogue already carries seven designations and a generalised row whose union they would
+have to be checked against.
+
+**They are not shipped.** Consistency now argues for it and that is exactly why it should be a
+decision rather than a consequence: the same argument would have shipped them silently in this
+pass, and a rule that dissolves by momentum is worse than one that is repealed on purpose.
+
+Fico Bianco del Cilento does **not** reopen. It was excluded twice over in the ninth pass, and the
+second ground stands: art. 5 gives «quando i fichi sono stramaturi», a ripeness criterion, not
+dates.
+
+### Where this leaves the dataset
+
+**62 designations, 68 documented windows, 2 generalised, 82 of 107 provinces, 19 of 20 regions.**
+
+Only **Valle d'Aosta** and **Molise** answer nothing, and neither is pending: no class-1.6
+designation names a comune in either, which was proved in the eighth pass and re-confirmed against
+the register. **There is no third judgement call left.** What remains is the three above, and a
+question the copy has been carrying since the ninth pass — that «frutta e verdura» now covers a
+mushroom, a herb and a fermented turnip.

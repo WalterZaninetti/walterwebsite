@@ -70,7 +70,7 @@
         "title": "Seasonable",
         "description": "Scegli una provincia e una quindicina: ti dice quali prodotti DOP e IGP si raccolgono lì, citando il documento che lo dice.",
         "descriptionShort": "Provincia + quindicina — cosa è a denominazione, e si raccoglie.",
-        "meta": "61 denominazioni · citate"
+        "meta": "62 denominazioni · citate"
       }
     },
     "music": {
@@ -617,7 +617,7 @@
     },
     "s2": {
       "heading": "Cosa non può dirti",
-      "body": "Non sa niente di quest'anno. Una primavera fredda o un settembre caldo spostano le date vere e qui non si sposta niente: le finestre sono l'anno normale, non quello in cui sei. Tiene sessantuno denominazioni, che sono un angolo piccolo di quello che compri, e un quarto delle province non è nominato da niente. Un elenco vuoto vuol dire che per dove sei non ho un documento. Non è un giudizio su cosa cresce lì."
+      "body": "Non sa niente di quest'anno. Una primavera fredda o un settembre caldo spostano le date vere e qui non si sposta niente: le finestre sono l'anno normale, non quello in cui sei. Tiene sessantadue denominazioni, che sono un angolo piccolo di quello che compri, e un quarto delle province non è nominato da niente. Un elenco vuoto vuol dire che per dove sei non ho un documento. Non è un giudizio su cosa cresce lì."
     },
     "s3": {
       "heading": "Da dove vengono le date",

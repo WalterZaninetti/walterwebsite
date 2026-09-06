@@ -240,6 +240,14 @@ export const windows: readonly Window[] = [
   //  four provinces all hold Tyrrhenian-slope territory; the zone is the whole
   //  of that slope, cut at the watershed.
   w('basilico-genovese', ['ge', 'im', 'sp', 'sv'], 'greenhouse', 0, 23, 'basilico-genovese'),
+  // "La raccolta delle rape deve iniziare a partire dal 1 settembre e quando le
+  //  foglie basali della rapa ingialliscono e appassiscono e deve concludersi
+  //  entro il 31 dicembre" — the turnip harvest, which is the only thing here
+  //  that is picked. The designation protects the fermented product made from
+  //  it, and that product's own dates are a sale window ("l'immissione al
+  //  consumo e ammessa a partire dal 26 di settembre e deve concludersi il 15
+  //  maggio"), which answers a different question and is not shipped.
+  w('brovada', ['go', 'pn', 'ud'], 'open-field', 16, 23, 'brovada'),
   w('carciofo-brindisino', ['br'], 'open-field', 20, 9, 'carciofo-brindisino'),
   // "nel periodo compreso dal 1° febbraio al 20 maggio"
   w('carciofo-paestum', ['sa'], 'open-field', 2, 9, 'carciofo-paestum'),

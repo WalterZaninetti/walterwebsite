@@ -229,6 +229,17 @@ const GLYPHS: Record<string, ReactElement> = {
       <path d="m11.4 3.4 1.4-1.2" />
     </>
   ),
+  // Wide shoulders converging to a point, and two leaves spread off the crown.
+  // The first draft gave it a near-circular body and a separate taproot stroke,
+  // and at 24px it read as a padlock: the body has to do the tapering itself,
+  // and the leaves have to be big enough not to merge into one tuft.
+  turnip: (
+    <>
+      <path d="M12 21.4c-2.7-2.1-4.7-4.5-4.7-7 0-2.7 2.1-4.8 4.7-4.8s4.7 2.1 4.7 4.8c0 2.5-2 4.9-4.7 7Z" />
+      <path d="M12 9.6C9.5 9.2 8 7.5 7.8 5c2.5.4 4 2.1 4.2 4.6Z" />
+      <path d="M12 9.6c.2-2.5 1.7-4.2 4.2-4.6-.2 2.5-1.7 4.2-4.2 4.6Z" />
+    </>
+  ),
   potato: (
     <>
       <ellipse cx="12" cy="12.6" rx="8.2" ry="6.2" transform="rotate(-14 12 12.6)" />
