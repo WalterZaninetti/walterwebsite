@@ -40,6 +40,7 @@
  * which is exactly why the committed fallback exists. The `tracklists` object it also returns
  * carries mp3-128 URLs, but they are signed with an expiring timestamp — useless here, ignored.
  */
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -64,6 +65,11 @@ const SLEEVE_PX = 640;
  * still costs a fraction of a full sleeve.
  */
 const PICK_PX = 420;
+/**
+ * Digest characters in an artwork filename. Eight hex chars is 4 billion values across a
+ * directory that holds about fifteen files — collision is not the risk being managed here.
+ */
+const ART_HASH = 8;
 const TIMEOUT_MS = 10_000;
 
 if (existsSync(new URL('../.env', import.meta.url))) {
@@ -231,7 +237,7 @@ async function fetchAlbum(headers) {
 async function fetchPreviousPicks(headers, entries) {
   const picks = [];
 
-  for (const [index, entry] of entries.entries()) {
+  for (const entry of entries) {
     if (!entry?.spotifyId) continue;
     try {
       const album = await fetchJson(`https://api.spotify.com/v1/albums/${entry.spotifyId}`, {
@@ -246,8 +252,6 @@ async function fetchPreviousPicks(headers, entries) {
         pick: entry.pick ?? null,
         month: entry.month ?? null,
         artSource: sleeve?.url ?? null,
-        /* Positional, so a re-ordered list rewrites the same files rather than orphaning them. */
-        artName: `album-prev-${index}.webp`,
       });
     } catch (error) {
       warn('album', `previous pick ${entry.spotifyId} failed (${error.message}) — dropped`);
@@ -301,6 +305,34 @@ async function fetchBandcamp() {
 /* ---------------------------------------------------------------- Artwork */
 
 /**
+ * Content-addressed name: `album-4f2a91c7.webp`, the digest taken over the encoded bytes.
+ *
+ * The point is that a new cover is a new URL. These files used to be named by position — one
+ * `album.webp` rewritten in place every month — which meant the sleeve and the record it belongs
+ * to were cached independently: the bundle naming the new album is `no-cache` and arrives at
+ * once, while the sleeve at the unchanged URL is served from the visitor's disk cache for up to
+ * an hour. Anyone who had been to the site that hour saw September's title over August's sleeve.
+ * There is no header that fixes this, only a name that changes when the bytes do.
+ *
+ * Hashing the *encoded* buffer rather than the download means the resize and quality settings
+ * are part of the identity, so changing SLEEVE_PX renames the file the same way a new record
+ * does. Unreferenced names are swept at the end of the run, which is what keeps the directory
+ * from growing a file per month forever.
+ *
+ * It is a name, not a checksum of what ships: vite-plugin-image-optimizer re-encodes these on
+ * the way into dist/ and shaves a further percent or two, so the served file does not digest to
+ * its own filename. Uniqueness is the property being bought here, and that survives — two
+ * different covers cannot land on one name.
+ *
+ * The prefix stays because the hash cannot say what it is: three sizes of the same square live
+ * here, and `album-` vs `album-prev-` vs `spotify-` is the only thing that distinguishes them
+ * when you are looking at the directory rather than at the snapshot.
+ */
+function artName(prefix, buffer) {
+  return `${prefix}-${createHash('sha256').update(buffer).digest('hex').slice(0, ART_HASH)}.webp`;
+}
+
+/**
  * Downloads each cover and writes a square WebP. Cover art is never cropped, overlaid or
  * recoloured — Spotify's design guidelines forbid modifying it, and `fit: 'cover'` on an
  * already-square source is a straight resize.
@@ -308,9 +340,7 @@ async function fetchBandcamp() {
 async function writeArtwork(source, items) {
   const written = [];
 
-  for (const [index, item] of items.entries()) {
-    const name = `${source}-${index}.webp`;
-
+  for (const item of items) {
     if (!item.artSource) {
       written.push({ ...item, art: null });
       continue;
@@ -325,6 +355,7 @@ async function writeArtwork(source, items) {
         .webp({ quality: 78 })
         .toBuffer();
 
+      const name = artName(source, buffer);
       writeFileSync(new URL(name, ART_DIR), buffer);
       written.push({ ...item, art: `/images/music/${name}` });
     } catch (error) {
@@ -338,7 +369,7 @@ async function writeArtwork(source, items) {
 }
 
 /** The sleeve: one image, its own size, same no-crop rule. */
-async function writeSleeve(url, name, size) {
+async function writeSleeve(url, prefix, size) {
   const response = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
@@ -347,6 +378,7 @@ async function writeSleeve(url, name, size) {
     .webp({ quality: 80 })
     .toBuffer();
 
+  const name = artName(prefix, buffer);
   writeFileSync(new URL(name, ART_DIR), buffer);
   return `/images/music/${name}`;
 }
@@ -399,9 +431,7 @@ async function collectAlbum(headers, previous) {
 
     if (artSource) {
       try {
-        /* Same filename every month. The cache header on /images/** is an hour with
-           must-revalidate, so a changed sleeve is picked up without a cache-busting name. */
-        art = await writeSleeve(artSource, 'album.webp', SLEEVE_PX);
+        art = await writeSleeve(artSource, 'album', SLEEVE_PX);
       } catch (error) {
         warn('album', `sleeve download failed (${error.message}) — keeping the previous one`);
       }
@@ -410,11 +440,11 @@ async function collectAlbum(headers, previous) {
     /* PICK_PX, not ART_PX: these are half-column tiles, not 48px feed rows. */
     const fetched = await fetchPreviousPicks(headers, previousInput);
     const picks = [];
-    for (const { artSource: source, artName, ...pick } of fetched) {
+    for (const { artSource: source, ...pick } of fetched) {
       let picked = null;
       if (source) {
         try {
-          picked = await writeSleeve(source, artName, PICK_PX);
+          picked = await writeSleeve(source, 'album-prev', PICK_PX);
         } catch (error) {
           warn('album', `sleeve for "${pick.title}" failed (${error.message}) — pick dropped`);
           continue;
@@ -503,8 +533,10 @@ const snapshot = {
   album: settle(album, previous.album),
 };
 
-/* Drop art from runs that no longer reference it. Done after both sources resolve so a fallback
-   never deletes the very files it is falling back on. */
+/* Drop art the snapshot no longer names. Under content-addressed filenames this is the whole
+   lifecycle: a changed cover writes a new file beside the old one rather than over it, and
+   nothing but this sweep ever removes the old one. Done after both sources resolve so a
+   fallback never deletes the very files it is falling back on. */
 const live = new Set(
   [...spotify.items, ...bandcamp.items, ...(album ? [album, ...(album.previous ?? [])] : [])]
     .map((item) => item.art?.split('/').pop())
