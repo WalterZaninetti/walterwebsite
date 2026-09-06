@@ -721,24 +721,41 @@
      mid-dark terracotta that sat comfortably on either canvas; the pale green
      that replaced it does not. Held byte-identical, it would make this one
      card the brightest object on the entire dark site — a lit slab beside
-     Magic's deep crimson and Crate's navy, which is not a world holding its
-     identity but a world shouting over its neighbours.
+     Magic's deep crimson, which is not a world holding its identity but a
+     world shouting over its neighbours.
 
      So the ground goes deep and the ink goes pale, and the light scheme's one
      real relationship is what carries over: ground and ink are the same hue
-     138, and the reader still meets a green place. The ladder reads
-     11.80 / 9.51 / 8.17 / 7.36 — every rung higher than light's, because a
-     deep ground is the easier of the two to write on. */
-  --project-food: #1d3515;
-  --project-food-fg: #e7f5e3;                    /* 11.80:1 */
+     138, and the reader still meets a green place.
+
+     HOW DEEP was decided against a neighbour that has since moved. The value
+     was #1d3515, argued down there partly because Crate's card was navy and a
+     green could go as dark as it liked without anything to collide with.
+     Crate took the app's own deep green, and on the dark shelf the two sat
+     1.22:1 apart: two cards of one hue family, side by side, reading as one
+     project. Hue cannot separate them — 138 and the clover's ~157 are
+     indistinguishable at this lightness — so lightness has to, and this is
+     the card that moves, because Crate's is the app's value held verbatim.
+
+     Solved with solve-oklch, hue and chroma held, lightness 0.300 -> 0.421:
+     2.01:1 against Crate's card and 2.26:1 against the canvas, where it was
+     1.09. It is still a deep green and still nowhere near the lit slab the
+     paragraph above rules out. Against Magic's crimson it measures 1.08:1 and
+     that is not the same problem: those two are a hue apart, they are not
+     adjacent on the shelf, and no reader has ever confused them.
+
+     The whole ladder holds on the lighter ground without one alpha moving —
+     7.22 / 6.03 / 5.31 / 4.88, every rung still above light's own floor. */
+  --project-food: #3c5634;
+  --project-food-fg: #e7f5e3;                    /*  7.22:1 */
   --project-food-thumb-fg: #e7f5e3;
-  --project-food-accent: rgb(231 245 227 / 0.75);/*  7.36:1 */
-  --project-food-body: rgb(231 245 227 / 0.88);  /*  9.51:1 */
-  --project-food-meta: rgb(231 245 227 / 0.8);   /*  8.17:1 */
+  --project-food-accent: rgb(231 245 227 / 0.75);/*  4.88:1 */
+  --project-food-body: rgb(231 245 227 / 0.88);  /*  6.03:1 */
+  --project-food-meta: rgb(231 245 227 / 0.8);   /*  5.31:1 */
   --project-food-hatch: rgb(231 245 227 / 0.18);
-  --project-food-thumb: #10220a;                 /*  1.25 vs band · 14.79 under -fg */
-  --project-food-border: rgb(231 245 227 / 0.45);/*  4.14:1 vs canvas, composited */
-  --project-food-seam: #a1cc93;                  /* 10.18 canvas · 7.36 band */
+  --project-food-thumb: #10220a;                 /*  2.05 vs band · 14.79 under -fg */
+  --project-food-border: rgb(231 245 227 / 0.45);/*  6.41:1 vs canvas, composited */
+  --project-food-seam: #a1cc93;                  /* 10.18 canvas · 4.50 band */
   --project-food-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
   /* Both rungs solved at the world's hue 138 against the dark canvas, moving
      lightness only — the same two roles as light, re-measured not re-picked.
