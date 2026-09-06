@@ -576,7 +576,7 @@
       "pickPlace": "scegli una provincia",
       "heatLow": "poca scelta",
       "heatHigh": "tanta scelta",
-      "caveat": "Pieno campo, annata media. Qui si contano le denominazioni il cui documento nomina {{place}} e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione."
+      "caveat": "Annata media. Qui si contano le denominazioni il cui documento nomina {{place}} e, dove nessuna lo fa, la finestra su cui concordano quelle della sua regione."
     },
     "phase": {
       "peak": "Al picco",

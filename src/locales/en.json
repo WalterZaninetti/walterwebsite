@@ -576,7 +576,7 @@
       "pickPlace": "pick a province",
       "heatLow": "little",
       "heatHigh": "plenty",
-      "caveat": "Open field, an average year. Counted here: designations whose own document names {{place}}, and where none does, the span that region's designations agree on."
+      "caveat": "An average year. Counted here: designations whose own document names {{place}}, and where none does, the span that region's designations agree on."
     },
     "phase": {
       "peak": "At its peak",
