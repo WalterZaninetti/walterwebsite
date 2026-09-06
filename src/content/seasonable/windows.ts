@@ -231,6 +231,15 @@ export const windows: readonly Window[] = [
   w('cappero-pantelleria', ['tp'], 'open-field', 8, 19, 'cappero-pantelleria'),
   // "Le raccolte dei carciofi iniziano dal 1 novembre e terminano il 30 maggio
   //  dell'anno successivo"
+  // Art. 3, "Zone ed epoca di produzione": "Le produzioni sono realizzabili
+  //  durante tutto l'arco dell'anno" — and, of the two environments the
+  //  disciplinare allows, only the protected one is given a year of its own:
+  //  "In ambiente protetto la coltivazione puo' essere svolta tutto l'anno".
+  //  So the row is greenhouse, and it is the whole year because the document
+  //  says so rather than because nothing narrower could be found. Liguria's
+  //  four provinces all hold Tyrrhenian-slope territory; the zone is the whole
+  //  of that slope, cut at the watershed.
+  w('basilico-genovese', ['ge', 'im', 'sp', 'sv'], 'greenhouse', 0, 23, 'basilico-genovese'),
   w('carciofo-brindisino', ['br'], 'open-field', 20, 9, 'carciofo-brindisino'),
   // "nel periodo compreso dal 1° febbraio al 20 maggio"
   w('carciofo-paestum', ['sa'], 'open-field', 2, 9, 'carciofo-paestum'),

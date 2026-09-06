@@ -197,6 +197,18 @@ const GLYPHS: Record<string, ReactElement> = {
       <path d="m13.6 11.4 1.9-7.8" />
     </>
   ),
+  // Two big opposite leaves and a terminal bud. The first draft had two leaf
+  // pairs, which is truer to a basil sprig and unreadable at 24px — the upper
+  // pair closed up against the stem into a blot. Symmetry plus the bud is what
+  // separates it from the sprout fallback, whose pair is deliberately alternate.
+  basil: (
+    <>
+      <path d="M12 21V9.2" />
+      <path d="M12 17.6c-3.5 0-5.6-2.1-5.6-5.3 3.5 0 5.6 2.1 5.6 5.3Z" />
+      <path d="M12 17.6c3.5 0 5.6-2.1 5.6-5.3-3.5 0-5.6 2.1-5.6 5.3Z" />
+      <path d="M12 9.4c-1.8-1.5-1.8-3.6 0-5.4 1.8 1.8 1.8 3.9 0 5.4Z" />
+    </>
+  ),
   mushroom: (
     <>
       <path d="M4.4 12.6a7.6 7.6 0 0 1 15.2 0Z" />

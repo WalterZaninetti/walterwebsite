@@ -832,3 +832,86 @@ both belong to Walter, not to a sweep:
 
 Beyond those, more coverage means a different tier of source, which is open question 1 in
 `brief.md` and was resolved against.
+
+---
+
+## 2026-09-05 (tenth pass) — Basilico Genovese, shipped; Liguria opens
+
+Walter's call, on the judgement the eighth pass left open. Recording what the decision actually
+rests on, because **the eighth pass had read the document wrong** and the case is better than the
+one it declined.
+
+### The clause the earlier check missed
+
+The eighth pass recorded that Basilico Genovese «states no field window at all: the only temporal
+clauses are «in ambiente protetto la coltivazione può essere svolta tutto l'anno» and a 31 January
+reporting deadline.» That is not what the disciplinare says. **Art. 3 is titled «Zone ed epoca di
+produzione»** and closes:
+
+> «Le produzioni sono realizzabili durante **tutto l'arco dell'anno**.»
+
+So the designation states an *epoca di produzione* of its own, for the designation as such, and it
+is the whole year. The whole-year claim is the document's, not an inference from a sentence about
+greenhouse ventilation. That distinction is the entire difference between this row and Mela Alto
+Adige, whose year was a commercialisation span for a fruit nobody picks in February.
+
+### Why the row is `greenhouse` and not `open-field`
+
+The cultivation article allows both environments — «in ambiente protetto e in pieno campo» — but
+gives only one of them a year:
+
+> «In ambiente protetto la coltivazione può essere svolta tutto l'anno purché venga assicurata una
+> ventilazione continua 24 ore/giorno…»
+
+Open field gets no window of its own anywhere in the text. Art. 3's «tutto l'arco dell'anno» is
+what the two environments *together* make possible, and splitting it into an open-field January
+would be a modelled number. So: one row, `kind: 'greenhouse'`, **0→23**, and the reader who opens
+it sees both clauses.
+
+This is the second greenhouse row, after Asparago Bianco di Bassano in the ninth pass. The order
+mattered: shipping a whole-year span and introducing a kind in the same change would have been two
+arguments at once, which is why the eighth pass was right to hold it and why it is easier now.
+
+### Zone
+
+> «delimitata al solo versante tirrenico del territorio amministrativo della Regione Liguria con
+> delimitazione individuabile nello spartiacque»
+
+The Tyrrhenian slope, cut at the watershed. All four Ligurian provinces hold territory on it, so
+the row answers for **Genova, Imperia, La Spezia and Savona** — every one of which was silent.
+**Liguria comes off the list of regions that answer nothing.**
+
+### The date, and why it is still `accessed`
+
+Unusually for a MASAF consolidated text, this PDF is stamped on every page:
+
+> «MASAF - PQA I - Prot. Uscita N.0100000 del 04/03/2025»
+
+That is a protocol registration for the outgoing transmission, not a publication line, and no other
+MASAF citation in `sources.ts` carries a year. Recording 2025 would make this one row's provenance
+read differently from its fifty-nine neighbours on the strength of a stamp whose meaning is
+administrative. **Omitted, consulted date shown instead** — but written down here, because if a
+later pass decides those protocol stamps are datable after all, this is the row to start from.
+
+### The one thing that does not fit, said plainly
+
+**Basil is a herb, and the page's copy promises «frutta e verdura» in both languages.** `brief.md`
+scoped the catalogue to fruit and vegetables and named the exclusions. Basil is not in that list,
+but neither is it obviously in scope.
+
+It ships as `category: 'vegetable'` on the Fungo di Borgotaro precedent — a mushroom, which the
+brief *does* exclude by name, and which was shipped anyway when the catalogue moved from everyday
+produce to protected designations. The scope line was written for the 45-item everyday plan that
+open question 1 resolved and the implementation then abandoned. Two rows now sit outside it. That
+is worth either fixing in the copy or fixing in the catalogue, and it should not be settled by a
+third row quietly joining them.
+
+### Where this leaves the dataset
+
+**61 designations, 67 documented windows, 2 generalised, 79 of 107 provinces, 18 of 20 regions.**
+28 provinces silent, so the copy's «a third» became «a quarter» in both languages.
+
+Three regions still answer nothing. **Valle d'Aosta** and **Molise** were proved empty rather than
+unread — no class-1.6 designation names a comune in either — so they are finished, not pending.
+**Friuli-Venezia Giulia** is the last one that is one judgement away, on Brovada, excluded solely
+for being a fermented product.
