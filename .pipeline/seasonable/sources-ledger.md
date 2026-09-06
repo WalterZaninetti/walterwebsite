@@ -811,7 +811,7 @@ The quote was accurate, the conversion was correct, and the row was still incomp
 
 ### Where this leaves the dataset
 
-**60 designations, 66 documented windows, 2 generalised, 75 of 107 provinces, 17 of 20 regions.**
+**60 designations, 66 documented windows, 2 generalised, 75 of 107 provinces, 16 of 20 regions.**
 Puglia gains its third province. `greenhouse` is no longer a kind with no rows, so the calendar's
 three geometries all appear on the page.
 
@@ -908,7 +908,7 @@ third row quietly joining them.
 
 ### Where this leaves the dataset
 
-**61 designations, 67 documented windows, 2 generalised, 79 of 107 provinces, 18 of 20 regions.**
+**61 designations, 67 documented windows, 2 generalised, 79 of 107 provinces, 17 of 20 regions.**
 28 provinces silent, so the copy's «a third» became «a quarter» in both languages.
 
 Three regions still answer nothing. **Valle d'Aosta** and **Molise** were proved empty rather than
@@ -932,7 +932,7 @@ for someone to trip over.
 **16→23**, `open-field`. Art. 3 puts the zone in **Gorizia, Pordenone and Udine** — named comuni
 below 1 200 m. All three were silent. **Trieste is not in the zone and stays silent.**
 
-**Friuli-Venezia Giulia comes off the list.** 82 of 107 provinces, 19 of 20 regions.
+**Friuli-Venezia Giulia comes off the list.** 82 of 107 provinces, 18 of 20 regions.
 
 ### Which of its three windows, and why
 
@@ -985,10 +985,82 @@ dates.
 
 ### Where this leaves the dataset
 
-**62 designations, 68 documented windows, 2 generalised, 82 of 107 provinces, 19 of 20 regions.**
+**62 designations, 68 documented windows, 2 generalised, 82 of 107 provinces, 18 of 20 regions.**
 
 Only **Valle d'Aosta** and **Molise** answer nothing, and neither is pending: no class-1.6
 designation names a comune in either, which was proved in the eighth pass and re-confirmed against
 the register. **There is no third judgement call left.** What remains is the three above, and a
 question the copy has been carrying since the ninth pass — that «frutta e verdura» now covers a
 mushroom, a herb and a fermented turnip.
+
+---
+
+## 2026-09-05 (twelfth pass) — the three the eleventh pass reopened, shipped
+
+Walter's call. The rule that held them out was spent on Brovada, so all three ship, and the
+generalised chestnut row had to be re-measured rather than left alone.
+
+| Designation | Clause | Window | Provinces |
+|---|---|---|---|
+| **Amarene Brusche di Modena IGP** | «La raccolta viene effettuata nel periodo compreso dal 20 maggio al 31 luglio, tenuto conto dell'epoca di maturazione delle singole varietà presenti nel frutteto» | 9→13 | **Modena and Bologna** — art. 3 names twelve Bolognese comuni as well |
+| **Farina di Castagne della Lunigiana DOP** | «La raccolta delle castagne deve avvenire a partire da settembre … e fino al 15 dicembre» | 16→22 | Massa-Carrara |
+| **Farina di Neccio della Garfagnana DOP** | «La raccolta delle castagne deve avvenire tra il 1° ottobre e il 30 novembre di ogni anno» | 18→21 | Lucca |
+
+Bologna was not expected — the eleventh pass had guessed Modena alone. It changes nothing about
+coverage (both already answered) but it is why art. 3 gets read rather than inferred from a name.
+
+### Amarena is not cherry
+
+`en: 'sour cherry'`, not `'chestnut'`-style reuse of the existing key. *Prunus cerasus* is a
+different species from the *Prunus avium* of Vignola, Lari and Bracigliano, and `en` is what drives
+the generalised tier: filing amarena under `cherry` would have made it a part of the generalised
+cherry row and moved a union that three sweet-cherry designations currently agree on to the
+half-month. It gets its own glyph too — one fruit and a leaf, against sweet cherry's pair — because
+two rows that the model treats as different species must not read as the same thing.
+
+### The generalised chestnut row, re-measured
+
+Both flours carry chestnut harvest windows, so both are `en: 'chestnut'` and the tier's rule had to
+be re-run over nine designations rather than seven.
+
+| set | n | union | width | mean part | LOO |
+|---|---|---|---|---|---|
+| as shipped before this pass | 7 | 16→21 | 6 | 4.9 | 7/7 |
+| + Neccio | 8 | 16→21 | 6 | 4.8 | 8/8 |
+| + Lunigiana | 8 | **16→22** | 7 | 5.1 | **7/8** |
+| all nine | 9 | **16→22** | 7 | 5.0 | **8/9** |
+
+**Neccio is cited; Lunigiana is not.** At 16→22 Lunigiana is the only chestnut designation reaching
+the second half of December, so including it widens the union by a half-month that rests on one
+document and drops leave-one-out to 8/9 — the exact failure that keeps peach, potato, artichoke and
+asparagus out of this tier.
+
+This is a choice and it should be argued with rather than assumed: the alternative reading is that
+a generalised row must union *every* same-species designation, in which case chestnut no longer
+earns the tier at all and twenty-five provinces lose their chestnut row. Excluding one outlier from
+a *generalisation* costs nobody evidence — Massa-Carrara answers from Lunigiana's own documented
+row, which is better than a generalised one — whereas retiring the tier would cost twenty-five
+provinces a real answer to save a rule from an edge case. The code comment on the row says so.
+
+**Lucca and Massa-Carrara drop out of the generalised row's province list**, both now answering
+from a document. That is the seventh pass's Torino precedent, applied twice.
+
+### A correction to the ninth, tenth and eleventh passes
+
+**Those three entries each overstated the region count by one**, and so did their commit messages:
+17, 18 and 19 of 20, where the true figures were 16, 17 and 18. The provinces, designations and
+window counts were right; only the region arithmetic was wrong, carried forward unchecked from one
+entry to the next. The ledger lines are corrected. The commit messages are pushed and stay wrong.
+
+Twenty regions minus the silent ones is the whole calculation, which is the embarrassing part.
+
+### Where this leaves the dataset
+
+**65 designations, 71 documented windows, 2 generalised, 82 of 107 provinces, 18 of 20 regions.**
+
+Province coverage is unchanged, as predicted: all three land where a document already answered.
+What they add is density — Modena and Bologna go to three designations each.
+
+Only **Valle d'Aosta** and **Molise** answer nothing, and neither is pending. **There are no
+judgement calls left open in this corpus.** What remains is the copy: «frutta e verdura» now covers
+a mushroom, a herb, a fermented turnip, a jam and two flours.

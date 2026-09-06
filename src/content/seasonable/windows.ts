@@ -86,6 +86,12 @@ const g = (
 export const windows: readonly Window[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
   // "ha inizio ai primi di settembre per concludersi in novembre"
+  // "La raccolta viene effettuata nel periodo compreso dal 20 maggio al 31
+  //  luglio, tenuto conto dell'epoca di maturazione delle singole varieta'
+  //  presenti nel frutteto" — the sour-cherry harvest. The designation
+  //  protects the confettura made from it; art. 3 names comuni in Modena
+  //  and twelve more in Bologna.
+  w('amarene-modena', ['bo', 'mo'], 'open-field', 9, 13, 'amarene-modena'),
   w('castagna-cuneo', ['cn'], 'open-field', 16, 21, 'castagna-cuneo'),
   // "deve avvenire tra settembre e novembre di ogni anno"
   w('castagna-monte-amiata', ['gr', 'si'], 'open-field', 16, 21, 'castagna-monte-amiata'),
@@ -106,6 +112,14 @@ export const windows: readonly Window[] = [
   //  30 luglio"
   w('ciliegia-vignola', ['mo', 'bo'], 'open-field', 8, 13, 'ciliegia-vignola'),
   // "nel periodo compreso fra il 10 agosto ed il 10 ottobre"
+  // "La raccolta delle castagne deve avvenire a partire da settembre, con il
+  //  periodo di inizio della caduta spontanea dei frutti … e fino al 15
+  //  dicembre" — provincia di Massa Carrara. The widest chestnut window in
+  //  the corpus, and the reason it is not a part of the generalised row.
+  w('farina-lunigiana', ['ms'], 'open-field', 16, 22, 'farina-lunigiana'),
+  // "La raccolta delle castagne deve avvenire tra il 1 ottobre e il 30
+  //  novembre di ogni anno" — provincia di Lucca.
+  w('farina-neccio', ['lu'], 'open-field', 18, 21, 'farina-neccio'),
   w('fichi-cosenza', ['cs'], 'open-field', 14, 18, 'fichi-cosenza'),
   // "si svolgono dalla seconda decade di agosto per i frutti di prima fioritura
   //  ("Agostani"), da settembre a dicembre per i frutti di seconda fioritura
@@ -165,9 +179,15 @@ export const windows: readonly Window[] = [
   ),
   // Union of the six chestnut designations, which run from Cuneo to Salerno and
   // vary by a single half-month between them.
+  // Nine chestnut designations now state a window; this row cites eight. Farina
+  // di Castagne della Lunigiana is left out on purpose: at 16→22 it is the only
+  // one reaching the second half of December, so including it would widen the
+  // union to 16→22 and drop leave-one-out to 8/9 — the exact failure that keeps
+  // peach, potato, artichoke and asparagus out of this tier. Massa-Carrara is
+  // not denied anything by that: it answers from Lunigiana's own documented row.
   g(
     'chestnut-generic',
-    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'lu', 'ms', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
+    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
     16,
     21,
     [
@@ -178,6 +198,7 @@ export const windows: readonly Window[] = [
       'marrone-serino',
       'marrone-valle-susa',
       'marroni-monfenera',
+      'farina-neccio',
     ],
   ),
 

@@ -53,6 +53,20 @@ const GLYPHS: Record<string, ReactElement> = {
       <path d="M16.5 13.7c-.5-3.4-1.3-6.8-3-10.1" />
     </>
   ),
+  // One fruit and a leaf, against sweet cherry's pair on a shared stem. The
+  // leaf hangs left off the stem rather than continuing it: the first draft
+  // had it small and trailing right, which at 24px read as a magnifying
+  // glass. The long stem is also what keeps it out of peach and plum, whose
+  // fruit is bigger and whose stalk is a stub. They
+  // are different species and the generalised tier treats them as such, so the
+  // marks must not be read as the same thing at a glance.
+  'sour cherry': (
+    <>
+      <circle cx="11.6" cy="17.2" r="4.4" />
+      <path d="M11.6 12.8c.7-4.2 2.3-7.1 4.8-8.8" />
+      <path d="M13.6 8.3c-2.5.7-4.4-.1-5.7-2.5 2.5-.7 4.4.1 5.7 2.5Z" />
+    </>
+  ),
   plum: (
     <>
       <ellipse cx="12" cy="14.4" rx="6" ry="6.6" />

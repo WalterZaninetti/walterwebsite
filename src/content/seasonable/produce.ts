@@ -1,5 +1,5 @@
 /**
- * The catalogue: 62 protected designations whose own disciplinare states when
+ * The catalogue: 65 protected designations whose own disciplinare states when
  * they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -37,6 +37,7 @@ const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, i
 
 export const produce: readonly Produce[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
+  fruit('amarene-modena', 'Amarene Brusche di Modena', 'IGP', 'sour cherry', 'amarena'),
   fruit('castagna-cuneo', 'Castagna Cuneo', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-monte-amiata', 'Castagna del Monte Amiata', 'IGP', 'chestnut', 'castagna'),
   fruit('castagna-vallerano', 'Castagna di Vallerano', 'DOP', 'chestnut', 'castagna'),
@@ -44,6 +45,8 @@ export const produce: readonly Produce[] = [
   fruit('ciliegia-bracigliano', 'Ciliegia di Bracigliano', 'IGP', 'cherry', 'ciliegia'),
   fruit('ciliegia-lari', 'Ciliegia di Lari', 'IGP', 'cherry', 'ciliegia'),
   fruit('ciliegia-vignola', 'Ciliegia di Vignola', 'IGP', 'cherry', 'ciliegia'),
+  fruit('farina-lunigiana', 'Farina di Castagne della Lunigiana', 'DOP', 'chestnut', 'castagna'),
+  fruit('farina-neccio', 'Farina di Neccio della Garfagnana', 'DOP', 'chestnut', 'castagna'),
   fruit('fichi-cosenza', 'Fichi di Cosenza', 'DOP', 'fig', 'fico'),
   fruit('ficodindia-etna', "Ficodindia dell'Etna", 'DOP', 'prickly pear', 'ficodindia'),
   fruit('ficodindia-san-cono', 'Ficodindia di San Cono', 'DOP', 'prickly pear', 'ficodindia'),
