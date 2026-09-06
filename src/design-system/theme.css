@@ -322,13 +322,26 @@
   /* Crimson, not ocean. Blue moved to the DJ world (below) when that page got
      its own identity, and two blue cards side by side on the shelf read as one
      project. Red is also the colour this project's subject actually has.
-     Only ProjectShelf.tsx reads these five tokens — /magic-tools paints from
-     its own --magic-* parchment world and is untouched. */
+
+     The card ground and its type ladder are the shelf's alone; the four -thumb
+     / -gauge / -coral rungs under them are the page's own, lifted verbatim from
+     the --magic-* world below so the figure in the card is the figure on the
+     page rather than a crimson drawing of it. The ember block (theme.css:534)
+     already pulled --project-magic *into* the page; these four are the same
+     agreement read back the other way. */
   --project-magic: #7d1f28;
   --project-magic-fg: #ffeaea;      /* 8.68:1 */
   --project-magic-body: #f7d5d5;    /* 7.35:1 */
   --project-magic-accent: #f2b8ae;  /* 5.83:1 */
-  --project-magic-thumb: #5c141b;   /* 7.79:1 under -accent */
+  /* The thumb well is the odds panel's slab, not a deeper crimson. The card
+     draws that panel — a gold gauge and three stat tiles on near-black — and a
+     crimson well would have been the one surface in the miniature that the
+     destination does not have. 1.94:1 against the card, where the crimson well
+     it replaces measured 1.35:1, so it reads as inset for the first time. */
+  --project-magic-thumb: #150b00;      /* = --magic-slab */
+  --project-magic-thumb-fg: #fffbd5;   /* = --magic-cream · 18.53:1 on the well */
+  --project-magic-gauge: #f2c14e;      /* = --magic-ember-light · 11.59:1 */
+  --project-magic-coral: #f9aa8f;      /* = --magic-coral · 10.35:1 */
   --project-magic-border: transparent;
   --project-magic-seam: #7d1f28;
   --project-magic-shadow: 0 16px 34px rgb(125 31 40 / 0.28);
@@ -519,8 +532,9 @@
   /* The ember ramp — the world's own red, brought in from the shelf. The page
      used to paint itself MTG green while its card on the homepage was
      crimson, so the door and the room behind it disagreed. --magic-ember is
-     --project-magic #7d1f28 exactly, and -deep is that card's thumb well
-     #5c141b; the rest is the same red walked toward orange and then to gold,
+     --project-magic #7d1f28 exactly, and -deep was that card's thumb well
+     until the well became this page's slab (theme.css:335) and the borrowing
+     ran both ways; the rest is the same red walked toward orange and then to gold,
      which is the one warm ramp that stays legible on a cream sheet and on an
      inked one. The five mana pips keep their own colours below — those are
      Magic's, not the palette's.
@@ -698,7 +712,11 @@
   --project-magic-fg: #ffeaea;                    /* 7.62:1 */
   --project-magic-body: #f7d5d5;                  /* 6.46:1 */
   --project-magic-accent: #f2b8ae;                /* 5.12:1 */
-  --project-magic-thumb: #5c141b;                 /* 7.79:1 under -accent */
+  /* The well follows the slab down, as the page's does. The three rungs on it
+     do not appear here: gold, coral and the cream ladder hold byte-identical
+     across schemes on /magic-tools — a near-black block is a near-black block
+     — so a dark override would be two tokens nobody could tell apart. */
+  --project-magic-thumb: #0a0603;                 /* = --magic-slab · 2.30:1 vs card */
   --project-magic-border: rgb(242 184 174 / 0.5); /* 3.52:1 vs canvas, composited */
   --project-magic-seam: #f2b8ae;                  /* 10.77:1 vs canvas */
   --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
@@ -954,6 +972,9 @@
   --color-project-magic-body: var(--project-magic-body);
   --color-project-magic-accent: var(--project-magic-accent);
   --color-project-magic-thumb: var(--project-magic-thumb);
+  --color-project-magic-thumb-fg: var(--project-magic-thumb-fg);
+  --color-project-magic-gauge: var(--project-magic-gauge);
+  --color-project-magic-coral: var(--project-magic-coral);
   --color-project-magic-border: var(--project-magic-border);
   --color-project-magic-seam: var(--project-magic-seam);
 
@@ -1138,6 +1159,23 @@
     var(--color-ocean-300),
     var(--project-dj-accent),
     var(--project-dj-mark)
+  );
+}
+
+/* The same sweep, sunk into the shelf card's well instead of a page panel.
+   --project-dj-mark is the deep stop and measures 2.27:1 on --project-dj-badge
+   in light, so a quarter of the ring would read as a bite taken out of it
+   rather than as the sweep bottoming out. That one stop lifts to the value the
+   token already holds in dark, where it measures 8.10:1 on the well — so the
+   card draws the same wheel in both schemes, which the page cannot do because
+   its own ground flips from white to near-black underneath it. */
+@utility camelot-thumb {
+  background: conic-gradient(
+    from 0deg,
+    var(--color-ocean-500),
+    var(--color-ocean-300),
+    var(--project-dj-accent),
+    var(--color-ocean-500)
   );
 }
 
