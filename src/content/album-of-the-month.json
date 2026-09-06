@@ -1,8 +1,9 @@
 {
-  "spotifyId": "0zXeZw0oFC2Db99RqlfHur",
-  "pick": 3,
-  "month": "2026-08",
+  "spotifyId": "4tUxQkrduOE8sfgwJ5BI2F",
+  "pick": 4,
+  "month": "2026-09",
   "previous": [
+    { "spotifyId": "0zXeZw0oFC2Db99RqlfHur", "pick": 3, "month": "2026-08" },
     { "spotifyId": "7fK9JzCaIIIWehaWd7IoUE", "pick": 2, "month": "2026-07" },
     { "spotifyId": "2ZytN2cY4Zjrr9ukb2rqTP", "pick": 1, "month": "2026-06" }
   ]
