@@ -1,4 +1,4 @@
-The four typefaces bundled in this directory are redistributed here under the
+The typefaces bundled in this directory are redistributed here under the
 SIL Open Font License, Version 1.1, which permits bundling and serving them
 alongside a website. They are self-hosted rather than loaded from a font CDN so
 that visiting the site does not disclose a visitor's IP address to a third
@@ -14,8 +14,15 @@ party.
                       https://github.com/impallari/Libre-Baskerville
   Nunito              Copyright 2014-2023 The Nunito Project Authors
                       https://github.com/googlefonts/nunito
+  Source Serif 4      Copyright 2014-2023 Adobe
+                      https://github.com/adobe-fonts/source-serif
 
 Full licence text: https://openfontlicense.org/open-font-license-official-text/
 
 Only the Latin subset of each family is included. The files were taken from the
 Google Fonts CDN, which distributes the same OFL-licensed originals.
+
+Source Serif 4 is shipped as a variable font instanced down from what Google
+serves: weight 400-700 rather than 200-900, and — for the italic — optical size
+pinned at 20. That is a permitted modification under the OFL; the name is
+unchanged because the glyphs are.

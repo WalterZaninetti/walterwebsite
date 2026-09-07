@@ -6,17 +6,20 @@
 
 export const magic = {
   repoHref: 'https://github.com/WalterZaninetti/walterwebsite',
-  /** The translate service backing the plain-English search — its own repo,
+  /** The translate service backing the plain-words search — its own repo,
    * separate from the calculators above. Linked from the footer credit line,
    * which is the page's one mention of where the card data (and the
    * Scryfall-probe argument behind the search) comes from. */
   translateRepoHref: 'https://github.com/WalterZaninetti/natural-language-to-scryfall-filters',
-  nav: [
-    { key: 'navOdds', href: '#odds' },
-    { key: 'navMana', href: '#mana' },
-    { key: 'navHands', href: '#hands' },
-    { key: 'navFinding', href: '#finding' },
-    { key: 'navSearch', href: '#search' },
+  /** Paired by index with hero.jumps[] and nav[] in the locale files — the
+   * index strip under the headline and the header nav are the same five
+   * tools in the same order. */
+  tools: [
+    { key: 'search', href: '#search' },
+    { key: 'odds', href: '#odds' },
+    { key: 'sources', href: '#sources' },
+    { key: 'hands', href: '#hands' },
+    { key: 'find', href: '#find' },
   ],
   deckPresets: [60, 40, 99, 100],
   drawPresets: [

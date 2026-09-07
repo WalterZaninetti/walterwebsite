@@ -28,10 +28,7 @@ export function Tile({
    * Fill, glyph and ring together, as one replaceable group — Tailwind
    * utilities of equal specificity resolve by stylesheet order, not by
    * className order, so bg/text/ring have to travel together rather than
-   * layer on top of a default. `/magic-tools`'s hero tile is the one
-   * caller that overrides this: `--magic-tile` on `--magic-tile-fg`, no
-   * ring (direction.md §3.2 — that page's slab needs no edge against
-   * itself, so §1.4's light/dark ring logic doesn't apply to it).
+   * layer on top of a default.
    */
   tone?: string;
 }) {

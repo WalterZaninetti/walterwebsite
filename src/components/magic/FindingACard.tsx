@@ -2,7 +2,19 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { magic } from '../../content/magic';
 import { cardsSeenByTurn, formatPercent, pAtLeastFrom } from '../../lib/hypergeometric';
-import { Field, Label, Preset, SectionHead } from './controls';
+import { cx } from '../ui/cx';
+import {
+  Aside,
+  ChartHead,
+  Choice,
+  Field,
+  Label,
+  Meter,
+  Rail,
+  Section,
+  SectionHead,
+  Verdict,
+} from './controls';
 
 const TURNS = Array.from({ length: 12 }, (_, i) => i + 1);
 const COPIES = [1, 2, 3, 4];
@@ -11,10 +23,10 @@ const MILESTONES = [0.5, 0.75, 0.9];
 /**
  * "When will I see it?" — the turn axis rather than the count axis.
  *
- * Section 01 answers how many copies you'll have drawn by a fixed point; this
- * walks the turns and asks when a card first becomes likely. That's the
- * singleton question — a tutor, a combo piece, a Commander one-of — where the
- * count is always one and the only variable worth moving is time.
+ * The draw-odds section answers how many copies you'll have drawn by a fixed
+ * point; this walks the turns and asks when a card first becomes likely.
+ * That's the singleton question — a tutor, a combo piece, a Commander one-of —
+ * where the count is always one and the only variable worth moving is time.
  */
 export function FindingACard() {
   const { t, i18n } = useTranslation();
@@ -39,71 +51,90 @@ export function FindingACard() {
     turn: rows.find((r) => r.p >= threshold)?.turn ?? null,
   }));
 
+  /**
+   * The rule drawn over the table is the strongest milestone the deck actually
+   * reaches inside twelve turns. A four-of hits every one of them by turn two,
+   * so the coin flip would be a line at the far left annotating nothing; a
+   * one-of in a 100-card deck reaches none, and the rule falls back to the
+   * ceiling it does reach.
+   */
+  const reach = rows[rows.length - 1].p;
+  const threshold = MILESTONES.find((q) => reach >= q) ?? null;
+
   const opener = rows[0];
+  // The milestones are round halves and quarters; formatPercent's decimal
+  // would render 50% as "50.0%", a precision the threshold does not have.
+  const whole = new Intl.NumberFormat(locale, { style: 'percent' });
 
   return (
-    <section id="finding" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
+    <Section id="find">
       <SectionHead
-        index="04"
+        kicker={t('magic.finding.kicker')}
         heading={t('magic.finding.heading')}
         blurb={t('magic.finding.blurb')}
       />
 
-      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
-        {/* ---------------- controls ---------------- */}
-        <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
+      <div className="grid items-start gap-x-14 gap-y-10 md:grid-cols-[minmax(260px,340px)_minmax(0,1fr)]">
+        <Rail>
           <Field label={t('magic.finding.deckLabel')} value={String(deck)}>
-            <div className="flex gap-[7px]">
+            <div className="flex gap-1.5">
               {magic.deckPresets.map((value) => (
-                <Preset
+                <Choice
                   key={value}
                   active={deck === value}
                   onClick={() => setDeck(value)}
-                  className="flex-1"
+                  className="flex-1 px-0"
                 >
                   {value}
-                </Preset>
+                </Choice>
               ))}
             </div>
           </Field>
 
-          <Field label={t('magic.finding.copiesLabel')} value={String(copies)}>
-            <div className="flex gap-[7px]">
+          <Field
+            label={t('magic.finding.copiesLabel')}
+            value={String(copies)}
+            hint={t('magic.finding.copiesHint')}
+          >
+            <div className="flex gap-1.5">
               {COPIES.map((value) => (
-                <Preset
+                <Choice
                   key={value}
                   active={copies === value}
                   onClick={() => setCopies(value)}
-                  className="flex-1"
+                  className="flex-1 px-0"
                 >
                   {value}
-                </Preset>
+                </Choice>
               ))}
             </div>
-            <p className="m-0 font-mono text-[11.5px]/[1.5] text-magic-ink-faint">
-              {t('magic.finding.copiesHint')}
-            </p>
           </Field>
 
-          <Field label={t('magic.finding.playLabel')}>
-            <div className="flex gap-[7px]">
-              <Preset active={onPlay} onClick={() => setOnPlay(true)} className="flex-1">
+          <div>
+            <Label className="mb-2.5 block">{t('magic.finding.playLabel')}</Label>
+            <div className="flex gap-1.5">
+              <Choice active={onPlay} onClick={() => setOnPlay(true)} className="flex-1">
                 {t('magic.mana.onPlay')}
-              </Preset>
-              <Preset active={!onPlay} onClick={() => setOnPlay(false)} className="flex-1">
+              </Choice>
+              <Choice active={!onPlay} onClick={() => setOnPlay(false)} className="flex-1">
                 {t('magic.mana.onDraw')}
-              </Preset>
+              </Choice>
             </div>
-          </Field>
+          </div>
 
-          <div className="flex flex-col gap-2.5 border-t border-magic-rule-soft pt-[18px]">
-            <Label>{t('magic.finding.milestonesLabel')}</Label>
-            {crossings.map(({ threshold, turn }) => (
-              <div key={threshold} className="flex items-baseline justify-between gap-3">
-                <span className="font-mono text-[12px] text-magic-ink-muted">
-                  {formatPercent(threshold, locale)}
+          <div>
+            <Label className="mb-1 block">{t('magic.finding.milestonesLabel')}</Label>
+            {crossings.map(({ threshold: q, turn }) => (
+              <div key={q} className="flex items-baseline justify-between gap-3 py-2 text-magic-body">
+                <span className="text-magic-ink-muted">
+                  {t('magic.finding.milestone', { percent: whole.format(q) })}
                 </span>
-                <span className="font-magic-body text-[13px] text-magic-ink">
+                <span
+                  className={cx(
+                    'font-semibold',
+                    turn === null ? 'text-magic-ink-muted' : 'text-magic-accent-ink',
+                  )}
+                >
                   {turn === null
                     ? t('magic.finding.never')
                     : t('magic.finding.byTurn', { turn })}
@@ -111,72 +142,72 @@ export function FindingACard() {
               </div>
             ))}
           </div>
-        </div>
+        </Rail>
 
-        {/* ---------------- result ---------------- */}
-        <div className="flex flex-col gap-[22px]">
-          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-slab p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
-            <p className="justify-self-center font-mono text-[56px]/none font-medium tracking-[-0.03em] text-white">
-              {formatPercent(opener.p, locale)}
+        <div className="min-w-0">
+          <Verdict figure={formatPercent(opener.p, locale)}>
+            <p className="m-0 mb-3 text-magic-lead text-pretty">
+              {t('magic.finding.sentence', { deck })}
             </p>
-            <div>
-              <p className="mb-3 font-magic-body text-[22px]/[1.4] italic text-pretty">
-                {t('magic.finding.sentence', {
-                  percent: formatPercent(opener.p, locale),
-                  deck,
-                })}
-              </p>
-              <p className="font-mono text-[11.5px]/[1.6] text-magic-ember-light">
-                {t('magic.finding.tenTurns', {
-                  percent: formatPercent(rows[9].p, locale),
-                })}
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-[14px] border border-magic-rule bg-magic-card p-6">
-            <Label className="mb-4 block">{t('magic.finding.tableLabel')}</Label>
-            <div className="flex flex-col">
-              {rows.map(({ turn, seen, p }) => {
-                const crossed = crossings.some((c) => c.turn === turn);
-                return (
-                  <div
-                    key={turn}
-                    className="grid grid-cols-[42px_46px_1fr_62px] items-center gap-3 border-t border-magic-rule-faint py-[8px]"
-                  >
-                    <span
-                      className={`font-mono text-[12px] font-medium ${
-                        crossed ? 'text-magic-ink' : 'text-magic-ink-muted'
-                      }`}
-                    >
-                      T{turn}
-                    </span>
-                    <span className="font-mono text-[10.5px] text-magic-ink-fainter">{seen}</span>
-                    <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
-                      <span
-                        className={`absolute inset-y-0 left-0 rounded-pill ${
-                          p >= 0.9 ? 'bg-magic-ember-deep' : 'bg-magic-ember-mid'
-                        }`}
-                        style={{ width: `${Math.round(p * 100)}%` }}
-                      />
-                    </span>
-                    <span
-                      className={`text-right font-mono text-[12px] font-medium ${
-                        crossed ? 'text-magic-ink' : 'text-magic-ink-muted'
-                      }`}
-                    >
-                      {formatPercent(p, locale)}
-                    </span>
-                  </div>
-                );
+            <Aside>
+              {t('magic.finding.tenTurns', {
+                percent: formatPercent(rows[9].p, locale),
+                points: ((copies / deck) * 100).toFixed(1),
               })}
-            </div>
-            <p className="mt-4 font-mono text-[10.5px]/[1.5] text-magic-ink-faint">
-              {t('magic.finding.columnsHint')}
-            </p>
+            </Aside>
+          </Verdict>
+
+          <ChartHead
+            label={t('magic.finding.tableLabel')}
+            note={
+              threshold === null
+                ? t('magic.finding.ruleCeiling', { percent: formatPercent(reach, locale) })
+                : t('magic.finding.rule', { percent: whole.format(threshold) })
+            }
+          />
+          {rows.map(({ turn, seen, p }) => {
+            const crossed = threshold !== null && p >= threshold;
+            return (
+              <div
+                key={turn}
+                className="grid grid-cols-[46px_44px_minmax(0,1fr)_64px] items-center gap-3 py-1.5"
+              >
+                <span
+                  className={cx(
+                    'text-magic-body',
+                    crossed ? 'font-semibold text-magic-ink' : 'text-magic-ink-muted',
+                  )}
+                >
+                  T{turn}
+                </span>
+                <span className="text-magic-label text-magic-ink-muted">{seen}</span>
+                <Meter
+                  value={p}
+                  quiet={!crossed}
+                  marker={threshold ?? undefined}
+                  height="h-3"
+                />
+                <span
+                  className={cx(
+                    'text-right text-magic-body',
+                    crossed ? 'font-semibold text-magic-ink' : 'text-magic-ink-muted',
+                  )}
+                >
+                  {formatPercent(p, locale)}
+                </span>
+              </div>
+            );
+          })}
+          {/* The column heads sit under the table, the way a broadsheet foots a
+              stock listing: the reader meets the bars first and the key after. */}
+          <div className="grid grid-cols-[46px_44px_minmax(0,1fr)_64px] gap-3 pt-2.5 text-magic-micro uppercase tracking-magic-label text-magic-ink-muted">
+            <span>{t('magic.finding.colTurn')}</span>
+            <span>{t('magic.finding.colSeen')}</span>
+            <span />
+            <span className="text-right">{t('magic.finding.colProb')}</span>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -11,11 +11,9 @@
    were one desaturated sage ramp doing both jobs, which is what made the
    site read austere. See .pipeline/repaint/direction.md §1.
 
-   The --color-magic-* and --color-mana-* families are DELIBERATELY ABSENT
-   from the new ramps below. They hold byte-identical in both schemes.
-   --magic-cream #fffbd5 and the new --canvas #fffbe8 measure 1.01:1 apart:
-   the site moved toward that page, so there is nothing to repaint. See
-   direction.md §1.7.
+   The --color-magic-* family is absent from the ramps below because it is
+   not built from them: /magic-tools is a broadsheet in its own greys and
+   cyan, authored directly in the semantic layer further down.
    ========================================================================== */
 
 /* Dark mode is class-driven (<html class="dark">) so the header toggle can
@@ -97,20 +95,84 @@
 
   /* ------------------------------------------------------------------
      Magic Tools page — its own world, per the homepage's "each card keeps
-     its project's own look". Parchment and ink rather than cream and
-     clover. The colour ramp itself lives in the semantic layer below
-     (:root / .dark), same four-layer shape as the rest of the site. Only
-     the two type families stay here as raw values — they don't flip with
-     the scheme. Untouched by the repaint (direction.md §1.7). */
-  --font-magic-display: 'Cinzel', Georgia, serif;
-  --font-magic-body: 'Spectral', Georgia, serif;
+     its project's own look". A broadsheet now: one serif at every size, a
+     bare sheet, and cyan reserved for the annotation rules drawn over the
+     data. The colour ramp lives in the semantic layer below (:root /
+     .dark), same four-layer shape as the rest of the site; the family is
+     raw here because it does not flip with the scheme.
 
-  /* The slab: --color-magic-ink was doing two opposite jobs — an inked block
-     carrying the cream ladder (11 backgrounds) and the ink itself (17 text
-     uses). A token cannot be both once the scheme flips, so the ground role
-     splits out. Identical to --color-magic-ink in light, so the light output
-     does not move. */
-  --color-magic-slab: #150b00;
+     One family, not two. Source Serif 4 carries the 220px headline and the
+     14px label alike because it is optically sized: the shipped file keeps
+     the opsz axis over 20–60, so the browser draws the display cut at
+     display sizes and the text cut at text sizes from a single face. That
+     is what replaced Cinzel + Spectral, and it is 19 KB lighter than the
+     pair it retired. */
+  --font-magic: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+
+  /* Square by intent — a printed sheet has no rounded corners. The page had
+     eleven arbitrary rounded-[..] values; this is the one radius left, and
+     it exists only to keep a 1px optical break on fields and buttons. */
+  --radius-magic: 2px;
+
+  --container-magic: 1180px;
+
+  /* The broadsheet's type scale, in the doc's own px. It is a separate scale
+     from --text-hero…--text-label above because it is a separate publication:
+     the site's ladder tops out at 96px and this one opens at 220.
+
+     Line-height travels with the size — at these sizes leading is a property
+     of the cut, not of the block — which is why 16px appears twice: the same
+     size set as a table cell and as a paragraph of prose is two roles, and a
+     scale that pretended otherwise would be overridden at half its call
+     sites. Tracking does not travel with it: the letterspaced small caps run
+     from 12px to 17px and take --tracking-magic-* instead. */
+  --text-magic-hero: clamp(56px, 15vw, 220px);
+  --text-magic-hero--line-height: 0.9;
+  --text-magic-hero--letter-spacing: -0.035em;
+  --text-magic-head: clamp(34px, 6vw, 84px);
+  --text-magic-head--line-height: 0.98;
+  --text-magic-head--letter-spacing: -0.03em;
+  --text-magic-figure: clamp(56px, 8vw, 104px);
+  --text-magic-figure--line-height: 0.84;
+  --text-magic-figure--letter-spacing: -0.035em;
+  --text-magic-sign: clamp(30px, 5.5vw, 74px);
+  --text-magic-sign--line-height: 1.02;
+  --text-magic-sign--letter-spacing: -0.025em;
+  --text-magic-deck: clamp(20px, 2.2vw, 30px);
+  --text-magic-deck--line-height: 1.4;
+  --text-magic-blurb: clamp(17px, 2vw, 20px);
+  --text-magic-blurb--line-height: 1.5;
+
+  --text-magic-count: 32px;
+  --text-magic-count--line-height: 1;
+  --text-magic-stat: 28px;
+  --text-magic-stat--line-height: 1;
+  --text-magic-title: 24px;
+  --text-magic-title--line-height: 1.15;
+  --text-magic-query: 23px;
+  --text-magic-query--line-height: 1.4;
+  --text-magic-ask: 21px;
+  --text-magic-ask--line-height: 1.4;
+  --text-magic-lead: 20px;
+  --text-magic-lead--line-height: 1.4;
+  --text-magic-note: 17px;
+  --text-magic-note--line-height: 1.6;
+  --text-magic-prose: 16px;
+  --text-magic-prose--line-height: 1.6;
+  --text-magic-row: 16px;
+  --text-magic-row--line-height: 1.4;
+  --text-magic-body: 15px;
+  --text-magic-body--line-height: 1.55;
+  --text-magic-label: 14px;
+  --text-magic-label--line-height: 1.5;
+  --text-magic-micro: 13px;
+  --text-magic-micro--line-height: 1.4;
+  --text-magic-tick: 12px;
+  --text-magic-tick--line-height: 1.4;
+
+  --tracking-magic-kicker: 0.18em;
+  --tracking-magic-label: 0.14em;
+
 
   /* Type scale, faithful to the doc (px, paired line-heights). Unchanged by
      the repaint — roundness is radii, not rhythm (direction.md §4). */
@@ -323,12 +385,12 @@
      its own identity, and two blue cards side by side on the shelf read as one
      project. Red is also the colour this project's subject actually has.
 
-     The card ground and its type ladder are the shelf's alone; the four -thumb
-     / -gauge / -coral rungs under them are the page's own, lifted verbatim from
-     the --magic-* world below so the figure in the card is the figure on the
-     page rather than a crimson drawing of it. The ember block (theme.css:534)
-     already pulled --project-magic *into* the page; these four are the same
-     agreement read back the other way. */
+     The card ground and its type ladder are the shelf's alone. The four
+     -thumb / -gauge / -coral rungs under them were lifted from the parchment
+     world the page used to draw, and the page has since become a broadsheet:
+     they now hold their own values, and the thumbnail is a crimson miniature
+     rather than a portrait of what opens. Repainting the shelf card to match
+     is a homepage change, not this page's. */
   --project-magic: #7d1f28;
   --project-magic-fg: #ffeaea;      /* 8.68:1 */
   --project-magic-body: #f7d5d5;    /* 7.35:1 */
@@ -338,10 +400,10 @@
      crimson well would have been the one surface in the miniature that the
      destination does not have. 1.94:1 against the card, where the crimson well
      it replaces measured 1.35:1, so it reads as inset for the first time. */
-  --project-magic-thumb: #150b00;      /* = --magic-slab */
-  --project-magic-thumb-fg: #fffbd5;   /* = --magic-cream · 18.53:1 on the well */
-  --project-magic-gauge: #f2c14e;      /* = --magic-ember-light · 11.59:1 */
-  --project-magic-coral: #f9aa8f;      /* = --magic-coral · 10.35:1 */
+  --project-magic-thumb: #150b00;
+  --project-magic-thumb-fg: #fffbd5;   /* 18.53:1 on the well */
+  --project-magic-gauge: #f2c14e;      /* 11.59:1 */
+  --project-magic-coral: #f9aa8f;      /* 10.35:1 */
   --project-magic-border: transparent;
   --project-magic-seam: #7d1f28;
   --project-magic-shadow: 0 16px 34px rgb(125 31 40 / 0.28);
@@ -473,136 +535,70 @@
   --hero-glow: none;
 
   /* ==========================================================================
-     Magic Tools joins the theme system.
+     Magic Tools — the broadsheet.
 
-     Layer 2 gains a semantic pair for every magic token, light values first —
-     byte-identical to today except where a contrast fix moved one
-     deliberately. Layer 3 (.dark, below) gets the dark counterparts. Layer 4
-     (@theme inline) re-exposes everything under the SAME utility names, so
-     bg-magic-parchment keeps working and starts tracking the .dark class.
+     The page is a printed sheet: one ground, no cards, no panels, no slab.
+     Everything that used to be a container is now white space, and the only
+     lines on the page are the data itself and the cyan rules annotating it.
+     Every enclosing token the old world needed — parchment, card, slab,
+     cinder, abyss, the cream ladder that inked type onto them, and the five
+     --mana-* pip colours that opened the hero — is gone with the containers
+     it painted; see the DELETED list at the foot of this block.
 
-     The world does not invert. Half of this page is already dark — the hero
-     slab, the search cinder, the abyss output — and that half already
-     measures clean, so dark mode holds it and re-maps the light half down to
-     meet it. Each token that holds in both schemes only ever touches a
-     surface that does not flip.
+     Cyan is the annotator, not the interface. It draws the threshold rule,
+     the mean marker and the bracket — the marks a subeditor would add over a
+     printed chart — and it never fills a bar, because a filled bar is data.
+     Where it has to carry text or a button ground it steps to -ink / -deep:
+     the raw accent measures 3.65:1 on the sheet, which is a rule but not a
+     word.
+     ========================================================================== */
 
-     Untouched by the repaint: --magic-cream #fffbd5 and --canvas #fffbe8
-     measure 1.01:1 apart. See direction.md §1.7. ========================================================================== */
+  /* The sheet and the one inset on it (fields). No third ground: a card
+     would be a container, and the page has none. */
+  --magic-paper: #f3f2f2;
+  --magic-surface: #eae9e9;
 
-  /* Grounds, outside in: the desk, the sheet, the raised card, the inked
-     slab. The header keeps the doc's cool #f4f7fb rather than being warmed to
-     match the world — that is a look change nobody asked for, and moving the
-     slash is the cheaper fix. */
-  --magic-parchment: #efe7cd;
-  --magic-paper: #fdfaec;
-  --magic-card: #ffffff;
-  --magic-header: rgb(244 247 251 / 0.92);
-  --magic-slab: #150b00;
-  /* Following --project-food: a surface that holds its ground across schemes
-     needs an edge when the scheme moves under it. Transparent here, real in
-     dark, where the slab sits 1.09:1 from the sheet. */
-  --magic-slab-edge: transparent;
+  /* Ink ladder. Three steps, each with a job: the headline and the figures,
+     the running prose, and the labels above every control. */
+  --magic-ink: #201e1d;       /* 14.86:1 on the sheet */
+  --magic-ink-body: #444141;  /*  9.04:1 */
+  --magic-ink-muted: #605d5d; /*  5.83:1 */
 
-  /* Hairlines and the field boundary. --magic-rule is decorative at 1.51:1
-     against the card and stays that way. --magic-field is not decorative: it
-     is the border of all five inputs and measured 1.43:1 against the field's
-     own fill, under SC 1.4.11's 3:1. The audit measured text pairs only, so
-     this is a fifth failure found at stage 4 and fixed here. 1.43 -> 3.19. */
-  --magic-rule: #ddd2b0;
-  --magic-rule-soft: #eae3ca;
-  --magic-rule-faint: #f4eed8;
-  --magic-field: #978c6f;
+  /* Hairlines. --magic-rule and --magic-track are decorative and stay that
+     way: the rule separates nothing a reader must see, and the track is the
+     unfilled remainder of a bar whose value is also printed as a number
+     beside it. --magic-field is not decorative — it is the only edge a text
+     input has — so it is measured against the fill it sits on, not the
+     sheet. */
+  --magic-rule: #d7d3d3;      /*  1.33:1, decorative */
+  --magic-track: #eae7e7;     /*  1.10:1, decorative */
+  --magic-field: #878383;     /*  3.09:1 on --magic-surface · 3.35:1 on the sheet */
 
-  /* The ink ladder. Two of the four measured AA failures live here, and
-     fixing them costs a rung: there is no room for four steps between 4.5:1
-     and --magic-ink-muted's 5.97:1, so -faint and -fainter resolve to one
-     value in light. Both class names keep working, and the two separate
-     again in dark, where the ladder has room from 14.5:1 down to 4.5:1. */
-  --magic-ink: #150b00;         /* 18.58:1 on paper */
-  --magic-ink-muted: #6b5f4a;   /*  5.97:1 on paper */
-  --magic-ink-faint: #7d705a;   /*  4.63:1 on paper — was #9a8d75, 3.11:1 */
-  --magic-ink-fainter: #7d705a; /*  4.63:1 on paper — was #a89b83, 2.73:1 */
-  /* The breadcrumb slash, floored against the header composited over the
-     slab (#e2e4e7), not the #f5f7fa the audit sampled — the header is
-     translucent and the hero scrolls under it. 5.49:1 over the card. */
-  --magic-slash: #6f634c;       /*  4.62:1 worst case — was #b8ab92, 2.11:1 */
-  --magic-link: #1f5896;        /*  6.93:1 on paper */
+  /* The data bars. The ink bar is the answer; the quiet bar is every row
+     that misses the threshold, and it still clears 3:1 so the chart reads
+     without the numbers. */
+  --magic-bar: #444141;       /*  9.04:1 */
+  --magic-bar-quiet: #8b8787; /*  3.18:1 */
 
-  /* The ember ramp — the world's own red, brought in from the shelf. The page
-     used to paint itself MTG green while its card on the homepage was
-     crimson, so the door and the room behind it disagreed. --magic-ember is
-     --project-magic #7d1f28 exactly, and -deep was that card's thumb well
-     until the well became this page's slab (theme.css:335) and the borrowing
-     ran both ways; the rest is the same red walked toward orange and then to gold,
-     which is the one warm ramp that stays legible on a cream sheet and on an
-     inked one. The five mana pips keep their own colours below — those are
-     Magic's, not the palette's.
+  /* The annotator. */
+  --magic-accent: #0088b0;      /* rules and markers only — 3.65:1, non-text */
+  --magic-accent-ink: #006786;  /*  5.72:1 — kickers, links, marginal notes */
+  --magic-accent-deep: #004961; /*  8.84:1 — the query itself */
+  --magic-accent-fill: #006786; /* pressed control ground */
+  --magic-accent-fill-fg: #f3f2f2;   /* 5.72:1 on the fill */
+  --magic-accent-fill-hover: #004961;
 
-     In light the deeper rungs carry more emphasis; in dark that inverts,
-     because on a dark ground more emphasis means lighter. -mid is a fill and
-     never text: 4.22:1 on the card is under AA and over SC 1.4.11's 3:1,
-     which is the floor that applies to a bar. -light is the accent on every
-     dark block and holds across schemes — 10.57:1 on the cinder, 11.58:1 on
-     the abyss and on the slab. */
-  --magic-ember: #7d1f28;        /* 10.01:1 on card · 9.56 on paper */
-  --magic-ember-deep: #5c141b;   /* 13.37:1 on card */
-  --magic-ember-darker: #45090f; /* 16.17:1 on card */
-  --magic-ember-mid: #c2600f;    /* orange, fills only — 4.22:1 */
-  --magic-ember-light: #f2c14e;  /* gold, dark blocks only */
-  --magic-ember-pale: #fbe6de;
-  /* The hero tile, which is the one place the ramp is a ground with a glyph
-     on it. It cannot just be --magic-ember + --magic-cream: in dark the ramp
-     lifts to a light salmon and cream on salmon collapses to 1.5:1. So the
-     tile takes a pair, the way the site's own --tile / --tile-fg does, and
-     inverts with the scheme instead of following the ramp. */
-  --magic-tile: #7d1f28;
-  --magic-tile-fg: #fffbd5;      /* 9.54:1 */
-  /* The search section's ground and the output well sunk into it — what
-     --magic-forest and --magic-abyss were. Same two depths, oxblood instead
-     of pine, and they still hold across both schemes. The 1.10:1 between
-     them is not an edge and never was: the well carries a real border
-     (border-magic-ember-light/30) for exactly that reason. */
-  --magic-cinder: #2c0f12;
-  --magic-abyss: #1b0709;
+  /* Magenta, the second process ink: the words the translator had to drop.
+     A tint fill, so the tint itself is decorative and the ink on it carries
+     the contrast. */
+  --magic-flag: #ffe7ee;
+  --magic-flag-ink: #790e3d;  /*  9.22:1 on the tint */
 
-  /* The cream ladder is the on-slab text ladder and it holds in both
-     schemes, because the slab holds. It is also already measured clean:
-     18.53 / 11.12 / 8.35 / 5.32 against the slab today. */
-  --magic-cream: #fffbd5;
-  --magic-cream-dim: #cbc2bf;
-  --magic-cream-dimmer: #b3a89f;
-  --magic-cream-faint: #8f8479;
-  /* Was --magic-steel #7d97b6, the one cool note left on the page. A blue-grey
-     caption on an oxblood ground now reads as a mistake rather than as a
-     quiet; this is the same rung in warm. 8.21:1 on the cinder. */
-  --magic-sand: #c7ac8e;
-
-  --magic-bar-short: #e6dcc0;
-  --magic-coral: #f9aa8f;
-  --magic-gold: #f2e3a8;
-
-  /* The five pips. Magic's five colours are semantically fixed, and they
-     render in exactly one place — the hero, on the slab, which does not
-     flip. So they hold, and the two that need an edge already carry one in
-     the component (Plains border-white/30, Swamp border-white/20 — Swamp is
-     the same value as the ground it sits on). */
-  --mana-plains: #fffbd5;
-  --mana-plains-ink: #9a7b1f;
-  --mana-plains-fill: #fff3c0;
-  --mana-island: #0e68ab;
-  --mana-island-ink: #08324f;
-  --mana-island-pale: #aae0fa;
-  --mana-swamp: #150b00;
-  --mana-swamp-ink: #cbc2bf;
-  --mana-mountain: #d3202a;
-  --mana-mountain-ink: #fff1e0;
-  --mana-forest: #00733e;
-  --mana-forest-ink: #e2f3e3;
-  /* The trunk inside the Forest pip. It borrowed --magic-green-darker while
-     the ramp happened to be green; the ramp is red now and the pip is not,
-     so it holds its own value. */
-  --mana-forest-trunk: #00552d;
+  /* DELETED with the containers they painted: --magic-parchment, -card,
+     -header, -slab, -slab-edge, -rule-soft, -rule-faint, -ink-faint,
+     -ink-fainter, -slash, -link, the six --magic-ember-* steps, -tile,
+     -tile-fg, -cinder, -abyss, the four --magic-cream-* steps, -sand,
+     -bar-short, -coral, -gold, and every --mana-* pip colour. */
 }
 
 /* --------------------------------------------------------------------------
@@ -665,9 +661,8 @@
 
   /* The tile inverts, and loses its ring doing it. In dark both grounds it
      straddles push the same way (canvas Y 0.008, cards Y ~0.089), so one
-     value clears 3:1 against all of them and the edge is unnecessary. This
-     is --magic-slab-edge's argument with the sign flipped. */
-  --tile: #7fcfa0;             /* 9.97 canvas · 4.11 magic · 8.85 dj · 3.94 food */
+     value clears 3:1 against all of them and the edge is unnecessary. */
+  --tile: #7fcfa0;             /* 9.97 canvas · 8.85 dj · 3.94 food */
   --tile-fg: #0b3620;          /* 7.25:1 on the tile */
   --tile-ring: transparent;
 
@@ -716,7 +711,7 @@
      do not appear here: gold, coral and the cream ladder hold byte-identical
      across schemes on /magic-tools — a near-black block is a near-black block
      — so a dark override would be two tokens nobody could tell apart. */
-  --project-magic-thumb: #0a0603;                 /* = --magic-slab · 2.30:1 vs card */
+  --project-magic-thumb: #0a0603;                 /* 2.30:1 vs card */
   --project-magic-border: rgb(242 184 174 / 0.5); /* 3.52:1 vs canvas, composited */
   --project-magic-seam: #f2b8ae;                  /* 10.77:1 vs canvas */
   --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
@@ -794,88 +789,40 @@
     transparent 65%
   );
 
-  /* Magic Tools, dark. The sheet inks over and the type is left in the
-     paper. Raised still means lighter, the way the site's own .dark already
-     reads it (canvas #101510 -> surface #182018), so desk < sheet < card.
-     The slab goes the other way and gets deeper than all three: an inked
-     block on a dark sheet reads as denser ink, not as a lighter panel, and
-     that keeps the light scheme's one true relationship — the slab is the
-     darkest thing on the page. */
-  --magic-parchment: #0e0a06;
-  --magic-paper: #191209;
-  --magic-card: #241a0f;
-  --magic-header: rgb(27 20 9 / 0.92);
-  --magic-slab: #0a0603;
-  /* The edge --project-food's comment prescribes. The slab sits 1.09:1 from
-     the sheet here; hue alone is not enough. The same token edges the cinder
-     section and the abyss output, which hold their values and face the same
-     1.27:1 problem. */
-  --magic-slab-edge: rgb(255 251 213 / 0.14);
+  /* Magic Tools, dark. The sheet inks over and the type is left in the paper,
+     which is the only move a one-ground page can make: there is nothing to
+     re-map except the ground and the ladder standing on it. The roles are
+     unchanged — annotator, ink bar, quiet bar, flag — and each steps to the
+     value that measures the same on the inked sheet as its light twin does
+     on the white one, so the page reads identically in both schemes rather
+     than becoming a different drawing.
 
-  /* Hairlines re-mapped to their light ratios rather than to a rule:
-     rule 1.51 -> 1.50, soft 1.29 -> 1.31, faint 1.16 -> 1.17, all against
-     the card. --magic-rule-faint is also the progress-bar track, and it is
-     as quiet here as it is in light — the bar on top does the work. */
-  --magic-rule: #483722;
-  --magic-rule-soft: #3d2e1c;
-  --magic-rule-faint: #332718;
-  --magic-field: #7b664a;       /*  3.12:1 card · 3.39:1 paper · 3.34:1 header */
+     Cyan lifts rather than deepens: on a dark ground the darker steps of the
+     ramp vanish, so -ink and -deep run up the ramp instead of down and the
+     fill takes dark ink on a light cyan. */
+  --magic-paper: #171616;
+  --magic-surface: #211f1f;
 
-  /* The ladder separates again. 14.46 / 9.40 / 6.51 / 4.61 against the card
-     — four real rungs, which light could not hold. */
-  --magic-ink: #f4ecd2;         /* 14.46:1 on card */
-  --magic-ink-muted: #cdbfa1;   /*  9.40:1 on card */
-  --magic-ink-faint: #ad9e85;   /*  6.51:1 on card */
-  --magic-ink-fainter: #91836c; /*  4.61:1 on card */
-  --magic-slash: #91836c;       /*  4.93:1 on the dark header */
-  /* The link cannot stay #1f5896 on an inked sheet. It lifts into the
-     site's own ocean ramp rather than to a generic blue — --color-ocean-300
-     is #a8d3f2 and this is its neighbour, which ties the link to
-     --project-magic, the world this page belongs to. */
-  --magic-link: #8ec2e8;        /*  8.97:1 on card */
+  --magic-ink: #f3f2f2;       /* 16.16:1 on the inked sheet */
+  --magic-ink-body: #d7d3d3;  /* 12.17:1 */
+  --magic-ink-muted: #9b9797; /*  6.25:1 */
 
-  /* Emphasis inverts: on a dark ground "deeper" has to mean lighter, so the
-     three light-ground reds step up and swap direction. -mid stays a fill and
-     stays orange, deepened until it clears 3:1 on the inked card (3.24:1) and
-     separates from -deep beside it (2.61:1, where light gets 3.17). -light is
-     the gold and holds: it is already a dark-block value. */
-  --magic-ember: #ef7a63;       /*  6.21:1 on card */
-  --magic-ember-deep: #f6a189;  /*  8.44:1 on card */
-  --magic-ember-darker: #fbc3ac;/* 10.98:1 on card */
-  --magic-ember-mid: #a8551d;   /*  3.24:1 on card, fills only */
-  --magic-ember-light: #f2c14e;
-  --magic-ember-pale: #3a1512;  /* a tint fill becomes a tinted dark fill */
-  --magic-tile: #ef7a63;        /* the fill lifts and the glyph inks over */
-  --magic-tile-fg: #241a0f;     /*  6.21:1 */
-  --magic-cinder: #2c0f12;
-  --magic-abyss: #1b0709;
+  --magic-rule: #343131;      /*  1.36:1, decorative */
+  --magic-track: #2d2b2b;     /*  1.28:1, decorative */
+  --magic-field: #767272;     /*  3.45:1 on --magic-surface · 3.80:1 on the sheet */
 
-  /* Every value below holds. Each one only ever touches the slab, the
-     cinder or the abyss — surfaces that do not flip — so a dark counterpart
-     would be a change with nothing behind it. */
-  --magic-cream: #fffbd5;
-  --magic-cream-dim: #cbc2bf;
-  --magic-cream-dimmer: #b3a89f;
-  --magic-cream-faint: #8f8479;
-  --magic-sand: #c7ac8e;
+  --magic-bar: #d7d3d3;       /* 12.17:1 */
+  --magic-bar-quiet: #7d7979; /*  4.20:1 */
 
-  --magic-bar-short: #4a3d29;   /*  3.83:1 against the ember bar beside it */
-  --magic-coral: #f9aa8f;
-  --magic-gold: #f2e3a8;
+  --magic-accent: #62c5ee;      /*  9.24:1, rules and markers */
+  --magic-accent-ink: #99e0ff;  /* 12.44:1 */
+  --magic-accent-deep: #cbeeff; /* 15.09:1 */
+  --magic-accent-fill: #62c5ee;
+  --magic-accent-fill-fg: #171616;   /* 9.24:1 on the fill */
+  --magic-accent-fill-hover: #99e0ff;
 
-  --mana-plains: #fffbd5;
-  --mana-plains-ink: #9a7b1f;
-  --mana-plains-fill: #fff3c0;
-  --mana-island: #0e68ab;
-  --mana-island-ink: #08324f;
-  --mana-island-pale: #aae0fa;
-  --mana-swamp: #150b00;
-  --mana-swamp-ink: #cbc2bf;
-  --mana-mountain: #d3202a;
-  --mana-mountain-ink: #fff1e0;
-  --mana-forest: #00733e;
-  --mana-forest-ink: #e2f3e3;
-  --mana-forest-trunk: #00552d;
+  --magic-flag: #4b1528;
+  --magic-flag-ink: #ffc0d0;  /*  9.54:1 on the tint */
 }
 
 /* --------------------------------------------------------------------------
@@ -1011,61 +958,32 @@
   --shadow-card: 0 2px 14px rgb(70 45 15 / 0.08);
   --shadow-cta: var(--accent-shadow);
 
-  /* Magic Tools — same utility names as before the semantic split, so
-     bg-magic-parchment etc. keep working and start tracking .dark. */
-  --color-magic-parchment: var(--magic-parchment);
+  /* Magic Tools — the broadsheet's roles, re-exported under bg-magic-*,
+     text-magic-*, border-magic-*. Every utility name here is used by
+     src/components/magic/ and nowhere else. */
   --color-magic-paper: var(--magic-paper);
-  --color-magic-card: var(--magic-card);
-  --color-magic-header: var(--magic-header);
-  --color-magic-slab: var(--magic-slab);
-  --color-magic-slab-edge: var(--magic-slab-edge);
-
-  --color-magic-rule: var(--magic-rule);
-  --color-magic-rule-soft: var(--magic-rule-soft);
-  --color-magic-rule-faint: var(--magic-rule-faint);
-  --color-magic-field: var(--magic-field);
+  --color-magic-surface: var(--magic-surface);
 
   --color-magic-ink: var(--magic-ink);
+  --color-magic-ink-body: var(--magic-ink-body);
   --color-magic-ink-muted: var(--magic-ink-muted);
-  --color-magic-ink-faint: var(--magic-ink-faint);
-  --color-magic-ink-fainter: var(--magic-ink-fainter);
-  --color-magic-slash: var(--magic-slash);
-  --color-magic-link: var(--magic-link);
 
-  --color-magic-ember: var(--magic-ember);
-  --color-magic-ember-deep: var(--magic-ember-deep);
-  --color-magic-ember-darker: var(--magic-ember-darker);
-  --color-magic-ember-mid: var(--magic-ember-mid);
-  --color-magic-ember-light: var(--magic-ember-light);
-  --color-magic-ember-pale: var(--magic-ember-pale);
-  --color-magic-tile: var(--magic-tile);
-  --color-magic-tile-fg: var(--magic-tile-fg);
-  --color-magic-cinder: var(--magic-cinder);
-  --color-magic-abyss: var(--magic-abyss);
+  --color-magic-rule: var(--magic-rule);
+  --color-magic-track: var(--magic-track);
+  --color-magic-field: var(--magic-field);
 
-  --color-magic-cream: var(--magic-cream);
-  --color-magic-cream-dim: var(--magic-cream-dim);
-  --color-magic-cream-dimmer: var(--magic-cream-dimmer);
-  --color-magic-cream-faint: var(--magic-cream-faint);
-  --color-magic-sand: var(--magic-sand);
+  --color-magic-bar: var(--magic-bar);
+  --color-magic-bar-quiet: var(--magic-bar-quiet);
 
-  --color-magic-bar-short: var(--magic-bar-short);
-  --color-magic-coral: var(--magic-coral);
-  --color-magic-gold: var(--magic-gold);
+  --color-magic-accent: var(--magic-accent);
+  --color-magic-accent-ink: var(--magic-accent-ink);
+  --color-magic-accent-deep: var(--magic-accent-deep);
+  --color-magic-accent-fill: var(--magic-accent-fill);
+  --color-magic-accent-fill-fg: var(--magic-accent-fill-fg);
+  --color-magic-accent-fill-hover: var(--magic-accent-fill-hover);
 
-  --color-mana-plains: var(--mana-plains);
-  --color-mana-plains-ink: var(--mana-plains-ink);
-  --color-mana-plains-fill: var(--mana-plains-fill);
-  --color-mana-island: var(--mana-island);
-  --color-mana-island-ink: var(--mana-island-ink);
-  --color-mana-island-pale: var(--mana-island-pale);
-  --color-mana-swamp: var(--mana-swamp);
-  --color-mana-swamp-ink: var(--mana-swamp-ink);
-  --color-mana-mountain: var(--mana-mountain);
-  --color-mana-mountain-ink: var(--mana-mountain-ink);
-  --color-mana-forest: var(--mana-forest);
-  --color-mana-forest-ink: var(--mana-forest-ink);
-  --color-mana-forest-trunk: var(--mana-forest-trunk);
+  --color-magic-flag: var(--magic-flag);
+  --color-magic-flag-ink: var(--magic-flag-ink);
 }
 
 /* --------------------------------------------------------------------------

@@ -9,7 +9,18 @@ import {
   thingKey,
   type DeckInput,
 } from '../../lib/hypergeometric';
-import { Field, Label, Preset, SectionHead } from './controls';
+import { cx } from '../ui/cx';
+import {
+  ChartHead,
+  Choice,
+  Field,
+  Label,
+  Meter,
+  Rail,
+  Section,
+  SectionHead,
+  Verdict,
+} from './controls';
 
 /** Runs entirely in the browser — it's a closed-form calculation, not a lookup. */
 export function DrawOdds() {
@@ -25,7 +36,7 @@ export function DrawOdds() {
   const drawMax = Math.min(deck, 40);
 
   // Cumulative table: P(X >= k), walked down from 1 by subtracting each P(X = k).
-  // Rendered as "k+" rather than "\u2265 k": U+2265 is outside the latin subset every
+  // Rendered as "k+" rather than "≥ k": U+2265 is outside the latin subset every
   // face here ships, so it fell back to a system font in a 54px mono column.
   // "3+" is shorter, in-subset, reads the same in both languages, and the label
   // above the column already says "at least n".
@@ -40,42 +51,44 @@ export function DrawOdds() {
   }, [odds.distribution]);
 
   return (
-    <section id="odds" className="scroll-mt-[70px] px-5 pt-10 pb-12 md:px-10 md:pt-13 md:pb-15">
-      <SectionHead index="01" heading={t('magic.odds.heading')} blurb={t('magic.odds.blurb')} />
+    <Section id="odds">
+      <SectionHead
+        kicker={t('magic.odds.kicker')}
+        heading={t('magic.odds.heading')}
+        blurb={t('magic.odds.blurb')}
+      />
 
-      <div className="grid items-start gap-[22px] md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
-        {/* ---------------- controls ---------------- */}
-        <div className="flex flex-col gap-[18px] rounded-[14px] border border-magic-rule bg-magic-card p-[22px]">
+      <div className="grid items-start gap-x-14 gap-y-10 md:grid-cols-[minmax(260px,340px)_minmax(0,1fr)]">
+        <Rail>
           <Field label={t('magic.odds.deckLabel')} value={String(deck)}>
-            <input
-              type="number"
-              min={1}
-              max={1000}
-              value={deck}
-              onChange={(e) => set({ deck: Number(e.target.value) || 1 })}
-              className="box-border h-11 rounded-[9px] border border-magic-field bg-magic-paper px-3.5 font-mono text-[16px] font-medium text-magic-ink outline-none transition-colors focus:border-magic-ember focus:bg-magic-card focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-            />
-            <div className="flex gap-[7px]">
+            <div className="flex gap-1.5">
               {magic.deckPresets.map((value) => (
-                <Preset key={value} onClick={() => set({ deck: value })} className="flex-1">
+                <Choice
+                  key={value}
+                  active={deck === value}
+                  onClick={() => set({ deck: value })}
+                  className="flex-1 px-0"
+                >
                   {value}
-                </Preset>
+                </Choice>
               ))}
             </div>
           </Field>
 
-          <Field label={t('magic.odds.copiesLabel')} value={String(copies)}>
+          <Field
+            label={t('magic.odds.copiesLabel')}
+            value={String(copies)}
+            hint={t('magic.odds.copiesHint')}
+          >
             <input
               type="range"
               min={1}
               max={deck}
               value={copies}
+              aria-label={t('magic.odds.copiesLabel')}
               onChange={(e) => set({ copies: Number(e.target.value) })}
-              className="w-full accent-magic-ember"
+              className="w-full accent-magic-accent-fill"
             />
-            <p className="m-0 font-mono text-[11.5px]/[1.5] text-magic-ink-faint">
-              {t('magic.odds.copiesHint')}
-            </p>
           </Field>
 
           <Field label={t('magic.odds.drawsLabel')} value={String(draws)}>
@@ -84,153 +97,219 @@ export function DrawOdds() {
               min={1}
               max={drawMax}
               value={draws}
+              aria-label={t('magic.odds.drawsLabel')}
               onChange={(e) => set({ draws: Number(e.target.value) })}
-              className="w-full accent-magic-ember"
+              className="w-full accent-magic-accent-fill"
             />
-            <div className="flex flex-wrap gap-[7px]">
+            <div className="mt-2.5 flex flex-wrap gap-1.5">
               {magic.drawPresets.map((preset) => (
-                <Preset key={preset.key} onClick={() => set({ draws: preset.value })}>
+                <Choice
+                  key={preset.key}
+                  active={draws === preset.value}
+                  onClick={() => set({ draws: preset.value })}
+                >
                   {t(`magic.odds.${preset.key}`)}
-                </Preset>
+                </Choice>
               ))}
             </div>
           </Field>
 
-          <div className="flex flex-col gap-[9px] border-t border-magic-rule-soft pt-[18px]">
-            <Label>{t('magic.odds.atLeastLabel')}</Label>
+          <div>
+            <Label className="mb-3 block">{t('magic.odds.atLeastLabel')}</Label>
             <div className="flex items-center gap-2.5">
-              <Stepper onClick={() => set({ atLeast: atLeast - 1 })} label={t('magic.odds.oneFewer')}>
+              <Stepper
+                onClick={() => set({ atLeast: atLeast - 1 })}
+                label={t('magic.odds.oneFewer')}
+              >
                 −
               </Stepper>
-              <span className="flex-1 text-center font-mono text-[26px]/none font-medium text-magic-ink">
-                {atLeast}
-              </span>
+              <span className="flex-1 text-center text-magic-count font-bold">{atLeast}</span>
               <Stepper onClick={() => set({ atLeast: atLeast + 1 })} label={t('magic.odds.oneMore')}>
                 +
               </Stepper>
             </div>
           </div>
-        </div>
+        </Rail>
 
-        {/* ---------------- results ---------------- */}
-        <div className="flex flex-col gap-[22px]">
-          <div className="grid items-center gap-[30px] rounded-[14px] bg-magic-slab p-[26px] text-magic-cream sm:grid-cols-[auto_1fr]">
-            <Gauge value={formatPercent(odds.atLeastP, locale)} percent={odds.atLeastP} caption={t('magic.odds.gaugeCaption', { count: atLeast })} />
-            <div>
-              <p className="mb-[18px] font-magic-body text-[24px]/[1.4] italic text-pretty">
-                {t('magic.odds.sentence', {
-                  draws,
-                  deck,
-                  atLeast,
-                  thing: t(`magic.odds.${thingKey(copies)}`),
-                  percent: formatPercent(odds.atLeastP, locale),
-                })}
-              </p>
-              <div className="grid gap-3.5 sm:grid-cols-3">
-                <Stat
-                  label={t('magic.odds.exactly', { count: atLeast })}
-                  value={formatPercent(odds.exactlyP, locale)}
-                />
-                <Stat
-                  label={t('magic.odds.fewerThan', { count: atLeast })}
-                  value={formatPercent(odds.fewerP, locale)}
-                  className="text-magic-coral"
-                />
-                <Stat label={t('magic.odds.expected')} value={formatNumber(odds.expected, locale)} />
-              </div>
-            </div>
+        <div className="min-w-0">
+          <Verdict figure={formatPercent(odds.atLeastP, locale)}>
+            <p className="m-0 text-magic-lead text-pretty">
+              {t('magic.odds.sentence', {
+                draws,
+                deck,
+                atLeast,
+                thing: t(`magic.odds.${thingKey(copies)}`),
+              })}
+            </p>
+          </Verdict>
+
+          <div className="mb-11 grid gap-x-6 gap-y-5 [grid-template-columns:repeat(auto-fit,minmax(130px,1fr))]">
+            <Stat
+              label={t('magic.odds.exactly', { count: atLeast })}
+              value={formatPercent(odds.exactlyP, locale)}
+            />
+            <Stat
+              label={t('magic.odds.fewerThan', { count: atLeast })}
+              value={formatPercent(odds.fewerP, locale)}
+            />
+            <Stat
+              label={t('magic.odds.none')}
+              value={formatPercent(odds.distribution[0] ?? 0, locale)}
+            />
+            <Stat
+              label={t('magic.odds.expected')}
+              value={formatNumber(odds.expected, locale)}
+            />
           </div>
 
-          <div className="rounded-[14px] border border-magic-rule bg-magic-card p-6">
-            <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-              <Label>{t('magic.odds.distributionLabel')}</Label>
-              <div className="flex gap-4 font-mono text-[10.5px] text-magic-ink-faint">
-                <LegendKey className="bg-magic-ember">{t('magic.odds.legendHit')}</LegendKey>
-                <LegendKey className="bg-magic-bar-short">{t('magic.odds.legendShort')}</LegendKey>
-              </div>
-            </div>
-            <div className="flex h-[190px] items-end gap-[5px]">
-              {odds.distribution.map((p, i) => {
-                const hit = i >= atLeast;
-                return (
-                  <div
-                    key={i}
-                    className="flex h-full flex-1 flex-col items-center justify-end gap-[7px]"
-                  >
-                    <span className="font-mono text-[10px] font-medium text-magic-ink-muted">
-                      {p >= 0.005 ? formatPercent(p, locale) : ''}
-                    </span>
-                    <div
-                      className={`min-h-[2px] w-full rounded-t-[4px] transition-[height] duration-[250ms] ${
-                        hit
-                          ? i === atLeast
-                            ? 'bg-magic-ember-deep'
-                            : 'bg-magic-ember'
-                          : 'bg-magic-bar-short'
-                      }`}
-                      style={{ height: `${Math.max(1.5, (p / peak) * 100)}%` }}
-                    />
-                    <span
-                      className={`font-mono text-[11px] font-medium ${
-                        hit ? 'text-magic-ember-deep' : 'text-magic-ink-fainter'
-                      }`}
-                    >
-                      {i}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          <Distribution
+            distribution={odds.distribution}
+            peak={peak}
+            atLeast={atLeast}
+            expected={odds.expected}
+            atLeastP={odds.atLeastP}
+            locale={locale}
+          />
 
-          <div className="rounded-[14px] border border-magic-rule bg-magic-card p-6">
-            <Label className="mb-4 block">{t('magic.odds.cumulativeLabel')}</Label>
-            <div className="flex flex-col">
-              {cumulative.map(({ k, p }) => {
-                const current = k === atLeast;
-                return (
-                  <div
-                    key={k}
-                    className="grid grid-cols-[54px_1fr_62px] items-center gap-3.5 border-t border-magic-rule-faint py-[9px] sm:grid-cols-[70px_1fr_62px]"
+          <div className="pt-13">
+            <ChartHead label={t('magic.odds.cumulativeLabel')} />
+            {cumulative.map(({ k, p }) => {
+              const current = k === atLeast;
+              return (
+                <div
+                  key={k}
+                  className="grid grid-cols-[42px_minmax(0,1fr)_66px] items-center gap-3.5 py-1.75"
+                >
+                  <span
+                    className={cx(
+                      'text-magic-body',
+                      current ? 'font-semibold text-magic-ink' : 'text-magic-ink-muted',
+                    )}
                   >
-                    <span
-                      className={`font-mono text-[12px] font-medium ${
-                        current ? 'text-magic-ink' : 'text-magic-ink-muted'
-                      }`}
-                    >
-                      {k}+
-                    </span>
-                    <span className="relative h-2 overflow-hidden rounded-pill bg-magic-rule-faint">
-                      <span
-                        className={`absolute inset-y-0 left-0 rounded-pill ${
-                          current ? 'bg-magic-ember-deep' : 'bg-magic-ember-mid'
-                        }`}
-                        style={{ width: `${Math.round(p * 100)}%` }}
-                      />
-                    </span>
-                    <span
-                      className={`text-right font-mono text-[12px] font-medium ${
-                        current ? 'text-magic-ink' : 'text-magic-ink-muted'
-                      }`}
-                    >
-                      {formatPercent(p, locale)}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
+                    {k}+
+                  </span>
+                  <Meter value={p} quiet={!current} height="h-2.5" />
+                  <span
+                    className={cx(
+                      'text-right text-magic-body',
+                      current ? 'font-semibold text-magic-ink' : 'text-magic-ink-muted',
+                    )}
+                  >
+                    {formatPercent(p, locale)}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
-/* ---------------------------------------------------------------- pieces */
+/**
+ * The distribution, with the two marks the doc draws over it: the mean, and
+ * the bracket spanning every column that counts as a hit. Both are cyan and
+ * neither is a bar — the annotator never touches the data.
+ *
+ * The mean sits at (mean + 0.5) columns from the left because the columns are
+ * flexed equally and each one's centre is half a column in from its own edge.
+ */
+function Distribution({
+  distribution,
+  peak,
+  atLeast,
+  expected,
+  atLeastP,
+  locale,
+}: {
+  distribution: number[];
+  peak: number;
+  atLeast: number;
+  expected: number;
+  atLeastP: number;
+  locale: string;
+}) {
+  const { t } = useTranslation();
+  const columns = distribution.length;
+  const meanLeft = `${(((expected + 0.5) / columns) * 100).toFixed(1)}%`;
+  const hits = Math.max(0, columns - atLeast);
 
-
-
-
+  return (
+    <div>
+      <ChartHead label={t('magic.odds.distributionLabel')} />
+      <div className="relative h-53.5 pt-6">
+        <div className="absolute inset-x-0 bottom-0 top-6 flex items-end gap-1.25">
+          {distribution.map((p, k) => (
+            <div key={k} className="flex h-full flex-1 flex-col justify-end">
+              <span
+                className={cx(
+                  'mb-1 text-center text-magic-tick',
+                  k >= atLeast ? 'text-magic-ink' : 'text-magic-ink-muted',
+                )}
+              >
+                {p >= 0.001 ? formatPercent(p, locale) : ''}
+              </span>
+              <span
+                className={cx('block', k >= atLeast ? 'bg-magic-bar' : 'bg-magic-bar-quiet')}
+                style={{ height: `${Math.max(1, (p / peak) * 76)}%` }}
+              />
+            </div>
+          ))}
+        </div>
+        {expected <= columns && (
+          <>
+            <span
+              aria-hidden="true"
+              className="absolute inset-y-0 w-px bg-magic-accent"
+              style={{ left: meanLeft }}
+            />
+            <span
+              aria-hidden="true"
+              className="absolute top-0 -translate-x-1/2 text-magic-micro whitespace-nowrap italic text-magic-accent-ink"
+              style={{ left: meanLeft }}
+            >
+              {t('magic.odds.mean', { value: formatNumber(expected, locale) })}
+            </span>
+          </>
+        )}
+      </div>
+      <div className="flex gap-1.25">
+        {distribution.map((_, k) => (
+          <span
+            key={k}
+            className={cx(
+              'flex-1 pt-2 text-center text-magic-label',
+              k >= atLeast ? 'text-magic-ink' : 'text-magic-ink-muted',
+            )}
+          >
+            {k}
+          </span>
+        ))}
+      </div>
+      {hits > 0 && (
+        <div aria-hidden="true">
+          <div className="mt-2 flex gap-1.25">
+            <div style={{ flex: atLeast }} />
+            <div className="h-px bg-magic-accent" style={{ flex: hits }} />
+          </div>
+          <div className="flex gap-1.25">
+            <div style={{ flex: atLeast }} />
+            <div
+              className="pt-1.5 text-center text-magic-label italic text-magic-accent-ink"
+              style={{ flex: hits }}
+            >
+              {t('magic.odds.bracket', {
+                count: atLeast,
+                percent: formatPercent(atLeastP, locale),
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function Stepper({
   onClick,
@@ -246,61 +325,20 @@ function Stepper({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="size-10 cursor-pointer rounded-[9px] border border-magic-field bg-magic-card font-mono text-[17px] font-medium text-magic-ember-deep transition-colors hover:border-magic-ember focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magic-ember focus-visible:ring-offset-2 focus-visible:ring-offset-magic-card"
+      className="size-9 cursor-pointer rounded-magic border border-magic-field text-magic-lead text-magic-ink transition-colors hover:bg-magic-ink/8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-magic-accent-ink"
     >
       {children}
     </button>
   );
 }
 
-function Gauge({ value, percent, caption }: { value: string; percent: number; caption: string }) {
+function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div
-      className="grid size-[168px] place-items-center rounded-full justify-self-center"
-      style={{
-        background: `conic-gradient(var(--color-magic-ember-light) ${Math.round(
-          percent * 360,
-        )}deg, rgb(255 251 213 / 0.14) 0)`,
-      }}
-    >
-      <div className="grid size-[130px] place-items-center rounded-full bg-magic-slab text-center">
-        <div>
-          <p className="font-mono text-[38px]/none font-medium tracking-[-0.03em] text-white">
-            {value}
-          </p>
-          <p className="mt-1.5 font-mono text-[9.5px] font-medium uppercase tracking-[0.16em] text-magic-cream-dimmer">
-            {caption}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Stat({
-  label,
-  value,
-  className = 'text-white',
-}: {
-  label: string;
-  value: string;
-  className?: string;
-}) {
-  return (
-    <div className="rounded-[10px] bg-magic-cream/7 px-4 py-3.5">
-      <p className="mb-1.5 font-mono text-[9.5px] font-medium uppercase tracking-[0.14em] text-magic-cream-dimmer">
+    <div>
+      <p className="m-0 mb-1.5 text-magic-micro uppercase tracking-magic-label text-magic-ink-muted">
         {label}
       </p>
-      <p className={`font-mono text-[21px]/none font-medium ${className}`}>{value}</p>
+      <p className="m-0 text-magic-stat font-semibold">{value}</p>
     </div>
-  );
-}
-
-function LegendKey({ className, children }: { className: string; children: React.ReactNode }) {
-  return (
-    <span className="flex items-center gap-1.5">
-      <span className={`size-2.5 rounded-[2px] ${className}`} />
-      {children}
-    </span>
   );
 }

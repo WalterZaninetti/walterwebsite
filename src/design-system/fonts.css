@@ -118,49 +118,32 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* --- Magic Tools page (Cinzel display, Spectral body) --- */
+/* --- Magic Tools page (Source Serif 4) --- */
 
+/* One family for the whole page, at every size from a 14px label to a 220px
+   headline, because it is optically sized: the opsz axis is kept over 20-60
+   so the browser draws the text cut at text sizes and the display cut at
+   display sizes without a second file. Keeping the axis costs 24 KB over
+   pinning it, and buys the hairlines the headline is made of.
+   The wght axis is instanced down to 400-700, the only weights the page
+   sets; the italic has no wght axis upstream, so it is pinned at opsz 20,
+   the size every italic on the page is actually set at.
+   Together 77 KB, against the 96 KB of Cinzel 500/600 + Spectral
+   400/500/italic they replace. */
 @font-face {
-  font-family: 'Cinzel';
+  font-family: 'Source Serif 4';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('../assets/fonts/cinzel-500.woff2') format('woff2');
+  src: url('../assets/fonts/source-serif-4-variable.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'Cinzel';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../assets/fonts/cinzel-600.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Spectral';
+  font-family: 'Source Serif 4';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('../assets/fonts/spectral-400-italic.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/spectral-400.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../assets/fonts/spectral-500.woff2') format('woff2');
+  src: url('../assets/fonts/source-serif-4-variable-italic.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
