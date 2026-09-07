@@ -378,35 +378,38 @@
   --hatch: rgb(255 251 232 / 0.14);
   --hatch-line: rgb(255 251 232 / 0.28);
 
-  /* Per-project worlds. All three stay dark grounds in both schemes — that
-     is what makes the band of direction.md §5 a poster rather than a second
-     website, and a cream canvas makes it more true, not less. */
-  /* Crimson, not ocean. Blue moved to the DJ world (below) when that page got
-     its own identity, and two blue cards side by side on the shelf read as one
-     project. Red is also the colour this project's subject actually has.
+  /* Per-project worlds — each card is its own page, small. Crate and
+     Seasonable are dark grounds in both schemes; Magic Tools is not, because
+     its page is a sheet of paper and a card that stayed crimson would be a
+     door onto a room it does not open.
 
-     The card ground and its type ladder are the shelf's alone. The four
-     -thumb / -gauge / -coral rungs under them were lifted from the parchment
-     world the page used to draw, and the page has since become a broadsheet:
-     they now hold their own values, and the thumbnail is a crimson miniature
-     rather than a portrait of what opens. Repainting the shelf card to match
-     is a homepage change, not this page's. */
-  --project-magic: #7d1f28;
-  --project-magic-fg: #ffeaea;      /* 8.68:1 */
-  --project-magic-body: #f7d5d5;    /* 7.35:1 */
-  --project-magic-accent: #f2b8ae;  /* 5.83:1 */
-  /* The thumb well is the odds panel's slab, not a deeper crimson. The card
-     draws that panel — a gold gauge and three stat tiles on near-black — and a
-     crimson well would have been the one surface in the miniature that the
-     destination does not have. 1.94:1 against the card, where the crimson well
-     it replaces measured 1.35:1, so it reads as inset for the first time. */
-  --project-magic-thumb: #150b00;
-  --project-magic-thumb-fg: #fffbd5;   /* 18.53:1 on the well */
-  --project-magic-gauge: #f2c14e;      /* 11.59:1 */
-  --project-magic-coral: #f9aa8f;      /* 10.35:1 */
-  --project-magic-border: transparent;
-  --project-magic-seam: #7d1f28;
-  --project-magic-shadow: 0 16px 34px rgb(125 31 40 / 0.28);
+     The crimson is retired, not repainted. It was chosen when this project's
+     page was parchment and ember, and the argument for it — "red is the
+     colour this project's subject actually has" — was always about Magic the
+     game rather than about the tools. The tools are a broadsheet, so the card
+     is the sheet: paper, ink, and cyan for the one mark the page reserves it
+     for. Blue on the shelf next to Crate's blue rung was the original
+     objection to an ocean card; it does not apply to a hairline of cyan
+     inside a white card. */
+  --project-magic: #f3f2f2;
+  --project-magic-fg: #201e1d;      /* 14.86:1 */
+  --project-magic-body: #444141;    /*  9.04:1 */
+  --project-magic-accent: #006786;  /*  5.72:1 */
+  /* The well is the page's field inset. The page has no card and no panel —
+     the charts sit on the bare sheet — but the shelf's thumb slot is furniture
+     the card owns rather than something the miniature invents, so it takes the
+     one inset colour the page does have. 1.08:1 against the card, which is
+     where Seasonable's well already sits (1.25:1): a slot, not a container. */
+  --project-magic-thumb: #eae9e9;
+  --project-magic-thumb-fg: #201e1d;   /* 13.70:1 on the well */
+  --project-magic-rule: #0088b0;       /*  3.37:1 — the annotator, never a bar */
+  --project-magic-quiet: #858181;      /*  3.18:1 — the columns below the threshold */
+  /* Paper on cream is 1.08:1 against the canvas and 1.00:1 against the band,
+     so the edge is the whole card. Same arrangement Seasonable already runs
+     (1.17:1 on the band, carried by a 3.39:1 border); this is the page's own
+     field colour doing it. */
+  --project-magic-border: #878383;      /*  3.61 canvas · 3.34 band */
+  --project-magic-shadow: 0 16px 34px rgb(32 30 29 / 0.22);
 
   /* Crate's world: the palette the app itself already ships. The indigo-and-
      amber world these six rungs held was decided here, on the site, while the
@@ -701,19 +704,21 @@
      2.53:1 from the three grounds, so hue cannot do it. --project-dj-border
      was 0.28 and composited to 2.13:1 against the dark canvas, a live
      sub-3:1 component boundary the text-pair scan could not see; it goes to
-     0.45. --project-magic-border was transparent in both schemes and gains
-     one, because 2.43:1 is not an edge. */
-  --project-magic: #8a2531;
-  --project-magic-fg: #ffeaea;                    /* 7.62:1 */
-  --project-magic-body: #f7d5d5;                  /* 6.46:1 */
-  --project-magic-accent: #f2b8ae;                /* 5.12:1 */
-  /* The well follows the slab down, as the page's does. The three rungs on it
-     do not appear here: gold, coral and the cream ladder hold byte-identical
-     across schemes on /magic-tools — a near-black block is a near-black block
-     — so a dark override would be two tokens nobody could tell apart. */
-  --project-magic-thumb: #0a0603;                 /* 2.30:1 vs card */
-  --project-magic-border: rgb(242 184 174 / 0.5); /* 3.52:1 vs canvas, composited */
-  --project-magic-seam: #f2b8ae;                  /* 10.77:1 vs canvas */
+     0.45. Magic Tools carries one in both schemes for the same reason. */
+  /* Magic Tools inks over the way its page does, and the card lands 1.02:1
+     from the canvas doing it — which is where Crate already sits (1.13:1),
+     and the border is what draws both. Every rung is the page's own dark
+     value, so the miniature and the destination agree in this scheme as
+     well as in the other. */
+  --project-magic: #171616;
+  --project-magic-fg: #f3f2f2;                    /* 16.16:1 */
+  --project-magic-body: #d7d3d3;                  /* 12.17:1 */
+  --project-magic-accent: #99e0ff;                /* 12.44:1 */
+  --project-magic-thumb: #211f1f;                 /*  1.10:1 vs card */
+  --project-magic-thumb-fg: #f3f2f2;              /* 14.68:1 on the well */
+  --project-magic-rule: #62c5ee;                  /*  8.39:1 */
+  --project-magic-quiet: #7d7979;                 /*  3.81:1 */
+  --project-magic-border: #767272;                /*  3.89:1 vs canvas */
   --project-magic-shadow: 0 16px 38px rgb(0 0 0 / 0.5);
 
   /* Crate's dark world, again the app's own: --dj-panel #0c2417 and the mint
@@ -920,10 +925,9 @@
   --color-project-magic-accent: var(--project-magic-accent);
   --color-project-magic-thumb: var(--project-magic-thumb);
   --color-project-magic-thumb-fg: var(--project-magic-thumb-fg);
-  --color-project-magic-gauge: var(--project-magic-gauge);
-  --color-project-magic-coral: var(--project-magic-coral);
+  --color-project-magic-rule: var(--project-magic-rule);
+  --color-project-magic-quiet: var(--project-magic-quiet);
   --color-project-magic-border: var(--project-magic-border);
-  --color-project-magic-seam: var(--project-magic-seam);
 
   --color-project-dj: var(--project-dj);
   --color-project-dj-fg: var(--project-dj-fg);

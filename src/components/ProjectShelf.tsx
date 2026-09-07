@@ -30,7 +30,8 @@ const cardTheme: Record<
   }
 > = {
   magic: {
-    surface: 'bg-project-magic text-project-magic-fg hover:shadow-lift-magic',
+    surface:
+      'bg-project-magic text-project-magic-fg border border-project-magic-border hover:shadow-lift-magic',
     thumb: 'bg-project-magic-thumb',
     figure: MagicThumb,
     eyebrow: 'text-project-magic-accent',

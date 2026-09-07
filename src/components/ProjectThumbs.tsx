@@ -4,8 +4,8 @@ import { cx } from './ui/cx';
 /**
  * The three shelf thumbnails, drawn rather than photographed.
  *
- * Each one draws the figure its own page opens on, at thumbnail size: the
- * odds panel from `DrawOdds`, the Camelot wheel and hero wave from
+ * Each one draws the figure its own page is known by, at thumbnail size: the
+ * distribution from `DrawOdds`, the Camelot wheel and hero wave from
  * `DjToolsPage`, the year dial and its answers from `SeasonablePage`. A
  * reader who clicks a card meets the same shape made large, which is the
  * shelf's whole premise (`direction.md` §3.2) applied to the one slot that
@@ -20,8 +20,8 @@ import { cx } from './ui/cx';
  *
  * All three are `aria-hidden`. They restate what the card's heading and
  * description already say in words, so an accessible name here would be a
- * duplicate read aloud — the same reasoning `ManaPips` and every figure on
- * `/dj-tools` uses.
+ * duplicate read aloud — the same reasoning every figure on `/dj-tools`
+ * uses.
  *
  * No numbers are drawn as text. Partly because that is what forced the magic
  * thumb to ship per language (58.8% is 58,8% in Italian), and partly because
@@ -39,85 +39,86 @@ const BOX = { viewBox: '0 0 360 148', preserveAspectRatio: 'xMidYMid slice' } as
 const FILL = 'h-full w-full';
 
 /**
- * Magic Tools — the draw-odds panel, which is the page's one result surface.
+ * Magic Tools — the distribution from `DrawOdds`, with the two marks the page
+ * draws over it: the mean, and the bracket spanning every column that counts
+ * as a hit.
  *
- * The well is that panel's slab rather than a deeper crimson, so the gauge
- * lands on the ground it lands on over there: gold sweep, cream track, and
- * the three stat tiles the panel reports under a two-line sentence. The
- * middle tile takes coral because the middle stat does — it is the one that
- * counts against you, and the page has always said so in colour.
+ * Not the section the page opens on, which is the search — a query line and a
+ * row of chips is text, and this file draws no text. The distribution is the
+ * shape the page is built around: four of its five tools end in a chart with
+ * a cyan rule struck through it, and this is the one that shows the rule and
+ * the bracket at once.
  *
- * `strokeDasharray` on a circle rather than an arc `path`: the sweep is a
- * fraction of a known circumference, so the number in the markup is the
- * percentage rather than a pair of trigonometric endpoints nobody can check.
- * It is butt-capped, not round — the page draws this as a `conic-gradient`,
- * which has no caps, and a rounded sweep would overstate its own end.
+ * It also carries the page's one hard rule about that colour. Cyan annotates
+ * and never fills: the columns are ink and quiet-grey, the mean and the
+ * bracket are cyan, and nothing is both. A miniature that let the accent into
+ * a bar would be teaching the wrong thing about the page in the two seconds
+ * anyone looks at it.
+ *
+ * The bars are the real pmf for the page's own defaults — 24 copies in 60
+ * cards, seven drawn — so the silhouette is the one that greets a reader who
+ * clicks through and touches nothing.
  */
-const GAUGE_R = 46;
-const GAUGE_C = 2 * Math.PI * GAUGE_R;
-const HIT = 0.588;
 
-/** x, and whether this is the stat that gets the coral. Page order. */
-const STATS = [
-  { x: 140, coral: false },
-  { x: 209, coral: true },
-  { x: 278, coral: false },
-];
+/** P(X = k) for k = 0…7, as percentages. The label above the chart is a rule. */
+const PMF = [2.2, 12.1, 26.9, 30.9, 19.6, 6.9, 1.3, 0.09];
+const PEAK = 30.9;
+/** The default threshold: columns from here up are hits, and take the ink. */
+const HITS_FROM = 3;
+/** Mean 2.80, placed at (mean + 0.5) columns — each column's centre is half a
+ *  column in from its own left edge. */
+const MEAN = 2.8;
+
+const COL = 33;
+const GAP = 6;
+const LEFT = 27;
+const BASE = 112;
+const TALLEST = 66;
+
+const colX = (k: number) => LEFT + k * (COL + GAP);
 
 export function MagicThumb() {
+  const meanX = LEFT + ((MEAN + 0.5) / PMF.length) * (PMF.length * COL + (PMF.length - 1) * GAP);
+
   return (
     <svg {...BOX} className={FILL} aria-hidden="true" fill="none">
-      <g transform="translate(70 74)">
-        <circle
-          r={GAUGE_R}
-          stroke="var(--project-magic-thumb-fg)"
-          strokeOpacity="0.14"
-          strokeWidth="12"
-        />
-        <circle
-          r={GAUGE_R}
-          stroke="var(--project-magic-gauge)"
-          strokeWidth="12"
-          strokeDasharray={`${GAUGE_C * HIT} ${GAUGE_C}`}
-          transform="rotate(-90)"
-        />
-      </g>
+      {/* The label every chart on the page wears, as the rule it reads as at
+          this size. */}
+      <rect
+        x={LEFT}
+        y="20"
+        width="64"
+        height="5"
+        fill="var(--project-magic-thumb-fg)"
+        fillOpacity="0.5"
+      />
 
-      {/* The sentence over the tiles — two lines, because that is how many it
-          wraps to at the width the panel gives it. */}
-      <rect x="140" y="33" width="196" height="7" rx="3.5" fill="var(--project-magic-thumb-fg)" fillOpacity="0.9" />
-      <rect x="140" y="48" width="132" height="7" rx="3.5" fill="var(--project-magic-thumb-fg)" fillOpacity="0.9" />
+      {PMF.map((p, k) => {
+        const height = Math.max(2, (p / PEAK) * TALLEST);
+        return (
+          <rect
+            key={k}
+            x={colX(k)}
+            y={BASE - height}
+            width={COL}
+            height={height}
+            fill={
+              k >= HITS_FROM
+                ? 'var(--project-magic-thumb-fg)'
+                : 'var(--project-magic-quiet)'
+            }
+          />
+        );
+      })}
 
-      {STATS.map((stat) => (
-        <g key={stat.x}>
-          <rect
-            x={stat.x}
-            y="68"
-            width="62"
-            height="47"
-            rx="6"
-            fill="var(--project-magic-thumb-fg)"
-            fillOpacity="0.07"
-          />
-          <rect
-            x={stat.x + 11}
-            y="81"
-            width="28"
-            height="4"
-            rx="2"
-            fill="var(--project-magic-thumb-fg)"
-            fillOpacity="0.55"
-          />
-          <rect
-            x={stat.x + 11}
-            y="92"
-            width="40"
-            height="11"
-            rx="3"
-            fill={stat.coral ? 'var(--project-magic-coral)' : 'var(--project-magic-thumb-fg)'}
-          />
-        </g>
-      ))}
+      <rect x={meanX} y="36" width="1.5" height={BASE - 36 + 6} fill="var(--project-magic-rule)" />
+      <rect
+        x={colX(HITS_FROM)}
+        y="124"
+        width={colX(PMF.length - 1) + COL - colX(HITS_FROM)}
+        height="2"
+        fill="var(--project-magic-rule)"
+      />
     </svg>
   );
 }
