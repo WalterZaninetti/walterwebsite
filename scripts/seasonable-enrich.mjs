@@ -13,7 +13,7 @@
  *
  *   git worktree add ../walterwebsite-enrich -b seasonable/enrich
  *   cd ../walterwebsite-enrich && npm ci
- *   caffeinate -i nohup npm run enrich:seasonable > .pipeline/seasonable/enrich/logs/runner.log 2>&1 &
+ *   SEASONABLE_MAX_TOTAL_USD=25 caffeinate -i nohup npm run enrich:seasonable > .pipeline/seasonable/enrich/logs/runner.log 2>&1 &
  *
  * WHAT IT DOES AND DOES NOT DO
  * It stages. Each invocation runs the `seasonable-enrichment` skill, which
@@ -53,18 +53,26 @@ const LOGS = join(ROOT, 'logs');
 const BUDGET_USD = process.env.SEASONABLE_BUDGET_USD ?? '4';
 const TIMEOUT_MS = Number(process.env.SEASONABLE_TIMEOUT_MIN ?? 40) * 60_000;
 const PAUSE_MS = Number(process.env.SEASONABLE_PAUSE_S ?? 60) * 1000;
+const MAX_TOTAL_USD = Number(process.env.SEASONABLE_MAX_TOTAL_USD ?? 25);
 const MAX_ATTEMPTS = 3;
 const MAX_CONSECUTIVE_BLOCKED = 3;
 const TIERS = ['pat', 'calendar'];
 
 const ALLOWED_TOOLS = [
   'Skill', 'Read', 'Grep', 'Glob', 'WebSearch', 'WebFetch',
+  // Both spellings: the worker writes with absolute paths, and a relative rule
+  // alone denied those in the pilot.
   `Write(./${ROOT}/**)`, `Edit(./${ROOT}/**)`,
+  `Write(/${process.cwd()}/${ROOT}/**)`, `Edit(/${process.cwd()}/${ROOT}/**)`,
   'Bash(curl:*)', 'Bash(pdftotext:*)', 'Bash(pdftoppm:*)', 'Bash(pdfinfo:*)',
   'Bash(mkdir:*)', 'Bash(ls:*)', 'Bash(wc:*)', 'Bash(date:*)',
   'Bash(node scripts/seasonable-candidates-check.mjs:*)',
 ];
-const DISALLOWED_TOOLS = ['Write(./src/**)', 'Edit(./src/**)', 'Bash(git:*)', 'Bash(rm:*)', 'Agent'];
+const DISALLOWED_TOOLS = [
+  'Write(./src/**)', 'Edit(./src/**)',
+  `Write(/${process.cwd()}/src/**)`, `Edit(/${process.cwd()}/src/**)`,
+  'Bash(git:*)', 'Bash(rm:*)', 'Agent',
+];
 
 const log = (...args) => console.log(new Date().toISOString(), ...args);
 
@@ -286,6 +294,13 @@ async function main() {
 
   let consecutiveBlocked = 0;
   for (;;) {
+    // The spend cap is cumulative across restarts, because it reads the queue.
+    // Raise it deliberately: SEASONABLE_MAX_TOTAL_USD=100 npm run enrich:seasonable
+    const spent = queue.units.reduce((sum, u) => sum + u.costUsd, 0);
+    if (spent >= MAX_TOTAL_USD) {
+      log(`Spent $${spent.toFixed(2)} of the $${MAX_TOTAL_USD} cap — stopping. Raise SEASONABLE_MAX_TOTAL_USD to continue.`);
+      break;
+    }
     const unit = queue.units.find((u) => u.status === 'pending');
     if (!unit) {
       log('Queue empty.');
