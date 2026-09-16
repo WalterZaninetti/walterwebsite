@@ -9,11 +9,11 @@
         "cb",
         "is"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "invocations": 1,
-      "costUsd": 2.61,
-      "note": "index built from ARSARP/ERSAM Atlante 'Prodotti vegetali' (33 products); batch 1 of 8 done (0 candidate, 3 silent, 5 rejected), 25 pending"
+      "costUsd": 3.169,
+      "note": "25 records, 0 for review, 0 pages pending",
+      "pilotCostUsd": 2.61
     },
     {
       "id": "molise:calendar",
@@ -25,7 +25,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -38,7 +37,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -51,7 +49,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -74,7 +71,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -97,7 +93,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -112,7 +107,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -127,7 +121,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -141,7 +134,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -155,7 +147,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -169,7 +160,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -183,7 +173,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -196,7 +185,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -209,7 +197,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -222,7 +209,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -235,7 +221,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -248,7 +233,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -261,7 +245,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -274,7 +257,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -287,7 +269,6 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -298,7 +279,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -309,7 +289,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -320,7 +299,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -331,7 +309,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -342,7 +319,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -353,7 +329,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -364,7 +339,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -375,7 +349,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -386,7 +359,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -397,7 +369,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -408,7 +379,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -419,7 +389,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -430,7 +399,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -441,7 +409,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -452,7 +419,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -463,7 +429,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -474,7 +439,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -485,7 +449,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -496,7 +459,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     },
@@ -507,7 +469,6 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "invocations": 0,
       "costUsd": 0,
       "note": null
     }

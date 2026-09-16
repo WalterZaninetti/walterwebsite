@@ -1,0 +1,109 @@
+{
+  "region": "molise",
+  "tier": "pat",
+  "extractedAt": "2026-09-16T22:27:22.801Z",
+  "documents": [
+    {
+      "url": "https://www.arsarp.it/wp-content/uploads/2007/06/Prodotti_vegetali.pdf",
+      "text": ".pipeline/seasonable/enrich/molise/corpus/pat-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 4186,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 2,
+          "chars": 3717,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 3,
+          "chars": 4105,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 4,
+          "chars": 4758,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 5,
+          "chars": 5012,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 6,
+          "chars": 4546,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 7,
+          "chars": 4558,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 8,
+          "chars": 4311,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 9,
+          "chars": 1920,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 10,
+          "chars": 4587,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 11,
+          "chars": 3847,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 12,
+          "chars": 2795,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        }
+      ]
+    }
+  ]
+}

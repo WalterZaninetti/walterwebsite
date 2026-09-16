@@ -93,3 +93,31 @@ record so it is never re-checked.
   del Volturno.» «Si semina la prima decade di luglio.» (sowing) and «La raccolta manuale si
   effettua a fine settembre.», followed by sun-drying and threshing with «ru frust». A dry bean,
   not fresh produce; and «a fine settembre» is one moment, with no start.
+
+## 2026-09-16 — pat judge, pages 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 (sonnet/low, $0.299 so far)
+
+- **Fagioli di Riccia (Fasciol)** (p.3) — `rejected`. dried pulse harvested for threshing. «Si raccolgono a fine agosto inizio settembre quando il seme è completamente formato e i legumi ben secchi.»
+- **Fagiolo Tabacchino (Fasciol’ a burr’, Fasciol tabbacchin)** (p.4) — `rejected`. dried pulse harvested for threshing. «La raccolta manuale si effettua in ottobre.»
+- **Fichi secchi (Ficura secc., Fic. sic)** (p.5) — `rejected`. qualitative time only and dried processed product. «I frutti raccolti a maturazione completa, sani, privi di ammaccature, vengono essiccati, ponendoli su grate ben distanziati tra loro»
+- **Fungo d'abete** (p.5) — `rejected`. out of scope: wild mushroom. «È facilmente individuabile nei boschi di abete nel periodo fine estate-autunno e, particolarmente, dopo un periodo piovoso.»
+- **Gallinaccio (Lallucce, Galletto)** (p.5) — `rejected`. out of scope: wild mushroom. «Si raccoglie nel periodo di giugno-luglio e settembre-ottobre in condizioni climatiche di caldo umido ed assenza di ventosità.»
+- **Lessata** (p.6) — `rejected`. production period of processed dish, not a harvest window. «Il periodo di produzione è la Festa di S. Giuseppe il 19 marzo.»
+- **Mela limoncella** (p.6) — `rejected`. qualitative time only, no calendar dates. «La raccolta, piuttosto tardiva, data l’altitudine, è fatta prima delle piogge autunnali.»
+- **Origano (P’liere, Recn, Rect, Rinie)** (p.7) — `rejected`. flowering date, not harvest. «Fiorisce da giugno a settembre.»
+- **Olive al naturale (Live curuate, Olie all’acqua e sale)** (p.7) — `rejected`. qualitative time only, no calendar dates. «Le olive vengono raccolte all’epoca della invaiatura, dopo la cernita e la calibrazione»
+- **Paparolesse (Peperoni sottaceto)** (p.8) — `rejected`. production period of processed product, qualitative. «Il periodo di produzione è l’estate.»
+- **Peperone rosso (Ppdini p seccà, Cornetti da essiccare)** (p.10) — `rejected`. qualitative time only, and destined for drying. «La raccolta si esegue scalarmente man mano che le bacche raggiungono la colorazione rossa.»
+- **Pere sottaceto** (p.10) — `rejected`. qualitative time only, and production period of processed product. «La produzione si ha particolarmente in autunno e inverno; inoltre vengono utilizzate per preparare particolari antipasti nella festività di S. Giuseppe a Riccia.»
+- **Pomodori gialli invernali (Pmdor d’viern da append’)** (p.10) — `rejected`. qualitative time only, no calendar dates. «I pomodori vengono raccolti avendo cura di prelevare l’intero racemo e quando hanno raggiunto una colorazione gialla»
+- **Pomodori di Montagano** (p.11) — `rejected`. qualitative time only, no calendar dates. «Nel caso si raccolga poco prima della maturazione completa, è ottimo per la preparazione delle insalate.»
+- **Porcino (U’purcin’)** (p.11) — `rejected`. out of scope: wild mushroom. «Si raccoglie nel periodo di giugno-luglio e settembre-ottobre se si verificano condizioni climatiche di caldo umido ed assenza di ventosità»
+- **Prataiolo** (p.11) — `rejected`. out of scope: wild mushroom. «Facilmente reperibile nei prati e nelle radure da aprile ad ottobre.»
+- **Scorzone** (p.11) — `rejected`. out of scope: wild truffle. «Lo scorzone è uno dei tartufi più comuni che, tranne una breve pausa primaverile, si può trovare tutto l’anno anche in notevole quantità sotto noccioli, pioppi, faggi e querce.»
+- **Tartufo bianco** (p.11) — `rejected`. out of scope: wild truffle. «È reperibile solo nella tarda estate, in autunno ed all’inizio della stagione invernale.»
+- **Farro Dicocco Molise** (p.4) — `rejected`. dried grain harvested dry for threshing. «Il farro è più tardivo del frumento, la trebbiatura inizia nel mese di luglio.»
+- **Lenticchia (Miccula)** (p.6) — `silent`. no harvest date given, only crop duration in days.
+- **Mais lesso (Scisciegl)** (p.6) — `silent`. processed dish, no harvest dates mentioned.
+- **Mela zitella (Verginella, Mela gentile)** (p.7) — `silent`. no harvest date given, only storage duration mentioned.
+- **More (Le murichra, I mricul)** (p.7) — `silent`. no dated harvest information given.
+- **Patata lunga di San Biase** (p.8) — `silent`. no dated harvest information given.
+- **Pezzènde (Pzzen'It)** (p.10) — `silent`. dried pulses, no harvest date given.

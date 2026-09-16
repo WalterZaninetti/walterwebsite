@@ -1,1 +1,5 @@
-{"state":"more","note":"index built from ARSARP/ERSAM Atlante 'Prodotti vegetali' (33 products); batch 1 of 8 done (0 candidate, 3 silent, 5 rejected), 25 pending","at":"2026-09-16T20:00:02Z"}
+{
+  "state": "done",
+  "note": "25 records, 0 for review, 0 pages pending",
+  "at": "2026-09-16T22:36:16.444Z"
+}

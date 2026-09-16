@@ -1,0 +1,6 @@
+{"at":"2026-09-16T22:27:56.056Z","stage":"judge:pat:p1,2,3","model":"sonnet","effort":"low","costUsd":0.081038,"input":2,"cacheRead":0,"cacheWrite":10806,"output":3092,"error":null}
+{"at":"2026-09-16T22:27:59.744Z","stage":"judge:pat:p1,2","model":"sonnet","effort":"low","costUsd":0.0354356,"input":2,"cacheRead":1973,"cacheWrite":6795,"output":252,"error":null}
+{"at":"2026-09-16T22:30:38.014Z","stage":"judge:pat:p1,2,3","model":"haiku","effort":null,"costUsd":0.09348,"input":10,"cacheRead":0,"cacheWrite":8150,"output":14054,"error":null}
+{"at":"2026-09-16T22:31:29.679Z","stage":"judge:pat:p1,2","model":"haiku","effort":null,"costUsd":0.050305,"input":10,"cacheRead":0,"cacheWrite":6470,"output":6425,"error":null}
+{"at":"2026-09-16T22:36:09.916Z","stage":"judge:pat:p1,2,3,4,5,6,7,8,9,10,11","model":"sonnet","effort":"low","costUsd":0.22767199999999999,"input":2,"cacheRead":0,"cacheWrite":25034,"output":11005,"error":null}
+{"at":"2026-09-16T22:36:16.440Z","stage":"judge:pat:p4,6,7,8,10","model":"sonnet","effort":"low","costUsd":0.0709706,"input":2,"cacheRead":2028,"cacheWrite":13301,"output":712,"error":null}
