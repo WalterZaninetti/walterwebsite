@@ -1,0 +1,515 @@
+{
+  "createdAt": "2026-09-16T19:56:17.188Z",
+  "units": [
+    {
+      "id": "molise:pat",
+      "region": "molise",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "cb",
+        "is"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 1,
+      "costUsd": 2.61,
+      "note": "index built from ARSARP/ERSAM Atlante 'Prodotti vegetali' (33 products); batch 1 of 8 done (0 candidate, 3 silent, 5 rejected), 25 pending"
+    },
+    {
+      "id": "molise:calendar",
+      "region": "molise",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "cb",
+        "is"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "valle-daosta:pat",
+      "region": "valle-daosta",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "ao"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "valle-daosta:calendar",
+      "region": "valle-daosta",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "ao"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "lombardia:pat",
+      "region": "lombardia",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "co",
+        "so",
+        "mi",
+        "bg",
+        "bs",
+        "pv",
+        "cr",
+        "mn",
+        "lc",
+        "lo",
+        "mb"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "lombardia:calendar",
+      "region": "lombardia",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "co",
+        "so",
+        "mi",
+        "bg",
+        "bs",
+        "pv",
+        "cr",
+        "mn",
+        "lc",
+        "lo",
+        "mb"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "puglia:pat",
+      "region": "puglia",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "ba",
+        "ta",
+        "bt"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "puglia:calendar",
+      "region": "puglia",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "ba",
+        "ta",
+        "bt"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "marche:pat",
+      "region": "marche",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "pu",
+        "an"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "marche:calendar",
+      "region": "marche",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "pu",
+        "an"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "abruzzo:pat",
+      "region": "abruzzo",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "pe",
+        "ch"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "abruzzo:calendar",
+      "region": "abruzzo",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "pe",
+        "ch"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "trentino-alto-adige:pat",
+      "region": "trentino-alto-adige",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "bz"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "trentino-alto-adige:calendar",
+      "region": "trentino-alto-adige",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "bz"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "friuli-venezia-giulia:pat",
+      "region": "friuli-venezia-giulia",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "ts"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "friuli-venezia-giulia:calendar",
+      "region": "friuli-venezia-giulia",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "ts"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "umbria:pat",
+      "region": "umbria",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "tr"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "umbria:calendar",
+      "region": "umbria",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "tr"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "sardegna:pat",
+      "region": "sardegna",
+      "tier": "pat",
+      "silentProvincesAtStart": [
+        "su"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "sardegna:calendar",
+      "region": "sardegna",
+      "tier": "calendar",
+      "silentProvincesAtStart": [
+        "su"
+      ],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "piemonte:pat",
+      "region": "piemonte",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "piemonte:calendar",
+      "region": "piemonte",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "veneto:pat",
+      "region": "veneto",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "veneto:calendar",
+      "region": "veneto",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "emilia-romagna:pat",
+      "region": "emilia-romagna",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "emilia-romagna:calendar",
+      "region": "emilia-romagna",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "liguria:pat",
+      "region": "liguria",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "liguria:calendar",
+      "region": "liguria",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "toscana:pat",
+      "region": "toscana",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "toscana:calendar",
+      "region": "toscana",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "lazio:pat",
+      "region": "lazio",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "lazio:calendar",
+      "region": "lazio",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "campania:pat",
+      "region": "campania",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "campania:calendar",
+      "region": "campania",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "basilicata:pat",
+      "region": "basilicata",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "basilicata:calendar",
+      "region": "basilicata",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "calabria:pat",
+      "region": "calabria",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "calabria:calendar",
+      "region": "calabria",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "sicilia:pat",
+      "region": "sicilia",
+      "tier": "pat",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    },
+    {
+      "id": "sicilia:calendar",
+      "region": "sicilia",
+      "tier": "calendar",
+      "silentProvincesAtStart": [],
+      "status": "pending",
+      "attempts": 0,
+      "invocations": 0,
+      "costUsd": 0,
+      "note": null
+    }
+  ]
+}
