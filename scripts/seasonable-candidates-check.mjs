@@ -19,12 +19,20 @@
  * slip or a modelled number, and invariant 5 forbids the second. Quotes that
  * give dates as numbers carry the `numeric-dates` flag and skip this check.
  *
+ * THE VERBATIM CHECK
+ * The judge is the cheapest model that matched the pilot, so it is not trusted
+ * to quote. Every quote and zone quote must appear, after normalising
+ * whitespace, quotes and dashes, in the extracted text of the page the record
+ * names or the page after it. A model cannot invent a sentence past this. Image
+ * pages carry `ocr` and are exempt — the ship step re-reads those by eye.
+ *
  * Exits non-zero on any error, so the runner can mark a batch for retry.
  */
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { provinces } from '../src/content/seasonable/geography.ts';
+import { normalise } from './seasonable-enrich/lib.mjs';
 
 const ROOT = '.pipeline/seasonable/enrich';
 
@@ -51,7 +59,21 @@ function monthsNamed(text) {
 const monthOfHalf = (h) => Math.floor(h / 2) + 1;
 const length = (s, e) => (s <= e ? e - s + 1 : 24 - s + e + 1);
 
-function checkRecord(r, region) {
+/**
+ * Page n and n+1 of the document a record came from, normalised, or null when
+ * the record predates page tracking (the first pilot's eight) or has no text.
+ */
+function pageContext(region, r) {
+  if (!Number.isInteger(r.page) || r.flags?.includes('ocr')) return null;
+  const extract = join(ROOT, region, `extract-${r.tier}.json`);
+  if (!existsSync(extract)) return null;
+  const doc = JSON.parse(readFileSync(extract, 'utf8')).documents[r.doc ?? 0];
+  if (!doc || !existsSync(doc.text)) return null;
+  const pages = readFileSync(doc.text, 'utf8').split('\f');
+  return normalise(`${pages[r.page - 1] ?? ''} ${pages[r.page] ?? ''}`);
+}
+
+export function checkRecord(r, region) {
   const errors = [];
   const warnings = [];
   const need = (cond, msg) => { if (!cond) errors.push(msg); };
@@ -77,6 +99,13 @@ function checkRecord(r, region) {
     }
   }
   need(/^\d{4}-\d{2}-\d{2}$/.test(s.accessed ?? ''), `source.accessed "${s.accessed}"`);
+
+  const context = pageContext(region, r);
+  if (context) {
+    for (const q of [...(r.quotes ?? []), ...(r.zoneQuote ? [r.zoneQuote] : [])]) {
+      if (!context.includes(normalise(q))) errors.push(`quote is not verbatim on page ${r.page}: "${q.slice(0, 80)}"`);
+    }
+  }
 
   if (r.verdict !== 'candidate') {
     need(typeof r.reason === 'string' && r.reason.trim(), `${r.verdict} needs a reason`);
@@ -160,6 +189,9 @@ function checkRegion(region) {
   return { region, records, errors: errorCount };
 }
 
+if (import.meta.url !== `file://${process.argv[1]}`) {
+  // Imported by the judge for checkRecord; the CLI below is not for it.
+} else {
 const only = process.argv[2];
 const regions = only
   ? [only]
@@ -174,3 +206,4 @@ for (const region of regions) {
   failed += errors;
 }
 process.exit(failed ? 1 : 0);
+}
