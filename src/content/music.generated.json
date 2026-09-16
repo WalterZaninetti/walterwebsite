@@ -2,99 +2,99 @@
   "spotify": {
     "items": [
       {
-        "id": "2C5G7y3CVchaQZDmCluKpG",
-        "title": "Let's Take Our Time",
-        "artist": "Durand Jones & The Indications, Aaron Frazer",
-        "url": "https://open.spotify.com/track/2C5G7y3CVchaQZDmCluKpG",
-        "at": "2026-09-07T08:56:47.643Z",
-        "art": "/images/music/spotify-2bdf8465.webp"
+        "id": "70TPpmAKLK49gcs58JqqWy",
+        "title": "Blauer",
+        "artist": "Paky",
+        "url": "https://open.spotify.com/track/70TPpmAKLK49gcs58JqqWy",
+        "at": "2026-09-16T13:15:05.381Z",
+        "art": "/images/music/spotify-261f2ec3.webp"
       },
       {
-        "id": "5rielSbAmN45G7MzfNt3KP",
-        "title": "Anna Lee",
-        "artist": "Dream Theater",
-        "url": "https://open.spotify.com/track/5rielSbAmN45G7MzfNt3KP",
-        "at": "2026-09-06T20:12:01.119Z",
-        "art": "/images/music/spotify-9b1a0fe5.webp"
+        "id": "3O48gtvD20jxiNtT7tWr4C",
+        "title": "You See The Trouble With Me",
+        "artist": "Barry White",
+        "url": "https://open.spotify.com/track/3O48gtvD20jxiNtT7tWr4C",
+        "at": "2026-09-16T13:12:02.023Z",
+        "art": "/images/music/spotify-56e8c931.webp"
       },
       {
-        "id": "1X1FUGCW2OWcjFRwfL9G56",
-        "title": "Limbo",
-        "artist": "Estella Boersma",
-        "url": "https://open.spotify.com/track/1X1FUGCW2OWcjFRwfL9G56",
-        "at": "2026-09-05T21:03:08.934Z",
-        "art": "/images/music/spotify-b7ef21bc.webp"
+        "id": "46eu3SBuFCXWsPT39Yg3tJ",
+        "title": "Don't Stop 'Til You Get Enough",
+        "artist": "Michael Jackson",
+        "url": "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ",
+        "at": "2026-09-14T22:19:27.311Z",
+        "art": "/images/music/spotify-7981671f.webp"
       },
       {
-        "id": "4BcAcEbp6j6luowfAliUfW",
-        "title": "Darlin' - Remastered 2001",
-        "artist": "The Beach Boys",
-        "url": "https://open.spotify.com/track/4BcAcEbp6j6luowfAliUfW",
-        "at": "2026-09-05T19:01:33.917Z",
-        "art": "/images/music/spotify-adece9d8.webp"
+        "id": "7wQzFfhwqe6zGs8SKcn3Q8",
+        "title": "The Beachcomber",
+        "artist": "Vulfpeck",
+        "url": "https://open.spotify.com/track/7wQzFfhwqe6zGs8SKcn3Q8",
+        "at": "2026-09-14T21:49:48.972Z",
+        "art": "/images/music/spotify-761c8750.webp"
       },
       {
-        "id": "18nI3X6QDYVTHcjRDPdtWj",
-        "title": "Alla rovescia",
-        "artist": "Radici Nel Cemento",
-        "url": "https://open.spotify.com/track/18nI3X6QDYVTHcjRDPdtWj",
-        "at": "2026-09-05T18:59:18.969Z",
-        "art": "/images/music/spotify-802b64c6.webp"
+        "id": "3VZmChrnVW8JK6ano4gSED",
+        "title": "Sexual Healing",
+        "artist": "Marvin Gaye",
+        "url": "https://open.spotify.com/track/3VZmChrnVW8JK6ano4gSED",
+        "at": "2026-09-12T23:06:25.262Z",
+        "art": "/images/music/spotify-f7839273.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-09-07T09:39:31.795Z"
+    "fetchedAt": "2026-09-16T19:43:41.615Z"
   },
   "bandcamp": {
     "items": [
       {
-        "id": "a580698176",
-        "title": "R&B Goes Disco Vol. 3",
-        "artist": "Woody Braun",
-        "url": "https://woodybraun.bandcamp.com/album/r-b-goes-disco-vol-3",
-        "at": "2026-05-03T11:22:25.000Z",
-        "kind": "album",
-        "art": "/images/music/bandcamp-f2237a5a.webp"
-      },
-      {
-        "id": "a4151127571",
-        "title": "Edits Do Brasil",
-        "artist": "Elado",
-        "url": "https://scruscru.bandcamp.com/album/edits-do-brasil",
-        "at": "2026-05-03T11:22:13.000Z",
-        "kind": "album",
-        "art": "/images/music/bandcamp-e93579c2.webp"
-      },
-      {
-        "id": "a1861347001",
-        "title": "DG085",
-        "artist": "DiscoGram",
-        "url": "https://discogram.bandcamp.com/album/dg085",
-        "at": "2026-05-03T11:22:02.000Z",
-        "kind": "album",
-        "art": "/images/music/bandcamp-53d5e204.webp"
-      },
-      {
-        "id": "a3377974513",
-        "title": "CHAPTER TWENTY-NINE EDITS [TBE029] - Free Download!",
-        "artist": "Supertaste",
-        "url": "https://thebasementdiscos.bandcamp.com/album/chapter-twenty-nine-edits-tbe029-free-download",
-        "at": "2026-05-03T11:21:49.000Z",
-        "kind": "album",
-        "art": "/images/music/bandcamp-10bb4f85.webp"
-      },
-      {
-        "id": "t2500846802",
-        "title": "Hooked",
-        "artist": "Reece Johnson",
-        "url": "https://lisztomaniarec.bandcamp.com/track/hooked",
-        "at": "2026-03-04T21:15:17.000Z",
+        "id": "t3638139358",
+        "title": "Inside Job",
+        "artist": "Eddie Logix",
+        "url": "https://eddielogix.bandcamp.com/track/inside-job",
+        "at": "2026-09-11T22:27:56.000Z",
         "kind": "track",
-        "art": "/images/music/bandcamp-15e65a04.webp"
+        "art": "/images/music/bandcamp-c5d97918.webp"
+      },
+      {
+        "id": "a1143313713",
+        "title": "Copy Cat Trax Vol 4.",
+        "artist": "BDK",
+        "url": "https://bdkbelfast.bandcamp.com/album/copy-cat-trax-vol-4",
+        "at": "2026-09-11T22:26:52.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-d862d88c.webp"
+      },
+      {
+        "id": "a1850841798",
+        "title": "Copy Cat Trax Vol 1.",
+        "artist": "BDK",
+        "url": "https://bdkbelfast.bandcamp.com/album/copy-cat-trax-vol-1",
+        "at": "2026-09-11T22:26:52.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-cb7c61cf.webp"
+      },
+      {
+        "id": "a3560228668",
+        "title": "Panorama EP [CF002]",
+        "artist": "Deaf Toucan & James Pepper",
+        "url": "https://club-fantasy.bandcamp.com/album/panorama-ep-cf002",
+        "at": "2026-09-11T22:26:07.000Z",
+        "kind": "album",
+        "art": "/images/music/bandcamp-5284d1d4.webp"
+      },
+      {
+        "id": "t302771111",
+        "title": "Cocaine",
+        "artist": "Glasgow Sound System",
+        "url": "https://craigieknowes.com/track/cocaine",
+        "at": "2026-09-11T22:25:39.000Z",
+        "kind": "track",
+        "art": "/images/music/bandcamp-71e4e93b.webp"
       }
     ],
     "profileUrl": null,
-    "fetchedAt": "2026-09-06T20:55:47.409Z"
+    "fetchedAt": "2026-09-16T19:43:42.283Z"
   },
   "album": {
     "id": "4tUxQkrduOE8sfgwJ5BI2F",
