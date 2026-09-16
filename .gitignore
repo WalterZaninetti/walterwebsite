@@ -40,6 +40,11 @@ firebase-debug.*.log
 !.pipeline/seasonable/
 .pipeline/seasonable/*
 !.pipeline/seasonable/sources-ledger.md
+# The enrichment sweep's staged output is reviewable and so tracked; the
+# downloaded corpus and the per-invocation logs can be rebuilt and are not.
+!.pipeline/seasonable/enrich/
+.pipeline/seasonable/enrich/*/corpus/
+.pipeline/seasonable/enrich/logs/
 
 # Claude Code project config. Local, except the skills: they are project
 # convention rather than machine state, and seasonable-sourcing carries the

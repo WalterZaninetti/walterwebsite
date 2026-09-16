@@ -12,6 +12,9 @@
     "test": "node --test src/lib/*.test.ts",
     "analyze": "ANALYZE=true vite build",
     "check:csp": "node scripts/check-csp.mjs",
+    "enrich:seasonable": "node scripts/seasonable-enrich.mjs",
+    "enrich:status": "node scripts/seasonable-enrich.mjs status",
+    "enrich:check": "node scripts/seasonable-candidates-check.mjs",
     "deploy": "npm run build && npm test && npm run check:csp && npx firebase-tools deploy --only hosting"
   },
   "dependencies": {
