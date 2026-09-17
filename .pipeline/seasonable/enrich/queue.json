@@ -243,10 +243,10 @@
       "silentProvincesAtStart": [
         "tr"
       ],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.04,
+      "note": "discovered 0 document(s): No official Umbria region/ASL seasonality calendar found within the limited search budget; only unrelated school calendar PDFs and out-of-region ASL links surfaced."
     },
     {
       "id": "sardegna:pat",
