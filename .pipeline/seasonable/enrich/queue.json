@@ -94,7 +94,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.092,
-      "note": "discovered 1 document(s): Regione Lombardia's own Linee di indirizzo per la ristorazione scolastica (containing the fruit/vegetable seasonality calendar appendix) is republished officially by ATS Insu"
+      "note": "extracted 27 pages, 18 skipped by the pre-filter"
     },
     {
       "id": "puglia:pat",

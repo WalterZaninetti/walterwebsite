@@ -1,0 +1,229 @@
+{
+  "region": "lombardia",
+  "tier": "calendar",
+  "extractedAt": "2026-09-17T08:33:35.931Z",
+  "documents": [
+    {
+      "url": "https://www.ats-insubria.it/attachments/category/337/LINEE%20DI%20INDIRIZZO%20PER%20LA%20RISTORAZIONE%20SCOLASTICA%20lug%202023.pdf",
+      "text": ".pipeline/seasonable/enrich/lombardia/corpus/calendar-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 51,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/lombardia/corpus/calendar-doc0-p1.png",
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 2640,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 3,
+          "chars": 3323,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 4,
+          "chars": 3362,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 5,
+          "chars": 3535,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 3695,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 7,
+          "chars": 2133,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 8,
+          "chars": 2759,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 1422,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 10,
+          "chars": 1083,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 11,
+          "chars": 1277,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 1537,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 13,
+          "chars": 556,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 14,
+          "chars": 818,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 15,
+          "chars": 609,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 16,
+          "chars": 4168,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 17,
+          "chars": 3073,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 18,
+          "chars": 602,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 19,
+          "chars": 1424,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 20,
+          "chars": 859,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 1443,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 22,
+          "chars": 866,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 23,
+          "chars": 2147,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 24,
+          "chars": 1752,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 1195,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 26,
+          "chars": 1066,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 27,
+          "chars": 1058,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
