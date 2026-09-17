@@ -1,0 +1,29 @@
+{
+  "region": "valle-daosta",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Scheda Identificativa - Golden Delicious della Valle d'Aosta",
+      "url": "https://www.regione.vda.it/allegato.aspx?pk=79510",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    },
+    {
+      "title": "Scheda Identificativa - Renetta della Valle d'Aosta",
+      "url": "https://www.regione.vda.it/allegato.aspx?pk=79519",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    }
+  ],
+  "triedUrls": [
+    "https://www.regione.vda.it/agricoltura/prodotti_tipici/tradizionali/schede_pat_i.aspx",
+    "https://www.regione.vda.it/allegato.aspx?pk=79510",
+    "https://www.regione.vda.it/allegato.aspx?pk=79519"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Valle d'Aosta official PAT schede page lists two products under 'Prodotti vegetali allo stato naturale o trasformati'; both confirmed as PDF scheda documents via HEAD request."
+}

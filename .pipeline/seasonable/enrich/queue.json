@@ -37,8 +37,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.069,
+      "note": "discovered 2 document(s): Regione Valle d'Aosta official PAT schede page lists two products under 'Prodotti vegetali allo stato naturale o trasformati'; both confirmed as PDF scheda documents via HEAD"
     },
     {
       "id": "valle-daosta:calendar",
