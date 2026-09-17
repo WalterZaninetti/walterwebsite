@@ -1,0 +1,43 @@
+{
+  "region": "valle-daosta",
+  "tier": "pat",
+  "extractedAt": "2026-09-17T08:26:45.506Z",
+  "documents": [
+    {
+      "url": "https://www.regione.vda.it/allegato.aspx?pk=79510",
+      "text": ".pipeline/seasonable/enrich/valle-daosta/corpus/pat-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 2609,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "url": "https://www.regione.vda.it/allegato.aspx?pk=79519",
+      "text": ".pipeline/seasonable/enrich/valle-daosta/corpus/pat-doc1.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 3334,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/valle-daosta/corpus/pat-doc1-p2.png",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
