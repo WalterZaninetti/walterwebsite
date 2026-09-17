@@ -1,0 +1,20 @@
+{
+  "region": "sardegna",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Calendario indicativo della stagionalità – Sardegna",
+      "url": "https://www.regione.sardegna.it/documenti/1_179_20180803134535.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    }
+  ],
+  "triedUrls": [
+    "https://www.regione.sardegna.it/documenti/1_179_20180803134535.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Official Regione Sardegna PDF confirmed with 200 response, found via web search."
+}
