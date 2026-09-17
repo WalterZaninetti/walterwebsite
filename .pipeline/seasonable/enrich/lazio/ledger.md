@@ -12,3 +12,7 @@ No fruit or vegetable product on these pages: pages contain only meat, cheese, a
 - **Patata dell’Alto Viterbese IGP** (p.59) — `candidate` open-field 10→17. «La raccolta, manuale o meccanica, deve effettuarsi nel periodo compreso tra 15 giugno e 30 settembre di ciascun anno»
 - **Peperone di Pontecorvo DOP** (p.61) — `candidate` open-field 12→21. «La raccolta deve essere manuale ed eseguita scalarmene durante il periodo che va dal 1 luglio al 30 novembre.»
 - **Kiwi Latina IGP** (p.53) — `silent`. no dated harvest window stated.
+
+## 2026-09-17 — pat judge, pages 62, 63, 71, 73, 75, 76, 77, 78, 81, 83, 87, 88, 89, 90, 94, 95 (sonnet/low, $0.248 so far)
+
+- **Sedano bianco di Sperlonga IGP** (p.63) — `silent`. raccolta mentioned but window split across page break, no dated bounds given.
