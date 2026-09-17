@@ -51,5 +51,7 @@ One JSON object per line, one line per product that appears on the pages, in pag
 - `windows` is [] unless the verdict is `candidate`.
 - `flags` may contain only: variety-union, wraps-year, wide, comuni-resolved, numeric-dates.
 - A product whose text starts on one page and continues on the next is output once, with the page it starts on.
-- Pages are given as `<page n="3">…</page>`. A page marked `<page n="4" context="true">` is there only so you can finish reading a product that started on an earlier page: output nothing for products that START on a context page.
+- Pages are given as `<page n="3">…</page>`. Some pages are context:
+  - `<page n="2" context="before">` precedes a judged page. Output a product that starts on it ONLY if its text continues onto the next page, and give the page it starts on. Its area of production is often here.
+  - `<page n="9" context="after">` follows the last judged page. Read it to finish a product that started earlier; output nothing for products that START on it.
 - If you are told which products were already recorded, do not output them again.
