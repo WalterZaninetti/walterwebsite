@@ -1,0 +1,39 @@
+{
+  "region": "calabria",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Schede n°66-68 Prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2023/06/66-68-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    },
+    {
+      "title": "Schede n°70-95 Prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2025/11/70-95-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    },
+    {
+      "title": "Schede n°97-138 Prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2025/11/97-138-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    }
+  ],
+  "triedUrls": [
+    "https://portale.regione.calabria.it/website/organizzazione/dipartimento8/subsite/qualita_promozione/pat/",
+    "https://old.regione.calabria.it/website/organizzazione/dipartimento8/subsite/qualita_promozione/pat/",
+    "https://www.regione.calabria.it/ambiente-agricoltura-ed-energia/filiera-agroalimentare-ed-educazione-alimentare/p-a-t/",
+    "https://www.regione.calabria.it/wp-content/uploads/2023/06/66-68-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+    "https://www.regione.calabria.it/wp-content/uploads/2025/11/70-95-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+    "https://www.regione.calabria.it/wp-content/uploads/2025/11/97-138-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Found official Regione Calabria PAT PDF schede for the vegetable products category, split into three files covering sheets 66-68, 70-95, and 97-138."
+}
