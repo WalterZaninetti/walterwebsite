@@ -289,8 +289,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.169,
+      "note": "discovered 1 document(s): Confirmed via HEAD request (200, PDF, filename proposte_operative_per_la_ristorazione_scolastica_in_piemonte_-_marzo_2024_2.pdf) and search results describing its Allegato n."
     },
     {
       "id": "veneto:pat",

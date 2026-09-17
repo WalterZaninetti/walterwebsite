@@ -1,0 +1,23 @@
+{
+  "region": "piemonte",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Proposte operative per la ristorazione scolastica in Piemonte – marzo 2024 (Allegato n. 03 – Calendario stagionalità ortofrutta)",
+      "url": "https://www.regione.piemonte.it/web/media/42709/download",
+      "kind": "pdf",
+      "printedYear": 2024,
+      "printedDateNote": "filename and search snippet indicate 'marzo 2024'; document is dated March 2024"
+    }
+  ],
+  "triedUrls": [
+    "https://www.regione.piemonte.it/web/media/42709/download",
+    "https://www.regione.piemonte.it/web/media/44752/download",
+    "https://www.aslto5.piemonte.it/media/1806/download",
+    "https://www.aslto5.piemonte.it/media/1807/download"
+  ],
+  "rejectedUrls": [],
+  "note": "Confirmed via HEAD request (200, PDF, filename proposte_operative_per_la_ristorazione_scolastica_in_piemonte_-_marzo_2024_2.pdf) and search results describing its Allegato n.03 as the Calendario stagionalità ortofrutta."
+}
