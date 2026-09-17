@@ -38,6 +38,7 @@ import { appendFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { provinces } from '../../src/content/seasonable/geography.ts';
+import { produce } from '../../src/content/seasonable/produce.ts';
 import { checkRecord } from '../seasonable-candidates-check.mjs';
 import { extract } from './extract.mjs';
 import {
@@ -73,6 +74,16 @@ function args() {
 }
 
 const productKey = (name) => normalise(name).replace(/\(.*?\)/g, '').replace(/[^a-z]/g, '');
+
+/**
+ * Designations the page already ships. ARSIAL's guide lists Lazio's DOP and
+ * IGP products beside its PAT, and all four of its first candidates were rows
+ * the dataset already has, cited to the disciplinare. Rejected in code, free.
+ */
+const shipped = new Map(
+  produce.filter((p) => p.designation).map((p) => [productKey(p.name), `${p.name} ${p.designation}`]),
+);
+const alreadyShipped = (name) => shipped.get(productKey(name.replace(/\b(DOP|IGP|D\.O\.P\.|I\.G\.P\.)\b/gi, '')));
 
 function batches(doc, texts, onlyPages) {
   const pending = doc.pages.filter((p) => (onlyPages ? onlyPages.includes(p.n) : p.status === 'pending'));
@@ -238,6 +249,12 @@ export async function judge(options) {
           return bad.push({ rec, errors: [`page ${raw.page} is not a page of this document`], attempt });
         }
         if (raw.verdict === 'unsure') return unsure.push(rec);
+        const shippedAs = rec.verdict === 'candidate' && alreadyShipped(rec.product);
+        if (shippedAs) {
+          rec.verdict = 'rejected';
+          rec.reason = `already in the dataset as ${shippedAs}, cited to its disciplinare`;
+          rec.windows = [];
+        }
         const { errors } = checkRecord(rec, region);
         if (errors.length) bad.push({ rec, errors, attempt });
         else good.push(rec);

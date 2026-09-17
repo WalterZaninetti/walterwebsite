@@ -72,6 +72,14 @@ export function appendJsonl(file, records) {
 }
 
 /**
+ * The plan's usage limit, which the CLI reports as a successful reply whose
+ * text says so. The first time it happened the runner took it for an answer,
+ * retried Lazio until it blocked and spent Campania's attempts on nothing.
+ */
+export class UsageLimitError extends Error {}
+const LIMIT_TEXT = /hit your (session|usage|weekly|daily) limit|usage limit reached|limit will reset|resets \d/i;
+
+/**
  * One stripped, single-shot model call. The prompt goes on stdin because a
  * batch of pages is far past any argv limit.
  *
@@ -117,6 +125,9 @@ export function callModel({ region, stage, model, effort, system, prompt, tools 
         cacheWrite: r.usage?.cache_creation_input_tokens, output: r.usage?.output_tokens,
         error: r.is_error ? r.subtype : null,
       }]);
+      if (LIMIT_TEXT.test(String(r.result ?? '')) && String(r.result ?? '').length < 300) {
+        return reject(new UsageLimitError(String(r.result).trim()));
+      }
       if (r.is_error) return reject(new Error(`claude reported ${r.subtype}: ${String(r.result).slice(0, 300)}`));
       resolve({ text: r.result ?? '', cost, usage: r.usage });
     });
