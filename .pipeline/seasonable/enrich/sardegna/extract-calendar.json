@@ -1,0 +1,29 @@
+{
+  "region": "sardegna",
+  "tier": "calendar",
+  "extractedAt": "2026-09-17T09:36:56.490Z",
+  "documents": [
+    {
+      "url": "https://www.regione.sardegna.it/documenti/1_179_20180803134535.pdf",
+      "text": ".pipeline/seasonable/enrich/sardegna/corpus/calendar-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 1529,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 477,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
