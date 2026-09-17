@@ -397,10 +397,10 @@
       "region": "campania",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.073,
-      "note": "extracted 1 pages, 0 skipped by the pre-filter"
+      "costUsd": 0.1,
+      "note": "0 records, 0 for review, 0 pages pending"
     },
     {
       "id": "campania:calendar",
