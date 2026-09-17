@@ -1,0 +1,13 @@
+{
+  "region": "liguria",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.agriligurianet.it/it/impresa/marchi-e-disciplinari/riconoscimento-di-nuovi-prodotti-tradizionali.html",
+    "https://www.agriligurianet.it/it/vetrina/prodotti-e-produzioni/prodotti.html"
+  ],
+  "rejectedUrls": [],
+  "note": "Found agriligurianet.it (Regione Liguria's agriculture site) pages on PAT products, but they only offer the national list PDF (names only, no schede) and a general product showcase without D.Lgs 173/1998 category structure or full scheda text for 'Prodotti vegetali allo stato naturale o trasformati'; no qualifying document located within budget."
+}

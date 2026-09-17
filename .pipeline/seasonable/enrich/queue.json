@@ -337,10 +337,10 @@
       "region": "liguria",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.089,
+      "note": "discovered 0 document(s): Found agriligurianet.it (Regione Liguria's agriculture site) pages on PAT products, but they only offer the national list PDF (names only, no schede) and a general product sh"
     },
     {
       "id": "liguria:calendar",
