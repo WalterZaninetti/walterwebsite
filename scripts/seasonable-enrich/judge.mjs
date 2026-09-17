@@ -204,10 +204,20 @@ export async function judge(options) {
 
       const first = await judgeBatch(ctx, batch, known, model, effort);
       spent += first.cost;
-      // Pages with a date on them always name at least one product. An empty
-      // parse is a failed call, and marking its pages judged would lose them.
-      if (first.records.length === 0) {
+      // An empty parse is a failed call — marking its pages judged would lose
+      // them. But a page can carry a date and still hold no product (Friuli's
+      // bibliography, Abruzzo's catering specifications), so the model says so
+      // explicitly with {"none": …}, and only silence without that marker fails.
+      const none = first.records.find((r) => typeof r?.none === 'string' && !r.product);
+      first.records = first.records.filter((r) => r?.product);
+      if (first.records.length === 0 && !none) {
         throw new Error(`batch p${batch.pages[0].n}–${batch.pages.at(-1).n} parsed to no records ($${first.cost.toFixed(3)}): ${first.junk.join(' ').slice(0, 200)}`);
+      }
+      if (first.records.length === 0 && none && !replay) {
+        for (const p of batch.pages) p.status = 'judged';
+        writeJson(join(dir, `extract-${tier}.json`), extracted);
+        appendFileSync(join(dir, 'ledger.md'), `\n## ${today()} — ${tier} judge, pages ${batch.pages.map((p) => p.n).join(', ')} (${model}${effort ? `/${effort}` : ''})\n\nNo fruit or vegetable product on these pages: ${none.none}\n`);
+        continue;
       }
 
       const good = [];
