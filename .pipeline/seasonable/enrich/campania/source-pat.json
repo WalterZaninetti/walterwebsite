@@ -1,0 +1,20 @@
+{
+  "region": "campania",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://agricoltura.regione.campania.it/tipici/tradizionali-vegetali.htm",
+      "kind": "html",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    }
+  ],
+  "triedUrls": [
+    "https://agricoltura.regione.campania.it/tipici/tradizionali-vegetali.htm"
+  ],
+  "rejectedUrls": [],
+  "note": "Official Regione Campania agriculture department page listing PAT schede for the category Prodotti vegetali allo stato naturale o trasformati, confirmed 200 OK."
+}

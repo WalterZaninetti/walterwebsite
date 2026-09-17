@@ -399,8 +399,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": "reopened after the usage-limit stop"
+      "costUsd": 0.073,
+      "note": "discovered 1 document(s): Official Regione Campania agriculture department page listing PAT schede for the category Prodotti vegetali allo stato naturale o trasformati, confirmed 200 OK."
     },
     {
       "id": "campania:calendar",
