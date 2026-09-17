@@ -209,8 +209,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.049,
-      "note": "extracted 318 pages, 150 skipped by the pre-filter"
+      "costUsd": 0.611,
+      "note": "35 records, 1 for review, 6 pages pending"
     },
     {
       "id": "friuli-venezia-giulia:calendar",

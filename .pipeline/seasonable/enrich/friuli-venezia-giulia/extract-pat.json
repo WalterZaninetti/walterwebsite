@@ -13,7 +13,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p1.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 2,
@@ -21,7 +21,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p2.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 3,
@@ -29,7 +29,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p3.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 4,
@@ -45,7 +45,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 6,
@@ -53,7 +53,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 7,
@@ -69,7 +69,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p8.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 9,
@@ -93,7 +93,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p11.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 12,
@@ -101,7 +101,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p12.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 13,
@@ -125,7 +125,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p15.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 16,
@@ -133,7 +133,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p16.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 17,
@@ -149,7 +149,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p18.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 19,
@@ -157,7 +157,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p19.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 20,
@@ -165,7 +165,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p20.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -189,7 +189,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p23.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 24,
@@ -213,7 +213,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p26.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 27,
@@ -229,7 +229,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p28.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 29,
@@ -253,7 +253,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p31.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 32,
@@ -261,7 +261,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p32.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 33,
@@ -285,7 +285,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p35.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 36,
@@ -341,7 +341,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p42.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 43,
@@ -365,7 +365,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p45.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 46,
@@ -373,7 +373,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p46.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 47,
@@ -389,7 +389,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p48.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 49,
@@ -397,7 +397,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p49.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 50,
@@ -405,7 +405,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p50.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 51,
@@ -421,7 +421,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 53,
@@ -429,7 +429,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p53.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 54,
@@ -453,7 +453,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p56.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 57,
@@ -469,7 +469,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p58.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 59,
@@ -517,7 +517,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p64.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 65,
@@ -533,7 +533,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p66.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 67,
@@ -549,7 +549,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p68.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 69,
@@ -557,7 +557,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 70,
@@ -573,7 +573,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p71.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 72,
@@ -589,7 +589,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 74,
@@ -597,7 +597,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p74.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 75,
@@ -621,7 +621,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p77.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 78,
@@ -645,7 +645,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p80.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 81,
@@ -669,7 +669,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p83.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 84,
@@ -685,7 +685,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p85.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 86,
@@ -693,7 +693,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p86.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 87,
@@ -757,7 +757,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p94.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 95,
@@ -765,7 +765,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p95.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 96,
@@ -773,7 +773,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p96.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 97,
@@ -781,7 +781,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 98,
@@ -789,7 +789,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p98.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 99,
@@ -821,7 +821,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p102.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 103,
@@ -845,7 +845,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p105.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 106,
@@ -853,7 +853,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p106.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 107,
@@ -869,7 +869,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p108.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 109,
@@ -893,7 +893,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p111.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 112,
@@ -909,7 +909,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p113.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 114,
@@ -917,7 +917,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p114.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 115,
@@ -941,7 +941,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p117.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 118,
@@ -949,7 +949,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p118.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 119,
@@ -957,7 +957,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p119.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 120,
@@ -973,7 +973,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p121.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 122,
@@ -981,7 +981,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p122.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 123,
@@ -997,7 +997,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p124.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 125,
@@ -1021,7 +1021,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p127.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 128,
@@ -1029,7 +1029,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p128.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 129,
@@ -1045,7 +1045,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p130.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 131,
@@ -1061,7 +1061,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p132.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 133,
@@ -1085,7 +1085,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p135.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 136,
@@ -1093,7 +1093,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p136.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 137,
@@ -1101,7 +1101,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 138,
@@ -1109,7 +1109,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 139,
@@ -1117,7 +1117,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p139.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 140,
@@ -1125,7 +1125,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p140.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 141,
@@ -1165,7 +1165,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p145.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 146,
@@ -1173,7 +1173,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p146.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 147,
@@ -1181,7 +1181,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p147.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 148,
@@ -1189,7 +1189,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p148.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 149,
@@ -1213,7 +1213,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p151.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 152,
@@ -1229,7 +1229,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p153.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 154,
@@ -1237,7 +1237,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p154.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 155,
@@ -1269,7 +1269,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p158.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 159,
@@ -1277,7 +1277,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 160,
@@ -1285,7 +1285,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p160.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 161,
@@ -1293,7 +1293,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 162,
@@ -1309,7 +1309,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p163.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 164,
@@ -1317,7 +1317,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p164.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 165,
@@ -1333,7 +1333,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 167,
@@ -1341,7 +1341,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p167.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 168,
@@ -1349,7 +1349,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p168.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 169,
@@ -1357,7 +1357,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 170,
@@ -1365,7 +1365,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 171,
@@ -1381,7 +1381,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 173,
@@ -1389,7 +1389,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p173.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 174,
@@ -1397,7 +1397,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 175,
@@ -1405,7 +1405,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p175.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 176,
@@ -1413,7 +1413,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 177,
@@ -1421,7 +1421,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p177.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 178,
@@ -1429,7 +1429,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p178.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 179,
@@ -1453,7 +1453,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p181.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 182,
@@ -1469,7 +1469,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p183.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 184,
@@ -1477,7 +1477,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p184.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 185,
@@ -1493,7 +1493,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 187,
@@ -1501,7 +1501,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p187.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 188,
@@ -1509,7 +1509,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 189,
@@ -1525,7 +1525,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p190.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 191,
@@ -1533,7 +1533,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p191.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 192,
@@ -1565,7 +1565,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p195.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 196,
@@ -1589,7 +1589,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p198.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 199,
@@ -1613,7 +1613,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p201.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 202,
@@ -1629,7 +1629,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p203.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 204,
@@ -1637,7 +1637,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p204.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 205,
@@ -1645,7 +1645,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p205.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 206,
@@ -1661,7 +1661,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 208,
@@ -1677,7 +1677,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 210,
@@ -1693,7 +1693,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p211.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 212,
@@ -1701,7 +1701,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p212.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 213,
@@ -1709,7 +1709,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 214,
@@ -1725,7 +1725,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p215.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 216,
@@ -1733,7 +1733,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p216.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 217,
@@ -1749,7 +1749,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p218.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 219,
@@ -1757,7 +1757,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p219.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 220,
@@ -1773,7 +1773,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p221.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 222,
@@ -1781,7 +1781,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p222.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 223,
@@ -1805,7 +1805,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p225.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 226,
@@ -1821,7 +1821,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p227.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 228,
@@ -1837,7 +1837,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p229.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 230,
@@ -1845,7 +1845,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p230.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 231,
@@ -1869,7 +1869,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p233.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 234,
@@ -1885,7 +1885,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 236,
@@ -1893,7 +1893,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 237,
@@ -1901,7 +1901,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p237.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 238,
@@ -1933,7 +1933,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 242,
@@ -1957,7 +1957,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 245,
@@ -1965,7 +1965,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p245.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 246,
@@ -1973,7 +1973,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p246.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 247,
@@ -1981,7 +1981,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p247.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 248,
@@ -1989,7 +1989,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p248.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 249,
@@ -1997,7 +1997,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 250,
@@ -2045,7 +2045,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p255.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 256,
@@ -2053,7 +2053,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p256.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 257,
@@ -2061,7 +2061,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p257.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 258,
@@ -2069,7 +2069,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p258.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 259,
@@ -2093,7 +2093,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p261.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 262,
@@ -2149,7 +2149,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 269,
@@ -2157,7 +2157,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p269.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 270,
@@ -2165,7 +2165,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p270.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 271,
@@ -2181,7 +2181,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p272.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 273,
@@ -2197,7 +2197,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p274.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 275,
@@ -2221,7 +2221,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p277.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 278,
@@ -2229,7 +2229,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p278.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 279,
@@ -2245,7 +2245,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p280.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 281,
@@ -2261,7 +2261,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p282.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 283,
@@ -2277,7 +2277,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 285,
@@ -2285,7 +2285,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 286,
@@ -2293,7 +2293,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 287,
@@ -2301,7 +2301,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p287.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 288,
@@ -2325,7 +2325,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p290.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 291,
@@ -2333,7 +2333,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p291.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 292,
@@ -2341,7 +2341,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p292.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 293,
@@ -2397,7 +2397,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p299.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 300,
@@ -2405,7 +2405,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p300.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 301,
@@ -2413,7 +2413,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p301.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 302,
@@ -2421,7 +2421,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p302.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 303,
@@ -2429,7 +2429,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 304,
@@ -2437,7 +2437,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 305,
@@ -2445,7 +2445,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 306,
