@@ -1126,3 +1126,119 @@ locales now say in a sentence that two of them come from a lighter register.
 Friuli-Venezia Giulia 4, Sardegna 4, Calabria 1. Eleven regions are marked `needs-human`,
 because discovery found only name-only lists or could not open what it found — Toscana's portal
 of 471 schede and Campania's per-product pages are the two worth doing by hand.
+
+---
+
+## 2026-09-17 (fourteenth pass) — the regional registers, shipped
+
+The background sweep's 53 staged candidates were adjudicated one at a time against the scheda
+they came from. **49 ship, 4 do not.** Per-region working notes stay in
+`.pipeline/seasonable/enrich/<region>/`.
+
+### The documents, and which of them print a year
+
+| Source | Publisher | Year |
+|---|---|---|
+| `pat-marche` | Regione Marche, Schede prodotti tradizionali | **2017**, printed as «aggiornamento 2017» on every page |
+| `pat-friuli` | ERSA, Il Cibario del Friuli Venezia Giulia | **2017**, printed as «© ERSA 2017» |
+| `pat-lazio` | ARSIAL, Lazio patrimonio agroalimentare | **2019**, «finito di stampare nel mese di aprile 2019» |
+| `pat-sardegna` | Regione Autonoma della Sardegna, schede identificative | none printed — consulted date shown |
+| `pat-sicilia` | Regione Siciliana, schede PAT | none printed — consulted date shown |
+
+Two of those years were proposed by the sweep from a **filename** (`…Marche 2017.pdf`) or an
+**upload path** (`/2023-06/`), which invariant 3 forbids. Marche's turned out to be printed
+inside as well; **Sicilia's did not**, so it spends the undated licence instead of carrying a
+2023 nobody printed. One host per region joins the allowlist, never a `regione.*` pattern.
+
+### Shipped — 49 products, 50 windows
+
+**Lazio, 21** · Aglio rosso di Proceno · Arancio Biondo di Fondi (3→15, the widest of these) ·
+Asparago delle Acque Albule · Broccoletto Sezzese · Carciofo di Sezze · Castagna di Terelle ·
+Cipolla di Nepi · Cocomero Pontino · Finocchio della Maremma Viterbese (20→8, wrapping) ·
+Fragolina di Nemi · Marrone Antrodocano · Marrone dei Monti Cimini · Marrone di Latera ·
+Marrone Segnino · Patata di Leonessa · Pomodoro Fiaschetta di Fondi (**two rows**, serra
+8→11 and pieno campo 12→13) · Pomodoro Scatolone di Bolsena · Pomodoro Spagnoletta del Golfo di
+Gaeta · Prugna Pizzutella di Picinisco · Rapa Catalogna di Roccasecca · Sarzefine di Zagarolo.
+
+**Sicilia, 14** · Aglio rosso di Nubia · Albicocco di Scillato · Arancia Biondo di Scillato ·
+Ciliegia Mastrantoni · Fava larga di Leonforte · Ficodindia della Valle del Torto · Fragola di
+Maletto · Fragolina di Ribera · Mele Cola · Oliva Nebba · Oliva nera di Buccheri · Ovaletto di
+Calatafimi · Pere Butirra d'estate · Pere Virgolosa.
+
+**Marche, 6** · Carciofo Monteluponese · Cavolfiore Precoce di Jesi · Cavolfiore Tardivo di Fano ·
+Marrone di Acquasanta Terme · Taccole · Visciole sciolte al sole.
+
+**Friuli, 4** · Radicchio canarino and Rosa di Gorizia, which share one sentence · Pera Pêr
+Martìn · Figo moro da Caneva, whose zone names Cordignano, so the row carries **Treviso** as well
+as Pordenone.
+
+**Sardegna, 4** · Capperi e capperoni di Selargius · Cipolla di Gonnosfanadiga · Cipolla rossa ·
+Ciliegia Barracocca di Villacidro.
+
+### Four rejected, and why
+
+- **Broccolo di rapa della Sila** — Calabria's only candidate, and its whole tier. The scheda (a
+  2005 fax scan, read by rendering the page) gives a *cultivation* period, «viene coltivato come
+  produzione precoce nei mesi di novembre-dicembre», and states harvest only relative to the
+  transplant: «è raccolto dopo circa 60 giorni dal trapianto». A modelled number, invariant 5.
+  Its province field says Cosenza while its territory field says the whole region, which would
+  have needed resolving even if the dates had held. **Calabria ships nothing.**
+- **Pomodoro Faino di Licata** — «avendo praticamente la presenza del frutto quasi tutto l'anno,
+  con una maggiore concentrazione delle produzioni nel periodo che va da gennaio a giugno». A peak,
+  not a window, and the page answers "is this being picked", not "is this at its peak".
+- **Actinidia** (Lazio) — the same crop in the same provinces already answers from **Kiwi Latina
+  IGP**, cited to its disciplinare. A PAT row beside it would show one fruit twice with two
+  different ends.
+- **Asparago verde di Canino e Montalto di Castro** (Lazio) — already shipped as **Asparago Verde
+  di Canino IGP**, whose two rows (0→11, 16→19) are better than this guide's single 0→19 union.
+
+### Conversions corrected in the reading
+
+Every candidate was re-read, and three conversions were wrong in a way no machine check could
+see — the quotes were verbatim, the months named, the arithmetic self-consistent:
+
+| Row | Sweep | Shipped | Why |
+|---|---|---|---|
+| Golden delicious / Renetta della Valle d'Aosta | 16→**21** | 16→**20** | «metà novembre» is the first half |
+| Ciliegia Barracocca di Villacidro | **8**→10 | **9**→10 | «fine maggio» is the second half |
+
+### Precedents leant on, named so the next pass can argue with them
+
+- **An «epoca di produzione» counts** where the scheda states no separate harvest: Aglio rosso di
+  Nubia and Ciliegia Mastrantoni ship on «Periodo di produzione», which is the Basilico Genovese
+  precedent from the tenth pass.
+- **A maturation window counts**: Cavolfiore Tardivo di Fano, Pere Butirra, Arancia Biondo di
+  Scillato — the Pesca di Delia precedent, «epoca di maturazione».
+- **A processed designation may carry its input's harvest**: Visciole sciolte al sole, on the
+  Brovada precedent from the eleventh pass.
+- **Table olives are in scope**: Oliva Nebba and Oliva nera di Buccheri, on the Oliva Ascolana
+  del Piceno precedent.
+
+### The generalised chestnut row shrank, on purpose
+
+Terelle (FR), Antrodoco (RI) and Segni (RM) now have chestnut rows of their own, so those three
+provinces drop out of `chestnut-generic`'s province list — the Torino precedent from the seventh
+pass, applied three times. The row's window and cited designations are unchanged; PAT rows do not
+feed the generalised tier, whose n≥3 rule was measured over designations.
+
+### Where this leaves the dataset
+
+**116 products — 65 protected designations and 51 PAT — 125 windows, 72 sources, 86 of 107
+provinces, 19 of 20 regions.** The copy moved with it: «sixty-seven products» became «a hundred
+and sixteen», and «a quarter of the provinces» became «a fifth».
+
+**Molise is the only region that answers nothing**, and it is finished rather than pending: no
+class-1.6 designation names a comune in it, and all 33 vegetable schede of its PAT atlas were
+read without finding a single window with both ends.
+
+Seven kinds now render the sprout fallback glyph rather than a mark of their own — apricot,
+cauliflower, onion, pea, broad bean, watermelon, salsify. The mark is deliberate as a fallback,
+but seven rows is enough to be worth drawing.
+
+### Still open
+
+Eleven regions are `needs-human` in the sweep's queue: Lombardia, Puglia, Abruzzo, Umbria,
+Piemonte, Veneto, Emilia-Romagna, Liguria, Toscana, Basilicata and Campania. Discovery found only
+name-only lists for most, could not open Abruzzo's PDF, and declined Puglia's atlas because a
+university hosts it. **Toscana's portal of 471 schede and Campania's per-product pages are the
+two worth doing by hand** — and Lombardia matters most, with eleven silent provinces.

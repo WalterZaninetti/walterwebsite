@@ -168,6 +168,164 @@ export const windows: readonly Window[] = [
   w('pescabivona', ['ag'], 'open-field', 10, 19, 'pescabivona'),
   // "viene effettuata esclusivamente a mano nei mesi di luglio, agosto e settembre"
   w('susina-dro', ['tn'], 'open-field', 12, 17, 'susina-dro'),
+  // ── PAT: the regional registers ──────────────────────────────────────────
+  // Every row below was read in the scheda itself before it shipped, and two
+  // were corrected in the reading: the sweep had Valle d'Aosta ending at 21
+  // and Villacidro's cherry starting at 8. Marche's sixth pass lesson applies
+  // here too — the quote can be verbatim and the row still wrong.
+
+  // ── Marche, Schede prodotti tradizionali 2017 ────────────────────────────
+  // "La raccolta avviene tra aprile e maggio" — "Territorio della provincia di
+  //  Macerata, principalmente nel comune di Montelupone"
+  w('carciofo-monteluponese', ['mc'], 'open-field', 6, 9, 'pat-marche'),
+  // "Il cavolfiore viene trapiantato dalla prima decade di agosto fino alla
+  //  prima decade di settembre; si raccoglie in novembre e in dicembre" — the
+  //  clause before the semicolon is the transplant, not the harvest.
+  w('cavolfiore-jesi', ['ap', 'an'], 'open-field', 20, 23, 'pat-marche'),
+  // "il trapianto estivo avviene a fine agosto-primi di settembre e matura da
+  //  fine febbraio a metà maggio dell'anno successivo" — a maturation window,
+  //  on the Pesca di Delia precedent, and it wraps into the next year.
+  w('cavolfiore-fano', ['pu', 'an'], 'open-field', 3, 8, 'pat-marche'),
+  // "La raccolta dei marroni avviene in ottobre-novembre"
+  w('marrone-acquasanta', ['ap'], 'open-field', 18, 21, 'pat-marche'),
+  // "Il periodo di raccolta è compreso tra aprile e giugno" — "Tutto il
+  //  territorio regionale, particolarmente nelle zone pianeggianti della
+  //  provincia di Ascoli Piceno"
+  w('taccole-marche', ['pu', 'an', 'mc', 'ap', 'fm'], 'open-field', 6, 11, 'pat-marche'),
+  // "Nei mesi di giugno - luglio, i frutti ben maturi si raccolgono a mano" —
+  //  the designation is a sugar preserve and the window is its input's
+  //  harvest, which is the Brovada precedent.
+  w('visciole-sole', ['mc'], 'open-field', 10, 13, 'pat-marche'),
+
+  // ── Friuli-Venezia Giulia, Il Cibario 2017 ──────────────────────────────
+  // "La raccolta avviene con i primi freddi (fine ottobre-novembre)" — one
+  //  sentence for both ecotypes, "dai contadini di varie zone del Goriziano"
+  w('radicchio-canarino', ['go'], 'open-field', 19, 21, 'pat-friuli'),
+  w('rosa-gorizia', ['go'], 'open-field', 19, 21, 'pat-friuli'),
+  // "L'epoca di raccolta va da fine ottobre a inizio novembre, a seconda
+  //  dell'altitudine" — Carnia, Canale del Ferro, Val Resia, Val Canale (UD)
+  //  and "la montagna dell'Alto Pordenonese".
+  w('pera-per-martin', ['ud', 'pn'], 'open-field', 19, 20, 'pat-friuli'),
+  // "per i fichi nati in giugno (fioroni) ... si arriva alla raccolta verso la
+  //  prima metà di luglio, mentre da metà agosto a metà-fine settembre inizia
+  //  la seconda raccolta" — two flowerings, so the row is their union. The
+  //  zone names Caneva (PN) and Cordignano, which is in Treviso.
+  w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
+
+  // ── Sardegna, schede identificative ─────────────────────────────────────
+  // "La raccolta dei capperi avviene in modo scalare, inizia l'ultima settimana
+  //  di maggio e si conclude nella prima decade di settembre"
+  w('cappero-selargius', ['ca'], 'open-field', 9, 16, 'pat-sardegna'),
+  // "Ha un ciclo a giorno lungo con semina fine estate e raccolta a maggio-giugno"
+  w('cipolla-gonnosfanadiga', ['su'], 'open-field', 8, 11, 'pat-sardegna'),
+  // "La raccolta avviene nel periodo di maggio giugno" — "Tutto il territorio
+  //  regionale con particolare riferimento alla zona della Marmilla"
+  w('cipolla-rossa-sarda', ['ss', 'nu', 'ca', 'or', 'su'], 'open-field', 8, 11, 'pat-sardegna'),
+  // "è una ciliegia tardiva, matura e viene raccolta tra fine maggio e inizi di
+  //  giugno" — "fine maggio" is the second half, so 9 and not the 8 the sweep
+  //  staged.
+  w('ciliegia-barracocca', ['su'], 'open-field', 9, 10, 'pat-sardegna'),
+
+  // ── Sicilia, schede PAT ─────────────────────────────────────────────────
+  // "Periodo di produzione: Da maggio a luglio" — an epoca di produzione
+  //  rather than a raccolta, which is the Basilico Genovese precedent.
+  w('aglio-nubia', ['tp'], 'open-field', 8, 13, 'pat-sicilia'),
+  // "la raccolta che si svolge nelle prime due decadi di giugno"
+  w('albicocco-scillato', ['pa'], 'open-field', 10, 11, 'pat-sicilia'),
+  // "maturazione e raccolta marzo/aprile"
+  w('arancia-scillato', ['pa'], 'open-field', 4, 7, 'pat-sicilia'),
+  // "Periodo di produzione – giugno e luglio"
+  w('ciliegia-mastrantoni', ['ct'], 'open-field', 10, 13, 'pat-sicilia'),
+  // "Semina manuale a metà novembre, scerbatura manuale, raccolta tra maggio e
+  //  giugno" — the November date is the sowing.
+  w('fava-leonforte', ['en'], 'open-field', 8, 11, 'pat-sicilia'),
+  // "Le operazioni di raccolta iniziano nel mese di ottobre e si protraggono
+  //  sino al mese di dicembre"
+  w('ficodindia-valle-torto', ['pa'], 'open-field', 18, 23, 'pat-sicilia'),
+  // "il calendario di commercializzazione coincide con quello di maturazione e
+  //  raccolta che inizia da maggio e si protrae fino a giugno"
+  w('fragola-maletto', ['ct'], 'open-field', 8, 11, 'pat-sicilia'),
+  // "La stagione di raccolta è relativamente breve, comincia a maturare nei
+  //  primi di aprile fino alla fine di maggio"
+  w('fragolina-ribera', ['ag'], 'open-field', 6, 9, 'pat-sicilia'),
+  // "Il frutto viene raccolto non completamente maturo a metà – fine ottobre" —
+  //  the fruttaio ripening and "si conserva fino ad aprile" are storage the
+  //  scheda never gives a start for, so no stored row.
+  w('mele-cola', ['ct'], 'open-field', 18, 19, 'pat-sicilia'),
+  // "La raccolta delle olive avviene per brucatura nel periodo novembre-dicembre"
+  w('oliva-nebba', ['pa'], 'open-field', 20, 23, 'pat-sicilia'),
+  // "Le olive nere vengono raccolte nei mesi di novembre e dicembre"
+  w('oliva-buccheri', ['sr'], 'open-field', 20, 23, 'pat-sicilia'),
+  // "La raccolta ... interessa il periodo che va dal 20 maggio fino ai primi di
+  //  luglio"
+  w('ovaletto-calatafimi', ['tp'], 'open-field', 9, 12, 'pat-sicilia'),
+  // "La maturazione avviene dalla seconda quindicina di luglio a tutto agosto"
+  w('pera-butirra', ['ct'], 'open-field', 13, 15, 'pat-sicilia'),
+  // "Il frutto viene raccolto non completamente maturo tra settembre ed ottobre"
+  w('pera-virgolosa', ['ct'], 'open-field', 16, 19, 'pat-sicilia'),
+
+  // ── Lazio, ARSIAL guide 2019 ────────────────────────────────────────────
+  // "La raccolta si esegue manualmente verso la fine di giugno, inizio luglio"
+  w('aglio-proceno', ['vt'], 'open-field', 11, 12, 'pat-lazio'),
+  // "La raccolta ... inizia da fine febbraio, nel comune di Fondi e si protrae
+  //  fino alla fine di luglio-agosto, nelle località di Suio, nel Comune di
+  //  Castelforte" — thirteen half-months, and wide because the zone is.
+  w('arancio-fondi', ['lt'], 'open-field', 3, 15, 'pat-lazio'),
+  // "I turioni si raccolgono a mano dall'ultima decade di marzo fino all'inizio
+  //  di maggio"
+  w('asparago-acque-albule', ['rm'], 'open-field', 5, 8, 'pat-lazio'),
+  // "Si semina in agosto ed è raccolto fra gennaio e febbraio"
+  w('broccoletto-sezze', ['lt'], 'open-field', 0, 3, 'pat-lazio'),
+  // "Si impiantano i carducci da agosto a fine ottobre e si raccolgono i
+  //  carciofi a marzo-aprile"
+  w('carciofo-sezze', ['lt'], 'open-field', 4, 7, 'pat-lazio'),
+  // "La raccolta delle castagne avviene manualmente, dalla metà di settembre
+  //  alla fine di ottobre"
+  w('castagna-terelle', ['fr'], 'open-field', 16, 19, 'pat-lazio'),
+  // "La raccolta avviene tra la fine di luglio e i primi di agosto, quando le
+  //  foglie si ingialliscono"
+  w('cipolla-nepi', ['vt'], 'open-field', 13, 14, 'pat-lazio'),
+  // "La raccolta, operazione colturale delicatissima, avviene da maggio a
+  //  settembre"
+  w('cocomero-pontino', ['lt'], 'open-field', 8, 17, 'pat-lazio'),
+  // "L'epoca di raccolta inizia il 1 novembre e si protrae fino al 15 maggio"
+  w('finocchio-maremma', ['vt'], 'open-field', 20, 8, 'pat-lazio'),
+  // "La raccolta si effettua esclusivamente a mano ogni 4-5 giorni, nel periodo
+  //  che va dai primi di maggio fino ad ottobre"
+  w('fragolina-nemi', ['rm'], 'open-field', 8, 19, 'pat-lazio'),
+  // "I frutti, raccolti tra la metà del mese di settembre e la metà di novembre"
+  w('marrone-antrodocano', ['ri'], 'open-field', 16, 20, 'pat-lazio'),
+  // "La raccolta, eseguita tra il 15 settembre ed il 15 novembre di ogni anno"
+  //  — the scheda also says, of its three cultivars, "La raccolta, infatti,
+  //  avviene da settembre a novembre".
+  w('marrone-cimini', ['vt'], 'open-field', 16, 20, 'pat-lazio'),
+  // "La raccolta dei marroni avviene manualmente per tutto il mese di ottobre"
+  w('marrone-latera', ['vt'], 'open-field', 18, 19, 'pat-lazio'),
+  // "La raccolta dei Marroni viene eseguita manualmente per tutto il mese di
+  //  ottobre"
+  w('marrone-segnino', ['rm'], 'open-field', 18, 19, 'pat-lazio'),
+  // "La raccolta semi-meccanica si effettua a fine settembre inizio ottobre"
+  w('patata-leonessa', ['ri'], 'open-field', 17, 18, 'pat-lazio'),
+  // "La raccolta in serra avviene a maggio–giugno; in pieno campo, il Pomodoro
+  //  fiaschetta raccoglie a luglio" — one scheda, two environments, two rows,
+  //  cited once, on the Finocchio di Isola Capo Rizzuto precedent.
+  w('pomodoro-fiaschetta', ['lt'], 'greenhouse', 8, 11, 'pat-lazio'),
+  w('pomodoro-fiaschetta', ['lt'], 'open-field', 12, 13, 'pat-lazio'),
+  // "La raccolta scalare si effettua esclusivamente a mano, dalla seconda metà
+  //  di luglio fino al mese di settembre"
+  w('pomodoro-scatolone', ['vt'], 'open-field', 13, 17, 'pat-lazio'),
+  // "La raccolta si effettua da giugno ad agosto"
+  w('pomodoro-spagnoletta', ['lt'], 'open-field', 10, 15, 'pat-lazio'),
+  // "L'epoca di raccolta, effettuata a mano ricade nella 1° decade di agosto" /
+  //  "La Prugna pizzutella di Picinisco, raccolta nel mese di agosto"
+  w('prugna-picinisco', ['fr'], 'open-field', 14, 15, 'pat-lazio'),
+  // "le infiorescenze che, appena formate dopo i primi freddi, vengono raccolte
+  //  da dicembre fino a marzo"
+  w('rapa-catalogna-roccasecca', ['fr'], 'open-field', 22, 5, 'pat-lazio'),
+  // "la raccolta avviene, a mano, a partire dal mese di novembre fino a
+  //  dicembre–gennaio"
+  w('sarzefine-zagarolo', ['rm'], 'open-field', 20, 1, 'pat-lazio'),
+
   // Union of the three cherry designations, all of which state 1 May - 31 July
   // despite sitting 450 km apart in Campania, Toscana and Emilia-Romagna.
   g(
@@ -187,7 +345,9 @@ export const windows: readonly Window[] = [
   // not denied anything by that: it answers from Lunigiana's own documented row.
   g(
     'chestnut-generic',
-    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'fr', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ri', 'rm', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
+    // Frosinone, Rieti and Roma dropped out when Terelle, Antrodoco and Segni
+    // gave them a chestnut row of their own — the Torino precedent, three times.
+    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
     16,
     21,
     [

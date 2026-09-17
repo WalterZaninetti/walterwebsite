@@ -67,21 +67,29 @@ const masaf = (id: string, name: string, url: string, accessed = '2026-09-03'): 
 });
 
 /**
- * A Region's *scheda identificativa* for a prodotto agroalimentare
- * tradizionale, published by the Region that keeps the list.
+ * A Region's own publication of its prodotti agroalimentari tradizionali —
+ * a *scheda identificativa* per product, or a volume collecting them.
  *
- * Undated, like the ministry's consolidated disciplinari and for the same
- * reason: the scheda prints the law that requires it and no year of its own.
- * The reader is shown the day it was consulted.
+ * Dated where the volume prints a year (Marche's «aggiornamento 2017», ERSA's
+ * «© ERSA 2017», ARSIAL's «finito di stampare nel mese di aprile 2019»), and
+ * undated where it prints none, like the ministry's consolidated disciplinari
+ * and for the same reason: the scheda prints the law that requires it and
+ * nothing else. The reader is then shown the day it was consulted.
+ *
+ * A year is read off the document's own page, never off a filename or an
+ * upload path — the sweep that found these proposed 2017 for Marche from its
+ * URL and 2023 for Sicilia from its folder, and only one of those turned out
+ * to be printed inside.
  *
  * Why a third publisher at all: the EU register names nothing in Valle
  * d'Aosta, so without these the region answers nothing. A PAT is a lighter
  * instrument than a disciplinare and the row's `PAT` suffix says so.
  */
-const pat = (id: string, name: string, url: string, accessed: string): Source => ({
+const pat = (id: string, name: string, url: string, accessed: string, year?: number): Source => ({
   id,
   name,
   url,
+  year,
   accessed,
 });
 
@@ -119,6 +127,40 @@ export const sources: readonly Source[] = [
   masaf('arancia-ribera', 'Disciplinare di produzione della denominazione d’origine protetta “ARANCIA DI RIBERA”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/e%252F0%252F1%252FD.52948b4d059678acd4ea/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('mele-trentino', 'Disciplinare di produzione della indicazione geografica protetta Mele del Trentino', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/5%252F7%252Fc%252FD.3e793f8037ce3e4e7ab1/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('limone-sorrento', 'Disciplinare di produzione dell’indicazione geografica protetta “Limone di Sorrento”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/a%252F7%252Fc%252FD.04cac7bb06e6f0e65527/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
+  // One document per region, cited by every row read from it.
+  pat(
+    'pat-marche',
+    'Regione Marche, Schede prodotti tradizionali — Prodotti vegetali allo stato naturale o trasformati (aggiornamento 2017)',
+    'https://static.regione.marche.it/Portals/0/Agricoltura/qualita/Prodotti%20Tradizionali/Schede%20prodotti%20tradizionali%20regione%20Marche%202017.pdf',
+    '2026-09-17',
+    2017,
+  ),
+  pat(
+    'pat-friuli',
+    'ERSA Friuli Venezia Giulia, Il Cibario del Friuli Venezia Giulia — Atlante dei Prodotti della Tradizione',
+    'https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/agricoltura-foreste/allegati/CibarioERSAedizione2017-2.pdf',
+    '2026-09-17',
+    2017,
+  ),
+  pat(
+    'pat-lazio',
+    'ARSIAL, Lazio patrimonio agroalimentare tra biodiversità e tradizione — Prodotti vegetali allo stato naturale o trasformati',
+    'https://www.arsial.it/wp-content/uploads/2025/06/Guida_Arsial_completo.pdf',
+    '2026-09-17',
+    2019,
+  ),
+  pat(
+    'pat-sardegna',
+    'Regione Autonoma della Sardegna, Elenco prodotti agroalimentari tradizionali — Prodotti vegetali allo stato naturale o trasformati, schede identificative',
+    'https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/b251d860-4788-4ec1-ae2b-e038ef454c58/6.-prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf',
+    '2026-09-17',
+  ),
+  pat(
+    'pat-sicilia',
+    'Regione Siciliana, Prodotti Agroalimentari Tradizionali — schede identificative, prodotti vegetali allo stato naturale o trasformati',
+    'https://www.regione.sicilia.it/system/files/2023-06/Schede%20PAT%20Sicilia%202023.pdf',
+    '2026-09-17',
+  ),
   pat(
     'golden-valle-aosta',
     "Scheda identificativa — Golden delicious della Valle d'Aosta, elenco regionale dei prodotti agroalimentari tradizionali",
