@@ -277,10 +277,10 @@
       "region": "piemonte",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.087,
+      "note": "discovered 0 document(s): Regione Piemonte's official PAT page only links to the national MASAF name-only list and to the Piemonte Agriqualità portal, whose PAT database is a JS-rendered interactive t"
     },
     {
       "id": "piemonte:calendar",

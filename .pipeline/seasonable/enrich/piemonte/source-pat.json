@@ -1,0 +1,14 @@
+{
+  "region": "piemonte",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.regione.piemonte.it/web/temi/agricoltura/promozione-qualita-educazione-alimentare/prodotti-agroalimentari-tradizionali-pat",
+    "http://www.piemonteagri.it/qualita/it/produzioni-tipiche-2/pat",
+    "https://www.politicheagricole.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/398"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Piemonte's official PAT page only links to the national MASAF name-only list and to the Piemonte Agriqualità portal, whose PAT database is a JS-rendered interactive tool with no stable per-category scheda PDF/URL found within the tool budget."
+}
