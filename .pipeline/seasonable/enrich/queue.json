@@ -317,10 +317,10 @@
       "region": "emilia-romagna",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.148,
+      "note": "discovered 0 document(s): Emilia-Romagna's regional page only publishes the Elenco (Allegato C) with product names by category, no scheda text per product for prodotti vegetali; no PAT category PDF wi"
     },
     {
       "id": "emilia-romagna:calendar",

@@ -1,0 +1,16 @@
+{
+  "region": "emilia-romagna",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://agricoltura.regione.emilia-romagna.it/servizi/come-fare-per/prodotti-agroalimentari-tradizionali",
+    "https://agricoltura.regione.emilia-romagna.it/produzioni-agroalimentari/temi/qualita/prodotti-tradizionali",
+    "https://agricoltura.regione.emilia-romagna.it/dop-igp/altri-regimi-di-qualita/prodotti-tradizionali",
+    "https://agricoltura.regione.emilia-romagna.it/dop-igp/altri-regimi-di-qualita/prodotti-tradizionali/pubblicazioni-pat",
+    "https://agricoltura.regione.emilia-romagna.it/dop-igp/altri-regimi-di-qualita/prodotti-tradizionali/elenco-regionale-dei-prodotti-agroalimentari-tradizionali-ventiquattresima-revisione/@@download/file"
+  ],
+  "rejectedUrls": [],
+  "note": "Emilia-Romagna's regional page only publishes the Elenco (Allegato C) with product names by category, no scheda text per product for prodotti vegetali; no PAT category PDF with scheda descriptions was found on the region's site."
+}
