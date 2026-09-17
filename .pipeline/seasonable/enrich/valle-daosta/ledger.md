@@ -9,4 +9,4 @@
 
 ## 2026-09-17 — shipped
 
-Both rows ship as , 16→20, province ao. The staged end was 21; «metà novembre» is the first half of the month, so it is 20. Recorded in , thirteenth pass.
+Both rows ship as `PAT`, 16→20, province ao. The staged end was 21; «metà novembre» is the first half of the month, so it is 20. Recorded in `.pipeline/seasonable/sources-ledger.md`, thirteenth pass.
