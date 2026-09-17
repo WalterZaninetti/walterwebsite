@@ -377,8 +377,8 @@
       "region": "lazio",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
-      "attempts": 2,
+      "status": "blocked",
+      "attempts": 3,
       "costUsd": 2.768,
       "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
     },
