@@ -204,6 +204,11 @@ export async function judge(options) {
 
       const first = await judgeBatch(ctx, batch, known, model, effort);
       spent += first.cost;
+      // Pages with a date on them always name at least one product. An empty
+      // parse is a failed call, and marking its pages judged would lose them.
+      if (first.records.length === 0) {
+        throw new Error(`batch p${batch.pages[0].n}–${batch.pages.at(-1).n} parsed to no records ($${first.cost.toFixed(3)}): ${first.junk.join(' ').slice(0, 200)}`);
+      }
 
       const good = [];
       const bad = [];

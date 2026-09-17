@@ -124,18 +124,48 @@ export function callModel({ region, stage, model, effort, system, prompt, tools 
   });
 }
 
-/** JSON lines out of a model reply, tolerating code fences and stray prose. */
+/**
+ * JSON objects out of a model reply. Asked for one object per line, a model
+ * sometimes returns an array, or every object on a single line — Marche's first
+ * batch did, and a line-by-line parser threw away $0.24 of judgement. So this
+ * scans for top-level objects wherever they are, respecting strings, and
+ * reports whatever is left over as junk.
+ */
 export function parseJsonLines(text) {
   const records = [];
   const junk = [];
-  for (const raw of text.split('\n')) {
-    const line = raw.trim();
-    if (!line || line.startsWith('```')) continue;
-    try {
-      records.push(JSON.parse(line));
-    } catch {
-      junk.push(line);
+  let depth = 0;
+  let start = -1;
+  let inString = false;
+  let escaped = false;
+  let last = 0;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (c === '\\') escaped = true;
+      else if (c === '"') inString = false;
+      continue;
+    }
+    if (c === '"' && depth > 0) inString = true;
+    else if (c === '{') {
+      if (depth === 0) start = i;
+      depth++;
+    } else if (c === '}' && depth > 0) {
+      depth--;
+      if (depth === 0) {
+        const between = text.slice(last, start).replace(/```\w*|[\s,\[\]]/g, '');
+        if (between) junk.push(between.slice(0, 200));
+        try {
+          records.push(JSON.parse(text.slice(start, i + 1)));
+        } catch {
+          junk.push(text.slice(start, Math.min(i + 1, start + 200)));
+        }
+        last = i + 1;
+      }
     }
   }
+  const tail = text.slice(last).replace(/```\w*|[\s,\[\]]/g, '');
+  if (tail) junk.push(tail.slice(0, 200));
   return { records, junk };
 }
