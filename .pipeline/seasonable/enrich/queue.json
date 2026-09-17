@@ -91,10 +91,10 @@
         "lo",
         "mb"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.092,
-      "note": "extracted 27 pages, 18 skipped by the pre-filter"
+      "costUsd": 0.141,
+      "note": "1 records, 0 for review, 0 pages pending"
     },
     {
       "id": "puglia:pat",

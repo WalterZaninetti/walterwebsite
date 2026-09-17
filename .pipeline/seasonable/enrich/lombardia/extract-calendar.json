@@ -13,7 +13,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/lombardia/corpus/calendar-doc0-p1.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 2,
@@ -45,7 +45,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 6,
@@ -69,7 +69,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 9,
@@ -93,7 +93,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 12,
@@ -101,7 +101,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 13,
@@ -165,7 +165,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -181,7 +181,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 23,
@@ -197,7 +197,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 25,
@@ -221,7 +221,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         }
       ]
     }
