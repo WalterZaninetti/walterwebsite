@@ -459,8 +459,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.08,
-      "note": "extracted 104 pages, 52 skipped by the pre-filter"
+      "costUsd": 0.469,
+      "note": "17 records, 1 for review, 39 pages pending"
     },
     {
       "id": "sicilia:calendar",

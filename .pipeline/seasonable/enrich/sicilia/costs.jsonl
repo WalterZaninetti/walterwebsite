@@ -1,1 +1,3 @@
 {"at":"2026-09-17T13:44:25.387Z","stage":"discover:pat","model":"sonnet","effort":"low","costUsd":0.08042020000000001,"input":12,"cacheRead":58441,"cacheWrite":5788,"output":1646,"error":null}
+{"at":"2026-09-17T13:46:39.272Z","stage":"judge:pat:p7,9,11,13,21,23,24,25,26,27,29,30,31","model":"sonnet","effort":"low","costUsd":0.2858752,"input":2,"cacheRead":2336,"cacheWrite":42151,"output":8538,"error":null}
+{"at":"2026-09-17T13:46:49.493Z","stage":"judge:pat:p25,26,27,29,30,31","model":"sonnet","effort":"low","costUsd":0.1027682,"input":2,"cacheRead":2336,"cacheWrite":18932,"output":1245,"error":null}
