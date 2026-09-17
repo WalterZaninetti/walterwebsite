@@ -35,10 +35,10 @@
       "silentProvincesAtStart": [
         "ao"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.09,
-      "note": "1 records, 0 for review, 2 pages pending"
+      "costUsd": 0.117,
+      "note": "1 records, 0 for review, 0 pages pending"
     },
     {
       "id": "valle-daosta:calendar",

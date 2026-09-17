@@ -27,7 +27,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 2,
@@ -35,7 +35,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/valle-daosta/corpus/pat-doc1-p2.png",
-          "status": "pending"
+          "status": "judged"
         }
       ]
     }
