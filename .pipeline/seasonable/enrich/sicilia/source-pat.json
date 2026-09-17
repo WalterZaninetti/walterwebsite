@@ -2,7 +2,7 @@
   "region": "sicilia",
   "tier": "pat",
   "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
+  "confirmed": true,
   "documents": [
     {
       "title": "Schede PAT Sicilia 2023",
@@ -18,5 +18,6 @@
     "https://www.regione.sicilia.it/system/files/2023-06/Schede%20PAT%20Sicilia%202023.pdf"
   ],
   "rejectedUrls": [],
-  "note": "Official Regione Siciliana page hosts a single combined PDF of all PAT schede (all categories including prodotti vegetali) dated 2023, the most recent version linked from the official agriculture department page; the older pti.regione.sicilia.it URL returned a connection error and appears deprecated."
+  "note": "Official Regione Siciliana page hosts a single combined PDF of all PAT schede (all categories including prodotti vegetali) dated 2023, the most recent version linked from the official agriculture department page; the older pti.regione.sicilia.it URL returned a connection error and appears deprecated.",
+  "confirmedNote": "read and adjudicated 2026-09-17; see sources-ledger.md fourteenth pass"
 }

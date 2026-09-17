@@ -68,3 +68,7 @@
 ## 2026-09-17 — calendar judge, pages 1, 2 (sonnet/low)
 
 No fruit or vegetable product on these pages: regional availability calendar with no statement about where produce is grown; rejected as availability, not harvest
+
+## 2026-09-17 — adjudicated
+
+4 shipped, 0 rejected on re-reading. Details in `.pipeline/seasonable/sources-ledger.md`, fourteenth pass.

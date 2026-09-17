@@ -2,7 +2,7 @@
   "region": "friuli-venezia-giulia",
   "tier": "pat",
   "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
+  "confirmed": true,
   "documents": [
     {
       "title": "Atlante dei Prodotti della Tradizione - Il Cibario del Friuli Venezia Giulia (ERSA, edizione 2017)",
@@ -16,5 +16,6 @@
     "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/agricoltura-foreste/allegati/CibarioERSAedizione2017-2.pdf"
   ],
   "rejectedUrls": [],
-  "note": "Regional ERSA-published PAT atlas with product schede including vegetable products, confirmed 200 OK PDF on regione.fvg.it; could not further verify per-category split due to budget limits."
+  "note": "Regional ERSA-published PAT atlas with product schede including vegetable products, confirmed 200 OK PDF on regione.fvg.it; could not further verify per-category split due to budget limits.",
+  "confirmedNote": "read and adjudicated 2026-09-17; see sources-ledger.md fourteenth pass"
 }

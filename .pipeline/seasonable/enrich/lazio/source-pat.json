@@ -2,7 +2,7 @@
   "region": "lazio",
   "tier": "pat",
   "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
+  "confirmed": true,
   "documents": [
     {
       "title": "Lazio Patrimonio Agroalimentare tra Biodiversità e Tradizione",
@@ -20,5 +20,6 @@
     "https://www.arsial.it/wp-content/uploads/2025/06/Guida_Arsial_completo.pdf"
   ],
   "rejectedUrls": [],
-  "note": "ARSIAL (regional agency, part of Regione Lazio) publishes this single comprehensive PDF guide with technical-historical schede for all PAT categories including 'Vegetali'; the vegetali category page itself loads schede dynamically via JS with no static links found."
+  "note": "ARSIAL (regional agency, part of Regione Lazio) publishes this single comprehensive PDF guide with technical-historical schede for all PAT categories including 'Vegetali'; the vegetali category page itself loads schede dynamically via JS with no static links found.",
+  "confirmedNote": "read and adjudicated 2026-09-17; see sources-ledger.md fourteenth pass"
 }

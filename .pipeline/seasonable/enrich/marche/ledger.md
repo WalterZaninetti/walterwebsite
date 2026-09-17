@@ -89,3 +89,7 @@ It judged the second page of each two-page scheda without the first, where the n
 
 - **MELA ROZZA** — was `candidate` on a single half-month; now `rejected`, a point in time, not a window.
 - **PERA ANGELICA** — was `candidate` on a single half-month; now `rejected`, a point in time, not a window.
+
+## 2026-09-17 — adjudicated
+
+6 shipped, 0 rejected on re-reading. Details in `.pipeline/seasonable/sources-ledger.md`, fourteenth pass.

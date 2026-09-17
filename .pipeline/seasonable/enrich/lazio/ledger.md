@@ -157,3 +157,7 @@ giunge anche a novembre.»
 - **Pomodoro Scatolone di Bolsena** (p.271) — `candidate` open-field 13→17. «La raccolta scalare si effettua esclusivamente a mano, dalla seconda metà di luglio fino al mese di settembre.»
 - **Uva da Tavola Pizzutello di Tivoli** (p.282) — `silent`. no dated harvest window stated.
 - **Zucchina con il Fiore** (p.285) — `silent`. harvest timing given relative to flowering, not calendar dates.
+
+## 2026-09-17 — adjudicated
+
+21 shipped, 2 rejected on re-reading. Details in `.pipeline/seasonable/sources-ledger.md`, fourteenth pass.

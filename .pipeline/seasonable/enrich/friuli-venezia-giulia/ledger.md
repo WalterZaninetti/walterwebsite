@@ -52,3 +52,7 @@ No fruit or vegetable product on these pages: bibliography, acknowledgements, an
 ## 2026-09-17 — calendar judge, pages 1, 10, 18, 19, 20, 23, 24, 33, 34, 38, 51, 70, 71, 72, 73 (sonnet/low)
 
 No fruit or vegetable product on these pages: school catering guidelines document, not PAT schede or a seasonality calendar
+
+## 2026-09-17 — adjudicated
+
+4 shipped, 0 rejected on re-reading. Details in `.pipeline/seasonable/sources-ledger.md`, fourteenth pass.

@@ -2,7 +2,7 @@
   "region": "calabria",
   "tier": "pat",
   "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
+  "confirmed": true,
   "documents": [
     {
       "title": "Schede n°66-68 Prodotti vegetali allo stato naturale o trasformati",
@@ -35,5 +35,6 @@
     "https://www.regione.calabria.it/wp-content/uploads/2025/11/97-138-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf"
   ],
   "rejectedUrls": [],
-  "note": "Found official Regione Calabria PAT PDF schede for the vegetable products category, split into three files covering sheets 66-68, 70-95, and 97-138."
+  "note": "Found official Regione Calabria PAT PDF schede for the vegetable products category, split into three files covering sheets 66-68, 70-95, and 97-138.",
+  "confirmedNote": "read and adjudicated 2026-09-17; see sources-ledger.md fourteenth pass"
 }

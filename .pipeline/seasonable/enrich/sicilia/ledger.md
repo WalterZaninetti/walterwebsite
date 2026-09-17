@@ -67,3 +67,7 @@
 ## 2026-09-17 — pat judge, pages 71, 73, 75, 80, 83, 84, 91, 94, 97, 98, 99, 100, 103 (sonnet/low)
 
 No fruit or vegetable product on these pages: recipe/product schede for processed foods (dolci, pane, gastronomia, prodotti ittici, miele, ricotta) with no fresh fruit/vegetable harvest windows
+
+## 2026-09-17 — adjudicated
+
+14 shipped, 1 rejected on re-reading. Details in `.pipeline/seasonable/sources-ledger.md`, fourteenth pass.
