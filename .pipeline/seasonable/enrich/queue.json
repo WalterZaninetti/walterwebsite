@@ -377,10 +377,10 @@
       "region": "lazio",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 3.356,
-      "note": "19 records, 1 for review, 16 pages pending"
+      "costUsd": 3.68,
+      "note": "14 records, 0 for review, 0 pages pending"
     },
     {
       "id": "lazio:calendar",

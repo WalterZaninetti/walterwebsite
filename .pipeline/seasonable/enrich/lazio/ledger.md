@@ -140,3 +140,20 @@ giunge anche a novembre.»
 - **PATATA TURCHESA** (p.266) — `silent`. no dated harvest statement, only sowing/planting dates given.
 - **POMODORO CORNO DI TORO** (p.268) — `silent`. harvest mentioned only as maturity point, no calendar dates given.
 - **OLIVE DA MENSA (olive sott’olio, olive essiccate)** (p.261) — `needs review` open-field 20→1. quote mentions varieties: take the union across them and flag "variety-union". «Olive sott’olio: oliva della varietà Carboncella, di colore marronescuro tendente al nero e dal sapore fruttato, raccolta tra novembre e gennaio e utilizzata con il pane e come stuzzichino per aperitivi. … Olive essiccate: oliva della varietà Carboncella, raccolta tra novembre e gennaio, detta localmente aliva seccata nu camminu, dal sapore leggermente affumicato.»
+
+## 2026-09-17 — pat judge, pages 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287 (sonnet/low, $0.324 so far)
+
+- **Pomodoro Spagnoletta del Golfo di Gaeta e Formia** (p.272) — `candidate` open-field 10→15. «La raccolta si effettua da giugno ad agosto.»
+- **Prugna Pizzutella di Picinisco** (p.273) — `candidate` open-field 14→15. «L'epoca di raccolta, effettuata a mano ricade nella 1° decade di agosto. … La Prugna pizzutella di Picinisco, raccolta nel mese di agosto, è destinata alla vendita per il consumo tal quale oppure trasformata in gustose marmellate, o più tradizionalmente essiccata.»
+- **Rapa Catalogna di Roccasecca** (p.274) — `candidate` open-field 22→5. «è rinomata per le infiorescenze che, appena formate dopo i primi freddi, vengono raccolte da dicembre fino a marzo e che rappresentano la parte edule.»
+- **Sarzefine di Zagarolo** (p.275) — `candidate` open-field 20→1. «la raccolta avviene, a mano, a partire dal mese di novembre fino a dicembre–gennaio.»
+- **Scorsone o Tartufo d'Estate** (p.276) — `rejected`. out of scope: truffle. «La raccolta va dal 1° maggio a luglio ma, nelle stagioni più umide, si può protrarre fino alla prima decade di agosto.»
+- **Tallo sott'olio dell'Aglio Rosso di Proceno** (p.277) — `rejected`. sale/production of processed product (sott'olio). «Nel periodo di maggio, durante la fase dell'allungamento dello scapo fiorale si procede alla sua recisione a mano, incidendolo alla base con l'unghia ed estirpandolo dal palco superiore delle foglie, per favorire la formazione dei bulbilli all'interno del bulbo.»
+- **Tartufo di Campoli Appennino** (p.278) — `rejected`. out of scope: truffle. «La raccolta va da gennaio a marzo per il Tuber brumale; da febbraio a marzo per il Tuber muschatum ed il Tuber albidum; da maggio a settembre per il Tuber aestivum; da novembre fino al mese di marzo per il Tuber melosporum.»
+- **Tartufo dei Monti Lepini** (p.279) — `rejected`. out of scope: truffle.
+- **Tartufo di Cervara** (p.280) — `rejected`. out of scope: truffle. «Il Tartufo di Cervara è un prodotto spontaneo la cui ricerca viene fatta con cani da tartufo o con maialini, tra novembre e febbraio.»
+- **Tartufo di Saracinesco** (p.281) — `rejected`. out of scope: truffle. «Si raccoglie da maggio a novembre ma il periodo migliore risulta essere luglio-agosto.»
+- **Visciolo dei Monti Lepini** (p.281) — `rejected`. out of scope: wild-gathered fruit. «Nel territorio dei Monti Lepini il visciolo (Prunus cerasus) cresce spontaneo.»
+- **Pomodoro Scatolone di Bolsena** (p.271) — `candidate` open-field 13→17. «La raccolta scalare si effettua esclusivamente a mano, dalla seconda metà di luglio fino al mese di settembre.»
+- **Uva da Tavola Pizzutello di Tivoli** (p.282) — `silent`. no dated harvest window stated.
+- **Zucchina con il Fiore** (p.285) — `silent`. harvest timing given relative to flowering, not calendar dates.

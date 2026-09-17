@@ -2546,7 +2546,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 272,
@@ -2555,7 +2555,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 273,
@@ -2564,7 +2564,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 274,
@@ -2573,7 +2573,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 275,
@@ -2582,7 +2582,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 276,
@@ -2591,7 +2591,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 277,
@@ -2600,7 +2600,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 278,
@@ -2609,7 +2609,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 279,
@@ -2618,7 +2618,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 280,
@@ -2627,7 +2627,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 281,
@@ -2636,7 +2636,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 282,
@@ -2645,7 +2645,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 283,
@@ -2664,7 +2664,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 285,
@@ -2673,7 +2673,7 @@
           "ocr": false,
           "category": "vegetable",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 286,
@@ -2682,7 +2682,7 @@
           "ocr": true,
           "category": "vegetable",
           "image": ".pipeline/seasonable/enrich/lazio/corpus/pat-doc0-p286.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 287,
@@ -2691,7 +2691,7 @@
           "ocr": true,
           "category": "vegetable",
           "image": ".pipeline/seasonable/enrich/lazio/corpus/pat-doc0-p287.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 288,
