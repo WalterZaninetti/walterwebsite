@@ -1,6 +1,6 @@
 /**
- * The catalogue: 65 protected designations whose own disciplinare states when
- * they are picked.
+ * The catalogue: 65 protected designations and 51 traditional products whose
+ * own document states when they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
  * harvest window for *its* product in *its* comuni. It is evidence about the
@@ -89,6 +89,37 @@ export const produce: readonly Produce[] = [
   species('cherry-generic', 'Cherry', 'fruit', 'cherry', 'ciliegia'),
   species('chestnut-generic', 'Chestnut', 'fruit', 'chestnut', 'castagna'),
 
+  // ── PAT: fruit from the regional registers ───────────────────────────────
+  // Sicilia's schede, Lazio's ARSIAL guide, Friuli's Cibario, Sardegna's and
+  // Marche's lists. A PAT is a lighter instrument than a DOP or an IGP and the
+  // suffix says so; what it shares with a disciplinare is a published document
+  // naming the territory and the picking.
+  pat('albicocco-scillato', 'Albicocco di Scillato', 'fruit', 'apricot', 'albicocca'),
+  pat('arancia-scillato', 'Arancia Biondo di Scillato', 'fruit', 'orange', 'arancia'),
+  pat('arancio-fondi', 'Arancio Biondo di Fondi', 'fruit', 'orange', 'arancia'),
+  pat('castagna-terelle', 'Castagna di Terelle', 'fruit', 'chestnut', 'castagna'),
+  pat('ciliegia-barracocca', 'Ciliegia Barracocca di Villacidro', 'fruit', 'cherry', 'ciliegia'),
+  pat('ciliegia-mastrantoni', 'Ciliegia Mastrantoni', 'fruit', 'cherry', 'ciliegia'),
+  pat('ficodindia-valle-torto', 'Ficodindia della Valle del Torto', 'fruit', 'prickly pear', 'ficodindia'),
+  pat('figo-moro', 'Figo moro da Caneva', 'fruit', 'fig', 'fico'),
+  pat('fragola-maletto', 'Fragola di Maletto', 'fruit', 'strawberry', 'fragola'),
+  pat('fragolina-nemi', 'Fragolina di Nemi', 'fruit', 'strawberry', 'fragola'),
+  pat('fragolina-ribera', 'Fragolina di Ribera', 'fruit', 'strawberry', 'fragola'),
+  pat('marrone-acquasanta', 'Marrone di Acquasanta Terme', 'fruit', 'chestnut', 'castagna'),
+  pat('marrone-antrodocano', 'Marrone Antrodocano', 'fruit', 'chestnut', 'castagna'),
+  pat('marrone-cimini', 'Marrone dei Monti Cimini', 'fruit', 'chestnut', 'castagna'),
+  pat('marrone-latera', 'Marrone di Latera', 'fruit', 'chestnut', 'castagna'),
+  pat('marrone-segnino', 'Marrone Segnino', 'fruit', 'chestnut', 'castagna'),
+  pat('mele-cola', 'Mele Cola', 'fruit', 'apple', 'mela'),
+  pat('oliva-buccheri', 'Oliva nera di Buccheri', 'fruit', 'olive', 'oliva'),
+  pat('oliva-nebba', 'Oliva Nebba', 'fruit', 'olive', 'oliva'),
+  pat('ovaletto-calatafimi', 'Ovaletto di Calatafimi', 'fruit', 'orange', 'arancia'),
+  pat('pera-butirra', "Pere Butirra d'estate", 'fruit', 'pear', 'pera'),
+  pat('pera-per-martin', 'Pera Pêr Martìn', 'fruit', 'pear', 'pera'),
+  pat('pera-virgolosa', 'Pere Virgolosa', 'fruit', 'pear', 'pera'),
+  pat('prugna-picinisco', 'Prugna Pizzutella di Picinisco', 'fruit', 'plum', 'prugna'),
+  pat('visciole-sole', 'Visciole sciolte al sole', 'fruit', 'sour cherry', 'visciola'),
+
   // ── Vegetables ───────────────────────────────────────────────────────────
   veg('aglio-voghiera', 'Aglio di Voghiera', 'DOP', 'garlic', 'aglio'),
   veg('asparago-badoere', 'Asparago di Badoere', 'IGP', 'asparagus', 'asparago'),
@@ -122,4 +153,30 @@ export const produce: readonly Produce[] = [
   veg('piennolo-vesuvio', 'Pomodorino del Piennolo del Vesuvio', 'DOP', 'tomato', 'pomodoro'),
   veg('radicchio-chioggia', 'Radicchio di Chioggia', 'IGP', 'chicory', 'radicchio'),
   veg('san-marzano', "Pomodoro San Marzano dell'Agro Sarnese-Nocerino", 'DOP', 'tomato', 'pomodoro'),
+
+  // ── PAT: vegetables from the regional registers ──────────────────────────
+  pat('aglio-nubia', 'Aglio rosso di Nubia', 'vegetable', 'garlic', 'aglio'),
+  pat('aglio-proceno', 'Aglio rosso di Proceno', 'vegetable', 'garlic', 'aglio'),
+  pat('asparago-acque-albule', 'Asparago delle Acque Albule', 'vegetable', 'asparagus', 'asparago'),
+  pat('broccoletto-sezze', 'Broccoletto Sezzese', 'vegetable', 'chicory', 'broccoletto'),
+  pat('cappero-selargius', 'Capperi e capperoni di Selargius', 'vegetable', 'caper', 'cappero'),
+  pat('carciofo-monteluponese', 'Carciofo Monteluponese', 'vegetable', 'artichoke', 'carciofo'),
+  pat('carciofo-sezze', 'Carciofo di Sezze', 'vegetable', 'artichoke', 'carciofo'),
+  pat('cavolfiore-fano', 'Cavolfiore Tardivo di Fano', 'vegetable', 'cauliflower', 'cavolfiore'),
+  pat('cavolfiore-jesi', 'Cavolfiore Precoce di Jesi', 'vegetable', 'cauliflower', 'cavolfiore'),
+  pat('cipolla-gonnosfanadiga', 'Cipolla di Gonnosfanadiga', 'vegetable', 'onion', 'cipolla'),
+  pat('cipolla-nepi', 'Cipolla di Nepi', 'vegetable', 'onion', 'cipolla'),
+  pat('cipolla-rossa-sarda', 'Cipolla rossa', 'vegetable', 'onion', 'cipolla'),
+  pat('cocomero-pontino', 'Cocomero Pontino', 'vegetable', 'watermelon', 'cocomero'),
+  pat('fava-leonforte', 'Fava larga di Leonforte', 'vegetable', 'broad bean', 'fava'),
+  pat('finocchio-maremma', 'Finocchio della Maremma Viterbese', 'vegetable', 'fennel', 'finocchio'),
+  pat('patata-leonessa', 'Patata di Leonessa', 'vegetable', 'potato', 'patata'),
+  pat('pomodoro-fiaschetta', 'Pomodoro Fiaschetta di Fondi', 'vegetable', 'tomato', 'pomodoro'),
+  pat('pomodoro-scatolone', 'Pomodoro Scatolone di Bolsena', 'vegetable', 'tomato', 'pomodoro'),
+  pat('pomodoro-spagnoletta', 'Pomodoro Spagnoletta del Golfo di Gaeta', 'vegetable', 'tomato', 'pomodoro'),
+  pat('radicchio-canarino', 'Radicchio canarino', 'vegetable', 'chicory', 'radicchio'),
+  pat('rapa-catalogna-roccasecca', 'Rapa Catalogna di Roccasecca', 'vegetable', 'chicory', 'catalogna'),
+  pat('rosa-gorizia', 'Rosa di Gorizia', 'vegetable', 'chicory', 'radicchio'),
+  pat('sarzefine-zagarolo', 'Sarzefine di Zagarolo', 'vegetable', 'salsify', 'scorzonera'),
+  pat('taccole-marche', 'Taccole', 'vegetable', 'pea', 'taccola'),
 ];

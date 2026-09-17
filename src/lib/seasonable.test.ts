@@ -190,7 +190,17 @@ test('every source is cited to a publisher, not to an aggregator', () => {
   // cited — never as a pattern, because "some site under regione.*.it" is not a
   // publisher of record and the whole point of this list is that each entry was
   // looked at.
-  const allowed = ['eur-lex.europa.eu', 'www.masaf.gov.it', 'www.regione.vda.it'];
+  const allowed = [
+    'eur-lex.europa.eu',
+    'www.masaf.gov.it',
+    // A Region's own register, one host per region whose list is cited.
+    'www.regione.vda.it',
+    'static.regione.marche.it',
+    'www.regione.fvg.it',
+    'www.arsial.it',
+    'files.regione.sardegna.it',
+    'www.regione.sicilia.it',
+  ];
   for (const s of sources) {
     const host = new URL(s.url).hostname;
     assert.ok(allowed.includes(host), `${s.id} cites ${host}, which is not a publisher of record`);
@@ -207,9 +217,12 @@ test('an undated source is a consolidated text, and says so in its name', () => 
   for (const s of sources.filter((x) => x.year === undefined)) {
     assert.match(
       s.name,
-      /disciplinare|scheda identificativa/i,
+      /disciplinare|sched[ae] identificativ[aoe]/i,
       `${s.id} omits a year without being a consolidated text or a PAT scheda`,
     );
+    // The ministry keeps the DOP/IGP register; a Region keeps its own PAT list.
+    // ARSIAL's guide prints 2019 and Marche's prints 2017, so neither spends
+    // this licence — only a document with no year of its own may.
     const publisher = /disciplinare/i.test(s.name) ? 'masaf.gov.it' : 'regione.';
     assert.ok(
       s.url.includes(publisher),
