@@ -105,10 +105,10 @@
         "ta",
         "bt"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.128,
+      "note": "discovered 0 document(s): Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegeta"
     },
     {
       "id": "puglia:calendar",

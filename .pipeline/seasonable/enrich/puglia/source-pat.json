@@ -1,0 +1,15 @@
+{
+  "region": "puglia",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.regione.puglia.it/web/agricoltura/prodotti-agroalimentari-tradizionali-pat",
+    "https://www.regione.puglia.it/documents/1662405/3275970/Comunicato+Stampa+-+Atlante+dei+PAT.pdf/01ddcb09-52bd-d5ae-e271-6ebad61db7b4?t=1656927991090",
+    "https://filiereagroalimentari.regione.puglia.it/en/-/la-nuova-mappa-dei-sapori-pugliesi-l-atlante-dei-prodotti-agroalimentari-tradizionali-di-puglia",
+    "https://www.patpuglia.it/"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegetable category is hosted directly on regione.puglia.it or its subdomains, so no qualifying official document was found."
+}
