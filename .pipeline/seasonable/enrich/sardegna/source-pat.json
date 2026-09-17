@@ -1,0 +1,21 @@
+{
+  "region": "sardegna",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "ELENCO PRODOTTI AGROALIMENTARI TRADIZIONALI (D.Lgs. 173/98 – D.M. 350/99) - Prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/b251d860-4788-4ec1-ae2b-e038ef454c58/6.-prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "Last-Modified header shows 2025-04-30; no printed year confirmed in document header"
+    }
+  ],
+  "triedUrls": [
+    "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/b251d860-4788-4ec1-ae2b-e038ef454c58/6.-prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+    "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/liste-elenchi/elenco-dei-prodotti-agroalimentari-tradizionali"
+  ],
+  "rejectedUrls": [],
+  "note": "Official Regione Sardegna PDF for category 'Prodotti vegetali allo stato naturale o trasformati' confirmed with HTTP 200 and application/pdf content-type."
+}
