@@ -171,10 +171,10 @@
         "pe",
         "ch"
       ],
-      "status": "blocked",
-      "attempts": 3,
+      "status": "pending",
+      "attempts": 0,
       "costUsd": 0.514,
-      "note": "batch p233–278 parsed to no records ($0.033): ThesepagescontainnoPATproductschedeorseasonalitycalendarentrieswithdatedharvestwindows—onlycapitolatomerceologicospecsforoilsdairymeateggsfishhoneyetc.Page277isanimagerequiringseparateviewing;basedont"
+      "note": "unblocked: judge may now answer that a batch holds no products"
     },
     {
       "id": "trentino-alto-adige:pat",
@@ -207,10 +207,10 @@
       "silentProvincesAtStart": [
         "ts"
       ],
-      "status": "blocked",
-      "attempts": 3,
+      "status": "pending",
+      "attempts": 0,
       "costUsd": 0.665,
-      "note": "batch p306–318 parsed to no records ($0.009): Thesepagesarebibliography/index/acknowledgmentswithnoproductschedecontent—noproductstooutput."
+      "note": "unblocked: judge may now answer that a batch holds no products"
     },
     {
       "id": "friuli-venezia-giulia:calendar",
@@ -219,10 +219,10 @@
       "silentProvincesAtStart": [
         "ts"
       ],
-      "status": "blocked",
-      "attempts": 3,
+      "status": "pending",
+      "attempts": 0,
       "costUsd": 0.356,
-      "note": "batch p1–73 parsed to no records ($0.025): Thisdocumentisgeneralschool-cateringguidelinesnotPATproductsheetsoraregionalseasonalitycalendar—nofruit/vegetableharvest-windowcontentappearsanywhereinthepagesprovided.Noproductstooutput."
+      "note": "unblocked: judge may now answer that a batch holds no products"
     },
     {
       "id": "umbria:pat",
