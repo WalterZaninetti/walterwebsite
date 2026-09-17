@@ -23,10 +23,10 @@
         "cb",
         "is"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.104,
+      "note": "discovered 0 document(s): No official Molise region/ASReM seasonality calendar found; the halleyweb link is a comune mirror serving an Abruzzo region document, not an official Molise publication."
     },
     {
       "id": "valle-daosta:pat",

@@ -1,0 +1,14 @@
+{
+  "region": "molise",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.halleyweb.com/c068022/po/attachment_news.php?id=952",
+    "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/413",
+    "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/1"
+  ],
+  "rejectedUrls": [],
+  "note": "No official Molise region/ASReM seasonality calendar found; the halleyweb link is a comune mirror serving an Abruzzo region document, not an official Molise publication."
+}
