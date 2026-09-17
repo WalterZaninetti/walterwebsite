@@ -1,0 +1,22 @@
+{
+  "region": "marche",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Schede prodotti tradizionali regione Marche 2017",
+      "url": "https://static.regione.marche.it/Portals/0/Agricoltura/qualita/Prodotti%20Tradizionali/Schede%20prodotti%20tradizionali%20regione%20Marche%202017.pdf",
+      "kind": "pdf",
+      "printedYear": 2017,
+      "printedDateNote": "Filename and search snippet indicate '2017'; not opened to confirm printed header"
+    }
+  ],
+  "triedUrls": [
+    "https://static.regione.marche.it/Portals/0/Agricoltura/qualita/Prodotti%20Tradizionali/Schede%20prodotti%20tradizionali%20regione%20Marche%202017.pdf",
+    "https://www.regione.marche.it/Portals/0/Agricoltura/qualita/Prodotti%20Tradizionali/Elenco%20prodotti%20tradizionali%20regione%20Marche%202017.pdf",
+    "https://static.regione.marche.it/Portals/0/Agricoltura/qualita/Prodotti%20Tradizionali/2019_Allegato_A.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Marche publishes one combined PDF of schede (all categories including prodotti vegetali) rather than per-category files; HEAD confirmed 200 OK PDF."
+}

@@ -134,8 +134,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.113,
+      "note": "discovered 1 document(s): Marche publishes one combined PDF of schede (all categories including prodotti vegetali) rather than per-category files; HEAD confirmed 200 OK PDF."
     },
     {
       "id": "marche:calendar",
