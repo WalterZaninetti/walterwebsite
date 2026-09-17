@@ -84,3 +84,8 @@ It judged the second page of each two-page scheda without the first, where the n
 - **PIZZA CON LE NOCI** (p.184) — `rejected`. out of scope: nuts (walnuts), and it is a processed sweet.
 - **TORRONE DI FICHI - PANETTO DI FICHI** (p.204) — `rejected`. production period of a processed product (torrone di fichi). «il colore esterno è determinato dalla varietà di fichi utilizzati (solitamente si usano fichi bianchi). … La lavorazione avviene nel periodo autunno-invernale.»
 - **VINO DI VISCIOLE** (p.12) — `silent`. no dated harvest statement for visciole given.
+
+## 2026-09-17 — point-in-time rule
+
+- **MELA ROZZA** — was  on a single half-month; now , a point in time, not a window.
+- **PERA ANGELICA** — was  on a single half-month; now , a point in time, not a window.
