@@ -145,10 +145,10 @@
         "pu",
         "an"
       ],
-      "status": "pending",
+      "status": "blocked",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.084,
+      "note": "validator failed: .pipeline/seasonable/enrich/marche/candidates.jsonl:18  Castagne — duplicate record for this product and document | "
     },
     {
       "id": "abruzzo:pat",
