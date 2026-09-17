@@ -1,0 +1,15 @@
+{
+  "region": "umbria",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.regione.umbria.it/-/prodotti-agroalimentari-tradizionali-titolo",
+    "https://www.regione.umbria.it/documents/18/4766773/Elenco+dei+prodotti+agroalimentari+tradizionali+della+Regione+Umbria/d939510f-7d96-44dc-a710-a62322ff7e18",
+    "https://www.regione.umbria.it/la-presidente?p_p_id=101&...&_101_assetEntryId=9037679&_101_urlTitle=schede-descrittive-dei-prodotti-agroalimentari-tradizionali-della-regione-umbria",
+    "https://www.regione.umbria.it/agricoltura/tutela-e-valorizzazione-della-qualita/prodotti-agroalimentari-tradizionali"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Umbria's official PAT page only offers the plain 'Elenco' list (names only) plus procedural documents (D.M. 350/1999, application forms); the previously-indexed 'schede descrittive' asset page is dead/redirected to unrelated content, so no document with actual scheda text for the vegetable-products category could be confirmed."
+}

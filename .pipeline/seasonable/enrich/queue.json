@@ -231,10 +231,10 @@
       "silentProvincesAtStart": [
         "tr"
       ],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.11,
+      "note": "discovered 0 document(s): Regione Umbria's official PAT page only offers the plain 'Elenco' list (names only) plus procedural documents (D.M. 350/1999, application forms); the previously-indexed 'sche"
     },
     {
       "id": "umbria:calendar",
