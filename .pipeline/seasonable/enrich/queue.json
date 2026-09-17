@@ -380,7 +380,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.212,
-      "note": "discovered 1 document(s): ARSIAL (regional agency, part of Regione Lazio) publishes this single comprehensive PDF guide with technical-historical schede for all PAT categories including 'Vegetali'; th"
+      "note": "extracted 498 pages, 257 skipped by the pre-filter"
     },
     {
       "id": "lazio:calendar",
