@@ -20,3 +20,7 @@ No fruit or vegetable product on these pages: pages contain only meat, cheese, a
 ## 2026-09-17 — pat judge, pages 96, 97, 98, 99, 103, 107, 109, 110, 112, 114, 115, 116, 117, 119, 120 (sonnet/low)
 
 No fruit or vegetable product on these pages: meat/salumi PAT product pages, no fruit or vegetable products
+
+## 2026-09-17 — pat judge, pages 125, 126, 128, 129, 131, 138, 141, 142, 146, 147, 148, 151, 152, 157, 162, 163, 164, 165, 167 (sonnet/low)
+
+No fruit or vegetable product on these pages: pages cover meat products (salsicce, ventricina) and cheeses (caci, caciotte, pecorino), no fruit/vegetable products
