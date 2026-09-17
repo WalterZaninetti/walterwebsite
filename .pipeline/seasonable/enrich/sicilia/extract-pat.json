@@ -1,0 +1,1002 @@
+{
+  "region": "sicilia",
+  "tier": "pat",
+  "extractedAt": "2026-09-17T13:45:26.834Z",
+  "documents": [
+    {
+      "url": "https://www.regione.sicilia.it/system/files/2023-06/Schede%20PAT%20Sicilia%202023.pdf",
+      "text": ".pipeline/seasonable/enrich/sicilia/corpus/pat-doc0.txt",
+      "categoryFilter": false,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 3654,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 2,
+          "chars": 4669,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 3,
+          "chars": 3567,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 4,
+          "chars": 4903,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 5,
+          "chars": 4249,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 6,
+          "chars": 4901,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 7,
+          "chars": 4046,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 8,
+          "chars": 3863,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 9,
+          "chars": 4655,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 10,
+          "chars": 4214,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 11,
+          "chars": 4754,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 4284,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 13,
+          "chars": 4457,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 4859,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 15,
+          "chars": 4828,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 16,
+          "chars": 4180,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 17,
+          "chars": 4281,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 18,
+          "chars": 4619,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 19,
+          "chars": 4408,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 20,
+          "chars": 4600,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 21,
+          "chars": 4091,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 22,
+          "chars": 4965,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 23,
+          "chars": 4132,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 4135,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 3772,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 26,
+          "chars": 4291,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 27,
+          "chars": 5568,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 28,
+          "chars": 4339,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 29,
+          "chars": 5317,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 30,
+          "chars": 5083,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 4550,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 4031,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 4494,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 34,
+          "chars": 4483,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 35,
+          "chars": 4277,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 3999,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 37,
+          "chars": 3903,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 38,
+          "chars": 4222,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 39,
+          "chars": 4163,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 40,
+          "chars": 4621,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 41,
+          "chars": 3949,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 42,
+          "chars": 4214,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 4506,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 44,
+          "chars": 4959,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 45,
+          "chars": 4321,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 4775,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 47,
+          "chars": 4753,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 48,
+          "chars": 4661,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 49,
+          "chars": 4311,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 3727,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 4160,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 52,
+          "chars": 4345,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 53,
+          "chars": 4361,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 4084,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 55,
+          "chars": 4794,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 56,
+          "chars": 4682,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 57,
+          "chars": 4380,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 58,
+          "chars": 4298,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 59,
+          "chars": 4461,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 60,
+          "chars": 4473,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 61,
+          "chars": 4460,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 62,
+          "chars": 4314,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 63,
+          "chars": 4047,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 64,
+          "chars": 4137,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 65,
+          "chars": 3895,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 66,
+          "chars": 4379,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 67,
+          "chars": 4193,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 68,
+          "chars": 4339,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 69,
+          "chars": 4222,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 70,
+          "chars": 4589,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 71,
+          "chars": 4351,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 72,
+          "chars": 4227,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 73,
+          "chars": 3960,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 74,
+          "chars": 4438,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 75,
+          "chars": 4014,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 76,
+          "chars": 4078,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 77,
+          "chars": 4138,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 78,
+          "chars": 4175,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 79,
+          "chars": 4280,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 80,
+          "chars": 4175,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 81,
+          "chars": 4656,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 82,
+          "chars": 5589,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 83,
+          "chars": 3968,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 84,
+          "chars": 4901,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 85,
+          "chars": 4866,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 86,
+          "chars": 4114,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 87,
+          "chars": 3855,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 88,
+          "chars": 4663,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 89,
+          "chars": 4227,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 90,
+          "chars": 4155,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 91,
+          "chars": 4222,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 92,
+          "chars": 3969,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 93,
+          "chars": 4446,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 94,
+          "chars": 4048,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 95,
+          "chars": 4852,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 96,
+          "chars": 4148,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 97,
+          "chars": 5074,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 98,
+          "chars": 5006,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 99,
+          "chars": 4931,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 100,
+          "chars": 5301,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 101,
+          "chars": 3392,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 102,
+          "chars": 3762,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 103,
+          "chars": 3924,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 104,
+          "chars": 1828,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        }
+      ]
+    }
+  ]
+}
