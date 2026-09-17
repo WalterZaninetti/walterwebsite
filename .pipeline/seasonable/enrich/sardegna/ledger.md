@@ -44,3 +44,23 @@
 - **Olive verdi in salamoia** (p.81) — `silent`. no dated harvest statement.
 - **Pera Camusina** (p.85) — `needs review` open-field 11→14. windows[0].end 14 is in agosto, which no quote names. «la maturazione dei frutti intono a fine giugno, primi di luglio nella varietà precoce e fine luglio per la varietà classica»
 - **Pira Limoi** (p.87) — `needs review` open-field 16→19. quote is not verbatim on page 87: "Le zone del Sulcis Iglesiente,della Regione Autonoma della Sardegna". «Raccolta a settembre-ottobre, viene conservata in canestri avvolta nella paglia.»
+
+## 2026-09-17 — pat judge, pages 89, 91, 93, 96, 98, 103, 105, 109, 112, 114, 116, 118, 120, 122, 124, 126 (sonnet/low, $0.259 so far)
+
+- **Pero Brutta e Bona** (p.89) — `rejected`. a point in time, not a window. «I frutti maturano nella seconda decade di agosto.»
+- **Pesca di San Sperate** (p.93) — `rejected`. sale/market period, not stated harvest window. «La pesca di San Sperate è diffusa nel mercato locale da Maggio ad Ottobre.»
+- **Pianta del mirto (Myrtus communis L)** (p.96) — `rejected`. out of scope: wild-gathered spontaneous plant, not cultivated fruit/vegetable harvest.
+- **Pira de Bau** (p.98) — `rejected`. a point in time, not a window. «maturazione nella prima decade di luglio, circa 15 giorni prima della pera Camusina»
+- **Sapa di arancia** (p.109) — `rejected`. processed product processing period, not raw harvest window. «La preparazione avviene seguendo il periodo di maturazione delle arance ossia dal mese di febbraio per concludersi a maggio con la raccolta delle varietà tardive.»
+- **Tamatiga de appasibis** (p.114) — `rejected`. a point in time, not a window. «La raccolta, essenzialmente manuale, si colloca prevalentemente nella seconda metà di agosto.»
+- **Tomata Maresa** (p.118) — `rejected`. half a window: end given, no start. «la raccolta avviene da fine maggio»
+- **TRICU COSSU** (p.120) — `rejected`. dried grain for milling, out of scope.
+- **TRIGU DENTI DE CANI** (p.122) — `rejected`. dried grain for milling, out of scope.
+- **TRIGU MORU (Conca de moru, Moro, Moru, Tricu moro, Tricu moru, Trigu moru, Trigu moru nieddu, Trigu moru sardu, Trigu nieddu)** (p.124) — `rejected`. dried grain for milling, out of scope.
+- **Zucca striata di Gavoi - Cruhuvica** (p.126) — `rejected`. qualitative time only. «La zucca striata gavoese matura e si raccoglie in autunno.»
+- **Pero De su Duca** (p.91) — `rejected`. a point in time, not a window. «I frutti maturano dalla seconda alla terza decade di ottobre.»
+- **Pompia – Agrume della famiglia del cedro** (p.102) — `silent`. no dated harvest statement in text.
+- **Prezzemolo** (p.103) — `silent`. no dated harvest window given, only growth-cycle timing.
+- **Ravanello lungo** (p.105) — `silent`. no dated harvest window, only days-from-sowing maturation time.
+- **Sindria Call’e Boi** (p.111) — `silent`. no dated harvest statement in text.
+- **Tardivo di San Vito** (p.116) — `needs review` open-field 6→9. quote mentions varieties: take the union across them and flag "variety-union". «La raccolta del Tardivo di San Vito inizia il 1° aprile e termina alla fine di maggio.»

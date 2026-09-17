@@ -255,10 +255,10 @@
       "silentProvincesAtStart": [
         "su"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.849,
-      "note": "21 records, 2 for review, 16 pages pending"
+      "costUsd": 1.108,
+      "note": "16 records, 1 for review, 0 pages pending"
     },
     {
       "id": "sardegna:calendar",
