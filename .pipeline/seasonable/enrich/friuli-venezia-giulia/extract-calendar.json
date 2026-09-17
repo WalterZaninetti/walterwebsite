@@ -1,0 +1,621 @@
+{
+  "region": "friuli-venezia-giulia",
+  "tier": "calendar",
+  "extractedAt": "2026-09-17T09:19:35.525Z",
+  "documents": [
+    {
+      "url": "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/famiglia-casa/politiche-famiglia/FOGLIA30/allegati/lineeGuidaRistorazioneScolastica_allegatoDGR_2188_2012.pdf",
+      "text": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/calendar-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 136,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 2030,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 3,
+          "chars": 1767,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 4,
+          "chars": 1510,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 5,
+          "chars": 2412,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 6,
+          "chars": 2484,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 7,
+          "chars": 2847,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 8,
+          "chars": 2586,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 9,
+          "chars": 2474,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 10,
+          "chars": 2171,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 11,
+          "chars": 1401,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 12,
+          "chars": 1601,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 13,
+          "chars": 1293,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 14,
+          "chars": 1688,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 15,
+          "chars": 2956,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 16,
+          "chars": 3383,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 17,
+          "chars": 3133,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 18,
+          "chars": 2697,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 19,
+          "chars": 2832,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 2411,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 2388,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 22,
+          "chars": 2770,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 23,
+          "chars": 1589,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 2697,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 2787,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 26,
+          "chars": 2437,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 27,
+          "chars": 2484,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 28,
+          "chars": 2393,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 29,
+          "chars": 2249,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 30,
+          "chars": 985,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 31,
+          "chars": 2161,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 32,
+          "chars": 2417,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 33,
+          "chars": 2228,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 34,
+          "chars": 2604,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 35,
+          "chars": 2999,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 36,
+          "chars": 2467,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 37,
+          "chars": 1520,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 38,
+          "chars": 2857,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 39,
+          "chars": 966,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 40,
+          "chars": 3418,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 41,
+          "chars": 3474,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 42,
+          "chars": 705,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 43,
+          "chars": 2984,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 44,
+          "chars": 1951,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 45,
+          "chars": 2068,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 46,
+          "chars": 2471,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 47,
+          "chars": 1186,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 48,
+          "chars": 3091,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 49,
+          "chars": 2926,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 50,
+          "chars": 1822,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 51,
+          "chars": 2220,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 52,
+          "chars": 2349,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 53,
+          "chars": 2541,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 54,
+          "chars": 2673,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 55,
+          "chars": 2388,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 56,
+          "chars": 2475,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 57,
+          "chars": 2203,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 58,
+          "chars": 2112,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 59,
+          "chars": 1458,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 60,
+          "chars": 1376,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 61,
+          "chars": 572,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 62,
+          "chars": 2427,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 63,
+          "chars": 1995,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 64,
+          "chars": 3243,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 65,
+          "chars": 1407,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 66,
+          "chars": 3397,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 67,
+          "chars": 3234,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 68,
+          "chars": 3073,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 69,
+          "chars": 3570,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 70,
+          "chars": 3436,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 71,
+          "chars": 1663,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 72,
+          "chars": 2896,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 73,
+          "chars": 2257,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 74,
+          "chars": 1382,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 75,
+          "chars": 1632,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 76,
+          "chars": 930,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        }
+      ]
+    }
+  ]
+}
