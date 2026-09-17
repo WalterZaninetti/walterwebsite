@@ -290,7 +290,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.169,
-      "note": "discovered 1 document(s): Confirmed via HEAD request (200, PDF, filename proposte_operative_per_la_ristorazione_scolastica_in_piemonte_-_marzo_2024_2.pdf) and search results describing its Allegato n."
+      "note": "extracted 120 pages, 104 skipped by the pre-filter"
     },
     {
       "id": "veneto:pat",
