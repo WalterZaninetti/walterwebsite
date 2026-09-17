@@ -307,10 +307,10 @@
       "region": "veneto",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "emilia-romagna:pat",
@@ -327,10 +327,10 @@
       "region": "emilia-romagna",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "liguria:pat",
@@ -347,10 +347,10 @@
       "region": "liguria",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "toscana:pat",
@@ -367,10 +367,10 @@
       "region": "toscana",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "lazio:pat",
@@ -387,10 +387,10 @@
       "region": "lazio",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "campania:pat",
@@ -407,10 +407,10 @@
       "region": "campania",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "basilicata:pat",
@@ -427,10 +427,10 @@
       "region": "basilicata",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "calabria:pat",
@@ -447,10 +447,10 @@
       "region": "calabria",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     },
     {
       "id": "sicilia:pat",
@@ -467,10 +467,10 @@
       "region": "sicilia",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "dropped",
       "attempts": 0,
       "costUsd": 0,
-      "note": null
+      "note": "calendar tier dropped 2026-09-17: no usable calendar in ten regions"
     }
   ]
 }
