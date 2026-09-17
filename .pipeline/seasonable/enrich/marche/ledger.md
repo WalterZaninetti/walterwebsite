@@ -87,5 +87,5 @@ It judged the second page of each two-page scheda without the first, where the n
 
 ## 2026-09-17 — point-in-time rule
 
-- **MELA ROZZA** — was  on a single half-month; now , a point in time, not a window.
-- **PERA ANGELICA** — was  on a single half-month; now , a point in time, not a window.
+- **MELA ROZZA** — was `candidate` on a single half-month; now `rejected`, a point in time, not a window.
+- **PERA ANGELICA** — was `candidate` on a single half-month; now `rejected`, a point in time, not a window.
