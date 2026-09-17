@@ -219,10 +219,10 @@
       "silentProvincesAtStart": [
         "ts"
       ],
-      "status": "pending",
-      "attempts": 2,
-      "costUsd": 0.331,
-      "note": "batch p1–73 parsed to no records ($0.025): Noproductswithharvestwindowcontentonthesepages—thisisaschoolcateringguidelinesdocumentnotaPATschedaorseasonalitycalendar."
+      "status": "blocked",
+      "attempts": 3,
+      "costUsd": 0.356,
+      "note": "batch p1–73 parsed to no records ($0.025): Thisdocumentisgeneralschool-cateringguidelinesnotPATproductsheetsoraregionalseasonalitycalendar—nofruit/vegetableharvest-windowcontentappearsanywhereinthepagesprovided.Noproductstooutput."
     },
     {
       "id": "umbria:pat",
