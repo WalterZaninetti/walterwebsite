@@ -429,7 +429,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 46,
@@ -438,7 +438,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 47,
@@ -447,7 +447,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 48,
@@ -456,7 +456,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 49,
@@ -465,7 +465,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 50,
@@ -474,7 +474,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 51,
@@ -503,7 +503,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 54,
@@ -512,7 +512,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 55,
@@ -521,7 +521,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 56,
@@ -560,7 +560,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 60,
@@ -579,7 +579,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 62,
@@ -588,7 +588,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 63,
@@ -657,7 +657,7 @@
           "ocr": false,
           "category": "cheese",
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 70,

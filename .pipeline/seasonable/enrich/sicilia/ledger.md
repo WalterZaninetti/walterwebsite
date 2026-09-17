@@ -48,3 +48,18 @@
 - **Melone invernale giallo "cartucciaro" verde "purceddu"** (p.38) — `silent`. sections left blank, no text present.
 - **Melone giallo (Cucumis melo var. inodorus) Melone giallo di Paceco – Melone d'inverno** (p.39) — `silent`. no dated harvest statement in text.
 - **Patata Novella di Siracusa, patata primaticcia** (p.42) — `silent`. no dated harvest statement in text.
+
+## 2026-09-17 — pat judge, pages 45, 46, 47, 48, 49, 50, 53, 54, 55, 59, 61, 62, 69 (sonnet/low, $0.306 so far)
+
+- **Pomodoro secco "ciappa"** (p.45) — `rejected`. processed product (dried tomato); production/sale calendar of processed product. «Calendario di produzione: Luglio, agosto, settembre.»
+- **Susina Ariddu di core, Ariddi ri core, Ariddicore.** (p.46) — `rejected`. maturation date given, not a stated harvest window. «Le susine hanno un diametro di circa 3 cm e hanno un sapore molto zuccherino e succoso. Si prestano a diverse tecniche di conservazione che ne consentono il consumo ben oltre il periodo di maturazione che avviene tra la fine di luglio e i primi di agosto.»
+- **Susina Caleca, Caleca, Pruno Caleca** (p.46) — `rejected`. maturation date given, not a stated harvest window. «La maturazione avviene tra la fine di giugno e i primi di luglio.»
+- **Susina della rosa, Pruna a rosa, Pruno rosa, Santa Rosa.** (p.47) — `rejected`. maturation date given, not a stated harvest window. «La maturazione avviene a luglio.»
+- **Susina Pruno di Vruno, Pruno ri Vruno, pruno vruno.** (p.47) — `rejected`. maturation date given, not a stated harvest window. «La maturazione avviene a luglio.»
+- **Susina Lazzarino, Lazzarino, Rapparino di Monreale** (p.48) — `rejected`. maturation date is a point in time (half-month), not a harvest window. «La maturazione avviene durante la prima metà del mese di agosto.»
+- **Susini "Sanacore", "U prunu ri murriali"** (p.49) — `rejected`. a point in time, not a window. «Periodo di maturazione, prima decade di luglio.»
+- **Tartufo bianchetto di Buccheri- Trufolo** (p.49) — `rejected`. out of scope: truffle.
+- **Tartufo Scorzone di Buccheri Trufolo** (p.50) — `rejected`. out of scope: truffle.
+- **Pomodoro seccagno "Pizzutello di Paceco"** (p.45) — `silent`. no dated harvest window given, only maturity stage descriptions.
+- **Susina Sanacore Tardiva, Sanacore tardiva, Sanacore ca facciuzza rossa.** (p.48) — `silent`. only relative delay to another variety given, no calendar dates.
+- **Zucca virmiciddara, Cucuzza virmiciddara** (p.50) — `silent`. no dated harvest window given, only general growth description.
