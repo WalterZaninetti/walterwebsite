@@ -13,7 +13,8 @@ A statement that the crop is HARVESTED (raccolta, si raccoglie, raccolto, epoca 
 
 Reject, with the reason:
 - qualitative time only: "in autunno", "a maturazione", "in estate", "fine estate"
-- half a window: a start with no end, or an end with no start; a single approximate day ("intorno al 15 giugno")
+- half a window: a start with no end, or an end with no start
+- a point in time rather than a window: a single day or a part of one month — "intorno al 15 giugno", "a fine ottobre", "all'inizio di settembre", "a metà luglio", "nella seconda decade di agosto". Reason: "a point in time, not a window". A whole month ("in agosto") or a stated span inside a month ("dal 1 al 15 settembre") is still a window.
 - sowing, transplanting, pruning, flowering, processing or drying dates, even next to harvest
 - sale, consumption or production periods of a processed product (preserves, jams, flours, dried or pickled products, dishes, breads, sweets); dried pulses and grains harvested dry for threshing
 - the whole year with no specific harvest claim ("tutto l'anno", "in base alla disponibilità")
@@ -27,6 +28,7 @@ Read the product's entire text. Harvest dates hide under "Metodiche di lavorazio
 
 Half-months are 0–23: `index = (month - 1) * 2 + (0 for days 1–15, 1 for days 16–31)`. 0 = 1–15 January, 1 = 16–31 January, 23 = 16–31 December.
 - A whole month: start = first half, end = second half. "da giugno a luglio" → start 10, end 13. "in agosto" → 14, 15.
+- A window is never a single half-month (start equal to end). If that is what the conversion gives, the text states a point, and the verdict is `rejected`.
 - Decades: prima decade → first half; seconda and terza decade → second half. "inizio"/"primi di" → first half; "fine"/"metà" as an end → "metà" is first half (1–15), "fine" is second half.
 - A window may wrap the year: "da ottobre a marzo" → start 18, end 5, flag `wraps-year`.
 - More than 15 half-months long → flag `wide`.

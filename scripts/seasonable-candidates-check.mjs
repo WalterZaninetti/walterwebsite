@@ -157,6 +157,8 @@ export function checkRecord(r, region) {
       need(named.has(monthOfHalf(w.start)), `${at}.start ${w.start} is in ${MONTHS[monthOfHalf(w.start) - 1]}, which no quote names`);
       need(named.has(monthOfHalf(w.end)), `${at}.end ${w.end} is in ${MONTHS[monthOfHalf(w.end) - 1]}, which no quote names`);
     }
+    // "a fine ottobre", "all'inizio di settembre": a point, and a point is half a window with both halves missing.
+    need(w.start !== w.end, `${at} is a single half-month (${w.start}) — a point in time, not a window: reject it`);
     if (w.start > w.end) need(r.flags.includes('wraps-year'), `${at} wraps the year: flag "wraps-year"`);
     if (length(w.start, w.end) > 15) need(r.flags.includes('wide'), `${at} spans ${length(w.start, w.end)} half-months: flag "wide"`);
     if (length(w.start, w.end) === 24) warnings.push(`${at} is the whole year — the Mela Alto Adige precedent rejects that unless the document claims it`);
