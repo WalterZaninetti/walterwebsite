@@ -1,0 +1,2245 @@
+{
+  "region": "abruzzo",
+  "tier": "calendar",
+  "extractedAt": "2026-09-17T08:59:15.948Z",
+  "documents": [
+    {
+      "url": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2023-09-18/dgr-allegato-nuove-linee-guida-ristorazione-scolastica-abruzzo.pdf",
+      "text": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 186,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 2,
+          "chars": 913,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 4845,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 4,
+          "chars": 4355,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 5,
+          "chars": 3247,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 6,
+          "chars": 332,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 7,
+          "chars": 1634,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 8,
+          "chars": 54,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p8.png",
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 3088,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 10,
+          "chars": 3131,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 11,
+          "chars": 3851,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 12,
+          "chars": 961,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 13,
+          "chars": 1876,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 3610,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 15,
+          "chars": 2742,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 3916,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 17,
+          "chars": 519,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 18,
+          "chars": 741,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 19,
+          "chars": 1790,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 20,
+          "chars": 1309,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p21.png",
+          "status": "pending"
+        },
+        {
+          "n": 22,
+          "chars": 2330,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 23,
+          "chars": 2970,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 24,
+          "chars": 1612,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 25,
+          "chars": 1315,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 26,
+          "chars": 1395,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 27,
+          "chars": 927,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 28,
+          "chars": 1149,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 29,
+          "chars": 1298,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 30,
+          "chars": 1682,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 1612,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 32,
+          "chars": 1624,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 1698,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 34,
+          "chars": 1800,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 35,
+          "chars": 2297,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 36,
+          "chars": 1524,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 37,
+          "chars": 1430,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 38,
+          "chars": 1931,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 39,
+          "chars": 1911,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 40,
+          "chars": 1385,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 41,
+          "chars": 1575,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 42,
+          "chars": 2007,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 43,
+          "chars": 1406,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 44,
+          "chars": 1367,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 45,
+          "chars": 1452,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 46,
+          "chars": 1655,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 47,
+          "chars": 1549,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 48,
+          "chars": 1498,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 49,
+          "chars": 1580,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 50,
+          "chars": 1516,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 51,
+          "chars": 1899,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 52,
+          "chars": 1714,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 53,
+          "chars": 1263,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 54,
+          "chars": 1324,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 55,
+          "chars": 1978,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 56,
+          "chars": 1184,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 57,
+          "chars": 1577,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 58,
+          "chars": 1484,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 59,
+          "chars": 1374,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 60,
+          "chars": 1988,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 61,
+          "chars": 1065,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 62,
+          "chars": 1657,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 63,
+          "chars": 1584,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 64,
+          "chars": 1559,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 65,
+          "chars": 1199,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 66,
+          "chars": 2113,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 67,
+          "chars": 1361,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 68,
+          "chars": 1505,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 69,
+          "chars": 1479,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 70,
+          "chars": 1685,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 71,
+          "chars": 1220,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 72,
+          "chars": 1262,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 73,
+          "chars": 1465,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 74,
+          "chars": 1467,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 75,
+          "chars": 2289,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 76,
+          "chars": 1133,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 77,
+          "chars": 1945,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 78,
+          "chars": 2397,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 79,
+          "chars": 1688,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 80,
+          "chars": 1562,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 81,
+          "chars": 1028,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 82,
+          "chars": 1403,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 83,
+          "chars": 1380,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 84,
+          "chars": 1412,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 85,
+          "chars": 1451,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 86,
+          "chars": 1803,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 87,
+          "chars": 2307,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 88,
+          "chars": 1514,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 89,
+          "chars": 1431,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 90,
+          "chars": 1787,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 91,
+          "chars": 1302,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 92,
+          "chars": 1575,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 93,
+          "chars": 2005,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 94,
+          "chars": 1406,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 95,
+          "chars": 1577,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 96,
+          "chars": 1654,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 97,
+          "chars": 1983,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 98,
+          "chars": 1497,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 99,
+          "chars": 1580,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 100,
+          "chars": 1559,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 101,
+          "chars": 1682,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 102,
+          "chars": 1263,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 103,
+          "chars": 1324,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 104,
+          "chars": 2312,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 105,
+          "chars": 1185,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 106,
+          "chars": 1488,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 107,
+          "chars": 1326,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 108,
+          "chars": 1989,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 109,
+          "chars": 1066,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 110,
+          "chars": 1793,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 111,
+          "chars": 1563,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 112,
+          "chars": 1197,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 113,
+          "chars": 2113,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 114,
+          "chars": 1362,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 115,
+          "chars": 1202,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 116,
+          "chars": 1678,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 117,
+          "chars": 1079,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 118,
+          "chars": 1446,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 119,
+          "chars": 1430,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 120,
+          "chars": 1313,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 121,
+          "chars": 1135,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 122,
+          "chars": 1948,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 123,
+          "chars": 2371,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 124,
+          "chars": 1689,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 125,
+          "chars": 1560,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 126,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p126.png",
+          "status": "pending"
+        },
+        {
+          "n": 127,
+          "chars": 1602,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 128,
+          "chars": 1488,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 129,
+          "chars": 1533,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 130,
+          "chars": 1572,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 131,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p131.png",
+          "status": "pending"
+        },
+        {
+          "n": 132,
+          "chars": 1570,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 133,
+          "chars": 2242,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 134,
+          "chars": 1300,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 135,
+          "chars": 1716,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 136,
+          "chars": 2038,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 137,
+          "chars": 1765,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 138,
+          "chars": 1384,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 139,
+          "chars": 2523,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 140,
+          "chars": 1634,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 141,
+          "chars": 1602,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 142,
+          "chars": 1836,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 143,
+          "chars": 2070,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 144,
+          "chars": 1741,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 145,
+          "chars": 2686,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 146,
+          "chars": 1865,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 147,
+          "chars": 2144,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 148,
+          "chars": 1453,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 149,
+          "chars": 1808,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 150,
+          "chars": 1673,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 151,
+          "chars": 1619,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 152,
+          "chars": 1729,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 153,
+          "chars": 1473,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 154,
+          "chars": 1463,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 155,
+          "chars": 1335,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 156,
+          "chars": 1713,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 157,
+          "chars": 1380,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 158,
+          "chars": 1662,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 159,
+          "chars": 1817,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 160,
+          "chars": 2786,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 161,
+          "chars": 1670,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 162,
+          "chars": 2044,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 163,
+          "chars": 768,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 164,
+          "chars": 1758,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 165,
+          "chars": 1417,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 166,
+          "chars": 2020,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 167,
+          "chars": 1710,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 168,
+          "chars": 1483,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 169,
+          "chars": 1689,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 170,
+          "chars": 2370,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 171,
+          "chars": 1291,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 172,
+          "chars": 1645,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 173,
+          "chars": 1007,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 174,
+          "chars": 1838,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 175,
+          "chars": 1344,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 176,
+          "chars": 1698,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 177,
+          "chars": 1629,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 178,
+          "chars": 1806,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 179,
+          "chars": 1609,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 180,
+          "chars": 1759,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 181,
+          "chars": 1461,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 182,
+          "chars": 1591,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 183,
+          "chars": 2208,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 184,
+          "chars": 1821,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 185,
+          "chars": 1057,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 186,
+          "chars": 870,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 187,
+          "chars": 2762,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 188,
+          "chars": 2073,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 189,
+          "chars": 1791,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 190,
+          "chars": 2534,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 191,
+          "chars": 3307,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 192,
+          "chars": 3867,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 193,
+          "chars": 3806,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 194,
+          "chars": 3480,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 195,
+          "chars": 3811,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 196,
+          "chars": 3823,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 197,
+          "chars": 915,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 198,
+          "chars": 1190,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 199,
+          "chars": 1116,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 200,
+          "chars": 1165,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 201,
+          "chars": 1327,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 202,
+          "chars": 1912,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 203,
+          "chars": 1636,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 204,
+          "chars": 900,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 205,
+          "chars": 1461,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 206,
+          "chars": 2022,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 207,
+          "chars": 2143,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 208,
+          "chars": 2379,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 209,
+          "chars": 1980,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 210,
+          "chars": 2168,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 211,
+          "chars": 2956,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 212,
+          "chars": 61,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p212.png",
+          "status": "pending"
+        },
+        {
+          "n": 213,
+          "chars": 2838,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 214,
+          "chars": 3454,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 215,
+          "chars": 3122,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 216,
+          "chars": 2844,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 217,
+          "chars": 2046,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 218,
+          "chars": 2010,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 219,
+          "chars": 58,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p219.png",
+          "status": "pending"
+        },
+        {
+          "n": 220,
+          "chars": 2404,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 221,
+          "chars": 2555,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 222,
+          "chars": 3258,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 223,
+          "chars": 2915,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 224,
+          "chars": 2815,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 225,
+          "chars": 2928,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 226,
+          "chars": 3135,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 227,
+          "chars": 3083,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 228,
+          "chars": 2928,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 229,
+          "chars": 1560,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 230,
+          "chars": 3088,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 231,
+          "chars": 1110,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 232,
+          "chars": 2533,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 233,
+          "chars": 2968,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 234,
+          "chars": 3295,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 235,
+          "chars": 3284,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 236,
+          "chars": 3071,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 237,
+          "chars": 2733,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 238,
+          "chars": 2409,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 239,
+          "chars": 2320,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 240,
+          "chars": 2446,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 241,
+          "chars": 2388,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 242,
+          "chars": 2744,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 243,
+          "chars": 3115,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 244,
+          "chars": 3043,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 245,
+          "chars": 2547,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 246,
+          "chars": 2442,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 247,
+          "chars": 2878,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 248,
+          "chars": 2876,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 249,
+          "chars": 1353,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 250,
+          "chars": 2827,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 251,
+          "chars": 2064,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 252,
+          "chars": 2557,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 253,
+          "chars": 1939,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 254,
+          "chars": 1857,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 255,
+          "chars": 2739,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 256,
+          "chars": 2301,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 257,
+          "chars": 2965,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 258,
+          "chars": 2768,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 259,
+          "chars": 2414,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 260,
+          "chars": 2306,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 261,
+          "chars": 3083,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 262,
+          "chars": 2772,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 263,
+          "chars": 2918,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 264,
+          "chars": 2515,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 265,
+          "chars": 2417,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 266,
+          "chars": 1219,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 267,
+          "chars": 2073,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 268,
+          "chars": 2371,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 269,
+          "chars": 2295,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 270,
+          "chars": 2542,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 271,
+          "chars": 2739,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 272,
+          "chars": 1417,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 273,
+          "chars": 2223,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 274,
+          "chars": 2645,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 275,
+          "chars": 2990,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 276,
+          "chars": 1300,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 277,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p277.png",
+          "status": "pending"
+        },
+        {
+          "n": 278,
+          "chars": 1292,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 279,
+          "chars": 1005,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        }
+      ]
+    }
+  ]
+}
