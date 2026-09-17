@@ -37,8 +37,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.069,
-      "note": "extracted 3 pages, 0 skipped by the pre-filter"
+      "costUsd": 0.09,
+      "note": "1 records, 0 for review, 2 pages pending"
     },
     {
       "id": "valle-daosta:calendar",
