@@ -64,3 +64,7 @@
 - **Ravanello lungo** (p.105) — `silent`. no dated harvest window, only days-from-sowing maturation time.
 - **Sindria Call’e Boi** (p.111) — `silent`. no dated harvest statement in text.
 - **Tardivo di San Vito** (p.116) — `needs review` open-field 6→9. quote mentions varieties: take the union across them and flag "variety-union". «La raccolta del Tardivo di San Vito inizia il 1° aprile e termina alla fine di maggio.»
+
+## 2026-09-17 — calendar judge, pages 1, 2 (sonnet/low)
+
+No fruit or vegetable product on these pages: regional availability calendar with no statement about where produce is grown; rejected as availability, not harvest

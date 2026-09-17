@@ -267,10 +267,10 @@
       "silentProvincesAtStart": [
         "su"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.048,
-      "note": "extracted 2 pages, 0 skipped by the pre-filter"
+      "costUsd": 0.06,
+      "note": "0 records, 0 for review, 0 pages pending"
     },
     {
       "id": "piemonte:pat",
