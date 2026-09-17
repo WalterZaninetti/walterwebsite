@@ -1,0 +1,24 @@
+{
+  "region": "lazio",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Lazio Patrimonio Agroalimentare tra Biodiversità e Tradizione",
+      "url": "https://www.arsial.it/wp-content/uploads/2025/06/Guida_Arsial_completo.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked; server last-modified 2025-07-16"
+    }
+  ],
+  "triedUrls": [
+    "https://www.arsial.it/prodotti-tipici-e-tradizionali/ricognizione-dei-prodotti-agroalimentari-del-lazio-pat/",
+    "https://www.arsial.it/prodotti/prodotti-agroalimentari-tradizionali-pat/",
+    "https://www.arsial.it/prodotti/prodotti-agroalimentari-tradizionali-pat/vegetali/",
+    "https://www.arsial.it/wp-json/wp/v2/prodotti/53423",
+    "https://www.arsial.it/wp-content/uploads/2025/06/Guida_Arsial_completo.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "ARSIAL (regional agency, part of Regione Lazio) publishes this single comprehensive PDF guide with technical-historical schede for all PAT categories including 'Vegetali'; the vegetali category page itself loads schede dynamically via JS with no static links found."
+}
