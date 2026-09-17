@@ -21,7 +21,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 3,
@@ -37,7 +37,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/sardegna/corpus/pat-doc0-p4.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 5,
@@ -53,7 +53,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 7,
@@ -101,7 +101,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 13,
@@ -109,7 +109,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 14,
@@ -125,7 +125,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 16,
@@ -141,7 +141,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 18,
@@ -157,7 +157,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 20,
@@ -165,7 +165,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -181,7 +181,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 23,
@@ -189,7 +189,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 24,
@@ -205,7 +205,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 26,
@@ -213,7 +213,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 27,
@@ -229,7 +229,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 29,
@@ -237,7 +237,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 30,
@@ -245,7 +245,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 31,
@@ -253,7 +253,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 32,
@@ -269,7 +269,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 34,
@@ -277,7 +277,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 35,

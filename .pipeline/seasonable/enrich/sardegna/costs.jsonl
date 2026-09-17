@@ -1,1 +1,4 @@
 {"at":"2026-09-17T09:26:03.511Z","stage":"discover:pat","model":"sonnet","effort":"low","costUsd":0.0517068,"input":6,"cacheRead":24639,"cacheWrite":3564,"output":723,"error":null}
+{"at":"2026-09-17T09:28:00.248Z","stage":"judge:pat:p2,4,6,12,13,15,17,19,20,22,23,25,26,28,29,30,31,33,34","model":"sonnet","effort":"low","costUsd":0.23928280000000002,"input":2,"cacheRead":3444,"cacheWrite":37817,"output":6079,"error":null}
+{"at":"2026-09-17T09:28:07.891Z","stage":"judge:pat:p17,19,22,29,30,33","model":"sonnet","effort":"low","costUsd":0.0845698,"input":2,"cacheRead":2254,"cacheWrite":16078,"output":835,"error":null}
+{"at":"2026-09-17T09:28:11.105Z","stage":"judge:pat:p31","model":"sonnet","effort":"high","costUsd":0.032238,"input":2,"cacheRead":0,"cacheWrite":6831,"output":150,"error":null}

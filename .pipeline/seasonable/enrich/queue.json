@@ -257,8 +257,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.052,
-      "note": "extracted 127 pages, 69 skipped by the pre-filter"
+      "costUsd": 0.408,
+      "note": "17 records, 0 for review, 39 pages pending"
     },
     {
       "id": "sardegna:calendar",
