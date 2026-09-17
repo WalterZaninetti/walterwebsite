@@ -35,6 +35,19 @@ const species = (id: string, name: string, category: Produce['category'], en: st
 const veg = (id: string, name: string, designation: 'DOP' | 'IGP', en: string, it: string): Produce =>
   ({ id, name, designation, category: 'vegetable', en, it });
 
+/**
+ * A *prodotto agroalimentare tradizionale*: on a Region's own list under
+ * D.Lgs. 173/1998, with a scheda identificativa the Region publishes.
+ *
+ * Weaker than a DOP or an IGP, and the row says `PAT` so the reader can weigh
+ * it. It is here because the protected-designation register ran out: it names
+ * no product at all in Valle d'Aosta, and these two schede state a harvest
+ * window for the whole region. `.pipeline/seasonable/enrich/` holds the sweep
+ * that found them.
+ */
+const pat = (id: string, name: string, category: Produce['category'], en: string, it: string): Produce =>
+  ({ id, name, designation: 'PAT', category, en, it });
+
 export const produce: readonly Produce[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
   fruit('amarene-modena', 'Amarene Brusche di Modena', 'IGP', 'sour cherry', 'amarena'),
@@ -61,6 +74,9 @@ export const produce: readonly Produce[] = [
   fruit('marrone-valle-susa', 'Marrone della Valle di Susa', 'IGP', 'chestnut', 'castagna'),
   fruit('mela-rossa-cuneo', 'Mela Rossa Cuneo', 'IGP', 'apple', 'mela'),
   fruit('mele-trentino', 'Mele del Trentino', 'IGP', 'apple', 'mela'),
+  // The only two products of any register in Valle d'Aosta, and both are apples.
+  pat('golden-valle-aosta', "Golden delicious della Valle d'Aosta", 'fruit', 'apple', 'mela'),
+  pat('renetta-valle-aosta', "Renetta della Valle d'Aosta", 'fruit', 'apple', 'mela'),
   fruit('mela-val-di-non', 'Mela Val di Non', 'DOP', 'apple', 'mela'),
   fruit('oliva-ascolana', 'Oliva Ascolana del Piceno', 'DOP', 'olive', 'oliva'),
   fruit('pera-emilia-romagna', "Pera dell'Emilia Romagna", 'IGP', 'pear', 'pera'),

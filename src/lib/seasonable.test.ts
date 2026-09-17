@@ -72,12 +72,12 @@ test('every designation names itself and says what it is', () => {
     assert.ok(p.name.length > 0, `${p.id} has no name`);
     assert.ok(p.en.length > 0 && p.it.length > 0, `${p.id} is missing a kind`);
     assert.ok(
-      p.designation === 'DOP' || p.designation === 'IGP' || p.designation === null,
+      p.designation === 'DOP' || p.designation === 'IGP' || p.designation === 'PAT' || p.designation === null,
       `${p.id}: ${p.designation}`,
     );
     // The designation is the document's, so it must not be pre-suffixed here —
     // produceName() appends it, and "Carciofo di Paestum IGP IGP" is the bug.
-    assert.doesNotMatch(p.name, /\b(DOP|IGP)\b/, `${p.id} carries its designation twice`);
+    assert.doesNotMatch(p.name, /\b(DOP|IGP|PAT)\b/, `${p.id} carries its designation twice`);
   }
 });
 
@@ -186,7 +186,11 @@ test('every source is cited to a publisher, not to an aggregator', () => {
   // aggregator: one host away from the whole page losing its evidence, and
   // several of the copies it served were proposals rather than texts in force.
   // Sources are now the EU's Official Journal or the ministry's own register.
-  const allowed = ['eur-lex.europa.eu', 'www.masaf.gov.it'];
+  // Regional hosts are added one at a time, as a region's own register is first
+  // cited — never as a pattern, because "some site under regione.*.it" is not a
+  // publisher of record and the whole point of this list is that each entry was
+  // looked at.
+  const allowed = ['eur-lex.europa.eu', 'www.masaf.gov.it', 'www.regione.vda.it'];
   for (const s of sources) {
     const host = new URL(s.url).hostname;
     assert.ok(allowed.includes(host), `${s.id} cites ${host}, which is not a publisher of record`);
@@ -197,13 +201,20 @@ test('an undated source is a consolidated text, and says so in its name', () => 
   // The only licence to omit a year is being the text in force. If a source
   // drops the year without being a disciplinare consolidato, it is an
   // unverified year wearing a disguise.
+  // Two documents may omit it, and only these two: the ministry's consolidated
+  // disciplinare, and a Region's scheda identificativa for a PAT. Both are the
+  // text in force for their register and both print no year of their own.
   for (const s of sources.filter((x) => x.year === undefined)) {
     assert.match(
       s.name,
-      /disciplinare/i,
-      `${s.id} omits a year without being a disciplinare`,
+      /disciplinare|scheda identificativa/i,
+      `${s.id} omits a year without being a consolidated text or a PAT scheda`,
     );
-    assert.ok(s.url.includes('masaf.gov.it'), `${s.id} omits a year but is not the ministry's text`);
+    const publisher = /disciplinare/i.test(s.name) ? 'masaf.gov.it' : 'regione.';
+    assert.ok(
+      s.url.includes(publisher),
+      `${s.id} omits a year but is not published by the body that keeps its register`,
+    );
   }
 });
 
