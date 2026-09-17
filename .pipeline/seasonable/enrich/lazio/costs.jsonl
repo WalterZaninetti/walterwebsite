@@ -10,3 +10,5 @@
 {"at":"2026-09-17T10:01:57.559Z","stage":"judge:pat:p195,196,197,199,200,201,202,203,204,205,206,207,208,209,210,211","model":"sonnet","effort":"low","costUsd":0.29225840000000003,"input":4,"cacheRead":39012,"cacheWrite":35602,"output":11837,"error":null}
 {"at":"2026-09-17T10:02:12.068Z","stage":"judge:pat:p199,205,207,208,211","model":"sonnet","effort":"low","costUsd":0.0962472,"input":2,"cacheRead":2336,"cacheWrite":18249,"output":923,"error":null}
 {"at":"2026-09-17T10:02:59.251Z","stage":"judge:pat:p204","model":"sonnet","effort":"high","costUsd":0.08331899999999999,"input":2,"cacheRead":0,"cacheWrite":9038,"output":4199,"error":null}
+{"at":"2026-09-17T10:04:54.152Z","stage":"judge:pat:p212,213,214,215,216,217,218,219,220,221,222,223,224,225,226","model":"sonnet","effort":"low","costUsd":0.2168062,"input":2,"cacheRead":2336,"cacheWrite":32123,"output":6428,"error":null}
+{"at":"2026-09-17T10:04:57.492Z","stage":"judge:pat:p217","model":"sonnet","effort":"low","costUsd":0.0288712,"input":2,"cacheRead":2336,"cacheWrite":5638,"output":148,"error":null}

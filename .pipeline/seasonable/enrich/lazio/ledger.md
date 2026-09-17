@@ -50,3 +50,22 @@ No fruit or vegetable product on these pages: cheese (formaggi) and olive oil (g
 - **CARCIOFINI SOTT'OLIO** (p.208) — `silent`. only processing/preservation steps described, no harvest dates.
 - **CAROTE DI VITERBO IN BAGNO AROMATICO** (p.211) — `silent`. describes preservation preparation only, no harvest dates given.
 - **ASPARAGO VERDE DI CANINO E MONTALTO DI CASTRO** (p.204) — `candidate` greenhouse 0→19. «Con la tecnica della geotermia la raccolta dell’asparago può avvenire anche nei mesi invernali. … La raccolta avviene fra gennaio/giugno e settembre/ottobre interamente a mano, con l’ausilio di un coltello provvisto di lama/paletta terminale.»
+
+## 2026-09-17 — pat judge, pages 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226 (sonnet/low, $0.246 so far)
+
+- **CASTAGNA DI TERELLE** (p.212) — `candidate` open-field 16→19. «La raccolta delle castagne avviene manualmente, dalla metà di settembre alla fine di ottobre.»
+- **CASTAGNA ROSSA DEL CICOLANO** (p.213) — `rejected`. half a window: only end given, no start. «La raccolta del frutto viene effettuata manualmente e generalmente ultimata entro la seconda decade di novembre.»
+- **CECE DEL SOLCO DRITTO DI VALENTANO** (p.214) — `rejected`. dried pulse harvested dry for threshing. «La semina avviene nel mese di febbraio e la raccolta a luglio.»
+- **CICERCHIA** (p.215) — `rejected`. dried pulse harvested dry for threshing. «La semina avviene in primavera, la raccolta si effettua nella seconda metà di agosto.»
+- **CICERCHIA DI CAMPODIMELE** (p.216) — `rejected`. dried pulse harvested dry for threshing. «Si semina nel mese di marzo e si raccoglie tra luglio e inizio agosto.»
+- **CILIEGIA DI CELLENO** (p.218) — `rejected`. maturation dates given, not stated harvest period. «Maturano tra la fine di maggio e la seconda decade di giugno.»
+- **CILIEGIA RAVENNA DELLA SABINA** (p.219) — `rejected`. maturation dates given, not stated harvest period. «L’epoca di maturazione è la terza decade di maggio. … Epoca di maturazione: seconda decade di giugno.»
+- **CIPOLLA DI NEPI** (p.220) — `candidate` open-field 13→14. «La raccolta avviene tra la fine di luglio e i primi di agosto, quando le foglie si ingialliscono.»
+- **CIPOLLE, PEPERONI E PERE SOTT’ACETO** (p.221) — `rejected`. processed product (sott'aceto), not fresh harvest.
+- **FARRO DEI MONTI LUCRETILI** (p.221) — `rejected`. grain harvested dry for threshing. «La semina comincia all’inizio della primavera (fine marzo) e la raccolta si effettua verso il 20 agosto.»
+- **COCOMERO PONTINO** (p.222) — `candidate` open-field 8→17. «La raccolta, operazione colturale delicatissima, avviene da maggio a settembre a mano con l’ausilio di “stacchini” i quali individuano il momento esatto della giusta maturazione per l’avvio al consumo»
+- **FAGIOLINA ARSOLANA** (p.223) — `rejected`. dried pulse harvested dry for threshing. «La raccolta del seme secco avviene manualmente, tra la fine di agosto e i primi di settembre.»
+- **FAGIOLO A CARNE** (p.224) — `rejected`. dried pulse harvested dry for threshing. «La semina avviene tradizionalmente con 2 cicli colturali in un anno: semina ad aprile con raccolte a giugno e semina nella prima decade di luglio e raccolta a ottobre.»
+- **FAGIOLO A PISELLO** (p.225) — `rejected`. dried pulse harvested dry for threshing. «La raccolta avviene a scalare dalla seconda metà di ottobre alla prima metà di novembre ed è eseguita esclusivamente a mano.»
+- **FAGIOLO A SURICCHIO (O INCERATIELLO)** (p.226) — `rejected`. dried pulse harvested dry for threshing. «La raccolta avviene verso la fine del mese di agosto e a settembre, raccogliendo nella parte più basse della pianta i baccelli che contengono i semi per la risemina, mentre nella parte alta della pianta si possono raccogliere i baccelli verdi per essere in parte consumati freschi e in parte sottoposti ad essiccazione al calore e alla luce del sole dai quali viene recuperato, mediante battitura meccanica o manuale, il seme destinato al consumo.»
+- **CICORIA DI CATALOGNA FRASTAGLIATA DI GAETA (PUNTARELLE)** (p.217) — `silent`. only relative timing given, no calendar dates.
