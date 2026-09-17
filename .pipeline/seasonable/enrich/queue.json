@@ -398,9 +398,9 @@
       "tier": "pat",
       "silentProvincesAtStart": [],
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "costUsd": 0,
-      "note": null
+      "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
     },
     {
       "id": "campania:calendar",
