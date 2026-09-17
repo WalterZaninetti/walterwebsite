@@ -1,5 +1,5 @@
 /**
- * One mark per kind of thing the catalogue holds — twenty-nine of them.
+ * One mark per kind of thing the catalogue holds — thirty-six of them.
  *
  * These are hand-authored rather than pulled from Lucide, which is the site's
  * rule everywhere else (`ui/icons.tsx`). Lucide has an apple, a cherry, a
@@ -19,6 +19,11 @@
  * designation *of*, so a new row inherits a mark by naming its kind and nothing
  * has to be registered twice. Anything unmapped gets the sprout, which is why
  * adding a designation can never render an empty disc.
+ *
+ * Seven were drawn when the regional PAT registers shipped and brought seven
+ * kinds the protected designations never had: apricot, cauliflower, onion, pea,
+ * broad bean, watermelon and salsify. The sprout carried them for one deploy,
+ * which is exactly as long as a fallback should have to stand in for a fruit.
  */
 
 import type { ReactElement } from 'react';
@@ -32,6 +37,78 @@ const strokeProps = {
 } as const;
 
 const GLYPHS: Record<string, ReactElement> = {
+  // The apricot is in the peach's family and the mark says so — circle, crease,
+  // stone-line — so the difference has to be carried by the top: peach wears a
+  // leaf, plum a stub of stalk, and this one the cleft that runs down from the
+  // stem into the cheeks. A pit drawn as an inner circle was the first idea and
+  // it reads as the kiwi's cross-section at 22px.
+  apricot: (
+    <>
+      <circle cx="12" cy="14.6" r="6.4" />
+      <path d="M12 8.2c-1.2 1.8-1.8 3.9-1.8 6.3s.6 4.5 1.8 6.3" />
+      <path d="M10.3 8.9c.7.6 1.3 1.3 1.7 2.1.4-.8 1-1.5 1.7-2.1" />
+      <path d="M12 8.2V5.4" />
+    </>
+  ),
+  cauliflower: (
+    <>
+      <path d="M6.6 14c-1.2 0-2.2-1-2.2-2.2 0-1.1.8-2 1.9-2.2.2-1.5 1.5-2.6 3-2.6.3 0 .6 0 .9.1.6-1.1 1.7-1.8 2.9-1.8s2.3.7 2.9 1.8c.3-.1.6-.1.9-.1 1.5 0 2.8 1.1 3 2.6 1.1.2 1.9 1.1 1.9 2.2 0 1.2-1 2.2-2.2 2.2Z" />
+      <path d="M12 14v5.8" />
+      <path d="M12 19.8c-2.4 0-4.2-1.4-5.4-4 2.8-.6 4.6.8 5.4 4Z" />
+      <path d="M12 19.8c2.4 0 4.2-1.4 5.4-4-2.8-.6-4.6.8-5.4 4Z" />
+    </>
+  ),
+  // Wider than the garlic and without its ribs: one shoulder line for the outer
+  // skin, and the neck splits into two dry shoots. Garlic is a pointed dome on
+  // a single stem, and at this size the neck is what tells them apart.
+  onion: (
+    <>
+      <ellipse cx="12" cy="15" rx="6.4" ry="6" />
+      <path d="M12 9V7.2" />
+      <path d="M12 7.2c-1.6-1-2.2-2.5-1.7-4.4" />
+      <path d="M12 7.2c1.6-.9 2.3-2.3 1.9-4.2" />
+    </>
+  ),
+  // The pod lies on the diagonal with three peas showing through it, against
+  // the broad bean's upright pod and two flat seeds. Both are pods, so neither
+  // may be the generic one.
+  pea: (
+    <>
+      <path d="M6.2 7.6c-1.1 5.9 3.1 10.8 11.6 11.6" />
+      <path d="M6.2 7.6c4.9 1.5 8.8 5.2 11.6 11.6" />
+      <path d="M9.2 12.1h.01" />
+      <path d="M11.7 14.9h.01" />
+      <path d="M14.3 17.2h.01" />
+    </>
+  ),
+  'broad bean': (
+    <>
+      <path d="M12 3.4c-2.7 2.7-2.7 14.5 0 17.2 2.7-2.7 2.7-14.5 0-17.2Z" />
+      <ellipse cx="12" cy="9.4" rx="1.7" ry="2.1" />
+      <ellipse cx="12" cy="14.8" rx="1.7" ry="2.1" />
+    </>
+  ),
+  watermelon: (
+    <>
+      <path d="M4 8.8h16" />
+      <path d="M4 8.8a8 8 0 0 0 16 0" />
+      <path d="M6.6 9.8a5.4 5.4 0 0 0 10.8 0" />
+      <path d="M9.9 12.6h.01" />
+      <path d="M14.1 12.6h.01" />
+      <path d="M12 15h.01" />
+    </>
+  ),
+  // Upright, where the carrot lies on the diagonal: a thin root with two
+  // whiskers and the grass-like blades salsify is recognised by.
+  salsify: (
+    <>
+      <path d="M12 21.4c-1.7-3.9-2.6-7.5-2.6-10.8h5.2c0 3.3-.9 6.9-2.6 10.8Z" />
+      <path d="M9.9 16c-1.6-.5-2.8-1.4-3.6-2.8" />
+      <path d="M12 10.6V4.8" />
+      <path d="M9.7 10.6 7.6 6.6" />
+      <path d="m14.3 10.6 2.1-4" />
+    </>
+  ),
   apple: (
     <>
       <path d="M8.6 8.2C5.6 8.2 4 10.9 4 13.6 4 17.6 7.5 21 9.6 21c1 0 1.6-.6 2.4-.6s1.4.6 2.4.6c2.1 0 5.6-3.4 5.6-7.4 0-2.7-1.6-5.4-4.6-5.4-1.6 0-2.4.7-3.4.7s-1.8-.7-3.4-.7Z" />
