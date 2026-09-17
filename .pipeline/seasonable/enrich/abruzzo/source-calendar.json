@@ -1,0 +1,21 @@
+{
+  "region": "abruzzo",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Linee di indirizzo per la ristorazione scolastica della Regione Abruzzo (allegato DGR)",
+      "url": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2023-09-18/dgr-allegato-nuove-linee-guida-ristorazione-scolastica-abruzzo.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "file path/last-modified date 2023-09-18; contains seasonal fruit/vegetable calendar as appendix"
+    }
+  ],
+  "triedUrls": [
+    "https://www.aslteramo.it/wp-content/uploads/2020/02/Linee-di-indirizzo-per-la-ristorazione-scolastica-della-Regione-Abruzzo-gennaio-2023-.pdf",
+    "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2023-09-18/dgr-allegato-nuove-linee-guida-ristorazione-scolastica-abruzzo.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Official BURA (Bollettino Ufficiale Regione Abruzzo) publication of the DGR annex containing school catering guidelines with seasonal fruit and vegetable calendar; verified 200 OK PDF."
+}

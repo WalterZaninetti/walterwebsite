@@ -173,8 +173,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.049,
+      "note": "discovered 1 document(s): Official BURA (Bollettino Ufficiale Regione Abruzzo) publication of the DGR annex containing school catering guidelines with seasonal fruit and vegetable calendar; verified 2"
     },
     {
       "id": "trentino-alto-adige:pat",
