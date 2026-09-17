@@ -172,9 +172,9 @@
         "ch"
       ],
       "status": "pending",
-      "attempts": 1,
-      "costUsd": 0.448,
-      "note": "batch p233–278 parsed to no records ($0.156): Nofruit/vegetableproductswithharvestwindowsappearonthesepages(allareprepared/processedfoodsmeateggsdairycondiments;already-recordedcalendarpage277excluded).Nooutput."
+      "attempts": 2,
+      "costUsd": 0.481,
+      "note": "batch p233–278 parsed to no records ($0.032): Nofruit/vegetableproductswithharvestwindowsappearonthesepages(imagepage277isthealready-recordedcalendar)."
     },
     {
       "id": "trentino-alto-adige:pat",
