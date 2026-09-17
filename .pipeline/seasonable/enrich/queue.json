@@ -134,8 +134,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.113,
-      "note": "extracted 304 pages, 241 skipped by the pre-filter"
+      "costUsd": 0.275,
+      "note": "0 records, 0 for review, 27 pages pending"
     },
     {
       "id": "marche:calendar",
