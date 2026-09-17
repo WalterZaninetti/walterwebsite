@@ -1733,7 +1733,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 217,
@@ -1749,7 +1749,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 219,
@@ -1797,7 +1797,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 225,
@@ -1813,7 +1813,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 227,
@@ -1829,7 +1829,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 229,
@@ -1845,7 +1845,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 231,
@@ -1861,7 +1861,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 233,
@@ -1909,7 +1909,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 239,
@@ -1941,7 +1941,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 243,
@@ -2005,7 +2005,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 251,
@@ -2029,7 +2029,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 254,
@@ -2045,7 +2045,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 256,
@@ -2133,7 +2133,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 267,
@@ -2149,7 +2149,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 269,
@@ -2165,7 +2165,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 271,
@@ -2181,7 +2181,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 273,
@@ -2205,7 +2205,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 276,
@@ -2245,7 +2245,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 281,
@@ -2293,7 +2293,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 287,
@@ -2309,7 +2309,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 289,
@@ -2325,7 +2325,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 291,
@@ -2341,7 +2341,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 293,
@@ -2357,7 +2357,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 295,
@@ -2373,7 +2373,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 297,
@@ -2389,7 +2389,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 299,
@@ -2405,7 +2405,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 301,
@@ -2437,7 +2437,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         }
       ]
     }

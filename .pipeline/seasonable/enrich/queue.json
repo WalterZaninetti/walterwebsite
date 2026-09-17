@@ -132,10 +132,10 @@
         "pu",
         "an"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 1.075,
-      "note": "0 records, 0 for review, 27 pages pending"
+      "costUsd": 1.387,
+      "note": "28 records, 0 for review, 0 pages pending"
     },
     {
       "id": "marche:calendar",
