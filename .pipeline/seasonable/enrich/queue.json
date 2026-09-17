@@ -195,10 +195,10 @@
       "silentProvincesAtStart": [
         "bz"
       ],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.101,
+      "note": "discovered 0 document(s): Searched for Trento (APSS/PAT school catering guidelines) and Bolzano (Land/Provinz school meals) seasonality calendars; only found a non-official consumer-center page and no"
     },
     {
       "id": "friuli-venezia-giulia:pat",
