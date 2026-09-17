@@ -171,10 +171,10 @@
         "pe",
         "ch"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.514,
-      "note": "unblocked: judge may now answer that a batch holds no products"
+      "costUsd": 0.68,
+      "note": "0 records, 0 for review, 0 pages pending"
     },
     {
       "id": "trentino-alto-adige:pat",
