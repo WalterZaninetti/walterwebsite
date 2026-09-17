@@ -1,0 +1,21 @@
+{
+  "region": "lombardia",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "LINEE DI INDIRIZZO PER LA RISTORAZIONE SCOLASTICA",
+      "url": "https://www.ats-insubria.it/attachments/category/337/LINEE%20DI%20INDIRIZZO%20PER%20LA%20RISTORAZIONE%20SCOLASTICA%20lug%202023.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "filename contains 'lug 2023'; not verified in document body"
+    }
+  ],
+  "triedUrls": [
+    "https://www.mim.gov.it/documents/9064803/10317495/Allegato+1+Linee+di+indirizzo+per+la+ristorazione+scolastica+-+Regione+Lombardia.pdf/5eaa207c-081b-f39d-d531-6604033f9afe?t=1779201719470",
+    "https://www.ats-insubria.it/attachments/category/337/LINEE%20DI%20INDIRIZZO%20PER%20LA%20RISTORAZIONE%20SCOLASTICA%20lug%202023.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Lombardia's own Linee di indirizzo per la ristorazione scolastica (containing the fruit/vegetable seasonality calendar appendix) is republished officially by ATS Insubria, a regional health authority; the ministry copy (mim.gov.it) was rejected as non-regional publisher."
+}
