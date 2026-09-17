@@ -208,9 +208,9 @@
         "ts"
       ],
       "status": "pending",
-      "attempts": 1,
-      "costUsd": 0.648,
-      "note": "batch p306–318 parsed to no records ($0.037): Thesepagesarebibliography/index/acknowledgmentscontentwithnoproductharvestdata."
+      "attempts": 2,
+      "costUsd": 0.657,
+      "note": "batch p306–318 parsed to no records ($0.009): Thesepagesarebibliographyindexandacknowledgments—noproductschedecontenttoevaluate."
     },
     {
       "id": "friuli-venezia-giulia:calendar",
