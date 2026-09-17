@@ -37,6 +37,9 @@
  * anything changed outside it and blocks the unit. Moving a row onto the page
  * is the supervised ship step.
  *
+ * A unit whose discovery found nothing ends `needs-human`, not `done`: fill in
+ * source-<tier>.json by hand and set the unit back to `pending`.
+ *
  * SPEND
  * `SEASONABLE_MAX_TOTAL_USD` (default 5) caps the cumulative cost across every
  * region's costs.jsonl plus the first pilot, checked before each step, so
@@ -59,7 +62,7 @@ const QUEUE = join(ROOT, 'queue.json');
 const MAX_TOTAL_USD = Number(process.env.SEASONABLE_MAX_TOTAL_USD ?? 5);
 const PAUSE_MS = Number(process.env.SEASONABLE_PAUSE_S ?? 60) * 1000;
 const JUDGE = { model: process.env.SEASONABLE_JUDGE_MODEL ?? 'sonnet', effort: process.env.SEASONABLE_JUDGE_EFFORT ?? 'low' };
-const ESCALATE = process.env.SEASONABLE_ESCALATE_MODEL ?? 'opus';
+const ESCALATE = process.env.SEASONABLE_ESCALATE_MODEL ?? 'sonnet';
 const MAX_ATTEMPTS = 3;
 const MAX_CONSECUTIVE_BLOCKED = 3;
 const TIERS = ['pat', 'calendar'];
@@ -145,13 +148,15 @@ async function step(unit) {
   if (!source) {
     const found = await discover(unit.region, unit.tier);
     unit.note = `discovered ${found.documents.length} document(s): ${found.note ?? ''}`.slice(0, 200);
-    if (found.documents.length === 0) unit.status = 'done';
+    // Discovery giving up is not the region having nothing: Abruzzo's found a PDF
+    // it could not open, Puglia's turned down the atlas the Region links to.
+    if (found.documents.length === 0) unit.status = 'needs-human';
     return { paid: true, message: `Discover the ${unit.tier} source for ${unit.region}` };
   }
   if (source.documents.length === 0) {
-    unit.status = 'done';
-    unit.note = source.note ?? 'no official document';
-    return { paid: false, message: `Close ${unit.id}: no official document` };
+    unit.status = 'needs-human';
+    unit.note = source.note ?? 'no official document found';
+    return { paid: false, message: `Hand ${unit.id} to a human: no document found` };
   }
   if (!existsSync(join(dir, `extract-${unit.tier}.json`))) {
     const r = extract(unit.region, unit.tier);
@@ -187,7 +192,7 @@ async function runUnit(queue, unit) {
     unit.status = 'blocked';
     unit.note = `a stage wrote outside the enrich folder, reverted: ${stray.join(', ')}`;
   }
-  const check = spawnSync('node', ['scripts/seasonable-candidates-check.mjs', unit.region], { encoding: 'utf8' });
+  const check = spawnSync('node', ['scripts/seasonable-candidates-check.mjs', unit.region, '--tier', unit.tier], { encoding: 'utf8' });
   if (check.status !== 0) {
     unit.status = 'blocked';
     unit.note = `validator failed: ${(check.stderr || check.stdout).split('\n').slice(0, 3).join(' | ')}`;
@@ -205,7 +210,7 @@ async function runUnit(queue, unit) {
 function printStatus() {
   const queue = loadQueue();
   const totals = { candidate: 0, silent: 0, rejected: 0, review: 0 };
-  console.log(`${'unit'.padEnd(26)} ${'status'.padEnd(8)} cand silnt rejct revw  reached  skipped     cost  $/record`);
+  console.log(`${'unit'.padEnd(26)} ${'status'.padEnd(11)} cand silnt rejct revw  reached  skipped     cost  $/record`);
   for (const u of queue.units) {
     const dir = regionDir(u.region);
     const records = readJsonl(join(dir, 'candidates.jsonl')).filter((r) => r.tier === u.tier);
@@ -220,7 +225,7 @@ function printStatus() {
     for (const k of ['candidate', 'silent', 'rejected']) totals[k] += count(k);
     totals.review += review;
     console.log([
-      u.id.padEnd(26), u.status.padEnd(8),
+      u.id.padEnd(26), u.status.padEnd(11),
       String(count('candidate')).padStart(4), String(count('silent')).padStart(5), String(count('rejected')).padStart(5), String(review).padStart(4),
       `${reached.size}/${u.silentProvincesAtStart.length}`.padStart(8),
       (pages.length ? `${pages.filter((p) => p.status === 'skipped').length}/${pages.length}` : '-').padStart(8),

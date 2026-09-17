@@ -6,7 +6,10 @@
  *
  *   --model <m>        judge model (default $SEASONABLE_JUDGE_MODEL, else haiku)
  *   --effort <e>       effort level, for models that take one
- *   --escalate <m>     model for records the judge marks `unsure` (default opus)
+ *   --escalate <m>     model for records the judge marks `unsure` (default sonnet,
+ *                      at high effort — Opus cost more on six Marche pages than
+ *                      Sonnet did judging sixty, and most `unsure` was missing
+ *                      context, which no model can supply)
  *   --pages 1,2,3      judge only these pages of document 0, and do not mark them
  *   --out <file>       write records here instead of candidates.jsonl — a replay,
  *                      which changes no state (used to choose the judge model)
@@ -14,8 +17,11 @@
  *
  * HOW A BATCH IS SPENT
  * Pending pages — the ones the pre-filter kept — are packed into batches of up
- * to ~60k characters, each followed by one context page so a scheda that runs
- * over a page break is read whole. One stripped call per batch (see lib.mjs),
+ * to ~60k characters. Each judged page travels with its neighbours as context:
+ * the page before it, because the pre-filter skips pages with no date and a
+ * scheda's "Area di produzione" is usually on the page before its harvest
+ * sentence (the Marche schede lost two zones to this before it was fixed), and
+ * the page after the batch, so a scheda that runs over a break is read whole. One stripped call per batch (see lib.mjs),
  * rules in the system prompt so consecutive batches hit the prompt cache, pages
  * in the user turn. The model returns only what needs judgement; the source,
  * the dates, the ledger prose and the file writes are all code.
@@ -58,7 +64,8 @@ function args() {
     tier,
     model: opt('model', process.env.SEASONABLE_JUDGE_MODEL ?? 'haiku'),
     effort: opt('effort', process.env.SEASONABLE_JUDGE_EFFORT),
-    escalate: opt('escalate', process.env.SEASONABLE_ESCALATE_MODEL ?? 'opus'),
+    escalate: opt('escalate', process.env.SEASONABLE_ESCALATE_MODEL ?? 'sonnet'),
+    escalateEffort: opt('escalate-effort', process.env.SEASONABLE_ESCALATE_EFFORT ?? 'high'),
     pages: opt('pages', null)?.split(',').map(Number),
     out: opt('out', null),
     maxBatches: Number(opt('max-batches', Infinity)),
@@ -82,21 +89,34 @@ function batches(doc, texts, onlyPages) {
     size += p.chars;
   }
   if (current.length) out.push(current);
-  return out.map((pages) => {
-    const last = pages.at(-1).n;
-    const context = texts[last] !== undefined && !pages.some((p) => p.n === last + 1) ? last + 1 : null;
-    return { pages, context };
-  });
+  return out.map((pages) => withContext(pages, texts));
+}
+
+/**
+ * A batch: the judged pages, the page before each one that is not itself being
+ * judged, and the page after the last. `before` pages may start a product that
+ * continues onto a judged page; the `after` page only finishes one.
+ */
+function withContext(pages, texts) {
+  const judged = new Set(pages.map((p) => p.n));
+  const before = [...new Set(pages.map((p) => p.n - 1))].filter((n) => n >= 1 && !judged.has(n));
+  const last = pages.at(-1).n;
+  const after = texts[last] !== undefined && texts[last].trim() && !judged.has(last + 1) ? last + 1 : null;
+  return { pages, before, after };
 }
 
 function pagePrompt(texts, batch) {
-  const body = batch.pages.map((p) =>
-    p.ocr
-      ? `<page n="${p.n}">\n(image scan with no text layer: open ${p.image} with the Read tool and read it)\n</page>`
-      : `<page n="${p.n}">\n${texts[p.n - 1]}\n</page>`,
-  );
-  if (batch.context) body.push(`<page n="${batch.context}" context="true">\n${texts[batch.context - 1]}\n</page>`);
-  return body.join('\n\n');
+  const parts = [
+    ...batch.pages.map((p) => ({
+      n: p.n,
+      body: p.ocr
+        ? `<page n="${p.n}">\n(image scan with no text layer: open ${p.image} with the Read tool and read it)\n</page>`
+        : `<page n="${p.n}">\n${texts[p.n - 1]}\n</page>`,
+    })),
+    ...batch.before.map((n) => ({ n, body: `<page n="${n}" context="before">\n${texts[n - 1]}\n</page>` })),
+    ...(batch.after ? [{ n: batch.after, body: `<page n="${batch.after}" context="after">\n${texts[batch.after - 1]}\n</page>` }] : []),
+  ];
+  return parts.sort((a, b) => a.n - b.n).map((p) => p.body).join('\n\n');
 }
 
 function enrich(raw, { region, tier, source, docIndex, doc }) {
@@ -161,7 +181,7 @@ async function judgeBatch(ctx, batch, known, model, effort, extraInstruction = '
 }
 
 export async function judge(options) {
-  const { region, tier, model, effort, escalate, pages: onlyPages, out, maxBatches } = options;
+  const { region, tier, model, effort, escalate, escalateEffort = 'high', pages: onlyPages, out, maxBatches } = options;
   const dir = regionDir(region);
   const source = readJson(join(dir, `source-${tier}.json`), null);
   const extracted = readJson(join(dir, `extract-${tier}.json`), null) ?? extract(region, tier);
@@ -188,10 +208,16 @@ export async function judge(options) {
       const good = [];
       const bad = [];
       const unsure = [];
+      const seen = new Set();
       const sort = (raw, attempt) => {
         if (!raw?.product || knownKeys.has(productKey(raw.product))) return;
-        // A product that starts on the context page belongs to the next batch.
-        if (raw.page === batch.context) return;
+        // A product that starts on the after-context page belongs to the next batch.
+        if (raw.page === batch.after) return;
+        // The same product twice in one reply — Marche's Castagne, once per page it spans.
+        if (attempt === 1) {
+          if (seen.has(productKey(raw.product))) return;
+          seen.add(productKey(raw.product));
+        }
         const rec = enrich(raw, ctx);
         if (!doc.pages.some((p) => p.n === raw.page)) {
           return bad.push({ rec, errors: [`page ${raw.page} is not a page of this document`], attempt });
@@ -209,9 +235,7 @@ export async function judge(options) {
         const pagesNeeded = [...new Set(retry.map((b) => b.rec.page))];
         const instruction = 'Your previous output for these products failed mechanical checks. Output corrected lines for ONLY these products:\n' +
           retry.map((b) => `- ${b.rec.product} (p.${b.rec.page}): ${b.errors.join('; ')}`).join('\n');
-        const retryBatch = { pages: doc.pages.filter((p) => pagesNeeded.includes(p.n)), context: null };
-        const last = Math.max(...pagesNeeded);
-        if (texts[last] !== undefined) retryBatch.context = last + 1;
+        const retryBatch = withContext(doc.pages.filter((p) => pagesNeeded.includes(p.n)), texts);
         const second = await judgeBatch(ctx, retryBatch, [], model, effort, instruction);
         spent += second.cost;
         const retried = new Set();
@@ -227,8 +251,8 @@ export async function judge(options) {
       for (const u of unsure) {
         const esc = await judgeBatch(
           ctx,
-          { pages: doc.pages.filter((p) => p.n === u.page), context: texts[u.page] !== undefined ? u.page + 1 : null },
-          [], escalate, undefined,
+          withContext(doc.pages.filter((p) => p.n === u.page), texts),
+          [], escalate, escalateEffort,
           `Output a line for ONLY this product: ${u.product}. A cheaper model was unsure: ${u.reason}. Decide; use "unsure" only if the text truly cannot be read.`,
         );
         spent += esc.cost;

@@ -4,6 +4,7 @@
  *
  *   node scripts/seasonable-candidates-check.mjs            every staged region
  *   node scripts/seasonable-candidates-check.mjs molise     one region
+ *   node scripts/seasonable-candidates-check.mjs molise --tier pat   one region, one tier
  *
  * WHAT IT IS FOR
  * The sweep runs unattended, so the mechanical half of a reviewer's job runs
@@ -23,7 +24,7 @@
  * The judge is the cheapest model that matched the pilot, so it is not trusted
  * to quote. Every quote and zone quote must appear, after normalising
  * whitespace, quotes and dashes, in the extracted text of the page the record
- * names or the page after it. A model cannot invent a sentence past this. Image
+ * names, or the page either side of it. A model cannot invent a sentence past this. Image
  * pages carry `ocr` and are exempt — the ship step re-reads those by eye.
  *
  * Exits non-zero on any error, so the runner can mark a batch for retry.
@@ -70,7 +71,8 @@ function pageContext(region, r) {
   const doc = JSON.parse(readFileSync(extract, 'utf8')).documents[r.doc ?? 0];
   if (!doc || !existsSync(doc.text)) return null;
   const pages = readFileSync(doc.text, 'utf8').split('\f');
-  return normalise(`${pages[r.page - 1] ?? ''} ${pages[r.page] ?? ''}`);
+  // A scheda's area can sit on the page before the one it starts on, and its text can run onto the next.
+  return normalise(`${pages[r.page - 2] ?? ''} ${pages[r.page - 1] ?? ''} ${pages[r.page] ?? ''}`);
 }
 
 export function checkRecord(r, region) {
@@ -134,8 +136,12 @@ export function checkRecord(r, region) {
   const numeric = r.flags.includes('numeric-dates');
   if (!numeric && named.size === 0) errors.push('the quotes name no month; flag "numeric-dates" if they use numbers');
 
-  if (/precoc|tardiv|medie|tipologi|variet|cultivar|;/i.test(quoteText) && !r.flags.includes('variety-union')) {
-    errors.push('quote mentions varieties or has a semicolon: take the union and flag "variety-union"');
+  if (/precoc|tardiv|tipologi|variet|cultivar/i.test(quoteText) && !r.flags.includes('variety-union')) {
+    errors.push('quote mentions varieties: take the union across them and flag "variety-union"');
+  }
+  // Invariant 8's other form: the sentence went on after the semicolon, and the quote did not.
+  for (const q of r.quotes ?? []) {
+    if (/;\s*$/.test(q)) errors.push(`quote stops at a semicolon — quote the whole sentence: "${q.slice(-60)}"`);
   }
 
   for (const [i, w] of (r.windows ?? []).entries()) {
@@ -160,7 +166,7 @@ export function checkRecord(r, region) {
   return { errors, warnings };
 }
 
-function checkRegion(region) {
+function checkRegion(region, tier) {
   const file = join(ROOT, region, 'candidates.jsonl');
   if (!existsSync(file)) return { region, records: 0, errors: 0 };
   const lines = readFileSync(file, 'utf8').split('\n');
@@ -178,6 +184,7 @@ function checkRegion(region) {
       errorCount++;
       continue;
     }
+    if (tier && r.tier !== tier) continue;
     const key = `${r.tier}|${r.product}|${r.source?.url}`;
     const { errors, warnings } = checkRecord(r, region);
     if (seen.has(key)) errors.push('duplicate record for this product and document');
@@ -192,7 +199,9 @@ function checkRegion(region) {
 if (import.meta.url !== `file://${process.argv[1]}`) {
   // Imported by the judge for checkRecord; the CLI below is not for it.
 } else {
-const only = process.argv[2];
+const only = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : null;
+const tierArg = process.argv.indexOf('--tier');
+const onlyTier = tierArg === -1 ? null : process.argv[tierArg + 1];
 const regions = only
   ? [only]
   : existsSync(ROOT)
@@ -201,7 +210,7 @@ const regions = only
 
 let failed = 0;
 for (const region of regions) {
-  const { records, errors } = checkRegion(region);
+  const { records, errors } = checkRegion(region, onlyTier);
   console.log(`${region}: ${records} records, ${errors} errors`);
   failed += errors;
 }
