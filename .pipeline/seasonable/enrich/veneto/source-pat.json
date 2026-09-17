@@ -1,0 +1,15 @@
+{
+  "region": "veneto",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.piave.veneto.it/web/temi/atlante-dei-prodotti-agroalimentari-tradizionali",
+    "https://www.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%201.pdf",
+    "https://www.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%202.pdf",
+    "https://www.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Prima%20parte.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Google's cache shows venetoagricoltura.org previously hosted PDFs 'Vegetali 1.pdf'/'Vegetali 2.pdf' (PAT schede for vegetal products) under the Atlante dei prodotti agroalimentari tradizionali del Veneto linked from piave.veneto.it, but all these URLs currently return HTTP 200 with content-type text/html (a generic 'myPortal' page), not the PDF itself, so no working document URL could be confirmed."
+}

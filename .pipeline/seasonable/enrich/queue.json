@@ -297,10 +297,10 @@
       "region": "veneto",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.107,
+      "note": "discovered 0 document(s): Google's cache shows venetoagricoltura.org previously hosted PDFs 'Vegetali 1.pdf'/'Vegetali 2.pdf' (PAT schede for vegetal products) under the Atlante dei prodotti agroalime"
     },
     {
       "id": "veneto:calendar",
