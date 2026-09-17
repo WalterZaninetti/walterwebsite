@@ -158,10 +158,10 @@
         "pe",
         "ch"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.148,
+      "note": "discovered 0 document(s): Found a regione.abruzzo.it PDF listing PAT products (200 OK, application/pdf) but could not verify it contains full scheda text rather than just a name list (WebFetch blocked"
     },
     {
       "id": "abruzzo:calendar",
