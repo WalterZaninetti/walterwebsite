@@ -67,3 +67,20 @@ It judged the second page of each two-page scheda without the first, where the n
 - **MARRONE DI ROCCAFLUVIONE** (p.271) — `silent`. no dated harvest statement in text.
 - **OLIVE NERE MARINATE - OLIVE NERE STRINATE** (p.279) — `rejected`. processing/production period of a processed product, not fresh harvest. «Le olive nere marinate vengono prodotte da ottobre-novembre a dicembregennaio a seconda delle varietà locali utilizzate.»
 - **MELA ROSA - PIANELLA - ROSETTA - DURELLA - APPIETTA** (p.274) — `silent`. only manner of harvest and consumption timing given, no calendar window.
+
+## 2026-09-17 — pat judge, pages 9, 11, 13, 22, 23, 37, 58, 59, 77, 79, 80, 83, 84, 85, 87, 91, 96, 97, 102, 103, 104, 105, 106, 108, 110, 112, 114, 116, 118, 129, 151, 173, 184, 196, 204, 205 (sonnet/low, $0.304 so far)
+
+- **CONSERVA DI POMODORI** (p.76) — `rejected`. production period of a processed product (conserva). «La conserva viene preparata ad agosto-settembre in quantità sufficiente per tutto l'anno.»
+- **PASTA DI TARTUFO BIANCO** (p.78) — `rejected`. out of scope: truffle. «Calendario di produzione: da ottobre a dicembre.»
+- **SALSA DI OLIVE** (p.82) — `rejected`. harvest of raw olives cited within processed-product (salsa) description. «Le olive vengono raccolte nel mese di novembre e messe in salamoia al 7% di salinità con foglie di alloro, semi di finocchio ed aglio.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE CORONCINA** (p.106) — `rejected`. harvest date given for raw material of a processed product (oil). «L'epoca ottimale di raccolta, indicativamente, va dalla fine di novembre alla prima metà di dicembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE MIGNOLA** (p.108) — `rejected`. harvest date given for raw material of a processed product (oil). «Il periodo ottimale di raccolta è intorno alla metà di novembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE PIANTONE DI FALERONE** (p.110) — `rejected`. harvest date given for raw material of a processed product (oil). «Cascola precoce ed abbondante, periodo ottimale di raccolta: entro la metà di novembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE PIANTONE DI MOGLIANO** (p.112) — `rejected`. harvest date given for raw material of a processed product (oil). «Il periodo ottimale di raccolta è intorno alla metà di novembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE RAGGIA** (p.114) — `rejected`. harvest date given for raw material of a processed product (oil). «Il periodo ottimale di raccolta è intorno alla metà di novembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE RAGGIOLA** (p.116) — `rejected`. harvest date given for raw material of a processed product (oil). «Il periodo ottimale di raccolta cade nella prima metà di novembre.»
+- **OLIO EXTRAVERGINE DI OLIVA MONOVARIETALE SARGANO DI FERMO** (p.118) — `rejected`. harvest date given for raw material of a processed product (oil). «Il periodo ottimale di raccolta cade intorno alla metà di novembre.»
+- **LONZA DI FICO - LONZINO DI FICO - LONZETTA DI FICO - SALAME DI FICO** (p.172) — `rejected`. production period of a processed product (dried fig salame). «Viene preparato ad ottobre, mantiene la fragranza fino a marzo/aprile.»
+- **PIZZA CON LE NOCI** (p.184) — `rejected`. out of scope: nuts (walnuts), and it is a processed sweet.
+- **TORRONE DI FICHI - PANETTO DI FICHI** (p.204) — `rejected`. production period of a processed product (torrone di fichi). «il colore esterno è determinato dalla varietà di fichi utilizzati (solitamente si usano fichi bianchi). … La lavorazione avviene nel periodo autunno-invernale.»
+- **VINO DI VISCIOLE** (p.12) — `silent`. no dated harvest statement for visciole given.
