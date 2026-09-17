@@ -63,3 +63,7 @@
 - **Pomodoro seccagno "Pizzutello di Paceco"** (p.45) — `silent`. no dated harvest window given, only maturity stage descriptions.
 - **Susina Sanacore Tardiva, Sanacore tardiva, Sanacore ca facciuzza rossa.** (p.48) — `silent`. only relative delay to another variety given, no calendar dates.
 - **Zucca virmiciddara, Cucuzza virmiciddara** (p.50) — `silent`. no dated harvest window given, only general growth description.
+
+## 2026-09-17 — pat judge, pages 71, 73, 75, 80, 83, 84, 91, 94, 97, 98, 99, 100, 103 (sonnet/low)
+
+No fruit or vegetable product on these pages: recipe/product schede for processed foods (dolci, pane, gastronomia, prodotti ittici, miele, ricotta) with no fresh fruit/vegetable harvest windows

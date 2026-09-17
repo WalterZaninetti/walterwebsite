@@ -457,10 +457,10 @@
       "region": "sicilia",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 1.117,
-      "note": "12 records, 0 for review, 13 pages pending"
+      "costUsd": 1.334,
+      "note": "0 records, 0 for review, 0 pages pending"
     },
     {
       "id": "sicilia:calendar",
