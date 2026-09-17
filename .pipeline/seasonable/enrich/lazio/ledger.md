@@ -2,3 +2,13 @@
 ## 2026-09-17 — pat judge, pages 2, 3, 6, 11, 13, 19, 21, 27, 28, 29, 30, 32, 34, 35, 36 (sonnet/low)
 
 No fruit or vegetable product on these pages: pages contain only meat, cheese, and dairy PAT/DOP products, no fruit or vegetable
+
+## 2026-09-17 — pat judge, pages 39, 41, 43, 45, 47, 48, 50, 51, 52, 53, 54, 56, 59, 61 (sonnet/low, $0.318 so far)
+
+- **Carciofo Romanesco del Lazio IGP** (p.47) — `candidate` open-field 0→9. «La raccolta si effettua a mano, scalarmente e con modalità diversa in relazione al tipo di presentazione al mercato; l’epoca di raccolta inizia in gennaio e può protrarsi fino a maggio.»
+- **Castagna di Vallerano DOP** (p.49) — `candidate` open-field 17→20. «La raccolta dei frutti deve avvenire tra il 20 settembre e il 10 novembre di ogni anno.»
+- **Fagiolo Cannellino di Atina DOP** (p.51) — `rejected`. dried pulse harvested dry for threshing. «La raccolta viene effettuata nel periodo compreso fra il 10 settembre ed il 30 ottobre di ciascun anno.»
+- **Nocciola Romana DOP** (p.55) — `rejected`. out of scope: hazelnut (nocciola). «Le operazioni di raccolta in ogni caso devono essere effettuate dal 15 agosto al 15 novembre.»
+- **Patata dell’Alto Viterbese IGP** (p.59) — `candidate` open-field 10→17. «La raccolta, manuale o meccanica, deve effettuarsi nel periodo compreso tra 15 giugno e 30 settembre di ciascun anno»
+- **Peperone di Pontecorvo DOP** (p.61) — `candidate` open-field 12→21. «La raccolta deve essere manuale ed eseguita scalarmene durante il periodo che va dal 1 luglio al 30 novembre.»
+- **Kiwi Latina IGP** (p.53) — `silent`. no dated harvest window stated.

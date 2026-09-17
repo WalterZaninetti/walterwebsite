@@ -317,7 +317,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 40,
@@ -333,7 +333,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 42,
@@ -349,7 +349,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 44,
@@ -365,7 +365,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 46,
@@ -381,7 +381,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 48,
@@ -389,7 +389,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 49,
@@ -405,7 +405,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 51,
@@ -413,7 +413,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 52,
@@ -421,7 +421,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 53,
@@ -429,7 +429,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 54,
@@ -437,7 +437,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 55,
@@ -453,7 +453,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 57,
@@ -477,7 +477,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 60,
@@ -493,7 +493,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 62,
