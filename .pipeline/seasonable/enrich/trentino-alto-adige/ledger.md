@@ -14,3 +14,8 @@
 - **SUSINA DI DRO** (p.20) — `candidate` open-field 12→17. «La raccolta viene effettuata esclusivamente a mano nei mesi di luglio, agosto e settembre, rispettando la scalarità di maturazione»
 - **Pere antiche trentine** (p.101) — `silent`. no harvest date given, only varieties and uses listed.
 - **Cavoli Cappucci della Val di Gresta** (p.94) — `silent`. no harvest date given, only description of product and history.
+
+## 2026-09-17 — already shipped
+
+- **MELA VAL DI NON** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
+- **SUSINA DI DRO** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.

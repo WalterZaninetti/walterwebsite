@@ -93,3 +93,10 @@ No fruit or vegetable product on these pages: cheese (formaggi) and olive oil (g
 - **Ferlengo o Finferlo di Tarquinia** (p.240) — `rejected`. out of scope: wild-gathered mushroom. «Le raccolte del Ferlengo iniziano,
 a seconda delle condizioni metereologiche, tra … la prima quindicina di settembre; a volte, se la siccità perdura, si
 giunge anche a novembre.»
+
+## 2026-09-17 — already shipped
+
+- **Carciofo Romanesco del Lazio IGP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
+- **Castagna di Vallerano DOP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
+- **Patata dell’Alto Viterbese IGP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
+- **Peperone di Pontecorvo DOP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.

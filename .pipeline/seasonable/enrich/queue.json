@@ -377,10 +377,10 @@
       "region": "lazio",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "blocked",
-      "attempts": 3,
+      "status": "pending",
+      "attempts": 0,
       "costUsd": 2.768,
-      "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
+      "note": "reopened after the usage-limit stop"
     },
     {
       "id": "lazio:calendar",
@@ -398,9 +398,9 @@
       "tier": "pat",
       "silentProvincesAtStart": [],
       "status": "pending",
-      "attempts": 2,
+      "attempts": 0,
       "costUsd": 0,
-      "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
+      "note": "reopened after the usage-limit stop"
     },
     {
       "id": "campania:calendar",
