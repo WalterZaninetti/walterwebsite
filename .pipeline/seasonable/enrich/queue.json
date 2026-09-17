@@ -459,8 +459,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.08,
+      "note": "discovered 1 document(s): Official Regione Siciliana page hosts a single combined PDF of all PAT schede (all categories including prodotti vegetali) dated 2023, the most recent version linked from the"
     },
     {
       "id": "sicilia:calendar",

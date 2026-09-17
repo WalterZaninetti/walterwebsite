@@ -1,0 +1,22 @@
+{
+  "region": "sicilia",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Schede PAT Sicilia 2023",
+      "url": "https://www.regione.sicilia.it/system/files/2023-06/Schede%20PAT%20Sicilia%202023.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "file path/upload date 2023-06, Last-Modified header 2023-06-15; not verified as printed in document title"
+    }
+  ],
+  "triedUrls": [
+    "https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-agricoltura-sviluppo-rurale-pesca-mediterranea/dipartimento-agricoltura/servizi/brand-sicilia-marketing-territoriale/riconoscimento-prodotti-qualita/prodotti-agroalimentari",
+    "https://pti.regione.sicilia.it/portal/page/portal/PIR_PORTALE/PIR_LaStrutturaRegionale/PIR_AssessoratoregionaledelleRisorseAgricoleeAlimentari/PIR_DipAgricoltura/PIR_AreeTematiche/PIR_Servizi/PIR_BrandSiciliaeMarketingterritoriale/PIR_Riconoscimentoetuteladeiprodottidiqualita/PIR_ProdottiAgroalimentariTradizionali/Schede%20PAT%20Sicilia%202021.pdf",
+    "https://www.regione.sicilia.it/system/files/2023-06/Schede%20PAT%20Sicilia%202023.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Official Regione Siciliana page hosts a single combined PDF of all PAT schede (all categories including prodotti vegetali) dated 2023, the most recent version linked from the official agriculture department page; the older pti.regione.sicilia.it URL returned a connection error and appears deprecated."
+}
