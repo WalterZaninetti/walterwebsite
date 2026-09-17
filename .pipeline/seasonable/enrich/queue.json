@@ -23,10 +23,10 @@
         "cb",
         "is"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.104,
-      "note": "discovered 0 document(s): No official Molise region/ASReM seasonality calendar found; the halleyweb link is a comune mirror serving an Abruzzo region document, not an official Molise publication."
+      "note": "No official Molise region/ASReM seasonality calendar found; the halleyweb link is a comune mirror serving an Abruzzo region document, not an official Molise publication."
     },
     {
       "id": "valle-daosta:pat",
@@ -47,10 +47,10 @@
       "silentProvincesAtStart": [
         "ao"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.108,
-      "note": "discovered 0 document(s): Web searches for a Valle d'Aosta regional/ASL seasonality calendar for fruit and vegetables turned up only Veneto, Piedmont, FVG and Tuscany documents and general AUSL VdA nu"
+      "note": "Web searches for a Valle d'Aosta regional/ASL seasonality calendar for fruit and vegetables turned up only Veneto, Piedmont, FVG and Tuscany documents and general AUSL VdA nutrition/health PDFs with n"
     },
     {
       "id": "lombardia:pat",
@@ -69,10 +69,10 @@
         "lo",
         "mb"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.118,
-      "note": "discovered 0 document(s): BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with"
+      "note": "BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with actual scheda text for th"
     },
     {
       "id": "lombardia:calendar",
@@ -105,10 +105,10 @@
         "ta",
         "bt"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.128,
-      "note": "discovered 0 document(s): Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegeta"
+      "note": "Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegetable category is hosted dir"
     },
     {
       "id": "puglia:calendar",
@@ -119,10 +119,10 @@
         "ta",
         "bt"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.082,
-      "note": "discovered 0 document(s): Found reference to Puglia Regional Guidelines for school catering (Delibera 1435/2018, BURP 112/2018) but could not locate or confirm a live URL to the document or its season"
+      "note": "Found reference to Puglia Regional Guidelines for school catering (Delibera 1435/2018, BURP 112/2018) but could not locate or confirm a live URL to the document or its seasonality calendar appendix wi"
     },
     {
       "id": "marche:pat",
@@ -132,10 +132,10 @@
         "pu",
         "an"
       ],
-      "status": "blocked",
+      "status": "pending",
       "attempts": 0,
       "costUsd": 0.838,
-      "note": "validator failed: .pipeline/seasonable/enrich/marche/candidates.jsonl:18  Castagne — duplicate record for this product and document | "
+      "note": "re-judging with page context"
     },
     {
       "id": "marche:calendar",
@@ -145,10 +145,10 @@
         "pu",
         "an"
       ],
-      "status": "blocked",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.084,
-      "note": "validator failed: .pipeline/seasonable/enrich/marche/candidates.jsonl:18  Castagne — duplicate record for this product and document | "
+      "note": "Only found a national (not Marche-specific) 2010 school catering guidance PDF hosted on regione.marche.it; could not confirm it contains a Marche seasonality calendar table, and no dedicated ASL/SIAN "
     },
     {
       "id": "abruzzo:pat",
@@ -158,10 +158,10 @@
         "pe",
         "ch"
       ],
-      "status": "done",
+      "status": "needs-human",
       "attempts": 0,
       "costUsd": 0.148,
-      "note": "discovered 0 document(s): Found a regione.abruzzo.it PDF listing PAT products (200 OK, application/pdf) but could not verify it contains full scheda text rather than just a name list (WebFetch blocked"
+      "note": "Found a regione.abruzzo.it PDF listing PAT products (200 OK, application/pdf) but could not verify it contains full scheda text rather than just a name list (WebFetch blocked by certificate error, dir"
     },
     {
       "id": "abruzzo:calendar",

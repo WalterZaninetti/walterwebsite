@@ -29,3 +29,7 @@
 - **Carciofo** (p.224) — `needs review`. unsure after escalation: Harvest aprile–maggio (6–9) is clear; production area missing from page, only a Montelupone festival cited. «La raccolta avviene tra aprile e maggio.»
 - **Cavolfiore** (p.228) — `needs review` open-field 20→23. quote mentions varieties or has a semicolon: take the union and flag "variety-union". «Il cavolfiore viene trapiantato dalla prima decade di agosto fino alla prima decade di settembre; si raccoglie in novembre e in dicembre;»
 - **Marroni** (p.270) — `needs review`. unsure after escalation: Harvest ottobre-novembre is clear, but the production area is on an earlier page not supplied.. «La raccolta dei marroni avviene in ottobre-novembre, generalmente manuale da terra, talvolta agevolata con aspiratori.»
+
+## 2026-09-17 — the run above is superseded
+
+It judged the second page of each two-page scheda without the first, where the name and the territorio interessato alla produzione are, and so named products it could not see (two «Castagne» that are Marrone del Montefeltro and Marrone di Roccafluvione). Every record from it was discarded; the pages are judged again below with the page before each one as context.
