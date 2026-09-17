@@ -1,0 +1,13 @@
+{
+  "region": "puglia",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.sanita.puglia.it/archivio-news_det/-/journal_content/56/20182/linee-guida-per-la-ristorazione-scolastica-e-azienda-1",
+    "https://www.sanita.puglia.it/ricerca_det/-/journal_content/56/25176/ristorazione-scolastica-e-aziendale-le-nuove-linee-d-indirizzo-per-comuni-e-operatori-approvate-dalla-giunta-regionale"
+  ],
+  "rejectedUrls": [],
+  "note": "Found reference to Puglia Regional Guidelines for school catering (Delibera 1435/2018, BURP 112/2018) but could not locate or confirm a live URL to the document or its seasonality calendar appendix within budget."
+}

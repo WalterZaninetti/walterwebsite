@@ -119,10 +119,10 @@
         "ta",
         "bt"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.082,
+      "note": "discovered 0 document(s): Found reference to Puglia Regional Guidelines for school catering (Delibera 1435/2018, BURP 112/2018) but could not locate or confirm a live URL to the document or its season"
     },
     {
       "id": "marche:pat",
