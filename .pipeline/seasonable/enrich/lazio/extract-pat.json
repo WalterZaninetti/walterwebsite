@@ -1349,7 +1349,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 169,
@@ -1357,7 +1357,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 170,
@@ -1365,7 +1365,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 171,
@@ -1381,7 +1381,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 173,
@@ -1389,7 +1389,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 174,
@@ -1405,7 +1405,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 176,
@@ -1461,7 +1461,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 183,
@@ -1469,7 +1469,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/lazio/corpus/pat-doc0-p183.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 184,
@@ -1477,7 +1477,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/lazio/corpus/pat-doc0-p184.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 185,
@@ -1509,7 +1509,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 189,
@@ -1517,7 +1517,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 190,
@@ -1525,7 +1525,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 191,
@@ -1533,7 +1533,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 192,
@@ -1541,7 +1541,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 193,
@@ -1549,7 +1549,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 194,
@@ -1557,7 +1557,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 195,
