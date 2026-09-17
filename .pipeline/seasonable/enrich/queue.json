@@ -185,8 +185,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.199,
+      "note": "discovered 1 document(s): Provincia Autonoma di Trento publishes a single official Atlante PDF (8.24MB) organized by thematic categories including 'prodotti vegetali' with full scheda text for each PA"
     },
     {
       "id": "trentino-alto-adige:calendar",

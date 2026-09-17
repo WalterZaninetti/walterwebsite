@@ -1,0 +1,23 @@
+{
+  "region": "trentino-alto-adige",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "Atlante dei prodotti agroalimentari del Trentino",
+      "url": "https://www.provincia.tn.it/content/download/20638/275277/file/Atlante+dei+prodotti+agroalimentari+Trentino.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "not checked"
+    }
+  ],
+  "triedUrls": [
+    "http://www.trentinoagricoltura.it/Trentino-Agricoltura/Prodotti/Prodotti-agroalimentari-tradizionali",
+    "https://www.provincia.tn.it/en/News/Insights/Traditional-food-products-PAT",
+    "https://www.provincia.tn.it/Amministrazione/Documenti/Atlante-dei-prodotti-agroalimentari-del-Trentino",
+    "https://www.provincia.tn.it/content/download/20638/275277/file/Atlante+dei+prodotti+agroalimentari+Trentino.pdf"
+  ],
+  "rejectedUrls": [],
+  "note": "Provincia Autonoma di Trento publishes a single official Atlante PDF (8.24MB) organized by thematic categories including 'prodotti vegetali' with full scheda text for each PAT product; verified live with HTTP 200."
+}
