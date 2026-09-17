@@ -439,8 +439,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.085,
-      "note": "extracted 197 pages, 0 skipped by the pre-filter"
+      "costUsd": 0.156,
+      "note": "3 records, 0 for review, 190 pages pending"
     },
     {
       "id": "calabria:calendar",
