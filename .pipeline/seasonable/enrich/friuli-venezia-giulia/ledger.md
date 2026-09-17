@@ -48,3 +48,7 @@ fine agosto e la raccolta
 ## 2026-09-17 — pat judge, pages 306, 307, 308, 310, 317, 318 (sonnet/low)
 
 No fruit or vegetable product on these pages: bibliography, acknowledgements, and alphabetical index pages
+
+## 2026-09-17 — calendar judge, pages 1, 10, 18, 19, 20, 23, 24, 33, 34, 38, 51, 70, 71, 72, 73 (sonnet/low)
+
+No fruit or vegetable product on these pages: school catering guidelines document, not PAT schede or a seasonality calendar
