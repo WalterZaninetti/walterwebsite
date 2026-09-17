@@ -46,7 +46,13 @@ Every string in `quotes` and `zoneQuote` must be copied character for character 
 
 ## Output
 
-One JSON object per line, one line per product that appears on the pages, in page order. No prose before or after, no code fences. Fields:
+One JSON object per line, one line per product that appears on the pages, in page order. No prose before or after, no code fences.
+
+If the pages hold no fruit or vegetable product at all — a bibliography, an index, catering specifications, general guidance — output exactly one line and nothing else:
+
+{"none":"what the pages are instead, ≤20 words"}
+
+Otherwise, the fields are:
 
 {"product":"name as the document writes it, including any parenthesised synonyms","page":3,"category":"fruit|vegetable","verdict":"candidate|silent|rejected|unsure","reason":null or "≤20 words","quotes":["…"],"zoneQuote":"…" or null,"provinces":["cb"],"windows":[{"kind":"open-field","start":14,"end":15,"conversion":"…"}],"flags":[]}
 
