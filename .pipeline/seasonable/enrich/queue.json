@@ -132,10 +132,10 @@
         "pu",
         "an"
       ],
-      "status": "done",
+      "status": "pending",
       "attempts": 0,
       "costUsd": 1.387,
-      "note": "28 records, 0 for review, 0 pages pending"
+      "note": "re-judging the batch lost to the parser"
     },
     {
       "id": "marche:calendar",
