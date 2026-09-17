@@ -378,7 +378,7 @@
       "tier": "pat",
       "silentProvincesAtStart": [],
       "status": "pending",
-      "attempts": 1,
+      "attempts": 2,
       "costUsd": 2.768,
       "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
     },
