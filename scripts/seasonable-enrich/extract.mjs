@@ -13,6 +13,17 @@
  * three columns, and -layout interleaves them line by line — the pilot's worker
  * spent turns untangling that. Reading order keeps each scheda contiguous.
  *
+ * THE CATEGORY FILTER
+ * Some regions publish every PAT category in one document — ARSIAL's Lazio
+ * guide is 498 pages of cheese, cured meat, bread and wine with ninety pages of
+ * vegetables in the middle — and a page about pecorino mentions months as
+ * readily as one about artichokes. Where a document heads its pages with the
+ * D.M. 350/1999 category, pages under any other category are skipped. It only
+ * applies when at least three pages are recognisably headed "Prodotti vegetali
+ * allo stato naturale": Friuli's and Trentino's documents have no running
+ * headers, the detector reads them as all cheese, and filtering them would
+ * have thrown away six candidates.
+ *
  * A page with fewer than 80 characters of text is an image scan: it is rendered
  * to PNG and marked `ocr`, and always goes to the judge, because nothing can be
  * pre-filtered on text that was never extracted.
@@ -27,6 +38,32 @@ import { join } from 'node:path';
 import { CALENDAR_TERM, corpusDir, readJson, regionDir, writeJson } from './lib.mjs';
 
 const OCR_THRESHOLD = 80;
+const MIN_VEGETABLE_PAGES = 3;
+
+/** D.M. 350/1999 categories, as they head a page. Only the vegetable one is in scope. */
+const CATEGORIES = {
+  vegetable: /prodotti\s+vegetali\s+allo\s+stato\s+naturale/i,
+  drinks: /bevande\s+analcoliche/i,
+  meat: /carni\s*\(?\s*e\s+frattaglie/i,
+  fats: /(oli|grassi)\s*(e\s+grassi)?\s*\(\s*burro/i,
+  cheese: /\bformaggi\b/i,
+  bakery: /paste\s+fresche|prodotti\s+della\s+panetteria|panetteria,\s*della\s+biscotteria/i,
+  gastronomy: /prodotti\s+della\s+gastronomia/i,
+  fish: /preparazioni\s+di\s+pesci|pesci,\s*molluschi/i,
+  animal: /prodotti\s+di\s+origine\s+animale/i,
+  condiments: /^\s*condimenti\b/im,
+};
+
+/** The category a page's header names, carried forward; null until one is seen. A header naming several (an index) changes nothing. */
+function pageCategories(pages) {
+  let current = null;
+  return pages.map((body) => {
+    const head = body.slice(0, 300);
+    const found = Object.keys(CATEGORIES).filter((k) => CATEGORIES[k].test(head));
+    if (found.length === 1) current = found[0];
+    return current;
+  });
+}
 
 function run(cmd, args) {
   const r = spawnSync(cmd, args, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
@@ -73,9 +110,12 @@ export function extract(region, tier) {
     }
 
     const before = previous.documents[d]?.url === doc.url ? previous.documents[d].pages : [];
+    const categories = pageCategories(pages);
+    const filterByCategory = categories.filter((c) => c === 'vegetable').length >= MIN_VEGETABLE_PAGES;
     return {
       url: doc.url,
       text,
+      categoryFilter: filterByCategory,
       pages: pages.map((body, i) => {
         const n = i + 1;
         const ocr = body.replace(/\s/g, '').length < OCR_THRESHOLD;
@@ -84,14 +124,18 @@ export function extract(region, tier) {
           if (!existsSync(`${png}.png`)) run('pdftoppm', ['-r', '110', '-png', '-singlefile', '-f', String(n), '-l', String(n), raw, png]);
         }
         const calendar = ocr || CALENDAR_TERM.test(body);
+        const category = categories[i];
+        const offCategory = tier === 'pat' && filterByCategory && category !== null && category !== 'vegetable';
         const kept = before.find((p) => p.n === n && p.status !== 'pending' && p.status !== 'skipped');
         return {
           n,
           chars: body.length,
           calendar,
           ocr,
+          category,
           image: ocr && isPdf ? join(corpus, `${tier}-doc${d}-p${n}.png`) : null,
-          status: kept?.status ?? (calendar ? 'pending' : 'skipped'),
+          status: kept?.status ?? (offCategory || !calendar ? 'skipped' : 'pending'),
+          skip: kept ? undefined : offCategory ? 'category' : !calendar ? 'no calendar term' : undefined,
         };
       }),
     };
@@ -117,11 +161,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const r = extract(region, tier);
   for (const [d, doc] of r.documents.entries()) {
     const skipped = doc.pages.filter((p) => p.status === 'skipped').map((p) => p.n);
+    const offCategory = doc.pages.filter((p) => p.skip === 'category').length;
     const ocr = doc.pages.filter((p) => p.ocr).length;
     const chars = (f) => doc.pages.filter(f).reduce((s, p) => s + p.chars, 0);
     console.log(
-      `${region} ${tier} doc${d}: ${doc.pages.length} pages, ${skipped.length} skipped (no calendar term)` +
-        `${skipped.length ? ` [${skipped.join(', ')}]` : ''}, ${ocr} need OCR, ` +
+      `${region} ${tier} doc${d}: ${doc.pages.length} pages, ${skipped.length} skipped ` +
+        `(${offCategory} off-category, ${skipped.length - offCategory} with no calendar term), ${ocr} need OCR, ` +
         `${chars((p) => p.calendar)} of ${chars(() => true)} chars go to the judge`,
     );
   }

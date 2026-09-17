@@ -56,7 +56,7 @@ import { windows } from '../src/content/seasonable/windows.ts';
 import { discover } from './seasonable-enrich/discover.mjs';
 import { extract } from './seasonable-enrich/extract.mjs';
 import { judge } from './seasonable-enrich/judge.mjs';
-import { ROOT, readJson, readJsonl, regionDir, writeJson } from './seasonable-enrich/lib.mjs';
+import { ROOT, UsageLimitError, readJson, readJsonl, regionDir, writeJson } from './seasonable-enrich/lib.mjs';
 
 const QUEUE = join(ROOT, 'queue.json');
 const MAX_TOTAL_USD = Number(process.env.SEASONABLE_MAX_TOTAL_USD ?? 5);
@@ -185,6 +185,8 @@ async function runUnit(queue, unit) {
     outcome = await step(unit);
     unit.attempts = 0;
   } catch (e) {
+    // The plan's limit is not the unit's fault: stop the loop, leave the unit as it was.
+    if (e instanceof UsageLimitError) throw e;
     unit.attempts++;
     unit.note = String(e.message).slice(0, 300);
     unit.status = unit.attempts >= MAX_ATTEMPTS ? 'blocked' : 'pending';
@@ -266,7 +268,16 @@ async function main() {
       break;
     }
 
-    const { status, paid } = await runUnit(queue, unit);
+    let result;
+    try {
+      result = await runUnit(queue, unit);
+    } catch (e) {
+      if (!(e instanceof UsageLimitError)) throw e;
+      log(`Usage limit reached — stopping without touching ${unit.id}: ${e.message}`);
+      process.exitCode = 3;
+      break;
+    }
+    const { status, paid } = result;
     consecutiveBlocked = status === 'blocked' ? consecutiveBlocked + 1 : 0;
     if (consecutiveBlocked >= MAX_CONSECUTIVE_BLOCKED) {
       log(`${MAX_CONSECUTIVE_BLOCKED} units blocked in a row — stopping for a human.`);
