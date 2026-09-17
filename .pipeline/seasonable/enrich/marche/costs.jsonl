@@ -1,2 +1,10 @@
 {"at":"2026-09-17T08:38:13.692Z","stage":"discover:pat","model":"sonnet","effort":"low","costUsd":0.112522,"input":8,"cacheRead":37235,"cacheWrite":6466,"output":939,"error":null}
 {"at":"2026-09-17T08:39:48.259Z","stage":"judge:pat:p9,11,13,22,23,37,58,59,77,79,80,83,84,85,87,91,96,97,102,103,104,105,106,108,110,112,114,116,118,129,151,173,184,196,204,205","model":"sonnet","effort":"low","costUsd":0.1620216,"input":2,"cacheRead":2028,"cacheWrite":28945,"output":2444,"error":null}
+{"at":"2026-09-17T08:41:56.938Z","stage":"judge:pat:p216,218,224,226,228,230,232,238,242,250,253,255,266,268,270,272,275,280,286,288,290,292,294,296,298,300,304","model":"sonnet","effort":"low","costUsd":0.16945860000000001,"input":2,"cacheRead":2028,"cacheWrite":19607,"output":7610,"error":null}
+{"at":"2026-09-17T08:42:18.642Z","stage":"judge:pat:p224,228,230,268,270,272,280,290","model":"sonnet","effort":"low","costUsd":0.0568836,"input":2,"cacheRead":2028,"cacheWrite":7293,"output":2174,"error":null}
+{"at":"2026-09-17T08:42:27.086Z","stage":"judge:pat:p304","model":"opus","effort":null,"costUsd":0.057199999999999994,"input":2,"cacheRead":0,"cacheWrite":3754,"output":722,"error":null}
+{"at":"2026-09-17T08:42:42.028Z","stage":"judge:pat:p224","model":"opus","effort":null,"costUsd":0.0517645,"input":2,"cacheRead":2027,"cacheWrite":2193,"output":1074,"error":null}
+{"at":"2026-09-17T08:43:01.321Z","stage":"judge:pat:p228","model":"opus","effort":null,"costUsd":0.07562950000000002,"input":2,"cacheRead":2027,"cacheWrite":2484,"output":1905,"error":null}
+{"at":"2026-09-17T08:43:16.097Z","stage":"judge:pat:p230","model":"opus","effort":null,"costUsd":0.0634895,"input":2,"cacheRead":2027,"cacheWrite":2703,"output":1325,"error":null}
+{"at":"2026-09-17T08:43:25.134Z","stage":"judge:pat:p270","model":"opus","effort":null,"costUsd":0.0451905,"input":2,"cacheRead":2027,"cacheWrite":2363,"output":738,"error":null}
+{"at":"2026-09-17T08:43:35.313Z","stage":"judge:pat:p290","model":"opus","effort":null,"costUsd":0.043645500000000004,"input":2,"cacheRead":2027,"cacheWrite":1930,"output":864,"error":null}
