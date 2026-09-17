@@ -357,10 +357,10 @@
       "region": "toscana",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.095,
+      "note": "discovered 0 document(s): Regione Toscana's official PAT portal (prodtrad.regione.toscana.it) hosts 471 PAT schede including 'Prodotti vegetali allo stato naturale o trasformati', but the category/pro"
     },
     {
       "id": "toscana:calendar",

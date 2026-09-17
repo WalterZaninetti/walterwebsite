@@ -1,0 +1,14 @@
+{
+  "region": "toscana",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://prodtrad.regione.toscana.it/",
+    "https://prodtrad.regione.toscana.it/mod_qtp_pat",
+    "http://prodtrad.regione.toscana.it/index.php?option=com_content&view=article&id=529&Itemid=126&act=%3A%40&act2=Q&PROD_ART=P&COD_PROV=-&CLASSE=D"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Toscana's official PAT portal (prodtrad.regione.toscana.it) hosts 471 PAT schede including 'Prodotti vegetali allo stato naturale o trasformati', but the category/product listing is served via an AJAX/JS filter form (mod_qtp_pat) with no static, directly linkable URL for the category or individual schede found within the allotted search."
+}
