@@ -16,3 +16,7 @@ No fruit or vegetable product on these pages: pages contain only meat, cheese, a
 ## 2026-09-17 — pat judge, pages 62, 63, 71, 73, 75, 76, 77, 78, 81, 83, 87, 88, 89, 90, 94, 95 (sonnet/low, $0.248 so far)
 
 - **Sedano bianco di Sperlonga IGP** (p.63) — `silent`. raccolta mentioned but window split across page break, no dated bounds given.
+
+## 2026-09-17 — pat judge, pages 96, 97, 98, 99, 103, 107, 109, 110, 112, 114, 115, 116, 117, 119, 120 (sonnet/low)
+
+No fruit or vegetable product on these pages: meat/salumi PAT product pages, no fruit or vegetable products
