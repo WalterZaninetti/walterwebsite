@@ -173,8 +173,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.049,
-      "note": "extracted 279 pages, 226 skipped by the pre-filter"
+      "costUsd": 0.292,
+      "note": "1 records, 0 for review, 20 pages pending"
     },
     {
       "id": "trentino-alto-adige:pat",

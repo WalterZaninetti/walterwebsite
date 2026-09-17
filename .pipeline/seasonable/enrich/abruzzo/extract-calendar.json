@@ -21,7 +21,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 3,
@@ -69,7 +69,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p8.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 9,
@@ -85,7 +85,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 11,
@@ -109,7 +109,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 14,
@@ -117,7 +117,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 15,
@@ -125,7 +125,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 16,
@@ -165,7 +165,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -173,7 +173,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p21.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 22,
@@ -245,7 +245,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 31,
@@ -261,7 +261,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 33,
@@ -661,7 +661,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 83,
@@ -677,7 +677,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 85,
@@ -1013,7 +1013,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p126.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 127,
@@ -1021,7 +1021,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 128,
@@ -1037,7 +1037,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 130,
@@ -1053,7 +1053,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p131.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 132,
@@ -1429,7 +1429,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 179,
@@ -1437,7 +1437,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 180,
@@ -1453,7 +1453,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 182,
@@ -1461,7 +1461,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 183,
@@ -1493,7 +1493,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 187,
@@ -1653,7 +1653,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 207,
@@ -1661,7 +1661,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 208,
@@ -1693,7 +1693,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 212,
@@ -1701,7 +1701,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p212.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 213,
@@ -1717,7 +1717,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 215,
@@ -1725,7 +1725,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 216,
@@ -1733,7 +1733,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 217,
@@ -1757,7 +1757,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/abruzzo/corpus/calendar-doc0-p219.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 220,
@@ -1765,7 +1765,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 221,
@@ -1805,7 +1805,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 226,
@@ -1829,7 +1829,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 229,
@@ -1845,7 +1845,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 231,
