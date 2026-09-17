@@ -18,3 +18,29 @@
 - **Confettura di melograno** (p.30) — `silent`. processed product; no dated harvest window given.
 - **Facussa** (p.33) — `silent`. no dated harvest window stated.
 - **Cuppetta** (p.31) — `rejected`. only relative timing (4 months after transplant), no calendar months. «La raccolta è scalare ed è eseguita a mano a circa 4 mesi dal trapianto.»
+
+## 2026-09-17 — pat judge, pages 36, 39, 43, 46, 47, 49, 51, 53, 55, 64, 65, 67, 68, 69, 71, 73, 74, 80, 82, 83, 85, 87, 88 (sonnet/low, $0.441 so far)
+
+- **Fagiolo bianco di Terraseo** (p.36) — `rejected`. dried pulse harvested dry for threshing. «viene raccolto tra settembre e ottobre»
+- **Fico nero di Chia – Figu nieddu de Chia** (p.43) — `rejected`. ripening date stated (maturano), not a harvest term; also single decades are points not windows. «I fichi che maturano nella seconda decade di settembre, detti “forniti” … Sono detti invece “fioroni” i fichi che maturano nella prima decade di luglio»
+- **Grano duro Quarantino – Trigu Quarantinu** (p.47) — `rejected`. dried grain harvested for threshing. «la raccolta a giugno/ luglio … Nei mesi di giugno-luglio si procede alla mietitura e trebbiatura meccanica»
+- **Lenticchia nera di Calasetta** (p.53) — `rejected`. dried pulse harvested dry for threshing. «La raccolta avviene con l’estirpazione delle piante, lasciate poi al sole nelle aie per completare la loro essicazione.»
+- **Mandorla Schina de porcu – Varietà di mandorle sarde dolci per uso dolciario** (p.63) — `rejected`. out of scope: nuts (mandorle).
+- **Mela appiccadorza – Varietà locale di mela** (p.65) — `rejected`. a point in time, not a window. «le mele sono raccolte alla fine del mese di settembre»
+- **Melo, Melappia – Varietà locale di mela** (p.67) — `rejected`. ripening date stated (matura), not a harvest term. «Matura a partire dalla seconda decade di ottobre fino a dicembre inoltrato.»
+- **Melo, Noi Unci – Varietà locale di mela** (p.68) — `rejected`. ripening date, not harvest term; also a point in time. «Matura a partire dalla terza decade di luglio.»
+- **Melo Miali** (p.69) — `rejected`. ripening date, not harvest term; also a point in time. «I frutti maturano nella terza decade di settembre.»
+- **MELO TREMPA ORRUBIA – MELA TREMPA ORRUBIA** (p.71) — `rejected`. ripening date (matura), not harvest term; storage dates are not harvest. «Matura nel mese di ottobre ed ha una serbevolezza decisamente lunga; si conserva, infatti, nelle cantine da ottobre a giugno.»
+- **Melone Verde (Melone Inodorus - Melone d'inverno)** (p.74) — `rejected`. transplanting dates, not harvest. «precoce (sotto strutture di forzatura o di semiforzatura) da metà gennaio a metà aprile; pieno campo precoce da fine aprile sino a tutto maggio; pieno campo tardivo da giugno in poi.»
+- **Pera Bianca – varietà locale di pera** (p.83) — `rejected`. a point in time, not a window. «L’epoca di maturazione cade attorno alla prima decade di settembre.»
+- **Pero, Piru Ruspu -Varietà locale di pera** (p.88) — `rejected`. half a window: end only, no start; also ripening not harvest term. «il frutto matura entro la seconda decade di ottobre»
+- **Fagiolo tianese** (p.38) — `silent`. no dated harvest statement.
+- **Grano cotto** (p.46) — `silent`. no dated harvest statement.
+- **Grano duro varietà Senatore Cappelli** (p.49) — `rejected`. dried grain harvested for threshing. «seminato in autunno e raccolto in Luglio»
+- **Granturco Bianco - Triguxianu** (p.51) — `rejected`. a point in time, not a window. «la raccolta delle pannocchie, eseguita manualmente, avviene a fine settembre, primi di ottobre»
+- **LIMONE DOLCE DI MURAVERA** (p.55) — `silent`. no dated harvest statement.
+- **Melone de jerru - Melone coltivato in asciutto (melone d'inverno)** (p.73) — `silent`. no dated harvest statement.
+- **Olive di s'Ortu mannu pestate - Oria de s'Ortu mannu pistàra** (p.80) — `silent`. no dated harvest statement.
+- **Olive verdi in salamoia** (p.81) — `silent`. no dated harvest statement.
+- **Pera Camusina** (p.85) — `needs review` open-field 11→14. windows[0].end 14 is in agosto, which no quote names. «la maturazione dei frutti intono a fine giugno, primi di luglio nella varietà precoce e fine luglio per la varietà classica»
+- **Pira Limoi** (p.87) — `needs review` open-field 16→19. quote is not verbatim on page 87: "Le zone del Sulcis Iglesiente,della Regione Autonoma della Sardegna". «Raccolta a settembre-ottobre, viene conservata in canestri avvolta nella paglia.»
