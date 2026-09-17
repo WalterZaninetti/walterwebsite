@@ -33,3 +33,6 @@
 ## 2026-09-17 — the run above is superseded
 
 It judged the second page of each two-page scheda without the first, where the name and the territorio interessato alla produzione are, and so named products it could not see (two «Castagne» that are Marrone del Montefeltro and Marrone di Roccafluvione). Every record from it was discarded; the pages are judged again below with the page before each one as context.
+
+## 2026-09-17 — pat judge, pages 9, 11, 13, 22, 23, 37, 58, 59, 77, 79, 80, 83, 84, 85, 87, 91, 96, 97, 102, 103, 104, 105, 106, 108, 110, 112, 114, 116, 118, 129, 151, 173, 184, 196, 204, 205 (sonnet/low, $0.237 so far)
+

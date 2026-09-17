@@ -134,8 +134,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0.838,
-      "note": "re-judging with page context"
+      "costUsd": 1.075,
+      "note": "0 records, 0 for review, 27 pages pending"
     },
     {
       "id": "marche:calendar",
