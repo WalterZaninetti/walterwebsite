@@ -378,9 +378,9 @@
       "tier": "pat",
       "silentProvincesAtStart": [],
       "status": "pending",
-      "attempts": 0,
-      "costUsd": 2.585,
-      "note": "19 records, 0 for review, 101 pages pending"
+      "attempts": 1,
+      "costUsd": 2.768,
+      "note": "claude reported success: You've hit your session limit · resets 3:20pm (Europe/Rome)"
     },
     {
       "id": "lazio:calendar",
