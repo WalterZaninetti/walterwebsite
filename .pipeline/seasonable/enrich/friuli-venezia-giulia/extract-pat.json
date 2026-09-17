@@ -1,0 +1,2557 @@
+{
+  "region": "friuli-venezia-giulia",
+  "tier": "pat",
+  "extractedAt": "2026-09-17T09:11:37.066Z",
+  "documents": [
+    {
+      "url": "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/agricoltura-foreste/allegati/CibarioERSAedizione2017-2.pdf",
+      "text": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0.txt",
+      "pages": [
+        {
+          "n": 1,
+          "chars": 77,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p1.png",
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 25,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p2.png",
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 93,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p3.png",
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 112,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 5,
+          "chars": 1961,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 102,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 1485,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 8,
+          "chars": 22,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p8.png",
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 1200,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 10,
+          "chars": 1688,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 11,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p11.png",
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 64,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p12.png",
+          "status": "pending"
+        },
+        {
+          "n": 13,
+          "chars": 1863,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 14,
+          "chars": 1513,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 15,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p15.png",
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p16.png",
+          "status": "pending"
+        },
+        {
+          "n": 17,
+          "chars": 1358,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 18,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p18.png",
+          "status": "pending"
+        },
+        {
+          "n": 19,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p19.png",
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p20.png",
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 2223,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 22,
+          "chars": 1834,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 23,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p23.png",
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 1925,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 25,
+          "chars": 610,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 26,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p26.png",
+          "status": "pending"
+        },
+        {
+          "n": 27,
+          "chars": 1154,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 28,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p28.png",
+          "status": "pending"
+        },
+        {
+          "n": 29,
+          "chars": 1116,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 30,
+          "chars": 1171,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 31,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p31.png",
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p32.png",
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 1296,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 34,
+          "chars": 2010,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 35,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p35.png",
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 387,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 37,
+          "chars": 1732,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 38,
+          "chars": 565,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 39,
+          "chars": 365,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 40,
+          "chars": 538,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 41,
+          "chars": 1072,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 42,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p42.png",
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 2285,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 44,
+          "chars": 1001,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 45,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p45.png",
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p46.png",
+          "status": "pending"
+        },
+        {
+          "n": 47,
+          "chars": 356,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 48,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p48.png",
+          "status": "pending"
+        },
+        {
+          "n": 49,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p49.png",
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p50.png",
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 547,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 52,
+          "chars": 2124,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 53,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p53.png",
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 251,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 55,
+          "chars": 224,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 56,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p56.png",
+          "status": "pending"
+        },
+        {
+          "n": 57,
+          "chars": 1809,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 58,
+          "chars": 36,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p58.png",
+          "status": "pending"
+        },
+        {
+          "n": 59,
+          "chars": 284,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 60,
+          "chars": 412,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 61,
+          "chars": 2054,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 62,
+          "chars": 1413,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 63,
+          "chars": 538,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 64,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p64.png",
+          "status": "pending"
+        },
+        {
+          "n": 65,
+          "chars": 1141,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 66,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p66.png",
+          "status": "pending"
+        },
+        {
+          "n": 67,
+          "chars": 1609,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 68,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p68.png",
+          "status": "pending"
+        },
+        {
+          "n": 69,
+          "chars": 1581,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 70,
+          "chars": 698,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 71,
+          "chars": 38,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p71.png",
+          "status": "pending"
+        },
+        {
+          "n": 72,
+          "chars": 1197,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 73,
+          "chars": 2134,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 74,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p74.png",
+          "status": "pending"
+        },
+        {
+          "n": 75,
+          "chars": 1203,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 76,
+          "chars": 1291,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 77,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p77.png",
+          "status": "pending"
+        },
+        {
+          "n": 78,
+          "chars": 232,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 79,
+          "chars": 328,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 80,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p80.png",
+          "status": "pending"
+        },
+        {
+          "n": 81,
+          "chars": 985,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 82,
+          "chars": 215,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 83,
+          "chars": 31,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p83.png",
+          "status": "pending"
+        },
+        {
+          "n": 84,
+          "chars": 1104,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 85,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p85.png",
+          "status": "pending"
+        },
+        {
+          "n": 86,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p86.png",
+          "status": "pending"
+        },
+        {
+          "n": 87,
+          "chars": 1235,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 88,
+          "chars": 240,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 89,
+          "chars": 1183,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 90,
+          "chars": 1455,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 91,
+          "chars": 452,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 92,
+          "chars": 415,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 93,
+          "chars": 941,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 94,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p94.png",
+          "status": "pending"
+        },
+        {
+          "n": 95,
+          "chars": 21,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p95.png",
+          "status": "pending"
+        },
+        {
+          "n": 96,
+          "chars": 4,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p96.png",
+          "status": "pending"
+        },
+        {
+          "n": 97,
+          "chars": 1362,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 98,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p98.png",
+          "status": "pending"
+        },
+        {
+          "n": 99,
+          "chars": 1807,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 100,
+          "chars": 193,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 101,
+          "chars": 1993,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 102,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p102.png",
+          "status": "pending"
+        },
+        {
+          "n": 103,
+          "chars": 985,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 104,
+          "chars": 1821,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 105,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p105.png",
+          "status": "pending"
+        },
+        {
+          "n": 106,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p106.png",
+          "status": "pending"
+        },
+        {
+          "n": 107,
+          "chars": 220,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 108,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p108.png",
+          "status": "pending"
+        },
+        {
+          "n": 109,
+          "chars": 690,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 110,
+          "chars": 1397,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 111,
+          "chars": 50,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p111.png",
+          "status": "pending"
+        },
+        {
+          "n": 112,
+          "chars": 1258,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 113,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p113.png",
+          "status": "pending"
+        },
+        {
+          "n": 114,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p114.png",
+          "status": "pending"
+        },
+        {
+          "n": 115,
+          "chars": 1205,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 116,
+          "chars": 702,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 117,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p117.png",
+          "status": "pending"
+        },
+        {
+          "n": 118,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p118.png",
+          "status": "pending"
+        },
+        {
+          "n": 119,
+          "chars": 50,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p119.png",
+          "status": "pending"
+        },
+        {
+          "n": 120,
+          "chars": 1017,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 121,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p121.png",
+          "status": "pending"
+        },
+        {
+          "n": 122,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p122.png",
+          "status": "pending"
+        },
+        {
+          "n": 123,
+          "chars": 158,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 124,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p124.png",
+          "status": "pending"
+        },
+        {
+          "n": 125,
+          "chars": 687,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 126,
+          "chars": 1252,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 127,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p127.png",
+          "status": "pending"
+        },
+        {
+          "n": 128,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p128.png",
+          "status": "pending"
+        },
+        {
+          "n": 129,
+          "chars": 2107,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 130,
+          "chars": 26,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p130.png",
+          "status": "pending"
+        },
+        {
+          "n": 131,
+          "chars": 935,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 132,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p132.png",
+          "status": "pending"
+        },
+        {
+          "n": 133,
+          "chars": 1568,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 134,
+          "chars": 1329,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 135,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p135.png",
+          "status": "pending"
+        },
+        {
+          "n": 136,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p136.png",
+          "status": "pending"
+        },
+        {
+          "n": 137,
+          "chars": 1085,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 138,
+          "chars": 1470,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 139,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p139.png",
+          "status": "pending"
+        },
+        {
+          "n": 140,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p140.png",
+          "status": "pending"
+        },
+        {
+          "n": 141,
+          "chars": 2343,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 142,
+          "chars": 920,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 143,
+          "chars": 1103,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 144,
+          "chars": 1092,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 145,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p145.png",
+          "status": "pending"
+        },
+        {
+          "n": 146,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p146.png",
+          "status": "pending"
+        },
+        {
+          "n": 147,
+          "chars": 32,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p147.png",
+          "status": "pending"
+        },
+        {
+          "n": 148,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p148.png",
+          "status": "pending"
+        },
+        {
+          "n": 149,
+          "chars": 1072,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 150,
+          "chars": 327,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 151,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p151.png",
+          "status": "pending"
+        },
+        {
+          "n": 152,
+          "chars": 1092,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 153,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p153.png",
+          "status": "pending"
+        },
+        {
+          "n": 154,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p154.png",
+          "status": "pending"
+        },
+        {
+          "n": 155,
+          "chars": 1226,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 156,
+          "chars": 1583,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 157,
+          "chars": 309,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 158,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p158.png",
+          "status": "pending"
+        },
+        {
+          "n": 159,
+          "chars": 1726,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 160,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p160.png",
+          "status": "pending"
+        },
+        {
+          "n": 161,
+          "chars": 1362,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 162,
+          "chars": 1794,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 163,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p163.png",
+          "status": "pending"
+        },
+        {
+          "n": 164,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p164.png",
+          "status": "pending"
+        },
+        {
+          "n": 165,
+          "chars": 1966,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 166,
+          "chars": 1584,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 167,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p167.png",
+          "status": "pending"
+        },
+        {
+          "n": 168,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p168.png",
+          "status": "pending"
+        },
+        {
+          "n": 169,
+          "chars": 1899,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 170,
+          "chars": 489,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 171,
+          "chars": 1740,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 172,
+          "chars": 1431,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 173,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p173.png",
+          "status": "pending"
+        },
+        {
+          "n": 174,
+          "chars": 1675,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 175,
+          "chars": 32,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p175.png",
+          "status": "pending"
+        },
+        {
+          "n": 176,
+          "chars": 1066,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 177,
+          "chars": 32,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p177.png",
+          "status": "pending"
+        },
+        {
+          "n": 178,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p178.png",
+          "status": "pending"
+        },
+        {
+          "n": 179,
+          "chars": 1171,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 180,
+          "chars": 1777,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 181,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p181.png",
+          "status": "pending"
+        },
+        {
+          "n": 182,
+          "chars": 1219,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 183,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p183.png",
+          "status": "pending"
+        },
+        {
+          "n": 184,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p184.png",
+          "status": "pending"
+        },
+        {
+          "n": 185,
+          "chars": 2534,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 186,
+          "chars": 1213,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 187,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p187.png",
+          "status": "pending"
+        },
+        {
+          "n": 188,
+          "chars": 1721,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 189,
+          "chars": 809,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 190,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p190.png",
+          "status": "pending"
+        },
+        {
+          "n": 191,
+          "chars": 39,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p191.png",
+          "status": "pending"
+        },
+        {
+          "n": 192,
+          "chars": 588,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 193,
+          "chars": 2229,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 194,
+          "chars": 986,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 195,
+          "chars": 39,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p195.png",
+          "status": "pending"
+        },
+        {
+          "n": 196,
+          "chars": 339,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 197,
+          "chars": 1446,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 198,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p198.png",
+          "status": "pending"
+        },
+        {
+          "n": 199,
+          "chars": 1264,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 200,
+          "chars": 835,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 201,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p201.png",
+          "status": "pending"
+        },
+        {
+          "n": 202,
+          "chars": 2551,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 203,
+          "chars": 39,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p203.png",
+          "status": "pending"
+        },
+        {
+          "n": 204,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p204.png",
+          "status": "pending"
+        },
+        {
+          "n": 205,
+          "chars": 46,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p205.png",
+          "status": "pending"
+        },
+        {
+          "n": 206,
+          "chars": 1061,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 207,
+          "chars": 2522,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 208,
+          "chars": 368,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 209,
+          "chars": 1808,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 210,
+          "chars": 1102,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 211,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p211.png",
+          "status": "pending"
+        },
+        {
+          "n": 212,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p212.png",
+          "status": "pending"
+        },
+        {
+          "n": 213,
+          "chars": 2323,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 214,
+          "chars": 129,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 215,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p215.png",
+          "status": "pending"
+        },
+        {
+          "n": 216,
+          "chars": 25,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p216.png",
+          "status": "pending"
+        },
+        {
+          "n": 217,
+          "chars": 1980,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 218,
+          "chars": 23,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p218.png",
+          "status": "pending"
+        },
+        {
+          "n": 219,
+          "chars": 38,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p219.png",
+          "status": "pending"
+        },
+        {
+          "n": 220,
+          "chars": 1201,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 221,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p221.png",
+          "status": "pending"
+        },
+        {
+          "n": 222,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p222.png",
+          "status": "pending"
+        },
+        {
+          "n": 223,
+          "chars": 1362,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 224,
+          "chars": 785,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 225,
+          "chars": 21,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p225.png",
+          "status": "pending"
+        },
+        {
+          "n": 226,
+          "chars": 306,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 227,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p227.png",
+          "status": "pending"
+        },
+        {
+          "n": 228,
+          "chars": 416,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 229,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p229.png",
+          "status": "pending"
+        },
+        {
+          "n": 230,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p230.png",
+          "status": "pending"
+        },
+        {
+          "n": 231,
+          "chars": 282,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 232,
+          "chars": 1203,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 233,
+          "chars": 46,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p233.png",
+          "status": "pending"
+        },
+        {
+          "n": 234,
+          "chars": 268,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 235,
+          "chars": 1091,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 236,
+          "chars": 1976,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 237,
+          "chars": 96,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p237.png",
+          "status": "pending"
+        },
+        {
+          "n": 238,
+          "chars": 1130,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 239,
+          "chars": 153,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 240,
+          "chars": 544,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 241,
+          "chars": 1616,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 242,
+          "chars": 719,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 243,
+          "chars": 1643,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 244,
+          "chars": 1043,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 245,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p245.png",
+          "status": "pending"
+        },
+        {
+          "n": 246,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p246.png",
+          "status": "pending"
+        },
+        {
+          "n": 247,
+          "chars": 19,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p247.png",
+          "status": "pending"
+        },
+        {
+          "n": 248,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p248.png",
+          "status": "pending"
+        },
+        {
+          "n": 249,
+          "chars": 1691,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 250,
+          "chars": 874,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 251,
+          "chars": 2050,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 252,
+          "chars": 346,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 253,
+          "chars": 1716,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 254,
+          "chars": 923,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 255,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p255.png",
+          "status": "pending"
+        },
+        {
+          "n": 256,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p256.png",
+          "status": "pending"
+        },
+        {
+          "n": 257,
+          "chars": 52,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p257.png",
+          "status": "pending"
+        },
+        {
+          "n": 258,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p258.png",
+          "status": "pending"
+        },
+        {
+          "n": 259,
+          "chars": 1026,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 260,
+          "chars": 1667,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 261,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p261.png",
+          "status": "pending"
+        },
+        {
+          "n": 262,
+          "chars": 583,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 263,
+          "chars": 2135,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 264,
+          "chars": 511,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 265,
+          "chars": 612,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 266,
+          "chars": 566,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 267,
+          "chars": 1471,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 268,
+          "chars": 2625,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 269,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p269.png",
+          "status": "pending"
+        },
+        {
+          "n": 270,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p270.png",
+          "status": "pending"
+        },
+        {
+          "n": 271,
+          "chars": 1054,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 272,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p272.png",
+          "status": "pending"
+        },
+        {
+          "n": 273,
+          "chars": 1224,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 274,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p274.png",
+          "status": "pending"
+        },
+        {
+          "n": 275,
+          "chars": 698,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 276,
+          "chars": 2221,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 277,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p277.png",
+          "status": "pending"
+        },
+        {
+          "n": 278,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p278.png",
+          "status": "pending"
+        },
+        {
+          "n": 279,
+          "chars": 965,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 280,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p280.png",
+          "status": "pending"
+        },
+        {
+          "n": 281,
+          "chars": 1090,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 282,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p282.png",
+          "status": "pending"
+        },
+        {
+          "n": 283,
+          "chars": 1339,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 284,
+          "chars": 1969,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 285,
+          "chars": 2230,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 286,
+          "chars": 875,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 287,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p287.png",
+          "status": "pending"
+        },
+        {
+          "n": 288,
+          "chars": 534,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 289,
+          "chars": 472,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 290,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p290.png",
+          "status": "pending"
+        },
+        {
+          "n": 291,
+          "chars": 40,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p291.png",
+          "status": "pending"
+        },
+        {
+          "n": 292,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p292.png",
+          "status": "pending"
+        },
+        {
+          "n": 293,
+          "chars": 951,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 294,
+          "chars": 1437,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 295,
+          "chars": 1324,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 296,
+          "chars": 1356,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 297,
+          "chars": 1656,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 298,
+          "chars": 1688,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 299,
+          "chars": 22,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p299.png",
+          "status": "pending"
+        },
+        {
+          "n": 300,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p300.png",
+          "status": "pending"
+        },
+        {
+          "n": 301,
+          "chars": 19,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p301.png",
+          "status": "pending"
+        },
+        {
+          "n": 302,
+          "chars": 5,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p302.png",
+          "status": "pending"
+        },
+        {
+          "n": 303,
+          "chars": 2615,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 304,
+          "chars": 2817,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 305,
+          "chars": 3807,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 306,
+          "chars": 2184,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 307,
+          "chars": 2569,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 308,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p308.png",
+          "status": "pending"
+        },
+        {
+          "n": 309,
+          "chars": 172,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 310,
+          "chars": 572,
+          "calendar": true,
+          "ocr": false,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 311,
+          "chars": 1945,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 312,
+          "chars": 1827,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 313,
+          "chars": 2048,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 314,
+          "chars": 2008,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 315,
+          "chars": 312,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 316,
+          "chars": 846,
+          "calendar": false,
+          "ocr": false,
+          "image": null,
+          "status": "skipped"
+        },
+        {
+          "n": 317,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p317.png",
+          "status": "pending"
+        },
+        {
+          "n": 318,
+          "chars": 27,
+          "calendar": true,
+          "ocr": true,
+          "image": ".pipeline/seasonable/enrich/friuli-venezia-giulia/corpus/pat-doc0-p318.png",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

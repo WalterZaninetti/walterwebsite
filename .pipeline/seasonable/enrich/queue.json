@@ -210,7 +210,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.049,
-      "note": "discovered 1 document(s): Regional ERSA-published PAT atlas with product schede including vegetable products, confirmed 200 OK PDF on regione.fvg.it; could not further verify per-category split due to"
+      "note": "extracted 318 pages, 150 skipped by the pre-filter"
     },
     {
       "id": "friuli-venezia-giulia:calendar",
