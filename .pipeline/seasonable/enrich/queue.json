@@ -258,7 +258,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.052,
-      "note": "discovered 1 document(s): Official Regione Sardegna PDF for category 'Prodotti vegetali allo stato naturale o trasformati' confirmed with HTTP 200 and application/pdf content-type."
+      "note": "extracted 127 pages, 69 skipped by the pre-filter"
     },
     {
       "id": "sardegna:calendar",
