@@ -85,7 +85,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p1.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 2,
@@ -94,7 +94,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p2.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 3,
@@ -103,7 +103,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p3.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 4,
@@ -112,7 +112,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p4.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 5,
@@ -121,7 +121,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p5.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 6,
@@ -130,7 +130,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p6.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 7,
@@ -139,7 +139,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p7.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 8,
@@ -148,7 +148,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p8.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 9,
@@ -157,7 +157,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p9.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 10,
@@ -166,7 +166,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p10.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 11,
@@ -175,7 +175,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p11.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 12,
@@ -184,7 +184,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p12.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 13,
@@ -193,7 +193,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p13.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 14,
@@ -202,7 +202,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p14.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 15,
@@ -211,7 +211,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p15.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 16,
@@ -220,7 +220,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p16.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 17,
@@ -229,7 +229,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p17.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 18,
@@ -238,7 +238,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p18.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 19,
@@ -247,7 +247,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p19.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 20,
@@ -256,7 +256,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p20.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -265,7 +265,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p21.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 22,
@@ -274,7 +274,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p22.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 23,
@@ -283,7 +283,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p23.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 24,
@@ -292,7 +292,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p24.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 25,
@@ -301,7 +301,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p25.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 26,
@@ -310,7 +310,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p26.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 27,
@@ -319,7 +319,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p27.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 28,
@@ -328,7 +328,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p28.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 29,
@@ -337,7 +337,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p29.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 30,
@@ -346,7 +346,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p30.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 31,
@@ -355,7 +355,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p31.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 32,
@@ -364,7 +364,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p32.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 33,
@@ -373,7 +373,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p33.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 34,
@@ -382,7 +382,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p34.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 35,
@@ -391,7 +391,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p35.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 36,
@@ -400,7 +400,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p36.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 37,
@@ -409,7 +409,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p37.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 38,
@@ -418,7 +418,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p38.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 39,
@@ -427,7 +427,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p39.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 40,
@@ -436,7 +436,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p40.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 41,
@@ -445,7 +445,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p41.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 42,
@@ -454,7 +454,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p42.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 43,
@@ -463,7 +463,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p43.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 44,
@@ -472,7 +472,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p44.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 45,
@@ -481,7 +481,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p45.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 46,
@@ -490,7 +490,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p46.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 47,
@@ -499,7 +499,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p47.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 48,
@@ -508,7 +508,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p48.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 49,
@@ -517,7 +517,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p49.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 50,
@@ -526,7 +526,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p50.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 51,
@@ -535,7 +535,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p51.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 52,
@@ -544,7 +544,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p52.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 53,
@@ -553,7 +553,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p53.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 54,
@@ -562,7 +562,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p54.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 55,
@@ -571,7 +571,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p55.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 56,
@@ -580,7 +580,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p56.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 57,
@@ -589,7 +589,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p57.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 58,
@@ -598,7 +598,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p58.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 59,
@@ -607,7 +607,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p59.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 60,
@@ -616,7 +616,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p60.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 61,
@@ -625,7 +625,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p61.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 62,
@@ -634,7 +634,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p62.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 63,
@@ -643,7 +643,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p63.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 64,
@@ -652,7 +652,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p64.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 65,
@@ -661,7 +661,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p65.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 66,
@@ -670,7 +670,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p66.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 67,
@@ -679,7 +679,7 @@
           "ocr": true,
           "category": null,
           "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p67.png",
-          "status": "pending"
+          "status": "judged"
         }
       ]
     },
