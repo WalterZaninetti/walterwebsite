@@ -287,10 +287,10 @@
       "region": "piemonte",
       "tier": "calendar",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.169,
-      "note": "extracted 120 pages, 104 skipped by the pre-filter"
+      "costUsd": 0.325,
+      "note": "1 records, 0 for review, 0 pages pending"
     },
     {
       "id": "veneto:pat",

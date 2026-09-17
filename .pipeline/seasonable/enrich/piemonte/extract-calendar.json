@@ -29,7 +29,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/piemonte/corpus/calendar-doc0-p3.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 4,
@@ -37,7 +37,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/piemonte/corpus/calendar-doc0-p4.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 5,
@@ -85,7 +85,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 11,
@@ -365,7 +365,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 46,
@@ -381,7 +381,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 48,
@@ -397,7 +397,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 50,
@@ -405,7 +405,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 51,
@@ -413,7 +413,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 52,
@@ -429,7 +429,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 54,
@@ -461,7 +461,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 58,
@@ -469,7 +469,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 59,
@@ -477,7 +477,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 60,
@@ -909,7 +909,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 114,
@@ -917,7 +917,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 115,
@@ -949,7 +949,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/piemonte/corpus/calendar-doc0-p118.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 119,
@@ -965,7 +965,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/piemonte/corpus/calendar-doc0-p120.png",
-          "status": "pending"
+          "status": "judged"
         }
       ]
     }
