@@ -1,0 +1,23 @@
+{
+  "region": "campania",
+  "tier": "pat",
+  "extractedAt": "2026-09-17T13:31:41.355Z",
+  "documents": [
+    {
+      "url": "https://agricoltura.regione.campania.it/tipici/tradizionali-vegetali.htm",
+      "text": ".pipeline/seasonable/enrich/campania/corpus/pat-doc0.txt",
+      "categoryFilter": false,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 9084,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
