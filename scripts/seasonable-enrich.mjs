@@ -16,7 +16,7 @@
  *   SEASONABLE_MAX_TOTAL_USD=5 caffeinate -i nohup npm run enrich:seasonable > .pipeline/seasonable/enrich/logs/runner.log 2>&1 &
  *
  * THREE STAGES PER UNIT, AND ONLY TWO COST ANYTHING
- * A unit is region × tier (`pat`, then `calendar`). Each loop step advances one
+ * A unit is region × tier (`pat`; `calendar` is off by default, see TIERS). Each loop step advances one
  * unit by one stage, in scripts/seasonable-enrich/:
  *
  *   discover  one tool-using call finds the region's official document    once per unit
@@ -65,7 +65,11 @@ const JUDGE = { model: process.env.SEASONABLE_JUDGE_MODEL ?? 'sonnet', effort: p
 const ESCALATE = process.env.SEASONABLE_ESCALATE_MODEL ?? 'sonnet';
 const MAX_ATTEMPTS = 3;
 const MAX_CONSECUTIVE_BLOCKED = 3;
-const TIERS = ['pat', 'calendar'];
+// The calendar tier ran on ten regions and found no usable calendar: the two
+// documents it did find were catering guidelines, and they were among the most
+// expensive units in the queue. PAT schede produced every candidate. It stays
+// in the code, off by default: SEASONABLE_TIERS=pat,calendar turns it back on.
+const TIERS = (process.env.SEASONABLE_TIERS ?? 'pat').split(',');
 
 const log = (...args) => console.log(new Date().toISOString(), ...args);
 
@@ -251,7 +255,7 @@ async function main() {
   let consecutiveBlocked = 0;
 
   for (;;) {
-    const unit = queue.units.find((u) => u.status === 'pending' || u.status === 'in-progress');
+    const unit = queue.units.find((u) => (u.status === 'pending' || u.status === 'in-progress') && TIERS.includes(u.tier));
     if (!unit) {
       log('Queue empty.');
       break;
