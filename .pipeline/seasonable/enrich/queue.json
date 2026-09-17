@@ -417,10 +417,10 @@
       "region": "basilicata",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "needs-human",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.091,
+      "note": "discovered 0 document(s): Regione Basilicata's PAT pages only offer the annual name-only Elenco PDF (DOCUMENT_FILE_3093632.pdf) and a blank scheda tecnica template, not a published document containing"
     },
     {
       "id": "basilicata:calendar",

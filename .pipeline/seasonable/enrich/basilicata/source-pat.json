@@ -1,0 +1,16 @@
+{
+  "region": "basilicata",
+  "tier": "pat",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.regione.basilicata.it/giunta/site/giunta/department.jsp?dep=100049&area=3080787&level=0",
+    "https://www.regione.basilicata.it/?temi-paaf=agromarketing%2Fpat-prodotti-agroalimentari-tradizionali",
+    "https://www.regione.basilicata.it/?temi-paaf=produzioni-animali-e-vegetali-valorizzazione-delle-produzioni-e-mercato/sistemi-delle-produzioni-di-qualita/prodotti-agroalimentari-tradizionali",
+    "https://www.regione.basilicata.it/wp-content/uploads/giunta/docs/DOCUMENT_FILE_3093632.pdf",
+    "https://www.regione.basilicata.it/giuntacma//files/docs/DOCUMENT_FILE_3080789.docx"
+  ],
+  "rejectedUrls": [],
+  "note": "Regione Basilicata's PAT pages only offer the annual name-only Elenco PDF (DOCUMENT_FILE_3093632.pdf) and a blank scheda tecnica template, not a published document containing filled scheda text for the prodotti vegetali category."
+}
