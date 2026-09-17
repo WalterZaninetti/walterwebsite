@@ -221,8 +221,8 @@
       ],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.178,
+      "note": "discovered 1 document(s): Official Regione FVG guidelines for school catering (DGR 2188/2012) classify fruit and vegetables by season/type; could not extract full internal text via tools to confirm ex"
     },
     {
       "id": "umbria:pat",

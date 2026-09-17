@@ -1,0 +1,23 @@
+{
+  "region": "friuli-venezia-giulia",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [
+    {
+      "title": "La ristorazione scolastica - Linee Guida della Regione Friuli Venezia Giulia (Allegato DGR 2188/2012)",
+      "url": "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/famiglia-casa/politiche-famiglia/FOGLIA30/allegati/lineeGuidaRistorazioneScolastica_allegatoDGR_2188_2012.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "DGR 2188/2012 in filename; not verified as printed inside document text"
+    }
+  ],
+  "triedUrls": [
+    "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/salute-sociale/promozione-salute-prevenzione/allegati/PubblicazioneRISTORAZIONEScolastica_170x240Br.pdf",
+    "https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/famiglia-casa/politiche-famiglia/FOGLIA30/allegati/lineeGuidaRistorazioneScolastica_allegatoDGR_2188_2012.pdf",
+    "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/promozione-salute-prevenzione/FOGLIA15/",
+    "https://asugi.sanita.fvg.it/it/schede/menu_salute_prevenzione/alimentazione/dip_ian_la_ristorazione_scolastica.html"
+  ],
+  "rejectedUrls": [],
+  "note": "Official Regione FVG guidelines for school catering (DGR 2188/2012) classify fruit and vegetables by season/type; could not extract full internal text via tools to confirm exact calendar table format, but document is confirmed live and official."
+}
