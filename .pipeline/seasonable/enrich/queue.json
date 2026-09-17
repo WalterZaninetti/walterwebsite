@@ -379,8 +379,8 @@
       "silentProvincesAtStart": [],
       "status": "pending",
       "attempts": 0,
-      "costUsd": 2.768,
-      "note": "reopened after the usage-limit stop"
+      "costUsd": 3.055,
+      "note": "13 records, 1 for review, 31 pages pending"
     },
     {
       "id": "lazio:calendar",

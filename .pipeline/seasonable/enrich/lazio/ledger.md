@@ -100,3 +100,20 @@ giunge anche a novembre.»
 - **Castagna di Vallerano DOP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
 - **Patata dell’Alto Viterbese IGP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
 - **Peperone di Pontecorvo DOP** — rejected: already a DOP/IGP row in the dataset, cited to its disciplinare.
+
+## 2026-09-17 — pat judge, pages 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255 (sonnet/low, $0.287 so far)
+
+- **FINOCCHIO DELLA MAREMMA VITERBESE** (p.242) — `candidate` open-field 20→8. «L’epoca di raccolta inizia il 1 novembre e si protrae fino al 15 maggio.»
+- **FRAGOLINA DI NEMI** (p.244) — `candidate` open-field 8→19. «La raccolta si effettua esclusivamente a mano ogni 4-5 giorni, nel periodo che va dai primi di maggio fino ad ottobre.»
+- **LATTUGA SIGNORINELLA DI FORMIA** (p.245) — `rejected`. half a window: start with no end. «La raccolta manuale inizia nel mese di aprile in modo scalare in base alla maturazione dei singoli cespi»
+- **LENTICCHIA DI RASCINO** (p.247) — `rejected`. dried pulse harvested dry for threshing. «La raccolta avviene nei primi 15 giorni di agosto con la trebbiatrice.»
+- **LENTICCHIA DI VENTOTENE** (p.248) — `rejected`. dried pulse harvested dry for threshing. «La raccolta avviene nel mese di giugno, alle prime luci dell’alba»
+- **MAIS AGOSTINELLA** (p.249) — `rejected`. grain harvested dry for threshing/storage. «La raccolta è manuale e le spighe vengono conservate per tutto l’inverno fino al momento della macinazione.»
+- **MARMELLATA DI AGRUMI, DI CASTAGNE, DI MELE AL MOSTO COTTO, DI UVA FRAGOLA, DI VISCIOLI** (p.250) — `rejected`. processed preserve, sale/production period only. «Si produce dal mese di ottobre al mese di dicembre.»
+- **MARRONE ANTRODOCANO** (p.251) — `candidate` open-field 16→20. «I frutti, raccolti tra la metà del mese di settembre e la metà di novembre, vengono trasportati presso le aziende o le cooperative»
+- **MARRONE DI ARCINAZZO ROMANO** (p.252) — `rejected`. half a window: start with no end. «La raccolta avviene manualmente dalla metà del mese di ottobre. … La raccolta dei Marroni di Arcinazzo Romano, che avviene manualmente dalla metà di ottobre, prevede sia la raccolta dei marroni caduti in terra e fuoriusciti dai ricci, che la raccolta dei ricci verdi ancora chiusi.»
+- **MARRONE DEI MONTI CIMINI** (p.253) — `candidate` open-field 16→20. «La raccolta, infatti, avviene da settembre a novembre. … La raccolta, eseguita tra il 15 settembre ed il 15 novembre di ogni anno, viene effettuata a tutto campo o previa andanatura»
+- **MARRONE DI CAVE** (p.254) — `rejected`. half a window: start with duration, not calendar end. «La raccolta, manuale, inizia nel mese di ottobre e si protrae per due settimane, riponendo i Marroni in ceste di legno.»
+- **MARRONE DI LATERA** (p.255) — `candidate` open-field 18→19. «La raccolta dei marroni avviene manualmente per tutto il mese di ottobre che prevede anche una veloce cernita e selezione dei frutti.»
+- **LENTICCHIA DI ONANO** (p.246) — `rejected`. already in the dataset as Lenticchia di Onano IGP, cited to its disciplinare. «colta viene effettuata nel periodo compreso fra il 15 giugno ed il 30 agosto di ciascun anno.»
+- **FRAGOLA DI TERRACINA** (p.243) — `needs review` unsure 4→11. windows[0].kind "unsure". «La raccolta delle fragole inizia a metà marzo e prosegue per tutto aprile–inizio maggio con la I° fioritura; da metà maggio a metà giugno, per la II° fioritura. … la raccolta dal 20 aprile a maggio. … con raccolta per tutto il mese di giugno.»
