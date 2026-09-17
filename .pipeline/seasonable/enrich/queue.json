@@ -183,10 +183,10 @@
       "silentProvincesAtStart": [
         "bz"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.199,
-      "note": "extracted 164 pages, 109 skipped by the pre-filter"
+      "costUsd": 0.474,
+      "note": "13 records, 0 for review, 0 pages pending"
     },
     {
       "id": "trentino-alto-adige:calendar",

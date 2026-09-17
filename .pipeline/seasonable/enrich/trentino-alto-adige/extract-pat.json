@@ -21,7 +21,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 3,
@@ -69,7 +69,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p8.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 9,
@@ -85,7 +85,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p10.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 11,
@@ -93,7 +93,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 12,
@@ -157,7 +157,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 20,
@@ -165,7 +165,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 21,
@@ -181,7 +181,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 23,
@@ -189,7 +189,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p23.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 24,
@@ -197,7 +197,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 25,
@@ -205,7 +205,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 26,
@@ -237,7 +237,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p29.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 30,
@@ -245,7 +245,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p30.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 31,
@@ -253,7 +253,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 32,
@@ -293,7 +293,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p36.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 37,
@@ -301,7 +301,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p37.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 38,
@@ -309,7 +309,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p38.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 39,
@@ -373,7 +373,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 47,
@@ -517,7 +517,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p64.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 65,
@@ -525,7 +525,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p65.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 66,
@@ -533,7 +533,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p66.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 67,
@@ -549,7 +549,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p68.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 69,
@@ -581,7 +581,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 73,
@@ -709,7 +709,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p88.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 89,
@@ -717,7 +717,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p89.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 90,
@@ -725,7 +725,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p90.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 91,
@@ -765,7 +765,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 96,
@@ -773,7 +773,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 97,
@@ -789,7 +789,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 99,
@@ -797,7 +797,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 100,
@@ -821,7 +821,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 103,
@@ -829,7 +829,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 104,
@@ -853,7 +853,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p106.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 107,
@@ -861,7 +861,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p107.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 108,
@@ -981,7 +981,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 123,
@@ -1013,7 +1013,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p126.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 127,
@@ -1021,7 +1021,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p127.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 128,
@@ -1029,7 +1029,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p128.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 129,
@@ -1045,7 +1045,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 131,
@@ -1061,7 +1061,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p132.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 133,
@@ -1069,7 +1069,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p133.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 134,
@@ -1077,7 +1077,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p134.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 135,
@@ -1109,7 +1109,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p138.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 139,
@@ -1117,7 +1117,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p139.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 140,
@@ -1125,7 +1125,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p140.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 141,
@@ -1141,7 +1141,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p142.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 143,
@@ -1157,7 +1157,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p144.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 145,
@@ -1165,7 +1165,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p145.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 146,
@@ -1173,7 +1173,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p146.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 147,
@@ -1181,7 +1181,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 148,
@@ -1221,7 +1221,7 @@
           "calendar": true,
           "ocr": false,
           "image": null,
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 153,
@@ -1253,7 +1253,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p156.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 157,
@@ -1261,7 +1261,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p157.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 158,
@@ -1269,7 +1269,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p158.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 159,
@@ -1301,7 +1301,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p162.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 163,
@@ -1309,7 +1309,7 @@
           "calendar": true,
           "ocr": true,
           "image": ".pipeline/seasonable/enrich/trentino-alto-adige/corpus/pat-doc0-p163.png",
-          "status": "pending"
+          "status": "judged"
         },
         {
           "n": 164,
