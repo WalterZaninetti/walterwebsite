@@ -69,10 +69,10 @@
         "lo",
         "mb"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.118,
+      "note": "discovered 0 document(s): BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with"
     },
     {
       "id": "lombardia:calendar",
