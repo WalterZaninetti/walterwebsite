@@ -46,8 +46,16 @@ export type Produce = {
    * `null` means this row is a species rather than a protected designation —
    * "cherry", not "Ciliegia di Vignola". Only the generalised tier uses it, and
    * `produceName` drops the suffix accordingly.
+   *
+   * `PAT` is a *prodotto agroalimentare tradizionale*: a product on a Region's
+   * own list under D.Lgs. 173/1998, described in a scheda identificativa the
+   * Region publishes. It is a weaker instrument than a DOP or an IGP — no
+   * controls, no consortium, no EU registration — and the suffix says so
+   * rather than hiding it. What it shares with a disciplinare is the only
+   * thing this page needs: a document, published by the body that keeps the
+   * register, naming the territory and stating when the crop is picked.
    */
-  designation: 'DOP' | 'IGP' | null;
+  designation: 'DOP' | 'IGP' | 'PAT' | null;
   category: 'fruit' | 'vegetable';
   /** What kind of thing it is, for grouping and for the English reader. */
   en: string;
@@ -86,7 +94,8 @@ export type Source = {
    * Optional, and the exception is deliberate rather than lazy. The ministry
    * publishes the consolidated disciplinare in force for every designation,
    * and those PDFs carry no date at all — 87 of the 117 that yield text print
-   * no year, no decree reference, nothing. They are the only document that
+   * no year, no decree reference, nothing. A Region's PAT scheda is the same
+   * case: Valle d'Aosta's two print the enabling law and nothing else. They are the only document that
    * states the *current* window for most products: the EU's single document is
    * a summary that usually drops the harvest clause, and an amendment moves one
    * endpoint without restating the other.

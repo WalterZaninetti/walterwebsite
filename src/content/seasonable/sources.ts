@@ -66,6 +66,25 @@ const masaf = (id: string, name: string, url: string, accessed = '2026-09-03'): 
   accessed,
 });
 
+/**
+ * A Region's *scheda identificativa* for a prodotto agroalimentare
+ * tradizionale, published by the Region that keeps the list.
+ *
+ * Undated, like the ministry's consolidated disciplinari and for the same
+ * reason: the scheda prints the law that requires it and no year of its own.
+ * The reader is shown the day it was consulted.
+ *
+ * Why a third publisher at all: the EU register names nothing in Valle
+ * d'Aosta, so without these the region answers nothing. A PAT is a lighter
+ * instrument than a disciplinare and the row's `PAT` suffix says so.
+ */
+const pat = (id: string, name: string, url: string, accessed: string): Source => ({
+  id,
+  name,
+  url,
+  accessed,
+});
+
 export const sources: readonly Source[] = [
   // ── Fruit ────────────────────────────────────────────────────────────────
   masaf('amarene-modena', 'Disciplinare di produzione della indicazione geografica protetta “Amarene Brusche di Modena”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/5%252F1%252F0%252FD.8533281919a8f9b0524a/P/BLOB%3AID%3D3343/E/pdf?mode=download', '2026-09-05'),
@@ -100,6 +119,18 @@ export const sources: readonly Source[] = [
   masaf('arancia-ribera', 'Disciplinare di produzione della denominazione d’origine protetta “ARANCIA DI RIBERA”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/e%252F0%252F1%252FD.52948b4d059678acd4ea/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('mele-trentino', 'Disciplinare di produzione della indicazione geografica protetta Mele del Trentino', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/5%252F7%252Fc%252FD.3e793f8037ce3e4e7ab1/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   masaf('limone-sorrento', 'Disciplinare di produzione dell’indicazione geografica protetta “Limone di Sorrento”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/a%252F7%252Fc%252FD.04cac7bb06e6f0e65527/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
+  pat(
+    'golden-valle-aosta',
+    "Scheda identificativa — Golden delicious della Valle d'Aosta, elenco regionale dei prodotti agroalimentari tradizionali",
+    'https://www.regione.vda.it/allegato.aspx?pk=79510',
+    '2026-09-17',
+  ),
+  pat(
+    'renetta-valle-aosta',
+    "Scheda identificativa — Renetta della Valle d'Aosta, elenco regionale dei prodotti agroalimentari tradizionali",
+    'https://www.regione.vda.it/allegato.aspx?pk=79519',
+    '2026-09-17',
+  ),
   masaf('marrone-valle-susa', 'Disciplinare di produzione della indicazione geografica protetta “MARRONE della VALLE di SUSA”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/1%252Fd%252Fd%252FD.a221105d95cec8b52239/P/BLOB%3AID%3D3343/E/pdf?mode=download'),
   // ── Vegetables ───────────────────────────────────────────────────────────
   masaf('aglio-voghiera', 'Disciplinare di produzione della denominazione di origine protetta “AGLIO DI VOGHIERA”', 'https://www.masaf.gov.it/flex/cm/pages/ServeAttachment.php/L/IT/D/3%252F3%252F7%252FD.e771ec79985bf81f1a97/P/BLOB%3AID%3D3343/E/pdf?mode=download'),

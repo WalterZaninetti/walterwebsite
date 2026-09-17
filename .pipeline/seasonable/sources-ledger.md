@@ -1064,3 +1064,65 @@ What they add is density — Modena and Bologna go to three designations each.
 Only **Valle d'Aosta** and **Molise** answer nothing, and neither is pending. **There are no
 judgement calls left open in this corpus.** What remains is the copy: «frutta e verdura» now covers
 a mushroom, a herb, a fermented turnip, a jam and two flours.
+
+---
+
+## 2026-09-17 (thirteenth pass) — a third register, and Valle d'Aosta answers
+
+The protected-designation corpus was finished in the twelfth pass. What follows comes from a
+different register: **prodotti agroalimentari tradizionali**, the lists each Region keeps under
+D.Lgs. 173/1998, published as a *scheda identificativa* per product. A background sweep
+(`scripts/seasonable-enrich.mjs`, ledgers in `.pipeline/seasonable/enrich/<region>/`) worked
+fifteen regions and staged 55 candidates. Nothing ships from it unreviewed: each row below was
+re-read in the scheda itself.
+
+### The rules this required, and how narrow each one is
+
+1. **`designation` gains `PAT`.** It is a weaker instrument than a DOP or an IGP — no controls,
+   no consortium, no EU registration — so the suffix is on the row rather than hidden. What it
+   shares with a disciplinare is what this page needs: a document, published by the body that
+   keeps the register, naming the territory and stating when the crop is picked.
+2. **The host allowlist gains `www.regione.vda.it`.** One host, added because one document is
+   cited. Not a `regione.*` pattern: "some site under regione.something.it" is not a publisher
+   of record, and the value of that list is that every entry was looked at.
+3. **The undated licence extends to a PAT scheda.** Valle d'Aosta's two print the enabling law
+   and no year of their own, exactly like the ministry's consolidated disciplinari. The test now
+   admits a source whose name says *scheda identificativa* and whose URL is the Region's, and
+   nothing else; the reader is shown the consulted date.
+
+### Shipped — Valle d'Aosta, the region no register named
+
+Both schede state it word for word, under «Descrizione delle metodiche di lavorazione»:
+
+> «La raccolta è manuale e si effettua da inizio settembre a metà novembre secondo la
+> maturazione fisiologica dei frutti.»
+
+Zone, from the scheda's own field: «intero territorio della Regione Autonoma Valle d'Aosta» —
+so **Aosta**, the province that answered nothing until today.
+
+| Product | Window |
+|---|---|
+| Golden delicious della Valle d'Aosta PAT | 16→20 |
+| Renetta della Valle d'Aosta PAT | 16→20 |
+
+**The sweep had both rows ending at 21, and that was wrong.** «metà novembre» as an end is the
+first half of the month, which is 20; 21 would claim the second. The conversion rule was already
+written down and the machine checks could not see the error — the quote was verbatim, the months
+were named, the arithmetic was internally consistent. This is why a row is re-read by hand
+before it ships.
+
+### Where this leaves the dataset
+
+**67 products — 65 protected designations and 2 PAT — 75 windows, 69 sources, 83 of 107
+provinces, 19 of 20 regions.** Only **Molise** now answers nothing: its PAT atlas was swept in
+full and not one of its 33 vegetable schede states both ends of a harvest window.
+
+The copy changed with it: «sixty-five designations» became «sixty-seven products», and both
+locales now say in a sentence that two of them come from a lighter register.
+
+### Staged, not shipped
+
+53 more candidates wait in `.pipeline/seasonable/enrich/`: Lazio 23, Sicilia 15, Marche 6,
+Friuli-Venezia Giulia 4, Sardegna 4, Calabria 1. Eleven regions are marked `needs-human`,
+because discovery found only name-only lists or could not open what it found — Toscana's portal
+of 471 schede and Campania's per-product pages are the two worth doing by hand.

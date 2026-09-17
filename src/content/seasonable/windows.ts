@@ -221,6 +221,13 @@ export const windows: readonly Window[] = [
   // "il periodo di raccolta ha inizio al 20 di settembre per concludersi il 10
   //  novembre"
   w('marrone-valle-susa', ['to'], 'open-field', 17, 20, 'marrone-valle-susa'),
+  // "La raccolta è manuale e si effettua da inizio settembre a metà novembre
+  //  secondo la maturazione fisiologica dei frutti" — both schede say it word
+  //  for word. "metà novembre" is the first half of the month, so the window
+  //  ends at 20 and not at 21; the sweep that staged these rows had 21.
+  //  Zone: "intero territorio della Regione Autonoma Valle d'Aosta".
+  w('golden-valle-aosta', ['ao'], 'open-field', 16, 20, 'golden-valle-aosta'),
+  w('renetta-valle-aosta', ['ao'], 'open-field', 16, 20, 'renetta-valle-aosta'),
   // ── Vegetables ───────────────────────────────────────────────────────────
   // "L'estirpazione dell'Aglio di Voghiera avviene dal 10 giugno sino al 31
   //  luglio"
