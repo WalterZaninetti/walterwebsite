@@ -220,9 +220,9 @@
         "ts"
       ],
       "status": "pending",
-      "attempts": 0,
-      "costUsd": 0.178,
-      "note": "extracted 76 pages, 61 skipped by the pre-filter"
+      "attempts": 1,
+      "costUsd": 0.307,
+      "note": "batch p1–73 parsed to no records ($0.129): ThisdocumentisaschoolcateringguidelinedocumentnotPATschedeoraseasonalitycalendar—itcontainsnofruit/vegetableproductswithharvestinformationtoextract."
     },
     {
       "id": "umbria:pat",
