@@ -1,0 +1,1801 @@
+{
+  "region": "calabria",
+  "tier": "pat",
+  "extractedAt": "2026-09-17T13:36:52.642Z",
+  "documents": [
+    {
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2023/06/66-68-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "text": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0.txt",
+      "categoryFilter": false,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p1.png",
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p2.png",
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p3.png",
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p4.png",
+          "status": "pending"
+        },
+        {
+          "n": 5,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p5.png",
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p6.png",
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc0-p7.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2025/11/70-95-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "text": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1.txt",
+      "categoryFilter": false,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p1.png",
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p2.png",
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p3.png",
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p4.png",
+          "status": "pending"
+        },
+        {
+          "n": 5,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p5.png",
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p6.png",
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p7.png",
+          "status": "pending"
+        },
+        {
+          "n": 8,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p8.png",
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p9.png",
+          "status": "pending"
+        },
+        {
+          "n": 10,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p10.png",
+          "status": "pending"
+        },
+        {
+          "n": 11,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p11.png",
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p12.png",
+          "status": "pending"
+        },
+        {
+          "n": 13,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p13.png",
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p14.png",
+          "status": "pending"
+        },
+        {
+          "n": 15,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p15.png",
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p16.png",
+          "status": "pending"
+        },
+        {
+          "n": 17,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p17.png",
+          "status": "pending"
+        },
+        {
+          "n": 18,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p18.png",
+          "status": "pending"
+        },
+        {
+          "n": 19,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p19.png",
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p20.png",
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p21.png",
+          "status": "pending"
+        },
+        {
+          "n": 22,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p22.png",
+          "status": "pending"
+        },
+        {
+          "n": 23,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p23.png",
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p24.png",
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p25.png",
+          "status": "pending"
+        },
+        {
+          "n": 26,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p26.png",
+          "status": "pending"
+        },
+        {
+          "n": 27,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p27.png",
+          "status": "pending"
+        },
+        {
+          "n": 28,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p28.png",
+          "status": "pending"
+        },
+        {
+          "n": 29,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p29.png",
+          "status": "pending"
+        },
+        {
+          "n": 30,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p30.png",
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p31.png",
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p32.png",
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p33.png",
+          "status": "pending"
+        },
+        {
+          "n": 34,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p34.png",
+          "status": "pending"
+        },
+        {
+          "n": 35,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p35.png",
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p36.png",
+          "status": "pending"
+        },
+        {
+          "n": 37,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p37.png",
+          "status": "pending"
+        },
+        {
+          "n": 38,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p38.png",
+          "status": "pending"
+        },
+        {
+          "n": 39,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p39.png",
+          "status": "pending"
+        },
+        {
+          "n": 40,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p40.png",
+          "status": "pending"
+        },
+        {
+          "n": 41,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p41.png",
+          "status": "pending"
+        },
+        {
+          "n": 42,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p42.png",
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p43.png",
+          "status": "pending"
+        },
+        {
+          "n": 44,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p44.png",
+          "status": "pending"
+        },
+        {
+          "n": 45,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p45.png",
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p46.png",
+          "status": "pending"
+        },
+        {
+          "n": 47,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p47.png",
+          "status": "pending"
+        },
+        {
+          "n": 48,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p48.png",
+          "status": "pending"
+        },
+        {
+          "n": 49,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p49.png",
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p50.png",
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p51.png",
+          "status": "pending"
+        },
+        {
+          "n": 52,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p52.png",
+          "status": "pending"
+        },
+        {
+          "n": 53,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p53.png",
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p54.png",
+          "status": "pending"
+        },
+        {
+          "n": 55,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p55.png",
+          "status": "pending"
+        },
+        {
+          "n": 56,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p56.png",
+          "status": "pending"
+        },
+        {
+          "n": 57,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p57.png",
+          "status": "pending"
+        },
+        {
+          "n": 58,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p58.png",
+          "status": "pending"
+        },
+        {
+          "n": 59,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p59.png",
+          "status": "pending"
+        },
+        {
+          "n": 60,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p60.png",
+          "status": "pending"
+        },
+        {
+          "n": 61,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p61.png",
+          "status": "pending"
+        },
+        {
+          "n": 62,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p62.png",
+          "status": "pending"
+        },
+        {
+          "n": 63,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p63.png",
+          "status": "pending"
+        },
+        {
+          "n": 64,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p64.png",
+          "status": "pending"
+        },
+        {
+          "n": 65,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p65.png",
+          "status": "pending"
+        },
+        {
+          "n": 66,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p66.png",
+          "status": "pending"
+        },
+        {
+          "n": 67,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc1-p67.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "url": "https://www.regione.calabria.it/wp-content/uploads/2025/11/97-138-Prodotti-vegetali-allo-stato-naturale-o-trasformati.pdf",
+      "text": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2.txt",
+      "categoryFilter": false,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p1.png",
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p2.png",
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p3.png",
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p4.png",
+          "status": "pending"
+        },
+        {
+          "n": 5,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p5.png",
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p6.png",
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p7.png",
+          "status": "pending"
+        },
+        {
+          "n": 8,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p8.png",
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p9.png",
+          "status": "pending"
+        },
+        {
+          "n": 10,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p10.png",
+          "status": "pending"
+        },
+        {
+          "n": 11,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p11.png",
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p12.png",
+          "status": "pending"
+        },
+        {
+          "n": 13,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p13.png",
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p14.png",
+          "status": "pending"
+        },
+        {
+          "n": 15,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p15.png",
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p16.png",
+          "status": "pending"
+        },
+        {
+          "n": 17,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p17.png",
+          "status": "pending"
+        },
+        {
+          "n": 18,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p18.png",
+          "status": "pending"
+        },
+        {
+          "n": 19,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p19.png",
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p20.png",
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p21.png",
+          "status": "pending"
+        },
+        {
+          "n": 22,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p22.png",
+          "status": "pending"
+        },
+        {
+          "n": 23,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p23.png",
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p24.png",
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p25.png",
+          "status": "pending"
+        },
+        {
+          "n": 26,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p26.png",
+          "status": "pending"
+        },
+        {
+          "n": 27,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p27.png",
+          "status": "pending"
+        },
+        {
+          "n": 28,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p28.png",
+          "status": "pending"
+        },
+        {
+          "n": 29,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p29.png",
+          "status": "pending"
+        },
+        {
+          "n": 30,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p30.png",
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p31.png",
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p32.png",
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p33.png",
+          "status": "pending"
+        },
+        {
+          "n": 34,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p34.png",
+          "status": "pending"
+        },
+        {
+          "n": 35,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p35.png",
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p36.png",
+          "status": "pending"
+        },
+        {
+          "n": 37,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p37.png",
+          "status": "pending"
+        },
+        {
+          "n": 38,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p38.png",
+          "status": "pending"
+        },
+        {
+          "n": 39,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p39.png",
+          "status": "pending"
+        },
+        {
+          "n": 40,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p40.png",
+          "status": "pending"
+        },
+        {
+          "n": 41,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p41.png",
+          "status": "pending"
+        },
+        {
+          "n": 42,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p42.png",
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p43.png",
+          "status": "pending"
+        },
+        {
+          "n": 44,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p44.png",
+          "status": "pending"
+        },
+        {
+          "n": 45,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p45.png",
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p46.png",
+          "status": "pending"
+        },
+        {
+          "n": 47,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p47.png",
+          "status": "pending"
+        },
+        {
+          "n": 48,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p48.png",
+          "status": "pending"
+        },
+        {
+          "n": 49,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p49.png",
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p50.png",
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p51.png",
+          "status": "pending"
+        },
+        {
+          "n": 52,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p52.png",
+          "status": "pending"
+        },
+        {
+          "n": 53,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p53.png",
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p54.png",
+          "status": "pending"
+        },
+        {
+          "n": 55,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p55.png",
+          "status": "pending"
+        },
+        {
+          "n": 56,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p56.png",
+          "status": "pending"
+        },
+        {
+          "n": 57,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p57.png",
+          "status": "pending"
+        },
+        {
+          "n": 58,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p58.png",
+          "status": "pending"
+        },
+        {
+          "n": 59,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p59.png",
+          "status": "pending"
+        },
+        {
+          "n": 60,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p60.png",
+          "status": "pending"
+        },
+        {
+          "n": 61,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p61.png",
+          "status": "pending"
+        },
+        {
+          "n": 62,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p62.png",
+          "status": "pending"
+        },
+        {
+          "n": 63,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p63.png",
+          "status": "pending"
+        },
+        {
+          "n": 64,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p64.png",
+          "status": "pending"
+        },
+        {
+          "n": 65,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p65.png",
+          "status": "pending"
+        },
+        {
+          "n": 66,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p66.png",
+          "status": "pending"
+        },
+        {
+          "n": 67,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p67.png",
+          "status": "pending"
+        },
+        {
+          "n": 68,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p68.png",
+          "status": "pending"
+        },
+        {
+          "n": 69,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p69.png",
+          "status": "pending"
+        },
+        {
+          "n": 70,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p70.png",
+          "status": "pending"
+        },
+        {
+          "n": 71,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p71.png",
+          "status": "pending"
+        },
+        {
+          "n": 72,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p72.png",
+          "status": "pending"
+        },
+        {
+          "n": 73,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p73.png",
+          "status": "pending"
+        },
+        {
+          "n": 74,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p74.png",
+          "status": "pending"
+        },
+        {
+          "n": 75,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p75.png",
+          "status": "pending"
+        },
+        {
+          "n": 76,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p76.png",
+          "status": "pending"
+        },
+        {
+          "n": 77,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p77.png",
+          "status": "pending"
+        },
+        {
+          "n": 78,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p78.png",
+          "status": "pending"
+        },
+        {
+          "n": 79,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p79.png",
+          "status": "pending"
+        },
+        {
+          "n": 80,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p80.png",
+          "status": "pending"
+        },
+        {
+          "n": 81,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p81.png",
+          "status": "pending"
+        },
+        {
+          "n": 82,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p82.png",
+          "status": "pending"
+        },
+        {
+          "n": 83,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p83.png",
+          "status": "pending"
+        },
+        {
+          "n": 84,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p84.png",
+          "status": "pending"
+        },
+        {
+          "n": 85,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p85.png",
+          "status": "pending"
+        },
+        {
+          "n": 86,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p86.png",
+          "status": "pending"
+        },
+        {
+          "n": 87,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p87.png",
+          "status": "pending"
+        },
+        {
+          "n": 88,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p88.png",
+          "status": "pending"
+        },
+        {
+          "n": 89,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p89.png",
+          "status": "pending"
+        },
+        {
+          "n": 90,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p90.png",
+          "status": "pending"
+        },
+        {
+          "n": 91,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p91.png",
+          "status": "pending"
+        },
+        {
+          "n": 92,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p92.png",
+          "status": "pending"
+        },
+        {
+          "n": 93,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p93.png",
+          "status": "pending"
+        },
+        {
+          "n": 94,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p94.png",
+          "status": "pending"
+        },
+        {
+          "n": 95,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p95.png",
+          "status": "pending"
+        },
+        {
+          "n": 96,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p96.png",
+          "status": "pending"
+        },
+        {
+          "n": 97,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p97.png",
+          "status": "pending"
+        },
+        {
+          "n": 98,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p98.png",
+          "status": "pending"
+        },
+        {
+          "n": 99,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p99.png",
+          "status": "pending"
+        },
+        {
+          "n": 100,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p100.png",
+          "status": "pending"
+        },
+        {
+          "n": 101,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p101.png",
+          "status": "pending"
+        },
+        {
+          "n": 102,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p102.png",
+          "status": "pending"
+        },
+        {
+          "n": 103,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p103.png",
+          "status": "pending"
+        },
+        {
+          "n": 104,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p104.png",
+          "status": "pending"
+        },
+        {
+          "n": 105,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p105.png",
+          "status": "pending"
+        },
+        {
+          "n": 106,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p106.png",
+          "status": "pending"
+        },
+        {
+          "n": 107,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p107.png",
+          "status": "pending"
+        },
+        {
+          "n": 108,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p108.png",
+          "status": "pending"
+        },
+        {
+          "n": 109,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p109.png",
+          "status": "pending"
+        },
+        {
+          "n": 110,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p110.png",
+          "status": "pending"
+        },
+        {
+          "n": 111,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p111.png",
+          "status": "pending"
+        },
+        {
+          "n": 112,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p112.png",
+          "status": "pending"
+        },
+        {
+          "n": 113,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p113.png",
+          "status": "pending"
+        },
+        {
+          "n": 114,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p114.png",
+          "status": "pending"
+        },
+        {
+          "n": 115,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p115.png",
+          "status": "pending"
+        },
+        {
+          "n": 116,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p116.png",
+          "status": "pending"
+        },
+        {
+          "n": 117,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p117.png",
+          "status": "pending"
+        },
+        {
+          "n": 118,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p118.png",
+          "status": "pending"
+        },
+        {
+          "n": 119,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p119.png",
+          "status": "pending"
+        },
+        {
+          "n": 120,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p120.png",
+          "status": "pending"
+        },
+        {
+          "n": 121,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p121.png",
+          "status": "pending"
+        },
+        {
+          "n": 122,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p122.png",
+          "status": "pending"
+        },
+        {
+          "n": 123,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/calabria/corpus/pat-doc2-p123.png",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

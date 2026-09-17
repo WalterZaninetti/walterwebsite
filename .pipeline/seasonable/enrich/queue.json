@@ -440,7 +440,7 @@
       "status": "pending",
       "attempts": 0,
       "costUsd": 0.085,
-      "note": "discovered 3 document(s): Found official Regione Calabria PAT PDF schede for the vegetable products category, split into three files covering sheets 66-68, 70-95, and 97-138."
+      "note": "extracted 197 pages, 0 skipped by the pre-filter"
     },
     {
       "id": "calabria:calendar",
