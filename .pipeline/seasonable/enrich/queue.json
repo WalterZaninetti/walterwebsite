@@ -437,10 +437,10 @@
       "region": "calabria",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0.741,
-      "note": "14 records, 0 for review, 123 pages pending"
+      "costUsd": 0.787,
+      "note": "0 records, 0 for review, 0 pages pending"
     },
     {
       "id": "calabria:calendar",
