@@ -1,0 +1,13 @@
+{
+  "region": "valle-daosta",
+  "tier": "calendar",
+  "foundBy": "sonnet discovery, 2026-09-17",
+  "confirmed": false,
+  "documents": [],
+  "triedUrls": [
+    "https://www.ausl.vda.it (site search: stagionalità frutta verdura)",
+    "https://sian.aulss9.veneto.it (unrelated region results)"
+  ],
+  "rejectedUrls": [],
+  "note": "Web searches for a Valle d'Aosta regional/ASL seasonality calendar for fruit and vegetables turned up only Veneto, Piedmont, FVG and Tuscany documents and general AUSL VdA nutrition/health PDFs with no dedicated seasonality calendar; no official Valle d'Aosta publication was located within the allotted search budget."
+}

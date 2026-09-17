@@ -47,10 +47,10 @@
       "silentProvincesAtStart": [
         "ao"
       ],
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
-      "costUsd": 0,
-      "note": null
+      "costUsd": 0.108,
+      "note": "discovered 0 document(s): Web searches for a Valle d'Aosta regional/ASL seasonality calendar for fruit and vegetables turned up only Veneto, Piedmont, FVG and Tuscany documents and general AUSL VdA nu"
     },
     {
       "id": "lombardia:pat",
