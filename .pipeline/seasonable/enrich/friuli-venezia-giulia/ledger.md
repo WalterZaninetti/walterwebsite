@@ -44,3 +44,7 @@ comunale di Sauris.". «Il periodo di coltivazione va
 da maggio a fine agosto … L maturazione avviene a
 fine agosto e la raccolta
 è manuale.»
+
+## 2026-09-17 — pat judge, pages 306, 307, 308, 310, 317, 318 (sonnet/low)
+
+No fruit or vegetable product on these pages: bibliography, acknowledgements, and alphabetical index pages
