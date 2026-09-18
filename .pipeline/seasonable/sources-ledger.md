@@ -1533,3 +1533,27 @@ Fifteen provinces answer nothing: Como, Sondrio, Milano, Bergamo, Brescia, Cremo
 Monza e Brianza, Bolzano, Trieste, Terni, Pescara, Campobasso, Isernia. **Emilia-Romagna** and
 **Basilicata** publish names only and would add density, not reach. Molise's atlas was read in full
 in the first pass. Lombardia's nine are the largest block, and the Atlante reaches none of them.
+
+---
+
+## 2026-09-19 (nineteenth pass) — the fifteen silent provinces, checked; none reachable
+
+Every remaining silent province was worked against the public record. None can be answered from a
+published document found so far. Recorded so the next session does not re-walk it.
+
+| Province(s) | What was checked | Result |
+|---|---|---|
+| **Pescara** | Abruzzo's 2006 atlas, full text, every mention of Pescara and its comuni | Pescara appears only in cheese schede; no dated harvest |
+| **Trieste** | ERSA's *Cibario* (2017), re-downloaded, every mention of Trieste, the Carso, Muggia, Duino | 112 mentions, none beside a dated harvest |
+| **Terni** | Umbria's per-product schede | all eight fruit-and-vegetable schede are in Perugia |
+| **Campobasso, Isernia** | ARSARP's atlas (read in full in the first pass); a fresh search for any other Molise publication | nothing else published |
+| **Bolzano** | the Province's PAT list and its agriculture site | 19 PAT, among them Terlaner Spargel, Vinschger Marille, Südtiroler Kastanien, Kren — but the Province publishes no schede online |
+| **Lombardia** (Como, Sondrio, Milano, Bergamo, Brescia, Cremona, Lecco, Lodi, Monza e Brianza) | the ERSAF Atlante (fifteenth pass); the Region's annual revision decrees | the Atlante dates nothing there; the decrees carry schede only for the year's additions, lately meats (Vitello tonnato 2025, Oca di Lomellina and Luganega di Monza 2024), and the 2025 decree's indexed URL now returns a 404 page |
+| — | *Atlante aperto delle produzioni autentiche d'Abruzzo* | by Ristoratori d'Abruzzo and Slow Food, not a publisher of record; not used |
+
+**What would still move these**, none of it a search: a civic-access request to the Province of
+Bolzano or to Regione Lombardia for the schede behind their lists — Veneto's Region offers exactly
+that route on its own PAT page — or a new kind of source, which `brief.md` resolved against.
+
+The dataset stands at **92 of 107 provinces and 19 of 20 regions.** Emilia-Romagna and Basilicata
+remain in the queue as `needs-human`: both publish names only, and both would add density, not reach.
