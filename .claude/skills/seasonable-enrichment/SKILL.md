@@ -7,7 +7,7 @@ description: How the /seasonable dataset is enriched region by region from new s
 
 The DOP/IGP register is exhausted (sources ledger, twelfth pass). The dataset grows from two
 new tiers, worked one region at a time by `scripts/seasonable-enrich.mjs`, which runs in the
-worktree `../walterwebsite-enrich` on branch `seasonable/enrich`. **It stages; it never ships.**
+clone `~/dev/walterwebsite-enrich` on branch `seasonable/enrich` — a separate clone outside `~/Documents`, because macOS can withdraw the Documents folder from the app running it mid-sweep, and a worktree would share the locked checkout's `.git`. **It stages; it never ships.**
 Every invariant in `seasonable-sourcing/SKILL.md` applies to these tiers unchanged.
 
 ## The pipeline, and why it is shaped for cost
@@ -61,8 +61,8 @@ node scripts/seasonable-enrich/judge.mjs molise pat --pages 1,2,3 --model <m> --
 ## Running it
 
 ```
-cd ../walterwebsite-enrich
-git merge main                                   # pick up pipeline changes
+cd ~/dev/walterwebsite-enrich
+git pull && git merge origin/main                                   # pick up pipeline changes
 SEASONABLE_MAX_TOTAL_USD=5 caffeinate -i nohup npm run enrich:seasonable > .pipeline/seasonable/enrich/logs/runner.log 2>&1 &
 npm run enrich:status                            # per unit: verdicts, provinces reached, pages skipped, cost, $/record
 npm run enrich:check                             # the validator over every region
