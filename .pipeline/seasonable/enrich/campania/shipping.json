@@ -1,0 +1,949 @@
+[
+ {
+  "slug": "cam-aglio-dell-ufita",
+  "name": "Aglio dell'Ufita",
+  "en": "garlic",
+  "it": "aglio",
+  "category": "vegetable",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 11,
+    "conversion": "giugno→10 (1–15 giu), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "raccolti manualmente a giugno"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/aglio-ufita.htm",
+  "page": 2
+ },
+ {
+  "slug": "cam-broccolo-san-pasquale",
+  "name": "Broccolo San Pasquale",
+  "en": "broccoli",
+  "it": "broccolo",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 0,
+    "end": 5,
+    "conversion": "gennaio→0 (1–15 gen), marzo→5 (16–31 mar)"
+   }
+  ],
+  "quotes": [
+   "la raccolta, eseguita manualmente in più riprese, ricade nel periodo gennaio-marzo, è effettuata riunendo in mazzetti foglie e steli teneri."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/broccolo-san-pasquale.html",
+  "page": 12
+ },
+ {
+  "slug": "cam-castagna-o-marrone-del-partenio",
+  "name": "Castagna o marrone del Partenio",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "av",
+   "bn",
+   "ce",
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "prima decade ottobre→18 (1–15 ott), terza decade ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "fino alla raccolta, generalmente eseguita a mano, alla caduta dei ricci (dalla prima alla terza decade di ottobre in relazione all'altitudine e all'esposizione del castagneto)"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/castagna-partenio.html",
+  "page": 13
+ },
+ {
+  "slug": "cam-carciofo-di-castellammare",
+  "name": "Carciofo di Castellammare",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 2,
+    "end": 8,
+    "conversion": "febbraio→2 (1–15 feb), metà maggio→8 (1–15 mag)"
+   }
+  ],
+  "quotes": [
+   "si raccoglie, infatti, nel periodo compreso tra febbraio e metà maggio, ma già nei mesi di febbraio-marzo si raccolgono le mammarelle, cioè i capolini centrali"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/carciofo-castellammare.htm",
+  "page": 18
+ },
+ {
+  "slug": "cam-carciofo-pignatella-carciofo-ros",
+  "name": "Carciofo pignatella, carciofo rosso, carciofolla pascaiola",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 4,
+    "end": 10,
+    "conversion": "marzo→4 (1–15 mar), prima decade giugno→10 (1–15 giu)"
+   }
+  ],
+  "quotes": [
+   "La raccolta inizia\n da marzo-aprile e prosegue fino alla prima decade di giugno a seconda dell'andamento\n atmosferico"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/carciofo_pignatella.html",
+  "page": 22
+ },
+ {
+  "slug": "cam-castagna-del-monte-faito",
+  "name": "Castagna del Monte Faito",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 19,
+    "conversion": "settembre→16 (1–15 set), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "producendo dei frutti che si raccolgono fra settembre ed ottobre"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/castagna-faito.html",
+  "page": 26
+ },
+ {
+  "slug": "cam-castagna-di-acerno",
+  "name": "Castagna di Acerno",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 20,
+    "conversion": "inizio ottobre→18 (1–15 ott), primi giorni novembre→20 (1–15 nov)"
+   }
+  ],
+  "quotes": [
+   "la maturazione delle castagne\n va da inizio ottobre fino ai primi giorni di novembre"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/castagna-acerno.html",
+  "page": 28
+ },
+ {
+  "slug": "cam-castagna-di-trevico",
+  "name": "Castagna di Trevico",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 20,
+    "conversion": "10 ottobre→18 (1–15 ott, day10), 10 novembre→20 (1–15 nov, day10)"
+   }
+  ],
+  "quotes": [
+   "la raccolta delle castagne da terra viene effettuata manualmente dal 10 di ottobre fino al 10 di novembre."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/castagna-trevico.html",
+  "page": 29
+ },
+ {
+  "slug": "cam-castagna-jonna-di-civitella-lici",
+  "name": "Castagna jonna di Civitella Licinio",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "bn"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 17,
+    "end": 20,
+    "conversion": "ultima settimana settembre→17 (16–30 set), prima settimana novembre→20 (1–15 nov)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene al suolo in autunno (dall'ultima settimana di settembre alla prima di\n novembre, secondo la posizione del castagneto)"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/castagna-jonna.html",
+  "page": 30
+ },
+ {
+  "slug": "cam-carciofo-capuanella",
+  "name": "Carciofo capuanella",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "ce",
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 5,
+    "end": 6,
+    "conversion": "fine marzo→5 (16–31 mar), inizio aprile→6 (1–15 apr)"
+   }
+  ],
+  "quotes": [
+   "che matura tra fine marzo ed inizio aprile",
+   "ready to harvest between the end of March and the beginning of April"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/carciofo-capuanella.htm",
+  "page": 17
+ },
+ {
+  "slug": "cam-ciliegia-di-pimonte",
+  "name": "Ciliegia di Pimonte",
+  "en": "cherry",
+  "it": "ciliegia",
+  "category": "fruit",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 11,
+    "end": 12,
+    "conversion": "fine giugno→11 (16-31 giu), prima decade luglio→12 (1-15 lug)"
+   }
+  ],
+  "quotes": [
+   "maturazione dei frutti fra fine giugno e prima decade di luglio."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/ciliegia-pimonte.html",
+  "page": 43
+ },
+ {
+  "slug": "cam-ciliegia-di-siano",
+  "name": "Ciliegia di Siano",
+  "en": "cherry",
+  "it": "ciliegia",
+  "category": "fruit",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 9,
+    "end": 10,
+    "conversion": "fine maggio→9 (16-31 mag), prima decade giugno/inizio giugno→10 (1-15 giu)"
+   }
+  ],
+  "quotes": [
+   "epoca di fioritura intorno a fine marzo – inizio aprile, epoca di maturazione intorno a fine maggio – inizio giugno",
+   "epoca di maturazione intorno alla prima decade di giugno"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/ciliegia-siano.html",
+  "page": 44
+ },
+ {
+  "slug": "cam-cipolla-alifana",
+  "name": "Cipolla alifana",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ce"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 15,
+    "conversion": "luglio→12 (1-15 lug), agosto→15 (16-31 ago)"
+   }
+  ],
+  "quotes": [
+   "La maturazione avviene in luglio - agosto"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/cipolla-alifana.html",
+  "page": 46
+ },
+ {
+  "slug": "cam-cipolla-bianca-di-pompei",
+  "name": "Cipolla bianca di Pompei",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 4,
+    "end": 11,
+    "conversion": "marzo→4 (1-15 mar), giugno→11 (16-31 giu)"
+   }
+  ],
+  "quotes": [
+   "Si raccoglie in primavera, da marzo a giugno"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/cipolla-bianca-pompei.html",
+  "page": 47
+ },
+ {
+  "slug": "cam-cipolla-di-airola",
+  "name": "Cipolla di Airola",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "bn"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 15,
+    "conversion": "luglio→12 (1-15 lug), agosto→15 (16-31 ago)"
+   }
+  ],
+  "quotes": [
+   "La raccolta manuale viene fatta tra luglio e agosto."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/cipolla-airola.html",
+  "page": 48
+ },
+ {
+  "slug": "cam-fagiolo-mustacciello",
+  "name": "Fagiolo mustacciello",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ce",
+   "bn",
+   "na",
+   "av",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 19,
+    "end": 21,
+    "conversion": "fine ottobre→19 (16-31 ott), fine novembre→21 (16-30 nov)"
+   }
+  ],
+  "quotes": [
+   "la maturazione avviene alla fine di ottobre (stato ceroso) e fino alla fine di novembre (prodotto secco)."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/fagiolo-mustacciello.html",
+  "page": 71
+ },
+ {
+  "slug": "cam-finocchio-bianco-palettone",
+  "name": "Finocchio bianco palettone",
+  "en": "fennel",
+  "it": "finocchio",
+  "category": "vegetable",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "ottobre→18 (1–15 ott), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "Il finocchio bianco palettone viene raccolto nell'arco dell'intero mese di ottobre."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/finocchiopalettone.htm",
+  "page": 87
+ },
+ {
+  "slug": "cam-finocchio-di-sarno",
+  "name": "Finocchio di Sarno",
+  "en": "fennel",
+  "it": "finocchio",
+  "category": "vegetable",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 23,
+    "conversion": "novembre→20 (1–15 nov), dicembre→23 (16–31 dic)"
+   }
+  ],
+  "quotes": [
+   "la semina avviene a cavallo tra il 10 ed il 20 luglio e la raccolta tra novembre e dicembre."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/finocchiosarno.htm",
+  "page": 88
+ },
+ {
+  "slug": "cam-giallona-di-siano",
+  "name": "Giallona di Siano",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 14,
+    "conversion": "terza decade luglio→13 (16–31 lug), prima decade agosto→14 (1–15 ago)"
+   }
+  ],
+  "quotes": [
+   "la raccolta avviene tra la terza decade di luglio e la prima di agosto."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/giallona.htm",
+  "page": 93
+ },
+ {
+  "slug": "cam-melone-napoletano",
+  "name": "Melone napoletano",
+  "en": "melon",
+  "it": "melone",
+  "category": "fruit",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 19,
+    "conversion": "settembre→16 (1–15 set), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "pur raccogliendosi fra settembre ed ottobre, infatti, si consuma prevalentemente durante l'inverno ed in particolare nelle feste natalizie"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/melonenapoli.htm",
+  "page": 127
+ },
+ {
+  "slug": "cam-oliva-marinese",
+  "name": "Oliva marinese",
+  "en": "olive",
+  "it": "oliva",
+  "category": "fruit",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "ottobre→18-19 (whole month)"
+   }
+  ],
+  "quotes": [
+   "La raccolta, a mano, viene effettuata nel mese di ottobre e le olive vengono molite entro 2 giorni dalla raccolta."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/oliva-marinese.html",
+  "page": 135
+ },
+ {
+  "slug": "cam-patata-di-monte-s-giacomo",
+  "name": "Patata di Monte S. Giacomo",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 14,
+    "end": 16,
+    "conversion": "metà agosto→14 (1–15 ago), metà settembre→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene da metà agosto a metà settembre, quando la parte aerea della pianta è completamente secca."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/patata-monte-san-giacomo.html",
+  "page": 145
+ },
+ {
+  "slug": "cam-patata-di-trevico",
+  "name": "Patata di Trevico",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 14,
+    "end": 16,
+    "conversion": "15 agosto→14 (1–15 ago), 15 settembre→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta viene fatta tra il 15 agosto e il 15 settembre, la raccolta può essere fatta sia meccanicamente che manuale."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/patata-trevico.html",
+  "page": 146
+ },
+ {
+  "slug": "cam-patata-fresca-campana",
+  "name": "Patata fresca campana",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "ce",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 11,
+    "conversion": "maggio→8 (1–15 mag), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "che sono raccolti fra maggio e giugno, in un periodo di assenza di altre patate fresche"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/patata-fresca.html",
+  "page": 147
+ },
+ {
+  "slug": "cam-patata-nera-del-matese",
+  "name": "Patata nera del Matese",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "ce"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "ottobre→18-19 (whole month)"
+   }
+  ],
+  "quotes": [
+   "La coltivazione inizia nel mese di maggio (semina dei tuberi spaccati, in due o quattro parti secondo le dimensioni), e si chiude con la raccolta ad ottobre, manuale."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/patata-nera-matese.html",
+  "page": 148
+ },
+ {
+  "slug": "cam-peperoncini-verdi-o-di-fiume",
+  "name": "Peperoncini verdi o di fiume",
+  "en": "chilli",
+  "it": "peperoncino",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa",
+   "ce"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 17,
+    "conversion": "maggio→8 (1–15 mag), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La coltivazione avviene tradizionalmente in pieno campo, con raccolta da maggio a settembre; nelle coltivazioni in serra la raccolta è anticipata."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/peperonciniverdi.htm",
+  "page": 155
+ },
+ {
+  "slug": "cam-peperone-cazzone",
+  "name": "Peperone cazzone",
+  "en": "pepper",
+  "it": "peperone",
+  "category": "vegetable",
+  "prov": [
+   "sa",
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 19,
+    "conversion": "fine luglio→13 (16–31 lug), fine ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "la raccolta viene effettuata dalla fine di luglio fino a fine ottobre, è coltivato sia in pieno campo che in tunnel con rete antiafidica"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/peperone-cazzone.html",
+  "page": 158
+ },
+ {
+  "slug": "cam-peperone-sassaniello",
+  "name": "Peperone sassaniello",
+  "en": "pepper",
+  "it": "peperone",
+  "category": "vegetable",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 19,
+    "conversion": "fine luglio→13 (16–31 lug), fine ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "L'epoca di coltivazione va da aprile a fine ottobre; la raccolta viene effettuata dalla fine di luglio fino a fine ottobre, è coltivato sia in pieno campo che in tunnel con rete antiafidica."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/peperone-sassaniello.html",
+  "page": 161
+ },
+ {
+  "slug": "cam-pera-lardara",
+  "name": "Pera lardara",
+  "en": "pear",
+  "it": "pera",
+  "category": "fruit",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 19,
+    "conversion": "settembre→16 (1–15 set), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "Nel periodo autunnale di Settembre-Ottobre, si raccolgono i frutti di questo ceppo autoctono di pero, a maturazione quasi avvenuta, si raccolgono manualmente i frutti"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pere-lardare.html",
+  "page": 165
+ },
+ {
+  "slug": "cam-patata-rossa-del-vallo-di-diano",
+  "name": "Patata rossa del Vallo di Diano",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 16,
+    "conversion": "«si chiude con la raccolta a fine agosto inizio settembre» → 15 (16–31 ago) to 16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "La coltivazione inizia nel mese di maggio (semina dei tuberi), quando sono definitivamente fugate le possibilità di gelate tardive, e si chiude con la raccolta a fine agosto inizio settembre."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/patata-rossa-vallo-diano.html",
+  "page": 152
+ },
+ {
+  "slug": "cam-pisello-centogiorni",
+  "name": "Pisello centogiorni",
+  "en": "pea",
+  "it": "pisello",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 4,
+    "end": 7,
+    "conversion": "marzo→4 (1–15 mar), aprile→7 (16–30 apr)"
+   }
+  ],
+  "quotes": [
+   "la raccolta è effettuata ordinariamente da marzo ad aprile"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pisello-centogiorni.html",
+  "page": 179
+ },
+ {
+  "slug": "cam-pomodorino-campano",
+  "name": "Pomodorino campano",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "sa",
+   "na",
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 18,
+    "conversion": "union: inizio luglio→12 (1–15 lug), prima decade ottobre→18 (1–15 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta dei frutti è scalare e va effettuata nel periodo compreso tra la fine di luglio e prima decade di ottobre",
+   "La raccolta dei frutti è scalare e va effettuata nel periodo compreso tra inizio luglio e fine settembre"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pomodorino-campano.html",
+  "page": 181
+ },
+ {
+  "slug": "cam-pomodorino-cannellino-di-pimonte",
+  "name": "Pomodorino cannellino di Pimonte",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 15,
+    "conversion": "metà luglio→13 (16–31 lug), agosto→15 (16–31 ago)"
+   }
+  ],
+  "quotes": [
+   "La raccolta si effettua rigorosamente a mano dalla metà di luglio ad agosto."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pomodorino-pimonte.html",
+  "page": 182
+ },
+ {
+  "slug": "cam-pomodorino-dell-ufita",
+  "name": "Pomodorino dell'Ufita",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 18,
+    "conversion": "fine agosto→15 (16–31 ago), prima decade ottobre→18 (1–15 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta dei frutti è scalare e va effettuata nel periodo compreso tra la fine di agosto e prima decade di ottobre"
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pomodorino-ufita.html",
+  "page": 184
+ },
+ {
+  "slug": "cam-pomodoro-cannellino-flegreo",
+  "name": "Pomodoro cannellino flegreo",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 15,
+    "conversion": "metà luglio→13 (16–31 lug), agosto→15 (16–31 ago)"
+   }
+  ],
+  "quotes": [
+   "La raccolta si effettua da metà luglio ad agosto."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pomodoro-cannellino-flegreo.html",
+  "page": 188
+ },
+ {
+  "slug": "cam-pomodoro-fiaschello-di-battipagl",
+  "name": "Pomodoro fiaschello di Battipaglia",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 16,
+    "conversion": "metà luglio→12 (1–15 lug), metà settembre→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene fra metà luglio e metà settembre, in modo scalare."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/pomodoro-fiaschello.html",
+  "page": 190
+ },
+ {
+  "slug": "cam-rapa-catozza",
+  "name": "Rapa catozza",
+  "en": "turnip",
+  "it": "rapa",
+  "category": "vegetable",
+  "prov": [
+   "ce",
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 3,
+    "conversion": "novembre→20 (1–15 nov), febbraio→3 (16–28 feb)"
+   }
+  ],
+  "quotes": [
+   "la raccolta, effettuata in più riprese riunendo in mazzetti steli e foglie, è manuale e ricade nel periodo novembre-febbraio."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/rapa-catozza.html",
+  "page": 196
+ },
+ {
+  "slug": "cam-sedano-di-gesualdo",
+  "name": "Sedano di Gesualdo",
+  "en": "celery",
+  "it": "sedano",
+  "category": "vegetable",
+  "prov": [
+   "av"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 11,
+    "end": 12,
+    "conversion": "fine giugno→11 (16–30 giu), inizio luglio→12 (1–15 lug)"
+   }
+  ],
+  "quotes": [
+   "La raccolta si effettua a fine giugno, inizio luglio."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/sedano-gesualdo.html",
+  "page": 202
+ },
+ {
+  "slug": "cam-zucchino-san-pasquale",
+  "name": "Zucchino San Pasquale",
+  "en": "courgette",
+  "it": "zucchina",
+  "category": "vegetable",
+  "prov": [
+   "na",
+   "sa"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 19,
+    "conversion": "maggio→8 (1–15 mag), fine ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta manuale va da maggio fino a fine ottobre."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/zucchino-san-pasquale.html",
+  "page": 227
+ },
+ {
+  "slug": "cam-ciliegia-del-monte-e-ciliegia-de",
+  "name": "Ciliegia del Monte e ciliegia della Recca",
+  "en": "cherry",
+  "it": "ciliegia",
+  "category": "fruit",
+  "prov": [
+   "na"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 9,
+    "end": 11,
+    "conversion": "fine maggio→9 (16-31 mag), seconda decade giugno→11 (16-31 giu)"
+   }
+  ],
+  "quotes": [
+   "matura tra la fine di maggio e la seconda decade di giugno.",
+   "che matura tra la prima e la seconda decade di giugno."
+  ],
+  "url": "https://agricoltura.regione.campania.it/tipici/tradizionali/ciliegia-monte.html",
+  "page": 42
+ }
+]
