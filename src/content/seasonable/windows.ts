@@ -212,6 +212,169 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Toscana, I Prodotti Agroalimentari della Toscana ────────────────────
+  //  La raccolta, manuale, avviene tra aprile, maggio e giugno.
+  w('tos-aglio-massese', ['ms'], 'open-field', 6, 11, 'tos-aglio-massese'),
+  //  La raccolta dell'Aglione avviene tra giugno e luglio, non appena le
+  //  foglie cominciano ad ingiallire affinche' il bulbo (capo) non si
+  //  rompa o marcisca.
+  w('tos-aglione-della-valdichiana', ['si', 'ar'], 'open-field', 10, 13, 'tos-aglione-della-valdichiana'),
+  //  Si produce tra novembre, dicembre e gennaio.
+  w('tos-arancio-massese', ['ms'], 'open-field', 20, 1, 'tos-arancio-massese'),
+  //  La barba massese, prodotta da giugno ad ottobre, viene confezionata
+  //  in mazzi.
+  w('tos-barba-massese', ['ms'], 'open-field', 10, 19, 'tos-barba-massese'),
+  //  ed e' pronto per la raccolta, rigorosamente manuale, nel periodo
+  //  compreso tra aprile e maggio.
+  w('tos-carciofo-di-chiusure', ['si'], 'open-field', 6, 9, 'tos-carciofo-di-chiusure'),
+  //  ad aprile-maggio si effettua la raccolta dei capolini.
+  w('tos-carciofo-di-san-miniato', ['pi'], 'open-field', 6, 9, 'tos-carciofo-di-san-miniato'),
+  //  Si produce da aprile a giugno.
+  //  La raccolta e' manuale, normalmente da fine aprile fino all'inizio
+  //  di giugno.
+  w('tos-carciofo-empolese', ['fi'], 'open-field', 6, 11, 'tos-carciofo-empolese'),
+  //  Raccolta manuale nei mesi di ottobre, novembre e dicembre
+  w('tos-cardo-della-val-di-cornia', ['li'], 'open-field', 18, 23, 'tos-cardo-della-val-di-cornia'),
+  //  Si produce da novembre a marzo.
+  w('tos-cardo-massese', ['ms'], 'open-field', 20, 5, 'tos-cardo-massese'),
+  //  Le castagne vengono raccolte nel mese di ottobre e poste a essiccare
+  //  per 30 giorni
+  w('tos-castagna-pistolesa', ['ar'], 'open-field', 18, 19, 'tos-castagna-pistolesa'),
+  //  Si produce a novembre-dicembre.
+  w('tos-cavolfiore-fiorentino-tardivo', ['fi', 'ar'], 'open-field', 20, 23, 'tos-cavolfiore-fiorentino-tardivo'),
+  //  Produce da ottobre fino a meta' novembre una palla formata da
+  //  un'infiorescenza gialla
+  w('tos-cavolfiore-precoce-toscano', ['fi', 'ar'], 'open-field', 18, 20, 'tos-cavolfiore-precoce-toscano'),
+  //  Viene prodotta nei mesi di novembre e dicembre
+  //  Raccolta manuale nei mesi di novembre e dicembre
+  w('tos-cipolla-di-bassone', ['ms'], 'open-field', 20, 23, 'tos-cipolla-di-bassone'),
+  //  cipollotti raccolti a maggio-giugno
+  //  e' pronta per la raccolta ad agosto-settembre
+  w('tos-cipolla-di-certaldo', ['fi'], 'open-field', 8, 17, 'tos-cipolla-di-certaldo'),
+  //  Raccolta manuale eseguita a giugno-luglio o a ottobre-novembre
+  w('tos-cipolla-di-ripola', ['ms'], 'open-field', 10, 13, 'tos-cipolla-di-ripola'),
+  w('tos-cipolla-di-ripola', ['ms'], 'open-field', 18, 21, 'tos-cipolla-di-ripola'),
+  //  Si raccoglie fra giugno e luglio.
+  w('tos-cipolla-di-terceretoli', ['ms'], 'open-field', 10, 13, 'tos-cipolla-di-terceretoli'),
+  //  Si produce tra aprile e giugno.
+  //  La raccolta, manuale, avviene nei mesi di aprile, maggio e giugno.
+  w('tos-cipolla-massese', ['ms'], 'open-field', 6, 11, 'tos-cipolla-massese'),
+  //  La raccolta avviene da meta' agosto a tutto settembre.
+  w('tos-cipolla-rossa-della-valtiberina', ['ar'], 'open-field', 15, 17, 'tos-cipolla-rossa-della-valtiberina'),
+  //  Si raccoglie a luglio.
+  w('tos-cipolla-vernina', ['fi'], 'open-field', 12, 13, 'tos-cipolla-vernina'),
+  //  La raccolta, essendo una produzione ortiva da frutto (cucurbitacee)
+  //  a ciclo tardivo avviene da dopo ferragosto fino alla meta' del mese
+  //  di settembre.
+  w('tos-cocomero-gigante', ['ar'], 'open-field', 15, 16, 'tos-cocomero-gigante'),
+  //  la raccolta avviene a fine giugno-primi di luglio, nel secondo a
+  //  settembre.
+  w('tos-fagiolo-marconi-a-seme-nero', ['ar', 'fi'], 'open-field', 11, 17, 'tos-fagiolo-marconi-a-seme-nero'),
+  //  Si produce da aprile a luglio.
+  //  La raccolta, a giugno-luglio, e' manuale.
+  w('tos-fagiolo-borlotto-di-maremma', ['gr'], 'open-field', 10, 13, 'tos-fagiolo-borlotto-di-maremma'),
+  //  Si produce da aprile a giugno.
+  //  La raccolta, manuale, avviene a luglio.
+  w('tos-fagiolo-borlotto-nano-di-sorano', ['gr'], 'open-field', 12, 13, 'tos-fagiolo-borlotto-nano-di-sorano'),
+  //  La raccolta che si protrae da luglio a settembre a seconda
+  //  dell'epoca di semina avviene manualmente, per il prodotto fresco, e
+  //  anche meccanicamente per il prodotto secco.
+  w('tos-fagiolo-cannellino', ['lu'], 'open-field', 12, 17, 'tos-fagiolo-cannellino'),
+  //  La raccolta avviene da fine luglio a scalare e puo' arrivare fino a
+  //  ottobre.
+  w('tos-fagiolo-dall-occhio-del-valdarno', ['ar', 'fi'], 'open-field', 13, 19, 'tos-fagiolo-dall-occhio-del-valdarno'),
+  //  La raccolta avviene da fine luglio a scalare e puo' arrivare fino a
+  //  ottobre.
+  w('tos-fagiolo-di-zeri', ['ms'], 'open-field', 13, 19, 'tos-fagiolo-di-zeri'),
+  //  La raccolta viene effettata a mano dall'inizio di luglio fino a
+  //  settembre; il prodotto viene raccolto mano a mano che matura.
+  w('tos-fagiolo-fico-di-gallicano', ['lu'], 'open-field', 12, 17, 'tos-fagiolo-fico-di-gallicano'),
+  //  La raccolta viene effettuata a mano raccogliendo l'intera pianta e
+  //  va dalla fine di luglio (prodotto fresco) fino al settembre
+  //  inoltrato per la granella.
+  w('tos-fagiolo-malato', ['lu'], 'open-field', 13, 17, 'tos-fagiolo-malato'),
+  //  La raccolta viene effettuata a mano dall'inizio di luglio fino a
+  //  settembre; il prodotto viene raccolto mano a mano che matura.
+  w('tos-fagiolo-mascherino', ['lu'], 'open-field', 12, 17, 'tos-fagiolo-mascherino'),
+  //  La raccolta viene effettata a mano fra la fine di luglio e tutto
+  //  agosto; il prodotto viene raccolto mano a mano che matura.
+  w('tos-fagiolo-scritto-della-garfagnana', ['lu'], 'open-field', 13, 15, 'tos-fagiolo-scritto-della-garfagnana'),
+  //  Si produce da fine giugno a fine agosto.
+  w('tos-fagiolo-serpente-toscano', ['ar', 'fi'], 'open-field', 11, 15, 'tos-fagiolo-serpente-toscano'),
+  //  Se seminato ad aprile la raccolta avviene a luglio e si protrae per
+  //  20 giorni dato che il fagiolo ha maturazione scalare; con semina
+  //  tardiva (fine giugno) la raccolta viene fatta a settembre.
+  w('tos-fagiolo-turco-di-castello', ['ar', 'fi'], 'open-field', 12, 17, 'tos-fagiolo-turco-di-castello'),
+  //  L'epoca di raccolta dei frutti e' giugno-luglio.
+  w('tos-fico-san-piero', ['fi'], 'open-field', 10, 13, 'tos-fico-san-piero'),
+  //  Il frutto matura fra la fine di ottobre e i primi di novembre e si
+  //  conserva per tutto l'inverno.
+  w('tos-mela-rosa-del-casentino', ['ar'], 'open-field', 19, 20, 'tos-mela-rosa-del-casentino'),
+  //  La raccolta, in ottobre, avviene manualmente e la conservazione
+  //  avviene in celle ad atomosfera controllata (ultra low oxigen).
+  w('tos-mela-stayman-aretina', ['ar'], 'open-field', 18, 19, 'tos-mela-stayman-aretina'),
+  //  Il melograno di Firenze si produce a settembre-ottobre
+  w('tos-melograno-di-firenze', ['fi'], 'open-field', 16, 19, 'tos-melograno-di-firenze'),
+  //  Si produce tra giugno e settembre.
+  w('tos-melone-della-val-di-cornia', ['li'], 'open-field', 10, 17, 'tos-melone-della-val-di-cornia'),
+  //  Nel caso della coltura primaticcia la raccolta e' prevista a partire
+  //  dalla meta' di aprile; in caso di un ciclo normale i tuberi possono
+  //  essere raccolti successivamente fino al mese di settembre.
+  w('tos-patata-di-santa-maria-a-monte', ['pi'], 'open-field', 6, 17, 'tos-patata-di-santa-maria-a-monte'),
+  //  Matura a luglio.
+  w('tos-pera-coscia-di-firenze', ['fi'], 'open-field', 12, 13, 'tos-pera-coscia-di-firenze'),
+  //  Matura a giugno.
+  w('tos-pera-gentile', ['fi'], 'open-field', 10, 11, 'tos-pera-gentile'),
+  //  Matura a fine agosto, primi di settembre.
+  w('tos-pesca-michelini', ['ar', 'fi'], 'open-field', 15, 16, 'tos-pesca-michelini'),
+  //  matura tra l'ultima settimana di luglio e la prima di agosto, poco
+  //  prima della pesca trionfo.
+  w('tos-pesca-maglia-rosa', ['ar', 'fi'], 'open-field', 13, 14, 'tos-pesca-maglia-rosa'),
+  //  Si producono in agosto.
+  w('tos-pesca-mora-di-moriano-dolfi', ['lu'], 'open-field', 14, 15, 'tos-pesca-mora-di-moriano-dolfi'),
+  //  Si produce a settembre-ottobre.
+  w('tos-pesca-regina-di-londa', ['ar', 'fi'], 'open-field', 16, 19, 'tos-pesca-regina-di-londa'),
+  //  Il frutto arriva a maturazione nell'ultima decade di agosto e nei
+  //  primi di settembre (da cui il nome di peschetti settembrini).
+  w('tos-peschetti-di-candia', ['ms'], 'open-field', 15, 16, 'tos-peschetti-di-candia'),
+  //  La raccolta scalare e manuale dei legumi freschi inizia secondo
+  //  tradizione per San Ranieri (17 Giugno) e si protrae fino a tutto
+  //  Luglio.
+  w('tos-piattella-pisana', ['pi'], 'open-field', 11, 13, 'tos-piattella-pisana'),
+  //  La maturazione e' scalare, da fine marzo a fine aprile.
+  w('tos-pisello-a-mezza-frasca-aretino', ['ar'], 'open-field', 5, 7, 'tos-pisello-a-mezza-frasca-aretino'),
+  //  maturano da maggio a giugno.
+  w('tos-pisello-a-tutta-frasca-aretino', ['ar'], 'open-field', 8, 11, 'tos-pisello-a-tutta-frasca-aretino'),
+  //  La raccolta, effettuata a giorni alterni, dura da fine maggio alla
+  //  meta' di giugno in funzione della disponibilita' idrica.
+  w('tos-pisello-mugellano', ['fi'], 'open-field', 9, 10, 'tos-pisello-mugellano'),
+  //  Raccolta: manuale secondo l'andamento stagionale da giugno a tutto
+  //  settembre.
+  w('tos-pomodoro-grinzoso-sanminiatese', ['pi'], 'open-field', 10, 17, 'tos-pomodoro-grinzoso-sanminiatese'),
+  //  Si produce fra agosto e settembre.
+  w('tos-pomodoro-pallino', ['li'], 'open-field', 14, 17, 'tos-pomodoro-pallino'),
+  //  Molto saporito, si produce da luglio a ottobre.
+  //  Raccolta scalare: avviene manualmente da fine luglio asettembre
+  w('tos-pomodoro-pendentino', ['lu'], 'open-field', 12, 19, 'tos-pomodoro-pendentino'),
+  //  Si produce da giugno a settembre.
+  w('tos-pomodoro-pisanello', ['li', 'pi'], 'open-field', 10, 17, 'tos-pomodoro-pisanello'),
+  //  La produzione va da giugno a ottobre.
+  w('tos-pomodoro-stella', ['pt', 'lu'], 'open-field', 10, 19, 'tos-pomodoro-stella'),
+  //  Si raccoglie fino ad aprile.
+  //  L'epoca di raccolta va da febbraio ad aprile.
+  w('tos-radicchia-di-lucca', ['lu', 'pi', 'fi'], 'open-field', 2, 7, 'tos-radicchia-di-lucca'),
+  //  la raccolta avviene a fine luglio primi di agosto e offre pochi
+  //  problemi di conservazione
+  w('tos-scalogno-nostrale-toscano', ['ar', 'fi'], 'open-field', 13, 14, 'tos-scalogno-nostrale-toscano'),
+  //  Si produce da novembre a marzo.
+  w('tos-spinacio-tipico-della-val-di-corni', ['li'], 'open-field', 20, 5, 'tos-spinacio-tipico-della-val-di-corni'),
+  //  si produce a settembre
+  w('tos-uva-colombana-di-peccioli', ['pi'], 'open-field', 16, 17, 'tos-uva-colombana-di-peccioli'),
+  //  L'epoca di raccolta va da maggio a ottobre.
+  w('tos-zucchina-mora-pisana', ['pi', 'lu'], 'open-field', 8, 19, 'tos-zucchina-mora-pisana'),
+  //  L'epoca di raccolta va da maggio a ottobre.
+  w('tos-zucchina-sarzanese', ['lu'], 'open-field', 8, 19, 'tos-zucchina-sarzanese'),
+
   // ── Lombardia, Atlante dei prodotti tipici e tradizionali 2014 ──────────
   // The Region's elenco is a list of names; this is the only publication of
   // its own that carries a scheda, and three of them state both ends.
@@ -361,7 +524,7 @@ export const windows: readonly Window[] = [
     'chestnut-generic',
     // Frosinone, Rieti and Roma dropped out when Terelle, Antrodoco and Segni
     // gave them a chestnut row of their own — the Torino precedent, three times.
-    ['al', 'ar', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
+    ['al', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
     16,
     21,
     [

@@ -1,5 +1,5 @@
 /**
- * One mark per kind of thing the catalogue holds — thirty-seven of them.
+ * One mark per kind of thing the catalogue holds — forty-four of them.
  *
  * These are hand-authored rather than pulled from Lucide, which is the site's
  * rule everywhere else (`ui/icons.tsx`). Lucide has an apple, a cherry, a
@@ -37,6 +37,68 @@ const strokeProps = {
 } as const;
 
 const GLYPHS: Record<string, ReactElement> = {
+  // Toscana's schede brought seven more kinds. Each is drawn against the mark
+  // it would otherwise be mistaken for: the melon carries an equator where the
+  // pumpkin carries ribs, the shallot is twinned where the onion is single,
+  // and the courgette keeps its flower, which is how it is sold.
+  cardoon: (
+    <>
+      <path d="M12 21.4V8.2" />
+      <path d="M12 8.2c-1.2-2.4-1.2-4.4 0-6.2 1.2 1.8 1.2 3.8 0 6.2Z" />
+      <path d="M8.4 21.4c-1.5-3.6-1.7-7.3-.6-11 1.5 1.7 2.6 3.6 3.4 5.6" />
+      <path d="M15.6 21.4c1.5-3.6 1.7-7.3.6-11-1.5 1.7-2.6 3.6-3.4 5.6" />
+      <path d="M7.2 19.6h9.6" />
+    </>
+  ),
+  courgette: (
+    <>
+      <path d="M6.6 19.4c-1.4-1.4-1.3-3.7.3-5.3l6.6-6.6c1.6-1.6 3.9-1.7 5.3-.3 1.4 1.4 1.3 3.7-.3 5.3l-6.6 6.6c-1.6 1.6-3.9 1.7-5.3.3Z" />
+      <path d="M18.2 6.8c.5-1.3.2-2.4-.8-3.3-.6 1-1.5 1.6-2.7 1.8.3 1.2 1.1 1.8 2.4 2" />
+      <path d="M9.4 15.8h.01" />
+    </>
+  ),
+  grape: (
+    <>
+      <circle cx="9.2" cy="13" r="2.3" />
+      <circle cx="14.8" cy="13" r="2.3" />
+      <circle cx="12" cy="17.2" r="2.3" />
+      <path d="M12 10.7V6.4" />
+      <path d="M12 6.4c1.9-.4 3.3-1.7 3.7-3.5-1.9.4-3.3 1.7-3.7 3.5Z" />
+    </>
+  ),
+  melon: (
+    <>
+      <circle cx="12" cy="14.4" r="6.6" />
+      <path d="M5.4 14.4h13.2" />
+      <path d="M12 7.8V5.6" />
+    </>
+  ),
+  pomegranate: (
+    <>
+      <circle cx="12" cy="14.8" r="6.2" />
+      <path d="M10.2 8.8V6.4h3.6v2.4" />
+      <path d="M12 6.4V3.6" />
+      <path d="M10.4 13.6h.01" />
+      <path d="M13.6 13.6h.01" />
+      <path d="M12 16.8h.01" />
+    </>
+  ),
+  shallot: (
+    <>
+      <path d="M9 20.6c-2.3 0-3.9-1.6-3.9-3.8 0-2.4 1.6-4.3 3.9-6.4 2.3 2.1 3.9 4 3.9 6.4 0 2.2-1.6 3.8-3.9 3.8Z" />
+      <path d="M15.6 20.6c-1.9 0-3.2-1.4-3.2-3.2 0-2 1.3-3.6 3.2-5.4 1.9 1.8 3.2 3.4 3.2 5.4 0 1.8-1.3 3.2-3.2 3.2Z" />
+      <path d="M9 10.4c-.7-1.5-.6-3 .3-4.4" />
+      <path d="M15.6 12c.5-1.2.4-2.4-.3-3.6" />
+    </>
+  ),
+  spinach: (
+    <>
+      <path d="M12 21v-4.2" />
+      <path d="M12 16.8c-1-4.4.2-8.2 3.6-11.4 2 4.2 1.2 8-3.6 11.4Z" />
+      <path d="M12 16.8c-3.8-1.2-5.8-3.8-6-7.8 3.6.8 5.6 3.4 6 7.8Z" />
+      <path d="M12 16.8c3.8-1.2 5.8-3.8 6-7.8-3.6.8-5.6 3.4-6 7.8Z" />
+    </>
+  ),
   // The apricot is in the peach's family and the mark says so — circle, crease,
   // stone-line — so the difference has to be carried by the top: peach wears a
   // leaf, plum a stub of stalk, and this one the cleft that runs down from the
