@@ -7,12 +7,15 @@
  *   node scripts/seasonable-enrich.mjs status     print the queue, what it has staged, and what it cost
  *   node scripts/seasonable-enrich.mjs once       run a single step, then stop
  *
- * Run it from the worktree on branch `seasonable/enrich`, never from the main
+ * Run it from its own clone on branch `seasonable/enrich`, never from the main
  * checkout — the music refresh commits to main on its own schedule, and this
- * loop commits after every step:
+ * loop commits after every step. A clone rather than a worktree, and outside
+ * ~/Documents: on 2026-09-18 macOS withdrew the Documents folder from the IDE
+ * the sweep was running in, mid-batch, and a worktree shares its .git with the
+ * locked checkout, so it locked too.
  *
- *   git worktree add ../walterwebsite-enrich -b seasonable/enrich
- *   cd ../walterwebsite-enrich && npm ci
+ *   git clone https://github.com/WalterZaninetti/walterwebsite.git ~/dev/walterwebsite-enrich
+ *   cd ~/dev/walterwebsite-enrich && git checkout seasonable/enrich && npm ci
  *   SEASONABLE_MAX_TOTAL_USD=5 caffeinate -i nohup npm run enrich:seasonable > .pipeline/seasonable/enrich/logs/runner.log 2>&1 &
  *
  * THREE STAGES PER UNIT, AND ONLY TWO COST ANYTHING
@@ -121,7 +124,7 @@ const git = (...args) => spawnSync('git', args, { encoding: 'utf8' });
 function assertWorktree() {
   const branch = git('rev-parse', '--abbrev-ref', 'HEAD').stdout.trim();
   if (branch === 'main' && !process.env.SEASONABLE_ALLOW_MAIN) {
-    console.error('Refusing to run on main. Create the worktree first:\n  git worktree add ../walterwebsite-enrich -b seasonable/enrich');
+    console.error('Refusing to run on main. Use the sweep clone:\n  cd ~/dev/walterwebsite-enrich && git checkout seasonable/enrich');
     process.exit(1);
   }
 }
