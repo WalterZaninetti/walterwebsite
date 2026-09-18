@@ -135,6 +135,25 @@ export const sources: readonly Source[] = [
     '2026-09-17',
     2017,
   ),
+  // Umbria publishes a scheda per product as a PDF; each row cites its own.
+  pat(
+    'umb-cipolla-cannara',
+    'Scheda descrittiva «Cipolla di Cannara» — Regione Umbria, prodotti agroalimentari tradizionali',
+    'https://www.regione.umbria.it/documents/18/9035346/cipolla.pdf/79fd9ac7-1d34-4b36-80f9-17c80ded3b60',
+    '2026-09-18',
+  ),
+  pat(
+    'umb-marrone',
+    'Scheda descrittiva «Marrone» — Regione Umbria, prodotti agroalimentari tradizionali',
+    'https://www.regione.umbria.it/documents/18/9035346/marroni.pdf/06a89a48-4449-4865-87f3-9184787218d3',
+    '2026-09-18',
+  ),
+  pat(
+    'umb-sedano-nero-trevi',
+    'Scheda descrittiva «Sedano nero di Trevi» — Regione Umbria, prodotti agroalimentari tradizionali',
+    'https://www.regione.umbria.it/documents/18/9035346/sedano.pdf/f6f596df-b4d1-4fac-bf38-1e8dab348437',
+    '2026-09-18',
+  ),
   pat(
     'pat-abruzzo',
     "Regione Abruzzo e ARSSA, Atlante dei prodotti tradizionali d'Abruzzo",

@@ -212,6 +212,20 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Umbria, schede descrittive ──────────────────────────────────────────
+  // The Region's PAT page lists names; its asset library holds a scheda per
+  // product, which is where these three were read.
+  // "Raccolta nei mesi di luglio e agosto ed asciugatura nel campo." —
+  //  "Comune di Cannara".
+  w('umb-cipolla-cannara', ['pg'], 'open-field', 12, 15, 'umb-cipolla-cannara'),
+  // "Raccolta manuale o meccanica nei mesi di ottobre e novembre." — "Comuni
+  //  di Città di Castello, Monte Santa Maria Tiberina e Umbertide".
+  w('umb-marrone', ['pg'], 'open-field', 18, 21, 'umb-marrone'),
+  // "Raccolta da metà Ottobre sino a Dicembre inoltrato." — "Comune di
+  //  Trevi". «Da metà ottobre» starts in the first half, on the Combai
+  //  precedent («dal 15 settembre» → 16).
+  w('umb-sedano-nero-trevi', ['pg'], 'open-field', 18, 23, 'umb-sedano-nero-trevi'),
+
   // ── Abruzzo, Atlante dei prodotti tradizionali d'Abruzzo 2006 ──────────
   // The PDF discovery could not open was the name-only elenco; this atlas,
   // printed in June 2006 by the Region's agency ARSSA, carries the schede.
