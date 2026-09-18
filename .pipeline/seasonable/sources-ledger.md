@@ -1295,3 +1295,73 @@ Sondrio, Milano, Bergamo, Brescia, Cremona, Lecco, Lodi and Monza e Brianza stil
 and nothing in this Atlante can reach them.
 
 `pumpkin` is the thirty-seventh mark in `produceGlyphs.tsx`, drawn for the Zucca Mantovana.
+
+---
+
+## 2026-09-18 (sixteenth pass) — Toscana, one scheda at a time
+
+Discovery had marked Toscana `needs-human` because its 471 schede are **web pages, not a file**.
+The portal, `prodtrad.regione.toscana.it`, is Regione Toscana's own — ARSIA's database of
+«I Prodotti Agroalimentari della Toscana» under D.Lgs. 173/98 art. 8 — and it is driven by a
+POST form whose session key is issued per visit. The route, written down so nobody re-derives it:
+
+1. `GET /mod_qtp_pat` with a cookie jar, and read `FORM_SAVE_KEY` and `FORMTIME` out of the form.
+2. `POST /mod_qtp_pat` with those, `prod_cat=F` (prodotti vegetali allo stato naturale o
+   trasformati) and `prod_geo=0`. The reply is the list, 195 products.
+3. Each row calls `ProdTrad(<id>)`, which opens
+   `LIB_ProdTrad/Prodotto.php?ID=<id>` — the scheda itself, in the ministry's own template.
+
+**Each scheda is its own document, so each row cites its own URL.** Sixty sources, not one.
+The schede print no year — the footer's «Copyright 2017 Regione Toscana» is the site's, not the
+document's — so they spend the undated licence and show a consulted date, and the test's name
+rule now admits «scheda prodotto» beside «scheda identificativa».
+
+195 schede fetched; 165 carry a calendar term and went to the judge, at $2.57; 63 came back as
+candidates, and all 63 were re-read here.
+
+### Shipped — 60 products, 61 windows
+
+Every Tuscan province was already answering, so this is density, not reach: Arezzo and Firenze
+gain a dozen each, Lucca eight, Massa-Carrara nine. Thirteen are beans, seven onions, five
+peaches, five tomatoes. **Cipolla di Ripola carries two windows** — «Raccolta manuale eseguita a
+giugno-luglio o a ottobre-novembre» — on the Finocchio di Isola Capo Rizzuto precedent.
+
+Two conversions leant on precedent rather than on the word *raccolta*: Tuscan schede often say
+«si produce» or «matura», which the Basilico Genovese and Pesca di Delia passes already settled.
+
+### Corrected in the reading
+
+- **Cocomero gigante di Fontarronco** — «da dopo ferragosto fino alla metà del mese di
+  settembre». The sweep ended it at 17; «metà settembre» is the first half, so 16.
+
+### Rejected — three
+
+- **Castagne (fresche) della Toscana** — «La produzione è concentrata prevalentemente nel mese di
+  ottobre». A peak, not a window, on the Pomodoro Faino precedent from the fourteenth pass.
+- **Pastinocello** — a wild plant «nei prati, lungo gli argini dei fiumi», and the staged window
+  was stitched from a sentence about where it is found and another about cutting its leaves.
+- **Pomodoro canestrino di Lucca** — «In serra … piantato a gennaio con rese fino a settembre ed
+  in campo dal 20 aprile con rese fino alla fine di ottobre». Both ends of both rows rest on a
+  *planting* date and a yield, not on a stated harvest. The most tempting rejection of the pass:
+  it would have been the second greenhouse-and-field pair in the dataset.
+
+### Provinces the sweep got wrong, and the list that caused it
+
+The portal's result table prints a province column that is not always the scheda's own
+territorio: Castagna pistolesa is listed under AR **and its scheda says «Provincia di Arezzo»**,
+despite the name; Cipolla massese is listed under LU, MS and PI and its scheda says
+«Provincia di Massa-Carrara» alone; Zucchina sarzanese is listed under three and its scheda says
+«Versilia, provincia di Lucca». Every row here takes the scheda's field, not the table's column.
+
+### The generalised chestnut row shrank again
+
+Arezzo now has a chestnut of its own (Castagna pistolesa), so it leaves `chestnut-generic`'s
+province list — the Torino precedent, for the fourth time.
+
+### Where this leaves the dataset
+
+**179 products — 65 protected designations and 114 PAT — 189 windows, 133 sources, 88 of 107
+provinces, 19 of 20 regions.**
+
+Seven more marks were drawn for the kinds Toscana brought: cardoon, courgette, grape, melon,
+pomegranate, shallot and spinach. `produceGlyphs.tsx` now holds forty-four.
