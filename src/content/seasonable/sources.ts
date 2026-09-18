@@ -135,6 +135,51 @@ export const sources: readonly Source[] = [
     '2026-09-17',
     2017,
   ),
+  pat(
+    'pat-puglia',
+    'Atlante dei Prodotti Agroalimentari Tradizionali di Puglia 2022 — Università degli Studi di Bari Aldo Moro per la Regione Puglia, ISBN 978-88-6629-038-4',
+    'https://www.patpuglia.it/book/atlante_PAT_Puglia_2022.pdf',
+    '2026-09-18',
+    2022,
+  ),
+  pat(
+    'pat-piemonte',
+    'Regione Piemonte, D.D. 10 ottobre 2013 n. 879 — Individuazione dei prodotti agroalimentari tradizionali del Piemonte, schede tecniche',
+    'https://www.regione.piemonte.it/governo/bollettino/abbonati/2013/45/attach/dddb110000879_040.pdf',
+    '2026-09-18',
+    2013,
+  ),
+  pat(
+    'pat-veneto-1',
+    'Veneto Agricoltura, Atlante dei prodotti agroalimentari tradizionali del Veneto — schede, prodotti vegetali, prima parte (A-G)',
+    'https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%201.pdf',
+    '2026-09-18',
+  ),
+  pat(
+    'pat-veneto-2',
+    'Veneto Agricoltura, Atlante dei prodotti agroalimentari tradizionali del Veneto — schede, prodotti vegetali, seconda parte (G-Z)',
+    'https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%202.pdf',
+    '2026-09-18',
+  ),
+  // Liguria publishes a page per product in its Atlante regionale.
+  pat(
+    'lig-carciofo-di-pompeiana',
+    'Scheda «Carciofo di Pompeiana» — Regione Liguria, Atlante regionale dei prodotti tradizionali',
+    'https://www.agriligurianet.it/it/vetrina/prodotti-e-produzioni/frutta-ortaggi-e-piante-aromatiche/prodotti-tipici-frutta-orto/item/376-carciofo-pompeiana.html',
+    '2026-09-18',
+  ),
+  pat(
+    'lig-ciliegia-di-castelbianco',
+    'Scheda «Ciliegia di Castelbianco» — Regione Liguria, Atlante regionale dei prodotti tradizionali',
+    'https://www.agriligurianet.it/it/vetrina/prodotti-e-produzioni/frutta-ortaggi-e-piante-aromatiche/prodotti-tipici-frutta-orto/item/5935-ciliegia-di-castelbianco.html',
+    '2026-09-18',
+  ),
+  pat(
+    'lig-zucca-di-rocchetta-cengio',
+    'Scheda «Zucca di Rocchetta Cengio» — Regione Liguria, Atlante regionale dei prodotti tradizionali',
+    'https://www.agriligurianet.it/it/vetrina/prodotti-e-produzioni/frutta-ortaggi-e-piante-aromatiche/prodotti-tipici-frutta-orto/item/5920-zucca-di-rocchetta-cengio.html',
+    '2026-09-18',
+  ),
   // Umbria publishes a scheda per product as a PDF; each row cites its own.
   pat(
     'umb-cipolla-cannara',

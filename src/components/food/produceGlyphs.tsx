@@ -1,5 +1,5 @@
 /**
- * One mark per kind of thing the catalogue holds — forty-six of them.
+ * One mark per kind of thing the catalogue holds — fifty-one of them.
  *
  * These are hand-authored rather than pulled from Lucide, which is the site's
  * rule everywhere else (`ui/icons.tsx`). Lucide has an apple, a cherry, a
@@ -37,6 +37,56 @@ const strokeProps = {
 } as const;
 
 const GLYPHS: Record<string, ReactElement> = {
+  // Five more for the Veneto, Piemonte and Puglia schede. The beetroot keeps
+  // its tail and upright stalks where the turnip is a pointed root under two
+  // splayed leaves; the cabbage is cupped by an outer leaf where the chicory
+  // is split by two arcs; the sweet potato is a spindle, pointed at both ends,
+  // where the potato is a round-eyed oval; the jujube hangs in a pair from one
+  // stalk, where the olive is single on a twig.
+  beetroot: (
+    <>
+      <circle cx="12" cy="14.6" r="5.4" />
+      <path d="M12 20v2" />
+      <path d="M10.6 9.4 9.4 3.6" />
+      <path d="M13.4 9.4 14.6 3.6" />
+      <path d="M14.6 3.6c2.2.8 3.2 2.6 2.8 4.8-2.2-.8-3.2-2.6-2.8-4.8Z" />
+    </>
+  ),
+  cabbage: (
+    <>
+      <circle cx="12" cy="10.8" r="5.4" />
+      <path d="M12 10.8c-1.4 1.2-2 2.8-1.8 5" />
+      <path d="M4 10.6c.4 5.8 3.4 9.4 8 9.4s7.6-3.6 8-9.4" />
+      <path d="M12 20v-3.6" />
+    </>
+  ),
+  chard: (
+    <>
+      <path d="M12 3.4c4.2 2.2 6 5.6 5.6 9.8-.4 2.4-2.6 3.8-5.6 4-3-.2-5.2-1.6-5.6-4-.4-4.2 1.4-7.6 5.6-9.8Z" />
+      <path d="M11.2 21.6v-4.4" />
+      <path d="M12.8 21.6v-4.4" />
+      <path d="M12 17.2V5.2" />
+      <path d="M12 10.4 9 8.2" />
+      <path d="m12 13.2 3-2.2" />
+    </>
+  ),
+  jujube: (
+    <>
+      <ellipse cx="8.4" cy="16.2" rx="3.2" ry="4.2" />
+      <ellipse cx="15.6" cy="15.2" rx="3.2" ry="4.2" />
+      <path d="M8.4 12c.6-3.4 1.8-5.6 3.6-7.4" />
+      <path d="M15.6 11c-.8-2.8-2-4.8-3.6-6.4" />
+    </>
+  ),
+  'sweet potato': (
+    <>
+      <path d="M3.4 17.2c.2-4.8 4-9.4 9.6-11 4-1.2 6.8.2 7.6 2.8.8 2.8-1 5.8-5 8-4.6 2.6-10.2 3.6-12.2.2Z" />
+      <path d="M20.2 8.2 21.6 6.4" />
+      <path d="M3.4 17.2 2.2 19" />
+      <path d="M10.6 12.8h.01" />
+      <path d="M14.8 11.4h.01" />
+    </>
+  ),
   // A head of florets on a thick stalk, against the cauliflower's dome and
   // wrapping leaves: broccoli's head is looser and its stalk is the point of it.
   broccoli: (

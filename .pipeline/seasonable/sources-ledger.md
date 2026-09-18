@@ -1436,3 +1436,100 @@ Abruzzo, Puglia and Basilicata. Every one of them publishes a list of names; non
 publishes the schede behind it on a host we have found. Puglia's atlas lives on `patpuglia.it`,
 which a university runs for the Region — the nearest thing to a document, and a judgement about
 publishers rather than a search problem.
+
+---
+
+## 2026-09-18 (eighteenth pass) — six regions by hand, and the sweep moved out of Documents
+
+Midway through this pass macOS withdrew the Documents folder from the IDE running the sweep, and
+both the main checkout and the sweep's worktree became unreadable. A worktree shares its `.git`
+with the checkout it came from, so it locked too. The sweep now runs from **a separate clone at
+`~/dev/walterwebsite-enrich`**, rebuilt from GitHub; nothing committed was lost. The documents
+for the regions in flight were restored from cached copies and one re-download.
+
+Six regions were worked, all of them `needs-human` after discovery: in every case the Region's
+own PAT page links a list of names, and the schede live somewhere discovery did not look.
+
+### Where the schede actually were
+
+| Region | Document | Year | Why discovery missed it |
+|---|---|---|---|
+| Abruzzo | Regione Abruzzo / ARSSA, *Atlante dei prodotti tradizionali d'Abruzzo* | 2006 | the PDF it found was the name-only elenco |
+| Umbria | one scheda per product, as PDFs in the Region's asset library | undated | not linked from the PAT page |
+| Veneto | Veneto Agricoltura, *Atlante dei prodotti agroalimentari tradizionali del Veneto*, vegetable volumes | undated | the agency's new site serves an HTML shell; the old host still serves the PDFs |
+| Piemonte | D.D. 10 ottobre 2013 n. 879, Bollettino Ufficiale — «Schede tecniche» | 2013 | the decree that published the list also published the schede |
+| Liguria | *Atlante regionale*, a page per product on agriligurianet.it | undated | the atlas is paginated 10 at a time |
+| Puglia | *Atlante dei PAT di Puglia 2022*, Università di Bari for the Region, ISBN 978-88-6629-038-4 | 2022 | declined because a university hosts it |
+
+### The one publisher decision
+
+**Puglia's atlas is published by the Università di Bari, not by the Region.** It was written
+«con il contributo della Regione Puglia», carries an ISBN, is dated 2022, and is linked from the
+Region's own PAT page. The publisher rule exists to keep aggregators out — the whole page once
+rested on disciplinare.it — and a dated, ISBN-registered book the Region commissioned is not an
+aggregator. Accepted, and said so in the source's name and in the test's host list, where it is
+the one entry that is not the register's keeper. **Reverse it by deleting `pat-puglia` and its
+rows if that reading is wrong.**
+
+The undated-source test changed with it: it used to require `regione.` in the URL, which excluded
+a Region's agencies. It now requires a host from one vetted list, `REGISTER_HOSTS`, the same list
+the publisher test reads.
+
+### Shipped — 109 products, 114 windows
+
+Abruzzo 3 · Umbria 3 · Veneto 40 · Piemonte 28 · Puglia 32 · Liguria 3.
+
+**Four provinces answer for the first time: Chieti** (Carciofo del Vastese, Peperone rosso di
+Altino), **Bari** (Carota di Polignano, Cicoria puntarelle molfettese, Cipolla di Acquaviva, Uva
+baresana, and the region-wide rows), **Barletta-Andria-Trani** (Carciofo di San Ferdinando, Cima di
+rapa di Minervino, Percoca di Loconia) and **Taranto** (Carosello and Pomodorino di Manduria).
+
+Cicoria puntarelle molfettese was deleted in the fourth pass as a *pending IGP application*. It
+returns here as a PAT — a different register, in which it is listed — and says so.
+
+### The traps, so they are not walked into twice
+
+- **Puglia's schede print a map legend naming all six provinces** — «FOGGIA BAT BARI TARANTO
+  BRINDISI LECCE» — on every page. A reader that takes the page's province names for the zone gets
+  the whole region every time. The zone is the «Area di origine del prodotto» field, and every
+  Apulian row was re-read against it; one (Percoca di Loconia, Canosa) was narrowed to BAT.
+- **Seasons merged into one span.** Carota di Chioggia (April–June and September–November),
+  Cicoria pan di zucchero casalese (October–December and May–June) and Fragola di Verona (spring
+  and autumn) each came back from the judge as one window claiming the months between. Each is two
+  rows now.
+- **A secondary harvest read as the main one.** Both Apulian artichokes quoted «dal mese di aprile
+  fino a tutto maggio si possono ottenere 3-4 capolini più piccoli». San Ferdinando's own period is
+  «Da settembre a maggio» and ships as 16→9; Mola's is only «dall'autunno alla primavera», so it
+  does not ship.
+- **Word inside a word.** *Melanzana* contains *mela*, and the first draft filed an aubergine as
+  an apple.
+
+### Rejected in the reading — fourteen
+
+| Product | Why |
+|---|---|
+| Patata degli Altipiani d'Abruzzo | the Fucino plateau, already answered by Patata del Fucino IGP |
+| Carciofo di Mola | only the secondary heads are dated |
+| Carota di Zapponeta | «la maggior parte del prodotto si raccoglie…» — a peak |
+| Carciofo violetto di Albenga | its second harvest has a start and no end; the judge stretched it February→December |
+| Fragole di San Raffaele Cimena | the start belongs to the tunnel crop and the end to the open-field one |
+| Pomodoro del Cavallino | the same: heated greenhouse start, outdoor end |
+| Piccoli frutti (Piemonte) | several species under one name |
+| Pomodoro costoluto di Cambiano, open field | past tense — «veniva effettuato»; the tunnel crop ships |
+| Five Umbrian schede | dried pulses, or a sowing date only; two saffrons out of scope |
+
+### Where this leaves the dataset
+
+**328 products — 65 protected designations and 263 PAT — 343 windows, 184 sources, 92 of 107
+provinces, 19 of 20 regions.** A seventh of the provinces are silent now, and the copy says so.
+Vicenza leaves the generalised chestnut row (Marroni di Valrovina), the seventh application of the
+Torino precedent.
+
+Five more marks: beetroot, cabbage, chard, jujube, sweet potato. Fifty-one in the file.
+
+### What is left
+
+Fifteen provinces answer nothing: Como, Sondrio, Milano, Bergamo, Brescia, Cremona, Lecco, Lodi,
+Monza e Brianza, Bolzano, Trieste, Terni, Pescara, Campobasso, Isernia. **Emilia-Romagna** and
+**Basilicata** publish names only and would add density, not reach. Molise's atlas was read in full
+in the first pass. Lombardia's nine are the largest block, and the Atlante reaches none of them.
