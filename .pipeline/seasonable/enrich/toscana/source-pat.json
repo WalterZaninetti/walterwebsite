@@ -1,14 +1,17 @@
 {
   "region": "toscana",
   "tier": "pat",
-  "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
-  "documents": [],
-  "triedUrls": [
-    "https://prodtrad.regione.toscana.it/",
-    "https://prodtrad.regione.toscana.it/mod_qtp_pat",
-    "http://prodtrad.regione.toscana.it/index.php?option=com_content&view=article&id=529&Itemid=126&act=%3A%40&act2=Q&PROD_ART=P&COD_PROV=-&CLASSE=D"
+  "foundBy": "by hand, 2026-09-18 (discovery found the portal but could not enumerate it)",
+  "confirmed": true,
+  "confirmedNote": "Regione Toscana / ARSIA, «I Prodotti Agroalimentari della Toscana» — one scheda per product under D.Lgs. 173/98 art. 8; the vegetable category (prod_cat=F) lists 195 products, each cited to its own scheda URL",
+  "documents": [
+    {
+      "title": "Regione Toscana, I Prodotti Agroalimentari della Toscana — schede prodotto, prodotti vegetali allo stato naturale o trasformati",
+      "url": "https://prodtrad.regione.toscana.it/mod_qtp_pat",
+      "kind": "html",
+      "printedYear": null,
+      "printedDateNote": "the schede print no year; the site footer reads «Copyright 2017 Regione Toscana», which is a site footer and not a document date"
+    }
   ],
-  "rejectedUrls": [],
-  "note": "Regione Toscana's official PAT portal (prodtrad.regione.toscana.it) hosts 471 PAT schede including 'Prodotti vegetali allo stato naturale o trasformati', but the category/product listing is served via an AJAX/JS filter form (mod_qtp_pat) with no static, directly linkable URL for the category or individual schede found within the allotted search."
+  "note": "195 vegetable schede fetched by id from LIB_ProdTrad/Prodotto.php"
 }

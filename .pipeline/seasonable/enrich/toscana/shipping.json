@@ -1,0 +1,1412 @@
+[
+ {
+  "slug": "tos-aglio-massese",
+  "name": "Aglio massese",
+  "en": "garlic",
+  "it": "aglio",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 11,
+    "conversion": "aprile→6 (1–15 apr), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "La raccolta, manuale, avviene tra aprile, maggio e giugno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=41",
+  "page": 1
+ },
+ {
+  "slug": "tos-aglione-della-valdichiana",
+  "name": "Aglione della Valdichiana",
+  "en": "garlic",
+  "it": "aglio",
+  "category": "vegetable",
+  "prov": [
+   "si",
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 13,
+    "conversion": "giugno→10 (1–15 giu), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "La raccolta dell'Aglione avviene tra giugno e luglio, non appena le foglie cominciano ad ingiallire affinche' il bulbo (capo) non si rompa o marcisca."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=584",
+  "page": 2
+ },
+ {
+  "slug": "tos-arancio-massese",
+  "name": "Arancio massese",
+  "en": "orange",
+  "it": "arancia",
+  "category": "fruit",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 1,
+    "conversion": "novembre→20 (1–15 nov), gennaio→1 (16–31 gen)"
+   }
+  ],
+  "quotes": [
+   "Si produce tra novembre, dicembre e gennaio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=113",
+  "page": 4
+ },
+ {
+  "slug": "tos-barba-massese",
+  "name": "Barba massese",
+  "en": "salsify",
+  "it": "scorzobianca",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 19,
+    "conversion": "giugno→10 (1–15 giu), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La barba massese, prodotta da giugno ad ottobre, viene confezionata in mazzi."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=380",
+  "page": 6
+ },
+ {
+  "slug": "tos-carciofo-di-chiusure",
+  "name": "Carciofo di Chiusure",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "si"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 9,
+    "conversion": "aprile→6 (1–15 apr), maggio→9 (16–31 mag)"
+   }
+  ],
+  "quotes": [
+   "ed e' pronto per la raccolta, rigorosamente manuale, nel periodo compreso tra aprile e maggio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=533",
+  "page": 11
+ },
+ {
+  "slug": "tos-carciofo-di-san-miniato",
+  "name": "Carciofo di San Miniato",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 9,
+    "conversion": "aprile→6 (1–15 apr), maggio→9 (16–31 mag)"
+   }
+  ],
+  "quotes": [
+   "ad aprile-maggio si effettua la raccolta dei capolini."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=535",
+  "page": 13
+ },
+ {
+  "slug": "tos-carciofo-empolese",
+  "name": "Carciofo empolese",
+  "en": "artichoke",
+  "it": "carciofo",
+  "category": "vegetable",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 11,
+    "conversion": "aprile→6 (1–15 apr), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "Si produce da aprile a giugno.",
+   "La raccolta e' manuale, normalmente da fine aprile fino all'inizio di giugno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=46",
+  "page": 14
+ },
+ {
+  "slug": "tos-cardo-della-val-di-cornia",
+  "name": "Cardo della Val di Cornia",
+  "en": "cardoon",
+  "it": "cardo",
+  "category": "vegetable",
+  "prov": [
+   "li"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 23,
+    "conversion": "ottobre→18 (1–15 ott), dicembre→23 (16–31 dic)"
+   }
+  ],
+  "quotes": [
+   "Raccolta manuale nei mesi di ottobre, novembre e dicembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=48",
+  "page": 15
+ },
+ {
+  "slug": "tos-cardo-massese",
+  "name": "Cardo massese",
+  "en": "cardoon",
+  "it": "cardo",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 5,
+    "conversion": "novembre→20 (1–15 nov), marzo→5 (16–31 mar)"
+   }
+  ],
+  "quotes": [
+   "Si produce da novembre a marzo."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=47",
+  "page": 16
+ },
+ {
+  "slug": "tos-castagna-pistolesa",
+  "name": "Castagna pistolesa",
+  "en": "chestnut",
+  "it": "castagna",
+  "category": "fruit",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "ottobre whole month → 18 (1–15 ott) to 19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "Le castagne vengono raccolte nel mese di ottobre e poste a essiccare per 30 giorni"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=279",
+  "page": 20
+ },
+ {
+  "slug": "tos-cavolfiore-fiorentino-tardivo",
+  "name": "Cavolfiore fiorentino tardivo",
+  "en": "cauliflower",
+  "it": "cavolfiore",
+  "category": "vegetable",
+  "prov": [
+   "fi",
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 23,
+    "conversion": "novembre→20 (1–15 nov), dicembre→23 (16–31 dic)"
+   }
+  ],
+  "quotes": [
+   "Si produce a novembre-dicembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=49",
+  "page": 22
+ },
+ {
+  "slug": "tos-cavolfiore-precoce-toscano",
+  "name": "Cavolfiore precoce toscano",
+  "en": "cauliflower",
+  "it": "cavolfiore",
+  "category": "vegetable",
+  "prov": [
+   "fi",
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 20,
+    "conversion": "ottobre→18 (1–15 ott), meta novembre→20 (1–15 nov)"
+   }
+  ],
+  "quotes": [
+   "Produce da ottobre fino a meta' novembre una palla formata da un'infiorescenza gialla"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=50",
+  "page": 23
+ },
+ {
+  "slug": "tos-cipolla-di-bassone",
+  "name": "Cipolla di Bassone",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 23,
+    "conversion": "novembre→20 (1–15 nov), dicembre→23 (16–31 dic)"
+   }
+  ],
+  "quotes": [
+   "Viene prodotta nei mesi di novembre e dicembre",
+   "Raccolta manuale nei mesi di novembre e dicembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=55",
+  "page": 28
+ },
+ {
+  "slug": "tos-cipolla-di-certaldo",
+  "name": "Cipolla di Certaldo",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 17,
+    "conversion": "maggio→8 (1–15 mag), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "cipollotti raccolti a maggio-giugno",
+   "e' pronta per la raccolta ad agosto-settembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=476",
+  "page": 29
+ },
+ {
+  "slug": "tos-cipolla-di-ripola",
+  "name": "Cipolla di Ripola",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 13,
+    "conversion": "giugno→10 (1–15 giu), luglio→13 (16–31 lug)"
+   },
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 21,
+    "conversion": "ottobre→18 (1–15 ott), novembre→21 (16–30 nov)"
+   }
+  ],
+  "quotes": [
+   "Raccolta manuale eseguita a giugno-luglio o a ottobre-novembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=56",
+  "page": 30
+ },
+ {
+  "slug": "tos-cipolla-di-terceretoli",
+  "name": "Cipolla di Terceretoli",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 13,
+    "conversion": "giugno→10 (1–15 giu), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "Si raccoglie fra giugno e luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=57",
+  "page": 31
+ },
+ {
+  "slug": "tos-cipolla-massese",
+  "name": "Cipolla massese",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 11,
+    "conversion": "aprile→6 (1–15 apr), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "Si produce tra aprile e giugno.",
+   "La raccolta, manuale, avviene nei mesi di aprile, maggio e giugno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=59",
+  "page": 34
+ },
+ {
+  "slug": "tos-cipolla-rossa-della-valtiberina",
+  "name": "Cipolla rossa della Valtiberina",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 17,
+    "conversion": "meta' agosto→15 (16–31 ago), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene da meta' agosto a tutto settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=591",
+  "page": 35
+ },
+ {
+  "slug": "tos-cipolla-vernina",
+  "name": "Cipolla vernina",
+  "en": "onion",
+  "it": "cipolla",
+  "category": "vegetable",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 13,
+    "conversion": "luglio→12 (1–15 lug), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "Si raccoglie a luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=63",
+  "page": 38
+ },
+ {
+  "slug": "tos-fagiolo-borlotto-di-maremma",
+  "name": "Fagiolo borlotto di Maremma",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "gr"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 13,
+    "conversion": "giugno→10 (1–15 giu), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "Si produce da aprile a luglio.",
+   "La raccolta, a giugno-luglio, e' manuale."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=66",
+  "page": 46
+ },
+ {
+  "slug": "tos-fagiolo-borlotto-nano-di-sorano",
+  "name": "Fagiolo borlotto nano di Sorano",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "gr"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 13,
+    "conversion": "luglio→12 (1–15 lug), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "Si produce da aprile a giugno.",
+   "La raccolta, manuale, avviene a luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=69",
+  "page": 47
+ },
+ {
+  "slug": "tos-cocomero-gigante",
+  "name": "Cocomero gigante",
+  "en": "watermelon",
+  "it": "cocomero",
+  "category": "fruit",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 16,
+    "conversion": "dopo ferragosto→15 (16–31 ago), «metà del mese di settembre»→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta, essendo una produzione ortiva da frutto (cucurbitacee) a ciclo tardivo avviene da dopo ferragosto fino alla meta' del mese di settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=499",
+  "page": 40
+ },
+ {
+  "slug": "tos-fagiolo-cannellino",
+  "name": "Fagiolo cannellino",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 17,
+    "conversion": "luglio→12 (1–15 lug), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta che si protrae da luglio a settembre a seconda dell'epoca di semina avviene manualmente, per il prodotto fresco, e anche meccanicamente per il prodotto secco."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=77",
+  "page": 50
+ },
+ {
+  "slug": "tos-fagiolo-dall-occhio-del-valdarno",
+  "name": "Fagiolo dall'occhio del Valdarno",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 19,
+    "conversion": "fine luglio→13 (16–31 lug), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene da fine luglio a scalare e puo' arrivare fino a ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=71",
+  "page": 55
+ },
+ {
+  "slug": "tos-fagiolo-di-zeri",
+  "name": "Fagiolo di Zeri",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 19,
+    "conversion": "fine luglio→13 (16–31 lug), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta avviene da fine luglio a scalare e puo' arrivare fino a ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=379",
+  "page": 59
+ },
+ {
+  "slug": "tos-fagiolo-fico-di-gallicano",
+  "name": "Fagiolo fico di Gallicano",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 17,
+    "conversion": "inizio luglio→12 (1–15 lug), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta viene effettata a mano dall'inizio di luglio fino a settembre; il prodotto viene raccolto mano a mano che matura."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=503",
+  "page": 60
+ },
+ {
+  "slug": "tos-fagiolo-malato",
+  "name": "Fagiolo malato",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 17,
+    "conversion": "fine luglio→13 (16–31 lug), settembre inoltrato→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta viene effettuata a mano raccogliendo l'intera pianta e va dalla fine di luglio (prodotto fresco) fino al settembre inoltrato per la granella."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=509",
+  "page": 62
+ },
+ {
+  "slug": "tos-fagiolo-marconi-a-seme-nero",
+  "name": "Fagiolo Marconi a seme nero",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 11,
+    "end": 17,
+    "conversion": "fine giugno→11 (16–30 giu), primi luglio→12 (1–15 lug); settembre→16-17 (whole month); union start 11 end 17"
+   }
+  ],
+  "quotes": [
+   "la raccolta avviene a fine giugno-primi di luglio, nel secondo a settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=79",
+  "page": 63
+ },
+ {
+  "slug": "tos-fagiolo-mascherino",
+  "name": "Fagiolo mascherino",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 17,
+    "conversion": "inizio luglio→12 (1–15 lug), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "La raccolta viene effettuata a mano dall'inizio di luglio fino a settembre; il prodotto viene raccolto mano a mano che matura."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=510",
+  "page": 64
+ },
+ {
+  "slug": "tos-fagiolo-scritto-della-garfagnana",
+  "name": "Fagiolo scritto della Garfagnana",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 15,
+    "conversion": "fine luglio→13 (16–31 lug), agosto→14-15 (whole month, end 15)"
+   }
+  ],
+  "quotes": [
+   "La raccolta viene effettata a mano fra la fine di luglio e tutto agosto; il prodotto viene raccolto mano a mano che matura."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=511",
+  "page": 70
+ },
+ {
+  "slug": "tos-fagiolo-serpente-toscano",
+  "name": "Fagiolo serpente toscano",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 11,
+    "end": 15,
+    "conversion": "fine giugno→11 (16–30 giu), fine agosto→15 (16–31 ago)"
+   }
+  ],
+  "quotes": [
+   "Si produce da fine giugno a fine agosto."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=80",
+  "page": 72
+ },
+ {
+  "slug": "tos-fagiolo-turco-di-castello",
+  "name": "Fagiolo turco di Castello",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 17,
+    "conversion": "luglio→12 (1–15 lug), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Se seminato ad aprile la raccolta avviene a luglio e si protrae per 20 giorni dato che il fagiolo ha maturazione scalare; con semina tardiva (fine giugno) la raccolta viene fatta a settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=81",
+  "page": 75
+ },
+ {
+  "slug": "tos-fico-san-piero",
+  "name": "Fico San Piero",
+  "en": "fig",
+  "it": "fico",
+  "category": "fruit",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 13,
+    "conversion": "giugno→10 (1–15 giu), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "L'epoca di raccolta dei frutti e' giugno-luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=430",
+  "page": 88
+ },
+ {
+  "slug": "tos-mela-rosa-del-casentino",
+  "name": "Mela rosa del Casentino",
+  "en": "apple",
+  "it": "mela",
+  "category": "fruit",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 19,
+    "end": 20,
+    "conversion": "fine ottobre→19 (16–31 ott), primi novembre→20 (1–15 nov)"
+   }
+  ],
+  "quotes": [
+   "Il frutto matura fra la fine di ottobre e i primi di novembre e si conserva per tutto l'inverno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=121",
+  "page": 117
+ },
+ {
+  "slug": "tos-mela-stayman-aretina",
+  "name": "Mela stayman aretina",
+  "en": "apple",
+  "it": "mela",
+  "category": "fruit",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 18,
+    "end": 19,
+    "conversion": "ottobre→18 (1–15 ott), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La raccolta, in ottobre, avviene manualmente e la conservazione avviene in celle ad atomosfera controllata (ultra low oxigen)."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=464",
+  "page": 120
+ },
+ {
+  "slug": "tos-melograno-di-firenze",
+  "name": "Melograno di Firenze",
+  "en": "pomegranate",
+  "it": "melograno",
+  "category": "fruit",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 19,
+    "conversion": "settembre→16 (1–15 set), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "Il melograno di Firenze si produce a settembre-ottobre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=127",
+  "page": 121
+ },
+ {
+  "slug": "tos-melone-della-val-di-cornia",
+  "name": "Melone della Val di Cornia",
+  "en": "melon",
+  "it": "melone",
+  "category": "fruit",
+  "prov": [
+   "li"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 17,
+    "conversion": "giugno→10 (1–15 giu), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Si produce tra giugno e settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=128",
+  "page": 122
+ },
+ {
+  "slug": "tos-patata-di-santa-maria-a-monte",
+  "name": "Patata di Santa Maria a Monte",
+  "en": "potato",
+  "it": "patata",
+  "category": "vegetable",
+  "prov": [
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 6,
+    "end": 17,
+    "conversion": "meta aprile→6 (1–15 apr), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Nel caso della coltura primaticcia la raccolta e' prevista a partire dalla meta' di aprile; in caso di un ciclo normale i tuberi possono essere raccolti successivamente fino al mese di settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=543",
+  "page": 131
+ },
+ {
+  "slug": "tos-pera-coscia-di-firenze",
+  "name": "Pera coscia di Firenze",
+  "en": "pear",
+  "it": "pera",
+  "category": "fruit",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 13,
+    "conversion": "luglio→12 (1–15 lug), luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "Matura a luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=129",
+  "page": 135
+ },
+ {
+  "slug": "tos-pera-gentile",
+  "name": "Pera gentile",
+  "en": "pear",
+  "it": "pera",
+  "category": "fruit",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 11,
+    "conversion": "giugno→10 (1–15 giu), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "Matura a giugno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=132",
+  "page": 137
+ },
+ {
+  "slug": "tos-pesca-maglia-rosa",
+  "name": "Pesca maglia rosa",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 14,
+    "conversion": "ultima settimana luglio→13 (16–31 lug), prima di agosto→14 (1–15 ago)"
+   }
+  ],
+  "quotes": [
+   "matura tra l'ultima settimana di luglio e la prima di agosto, poco prima della pesca trionfo."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=140",
+  "page": 146
+ },
+ {
+  "slug": "tos-pesca-michelini",
+  "name": "Pesca Michelini",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 16,
+    "conversion": "fine agosto→15 (16–31 ago), primi settembre→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "Matura a fine agosto, primi di settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=141",
+  "page": 147
+ },
+ {
+  "slug": "tos-pesca-mora-di-moriano-dolfi",
+  "name": "Pesca mora di Moriano Dolfi",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 14,
+    "end": 15,
+    "conversion": "agosto→14 (1–15 ago), agosto→15 (16–31 ago)"
+   }
+  ],
+  "quotes": [
+   "Si producono in agosto."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=142",
+  "page": 148
+ },
+ {
+  "slug": "tos-pesca-regina-di-londa",
+  "name": "Pesca regina di Londa",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 19,
+    "conversion": "settembre→16 (1–15 set), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "Si produce a settembre-ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=136",
+  "page": 150
+ },
+ {
+  "slug": "tos-peschetti-di-candia",
+  "name": "Peschetti di Candia",
+  "en": "peach",
+  "it": "pesca",
+  "category": "fruit",
+  "prov": [
+   "ms"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 15,
+    "end": 16,
+    "conversion": "ultima decade agosto→15 (16–31 ago), primi settembre→16 (1–15 set)"
+   }
+  ],
+  "quotes": [
+   "Il frutto arriva a maturazione nell'ultima decade di agosto e nei primi di settembre (da cui il nome di peschetti settembrini)."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=381",
+  "page": 152
+ },
+ {
+  "slug": "tos-piattella-pisana",
+  "name": "Piattella pisana",
+  "en": "bean",
+  "it": "fagiolo",
+  "category": "vegetable",
+  "prov": [
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 11,
+    "end": 13,
+    "conversion": "17 Giugno→11 (16–31 giu), tutto Luglio→13 (16–31 lug)"
+   }
+  ],
+  "quotes": [
+   "La raccolta scalare e manuale dei legumi freschi inizia secondo tradizione per San Ranieri (17 Giugno) e si protrae fino a tutto Luglio."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=485",
+  "page": 153
+ },
+ {
+  "slug": "tos-pisello-a-mezza-frasca-aretino",
+  "name": "Pisello a mezza frasca aretino",
+  "en": "pea",
+  "it": "pisello",
+  "category": "vegetable",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 5,
+    "end": 7,
+    "conversion": "fine marzo→5 (16–31 mar), fine aprile→7 (16–30 apr)"
+   }
+  ],
+  "quotes": [
+   "La maturazione e' scalare, da fine marzo a fine aprile."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=91",
+  "page": 155
+ },
+ {
+  "slug": "tos-pisello-a-tutta-frasca-aretino",
+  "name": "Pisello a tutta frasca aretino",
+  "en": "pea",
+  "it": "pisello",
+  "category": "vegetable",
+  "prov": [
+   "ar"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 11,
+    "conversion": "maggio→8 (1–15 mag), giugno→11 (16–30 giu)"
+   }
+  ],
+  "quotes": [
+   "maturano da maggio a giugno."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=90",
+  "page": 156
+ },
+ {
+  "slug": "tos-pisello-mugellano",
+  "name": "Pisello mugellano",
+  "en": "pea",
+  "it": "pisello",
+  "category": "vegetable",
+  "prov": [
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 9,
+    "end": 10,
+    "conversion": "fine maggio→9 (16–31 mag), meta' giugno→10 (1–15 giu)"
+   }
+  ],
+  "quotes": [
+   "La raccolta, effettuata a giorni alterni, dura da fine maggio alla meta' di giugno in funzione della disponibilita' idrica."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=556",
+  "page": 157
+ },
+ {
+  "slug": "tos-pomodoro-grinzoso-sanminiatese",
+  "name": "Pomodoro grinzoso sanminiatese",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 17,
+    "conversion": "giugno→10 (1–15 giu), tutto settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Raccolta: manuale secondo l'andamento stagionale da giugno a tutto settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=545",
+  "page": 165
+ },
+ {
+  "slug": "tos-pomodoro-pallino",
+  "name": "Pomodoro pallino",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "li"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 14,
+    "end": 17,
+    "conversion": "agosto→14 (1–15 ago), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Si produce fra agosto e settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=96",
+  "page": 167
+ },
+ {
+  "slug": "tos-pomodoro-pendentino",
+  "name": "Pomodoro pendentino",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 12,
+    "end": 19,
+    "conversion": "luglio→12 (1–15 lug), ottobre→19 (16–31 ott); fine luglio→13 (16–31 lug), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Molto saporito, si produce da luglio a ottobre.",
+   "Raccolta scalare: avviene manualmente da fine luglio asettembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=92",
+  "page": 168
+ },
+ {
+  "slug": "tos-pomodoro-pisanello",
+  "name": "Pomodoro pisanello",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "li",
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 17,
+    "conversion": "giugno→10 (1–15 giu), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "Si produce da giugno a settembre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=98",
+  "page": 169
+ },
+ {
+  "slug": "tos-pomodoro-stella",
+  "name": "Pomodoro stella",
+  "en": "tomato",
+  "it": "pomodoro",
+  "category": "vegetable",
+  "prov": [
+   "pt",
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 10,
+    "end": 19,
+    "conversion": "giugno→10 (1–15 giu), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "La produzione va da giugno a ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=100",
+  "page": 171
+ },
+ {
+  "slug": "tos-radicchia-di-lucca",
+  "name": "Radicchia di Lucca",
+  "en": "chicory",
+  "it": "radicchio",
+  "category": "vegetable",
+  "prov": [
+   "lu",
+   "pi",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 2,
+    "end": 7,
+    "conversion": "febbraio→2 (1–15 feb), aprile→7 (16–30 apr)"
+   }
+  ],
+  "quotes": [
+   "Si raccoglie fino ad aprile.",
+   "L'epoca di raccolta va da febbraio ad aprile."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=421",
+  "page": 172
+ },
+ {
+  "slug": "tos-scalogno-nostrale-toscano",
+  "name": "Scalogno nostrale toscano",
+  "en": "shallot",
+  "it": "scalogno",
+  "category": "vegetable",
+  "prov": [
+   "ar",
+   "fi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 13,
+    "end": 14,
+    "conversion": "fine luglio→13 (16–31 lug), primi agosto→14 (1–15 ago)"
+   }
+  ],
+  "quotes": [
+   "la raccolta avviene a fine luglio primi di agosto e offre pochi problemi di conservazione"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=103",
+  "page": 176
+ },
+ {
+  "slug": "tos-spinacio-tipico-della-val-di-corni",
+  "name": "Spinacio tipico della Val di Cornia",
+  "en": "spinach",
+  "it": "spinacio",
+  "category": "vegetable",
+  "prov": [
+   "li"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 20,
+    "end": 5,
+    "conversion": "novembre→20 (1–15 nov), marzo→5 (16–31 mar)"
+   }
+  ],
+  "quotes": [
+   "Si produce da novembre a marzo."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=105",
+  "page": 178
+ },
+ {
+  "slug": "tos-uva-colombana-di-peccioli",
+  "name": "Uva colombana di Peccioli",
+  "en": "grape",
+  "it": "uva",
+  "category": "fruit",
+  "prov": [
+   "pi"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 16,
+    "end": 17,
+    "conversion": "settembre→16 (1–15 set), settembre→17 (16–30 set)"
+   }
+  ],
+  "quotes": [
+   "si produce a settembre"
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=146",
+  "page": 186
+ },
+ {
+  "slug": "tos-zucchina-mora-pisana",
+  "name": "Zucchina mora pisana",
+  "en": "courgette",
+  "it": "zucchina",
+  "category": "vegetable",
+  "prov": [
+   "pi",
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 19,
+    "conversion": "maggio→8 (1–15 mag), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "L'epoca di raccolta va da maggio a ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=433",
+  "page": 193
+ },
+ {
+  "slug": "tos-zucchina-sarzanese",
+  "name": "Zucchina sarzanese",
+  "en": "courgette",
+  "it": "zucchina",
+  "category": "vegetable",
+  "prov": [
+   "lu"
+  ],
+  "windows": [
+   {
+    "kind": "open-field",
+    "start": 8,
+    "end": 19,
+    "conversion": "maggio→8 (1–15 mag), ottobre→19 (16–31 ott)"
+   }
+  ],
+  "quotes": [
+   "L'epoca di raccolta va da maggio a ottobre."
+  ],
+  "url": "https://prodtrad.regione.toscana.it/LIB_ProdTrad/Prodotto.php?ID=434",
+  "page": 194
+ }
+]
