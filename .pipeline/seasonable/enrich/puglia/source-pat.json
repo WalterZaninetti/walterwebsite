@@ -1,9 +1,17 @@
 {
   "region": "puglia",
   "tier": "pat",
-  "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
-  "documents": [],
+  "foundBy": "by hand, 2026-09-18",
+  "confirmed": true,
+  "documents": [
+    {
+      "title": "Atlante dei Prodotti Agroalimentari Tradizionali di Puglia 2022 — Università degli Studi di Bari Aldo Moro per la Regione Puglia, ISBN 978-88-6629-038-4",
+      "url": "https://www.patpuglia.it/book/atlante_PAT_Puglia_2022.pdf",
+      "kind": "pdf",
+      "printedYear": 2022,
+      "printedDateNote": "title page: «Atlante dei Prodotti Agroalimentari Tradizionali di Puglia 2022»; colophon: Editore Università degli Studi di Bari Aldo Moro, ISBN 978-88-6629-038-4"
+    }
+  ],
   "triedUrls": [
     "https://www.regione.puglia.it/web/agricoltura/prodotti-agroalimentari-tradizionali-pat",
     "https://www.regione.puglia.it/documents/1662405/3275970/Comunicato+Stampa+-+Atlante+dei+PAT.pdf/01ddcb09-52bd-d5ae-e271-6ebad61db7b4?t=1656927991090",
@@ -11,5 +19,6 @@
     "https://www.patpuglia.it/"
   ],
   "rejectedUrls": [],
-  "note": "Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegetable category is hosted directly on regione.puglia.it or its subdomains, so no qualifying official document was found."
+  "note": "discovery declined patpuglia.it because a university runs it; accepted by hand for the ISBN, the date and the Region’s commission",
+  "confirmedNote": "Published by the Università degli Studi di Bari Aldo Moro with ISBN, «realizzato con il contributo della Regione Puglia», and linked from the Region's own PAT page. Not the register's keeper, but a dated, ISBN-registered publication the Region commissioned — the publisher rule exists to exclude aggregators, and this is not one."
 }

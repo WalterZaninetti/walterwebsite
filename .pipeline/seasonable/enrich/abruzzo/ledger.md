@@ -6,3 +6,7 @@
 ## 2026-09-17 — calendar judge, pages 233, 238, 240, 245, 250, 252, 253, 256, 262, 263, 264, 265, 266, 267, 269, 270, 273, 274, 277, 278 (sonnet/low)
 
 No fruit or vegetable product on these pages: catering specification sheets for meats, dairy, eggs, fish, condiments and bibliography/contacts
+
+## 2026-09-18 — adjudicated and shipped
+
+done by hand 2026-09-18: 3 shipped (Chieti opened). Row-by-row decisions in `.pipeline/seasonable/sources-ledger.md`, eighteenth pass.

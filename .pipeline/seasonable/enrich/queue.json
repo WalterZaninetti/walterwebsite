@@ -105,10 +105,10 @@
         "ta",
         "bt"
       ],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.128,
-      "note": "Regione Puglia's official pages only link out to the university-run patpuglia.it portal (and its e-book Atlante) for the PAT schede; no scheda-bearing PDF/HTML for the vegetable category is hosted dir"
+      "note": "done by hand 2026-09-18: 32 shipped from the 2022 atlas (Bari, Taranto, BAT opened)"
     },
     {
       "id": "puglia:calendar",
@@ -158,10 +158,10 @@
         "pe",
         "ch"
       ],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.148,
-      "note": "Found a regione.abruzzo.it PDF listing PAT products (200 OK, application/pdf) but could not verify it contains full scheda text rather than just a name list (WebFetch blocked by certificate error, dir"
+      "note": "done by hand 2026-09-18: 3 shipped (Chieti opened)"
     },
     {
       "id": "abruzzo:calendar",
@@ -231,10 +231,10 @@
       "silentProvincesAtStart": [
         "tr"
       ],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.11,
-      "note": "discovered 0 document(s): Regione Umbria's official PAT page only offers the plain 'Elenco' list (names only) plus procedural documents (D.M. 350/1999, application forms); the previously-indexed 'sche"
+      "note": "done by hand 2026-09-18: 3 shipped from per-product scheda PDFs"
     },
     {
       "id": "umbria:calendar",
@@ -277,10 +277,10 @@
       "region": "piemonte",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.087,
-      "note": "discovered 0 document(s): Regione Piemonte's official PAT page only links to the national MASAF name-only list and to the Piemonte Agriqualità portal, whose PAT database is a JS-rendered interactive t"
+      "note": "done by hand 2026-09-18: 28 shipped from D.D. 879/2013"
     },
     {
       "id": "piemonte:calendar",
@@ -297,10 +297,10 @@
       "region": "veneto",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.107,
-      "note": "discovered 0 document(s): Google's cache shows venetoagricoltura.org previously hosted PDFs 'Vegetali 1.pdf'/'Vegetali 2.pdf' (PAT schede for vegetal products) under the Atlante dei prodotti agroalime"
+      "note": "done by hand 2026-09-18: 40 shipped from Veneto Agricoltura’s atlas"
     },
     {
       "id": "veneto:calendar",
@@ -337,10 +337,10 @@
       "region": "liguria",
       "tier": "pat",
       "silentProvincesAtStart": [],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.089,
-      "note": "discovered 0 document(s): Found agriligurianet.it (Regione Liguria's agriculture site) pages on PAT products, but they only offer the national list PDF (names only, no schede) and a general product sh"
+      "note": "done by hand 2026-09-18: 3 shipped from the Atlante regionale"
     },
     {
       "id": "liguria:calendar",

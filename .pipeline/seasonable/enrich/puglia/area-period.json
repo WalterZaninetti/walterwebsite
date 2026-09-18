@@ -1,0 +1,575 @@
+[
+ {
+  "page": 140,
+  "product": "Albicocca di Galatone (Arnacocchia di Galatone)",
+  "area": "Provincia di Lecce.",
+  "period": "Estate.",
+  "staged": [
+   [
+    8,
+    11
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 152,
+  "product": "Batata dell’agro leccese (Patata dolce, patata zuccherina, patàna, taràtufulu)",
+  "area": "Provincia di Lecce",
+  "period": "Da agosto ad ottobre.",
+  "staged": [
+   [
+    14,
+    17
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 182,
+  "product": "Carosello di Manduria (Carusella, Cummarazzu de Manduria)",
+  "area": "Province di Taranto e Brindisi",
+  "period": "?",
+  "staged": [
+   [
+    9,
+    13
+   ]
+  ],
+  "prov": [
+   "ta",
+   "br"
+  ]
+ },
+ {
+  "page": 186,
+  "product": "Carota di Polignano",
+  "area": "Polignano a Mare (BA)",
+  "period": "Da fine autunno a metà primavera.",
+  "staged": [
+   [
+    20,
+    9
+   ]
+  ],
+  "prov": [
+   "ba"
+  ]
+ },
+ {
+  "page": 188,
+  "product": "Carota di Zapponeta",
+  "area": "Zapponeta (FG) .",
+  "period": "Dall’autunno alla primavera.",
+  "staged": [
+   [
+    0,
+    4
+   ]
+  ],
+  "prov": [
+   "fg"
+  ]
+ },
+ {
+  "page": 174,
+  "product": "Carciofo di San Ferdinando di Puglia (Violetto di Provenza, Francesino, Francesina, Violetto di San Ferdinando)",
+  "area": "Provincia di BAT",
+  "period": "Da settembre a maggio.",
+  "staged": [
+   [
+    6,
+    9
+   ]
+  ],
+  "prov": [
+   "bt"
+  ]
+ },
+ {
+  "page": 176,
+  "product": "Carciofo di Mola",
+  "area": "Mola di Bari (BA)",
+  "period": "Dall’autunno alla primavera",
+  "staged": [
+   [
+    6,
+    9
+   ]
+  ],
+  "prov": [
+   "ba"
+  ]
+ },
+ {
+  "page": 210,
+  "product": "Cicoria “puntarelle” molfettese (Cicoria di Molfetta, Cicoria catalogna di Molfetta, Cicoria spicata, Cicoria cimata)",
+  "area": "Molfetta (BA)",
+  "period": "Da metà autunno a metà primavera.",
+  "staged": [
+   [
+    20,
+    7
+   ]
+  ],
+  "prov": [
+   "ba"
+  ]
+ },
+ {
+  "page": 216,
+  "product": "Ciliegie di Puglia (Cerase)",
+  "area": "Intera regione.",
+  "period": "Da aprile ad agosto, considerate varietà precoci e tardive.",
+  "staged": [
+   [
+    6,
+    15
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 226,
+  "product": "Cipolla di Acquaviva delle Fonti (Cipolla rossa di Acquaviva)",
+  "area": "Acquaviva delle Fonti (BA).",
+  "period": "Da luglio ad agosto.",
+  "staged": [
+   [
+    12,
+    15
+   ]
+  ],
+  "prov": [
+   "ba"
+  ]
+ },
+ {
+  "page": 228,
+  "product": "Cipolla di Zapponeta",
+  "area": "Zapponeta (FG).",
+  "period": "Da aprile ad agosto.",
+  "staged": [
+   [
+    6,
+    15
+   ]
+  ],
+  "prov": [
+   "fg"
+  ]
+ },
+ {
+  "page": 252,
+  "product": "Fave fresche (Fava da orto, Fava da mensa, Feve de quèzzele)",
+  "area": "Intera regione.",
+  "period": "Dagli inizi di marzo (con varietà precoci) a maggio.",
+  "staged": [
+   [
+    4,
+    9
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 208,
+  "product": "Cicoria all’acqua (Cicoria otrantina)",
+  "area": "Provincia di Lecce.",
+  "period": "Da maggio a settembre.",
+  "staged": [
+   [
+    8,
+    17
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 212,
+  "product": "Cicoria riccia (Cecora rizza, cicoriella cresta, cecora resta)",
+  "area": "Provincia di Lecce.",
+  "period": "Da maggio a settembre.",
+  "staged": [
+   [
+    8,
+    17
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 222,
+  "product": "Cima di rapa di Minervino (“Rapa” di Minervino)",
+  "area": "BAT",
+  "period": "Da ottobre a maggio",
+  "staged": [
+   [
+    18,
+    9
+   ]
+  ],
+  "prov": [
+   "bt"
+  ]
+ },
+ {
+  "page": 224,
+  "product": "Cima di zucchina (Spigolature della pianta di zucchine, talli di zucchine, siverchi di zucchina, tenerumi delle zucche)",
+  "area": "BAT",
+  "period": "Da maggio a settembre-ottobre in pieno campo",
+  "staged": [
+   [
+    8,
+    19
+   ]
+  ],
+  "prov": [
+   "bt"
+  ]
+ },
+ {
+  "page": 262,
+  "product": "Fiorone di Torre Canne (Culumbr)",
+  "area": "?",
+  "period": "Fine maggio e giugno.",
+  "staged": [
+   [
+    9,
+    11
+   ]
+  ],
+  "prov": [
+   "br"
+  ]
+ },
+ {
+  "page": 288,
+  "product": "Mela limoncella dei Monti Dauni meridionali (Limoncella)",
+  "area": "Provincia di Foggia, in particolare nelle zone del Subappennino Dauno e Gargano.",
+  "period": "Ottobre e novembre.",
+  "staged": [
+   [
+    18,
+    21
+   ]
+  ],
+  "prov": [
+   "fg"
+  ]
+ },
+ {
+  "page": 294,
+  "product": "Meloncella (Spiuleddhra, Minunceddhra, Cucumbarazzu, Cummarazzu)",
+  "area": "I comuni di Nardò, Copertino, San Donato di Lecce (LE).",
+  "period": "In primavera ed estate (da aprile a ottobre).",
+  "staged": [
+   [
+    7,
+    19
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 306,
+  "product": "Mùgnuli (Spuntature leccesi, spuriàtu, spuntature, càulu pòeru, caùli paesani e cavoli pezzenti)",
+  "area": "Provincia di Lecce e parte della provincia di Brindisi.",
+  "period": "Dall’autunno a metà primavera.",
+  "staged": [
+   [
+    18,
+    7
+   ]
+  ],
+  "prov": [
+   "le",
+   "br"
+  ]
+ },
+ {
+  "page": 322,
+  "product": "Patata di Zapponeta",
+  "area": "Zapponeta (FG).",
+  "period": "Aprile-maggio e novembre-dicembre.",
+  "staged": [
+   [
+    6,
+    9
+   ],
+   [
+    20,
+    23
+   ]
+  ],
+  "prov": [
+   "fg"
+  ]
+ },
+ {
+  "page": 320,
+  "product": "Patata Bisestile (Sveltina)",
+  "area": "Intera regione.",
+  "period": "Da ottobre ad aprile.",
+  "staged": [
+   [
+    18,
+    7
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 326,
+  "product": "Percoca di Loconia",
+  "area": "Loconia, frazione di Canosa di Puglia (BT).",
+  "period": "Da fine luglio a metà settembre.",
+  "staged": [
+   [
+    13,
+    16
+   ]
+  ],
+  "prov": [
+   "bt",
+   "fg"
+  ]
+ },
+ {
+  "page": 332,
+  "product": "Pera Petrucina",
+  "area": "Provincia di Lecce, in particolare a Maglie e comuni limitrofi.",
+  "period": "Fine giugno e prima decade di luglio.",
+  "staged": [
+   [
+    11,
+    12
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 336,
+  "product": "Piattello",
+  "area": "Alezio (LE).",
+  "period": "Da gennaio a maggio.",
+  "staged": [
+   [
+    0,
+    9
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 342,
+  "product": "Pisello riccio di Sannicola",
+  "area": "Territorio del comune di Sannicola e altri comuni dell’hinterland gallipolino (LE).",
+  "period": "Giugno e luglio.",
+  "staged": [
+   [
+    10,
+    13
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 352,
+  "product": "Pomodorino di Manduria",
+  "area": "Province di Taranto e Brindisi.",
+  "period": "Da maggio a settembre.",
+  "staged": [
+   [
+    9,
+    13
+   ]
+  ],
+  "prov": [
+   "ta",
+   "br"
+  ]
+ },
+ {
+  "page": 354,
+  "product": "Pomodoro da serbo giallo",
+  "area": "Provincia di Lecce.",
+  "period": "Estate.",
+  "staged": [
+   [
+    12,
+    17
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 370,
+  "product": "Sedano di Torrepaduli",
+  "area": "Frazione di Torrepaduli (area dei Paduli) Ruffano, Supersano, Nociglia, Miggiano e Montesano (Le).",
+  "period": "Da maggio a settembre.",
+  "staged": [
+   [
+    9,
+    17
+   ]
+  ],
+  "prov": [
+   "le"
+  ]
+ },
+ {
+  "page": 376,
+  "product": "Sponzali",
+  "area": "Intera regione",
+  "period": "Da ottobre ad aprile.",
+  "staged": [
+   [
+    18,
+    7
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 380,
+  "product": "Tortarello",
+  "area": "Intera regione.",
+  "period": "Da maggio ad ottobre.",
+  "staged": [
+   [
+    8,
+    19
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 324,
+  "product": "Patata zuccherina di Calimera",
+  "area": "Intera regione",
+  "period": "Da autunno a primavera grazie alla buona serbevolezza dei rizotuberi.",
+  "staged": [
+   [
+    16,
+    17
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 382,
+  "product": "Uva baresana (Doraca, Uva drech, Imperatore, Lattuaria, Lattuario, Roscio, Sacra, Sagrone, Turca, Turchiesca, Uva di cera, Uva rosa)",
+  "area": "Provincia di Bari.",
+  "period": "Da settembre a novembre.",
+  "staged": [
+   [
+    16,
+    21
+   ]
+  ],
+  "prov": [
+   "ba"
+  ]
+ },
+ {
+  "page": 384,
+  "product": "Uva da tavola",
+  "area": "Intera regione, in particolare province di Bari, Taranto e Foggia",
+  "period": "Da luglio a dicembre.",
+  "staged": [
+   [
+    12,
+    23
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ },
+ {
+  "page": 324,
+  "product": "Patata zuccherina di Calimera (Batata, Patata dolce, Patata duce, Taratufolo, Patata zuccarrina, Patane glicee)",
+  "area": "Intera regione",
+  "period": "Da autunno a primavera grazie alla buona serbevolezza dei rizotuberi.",
+  "staged": [
+   [
+    16,
+    17
+   ]
+  ],
+  "prov": [
+   "fg",
+   "ba",
+   "ta",
+   "br",
+   "le",
+   "bt"
+  ]
+ }
+]
