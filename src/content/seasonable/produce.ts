@@ -1,5 +1,5 @@
 /**
- * The catalogue: 65 protected designations and 51 traditional products whose
+ * The catalogue: 65 protected designations and 54 traditional products whose
  * own document states when they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -166,11 +166,13 @@ export const produce: readonly Produce[] = [
   pat('cavolfiore-jesi', 'Cavolfiore Precoce di Jesi', 'vegetable', 'cauliflower', 'cavolfiore'),
   pat('cipolla-gonnosfanadiga', 'Cipolla di Gonnosfanadiga', 'vegetable', 'onion', 'cipolla'),
   pat('cipolla-nepi', 'Cipolla di Nepi', 'vegetable', 'onion', 'cipolla'),
+  pat('cipolla-sermide', 'Cipolla di Sermide', 'vegetable', 'onion', 'cipolla'),
   pat('cipolla-rossa-sarda', 'Cipolla rossa', 'vegetable', 'onion', 'cipolla'),
   pat('cocomero-pontino', 'Cocomero Pontino', 'vegetable', 'watermelon', 'cocomero'),
   pat('fava-leonforte', 'Fava larga di Leonforte', 'vegetable', 'broad bean', 'fava'),
   pat('finocchio-maremma', 'Finocchio della Maremma Viterbese', 'vegetable', 'fennel', 'finocchio'),
   pat('patata-leonessa', 'Patata di Leonessa', 'vegetable', 'potato', 'patata'),
+  pat('pisello-miradolo', 'Pisello di Miradolo Terme', 'vegetable', 'pea', 'pisello'),
   pat('pomodoro-fiaschetta', 'Pomodoro Fiaschetta di Fondi', 'vegetable', 'tomato', 'pomodoro'),
   pat('pomodoro-scatolone', 'Pomodoro Scatolone di Bolsena', 'vegetable', 'tomato', 'pomodoro'),
   pat('pomodoro-spagnoletta', 'Pomodoro Spagnoletta del Golfo di Gaeta', 'vegetable', 'tomato', 'pomodoro'),
@@ -179,4 +181,5 @@ export const produce: readonly Produce[] = [
   pat('rosa-gorizia', 'Rosa di Gorizia', 'vegetable', 'chicory', 'radicchio'),
   pat('sarzefine-zagarolo', 'Sarzefine di Zagarolo', 'vegetable', 'salsify', 'scorzonera'),
   pat('taccole-marche', 'Taccole', 'vegetable', 'pea', 'taccola'),
+  pat('zucca-mantovana', 'Zucca Mantovana', 'vegetable', 'pumpkin', 'zucca'),
 ];

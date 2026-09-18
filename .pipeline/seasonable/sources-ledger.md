@@ -1242,3 +1242,56 @@ Piemonte, Veneto, Emilia-Romagna, Liguria, Toscana, Basilicata and Campania. Dis
 name-only lists for most, could not open Abruzzo's PDF, and declined Puglia's atlas because a
 university hosts it. **Toscana's portal of 471 schede and Campania's per-product pages are the
 two worth doing by hand** — and Lombardia matters most, with eleven silent provinces.
+
+---
+
+## 2026-09-18 (fifteenth pass) — Lombardia, by hand
+
+The sweep's discovery had given up here: Regione Lombardia publishes its PAT elenco as a **list
+of names**, the decree link in the portal serves an HTML page rather than the PDF it advertises,
+and neither carries a scheda. Searching by hand found the document that does — **ERSAF and
+Regione Lombardia's own «Atlante dei prodotti tipici e tradizionali», fifth edition**, whose
+colophon prints «© Regione Lombardia. Quinta edizione: giugno 2014». One host joins the
+allowlist, `www.ersaf.lombardia.it`, the regional agency that publishes it.
+
+The Atlante is 196 pages of every category. The category pre-filter skipped 158 pages of cheese,
+cured meat and bread for nothing, and the calendar-term filter another 25; thirteen pages reached
+a model, at $0.24. Its schede put a product's name on one page and its text on the next, which is
+exactly the case the page-before context was added for in Marche.
+
+### Shipped — three products, and two provinces that had never answered
+
+| Product | Clause | Window | Province |
+|---|---|---|---|
+| **Cipolla di Sermide** | «La semina avviene in autunno e la raccolta in luglio» | 12→13 | **Mantova** |
+| **Pisello di Miradolo Terme** | «La raccolta inizia a fine aprile-seconda decade di maggio e termina entro la prima decade di giugno ed è scalare» | 7→10 | **Pavia** |
+| **Zucca Mantovana** | «Si semina in aprile e la raccolta avviene a fine settembre-ottobre» | 17→19 | **Mantova** |
+
+Pisello di Miradolo states a *range* for its own start — «fine aprile-seconda decade di maggio» —
+so the row takes the earliest end of it, 7, on the same reading that makes a per-variety window
+the union of its varieties.
+
+**Reading by hand found two of these; the judge found the third.** Sermide and Mantova's pumpkin
+came out of a grep for a harvest word beside a month name; Pisello di Miradolo did not, because
+its sentence separates the two by twenty words, and the model read the page and caught it.
+
+### Rejected
+
+- **Asparago di Cantello** — the Atlante quotes the same sentence as the IGP disciplinare already
+  cited for it. Varese answers from the disciplinare.
+- **Fagiolo borlotto di Gambolò** — «la raccolta del seme secco», a dry pulse, on the rule that
+  has kept Molise's and Calabria's out.
+- **Castagne secche di Valtellina** — dried, and its dates are the drying.
+- **Patate di Campodolcino** — qualitative.
+- Nine more products state no date at all, among them Asparago di Mezzago, Asparago di Cilavegna,
+  Cipolla dorata di Voghera, Patata comasca bianca and Radici di Soncino. Lombardia's schede are
+  short, and most of them describe the plant rather than the year.
+
+### Where this leaves the dataset
+
+**119 products — 65 protected designations and 54 PAT — 128 windows, 73 sources, 88 of 107
+provinces, 19 of 20 regions.** Lombardia goes from eleven silent provinces to nine: Como,
+Sondrio, Milano, Bergamo, Brescia, Cremona, Lecco, Lodi and Monza e Brianza still answer nothing,
+and nothing in this Atlante can reach them.
+
+`pumpkin` is the thirty-seventh mark in `produceGlyphs.tsx`, drawn for the Zucca Mantovana.

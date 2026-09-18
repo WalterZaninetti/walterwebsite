@@ -212,6 +212,20 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Lombardia, Atlante dei prodotti tipici e tradizionali 2014 ──────────
+  // The Region's elenco is a list of names; this is the only publication of
+  // its own that carries a scheda, and three of them state both ends.
+  // "La semina avviene in autunno e la raccolta in luglio" — "Sermide,
+  //  Felonica Po ed Oltrepò mantovano (Mantova)"
+  w('cipolla-sermide', ['mn'], 'open-field', 12, 13, 'pat-lombardia'),
+  // "La raccolta inizia a fine aprile-seconda decade di maggio e termina entro
+  //  la prima decade di giugno ed è scalare" — the start is itself a range, so
+  //  the row takes its earliest end of it. "Comune di Miradolo Terme" (PV).
+  w('pisello-miradolo', ['pv'], 'open-field', 7, 10, 'pat-lombardia'),
+  // "Si semina in aprile e la raccolta avviene a fine settembre-ottobre" —
+  //  "Provincia di Mantova"
+  w('zucca-mantovana', ['mn'], 'open-field', 17, 19, 'pat-lombardia'),
+
   // ── Sardegna, schede identificative ─────────────────────────────────────
   // "La raccolta dei capperi avviene in modo scalare, inizia l'ultima settimana
   //  di maggio e si conclude nella prima decade di settembre"

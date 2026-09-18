@@ -63,8 +63,9 @@ function args() {
   return {
     region,
     tier,
-    model: opt('model', process.env.SEASONABLE_JUDGE_MODEL ?? 'haiku'),
-    effort: opt('effort', process.env.SEASONABLE_JUDGE_EFFORT),
+    // The same defaults the runner uses, so a hand run and a swept one agree.
+    model: opt('model', process.env.SEASONABLE_JUDGE_MODEL ?? 'sonnet'),
+    effort: opt('effort', process.env.SEASONABLE_JUDGE_EFFORT ?? 'low'),
     escalate: opt('escalate', process.env.SEASONABLE_ESCALATE_MODEL ?? 'sonnet'),
     escalateEffort: opt('escalate-effort', process.env.SEASONABLE_ESCALATE_EFFORT ?? 'high'),
     pages: opt('pages', null)?.split(',').map(Number),

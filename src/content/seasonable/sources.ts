@@ -136,6 +136,13 @@ export const sources: readonly Source[] = [
     2017,
   ),
   pat(
+    'pat-lombardia',
+    'Regione Lombardia ed ERSAF, Atlante dei prodotti tipici e tradizionali, quinta edizione',
+    'https://www.ersaf.lombardia.it/wp-content/uploads/2023/07/Atlanteprodottitipicietradizionali2014_13383_856.pdf',
+    '2026-09-18',
+    2014,
+  ),
+  pat(
     'pat-friuli',
     'ERSA Friuli Venezia Giulia, Il Cibario del Friuli Venezia Giulia — Atlante dei Prodotti della Tradizione',
     'https://www.regione.fvg.it/rafvg/export/sites/default/RAFVG/economia-imprese/agricoltura-foreste/allegati/CibarioERSAedizione2017-2.pdf',
