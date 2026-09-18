@@ -181,29 +181,41 @@ test('a source either prints a plausible year or prints none at all', () => {
   }
 });
 
+/**
+ * Every host a source may resolve to, each one looked at before it was added.
+ *
+ * Every citation on this page once resolved to disciplinare.it, a commercial
+ * aggregator: one host away from the whole page losing its evidence, and
+ * several of the copies it served were proposals rather than texts in force.
+ * Regional hosts are added one at a time, as a region's register is first
+ * cited — never as a pattern, because "some site under regione.*.it" is not a
+ * publisher of record and the whole point of this list is that each entry was
+ * looked at. Most are the Region itself; three are its agencies (ARSIAL,
+ * ERSAF, Veneto Agricoltura), one its agriculture portal (agriligurianet), and
+ * one — patpuglia.it — the Università di Bari's site for the atlas the Region
+ * commissioned, which is the one entry that is not the register's keeper.
+ */
+const EU_AND_MINISTRY = ['eur-lex.europa.eu', 'www.masaf.gov.it'];
+const REGISTER_HOSTS = [
+  'www.regione.vda.it',
+  'static.regione.marche.it',
+  'prodtrad.regione.toscana.it',
+  'agricoltura.regione.campania.it',
+  'www2.regione.abruzzo.it',
+  'www.regione.umbria.it',
+  'www.regione.piemonte.it',
+  'www.ersaf.lombardia.it',
+  'old.venetoagricoltura.org',
+  'www.agriligurianet.it',
+  'www.regione.fvg.it',
+  'www.arsial.it',
+  'www.patpuglia.it',
+  'files.regione.sardegna.it',
+  'www.regione.sicilia.it',
+];
+
 test('every source is cited to a publisher, not to an aggregator', () => {
-  // Every citation on this page once resolved to disciplinare.it, a commercial
-  // aggregator: one host away from the whole page losing its evidence, and
-  // several of the copies it served were proposals rather than texts in force.
-  // Sources are now the EU's Official Journal or the ministry's own register.
-  // Regional hosts are added one at a time, as a region's own register is first
-  // cited — never as a pattern, because "some site under regione.*.it" is not a
-  // publisher of record and the whole point of this list is that each entry was
-  // looked at.
-  const allowed = [
-    'eur-lex.europa.eu',
-    'www.masaf.gov.it',
-    // A Region's own register, one host per region whose list is cited.
-    'www.regione.vda.it',
-    'static.regione.marche.it',
-    'prodtrad.regione.toscana.it',
-    'agricoltura.regione.campania.it',
-    'www.ersaf.lombardia.it',
-    'www.regione.fvg.it',
-    'www.arsial.it',
-    'files.regione.sardegna.it',
-    'www.regione.sicilia.it',
-  ];
+  const allowed = [...EU_AND_MINISTRY, ...REGISTER_HOSTS];
   for (const s of sources) {
     const host = new URL(s.url).hostname;
     assert.ok(allowed.includes(host), `${s.id} cites ${host}, which is not a publisher of record`);
@@ -211,30 +223,24 @@ test('every source is cited to a publisher, not to an aggregator', () => {
 });
 
 test('an undated source is a consolidated text, and says so in its name', () => {
-  // The only licence to omit a year is being the text in force. If a source
-  // drops the year without being a disciplinare consolidato, it is an
-  // unverified year wearing a disguise.
-  // Two documents may omit it, and only these two: the ministry's consolidated
-  // disciplinare, and a Region's scheda identificativa for a PAT. Both are the
-  // text in force for their register and both print no year of their own.
+  // The only licence to omit a year is being the text in force. Two kinds of
+  // document may omit it: the ministry's consolidated disciplinare, and a
+  // regional register's scheda — however the Region titles it: «scheda
+  // identificativa» in Valle d'Aosta and Sardegna, «scheda prodotto» in
+  // Toscana, a bare «Scheda "nome"» in Campania and Liguria, «schede» in
+  // Veneto Agricoltura's atlas. A source that drops the year without being one
+  // of these is an unverified year wearing a disguise.
   for (const s of sources.filter((x) => x.year === undefined)) {
-    // A scheda, however each Region titles it — «scheda identificativa» in
-    // Valle d'Aosta and Sardegna, «scheda prodotto» in Toscana, a bare
-    // «Scheda "nome"» in Campania — or the ministry's disciplinare. The URL
-    // check below is what keeps this honest: it must be the register's keeper.
     assert.match(
       s.name,
       /disciplinare|sched[ae]\b/i,
       `${s.id} omits a year without being a consolidated text or a PAT scheda`,
     );
-    // The ministry keeps the DOP/IGP register; a Region keeps its own PAT list.
-    // ARSIAL's guide prints 2019 and Marche's prints 2017, so neither spends
-    // this licence — only a document with no year of its own may.
-    const publisher = /disciplinare/i.test(s.name) ? 'masaf.gov.it' : 'regione.';
-    assert.ok(
-      s.url.includes(publisher),
-      `${s.id} omits a year but is not published by the body that keeps its register`,
-    );
+    // Published by the body that keeps its register: the ministry for a
+    // disciplinare, a vetted regional host for a scheda.
+    const host = new URL(s.url).hostname;
+    const keeper = /disciplinare/i.test(s.name) ? host === 'www.masaf.gov.it' : REGISTER_HOSTS.includes(host);
+    assert.ok(keeper, `${s.id} omits a year but is not published by the body that keeps its register`);
   }
 });
 

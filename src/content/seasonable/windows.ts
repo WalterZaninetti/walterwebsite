@@ -212,6 +212,406 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Puglia, Atlante dei PAT 2022 ────────────────────────────────────────
+  // Published by the Università di Bari with the Region's funding and an
+  // ISBN, and linked from the Region's own PAT page — the one source here
+  // not published by the register's keeper, accepted because the publisher
+  // rule exists to keep out aggregators, and a dated ISBN book the Region
+  // commissioned is not one. Every scheda prints a map legend naming all
+  // six provinces; the zone is read from «Area di origine del prodotto».
+  // "La raccolta si effettua scalarmente nei mesi di maggio e giugno."
+  w('pug-albicocca-di-galatone', ['le'], 'open-field', 8, 11, 'pat-puglia'),
+  // "La raccolta avviene generalmente a mano in agosto-settembre con
+  //  produzioni di 15-30 t/ha."
+  w('pug-batata-dell-agro-leccese', ['le'], 'open-field', 14, 17, 'pat-puglia'),
+  // "Da settembre a maggio."
+  w('pug-carciofo-di-san-ferdinando-di-', ['bt'], 'open-field', 16, 9, 'pat-puglia'),
+  // "La raccolta, scalare, inizia a fine maggio con i primi frutti
+  //  immaturi, e prosegue fino alla fine di luglio."
+  w('pug-carosello-di-manduria', ['ta', 'br'], 'open-field', 9, 13, 'pat-puglia'),
+  // "la raccolta, anch’essa scalare, si protrae da novembre a maggio."
+  w('pug-carota-di-polignano', ['ba'], 'open-field', 20, 9, 'pat-puglia'),
+  // "Da maggio a settembre."
+  // "La raccolta del prodotto, che inizia generalmente in maggio e si
+  //  protrae per tutta l’estate"
+  w('pug-cicoria-all-acqua', ['le'], 'open-field', 8, 17, 'pat-puglia'),
+  // "Da maggio a settembre."
+  // "La produzione viene programmata per avere i primi raccolti in
+  //  maggio, proseguendo poi per tutta l’estate."
+  w('pug-cicoria-riccia', ['le'], 'open-field', 8, 17, 'pat-puglia'),
+  // "con raccolte che iniziano a novembre e terminano a fine aprile"
+  w('pug-cicoria-puntarelle-molfettese', ['ba'], 'open-field', 20, 7, 'pat-puglia'),
+  // "Da aprile ad agosto, considerate varietà precoci e tardive."
+  // "con epoca di raccolta che inizia nella seconda metà di giugno"
+  w('pug-ciliegie-di-puglia', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 6, 15, 'pat-puglia'),
+  // "Da ottobre a maggio"
+  w('pug-cima-di-rapa-di-minervino', ['bt'], 'open-field', 18, 9, 'pat-puglia'),
+  // "Da maggio a settembre-ottobre in pieno campo"
+  w('pug-cima-di-zucchina', ['bt'], 'open-field', 8, 19, 'pat-puglia'),
+  // "Viene seminata nel mese di febbraio e raccolta da luglio ad agosto."
+  w('pug-cipolla-di-acquaviva-delle-fon', ['ba'], 'open-field', 12, 15, 'pat-puglia'),
+  // "Da aprile ad agosto."
+  w('pug-cipolla-di-zapponeta', ['fg'], 'open-field', 6, 15, 'pat-puglia'),
+  // "Dagli inizi di marzo (con varietà precoci) a maggio."
+  // "Sul litorale barese la raccolta inizia a fine marzo"
+  w('pug-fave-fresche', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 4, 9, 'pat-puglia'),
+  // "Fine maggio e giugno."
+  w('pug-fiorone-di-torre-canne', ['br'], 'open-field', 9, 11, 'pat-puglia'),
+  // "Ottobre e novembre."
+  w('pug-mela-limoncella-dei-monti-daun', ['fg'], 'open-field', 18, 21, 'pat-puglia'),
+  // "In primavera ed estate (da aprile a ottobre)."
+  // "La raccolta inizia da fine aprile e termina a ottobre."
+  w('pug-meloncella', ['le'], 'open-field', 7, 19, 'pat-puglia'),
+  // "Dall’autunno a metà primavera."
+  // "La raccolta, che generalmente inizia circa 90 giorni dopo il
+  //  trapianto, viene realizzata scalarmente a partire dalla metà di
+  //  ottobre fino a marzo-aprile."
+  w('pug-mugnuli', ['le', 'br'], 'open-field', 18, 7, 'pat-puglia'),
+  // "Da ottobre ad aprile."
+  // "Oltre alla patata precoce e a quella comune, alcuni agricoltori
+  //  usano “riseminare” la patata in estate per raccoglierla in autunno e
+  //  in inverno."
+  w('pug-patata-bisestile', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 18, 7, 'pat-puglia'),
+  // "Aprile-maggio e novembre-dicembre."
+  // "La raccolta viene effettuata in aprile-maggio a mano, estirpando le
+  //  piante una ad una, e raccogliendo il prodotto in cassette di
+  //  plastica."
+  w('pug-patata-di-zapponeta', ['fg'], 'open-field', 6, 9, 'pat-puglia'),
+  w('pug-patata-di-zapponeta', ['fg'], 'open-field', 20, 23, 'pat-puglia'),
+  // "La raccolta si effettua a settembre; le batate vengono poi
+  //  conservate in luogo fresco e asciutto, lontano dalla luce."
+  w('pug-patata-zuccherina-di-calimera', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 16, 17, 'pat-puglia'),
+  // "Fine giugno e prima decade di luglio."
+  w('pug-pera-petrucina', ['le'], 'open-field', 11, 12, 'pat-puglia'),
+  // "Da fine luglio a metà settembre."
+  w('pug-percoca-di-loconia', ['bt'], 'open-field', 13, 16, 'pat-puglia'),
+  // "Da gennaio a maggio."
+  // "La raccolta si effettua in maniera scalare, con inizio a gennaio per
+  //  proseguire fino a maggio."
+  w('pug-piattello', ['le'], 'open-field', 0, 9, 'pat-puglia'),
+  // "Giugno e luglio."
+  // "Si presentano lisci se raccolti freschi e più o meno grinzosi una
+  //  volta secchi."
+  w('pug-pisello-riccio-di-sannicola', ['le'], 'open-field', 10, 13, 'pat-puglia'),
+  // "A fine maggio inizia la raccolta dei primi frutticini immaturi,"
+  // "La raccolta procede fino alla fine di luglio con i frutti maturi,
+  //  per la produzione della “salsa”."
+  w('pug-pomodorino-di-manduria', ['ta', 'br'], 'open-field', 9, 13, 'pat-puglia'),
+  // "La raccolta avviene scalarmente da luglio a settembre."
+  w('pug-pomodoro-da-serbo-giallo', ['le'], 'open-field', 12, 17, 'pat-puglia'),
+  // "Da maggio a settembre."
+  // "Per la vendita, la raccolta inizia già a fine maggio e si protrae
+  //  sino ad agosto - settembre."
+  w('pug-sedano-di-torrepaduli', ['le'], 'open-field', 9, 17, 'pat-puglia'),
+  // "Da ottobre ad aprile."
+  w('pug-sponzali', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 18, 7, 'pat-puglia'),
+  // "Da maggio ad ottobre."
+  w('pug-tortarello', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 8, 19, 'pat-puglia'),
+  // "Da settembre a novembre."
+  w('pug-uva-baresana', ['ba'], 'open-field', 16, 21, 'pat-puglia'),
+  // "La raccolta è eseguita tra luglio e dicembre, a seconda delle
+  //  strategie di anticipo o posticipo di produzione."
+  w('pug-uva-da-tavola', ['fg', 'ba', 'ta', 'br', 'le', 'bt'], 'open-field', 12, 23, 'pat-puglia'),
+
+  // ── Liguria, Atlante regionale ───────────────────────────────────────────
+  // "La raccolta è scalare da ottobre ad aprile."
+  w('lig-carciofo-di-pompeiana', ['im'], 'open-field', 18, 7, 'lig-carciofo-di-pompeiana'),
+  // "Ogni anno a giugno, nel periodo della raccolta, Castelbianco dedica
+  //  al suo prodotto di punta da oltre cinquant’anni la “Sagra della
+  //  Ciliegia” con annessa una mostra mercato della ciliegia d’oro, per
+  //  far conoscere e promuovere questo prodotto tipico del territorio."
+  w('lig-ciliegia-di-castelbianco', ['sv'], 'open-field', 10, 11, 'lig-ciliegia-di-castelbianco'),
+  // "raccolta ottobre-conservazione fmo ad aprile"
+  w('lig-zucca-di-rocchetta-cengio', ['sv'], 'open-field', 18, 19, 'lig-zucca-di-rocchetta-cengio'),
+
+  // ── Piemonte, D.D. 879/2013 — schede tecniche ───────────────────────────
+  // The Region's PAT page links a list of names; the decree that published
+  // the list also published the schede, in the Bollettino Ufficiale.
+  // "che si raccoglie precocemente verso giugno ed è particolarmente
+  //  apprezzato, allo stadio verde, per il consumo fresco (crudo, in
+  //  insalata)"
+  // "l’ecotipo tradizionale denominato Aglio di Molino dei Torti viene
+  //  raccolto a luglio"
+  w('pie-aglio-di-molino-dei-torti', ['al'], 'open-field', 10, 13, 'pat-piemonte'),
+  // "Anche l'epoca di raccolta è tardiva: inizia intorno al 10 – 15
+  //  luglio e si protrae fino ad inizio agosto."
+  w('pie-albicocca-tonda-di-costigliole', ['cn'], 'open-field', 12, 14, 'pat-piemonte'),
+  // "Le raccolte coincidono con la fase primaverile; iniziano ad aprile,
+  //  appena le temperature del suolo si innalzano, e proseguono sino a
+  //  metà giugno; i turioni vengono raccolti quotidianamente per
+  //  garantire un livello qualitativo elevato e costante."
+  w('pie-asparago-santenese', ['to'], 'open-field', 6, 10, 'pat-piemonte'),
+  // "Le raccolte avvengono scalarmente a partire da gennaio sino a
+  //  marzo/aprile; qualora si adottino tecniche di protezione con
+  //  posizionamento di teli “tessuto non tessuto” tra fine autunno e
+  //  inizio inverno, le raccolte possono iniziare anche in dicembre."
+  w('pie-bietola-a-costa-rossa-astigian', ['at'], 'open-field', 0, 7, 'pat-piemonte'),
+  w('pie-bietola-a-costa-rossa-astigian', ['at'], 'greenhouse', 22, 7, 'pat-piemonte'),
+  // "In funzione della precocità delle cultivar e dell’epoca di semina,
+  //  la raccolta, parzialmente agevolata grazie all’impiego di
+  //  attrezzature specifiche, può avvenire dal mese di luglio al mese di
+  //  ottobre; il risultato produttivo, variabile in relazione agli
+  //  andamenti stagionali si attesta in media tra 500 e 700 q/ha."
+  w('pie-bietola-rossa-di-castellazzo-b', ['al'], 'open-field', 12, 19, 'pat-piemonte'),
+  // "Nei mesi primaverili (appena le condizioni climatiche lo consentono)
+  //  si effettuano le prime semine di carote che saranno pronte per la
+  //  raccolta a partire da luglio sino a novembre."
+  // "con raccolte che iniziano nel tardo autunno e terminano ad
+  //  aprile/maggio dell’anno successivo"
+  w('pie-carota-di-san-rocco-castagnare', ['cn'], 'open-field', 12, 9, 'pat-piemonte'),
+  // "La raccolta di norma si effettuava tra ottobre e dicembre"
+  // "Sul finire degli anni ’90 del secolo scorso, sono state introdotti
+  //  con successo cicli primaverili, con semine o trapianti a
+  //  marzo/aprile e raccolte a maggio/giugno."
+  w('pie-cicoria-pan-di-zucchero-casale', ['al'], 'open-field', 18, 23, 'pat-piemonte'),
+  w('pie-cicoria-pan-di-zucchero-casale', ['al'], 'open-field', 8, 11, 'pat-piemonte'),
+  // "l’estirpo dei bulbi dal suolo avviene normalmente tra luglio e
+  //  agosto"
+  w('pie-cipolla-dorata-di-castelnuovo-', ['al'], 'open-field', 12, 15, 'pat-piemonte'),
+  // "La raccolta viene effettuata da fine luglio ai primi di agosto"
+  w('pie-cipolla-piatlina-bionda-di-and', ['to'], 'open-field', 13, 14, 'pat-piemonte'),
+  // "l’estirpo dei bulbi dal suolo avviene normalmente in luglio/agosto"
+  w('pie-cipolla-rossa-di-castelnuovo-s', ['al'], 'open-field', 12, 15, 'pat-piemonte'),
+  // "La fase di raccolta è concentrata in 15-20 giorni, tra la seconda
+  //  decade di maggio e la prima di giugno."
+  w('pie-fragola-profumata-di-tortona', ['al'], 'open-field', 9, 10, 'pat-piemonte'),
+  // "La raccolta manuale si protrae dalla metà di aprile alla fine di
+  //  giugno, con una produzione stimabile in 150 kg ogni 1.000 piante."
+  w('pie-fragolina-di-san-mauro-torines', ['to'], 'open-field', 6, 11, 'pat-piemonte'),
+  // "Le produzioni, di norma ottenute in coltivazioni di pieno campo,
+  //  iniziavano a luglio per finire a settembre (per i trapianti di
+  //  aprile/maggio)."
+  w('pie-melanzana-violetta-casalese', ['al'], 'open-field', 12, 17, 'pat-piemonte'),
+  // "La raccolta inizia nella seconda metà di agosto (con Gala) e
+  //  termina, con la Fuji, intorno a fine ottobre."
+  // "Si raccoglie a partire dall’ultima decade di settembre."
+  w('pie-mele-del-piemonte', ['to', 'vc', 'no', 'cn', 'at', 'al', 'bi', 'vb'], 'open-field', 15, 19, 'pat-piemonte'),
+  // "Il melone è un ortaggio tipicamente estivo, trapiantato a partire
+  //  dalla seconda decade di aprile sino a giugno; la raccolta prosegue
+  //  nel periodo estivo tra l’inizio di luglio e la metà/fine di
+  //  settembre."
+  w('pie-meloni-di-isola-sant-antonio', ['al'], 'open-field', 12, 17, 'pat-piemonte'),
+  // "I tuberi vengono raccolti a partire dalla seconda decade di luglio e
+  //  proseguono sino a settembre inoltrato."
+  w('pie-patate-di-entracque', ['cn'], 'open-field', 13, 17, 'pat-piemonte'),
+  // "L’epoca di raccolta si concentra tra la seconda decade di luglio e
+  //  la fine di settembre a seconda del microclima di coltivazione."
+  w('pie-patate-di-montagna', ['to', 'cn', 'vc', 'bi', 'vb'], 'open-field', 13, 17, 'pat-piemonte'),
+  // "L’epoca di raccolta varia in funzione dell’andamento stagionale così
+  //  come delle diverse condizioni ambientali (area collinare o
+  //  pedemontana); indicativamente inizia nell’ultima decade di settembre
+  //  e si conclude ad inizio novembre."
+  w('pie-pera-madernassa', ['cn'], 'open-field', 17, 20, 'pat-piemonte'),
+  // "le Pere Martin Sec maturano intorno alla terza decade di ottobre, ma
+  //  spesso la raccolta si protrae fino all’11 novembre"
+  // "I frutti, molto serbevoli, si raccolgono nella terza decade di
+  //  ottobre"
+  w('pie-pere-martin-sec', ['cn'], 'open-field', 19, 20, 'pat-piemonte'),
+  // "dopo la raccolta a metà settembre"
+  // "I frutti vengono raccolti a metà ottobre e si conservano in fruttaio
+  //  fino a inizio gennaio."
+  w('pie-pere-delle-valli-di-lanzo', ['to'], 'open-field', 16, 18, 'pat-piemonte'),
+  // "Il periodo della raccolta si concentra tra la metà di luglio e
+  //  l’inizio di agosto."
+  // "La raccolta si colloca tra metà luglio e metà settembre."
+  w('pie-pesche-autoctone-del-piemonte', ['to'], 'open-field', 11, 16, 'pat-piemonte'),
+  // "semina in due periodi dell’anno: a novembre, per raccolte di fine
+  //  aprile-maggio, e a febbraio-marzo con raccolta a metà maggio-giugno;"
+  w('pie-pisello-di-casalborgone', ['to'], 'open-field', 7, 11, 'pat-piemonte'),
+  // "La raccolta è scalare; i primi stacchi iniziano, all’interno dei
+  //  tunnel, nel mese di luglio per poi proseguire sino a novembre."
+  w('pie-pomodoro-costoluto-di-cambiano', ['to'], 'greenhouse', 12, 21, 'pat-piemonte'),
+  // "La raccolta inizia, per le colture in tunnel, da metà giugno in
+  //  avanti per protrarsi fino alla metà di ottobre"
+  w('pie-pomodoro-costoluto-di-chivasso', ['to'], 'greenhouse', 10, 18, 'pat-piemonte'),
+  // "La raccolta delle rape locali si effettua scalarmente tra ottobre e
+  //  novembre."
+  w('pie-rapa-di-caprauna', ['cn'], 'open-field', 18, 21, 'pat-piemonte'),
+  // "La susina Santa Clara del Saluzzese si raccoglie tra agosto e
+  //  settembre ed è molto apprezzata sui mercati del Piemonte e della
+  //  Liguria, dove viene consumata preferibilmente fresca."
+  w('pie-susine-santa-clara-del-saluzze', ['cn'], 'open-field', 14, 17, 'pat-piemonte'),
+  // "È una varietà a maturazione precoce e si raccoglie intorno alla
+  //  terza decade di giugno."
+  // "Questa varietà matura nella terza decade di giugno."
+  w('pie-susine-della-collina-torinese', ['to'], 'open-field', 11, 15, 'pat-piemonte'),
+  // "con una raccolta che si colloca tra maggio e giugno"
+  // "Per le aree montane la semina si effettua a maggio e le raccolte si
+  //  concentrano tra la prima e la seconda decade di luglio."
+  w('pie-trifulot-del-bur', ['to'], 'open-field', 8, 13, 'pat-piemonte'),
+
+  // ── Veneto, Atlante di Veneto Agricoltura ───────────────────────────────
+  // The Region offers its schede only on civic-access request; its agency's
+  // atlas is the published document, still served from the agency's old host.
+  // "La raccolta viene effettuata quando le foglie sono completamente
+  //  secche, solitamente nei mesi di luglio-agosto, con macchine
+  //  agevolatrici che provvedono al taglio delle radici e
+  //  all’estirpazione delle piante dal terreno."
+  w('ven-aglio-del-medio-adige', ['pd'], 'open-field', 12, 15, 'pat-veneto-1'),
+  // "vengono raccolte a mano nel periodo di maturazione che va
+  //  dall’ultima decade di giugno alla prima decade di settembre."
+  w('ven-antiche-pesche-di-mogliano-ven', ['tv'], 'open-field', 11, 16, 'pat-veneto-1'),
+  // "Il raccolto avviene nei mesi di aprile maggio dopo due o tre anni."
+  w('ven-asparago-di-arcole', ['vr'], 'open-field', 6, 9, 'pat-veneto-1'),
+  // "Il raccolto avviene nei mesi di aprile e maggio."
+  w('ven-asparago-di-giare', ['ve'], 'open-field', 6, 9, 'pat-veneto-1'),
+  // "La raccolta dell’asparago inizia generalmente il 1° aprile e termina
+  //  alla fine di maggio."
+  w('ven-asparago-di-mambrotta', ['vr'], 'open-field', 6, 9, 'pat-veneto-1'),
+  // "Gli asparagi di Padova sono raccolti tra aprile e l’inizio di giugno"
+  w('ven-asparago-di-padova', ['pd'], 'open-field', 6, 10, 'pat-veneto-1'),
+  // "Per quanto riguarda la varietà di Palazzetto, la produzione inizia a
+  //  metà marzo, grazie anche alla pacciamatura che anticipa la
+  //  maturazione, e termina a fine maggio/ primi di giugno."
+  w('ven-asparago-di-palazzetto', ['ve'], 'open-field', 4, 10, 'pat-veneto-1'),
+  // "Per la produzione autunnale si procede con la semina in pieno campo
+  //  all’inizio di agosto per raccogliere dalla fine di settembre e per
+  //  tutto ottobre."
+  // "La produzione principale è quella primaverile con semina autunnale
+  //  in tunnel nella prima metà di novembre e raccolta a partire da
+  //  marzo."
+  w('ven-barbabietola-rossa-di-chioggia', ['ve'], 'open-field', 17, 19, 'pat-veneto-1'),
+  // "La coltivazione può essere effettuata anche in serra, seminando
+  //  verso gennaio e raccogliendo in marzo-aprile."
+  w('ven-bietola-di-bassano', ['vi'], 'greenhouse', 4, 7, 'pat-veneto-1'),
+  // "essa va da aprile a maggio, inserendosi fra le produzioni
+  //  precocissime dell’Italia Meridionale e quelle normali e si fa a mano
+  //  per tradizione, meglio con le forbici, delicatamente per non rompere
+  //  il fusto."
+  w('ven-bisi-de-lumignan', ['vi'], 'open-field', 6, 9, 'pat-veneto-1'),
+  // "La raccolta inizia nella seconda decade di maggio e termina entro la
+  //  prima decade di giugno, ed è scalare come la fioritura."
+  w('ven-bisi-de-peseggia', ['ve'], 'open-field', 9, 10, 'pat-veneto-1'),
+  // "la raccolta avviene esclusivamente a mano da novembre a febbraio."
+  w('ven-broccoletto-di-custoza', ['vr'], 'open-field', 20, 3, 'pat-veneto-1'),
+  // "La raccolta del “bonorivo” (precoce) si esegue a mano da fine
+  //  ottobre a metà gennaio; nei periodi successivi la raccolta è
+  //  scalare, fino a marzo, per le altre due varietà."
+  w('ven-broccolo-di-bassano', ['vi'], 'open-field', 19, 5, 'pat-veneto-1'),
+  // "i primi broccoli sono pronti già nel mese di novembre"
+  // "La raccolta si protrae per tutto il periodo invernale fino al mese
+  //  di febbraio."
+  w('ven-broccolo-fiolaro-di-creazzo', ['vi'], 'open-field', 20, 3, 'pat-veneto-1'),
+  // "La produzione ha inizio i primi di aprile, con le così dette
+  //  “castraure” e termina a giugno con le ultime produzioni, con un
+  //  ciclo produttivo di circa 90 giorni."
+  w('ven-carciofo-violetto-di-sant-eras', ['ve'], 'open-field', 6, 11, 'pat-veneto-1'),
+  // "La raccolta si effettua da fine aprile a tutto giugno ed è eseguita
+  //  meccanicamente."
+  // "la raccolta si effettua da settembre a novembre prima che geli"
+  w('ven-carota-di-chioggia', ['ve', 'ro'], 'open-field', 7, 11, 'pat-veneto-1'),
+  w('ven-carota-di-chioggia', ['ve', 'ro'], 'open-field', 16, 21, 'pat-veneto-1'),
+  // "La raccolta avviene manualmente ed è scalare da agosto a dicembre."
+  w('ven-cicoria-catalogna-gigante-di-c', ['ve'], 'open-field', 14, 23, 'pat-veneto-1'),
+  // "la raccolta avviene tra maggio e giugno (metodo più tradizionale)"
+  // "La coltura della “precoce” viene seminata a gennaio e raccolta a
+  //  fine primavera"
+  w('ven-cipolla-bianca-di-chioggia', ['ve', 'ro'], 'open-field', 8, 11, 'pat-veneto-1'),
+  // "La cipolla precoce si raccoglie manualmente da fine maggio a metà
+  //  giugno, quella tardiva si raccoglie da metà giugno fino ad agosto-
+  //  settembre asportando l’intera pianta e tagliando il gambo vicino al
+  //  bulbo."
+  w('ven-cipolla-rosa-di-bassano', ['vi'], 'open-field', 9, 15, 'pat-veneto-1'),
+  // "Tra la fine di settembre e l’inizio di ottobre si raccolgono i
+  //  cavoli cappucci"
+  w('ven-craut-verde-agre', ['bl'], 'open-field', 17, 18, 'pat-veneto-1'),
+  // "Quella del “fagiolino meraviglia di Venezia” è una produzione di
+  //  nicchia, pertanto è reperibile solo presso i produttori e i mercati
+  //  al dettaglio della gronda lagunare nel periodo di produzione, da
+  //  maggio a ottobre."
+  w('ven-fagiolino-meraviglia-di-venezi', ['ve'], 'open-field', 8, 19, 'pat-veneto-1'),
+  // "La raccolta del primo prodotto fresco avviene solitamente ad agosto
+  //  e prosegue fino a novembre."
+  w('ven-fagiolo-bonel-di-fonzaso', ['bl'], 'open-field', 14, 21, 'pat-veneto-1'),
+  // "la raccolta comincia da metà luglio e si protrae fino a metà
+  //  settembre"
+  w('ven-fagiolo-borlotto-nano-di-levad', ['tv'], 'open-field', 12, 16, 'pat-veneto-1'),
+  // "È un fagiolo tardivo, si semina i primi di maggio e si raccoglie tra
+  //  settembre e ottobre."
+  // "È un fagiolo tardivo che si raccoglie a fine settembre"
+  w('ven-fasola-posenata', ['vi'], 'open-field', 16, 19, 'pat-veneto-1'),
+  // "ed è adatta sia alla produzione autunnale (settembre - primi di
+  //  dicembre), sia a quella primaverile (aprile - giugno) in coltura
+  //  protetta."
+  // "Il loro normale periodo di maturazione va da aprile a giugno."
+  w('ven-fragola-di-verona', ['vr'], 'open-field', 6, 11, 'pat-veneto-1'),
+  w('ven-fragola-di-verona', ['vr'], 'greenhouse', 16, 22, 'pat-veneto-1'),
+  // "La raccolta è manuale e va dai primi di novembre fino alla fine di
+  //  marzo."
+  w('ven-germoglio-di-radicchio-bianco-', ['vi'], 'open-field', 20, 5, 'pat-veneto-1'),
+  // "La raccolta è manuale, molto scalare, e si effettua in
+  //  settembre/ottobre, quando le giuggiole cambiano colore, e prima che
+  //  raggrinziscano."
+  w('ven-giuggiola-dei-colli-euganei', ['pd'], 'open-field', 16, 19, 'pat-veneto-1'),
+  // "La produzione dei frutti inizia verso la fine di settembre e si
+  //  conclude verso metà ottobre."
+  w('ven-giuggiolo-del-cavallino', ['ve'], 'open-field', 17, 18, 'pat-veneto-2'),
+  // "La raccolta avviene in ottobre raccogliendo i marroni privi di
+  //  riccio, caduti al suolo autonomamente o a seguito di una bacchiatura
+  //  effettuata per mezzo di lunghe pertiche."
+  w('ven-marroni-di-valrovina', ['vi'], 'open-field', 18, 19, 'pat-veneto-2'),
+  // "la raccolta avviene da metà agosto fino alla fine di ottobre."
+  w('ven-patata-americana-di-zero-branc', ['tv'], 'open-field', 14, 19, 'pat-veneto-2'),
+  // "La raccolta è manuale o meccanica e si effettua tra fine agosto e
+  //  tutto settembre."
+  w('ven-patata-di-bolca', ['vr'], 'open-field', 15, 17, 'pat-veneto-2'),
+  // "Le lavorazioni e la raccolta, che avviene in ottobre, sono manuali o
+  //  meccaniche."
+  w('ven-patata-di-rotzo', ['vi'], 'open-field', 18, 19, 'pat-veneto-2'),
+  // "La raccolta avviene dopo circa 70-80 giorni, generalmente nel mese
+  //  di agosto, prelevando il peperone con il peduncolo."
+  w('ven-peperone-di-zero-branco', ['tv'], 'open-field', 14, 15, 'pat-veneto-2'),
+  // "Da settembre inizia la raccolta che è scalare fino a gennaio"
+  w('ven-radicchio-bianco-o-variegato-d', ['ro', 'pd'], 'open-field', 16, 1, 'pat-veneto-2'),
+  // "La raccolta avviene manualmente dai primi di novembre fino alla fine
+  //  di marzo."
+  w('ven-radicchio-variegato-bianco-di-', ['vi'], 'open-field', 20, 5, 'pat-veneto-2'),
+  // "La raccolta inizia da fine febbraio e prosegue al massimo fino a
+  //  metà aprile."
+  w('ven-radicio-verdon-da-cortel', ['tv'], 'open-field', 3, 6, 'pat-veneto-2'),
+  // "Il sedano rapa viene raccolto manualmente da ottobre a novembre,"
+  w('ven-sedano-rapa-di-ronco-all-adige', ['vr'], 'open-field', 18, 21, 'pat-veneto-2'),
+  // "Il periodo per la raccolta, rigorosamente manuale, inizia a novembre
+  //  e termina a febbraio."
+  w('ven-verza-moretta-di-veronella', ['vr', 'pd'], 'open-field', 20, 3, 'pat-veneto-2'),
+  // "La raccolta è solo manuale, da fine agosto-settembre, nel momento in
+  //  cui il prodotto ha le caratteristiche merceologiche adatte e le
+  //  dimensioni idonee, solitamente al cessare dello sviluppo vegetativo."
+  w('ven-zucca-marina-di-chioggia', ['ve'], 'open-field', 15, 17, 'pat-veneto-2'),
+  // "La raccolta si esegue tra settembre ed ottobre, quando i frutti sono
+  //  completamente maturi, le foglie sono secche ed è evidente il pieno
+  //  disseccamento del peduncolo del frutto."
+  w('ven-zucca-santa-bellunese', ['bl'], 'open-field', 16, 19, 'pat-veneto-2'),
+
+  // ── Umbria, schede descrittive ──────────────────────────────────────────
+  // The Region's PAT page lists names; its asset library holds a scheda per
+  // product, which is where these three were read.
+  // "Raccolta nei mesi di luglio e agosto ed asciugatura nel campo." —
+  //  "Comune di Cannara".
+  w('umb-cipolla-cannara', ['pg'], 'open-field', 12, 15, 'umb-cipolla-cannara'),
+  // "Raccolta manuale o meccanica nei mesi di ottobre e novembre." — "Comuni
+  //  di Città di Castello, Monte Santa Maria Tiberina e Umbertide".
+  w('umb-marrone', ['pg'], 'open-field', 18, 21, 'umb-marrone'),
+  // "Raccolta da metà Ottobre sino a Dicembre inoltrato." — "Comune di
+  //  Trevi". «Da metà ottobre» starts in the first half, on the Combai
+  //  precedent («dal 15 settembre» → 16).
+  w('umb-sedano-nero-trevi', ['pg'], 'open-field', 18, 23, 'umb-sedano-nero-trevi'),
+
+  // ── Abruzzo, Atlante dei prodotti tradizionali d'Abruzzo 2006 ──────────
+  // The PDF discovery could not open was the name-only elenco; this atlas,
+  // printed in June 2006 by the Region's agency ARSSA, carries the schede.
+  // "La raccolta cade tra la fine di giugno e la prima settimana di luglio" —
+  //  Sulmona, provincia dell'Aquila.
+  w('aglio-sulmona', ['aq'], 'open-field', 11, 12, 'pat-abruzzo'),
+  // "si effettua nel periodo che va dall'ultima decade di marzo alla fine di
+  //  maggio per le mammole e i secondi, mentre per la raccolta dei carciofini si
+  //  arriva fino alla prima decade di giugno" — the union of the three cuts.
+  //  Cupello, Furci, Lentella, Monteodorisio, San Salvo, Vasto (CH).
+  w('carciofo-vastese', ['ch'], 'open-field', 5, 10, 'pat-abruzzo'),
+  // "Raccolta: dalla fine di agosto alla fine di settembre." — Altino,
+  //  Roccascalegna, Bomba, Casoli, Archi ed Atessa, in provincia di Chieti.
+  w('peperone-altino', ['ch'], 'open-field', 15, 17, 'pat-abruzzo'),
+
   // ── Campania, prodotti tradizionali ─────────────────────────────────────
   // raccolti manualmente a giugno
   w('cam-aglio-dell-ufita', ['av'], 'open-field', 10, 11, 'cam-aglio-dell-ufita'),
@@ -650,7 +1050,7 @@ export const windows: readonly Window[] = [
     'chestnut-generic',
     // Frosinone, Rieti and Roma dropped out when Terelle, Antrodoco and Segni
     // gave them a chestnut row of their own — the Torino precedent, three times.
-    ['al', 'at', 'bi', 'bl', 'fi', 'li', 'lt', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
+    ['al', 'at', 'bi', 'bl', 'fi', 'li', 'lt', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vr'],
     16,
     21,
     [
