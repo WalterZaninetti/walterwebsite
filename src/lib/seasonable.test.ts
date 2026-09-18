@@ -198,6 +198,7 @@ test('every source is cited to a publisher, not to an aggregator', () => {
     'static.regione.marche.it',
     'prodtrad.regione.toscana.it',
     'agricoltura.regione.campania.it',
+    'www2.regione.abruzzo.it',
     'www.ersaf.lombardia.it',
     'www.regione.fvg.it',
     'www.arsial.it',

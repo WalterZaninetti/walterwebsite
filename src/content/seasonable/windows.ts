@@ -212,6 +212,21 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Abruzzo, Atlante dei prodotti tradizionali d'Abruzzo 2006 ──────────
+  // The PDF discovery could not open was the name-only elenco; this atlas,
+  // printed in June 2006 by the Region's agency ARSSA, carries the schede.
+  // "La raccolta cade tra la fine di giugno e la prima settimana di luglio" —
+  //  Sulmona, provincia dell'Aquila.
+  w('aglio-sulmona', ['aq'], 'open-field', 11, 12, 'pat-abruzzo'),
+  // "si effettua nel periodo che va dall'ultima decade di marzo alla fine di
+  //  maggio per le mammole e i secondi, mentre per la raccolta dei carciofini si
+  //  arriva fino alla prima decade di giugno" — the union of the three cuts.
+  //  Cupello, Furci, Lentella, Monteodorisio, San Salvo, Vasto (CH).
+  w('carciofo-vastese', ['ch'], 'open-field', 5, 10, 'pat-abruzzo'),
+  // "Raccolta: dalla fine di agosto alla fine di settembre." — Altino,
+  //  Roccascalegna, Bomba, Casoli, Archi ed Atessa, in provincia di Chieti.
+  w('peperone-altino', ['ch'], 'open-field', 15, 17, 'pat-abruzzo'),
+
   // ── Campania, prodotti tradizionali ─────────────────────────────────────
   // raccolti manualmente a giugno
   w('cam-aglio-dell-ufita', ['av'], 'open-field', 10, 11, 'cam-aglio-dell-ufita'),

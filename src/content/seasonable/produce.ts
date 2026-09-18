@@ -1,5 +1,5 @@
 /**
- * The catalogue: 65 protected designations and 154 traditional products whose
+ * The catalogue: 65 protected designations and 157 traditional products whose
  * own document states when they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -154,6 +154,10 @@ export const produce: readonly Produce[] = [
   veg('radicchio-chioggia', 'Radicchio di Chioggia', 'IGP', 'chicory', 'radicchio'),
   veg('san-marzano', "Pomodoro San Marzano dell'Agro Sarnese-Nocerino", 'DOP', 'tomato', 'pomodoro'),
 
+  // ── PAT: Abruzzo, the Region's atlas ─────────────────────────────────────
+  pat('aglio-sulmona', 'Aglio rosso di Sulmona', 'vegetable', 'garlic', 'aglio'),
+  pat('carciofo-vastese', 'Carciofo del Vastese', 'vegetable', 'artichoke', 'carciofo'),
+  pat('peperone-altino', 'Peperone rosso di Altino', 'vegetable', 'pepper', 'peperone'),
   // ── PAT: Campania, one page per product ──────────────────────────────────
   pat('cam-aglio-dell-ufita', "Aglio dell'Ufita", 'vegetable', 'garlic', 'aglio'),
   pat('cam-broccolo-san-pasquale', 'Broccolo San Pasquale', 'vegetable', 'broccoli', 'broccolo'),

@@ -135,6 +135,13 @@ export const sources: readonly Source[] = [
     '2026-09-17',
     2017,
   ),
+  pat(
+    'pat-abruzzo',
+    "Regione Abruzzo e ARSSA, Atlante dei prodotti tradizionali d'Abruzzo",
+    'https://www2.regione.abruzzo.it/system/files/agricoltura/pord_agroalimentari/Atlante_prodotti_tipici.pdf',
+    '2026-09-18',
+    2006,
+  ),
   // Campania publishes a page per product; each row cites its own.
   pat(
     'cam-aglio-dell-ufita',
