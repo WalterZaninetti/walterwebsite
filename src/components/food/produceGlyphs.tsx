@@ -1,5 +1,5 @@
 /**
- * One mark per kind of thing the catalogue holds — thirty-six of them.
+ * One mark per kind of thing the catalogue holds — thirty-seven of them.
  *
  * These are hand-authored rather than pulled from Lucide, which is the site's
  * rule everywhere else (`ui/icons.tsx`). Lucide has an apple, a cherry, a
@@ -86,6 +86,18 @@ const GLYPHS: Record<string, ReactElement> = {
       <path d="M12 3.4c-2.7 2.7-2.7 14.5 0 17.2 2.7-2.7 2.7-14.5 0-17.2Z" />
       <ellipse cx="12" cy="9.4" rx="1.7" ry="2.1" />
       <ellipse cx="12" cy="14.8" rx="1.7" ry="2.1" />
+    </>
+  ),
+  // Ribbed and squat, where the apple is round with a leaf and the orange is
+  // cut into segments: the two inner arcs are the ribs, and the stalk is the
+  // stub of a cut vine.
+  pumpkin: (
+    <>
+      <ellipse cx="12" cy="14.6" rx="7.6" ry="6.4" />
+      <path d="M12 8.2c-1.6 1.8-2.4 3.9-2.4 6.4s.8 4.6 2.4 6.4" />
+      <path d="M12 8.2c1.6 1.8 2.4 3.9 2.4 6.4s-.8 4.6-2.4 6.4" />
+      <path d="M12 8.2V5.6" />
+      <path d="M12 5.6c1.4 0 2.4-.6 3-1.8" />
     </>
   ),
   watermelon: (

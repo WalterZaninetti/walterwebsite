@@ -196,6 +196,7 @@ test('every source is cited to a publisher, not to an aggregator', () => {
     // A Region's own register, one host per region whose list is cited.
     'www.regione.vda.it',
     'static.regione.marche.it',
+    'www.ersaf.lombardia.it',
     'www.regione.fvg.it',
     'www.arsial.it',
     'files.regione.sardegna.it',
