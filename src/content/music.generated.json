@@ -2,6 +2,14 @@
   "spotify": {
     "items": [
       {
+        "id": "0y0DIqOA7kU31A6yFvgqCW",
+        "title": "Dance, I Got No Rhythm",
+        "artist": "SE62",
+        "url": "https://open.spotify.com/track/0y0DIqOA7kU31A6yFvgqCW",
+        "at": "2026-09-17T13:26:39.817Z",
+        "art": "/images/music/spotify-b135cb8d.webp"
+      },
+      {
         "id": "0gdmDP6xy3ZV7JNoHWAN9k",
         "title": "Town Called Malice",
         "artist": "The Jam",
@@ -32,18 +40,10 @@
         "url": "https://open.spotify.com/track/6KGcTW8J82ytwPlsyiWWHI",
         "at": "2026-09-17T12:00:14.650Z",
         "art": "/images/music/spotify-c232db8a.webp"
-      },
-      {
-        "id": "3rty31xGk5CSEhm2X4Xj1i",
-        "title": "The Tape - Original Mix",
-        "artist": "SE62",
-        "url": "https://open.spotify.com/track/3rty31xGk5CSEhm2X4Xj1i",
-        "at": "2026-09-17T11:53:09.040Z",
-        "art": "/images/music/spotify-c232db8a.webp"
       }
     ],
     "profileUrl": "https://open.spotify.com/user/1169527641",
-    "fetchedAt": "2026-09-17T19:17:02.457Z"
+    "fetchedAt": "2026-09-18T09:07:25.689Z"
   },
   "bandcamp": {
     "items": [
