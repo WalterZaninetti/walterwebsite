@@ -1,0 +1,1961 @@
+{
+  "region": "lombardia",
+  "tier": "pat",
+  "extractedAt": "2026-09-18T08:24:26.610Z",
+  "documents": [
+    {
+      "url": "https://www.ersaf.lombardia.it/wp-content/uploads/2023/07/Atlanteprodottitipicietradizionali2014_13383_856.pdf",
+      "text": ".pipeline/seasonable/enrich/lombardia/corpus/pat-doc0.txt",
+      "categoryFilter": true,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 205,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 2,
+          "chars": 390,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 3,
+          "chars": 44,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/lombardia/corpus/pat-doc0-p3.png",
+          "status": "judged"
+        },
+        {
+          "n": 4,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/lombardia/corpus/pat-doc0-p4.png",
+          "status": "judged"
+        },
+        {
+          "n": 5,
+          "chars": 1885,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 6,
+          "chars": 649,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 7,
+          "chars": 378,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 8,
+          "chars": 1114,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 9,
+          "chars": 832,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 10,
+          "chars": 282,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 11,
+          "chars": 1519,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 12,
+          "chars": 2580,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 13,
+          "chars": 1574,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 14,
+          "chars": 1429,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 15,
+          "chars": 1147,
+          "calendar": true,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 16,
+          "chars": 1013,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 17,
+          "chars": 1037,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 18,
+          "chars": 2373,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 19,
+          "chars": 2925,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 20,
+          "chars": 2527,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 21,
+          "chars": 2942,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 22,
+          "chars": 2493,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 23,
+          "chars": 1303,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 24,
+          "chars": 1652,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 25,
+          "chars": 2893,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 26,
+          "chars": 2500,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 27,
+          "chars": 2415,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 28,
+          "chars": 2534,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 29,
+          "chars": 2737,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 30,
+          "chars": 2003,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 31,
+          "chars": 1829,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 32,
+          "chars": 1096,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 33,
+          "chars": 418,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 34,
+          "chars": 363,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 35,
+          "chars": 1364,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 36,
+          "chars": 1400,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 37,
+          "chars": 1189,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 38,
+          "chars": 1897,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 39,
+          "chars": 1433,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 40,
+          "chars": 2647,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 41,
+          "chars": 2741,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 42,
+          "chars": 2401,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 43,
+          "chars": 2785,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 44,
+          "chars": 2504,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 45,
+          "chars": 2402,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 46,
+          "chars": 3042,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 47,
+          "chars": 2663,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 48,
+          "chars": 2340,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 49,
+          "chars": 2186,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 50,
+          "chars": 2540,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 51,
+          "chars": 2659,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 52,
+          "chars": 2727,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 53,
+          "chars": 2294,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 54,
+          "chars": 2665,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 55,
+          "chars": 2478,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 56,
+          "chars": 2460,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 57,
+          "chars": 2439,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 58,
+          "chars": 2731,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 59,
+          "chars": 2679,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 60,
+          "chars": 2623,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 61,
+          "chars": 1944,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 62,
+          "chars": 2837,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 63,
+          "chars": 2561,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 64,
+          "chars": 1514,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 65,
+          "chars": 1411,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 66,
+          "chars": 3053,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 67,
+          "chars": 2455,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 68,
+          "chars": 2560,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 69,
+          "chars": 2994,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 70,
+          "chars": 2764,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 71,
+          "chars": 2692,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 72,
+          "chars": 2375,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 73,
+          "chars": 2601,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 74,
+          "chars": 2918,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 75,
+          "chars": 1189,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 76,
+          "chars": 1034,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 77,
+          "chars": 823,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 78,
+          "chars": 2339,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 79,
+          "chars": 2894,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 80,
+          "chars": 1663,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 81,
+          "chars": 2502,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 82,
+          "chars": 2750,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 83,
+          "chars": 3022,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 84,
+          "chars": 1415,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 85,
+          "chars": 1764,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 86,
+          "chars": 2939,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 87,
+          "chars": 2460,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 88,
+          "chars": 1822,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 89,
+          "chars": 2717,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 90,
+          "chars": 2839,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 91,
+          "chars": 2512,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 92,
+          "chars": 2895,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 93,
+          "chars": 2785,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 94,
+          "chars": 2495,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 95,
+          "chars": 2912,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 96,
+          "chars": 2470,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 97,
+          "chars": 2423,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 98,
+          "chars": 2096,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 99,
+          "chars": 2481,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 100,
+          "chars": 2541,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 101,
+          "chars": 2604,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 102,
+          "chars": 2490,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 103,
+          "chars": 2566,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 104,
+          "chars": 2590,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 105,
+          "chars": 2304,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 106,
+          "chars": 2653,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 107,
+          "chars": 2491,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 108,
+          "chars": 2387,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 109,
+          "chars": 2343,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 110,
+          "chars": 2252,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 111,
+          "chars": 1285,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 112,
+          "chars": 2158,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 113,
+          "chars": 300,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 114,
+          "chars": 591,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 115,
+          "chars": 370,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 116,
+          "chars": 2578,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 117,
+          "chars": 2545,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 118,
+          "chars": 2542,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 119,
+          "chars": 2267,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 120,
+          "chars": 2653,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 121,
+          "chars": 2279,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 122,
+          "chars": 2141,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 123,
+          "chars": 2759,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 124,
+          "chars": 2245,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 125,
+          "chars": 2424,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 126,
+          "chars": 2823,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 127,
+          "chars": 2505,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 128,
+          "chars": 2524,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "judged"
+        },
+        {
+          "n": 129,
+          "chars": 99,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 130,
+          "chars": 665,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 131,
+          "chars": 668,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 132,
+          "chars": 2898,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 133,
+          "chars": 2213,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 134,
+          "chars": 2300,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 135,
+          "chars": 2568,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 136,
+          "chars": 2286,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 137,
+          "chars": 2227,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 138,
+          "chars": 1920,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 139,
+          "chars": 2581,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 140,
+          "chars": 1873,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 141,
+          "chars": 1756,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 142,
+          "chars": 2403,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 143,
+          "chars": 2026,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 144,
+          "chars": 2701,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 145,
+          "chars": 2304,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 146,
+          "chars": 2390,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 147,
+          "chars": 2213,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 148,
+          "chars": 2542,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 149,
+          "chars": 2122,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 150,
+          "chars": 1921,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 151,
+          "chars": 1170,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 152,
+          "chars": 2370,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 153,
+          "chars": 2881,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 154,
+          "chars": 2360,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 155,
+          "chars": 2402,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 156,
+          "chars": 2508,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 157,
+          "chars": 2539,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 158,
+          "chars": 1576,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 159,
+          "chars": 2331,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 160,
+          "chars": 2596,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 161,
+          "chars": 2320,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 162,
+          "chars": 2064,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 163,
+          "chars": 1799,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 164,
+          "chars": 2184,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 165,
+          "chars": 2100,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 166,
+          "chars": 2795,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 167,
+          "chars": 958,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 168,
+          "chars": 2421,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 169,
+          "chars": 3085,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 170,
+          "chars": 1965,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 171,
+          "chars": 1777,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 172,
+          "chars": 2964,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 173,
+          "chars": 2184,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 174,
+          "chars": 2080,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 175,
+          "chars": 1176,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 176,
+          "chars": 2484,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 177,
+          "chars": 2807,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 178,
+          "chars": 2785,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 179,
+          "chars": 2576,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 180,
+          "chars": 2718,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 181,
+          "chars": 2653,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 182,
+          "chars": 2737,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 183,
+          "chars": 1518,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 184,
+          "chars": 2831,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 185,
+          "chars": 2069,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 186,
+          "chars": 2719,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 187,
+          "chars": 1275,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 188,
+          "chars": 1562,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 189,
+          "chars": 1593,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 190,
+          "chars": 1727,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 191,
+          "chars": 1229,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 192,
+          "chars": 1738,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 193,
+          "chars": 770,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 194,
+          "chars": 486,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 195,
+          "chars": 390,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 196,
+          "chars": 205,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        }
+      ]
+    }
+  ]
+}

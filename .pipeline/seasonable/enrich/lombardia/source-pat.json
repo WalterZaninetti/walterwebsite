@@ -1,14 +1,23 @@
 {
   "region": "lombardia",
   "tier": "pat",
-  "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
-  "documents": [],
+  "foundBy": "by hand, 2026-09-18 (discovery had given up)",
+  "confirmed": true,
+  "documents": [
+    {
+      "title": "Regione Lombardia ed ERSAF, Atlante dei prodotti tipici e tradizionali, quinta edizione",
+      "url": "https://www.ersaf.lombardia.it/wp-content/uploads/2023/07/Atlanteprodottitipicietradizionali2014_13383_856.pdf",
+      "kind": "pdf",
+      "printedYear": 2014,
+      "printedDateNote": "colophon: «© Regione Lombardia. Quinta edizione: giugno 2014»"
+    }
+  ],
   "triedUrls": [
     "https://www.buonalombardia.regione.lombardia.it/wps/portal/site/buonalombardia/DettaglioRedazionale/prodotti/prodotti-tradizionali/prodotti-agroalimentari-tradizionali",
     "https://www.regione.lombardia.it/wps/wcm/connect/015e9fd1-707e-4e37-bc37-a4fedaf63337/Decreto+n.+3597+del+21+marzo+2017+-+Dodicesima+revisione+alenco+prodotti+agroalimentari+tradizionali+della+Lombardia.pdf?MOD=AJPERES&CACHEID=015e9fd1-707e-4e37-bc37-a4fedaf63337",
     "https://www.regione.lombardia.it/agricoltura/inserimento-di-un-prodotto-elenco"
   ],
   "rejectedUrls": [],
-  "note": "BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with actual scheda text for the vegetable PAT category was found."
+  "note": "BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with actual scheda text for the vegetable PAT category was found. | 2026-09-18: the name-only elenco stands, but ERSAF publishes the Atlante with a scheda per product; found by hand.",
+  "confirmedNote": "ERSAF and Regione Lombardia's own Atlante, fifth edition, June 2014 — the only official Lombardy publication with scheda text rather than a list of names"
 }

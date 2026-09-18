@@ -69,10 +69,10 @@
         "lo",
         "mb"
       ],
-      "status": "needs-human",
+      "status": "done",
       "attempts": 0,
       "costUsd": 0.118,
-      "note": "BuonaLombardia page only offers an intro plus a name-only elenco PDF (no scheda text); the regione.lombardia.it decree PDF link returns 404; no official Lombardia source with actual scheda text for th"
+      "note": "done by hand 2026-09-18: ERSAF Atlante; 3 shipped (Mantova, Pavia)"
     },
     {
       "id": "lombardia:calendar",
