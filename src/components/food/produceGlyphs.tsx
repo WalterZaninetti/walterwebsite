@@ -1,5 +1,5 @@
 /**
- * One mark per kind of thing the catalogue holds — forty-four of them.
+ * One mark per kind of thing the catalogue holds — forty-six of them.
  *
  * These are hand-authored rather than pulled from Lucide, which is the site's
  * rule everywhere else (`ui/icons.tsx`). Lucide has an apple, a cherry, a
@@ -37,6 +37,28 @@ const strokeProps = {
 } as const;
 
 const GLYPHS: Record<string, ReactElement> = {
+  // A head of florets on a thick stalk, against the cauliflower's dome and
+  // wrapping leaves: broccoli's head is looser and its stalk is the point of it.
+  broccoli: (
+    <>
+      <path d="M12 21v-8.6" />
+      <path d="M7.4 12.4c-1.3 0-2.3-1-2.3-2.3 0-1 .6-1.8 1.5-2.1-.1-.3-.2-.6-.2-1 0-1.4 1.1-2.5 2.5-2.5.5 0 1 .2 1.4.4.5-.8 1.5-1.4 2.5-1.4s2 .6 2.5 1.4c.4-.3.9-.4 1.4-.4 1.4 0 2.5 1.1 2.5 2.5 0 .4-.1.7-.2 1 .9.3 1.5 1.1 1.5 2.1 0 1.3-1 2.3-2.3 2.3Z" />
+      <path d="M12 16.6 9 14.4" />
+      <path d="m12 18.8 3-2.4" />
+    </>
+  ),
+  // Ribbed stalks fanning from a cut base, with the leaf tops kept short: the
+  // cardoon's bundle is tied and upright, celery's opens out.
+  celery: (
+    <>
+      <path d="M8.6 20.8c-1.2-4.2-1.2-8.6 0-13.2" />
+      <path d="M15.4 20.8c1.2-4.2 1.2-8.6 0-13.2" />
+      <path d="M12 20.8V6.6" />
+      <path d="M8.6 20.8h6.8" />
+      <path d="M8.8 8.2c-.8-1.6-.8-3.2 0-4.8 1 1 1.6 2.2 1.8 3.6" />
+      <path d="M15.2 8.2c.8-1.6.8-3.2 0-4.8-1 1-1.6 2.2-1.8 3.6" />
+    </>
+  ),
   // Toscana's schede brought seven more kinds. Each is drawn against the mark
   // it would otherwise be mistaken for: the melon carries an equator where the
   // pumpkin carries ribs, the shallot is twinned where the onion is single,

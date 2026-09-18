@@ -197,6 +197,7 @@ test('every source is cited to a publisher, not to an aggregator', () => {
     'www.regione.vda.it',
     'static.regione.marche.it',
     'prodtrad.regione.toscana.it',
+    'agricoltura.regione.campania.it',
     'www.ersaf.lombardia.it',
     'www.regione.fvg.it',
     'www.arsial.it',
@@ -217,9 +218,13 @@ test('an undated source is a consolidated text, and says so in its name', () => 
   // disciplinare, and a Region's scheda identificativa for a PAT. Both are the
   // text in force for their register and both print no year of their own.
   for (const s of sources.filter((x) => x.year === undefined)) {
+    // A scheda, however each Region titles it — «scheda identificativa» in
+    // Valle d'Aosta and Sardegna, «scheda prodotto» in Toscana, a bare
+    // «Scheda "nome"» in Campania — or the ministry's disciplinare. The URL
+    // check below is what keeps this honest: it must be the register's keeper.
     assert.match(
       s.name,
-      /disciplinare|sched[ae] (identificativ[aoe]|prodotto)/i,
+      /disciplinare|sched[ae]\b/i,
       `${s.id} omits a year without being a consolidated text or a PAT scheda`,
     );
     // The ministry keeps the DOP/IGP register; a Region keeps its own PAT list.

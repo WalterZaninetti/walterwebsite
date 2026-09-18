@@ -212,6 +212,132 @@ export const windows: readonly Window[] = [
   //  zone names Caneva (PN) and Cordignano, which is in Treviso.
   w('figo-moro', ['pn', 'tv'], 'open-field', 12, 17, 'pat-friuli'),
 
+  // ── Campania, prodotti tradizionali ─────────────────────────────────────
+  // raccolti manualmente a giugno
+  w('cam-aglio-dell-ufita', ['av'], 'open-field', 10, 11, 'cam-aglio-dell-ufita'),
+  // la raccolta, eseguita manualmente in più riprese, ricade nel periodo
+  //  gennaio-marzo, è effettuata riunendo in mazzetti foglie e steli
+  //  teneri.
+  w('cam-broccolo-san-pasquale', ['na', 'sa'], 'open-field', 0, 5, 'cam-broccolo-san-pasquale'),
+  // che matura tra fine marzo ed inizio aprile
+  // ready to harvest between the end of March and the beginning of April
+  w('cam-carciofo-capuanella', ['ce', 'na'], 'open-field', 5, 6, 'cam-carciofo-capuanella'),
+  // si raccoglie, infatti, nel periodo compreso tra febbraio e metà
+  //  maggio, ma già nei mesi di febbraio-marzo si raccolgono le
+  //  mammarelle, cioè i capolini centrali
+  w('cam-carciofo-di-castellammare', ['na'], 'open-field', 2, 8, 'cam-carciofo-di-castellammare'),
+  // La raccolta inizia  da marzo-aprile e prosegue fino alla prima
+  //  decade di giugno a seconda dell'andamento  atmosferico
+  w('cam-carciofo-pignatella-carciofo-ros', ['na', 'sa'], 'open-field', 4, 10, 'cam-carciofo-pignatella-carciofo-ros'),
+  // producendo dei frutti che si raccolgono fra settembre ed ottobre
+  w('cam-castagna-del-monte-faito', ['na'], 'open-field', 16, 19, 'cam-castagna-del-monte-faito'),
+  // la maturazione delle castagne  va da inizio ottobre fino ai primi
+  //  giorni di novembre
+  w('cam-castagna-di-acerno', ['sa'], 'open-field', 18, 20, 'cam-castagna-di-acerno'),
+  // la raccolta delle castagne da terra viene effettuata manualmente dal
+  //  10 di ottobre fino al 10 di novembre.
+  w('cam-castagna-di-trevico', ['av'], 'open-field', 18, 20, 'cam-castagna-di-trevico'),
+  // La raccolta avviene al suolo in autunno (dall'ultima settimana di
+  //  settembre alla prima di  novembre, secondo la posizione del
+  //  castagneto)
+  w('cam-castagna-jonna-di-civitella-lici', ['bn'], 'open-field', 17, 20, 'cam-castagna-jonna-di-civitella-lici'),
+  // fino alla raccolta, generalmente eseguita a mano, alla caduta dei
+  //  ricci (dalla prima alla terza decade di ottobre in relazione
+  //  all'altitudine e all'esposizione del castagneto)
+  w('cam-castagna-o-marrone-del-partenio', ['av', 'bn', 'ce', 'na'], 'open-field', 18, 19, 'cam-castagna-o-marrone-del-partenio'),
+  // matura tra la fine di maggio e la seconda decade di giugno.
+  // che matura tra la prima e la seconda decade di giugno.
+  w('cam-ciliegia-del-monte-e-ciliegia-de', ['na'], 'open-field', 9, 11, 'cam-ciliegia-del-monte-e-ciliegia-de'),
+  // maturazione dei frutti fra fine giugno e prima decade di luglio.
+  w('cam-ciliegia-di-pimonte', ['na'], 'open-field', 11, 12, 'cam-ciliegia-di-pimonte'),
+  // epoca di fioritura intorno a fine marzo – inizio aprile, epoca di
+  //  maturazione intorno a fine maggio – inizio giugno
+  // epoca di maturazione intorno alla prima decade di giugno
+  w('cam-ciliegia-di-siano', ['sa'], 'open-field', 9, 10, 'cam-ciliegia-di-siano'),
+  // La maturazione avviene in luglio - agosto
+  w('cam-cipolla-alifana', ['ce'], 'open-field', 12, 15, 'cam-cipolla-alifana'),
+  // Si raccoglie in primavera, da marzo a giugno
+  w('cam-cipolla-bianca-di-pompei', ['na', 'sa'], 'open-field', 4, 11, 'cam-cipolla-bianca-di-pompei'),
+  // La raccolta manuale viene fatta tra luglio e agosto.
+  w('cam-cipolla-di-airola', ['bn'], 'open-field', 12, 15, 'cam-cipolla-di-airola'),
+  // la maturazione avviene alla fine di ottobre (stato ceroso) e fino
+  //  alla fine di novembre (prodotto secco).
+  w('cam-fagiolo-mustacciello', ['ce', 'bn', 'na', 'av', 'sa'], 'open-field', 19, 21, 'cam-fagiolo-mustacciello'),
+  // Il finocchio bianco palettone viene raccolto nell'arco dell'intero
+  //  mese di ottobre.
+  w('cam-finocchio-bianco-palettone', ['na'], 'open-field', 18, 19, 'cam-finocchio-bianco-palettone'),
+  // la semina avviene a cavallo tra il 10 ed il 20 luglio e la raccolta
+  //  tra novembre e dicembre.
+  w('cam-finocchio-di-sarno', ['sa'], 'open-field', 20, 23, 'cam-finocchio-di-sarno'),
+  // la raccolta avviene tra la terza decade di luglio e la prima di
+  //  agosto.
+  w('cam-giallona-di-siano', ['na'], 'open-field', 13, 14, 'cam-giallona-di-siano'),
+  // pur raccogliendosi fra settembre ed ottobre, infatti, si consuma
+  //  prevalentemente durante l'inverno ed in particolare nelle feste
+  //  natalizie
+  w('cam-melone-napoletano', ['na'], 'open-field', 16, 19, 'cam-melone-napoletano'),
+  // La raccolta, a mano, viene effettuata nel mese di ottobre e le olive
+  //  vengono molite entro 2 giorni dalla raccolta.
+  w('cam-oliva-marinese', ['av'], 'open-field', 18, 19, 'cam-oliva-marinese'),
+  // La raccolta avviene da metà agosto a metà settembre, quando la parte
+  //  aerea della pianta è completamente secca.
+  w('cam-patata-di-monte-s-giacomo', ['sa'], 'open-field', 14, 16, 'cam-patata-di-monte-s-giacomo'),
+  // La raccolta viene fatta tra il 15 agosto e il 15 settembre, la
+  //  raccolta può essere fatta sia meccanicamente che manuale.
+  w('cam-patata-di-trevico', ['av'], 'open-field', 14, 16, 'cam-patata-di-trevico'),
+  // che sono raccolti fra maggio e giugno, in un periodo di assenza di
+  //  altre patate fresche
+  w('cam-patata-fresca-campana', ['na', 'ce', 'sa'], 'open-field', 8, 11, 'cam-patata-fresca-campana'),
+  // La coltivazione inizia nel mese di maggio (semina dei tuberi
+  //  spaccati, in due o quattro parti secondo le dimensioni), e si chiude
+  //  con la raccolta ad ottobre, manuale.
+  w('cam-patata-nera-del-matese', ['ce'], 'open-field', 18, 19, 'cam-patata-nera-del-matese'),
+  // La coltivazione inizia nel mese di maggio (semina dei tuberi),
+  //  quando sono definitivamente fugate le possibilità di gelate tardive,
+  //  e si chiude con la raccolta a fine agosto inizio settembre.
+  w('cam-patata-rossa-del-vallo-di-diano', ['sa'], 'open-field', 15, 16, 'cam-patata-rossa-del-vallo-di-diano'),
+  // La coltivazione avviene tradizionalmente in pieno campo, con
+  //  raccolta da maggio a settembre; nelle coltivazioni in serra la
+  //  raccolta è anticipata.
+  w('cam-peperoncini-verdi-o-di-fiume', ['na', 'sa', 'ce'], 'open-field', 8, 17, 'cam-peperoncini-verdi-o-di-fiume'),
+  // la raccolta viene effettuata dalla fine di luglio fino a fine
+  //  ottobre, è coltivato sia in pieno campo che in tunnel con rete
+  //  antiafidica
+  w('cam-peperone-cazzone', ['sa', 'na'], 'open-field', 13, 19, 'cam-peperone-cazzone'),
+  // L'epoca di coltivazione va da aprile a fine ottobre; la raccolta
+  //  viene effettuata dalla fine di luglio fino a fine ottobre, è
+  //  coltivato sia in pieno campo che in tunnel con rete antiafidica.
+  w('cam-peperone-sassaniello', ['sa'], 'open-field', 13, 19, 'cam-peperone-sassaniello'),
+  // Nel periodo autunnale di Settembre-Ottobre, si raccolgono i frutti
+  //  di questo ceppo autoctono di pero, a maturazione quasi avvenuta, si
+  //  raccolgono manualmente i frutti
+  w('cam-pera-lardara', ['sa'], 'open-field', 16, 19, 'cam-pera-lardara'),
+  // la raccolta è effettuata ordinariamente da marzo ad aprile
+  w('cam-pisello-centogiorni', ['na', 'sa'], 'open-field', 4, 7, 'cam-pisello-centogiorni'),
+  // La raccolta dei frutti è scalare e va effettuata nel periodo
+  //  compreso tra la fine di luglio e prima decade di ottobre
+  // La raccolta dei frutti è scalare e va effettuata nel periodo
+  //  compreso tra inizio luglio e fine settembre
+  w('cam-pomodorino-campano', ['sa', 'na', 'av'], 'open-field', 12, 18, 'cam-pomodorino-campano'),
+  // La raccolta si effettua rigorosamente a mano dalla metà di luglio ad
+  //  agosto.
+  w('cam-pomodorino-cannellino-di-pimonte', ['na', 'sa'], 'open-field', 13, 15, 'cam-pomodorino-cannellino-di-pimonte'),
+  // La raccolta dei frutti è scalare e va effettuata nel periodo
+  //  compreso tra la fine di agosto e prima decade di ottobre
+  w('cam-pomodorino-dell-ufita', ['av'], 'open-field', 15, 18, 'cam-pomodorino-dell-ufita'),
+  // La raccolta si effettua da metà luglio ad agosto.
+  w('cam-pomodoro-cannellino-flegreo', ['na'], 'open-field', 13, 15, 'cam-pomodoro-cannellino-flegreo'),
+  // La raccolta avviene fra metà luglio e metà settembre, in modo
+  //  scalare.
+  w('cam-pomodoro-fiaschello-di-battipagl', ['sa'], 'open-field', 12, 16, 'cam-pomodoro-fiaschello-di-battipagl'),
+  // la raccolta, effettuata in più riprese riunendo in mazzetti steli e
+  //  foglie, è manuale e ricade nel periodo novembre-febbraio.
+  w('cam-rapa-catozza', ['ce', 'na', 'sa'], 'open-field', 20, 3, 'cam-rapa-catozza'),
+  // La raccolta si effettua a fine giugno, inizio luglio.
+  w('cam-sedano-di-gesualdo', ['av'], 'open-field', 11, 12, 'cam-sedano-di-gesualdo'),
+  // La raccolta manuale va da maggio fino a fine ottobre.
+  w('cam-zucchino-san-pasquale', ['na', 'sa'], 'open-field', 8, 19, 'cam-zucchino-san-pasquale'),
+
   // ── Toscana, I Prodotti Agroalimentari della Toscana ────────────────────
   //  La raccolta, manuale, avviene tra aprile, maggio e giugno.
   w('tos-aglio-massese', ['ms'], 'open-field', 6, 11, 'tos-aglio-massese'),
@@ -507,7 +633,7 @@ export const windows: readonly Window[] = [
   // despite sitting 450 km apart in Campania, Toscana and Emilia-Romagna.
   g(
     'cherry-generic',
-    ['ar', 'bn', 'ce', 'fc', 'fe', 'fi', 'gr', 'li', 'lu', 'ms', 'na', 'pc', 'po', 'pr', 'pt', 'ra', 're', 'rn', 'si'],
+    ['ar', 'bn', 'ce', 'fc', 'fe', 'fi', 'gr', 'li', 'lu', 'ms', 'pc', 'po', 'pr', 'pt', 'ra', 're', 'rn', 'si'],
     8,
     13,
     ['ciliegia-bracigliano', 'ciliegia-lari', 'ciliegia-vignola'],
@@ -524,7 +650,7 @@ export const windows: readonly Window[] = [
     'chestnut-generic',
     // Frosinone, Rieti and Roma dropped out when Terelle, Antrodoco and Segni
     // gave them a chestnut row of their own — the Torino precedent, three times.
-    ['al', 'at', 'bi', 'bl', 'bn', 'ce', 'fi', 'li', 'lt', 'na', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
+    ['al', 'at', 'bi', 'bl', 'fi', 'li', 'lt', 'no', 'pd', 'pi', 'po', 'pt', 'ro', 'vb', 'vc', 've', 'vi', 'vr'],
     16,
     21,
     [

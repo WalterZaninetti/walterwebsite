@@ -1365,3 +1365,74 @@ provinces, 19 of 20 regions.**
 
 Seven more marks were drawn for the kinds Toscana brought: cardoon, courgette, grape, melon,
 pomegranate, shallot and spinach. `produceGlyphs.tsx` now holds forty-four.
+
+---
+
+## 2026-09-18 (seventeenth pass) — Campania, page by page
+
+Discovery had found Campania's index — `agricoltura.regione.campania.it/tipici/tradizionali-vegetali.htm`
+— read it, correctly reported that an index of names states no harvest, and stopped. It links
+**227 product pages**, one per product, and those are the documents. All 227 were fetched; 147
+carry a calendar term and went to the judge, at $1.98.
+
+These are not the ministry's template. They are prose, in Italian and then in English, and the
+production area is a sentence rather than a field — which is where most of this pass's work was.
+
+### Shipped — 40 products
+
+Seven potatoes, five tomatoes, five chestnuts, three cherries, three onions, three artichokes,
+two peppers, two fennels, and one each of garlic, broccoli, bean, peach, melon, olive, chilli,
+pear, pea, turnip, celery and courgette. Campania's five provinces all answered already, so this
+is density: Napoli, Salerno and Avellino gain a dozen apiece.
+
+### Corrected in the reading
+
+- **Patata rossa del Vallo di Diano** — the sweep read «si pianta ad inizio aprile ed è pronta per
+  metà giugno» and gave 11→17. The scheda's own harvest sentence is «La coltivazione inizia nel
+  mese di maggio … e si chiude con la raccolta a fine agosto inizio settembre», so the row is
+  **15→16**. The mid-June readiness belongs to a different, earlier planting the page does not
+  date, and stitching the two would have invented a four-month window.
+
+### Rejected — eight, and three of them are a rule worth stating
+
+- **Three wine grapes** — Uva catalanesca («dal 2006 è stata ufficialmente aggiunta all'elenco
+  delle uve da vino»), Uva coda di volpe rossa (its clause is a *vendemmia*) and Uva lengua de
+  femmina (described by its sugars and vine habit). **A vendemmia is not what this page answers.**
+  It says what is being picked to eat; a wine harvest is a different question, and the catalogue
+  has never carried one. A table grape still belongs here — Uva colombana di Peccioli shipped
+  from Toscana yesterday.
+- **Zafferano** — a spice, and what is picked is the flower. The catalogue already stretched to a
+  mushroom and a herb; a stigma is a step past that.
+- **Melanzana cima di viola** — «Viene raccolta due volte l'anno, una prima volta verso la fine di
+  giugno, inizi di luglio ed una seconda intorno ai primi di settembre». The second harvest has a
+  start and no end, and a union would claim continuous picking through August — which the scheda
+  denies in the next sentence, where the plant is pruned in early August.
+- **Broccolo di Paternopoli**, **Zucca lunga di Napoli**, **Pesca bellella di Melito** — no stated
+  production area. «Un'area limitata e determinata» is not a territory, and a product named after
+  a comune is a name, not a zone. Their windows are fine; the geography is not, and this page
+  answers *where* before it answers *when*.
+
+### Recovered from the review file
+
+**Ciliegia del Monte e ciliegia della Recca** failed the machine check for a missing zone quote,
+but the page does state one — «in provincia di Napoli» — and gives both cultivars' maturation, so
+the row is their union, 9→11. One of five review records was a real row.
+
+### The generalised rows shrank, twice
+
+Campania's own chestnuts (Partenio, Monte Faito, Acerno, Trevico, Civitella Licinio) retire
+`chestnut-generic` in **Benevento, Caserta and Napoli**; its cherries (Pimonte, Siano, del Monte)
+retire `cherry-generic` in **Napoli**. The Torino precedent, fifth and sixth applications.
+
+### Where this leaves the dataset
+
+**219 products — 65 protected designations and 154 PAT — 229 windows, 173 sources, 88 of 107
+provinces, 19 of 20 regions.** Two more marks, broccoli and celery; forty-six in the file.
+
+### What is left
+
+Eight regions are still `needs-human`: Piemonte, Veneto, Emilia-Romagna, Liguria, Umbria,
+Abruzzo, Puglia and Basilicata. Every one of them publishes a list of names; none of them
+publishes the schede behind it on a host we have found. Puglia's atlas lives on `patpuglia.it`,
+which a university runs for the Region — the nearest thing to a document, and a judgement about
+publishers rather than a search problem.

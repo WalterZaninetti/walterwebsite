@@ -1,5 +1,5 @@
 /**
- * The catalogue: 65 protected designations and 114 traditional products whose
+ * The catalogue: 65 protected designations and 154 traditional products whose
  * own document states when they are picked.
  *
  * Why designations and not "apple, pear, orange". A disciplinare fixes the
@@ -154,6 +154,47 @@ export const produce: readonly Produce[] = [
   veg('radicchio-chioggia', 'Radicchio di Chioggia', 'IGP', 'chicory', 'radicchio'),
   veg('san-marzano', "Pomodoro San Marzano dell'Agro Sarnese-Nocerino", 'DOP', 'tomato', 'pomodoro'),
 
+  // ── PAT: Campania, one page per product ──────────────────────────────────
+  pat('cam-aglio-dell-ufita', "Aglio dell'Ufita", 'vegetable', 'garlic', 'aglio'),
+  pat('cam-broccolo-san-pasquale', 'Broccolo San Pasquale', 'vegetable', 'broccoli', 'broccolo'),
+  pat('cam-carciofo-capuanella', 'Carciofo capuanella', 'vegetable', 'artichoke', 'carciofo'),
+  pat('cam-carciofo-di-castellammare', 'Carciofo di Castellammare', 'vegetable', 'artichoke', 'carciofo'),
+  pat('cam-carciofo-pignatella-carciofo-ros', 'Carciofo pignatella, carciofo rosso, carciofolla pascaiola', 'vegetable', 'artichoke', 'carciofo'),
+  pat('cam-castagna-del-monte-faito', 'Castagna del Monte Faito', 'fruit', 'chestnut', 'castagna'),
+  pat('cam-castagna-di-acerno', 'Castagna di Acerno', 'fruit', 'chestnut', 'castagna'),
+  pat('cam-castagna-di-trevico', 'Castagna di Trevico', 'fruit', 'chestnut', 'castagna'),
+  pat('cam-castagna-jonna-di-civitella-lici', 'Castagna jonna di Civitella Licinio', 'fruit', 'chestnut', 'castagna'),
+  pat('cam-castagna-o-marrone-del-partenio', 'Castagna o marrone del Partenio', 'fruit', 'chestnut', 'castagna'),
+  pat('cam-ciliegia-del-monte-e-ciliegia-de', 'Ciliegia del Monte e ciliegia della Recca', 'fruit', 'cherry', 'ciliegia'),
+  pat('cam-ciliegia-di-pimonte', 'Ciliegia di Pimonte', 'fruit', 'cherry', 'ciliegia'),
+  pat('cam-ciliegia-di-siano', 'Ciliegia di Siano', 'fruit', 'cherry', 'ciliegia'),
+  pat('cam-cipolla-alifana', 'Cipolla alifana', 'vegetable', 'onion', 'cipolla'),
+  pat('cam-cipolla-bianca-di-pompei', 'Cipolla bianca di Pompei', 'vegetable', 'onion', 'cipolla'),
+  pat('cam-cipolla-di-airola', 'Cipolla di Airola', 'vegetable', 'onion', 'cipolla'),
+  pat('cam-fagiolo-mustacciello', 'Fagiolo mustacciello', 'vegetable', 'bean', 'fagiolo'),
+  pat('cam-finocchio-bianco-palettone', 'Finocchio bianco palettone', 'vegetable', 'fennel', 'finocchio'),
+  pat('cam-finocchio-di-sarno', 'Finocchio di Sarno', 'vegetable', 'fennel', 'finocchio'),
+  pat('cam-giallona-di-siano', 'Giallona di Siano', 'fruit', 'peach', 'pesca'),
+  pat('cam-melone-napoletano', 'Melone napoletano', 'fruit', 'melon', 'melone'),
+  pat('cam-oliva-marinese', 'Oliva marinese', 'fruit', 'olive', 'oliva'),
+  pat('cam-patata-di-monte-s-giacomo', 'Patata di Monte S. Giacomo', 'vegetable', 'potato', 'patata'),
+  pat('cam-patata-di-trevico', 'Patata di Trevico', 'vegetable', 'potato', 'patata'),
+  pat('cam-patata-fresca-campana', 'Patata fresca campana', 'vegetable', 'potato', 'patata'),
+  pat('cam-patata-nera-del-matese', 'Patata nera del Matese', 'vegetable', 'potato', 'patata'),
+  pat('cam-patata-rossa-del-vallo-di-diano', 'Patata rossa del Vallo di Diano', 'vegetable', 'potato', 'patata'),
+  pat('cam-peperoncini-verdi-o-di-fiume', 'Peperoncini verdi o di fiume', 'vegetable', 'chilli', 'peperoncino'),
+  pat('cam-peperone-cazzone', 'Peperone cazzone', 'vegetable', 'pepper', 'peperone'),
+  pat('cam-peperone-sassaniello', 'Peperone sassaniello', 'vegetable', 'pepper', 'peperone'),
+  pat('cam-pera-lardara', 'Pera lardara', 'fruit', 'pear', 'pera'),
+  pat('cam-pisello-centogiorni', 'Pisello centogiorni', 'vegetable', 'pea', 'pisello'),
+  pat('cam-pomodorino-campano', 'Pomodorino campano', 'vegetable', 'tomato', 'pomodoro'),
+  pat('cam-pomodorino-cannellino-di-pimonte', 'Pomodorino cannellino di Pimonte', 'vegetable', 'tomato', 'pomodoro'),
+  pat('cam-pomodorino-dell-ufita', "Pomodorino dell'Ufita", 'vegetable', 'tomato', 'pomodoro'),
+  pat('cam-pomodoro-cannellino-flegreo', 'Pomodoro cannellino flegreo', 'vegetable', 'tomato', 'pomodoro'),
+  pat('cam-pomodoro-fiaschello-di-battipagl', 'Pomodoro fiaschello di Battipaglia', 'vegetable', 'tomato', 'pomodoro'),
+  pat('cam-rapa-catozza', 'Rapa catozza', 'vegetable', 'turnip', 'rapa'),
+  pat('cam-sedano-di-gesualdo', 'Sedano di Gesualdo', 'vegetable', 'celery', 'sedano'),
+  pat('cam-zucchino-san-pasquale', 'Zucchino San Pasquale', 'vegetable', 'courgette', 'zucchina'),
   // ── PAT: Toscana, one scheda per product ─────────────────────────────────
   // The Region publishes 195 vegetable schede, one web page each, and 60 of
   // them state both ends of a window. Each row cites its own scheda.
