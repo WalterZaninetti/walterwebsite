@@ -1,9 +1,24 @@
 {
   "region": "veneto",
   "tier": "pat",
-  "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
-  "documents": [],
+  "foundBy": "by hand, 2026-09-18",
+  "confirmed": true,
+  "documents": [
+    {
+      "title": "Veneto Agricoltura, Atlante dei prodotti agroalimentari tradizionali del Veneto — prodotti vegetali, prima parte (A-G)",
+      "url": "https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%201.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "to check"
+    },
+    {
+      "title": "Veneto Agricoltura, Atlante dei prodotti agroalimentari tradizionali del Veneto — prodotti vegetali, seconda parte (G-Z)",
+      "url": "https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%202.pdf",
+      "kind": "pdf",
+      "printedYear": null,
+      "printedDateNote": "to check"
+    }
+  ],
   "triedUrls": [
     "https://www.piave.veneto.it/web/temi/atlante-dei-prodotti-agroalimentari-tradizionali",
     "https://www.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%201.pdf",
@@ -11,5 +26,6 @@
     "https://www.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Prima%20parte.pdf"
   ],
   "rejectedUrls": [],
-  "note": "Google's cache shows venetoagricoltura.org previously hosted PDFs 'Vegetali 1.pdf'/'Vegetali 2.pdf' (PAT schede for vegetal products) under the Atlante dei prodotti agroalimentari tradizionali del Veneto linked from piave.veneto.it, but all these URLs currently return HTTP 200 with content-type text/html (a generic 'myPortal' page), not the PDF itself, so no working document URL could be confirmed."
+  "note": "the Region's own page offers the schede only on civic-access request; its agency's atlas is the published document",
+  "confirmedNote": "Veneto Agricoltura, the Region's agency — the vegetable volumes, still served from the agency's old host"
 }

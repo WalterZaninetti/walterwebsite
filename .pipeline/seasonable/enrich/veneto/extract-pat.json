@@ -1,0 +1,1079 @@
+{
+  "region": "veneto",
+  "tier": "pat",
+  "extractedAt": "2026-09-18T13:43:32.579Z",
+  "documents": [
+    {
+      "url": "https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%201.pdf",
+      "text": ".pipeline/seasonable/enrich/veneto/corpus/pat-doc0.txt",
+      "categoryFilter": true,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 114,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 2,
+          "chars": 3243,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 3,
+          "chars": 3586,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 2594,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 5,
+          "chars": 3249,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 6,
+          "chars": 2927,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 3559,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 8,
+          "chars": 3285,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 3576,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 10,
+          "chars": 3185,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 11,
+          "chars": 3155,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 3170,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 13,
+          "chars": 3858,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 3596,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 15,
+          "chars": 3100,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 4163,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 17,
+          "chars": 3844,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 18,
+          "chars": 3041,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 19,
+          "chars": 3030,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 3930,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 4238,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 22,
+          "chars": 3674,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 23,
+          "chars": 3742,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 3428,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 3943,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 26,
+          "chars": 3846,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 27,
+          "chars": 3290,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 28,
+          "chars": 2782,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 29,
+          "chars": 3012,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 30,
+          "chars": 2645,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 3218,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 3529,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 3032,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 34,
+          "chars": 2944,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 35,
+          "chars": 3442,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 3651,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 37,
+          "chars": 1829,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 38,
+          "chars": 2879,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 39,
+          "chars": 2556,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 40,
+          "chars": 3195,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 41,
+          "chars": 3954,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 42,
+          "chars": 2936,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 3225,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 44,
+          "chars": 3407,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 45,
+          "chars": 3046,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 3880,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 47,
+          "chars": 4185,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 48,
+          "chars": 4331,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 49,
+          "chars": 3709,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 3438,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 3540,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 52,
+          "chars": 4051,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 53,
+          "chars": 3434,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 3026,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 55,
+          "chars": 3108,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 56,
+          "chars": 3730,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 57,
+          "chars": 2742,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "url": "https://old.venetoagricoltura.org/upload/pubblicazioni/E455%20Atlante%20tradizionali/Vegetali%202.pdf",
+      "text": ".pipeline/seasonable/enrich/veneto/corpus/pat-doc1.txt",
+      "categoryFilter": true,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 3733,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 2,
+          "chars": 3021,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 3211,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 2113,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 5,
+          "chars": 2404,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 6,
+          "chars": 3955,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 7,
+          "chars": 2140,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 8,
+          "chars": 2330,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 9,
+          "chars": 3401,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 10,
+          "chars": 3549,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 11,
+          "chars": 2994,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 12,
+          "chars": 3537,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 13,
+          "chars": 2878,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 14,
+          "chars": 3338,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 15,
+          "chars": 2998,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 16,
+          "chars": 3020,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 17,
+          "chars": 3387,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 18,
+          "chars": 2738,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 19,
+          "chars": 3106,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 20,
+          "chars": 3544,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 21,
+          "chars": 3151,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 22,
+          "chars": 4416,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 23,
+          "chars": 3446,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 24,
+          "chars": 2458,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 25,
+          "chars": 2310,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 26,
+          "chars": 2784,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 27,
+          "chars": 2899,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 28,
+          "chars": 3516,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 29,
+          "chars": 3984,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 30,
+          "chars": 3421,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 31,
+          "chars": 2637,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 32,
+          "chars": 3610,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 33,
+          "chars": 3679,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 34,
+          "chars": 2899,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 35,
+          "chars": 2466,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 36,
+          "chars": 4236,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 37,
+          "chars": 3648,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 38,
+          "chars": 3201,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 39,
+          "chars": 3507,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 40,
+          "chars": 3227,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 41,
+          "chars": 3093,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 42,
+          "chars": 4280,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 43,
+          "chars": 3528,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 44,
+          "chars": 3467,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 45,
+          "chars": 3322,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 46,
+          "chars": 3413,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 47,
+          "chars": 3215,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 48,
+          "chars": 3586,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 49,
+          "chars": 3765,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 50,
+          "chars": 3354,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 51,
+          "chars": 3624,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 52,
+          "chars": 3530,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 53,
+          "chars": 3084,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 54,
+          "chars": 3710,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 55,
+          "chars": 3671,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 56,
+          "chars": 3850,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 57,
+          "chars": 3325,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 58,
+          "chars": 4241,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

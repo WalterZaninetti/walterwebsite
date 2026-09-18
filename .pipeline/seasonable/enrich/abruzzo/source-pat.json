@@ -1,14 +1,23 @@
 {
   "region": "abruzzo",
   "tier": "pat",
-  "foundBy": "sonnet discovery, 2026-09-17",
-  "confirmed": false,
-  "documents": [],
+  "foundBy": "by hand, 2026-09-18",
+  "confirmed": true,
+  "documents": [
+    {
+      "title": "Regione Abruzzo e ARSSA, Atlante dei prodotti tradizionali d'Abruzzo",
+      "url": "https://www2.regione.abruzzo.it/system/files/agricoltura/pord_agroalimentari/Atlante_prodotti_tipici.pdf",
+      "kind": "pdf",
+      "printedYear": 2006,
+      "printedDateNote": "colophon: «Stampato nel giugno 2006», «© Copyright testi e fotografie 2006 ARSSA»"
+    }
+  ],
   "triedUrls": [
     "https://www2.regione.abruzzo.it/system/files/sviluppo-economico/marchio-ristorante-tipico/prodotti_agroalimentari_tradizionali_Abruzzo.pdf",
     "https://www.regione.abruzzo.it/content/richiesta-di-riconoscimento-prodotto-agroalimentare-tradizionale-pat",
     "https://www2.regione.abruzzo.it/content/richiesta-di-riconoscimento-prodotto-agroalimentare-tradizionale-pat"
   ],
   "rejectedUrls": [],
-  "note": "Found a regione.abruzzo.it PDF listing PAT products (200 OK, application/pdf) but could not verify it contains full scheda text rather than just a name list (WebFetch blocked by certificate error, direct download disallowed by sandbox); the regione.abruzzo.it PAT request page returned 403; no confirmed source with scheda descriptions for 'prodotti vegetali allo stato naturale o trasformati' was located within tool budget."
+  "note": "the PDF discovery could not open is only the name-only elenco; the atlas carries the schede",
+  "confirmedNote": "Regione Abruzzo's own atlas, published by its agency ARSSA on regione.abruzzo.it"
 }

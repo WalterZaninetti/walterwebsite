@@ -1,0 +1,2342 @@
+{
+  "region": "abruzzo",
+  "tier": "pat",
+  "extractedAt": "2026-09-18T13:43:32.060Z",
+  "documents": [
+    {
+      "url": "https://www2.regione.abruzzo.it/system/files/agricoltura/pord_agroalimentari/Atlante_prodotti_tipici.pdf",
+      "text": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0.txt",
+      "categoryFilter": true,
+      "pages": [
+        {
+          "n": 1,
+          "chars": 192,
+          "calendar": false,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 2,
+          "chars": 3769,
+          "calendar": true,
+          "ocr": false,
+          "category": null,
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 3,
+          "chars": 77,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p3.png",
+          "status": "pending"
+        },
+        {
+          "n": 4,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": null,
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p4.png",
+          "status": "pending"
+        },
+        {
+          "n": 5,
+          "chars": 5483,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 6,
+          "chars": 6013,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 7,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p7.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 8,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p8.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 9,
+          "chars": 5353,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 10,
+          "chars": 5833,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 11,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p11.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 12,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p12.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 13,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p13.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 14,
+          "chars": 4789,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 15,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p15.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 16,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p16.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 17,
+          "chars": 8134,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 18,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p18.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 19,
+          "chars": 90,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p19.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 20,
+          "chars": 7738,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 21,
+          "chars": 2993,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 22,
+          "chars": 4052,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 23,
+          "chars": 5295,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 24,
+          "chars": 4848,
+          "calendar": false,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 25,
+          "chars": 1538,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 26,
+          "chars": 3691,
+          "calendar": true,
+          "ocr": false,
+          "category": "drinks",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 27,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p27.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 28,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "drinks",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p28.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 29,
+          "chars": 95,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 30,
+          "chars": 4218,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 31,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "meat",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p31.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 32,
+          "chars": 3541,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 33,
+          "chars": 3614,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 34,
+          "chars": 6492,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 35,
+          "chars": 3899,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 36,
+          "chars": 4611,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 37,
+          "chars": 3838,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 38,
+          "chars": 4115,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 39,
+          "chars": 12847,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 40,
+          "chars": 4289,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 41,
+          "chars": 4100,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 42,
+          "chars": 4828,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 43,
+          "chars": 10982,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 44,
+          "chars": 10775,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 45,
+          "chars": 7401,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 46,
+          "chars": 2671,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 47,
+          "chars": 2403,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 48,
+          "chars": 10048,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 49,
+          "chars": 4647,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 50,
+          "chars": 4985,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 51,
+          "chars": 6296,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 52,
+          "chars": 3292,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 53,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "meat",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p53.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 54,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "meat",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p54.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 55,
+          "chars": 5631,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 56,
+          "chars": 6407,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 57,
+          "chars": 7227,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 58,
+          "chars": 6843,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 59,
+          "chars": 3448,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 60,
+          "chars": 4294,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 61,
+          "chars": 4925,
+          "calendar": false,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 62,
+          "chars": 6280,
+          "calendar": true,
+          "ocr": false,
+          "category": "meat",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 63,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "meat",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p63.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 64,
+          "chars": 23,
+          "calendar": true,
+          "ocr": true,
+          "category": "condiments",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p64.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 65,
+          "chars": 8273,
+          "calendar": false,
+          "ocr": false,
+          "category": "condiments",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 66,
+          "chars": 5582,
+          "calendar": false,
+          "ocr": false,
+          "category": "condiments",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 67,
+          "chars": 18,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p67.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 68,
+          "chars": 6783,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 69,
+          "chars": 10573,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 70,
+          "chars": 10415,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 71,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p71.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 72,
+          "chars": 4618,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 73,
+          "chars": 2042,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 74,
+          "chars": 10198,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 75,
+          "chars": 4709,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 76,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p76.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 77,
+          "chars": 4241,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 78,
+          "chars": 10129,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 79,
+          "chars": 9621,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 80,
+          "chars": 8691,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 81,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p81.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 82,
+          "chars": 5233,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 83,
+          "chars": 4535,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 84,
+          "chars": 8765,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 85,
+          "chars": 4349,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 86,
+          "chars": 7578,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 87,
+          "chars": 3478,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 88,
+          "chars": 3508,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 89,
+          "chars": 11191,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 90,
+          "chars": 9160,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 91,
+          "chars": 1986,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 92,
+          "chars": 3565,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 93,
+          "chars": 6848,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 94,
+          "chars": 7057,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 95,
+          "chars": 4673,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 96,
+          "chars": 8617,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 97,
+          "chars": 4282,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 98,
+          "chars": 10235,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 99,
+          "chars": 6672,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 100,
+          "chars": 10203,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 101,
+          "chars": 6392,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 102,
+          "chars": 3854,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 103,
+          "chars": 3329,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 104,
+          "chars": 7098,
+          "calendar": true,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 105,
+          "chars": 6278,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 106,
+          "chars": 3922,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 107,
+          "chars": 7526,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 108,
+          "chars": 5655,
+          "calendar": false,
+          "ocr": false,
+          "category": "cheese",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 109,
+          "chars": 14,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p109.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 110,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "cheese",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p110.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 111,
+          "chars": 63,
+          "calendar": true,
+          "ocr": true,
+          "category": "fats",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p111.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 112,
+          "chars": 7748,
+          "calendar": true,
+          "ocr": false,
+          "category": "fats",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 113,
+          "chars": 5679,
+          "calendar": false,
+          "ocr": false,
+          "category": "fats",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 114,
+          "chars": 152,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 115,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "bakery",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p115.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 116,
+          "chars": 3544,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 117,
+          "chars": 2936,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 118,
+          "chars": 5457,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 119,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "bakery",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p119.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 120,
+          "chars": 3325,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 121,
+          "chars": 4049,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 122,
+          "chars": 2516,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 123,
+          "chars": 3544,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 124,
+          "chars": 3199,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 125,
+          "chars": 2593,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 126,
+          "chars": 3416,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 127,
+          "chars": 7441,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 128,
+          "chars": 8198,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 129,
+          "chars": 4713,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 130,
+          "chars": 3867,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 131,
+          "chars": 4959,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 132,
+          "chars": 2739,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 133,
+          "chars": 2835,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 134,
+          "chars": 7169,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 135,
+          "chars": 4896,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 136,
+          "chars": 3569,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 137,
+          "chars": 2296,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 138,
+          "chars": 4144,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 139,
+          "chars": 3464,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 140,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "bakery",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p140.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 141,
+          "chars": 4107,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 142,
+          "chars": 7008,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 143,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "bakery",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p143.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 144,
+          "chars": 8007,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 145,
+          "chars": 2976,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 146,
+          "chars": 2397,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 147,
+          "chars": 6206,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 148,
+          "chars": 3439,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 149,
+          "chars": 3210,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 150,
+          "chars": 3372,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 151,
+          "chars": 3080,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 152,
+          "chars": 2722,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 153,
+          "chars": 4619,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 154,
+          "chars": 2389,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 155,
+          "chars": 3835,
+          "calendar": true,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 156,
+          "chars": 4324,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 157,
+          "chars": 3265,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 158,
+          "chars": 6833,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 159,
+          "chars": 2208,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 160,
+          "chars": 2099,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 161,
+          "chars": 2786,
+          "calendar": false,
+          "ocr": false,
+          "category": "bakery",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 162,
+          "chars": 82,
+          "calendar": true,
+          "ocr": true,
+          "category": "fish",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p162.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 163,
+          "chars": 3140,
+          "calendar": false,
+          "ocr": false,
+          "category": "fish",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 164,
+          "chars": 49,
+          "calendar": true,
+          "ocr": true,
+          "category": "gastronomy",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p164.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 165,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "gastronomy",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p165.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 166,
+          "chars": 2118,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 167,
+          "chars": 1873,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 168,
+          "chars": 2762,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 169,
+          "chars": 2933,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 170,
+          "chars": 2966,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 171,
+          "chars": 3577,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 172,
+          "chars": 1651,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 173,
+          "chars": 3035,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 174,
+          "chars": 2774,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 175,
+          "chars": 1472,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 176,
+          "chars": 4689,
+          "calendar": true,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 177,
+          "chars": 3681,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 178,
+          "chars": 2600,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 179,
+          "chars": 2827,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 180,
+          "chars": 6516,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 181,
+          "chars": 13,
+          "calendar": true,
+          "ocr": true,
+          "category": "gastronomy",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p181.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 182,
+          "chars": 3640,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 183,
+          "chars": 3129,
+          "calendar": false,
+          "ocr": false,
+          "category": "gastronomy",
+          "image": null,
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 184,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "gastronomy",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p184.png",
+          "status": "skipped",
+          "skip": "category"
+        },
+        {
+          "n": 185,
+          "chars": 95,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 186,
+          "chars": 2421,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 187,
+          "chars": 9748,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 188,
+          "chars": 5174,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 189,
+          "chars": 4696,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 190,
+          "chars": 4998,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 191,
+          "chars": 2398,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 192,
+          "chars": 2278,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 193,
+          "chars": 1949,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 194,
+          "chars": 4671,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 195,
+          "chars": 2404,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 196,
+          "chars": 2483,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 197,
+          "chars": 2888,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 198,
+          "chars": 2533,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 199,
+          "chars": 6374,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 200,
+          "chars": 5938,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 201,
+          "chars": 5175,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 202,
+          "chars": 4170,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 203,
+          "chars": 11697,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 204,
+          "chars": 5742,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 205,
+          "chars": 4812,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 206,
+          "chars": 2213,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 207,
+          "chars": 6443,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 208,
+          "chars": 6455,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 209,
+          "chars": 2029,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 210,
+          "chars": 3710,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 211,
+          "chars": 4736,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 212,
+          "chars": 6257,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 213,
+          "chars": 48,
+          "calendar": true,
+          "ocr": true,
+          "category": "vegetable",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p213.png",
+          "status": "pending"
+        },
+        {
+          "n": 214,
+          "chars": 8719,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 215,
+          "chars": 5907,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 216,
+          "chars": 3751,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 217,
+          "chars": 12281,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 218,
+          "chars": 5941,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 219,
+          "chars": 7116,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 220,
+          "chars": 2442,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 221,
+          "chars": 1998,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 222,
+          "chars": 5246,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 223,
+          "chars": 4989,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 224,
+          "chars": 9713,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 225,
+          "chars": 8327,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 226,
+          "chars": 3568,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 227,
+          "chars": 48,
+          "calendar": true,
+          "ocr": true,
+          "category": "vegetable",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p227.png",
+          "status": "pending"
+        },
+        {
+          "n": 228,
+          "chars": 5031,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 229,
+          "chars": 4132,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 230,
+          "chars": 3233,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 231,
+          "chars": 2696,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 232,
+          "chars": 3691,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 233,
+          "chars": 0,
+          "calendar": true,
+          "ocr": true,
+          "category": "vegetable",
+          "image": ".pipeline/seasonable/enrich/abruzzo/corpus/pat-doc0-p233.png",
+          "status": "pending"
+        },
+        {
+          "n": 234,
+          "chars": 9492,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        },
+        {
+          "n": 235,
+          "chars": 7129,
+          "calendar": false,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "skipped",
+          "skip": "no calendar term"
+        },
+        {
+          "n": 236,
+          "chars": 278,
+          "calendar": true,
+          "ocr": false,
+          "category": "vegetable",
+          "image": null,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
